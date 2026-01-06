@@ -16,13 +16,9 @@ export const fetchConnectorIcon = async (connector: Component) => {
     `${connector.key.toLowerCase()}.png`,
   );
 
-  const metadataResponse = await fetch(
-    new URL(connector.iconUrl, PRISMATIC_URL).toString(),
-    { headers: { Authorization: `Bearer ${PRISMATIC_API_KEY}` } },
-  );
-  const { url } = await metadataResponse.json();
-
-  const imageResponse = await fetch(url);
+  const imageResponse = await fetch(new URL(connector.iconUrl, PRISMATIC_URL), {
+    headers: { Authorization: `Bearer ${PRISMATIC_API_KEY}` },
+  });
   const imageBuffer = await imageResponse.arrayBuffer();
   const image = await Jimp.fromBuffer(imageBuffer);
   image.resize({ h: 32, w: 32 });

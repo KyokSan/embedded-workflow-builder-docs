@@ -21,3 +21,6 @@ check-js:
 
 # Runs all checks that are run in the CI/CD pipeline
 check: check-prismatic-references check-spelling check-markdown check-js
+
+generate-public-connector-docs:
+	npm run generate-public-connector-docs

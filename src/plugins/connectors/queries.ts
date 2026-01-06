@@ -59,7 +59,7 @@ const componentFragment = `
     label
     description
     category
-    iconUrl
+    iconUrl(withCache: true)
     connections(orderBy: { direction: ASC, field: LABEL }) {
       nodes {
         key
