@@ -9,7 +9,7 @@ Use the Esri ArcGIS component to manage map layers, and update locations.
 
 ## Connections
 
-### OAuth 2.0
+### OAuth 2.0 {#arcgisoauth2connection}
 
 OAuth 2.0 connection for ArcGIS
 
@@ -35,7 +35,7 @@ Read about how OAuth 2.0 works [here](../oauth2.md).
 
 ## Actions
 
-### Add Features (Geometry objects or Feature Attributes)
+### Add Features (Geometry objects or Feature Attributes) {#addfeatures}
 
 Add features to a hosted feature layer.
 
@@ -47,7 +47,7 @@ Add features to a hosted feature layer.
 | Features to Add          | Add Attributes and Geometry Points, Multipoints, Polylines, Polygons and Envelopes. You can check more information about the feature JSON object here: https://developers.arcgis.com/rest/services-reference/enterprise/feature-object.htm https://developers.arcgis.com/rest/services-reference/enterprise/add-features.htm | <code>[<br /> {<br /> "geometry": {<br /> "x": -118.15,<br /> "y": 33.8<br /> },<br /> "attributes": {<br /> "OWNER": "Joe Smith",<br /> "VALUE": 94820.37,<br /> "APPROVED": true,<br /> "LASTUPDATE": 1227663551096<br /> }<br /> },<br /> {<br /> "geometry": {<br /> "x": -118.37,<br /> "y": 34.086<br /> },<br /> "attributes": {<br /> "OWNER": "John Doe",<br /> "VALUE": 17325.9,<br /> "APPROVED": false,<br /> "LASTUPDATE": 1227628579430<br /> }<br /> }<br />]</code> |
 | Feature Service URL      | This is the URL of the hosted feature service, not a specific layer. You can find this URL using the 'Get Feature Service URL' action.                                                                                                                                                                                       |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 
-### Add Hosted Layer to Feature Service
+### Add Hosted Layer to Feature Service {#addhostedlayertofeatureservice}
 
 Add a hosted layer to a hosted feature service.
 
@@ -79,7 +79,7 @@ Add a hosted layer to a hosted feature service.
 | Supports Rollback On Failure Parameter | Indicates whether the edits should be applied only if all submitted edits succeed. If false, the server will apply the edits that succeed even if some of the submitted edits fail. If true, the server will apply the edits only if all edits succeed.                                                                                          | true                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 | Templates                              | The templates of the layer.                                                                                                                                                                                                                                                                                                                      | <code>[<br /> {<br /> "name": "New Feature",<br /> "description": "",<br /> "drawingTool": "esriFeatureEditToolPoint",<br /> "prototype": {<br /> "attributes": {<br /> "id": null,<br /> "name": null,<br /> "rating": null<br /> }<br /> }<br /> }<br />]</code>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 
-### Create Feature Service
+### Create Feature Service {#createfeatureservice}
 
 Create a new hosted feature service.
 
@@ -92,7 +92,7 @@ Create a new hosted feature service.
 | Description                  | A user-friendly description for the published dataset.                                                          |                                    |
 | Service Description          | Description given to the service.                                                                               |                                    |
 
-### Create Web Map
+### Create Web Map {#createwebmap}
 
 Creates a web map.
 
@@ -131,7 +131,7 @@ Creates a web map.
 | Enabled Measure On View         | Indicates whether the measure is enabled on the view. The default is true.                                                                                                                                                                                                                                                                                                                                                                                                                      | true                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | Enabled Routing On View         | Indicates whether the routing is enabled on the view. The default is true.                                                                                                                                                                                                                                                                                                                                                                                                                      | true                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 
-### Export Layers
+### Export Layers {#exportlayers}
 
 Export layers to the specified output format.
 
@@ -143,7 +143,7 @@ Export layers to the specified output format.
 | Export Format      | The format to export the data to.                                                                                   | CSV                                                                                                                   |
 | Layers to Export   | An array of exportLayerInfo JSON objects that controls which layers are exported. Leave blank to export all layers. | <code>[<br /> {<br /> "id": 0<br /> },<br /> {<br /> "id": 1,<br /> "where": "POP1999 > 100000"<br /> }<br />]</code> |
 
-### GeoCode
+### GeoCode {#geocode}
 
 Determine the location of a single address or point of interest.
 
@@ -152,7 +152,7 @@ Determine the location of a single address or point of interest.
 | Connection     |                                                                     |         |
 | Address Search | A single line of text representing an address or point of interest. |         |
 
-### Get Current User
+### Get Current User {#getself}
 
 Returns the view of the portal as seen by the current user.
 
@@ -160,7 +160,7 @@ Returns the view of the portal as seen by the current user.
 | ---------- | -------- | ------- |
 | Connection |          |         |
 
-### Get Feature Service URL
+### Get Feature Service URL {#getfeatureserviceurl}
 
 Get the URL of a feature service in the portal by owner. Defaults to the current user.
 
@@ -170,7 +170,7 @@ Get the URL of a feature service in the portal by owner. Defaults to the current
 | Feature Service Name | A hosted feature service name.                           |         |
 | Owner Name           | If not provided, the current user username will be used. |         |
 
-### Get Layer ID
+### Get Layer ID {#getlayerid}
 
 Get a layer ID from a hosted feature service (can get multiple layers if they have the same name).
 
@@ -180,7 +180,7 @@ Get a layer ID from a hosted feature service (can get multiple layers if they ha
 | Feature Service URL | This is the URL of the hosted feature service, not a specific layer. You can find this URL using the 'Get Feature Service URL' action. |         |
 | Feature Layer Name  | A feature layer name.                                                                                                                  |         |
 
-### List Feature Services
+### List Feature Services {#listfeatureservices}
 
 List all feature services in the portal by owner. Defaults to the current user.
 
@@ -192,7 +192,7 @@ List all feature services in the portal by owner. Defaults to the current user.
 | Start      | The start page number.                                                                                                                      |         |
 | Number     | The number of items to return. Too many results can crash the action, use a lower number if you are experiencing issues. The default is 10. |         |
 
-### List Layers and Tables
+### List Layers and Tables {#getalllayersandtables}
 
 Get all layers and tables from a hosted feature service.
 
@@ -201,7 +201,7 @@ Get all layers and tables from a hosted feature service.
 | Connection          |                                                                                                                                        |         |
 | Feature Service URL | This is the URL of the hosted feature service, not a specific layer. You can find this URL using the 'Get Feature Service URL' action. |         |
 
-### Raw Request
+### Raw Request {#rawrequest}
 
 Send raw HTTP request to an ArcGIS API endpoint. This action will append the OAuth2 token to the request headers. The token's validity is contingent upon the connection configuration. Please ensure that the token is compatible with the API you intend to connect to.
 
@@ -225,7 +225,7 @@ Send raw HTTP request to an ArcGIS API endpoint. This action will append the OAu
 | Max Retry Count         | The maximum number of retries to attempt. Specify 0 for no retries.                                                                                                                                                                                                                                                                                                                                                          | 0       |
 | Use Exponential Backoff | Specifies whether to use a pre-defined exponential backoff strategy for retries. When enabled, 'Retry Delay (ms)' is ignored.                                                                                                                                                                                                                                                                                                | false   |
 
-### Search Items
+### Search Items {#searchitems}
 
 Search items in the portal.
 

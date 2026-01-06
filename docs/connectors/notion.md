@@ -9,7 +9,7 @@ Manage Notion pages, databases, and users
 
 ## Connections
 
-### Internal Integration Secret
+### Internal Integration Secret {#notioninternalintegration}
 
 Connect to Notion using an Internal Integration Secret
 
@@ -43,7 +43,7 @@ After creating the integration, you'll need to connect it to specific pages or d
 | --------------------------- | --------------------------------------- | ------- |
 | Internal Integration Secret | Your Notion Internal Integration Secret |         |
 
-### OAuth 2.0
+### OAuth 2.0 {#notionoauth}
 
 Connect to Notion via OAuth 2.0
 
@@ -91,7 +91,7 @@ Read about how OAuth 2.0 works [here](../oauth2.md).
 
 ## Actions
 
-### Create Database
+### Create Database {#createdatabase}
 
 Creates a database as a subpage in the specified parent page, with the specified properties schema. Currently, the parent of a new database must be a Notion page or a wiki database.
 
@@ -102,7 +102,7 @@ Creates a database as a subpage in the specified parent page, with the specified
 | Title      | Title of database as it appears in Notion.                                                  | <code>[<br /> {<br /> "type": "text",<br /> "text": {<br /> "content": "Some words ",<br /> "link": null<br /> },<br /> "annotations": {<br /> "bold": false,<br /> "italic": false,<br /> "strikethrough": false,<br /> "underline": false,<br /> "code": false,<br /> "color": "default"<br /> },<br /> "plain_text": "Some words ",<br /> "href": null<br /> }<br />]</code>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 | Properties | Property schema of database. The keys are the names of properties as they appear in Notion. | <code>{<br /> "Name": {<br /> "title": {}<br /> },<br /> "Description": {<br /> "rich_text": {}<br /> },<br /> "In stock": {<br /> "checkbox": {}<br /> },<br /> "Food group": {<br /> "select": {<br /> "options": [<br /> {<br /> "name": "🥦Vegetable",<br /> "color": "green"<br /> },<br /> {<br /> "name": "🍎Fruit",<br /> "color": "red"<br /> },<br /> {<br /> "name": "💪Protein",<br /> "color": "yellow"<br /> }<br /> ]<br /> }<br /> },<br /> "Price": {<br /> "number": {<br /> "format": "dollar"<br /> }<br /> },<br /> "Last ordered": {<br /> "date": {}<br /> },<br /> "Meals": {<br /> "relation": {<br /> "database_id": "668d797c-76fa-4934-9b05-ad288df2d136",<br /> "single_property": {}<br /> }<br /> },<br /> "Number of meals": {<br /> "rollup": {<br /> "rollup_property_name": "Name",<br /> "relation_property_name": "Meals",<br /> "function": "count"<br /> }<br /> },<br /> "Store availability": {<br /> "type": "multi_select",<br /> "multi_select": {<br /> "options": [<br /> {<br /> "name": "Duc Loi Market",<br /> "color": "blue"<br /> },<br /> {<br /> "name": "Rainbow Grocery",<br /> "color": "gray"<br /> },<br /> {<br /> "name": "Nijiya Market",<br /> "color": "purple"<br /> },<br /> {<br /> "name": "Gus'''s Community Market",<br /> "color": "yellow"<br /> }<br /> ]<br /> }<br /> },<br /> "+1": {<br /> "people": {}<br /> },<br /> "Photo": {<br /> "files": {}<br /> }<br />}</code> |
 
-### Create Database Item
+### Create Database Item {#createdatabaseitem}
 
 Creates an Item on a database.
 
@@ -115,7 +115,7 @@ Creates an Item on a database.
 | Icon        | The icon of the new page. Either an emoji object (https://developers.notion.com/reference/emoji-object) or an external file object (https://developers.notion.com/reference/file-object)         | <code>{<br /> "type": "external",<br /> "external": {<br /> "url": "https://images.unsplash.com/photo-1525310072745-f49212b5ac6d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1065&q=80"<br /> }<br />}</code>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | Cover Image | The cover image of the new page, represented as a file object.                                                                                                                                   | <code>{<br /> "type": "file",<br /> "file": {<br /> "url": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/7b8b0713-dbd4-4962-b38b-955b6c49a573/My_test_image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221024%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221024T205211Z&X-Amz-Expires=3600&X-Amz-Signature=208aa971577ff05e75e68354e8a9488697288ff3fb3879c2d599433a7625bf90&X-Amz-SignedHeaders=host&x-id=GetObject",<br /> "expiry_time": "2022-10-24T22:49:22.765Z"<br /> }<br />}</code>                                                                                                                                                                                         |
 
-### Create Page
+### Create Page {#createpage}
 
 Creates a new page that is a child of an existing page or database.
 
@@ -128,7 +128,7 @@ Creates a new page that is a child of an existing page or database.
 | Icon        | The icon of the new page. Either an emoji object (https://developers.notion.com/reference/emoji-object) or an external file object (https://developers.notion.com/reference/file-object)         | <code>{<br /> "type": "external",<br /> "external": {<br /> "url": "https://images.unsplash.com/photo-1525310072745-f49212b5ac6d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1065&q=80"<br /> }<br />}</code>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | Cover Image | The cover image of the new page, represented as a file object.                                                                                                                                   | <code>{<br /> "type": "file",<br /> "file": {<br /> "url": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/7b8b0713-dbd4-4962-b38b-955b6c49a573/My_test_image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221024%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221024T205211Z&X-Amz-Expires=3600&X-Amz-Signature=208aa971577ff05e75e68354e8a9488697288ff3fb3879c2d599433a7625bf90&X-Amz-SignedHeaders=host&x-id=GetObject",<br /> "expiry_time": "2022-10-24T22:49:22.765Z"<br /> }<br />}</code>                                                                                                                                                                                         |
 
-### Get Current User
+### Get Current User {#getcurrentuser}
 
 Get the currently logged in user
 
@@ -136,7 +136,7 @@ Get the currently logged in user
 | ---------- | -------- | ------- |
 | Connection |          |         |
 
-### Get Database
+### Get Database {#getdatabase}
 
 Retrieve a database by ID
 
@@ -145,7 +145,7 @@ Retrieve a database by ID
 | Connection  |          |         |
 | Database ID |          |         |
 
-### Get Page
+### Get Page {#getpage}
 
 Retrieve a page by ID with optional property filters
 
@@ -155,7 +155,7 @@ Retrieve a page by ID with optional property filters
 | Page ID           |                                                                                                                    |         |
 | Filter Properties | A list of page property value IDs separated by commas. Use this to limit the response to specific page properties. |         |
 
-### Get User by ID
+### Get User by ID {#getuser}
 
 Get a user by their ID
 
@@ -164,7 +164,7 @@ Get a user by their ID
 | Connection |          |         |
 | User ID    |          |         |
 
-### List Databases
+### List Databases {#listdatabases}
 
 List all databases
 
@@ -174,7 +174,7 @@ List all databases
 | Start Cursor | The start cursor is returned from a previous 'list' action when at least one more page of records is available. |         |
 | Fetch All    | Turn this on to fetch all pages. This will ignore the start cursor input.                                       | false   |
 
-### List Pages
+### List Pages {#listpages}
 
 List all pages
 
@@ -184,7 +184,7 @@ List all pages
 | Start Cursor | The start cursor is returned from a previous 'list' action when at least one more page of records is available. |         |
 | Fetch All    | Turn this on to fetch all pages. This will ignore the start cursor input.                                       | false   |
 
-### List Users
+### List Users {#listusers}
 
 List all users in the workspace with optional page size
 
@@ -195,7 +195,7 @@ List all users in the workspace with optional page size
 | Page Size    | The number of items from the full list desired in the response. Maximum: 100.                                   | 50      |
 | Fetch All    | Turn this on to fetch all pages. This will ignore the start cursor and page size inputs.                        | false   |
 
-### Query Database
+### Query Database {#querydatabase}
 
 Query a Notion database
 
@@ -205,7 +205,7 @@ Query a Notion database
 | Database ID   |          |         |
 | Filter Object |          |         |
 
-### Raw Request
+### Raw Request {#rawrequest}
 
 Send raw HTTP request to Notion
 

@@ -9,7 +9,7 @@ Connect to TeamViewer to automate your remote support tasks.
 
 ## Connections
 
-### OAuth 2.0
+### OAuth 2.0 {#teamviewer-oauth}
 
 Connect to TeamViewer to automate your remote support tasks.
 
@@ -32,7 +32,7 @@ Read about how OAuth 2.0 works [here](../oauth2.md).
 
 ## Actions
 
-### Assign Device
+### Assign Device {#assigndevice}
 
 Assigns a device to a user account.
 
@@ -44,7 +44,7 @@ Assigns a device to a user account.
 | Assign Mode        | The assign mode for the device.               |         |
 | Connection         |                                               |         |
 
-### Create Account
+### Create Account {#createaccount}
 
 Creates a new account.
 
@@ -58,7 +58,7 @@ Creates a new account.
 | Client Secret | The client secret associated with your TeamViewer account. |         |
 | Connection    |                                                            |         |
 
-### Create Contact
+### Create Contact {#createcontact}
 
 Creates a new contact.
 
@@ -72,7 +72,7 @@ Creates a new contact.
 | Invite      | Whether to invite the contact to TeamViewer.                                                 | false   |
 | Connection  |                                                                                              |         |
 
-### Create Device
+### Create Device {#createdevice}
 
 Creates a new device.
 
@@ -85,7 +85,7 @@ Creates a new device.
 | Password          | The password of the device.                           |         |
 | Connection        |                                                       |         |
 
-### Create Group
+### Create Group {#creategroup}
 
 Creates a new group.
 
@@ -95,7 +95,7 @@ Creates a new group.
 | Policy ID  | The policy ID of the group. |         |
 | Connection |                             |         |
 
-### Create Session
+### Create Session {#createsession}
 
 Creates a new session.
 
@@ -108,7 +108,7 @@ Creates a new session.
 | Body        | Custom fields to include in the request body.                                                |         |
 | Connection  |                                                                                              |         |
 
-### Create User
+### Create User {#createuser}
 
 Creates a user.
 
@@ -130,7 +130,7 @@ Creates a user.
 | Ignored Predefined Roles | Ignored Predefined Roles                       | false   |
 | Connection               |                                                |         |
 
-### Delete Contact
+### Delete Contact {#deletecontact}
 
 Deletes a contact by its ID.
 
@@ -139,7 +139,7 @@ Deletes a contact by its ID.
 | Contacts ID | The ID of the contact to delete. |         |
 | Connection  |                                  |         |
 
-### Delete Device
+### Delete Device {#deletedevice}
 
 Deletes a device by its ID.
 
@@ -148,7 +148,7 @@ Deletes a device by its ID.
 | Device ID  | The ID of the device to delete. |         |
 | Connection |                                 |         |
 
-### Delete Group
+### Delete Group {#deletegroup}
 
 Deletes a group by its ID.
 
@@ -157,7 +157,7 @@ Deletes a group by its ID.
 | Group ID   | The ID of the group to delete. |         |
 | Connection |                                |         |
 
-### Delete Managed Device
+### Delete Managed Device {#deletemanageddevice}
 
 Deletes a managed device by its ID.
 
@@ -166,7 +166,7 @@ Deletes a managed device by its ID.
 | Managed Device ID | The ID of the managed device to delete. |         |
 | Connection        |                                         |         |
 
-### Delete User
+### Delete User {#deleteuser}
 
 Deletes a user.
 
@@ -176,7 +176,7 @@ Deletes a user.
 | Permanent Delete | Whether to permanently delete the user or just deactivate them. | false   |
 | Connection       |                                                                 |         |
 
-### Delete User Company
+### Delete User Company {#deleteusercompany}
 
 Deletes the company of account (user) that is associated with the used API token. This account should be the last user with admin rights at the company.
 
@@ -184,7 +184,7 @@ Deletes the company of account (user) that is associated with the used API token
 | ---------- | -------- | ------- |
 | Connection |          |         |
 
-### Get Account
+### Get Account {#getaccount}
 
 Returns the account that is associated with the used API token.
 
@@ -192,7 +192,7 @@ Returns the account that is associated with the used API token.
 | ---------- | -------- | ------- |
 | Connection |          |         |
 
-### Get Account Tenant IDs
+### Get Account Tenant IDs {#getaccounttenantids}
 
 Returns the account's tenant IDs.
 
@@ -200,7 +200,7 @@ Returns the account's tenant IDs.
 | ---------- | -------- | ------- |
 | Connection |          |         |
 
-### Get Contact
+### Get Contact {#getcontact}
 
 Returns a contact by its ID.
 
@@ -209,7 +209,7 @@ Returns a contact by its ID.
 | Contacts ID | The ID of the contact to retrieve. |         |
 | Connection  |                                    |         |
 
-### Get Device
+### Get Device {#getdevice}
 
 Returns a device by its ID.
 
@@ -218,7 +218,7 @@ Returns a device by its ID.
 | Device ID  | The ID of the device to retrieve. |         |
 | Connection |                                   |         |
 
-### Get Group
+### Get Group {#getgroup}
 
 Returns a group by its ID.
 
@@ -227,7 +227,7 @@ Returns a group by its ID.
 | Group ID   | The ID of the group to retrieve. |         |
 | Connection |                                  |         |
 
-### Get Managed Device
+### Get Managed Device {#getmanageddevice}
 
 Returns a managed device by its ID.
 
@@ -236,7 +236,7 @@ Returns a managed device by its ID.
 | Managed Device ID | The ID of the managed device to retrieve. |         |
 | Connection        |                                           |         |
 
-### Get Missing Patches
+### Get Missing Patches {#getmissingpatches}
 
 This request will return all missing patches on the device, which id is provided in the request.
 
@@ -245,7 +245,7 @@ This request will return all missing patches on the device, which id is provided
 | Device ID  | The ID of the device to retrieve missing patches for. |         |
 | Connection |                                                       |         |
 
-### Get Ping
+### Get Ping {#getping}
 
 Returns if the current token is valid.
 
@@ -253,7 +253,7 @@ Returns if the current token is valid.
 | ---------- | -------- | ------- |
 | Connection |          |         |
 
-### Get Session
+### Get Session {#getsession}
 
 Returns a session by its ID.
 
@@ -262,7 +262,7 @@ Returns a session by its ID.
 | Session ID | The ID of the session to retrieve. |         |
 | Connection |                                    |         |
 
-### Get User
+### Get User {#getuser}
 
 Retrieves the user associated with the used API token.
 
@@ -271,7 +271,7 @@ Retrieves the user associated with the used API token.
 | User ID    | The ID of the user to retrieve. |         |
 | Connection |                                 |         |
 
-### List Company Managed Devices
+### List Company Managed Devices {#listcompanymanageddevices}
 
 Lists one page of company-managed devices of the company that is associated with the currently logged-in session.
 
@@ -282,7 +282,7 @@ Lists one page of company-managed devices of the company that is associated with
 | Query Parameters | The query parameters to include in the request.                                                                                                              |         |
 | Connection       |                                                                                                                                                              |         |
 
-### List Contacts
+### List Contacts {#listcontacts}
 
 Returns a list of contacts.
 
@@ -291,7 +291,7 @@ Returns a list of contacts.
 | Query Parameters | The query parameters to include in the request. |         |
 | Connection       |                                                 |         |
 
-### List Devices
+### List Devices {#listdevices}
 
 Returns a list of devices.
 
@@ -303,7 +303,7 @@ Returns a list of devices.
 | Query Parameters  | The query parameters to include in the request.       |         |
 | Connection        |                                                       |         |
 
-### List Groups
+### List Groups {#listgroups}
 
 Returns a list of groups.
 
@@ -312,7 +312,7 @@ Returns a list of groups.
 | Query Parameters | The query parameters to include in the request. |         |
 | Connection       |                                                 |         |
 
-### List Managed Devices
+### List Managed Devices {#listmanageddevices}
 
 Returns a list of managed devices.
 
@@ -323,7 +323,7 @@ Returns a list of managed devices.
 | Query Parameters | The query parameters to include in the request.                                                                                                              |         |
 | Connection       |                                                                                                                                                              |         |
 
-### List Patch Management Device
+### List Patch Management Device {#listpatchmagementdevices}
 
 Returns a list of patch management devices.
 
@@ -334,7 +334,7 @@ Returns a list of patch management devices.
 | Query Parameters   | The query parameters to include in the request.      |         |
 | Connection         |                                                      |         |
 
-### List Sessions
+### List Sessions {#listsessions}
 
 Returns a list of sessions.
 
@@ -343,7 +343,7 @@ Returns a list of sessions.
 | Query Parameters | The query parameters to include in the request. |         |
 | Connection       |                                                 |         |
 
-### List Users
+### List Users {#listusers}
 
 Retrieves all users with given filter criteria.
 
@@ -355,7 +355,7 @@ Retrieves all users with given filter criteria.
 | User Permissions | Comma separated access rights. Please use user role APIs for user's rights. |         |
 | Connection       |                                                                             |         |
 
-### Raw Request
+### Raw Request {#rawrequest}
 
 Send raw HTTP request to Teamviewer API
 
@@ -377,7 +377,7 @@ Send raw HTTP request to Teamviewer API
 | Max Retry Count         | The maximum number of retries to attempt. Specify 0 for no retries.                                                                                                                                                                          | 0       |
 | Use Exponential Backoff | Specifies whether to use a pre-defined exponential backoff strategy for retries. When enabled, 'Retry Delay (ms)' is ignored.                                                                                                                | false   |
 
-### Scan Results Count
+### Scan Results Count {#scanresultscount}
 
 Retrieves the number of scan results for the specified devices.
 
@@ -387,7 +387,7 @@ Retrieves the number of scan results for the specified devices.
 | Continuation Token | The continuation token from the previous response.    |         |
 | Connection         |                                                       |         |
 
-### Update Account
+### Update Account {#updateaccount}
 
 Updates an account.
 
@@ -400,7 +400,7 @@ Updates an account.
 | Email Language | The language of the account holder.                           |         |
 | Connection     |                                                               |         |
 
-### Update Device
+### Update Device {#updatedevice}
 
 Updates a device by its ID.
 
@@ -414,7 +414,7 @@ Updates a device by its ID.
 | Password          | The password of the device.                           |         |
 | Connection        |                                                       |         |
 
-### Update Group
+### Update Group {#updategroup}
 
 Updates an existing group by its ID.
 
@@ -425,7 +425,7 @@ Updates an existing group by its ID.
 | Policy ID  | The policy ID of the group.    |         |
 | Connection |                                |         |
 
-### Update Managed Device
+### Update Managed Device {#updatemanageddevice}
 
 Modify the attributes of a managed device using its designated 'id.' You can provide the device's 'name' (alias) to enact changes, provide a 'teamviewerPolicyId' to update or add a TeamViewer policy, or provide a 'managedGroupId' to inherit the TeamViewer Policy from a managed group to which the device is associated.
 
@@ -437,7 +437,7 @@ Modify the attributes of a managed device using its designated 'id.' You can pro
 | Managed Group ID     | The ID of the managed group to associate with the managed device. |         |
 | Connection           |                                                                   |         |
 
-### Update Session
+### Update Session {#updatesession}
 
 Updates a session by its ID.
 
@@ -451,7 +451,7 @@ Updates a session by its ID.
 | Body        | Custom fields to include in the request body.                                                |         |
 | Connection  |                                                                                              |         |
 
-### Update User
+### Update User {#updateuser}
 
 Updates a user.
 

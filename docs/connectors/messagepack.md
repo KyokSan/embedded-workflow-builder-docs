@@ -9,7 +9,7 @@ Efficiently serialize or deserialize data into a JSON-like format using msgpack
 
 ## Actions
 
-### Decode
+### Decode {#decodemessage}
 
 Decode a MessagePack message into an object
 
@@ -17,7 +17,7 @@ Decode a MessagePack message into an object
 | ------- | ----------------------------- | ------- |
 | Message | Messagepack message to decode |         |
 
-### Encode
+### Encode {#encodemessage}
 
 Encode an object into MessagePack
 

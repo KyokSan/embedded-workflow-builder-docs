@@ -33,7 +33,7 @@ If your %WORKFLOW% receives a `widget-created` event header, it will follow the 
 
 ## Branching based on a condition
 
-The [If Condition is Met](./connectors/branch.md#if-condition-is-met) action allows you to create branches within your %WORKFLOW% based on more complex inputs.
+The [If Condition is Met](./connectors/branch.md#branchonexpression) action allows you to create branches within your %WORKFLOW% based on more complex inputs.
 You can compare step results or static values using [comparison operators](#comparison-operators) (like "does not equal" or "less than") and follow a branch based on the results of the comparisons.
 
 ![Branch if condition is met](./assets/branching/branch-if-condition-met.png)

@@ -1,127 +1,182 @@
 ---
 title: Jira Connector
 sidebar_label: Jira
-description: Manage issues, comments, projects and users in the Jira platform
+description: Manage issues, comments, projects, and users in Jira.
 ---
 
 ![Jira](./assets/atlassian-jira.png#connector-icon)
-Manage issues, comments, projects and users in the Jira platform
+Manage issues, comments, projects, and users in Jira.
 
 ## Connections
 
-### Basic Authentication
+### Basic Authentication {#basic}
 
 Authenticate with Jira using username and API key
 
-If you select Basic Auth and you are using Jira Cloud, you will need to supply your Jira email and an API token to the connection.
-If you are on a locally hosted instance of Jira, you will need to supply your Jira email and password to the connection.
-For information on generating an API token from Jira Cloud, refer to the [Atlassian docs](https://support.atlassian.com/atlassian-account/docs/manage-api-tokens-for-your-atlassian-account/).
+To authenticate with Atlassian Jira using Basic Authentication, an email address and either an API token (for Jira Cloud) or password (for self-hosted Jira) is required.
 
-| Input    | Comments                                                                                                          | Default |
-| -------- | ----------------------------------------------------------------------------------------------------------------- | ------- |
-| Username | Provide a valid username for the given jira account you want to connect.                                          |         |
-| API Key  | Provide an api token to authenticate all requests with. Cloud users need to generate an API token for this value. |         |
-| Host     | Provide a string value for the URL of your Jira account.                                                          |         |
-| Version  | Select an API version for your Jira API request                                                                   | 3       |
+#### Prerequisites
 
-### OAuth 2.0
+- Access to a Jira Cloud or self-hosted Jira instance
+- Administrative permissions to generate API tokens (for Jira Cloud)
+
+#### Setup Steps
+
+**For Jira Cloud:**
+
+1. Navigate to [Atlassian Account API Tokens](https://id.atlassian.com/manage-profile/security/api-tokens)
+2. Click **Create API token**
+3. Enter a label for the token and click **Create**
+4. Copy the generated API token value
+
+**For Self-Hosted Jira:**
+
+Use the standard account password for authentication. No additional setup is required.
+
+#### Configure the Connection
+
+- For **Username**, enter the email address associated with the Jira account
+- For **API Key**:
+  - **Jira Cloud**: Enter the API token generated in the previous step
+  - **Self-Hosted Jira**: Enter the account password
+- For **Host**, enter the Jira instance URL (e.g., `example.atlassian.net` for cloud or the self-hosted domain)
+- For **Version**, select the API version (typically `3` for Jira Cloud, `2` for older instances)
+
+For more information on generating API tokens from Jira Cloud, refer to the [Atlassian documentation](https://support.atlassian.com/atlassian-account/docs/manage-api-tokens-for-your-atlassian-account/).
+
+:::note Self-Hosted vs Cloud Authentication
+Jira Cloud requires an API token for Basic Authentication, while self-hosted instances can use the account password. For security reasons, it is recommended to use API tokens whenever possible.
+:::
+
+| Input    | Comments                                                                                                                                                                       | Default |
+| -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------- |
+| Username | Your Jira username or email address used for authentication.                                                                                                                   |         |
+| API Key  | Your Jira API token for authentication. Cloud users must generate an API token from [Atlassian Account Settings](https://id.atlassian.com/manage-profile/security/api-tokens). |         |
+| Host     | The hostname of your Jira instance (without https://).                                                                                                                         |         |
+| Version  | Select the Jira API version to use for requests.                                                                                                                               | 3       |
+
+### OAuth 2.0 {#oauth2}
 
 Authenticate with Jira using OAuth 2.0 for secure access
 
-While Jira's Cloud API has support for legacy OAuth 1.0, we only offer support for [Jira's OAuth 2.0 (3LO) flows](https://developer.atlassian.com/cloud/jira/platform/oauth-2-3lo-apps/#enabling-oauth-2-0--3lo-).
-If you select OAuth 2.0, you need to enable it for your app using the [Atlassian developer console](https://developer.atlassian.com/console).
+To create an Atlassian Jira OAuth 2.0 connection, an OAuth 2.0 integration must be configured in the [Atlassian Developer Console](https://developer.atlassian.com/console).
 
-1. Create a new "Oauth 2.0 integration" and give it a name.
-1. Under the app details section, take note of your client Id and client secret values that were generated.
-1. After you have saved those values, find the Authorization section and click configure on Oauth 2.0 (3LO).
-1. You will now be prompted to enter your redirect URL as `https://oauth2.%WHITE_LABEL_BASE_URL%/callback`.
-1. Next, navigate to the permissions. It is important that you remain consistent with the scopes you supply in both Jira, and your connection.
-1. The default scopes on a new connection will be as follows:
-   1. `read:project:jira`
-      `read:user:jira`
-      `write:issue:jira`
-      `read:issue:jira`
-      `read:issue-link:jira`
-      `write:issue-link:jira`
-      `read:issue-link-type:jira`
-      `write:issue-link-type:jira`
-      `read:issue.transition:jira`
-      `delete:issue:jira`
-   1. These scopes will provide access to the most of the actions in the Jira component, but you may have to modify the scopes in both locations (here and Atlassian Console) to meet your needs.
-1. For more information on developing Jira applications, follow the guide [here](https://developer.atlassian.com/cloud/jira/platform/oauth-2-3lo-apps/).
-1. Next, configure an OAuth 2.0 connection.
-1. Add a Jira step to your integration.
-   1. This will automatically create a Jira connection config variable.
-1. Ensure the connection is of type `Jira OAuth 2.0 Connection` and enter the following details:
-1. For **Client ID** and **Client Secret** enter the values that you got from the Atlassian Developer Console
-1. As stated previously **Scopes** will default to the following:
-   1. `read:project:jira`
-      `read:user:jira`
-      `write:issue:jira`
-      `read:issue:jira`
-      `read:issue-link:jira`
-      `write:issue-link:jira`
-      `read:issue-link-type:jira`
-      `write:issue-link-type:jira`
-      `read:issue.transition:jira`
-      `delete:issue:jira`.
-1. With the addition of `offline_access` on the connection side to obtain a refresh token. From here you can do any [additional configuration](https://developer.atlassian.com/cloud/jira/platform/scopes-for-connect-and-oauth-2-3LO-apps/#oauth-2-0-authorization-code-only-scopes) to match your use case. For example, you might assign the scopes `manage:jira-project read:jira-user` if you plan to work with Users and Projects. You will need to enable these scopes on the [Atlassian Developer Console](https://developer.atlassian.com/apps) page for your OAuth 2.0 Jira app. It is important to include `offline_access` in your scopes, or you will not be given a refresh token.
-1. For **Version** enter the version of Jira you use (you likely use version **2**).
-   1. Jira API: manage:jira-configuration, manage:jira-project, write:jira-work, read:jira-work.
+Jira's Cloud API supports OAuth 2.0 (3LO) flows for secure authentication. For more information on OAuth 2.0 (3LO) apps, refer to [Jira's OAuth 2.0 documentation](https://developer.atlassian.com/cloud/jira/platform/oauth-2-3lo-apps/#enabling-oauth-2-0--3lo-).
+
+#### Prerequisites
+
+- Access to the [Atlassian Developer Console](https://developer.atlassian.com/console)
+- Administrative permissions to create OAuth 2.0 integrations
+
+#### Setup Steps
+
+1. Navigate to the [Atlassian Developer Console](https://developer.atlassian.com/console)
+2. Click **Create** and select **OAuth 2.0 integration**
+3. Enter a name for the integration
+4. After creation, locate the **App details** section and copy the **Client ID** and **Client Secret** values
+5. Under the **Authorization** section, click **Configure** next to **OAuth 2.0 (3LO)**
+6. Enter the callback URL: `https://oauth2.%WHITE_LABEL_BASE_URL%/callback`
+7. Navigate to the **Permissions** tab
+8. Add the required scopes based on the use case:
+   - For basic issue management, the following scopes are recommended:
+     ```
+     read:jira-user read:jira-work write:jira-work manage:jira-project manage:jira-configuration manage:jira-webhook offline_access
+     ```
+   - Refer to [Jira OAuth 2.0 scopes documentation](https://developer.atlassian.com/cloud/jira/platform/scopes-for-oauth-2-3LO-and-forge-apps/) for a complete list of available scopes
+9. Click **Save** to apply the configuration
+
+:::warning Scope Consistency
+The scopes configured in the Atlassian Developer Console must match the scopes entered in the connection configuration. Inconsistent scopes will cause authentication failures.
+:::
+
+#### Configure the Connection
+
+- Enter the **Client ID** from the Atlassian Developer Console
+- Enter the **Client Secret** from the Atlassian Developer Console
+- For **Scopes**, use the following default value:
+
+  ```
+  read:jira-user read:jira-work write:jira-work manage:jira-project manage:jira-configuration manage:jira-webhook offline_access
+  ```
+
+  - The `offline_access` scope is required to obtain a refresh token
+  - Customize the scopes to match the use case requirements
+  - Ensure the scopes match those configured in the Atlassian Developer Console
+  - Refer to [Jira scopes documentation](https://developer.atlassian.com/cloud/jira/platform/scopes-for-oauth-2-3LO-and-forge-apps/) for additional scope information
+
+- For **Jira Site Name** (optional):
+  - By default, the connection uses the first Jira site the authenticated user has access to
+  - To specify a different site, enter the site name (e.g., `example`) or full URL (e.g., `example.atlassian.net`)
+- For **Version**, select the API version (typically `3` for Jira Cloud)
+
+For additional information on developing Jira applications and OAuth 2.0 configuration, refer to the [Jira OAuth 2.0 apps guide](https://developer.atlassian.com/cloud/jira/platform/oauth-2-3lo-apps/).
 
 This connection uses OAuth 2.0, a common authentication mechanism for integrations.
 Read about how OAuth 2.0 works [here](../oauth2.md).
 
-| Input          | Comments                                                                                                                                                                                                                              | Default                                                                                                                        |
-| -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
-| Authorize URL  | The OAuth 2.0 Authorization URL for Jira                                                                                                                                                                                              | https://auth.atlassian.com/authorize?audience=api.atlassian.com&prompt=consent                                                 |
-| Token URL      | The OAuth 2.0 Token URL for Jira                                                                                                                                                                                                      | https://auth.atlassian.com/oauth/token                                                                                         |
-| Scopes         | A space-delimited set of one or more scopes to get the user's permission to access. For more information on scopes, see [Jira V3 Scopes](https://developer.atlassian.com/cloud/jira/platform/scopes-for-oauth-2-3LO-and-forge-apps/). | read:jira-user read:jira-work write:jira-work manage:jira-project manage:jira-configuration manage:jira-webhook offline_access |
-| Client ID      |                                                                                                                                                                                                                                       |                                                                                                                                |
-| Client Secret  |                                                                                                                                                                                                                                       |                                                                                                                                |
-| Jira Site Name | By default this connector connects to the first Jira site this user has access to. If you have multiple Jira sites, please specify which one you would like to connect to, you can use the site name or the full url.                 |                                                                                                                                |
-| Version        | Select an API version for your Jira API request                                                                                                                                                                                       | 3                                                                                                                              |
+| Input          | Comments                                                                                                                                                                                             | Default                                                                                                                        |
+| -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
+| Authorize URL  | The OAuth 2.0 Authorization URL for Jira.                                                                                                                                                            | https://auth.atlassian.com/authorize?audience=api.atlassian.com&prompt=consent                                                 |
+| Token URL      | The OAuth 2.0 Token URL for Jira.                                                                                                                                                                    | https://auth.atlassian.com/oauth/token                                                                                         |
+| Scopes         | Space-delimited list of OAuth scopes for Jira access. For more information, see [Jira OAuth 2.0 Scopes](https://developer.atlassian.com/cloud/jira/platform/scopes-for-oauth-2-3LO-and-forge-apps/). | read:jira-user read:jira-work write:jira-work manage:jira-project manage:jira-configuration manage:jira-webhook offline_access |
+| Client ID      | Your OAuth 2.0 Client ID from the Atlassian Developer Console.                                                                                                                                       |                                                                                                                                |
+| Client Secret  | Your OAuth 2.0 Client Secret from the Atlassian Developer Console.                                                                                                                                   |                                                                                                                                |
+| Jira Site Name | Optional site name or URL to connect to. By default, connects to the first Jira site the user has access to. Use this if you have multiple Jira sites.                                               |                                                                                                                                |
+| Version        | Select the Jira API version to use for requests.                                                                                                                                                     | 3                                                                                                                              |
+
+## Triggers
+
+### Issue Events {#issueeventstrigger}
+
+Receive real-time notifications when Jira issues are created, updated, or deleted. Automatically creates and manages a webhook subscription for selected issue events when the instance is deployed, and removes the subscription when the instance is deleted.
+
+| Input            | Comments                                                                                                                                                                                                                             | Default |
+| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------- |
+| Connection       | The Jira connection to use.                                                                                                                                                                                                          |         |
+| Event Types      | Select the Jira events that will trigger this webhook.                                                                                                                                                                               |         |
+| JQL Filter       | JQL (Jira Query Language) filter to limit which issues trigger the webhook. For more information, see [JQL Documentation](https://support.atlassian.com/jira-software-cloud/docs/use-advanced-search-with-jira-query-language-jql/). |         |
+| Field IDs Filter | Optional list of field IDs to monitor. Only changes to these specific fields will trigger the webhook. Leave empty to monitor all field changes.                                                                                     |         |
 
 ## Actions
 
-### Add Comment
+### Add Comment {#addcomment}
 
 Add a comment to an existing issue
 
 | Input          | Comments                                                                                                      | Default |
 | -------------- | ------------------------------------------------------------------------------------------------------------- | ------- |
-| Connection     |                                                                                                               |         |
-| Issue ID       | Provide the ID of the Issue.                                                                                  |         |
-| Comment        | Provide a string value for the comment.                                                                       |         |
+| Connection     | The Jira connection to use.                                                                                   |         |
+| Issue ID       | The unique identifier of the Jira issue.                                                                      |         |
+| Comment        | The text content of the comment to add or update.                                                             |         |
 | Dynamic Fields | A field for dynamic inputs that can be configured at deploy time with the use of a key value config variable. |         |
 | Values         | The names of the fields and their values to use when creating/updating a record                               |         |
 
-### Add Issue Attachment
+### Add Issue Attachment {#addissueattachment}
 
 Add a file attachment to an issue
 
 | Input      | Comments                                                     | Default |
 | ---------- | ------------------------------------------------------------ | ------- |
-| Connection |                                                              |         |
-| Issue ID   | Provide the ID of the Issue.                                 |         |
+| Connection | The Jira connection to use.                                  |         |
+| Issue ID   | The unique identifier of the Jira issue.                     |         |
 | File       | The file to upload - either string contents or a binary file |         |
 | File Name  | The name of the file to upload                               |         |
 
-### Create Issue
+### Create Issue {#createissue}
 
 Create an issue within a given project
 
 | Input               | Comments                                                                                                                                                                                                                           | Default                                                                                                                                                                                                                         |
 | ------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Connection          |                                                                                                                                                                                                                                    |                                                                                                                                                                                                                                 |
-| Project ID          | Provide the ID or Name of the Project.                                                                                                                                                                                             |                                                                                                                                                                                                                                 |
-| Summary             | Provide a string value for the summary of the issue.                                                                                                                                                                               |                                                                                                                                                                                                                                 |
-| Description         | Provide a string value for the description of the issue.                                                                                                                                                                           |                                                                                                                                                                                                                                 |
+| Connection          | The Jira connection to use.                                                                                                                                                                                                        |                                                                                                                                                                                                                                 |
+| Project ID          | The unique identifier or name of the Jira project.                                                                                                                                                                                 |                                                                                                                                                                                                                                 |
+| Summary             | A brief summary or title for the issue.                                                                                                                                                                                            |                                                                                                                                                                                                                                 |
+| Description         | A detailed description of the issue.                                                                                                                                                                                               |                                                                                                                                                                                                                                 |
 | ADF Description     | The above json code will print: 'Some text' in the Jira Issue description, to get more info visit: https://developer.atlassian.com/cloud/jira/platform/apis/document/playground/ to get a JSON representation of your description. | <code>{<br /> "version": 1,<br /> "type": "doc",<br /> "content": [<br /> {<br /> "type": "paragraph",<br /> "content": [<br /> {<br /> "type": "text",<br /> "text": "Some text"<br /> }<br /> ]<br /> }<br /> ]<br />}</code> |
 | Issue Type Name     | Provide a value for the name type of the issue. Use this field or the Issue Type ID field.                                                                                                                                         |                                                                                                                                                                                                                                 |
 | Issue Type ID       | Provide the ID of the Issue Type. Use this field or the Issue Type Name field.                                                                                                                                                     |                                                                                                                                                                                                                                 |
-| Assignee Account ID | Provide the Account ID for the person being assigned the issue.                                                                                                                                                                    |                                                                                                                                                                                                                                 |
-| Reporter Account ID | Provide the Account ID for the person that is reporting the issue.                                                                                                                                                                 |                                                                                                                                                                                                                                 |
+| Assignee Account ID | The Atlassian account ID of the user to assign the issue to.                                                                                                                                                                       |                                                                                                                                                                                                                                 |
+| Reporter Account ID | The Atlassian account ID of the user reporting the issue.                                                                                                                                                                          |                                                                                                                                                                                                                                 |
 | Due Date            | Provide due date for the issue.                                                                                                                                                                                                    |                                                                                                                                                                                                                                 |
 | Priority            | Provide the unique identifier of the priority. This value can either be an Id, key, or name of the desired record.                                                                                                                 |                                                                                                                                                                                                                                 |
 | Labels              | Provide a list of labels for the issue.                                                                                                                                                                                            |                                                                                                                                                                                                                                 |
@@ -130,353 +185,353 @@ Create an issue within a given project
 | Dynamic Fields      | A field for dynamic inputs that can be configured at deploy time with the use of a key value config variable.                                                                                                                      |                                                                                                                                                                                                                                 |
 | Values              | The names of the fields and their values to use when creating/updating a record                                                                                                                                                    |                                                                                                                                                                                                                                 |
 
-### Create User
+### Create User {#createuser}
 
 Create a new user record
 
 | Input          | Comments                                                                                                      | Default |
 | -------------- | ------------------------------------------------------------------------------------------------------------- | ------- |
-| Connection     |                                                                                                               |         |
+| Connection     | The Jira connection to use.                                                                                   |         |
 | Email Address  | Provide a string value for a valid email address.                                                             |         |
-| Username       | Provide a string value for the username of the user.                                                          |         |
-| Password       | Provide a password to assign to the user.                                                                     |         |
-| Notifications  | This flag will determine if the user will receive notifications.                                              | false   |
-| Display Name   | Provide a string value for the display name to assign to the new user.                                        |         |
+| Username       | The username for the Jira user account.                                                                       |         |
+| Password       | The password to assign to the user account.                                                                   |         |
+| Notifications  | When true, the user will receive email notifications for relevant events.                                     | false   |
+| Display Name   | The display name for the user account.                                                                        |         |
 | Dynamic Fields | A field for dynamic inputs that can be configured at deploy time with the use of a key value config variable. |         |
 | Values         | The names of the fields and their values to use when creating/updating a record                               |         |
 
-### Create Version
+### Create Version {#createversion}
 
 Create a new version
 
 | Input          | Comments                                                                                                      | Default |
 | -------------- | ------------------------------------------------------------------------------------------------------------- | ------- |
-| Connection     |                                                                                                               |         |
-| Description    | Provide a string value for the description of the issue.                                                      |         |
+| Connection     | The Jira connection to use.                                                                                   |         |
+| Description    | A detailed description of the issue.                                                                          |         |
 | Version Name   | Provide a string value for the name of the version.                                                           |         |
-| Archived       | This flag determines if the given version is archived.                                                        | false   |
-| Released       | This flag determines if the given version has been released.                                                  | false   |
+| Archived       | When true, marks the version as archived.                                                                     | false   |
+| Released       | When true, marks the version as released.                                                                     | false   |
 | Start Date     | Provide a value for the startDate.                                                                            |         |
 | Release Date   | Provide a valid date for the release of the given version.                                                    |         |
-| Project Key    | Provide a string value for the key of the project.                                                            |         |
-| Project ID     | Provide the ID or Name of the Project.                                                                        |         |
+| Project Key    | The project key identifier (e.g., PROJ, ENG, SALES).                                                          |         |
+| Project ID     | The unique identifier or name of the Jira project.                                                            |         |
 | Dynamic Fields | A field for dynamic inputs that can be configured at deploy time with the use of a key value config variable. |         |
 | Values         | The names of the fields and their values to use when creating/updating a record                               |         |
 
-### Create Webhook
+### Create Webhook {#createwebhook}
 
 Create a webhook to send data from Jira to an instance URL
 
 | Input           | Comments                                                                                                                                                                                                                                                                             | Default |
 | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------- |
-| Connection      |                                                                                                                                                                                                                                                                                      |         |
+| Connection      | The Jira connection to use.                                                                                                                                                                                                                                                          |         |
 | Webhook URL     | Reference a flow's URL from the trigger payload                                                                                                                                                                                                                                      |         |
 | Webhook Details | Webhook Details payload to be sent into Jira's OAuth2 Webhook API or Jira's REST API; must match structure of `webhooks` property for Register Dynamic Webhook endpoint: https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-webhooks/#api-rest-api-3-webhook-post |         |
 
-### Delete Comment
+### Delete Comment {#deletecomment}
 
 Delete a comment from an issue
 
-| Input      | Comments                     | Default |
-| ---------- | ---------------------------- | ------- |
-| Connection |                              |         |
-| Issue ID   | Provide the ID of the Issue. |         |
-| Comment ID | Provide the Comment ID.      |         |
+| Input      | Comments                                 | Default |
+| ---------- | ---------------------------------------- | ------- |
+| Connection | The Jira connection to use.              |         |
+| Issue ID   | The unique identifier of the Jira issue. |         |
+| Comment ID | The unique identifier of the comment.    |         |
 
-### Delete Issue
+### Delete Issue {#deleteissue}
 
 Delete an issue by id
 
-| Input      | Comments                     | Default |
-| ---------- | ---------------------------- | ------- |
-| Connection |                              |         |
-| Issue ID   | Provide the ID of the Issue. |         |
+| Input      | Comments                                 | Default |
+| ---------- | ---------------------------------------- | ------- |
+| Connection | The Jira connection to use.              |         |
+| Issue ID   | The unique identifier of the Jira issue. |         |
 
-### Delete Webhook
+### Delete Webhook {#deletewebhook}
 
 Delete a webhook by ID
 
 | Input      | Comments                        | Default |
 | ---------- | ------------------------------- | ------- |
-| Connection |                                 |         |
+| Connection | The Jira connection to use.     |         |
 | Webhook ID | The ID of the webhook to remove |         |
 
-### Download Issue Attachments
+### Download Issue Attachments {#downloadattachment}
 
 Download the attachments data connected to an issue
 
 | Input          | Comments                                                                                               | Default |
 | -------------- | ------------------------------------------------------------------------------------------------------ | ------- |
-| Connection     |                                                                                                        |         |
+| Connection     | The Jira connection to use.                                                                            |         |
 | Issue ID       | Providing an Issue ID will return all attachments of an Issue.                                         |         |
 | Attachment IDs | The IDs of the attachments to download. If this field is provided, the issue id input will be ignored. |         |
 
-### Find Issue
+### Find Issue {#findissue}
 
 Find Issue by attribute
 
 | Input        | Comments                                                                                                                                                                                                                           | Default |
 | ------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
-| Connection   |                                                                                                                                                                                                                                    |         |
+| Connection   | The Jira connection to use.                                                                                                                                                                                                        |         |
 | Search Type  | Attribute to search                                                                                                                                                                                                                |         |
 | Search Value | Value to search for                                                                                                                                                                                                                |         |
 | Fields       | Comma-separated list of fields to return. Defaults to common navigable fields (summary, status, assignee, reporter, priority, issuetype, project, created, updated). Use '\*all' for all fields or specify individual field names. |         |
 
-### Find Project
+### Find Project {#findproject}
 
 Find Project by attribute
 
-| Input        | Comments            | Default |
-| ------------ | ------------------- | ------- |
-| Connection   |                     |         |
-| Search Type  | Attribute to search |         |
-| Search Value | Value to search for |         |
+| Input        | Comments                    | Default |
+| ------------ | --------------------------- | ------- |
+| Connection   | The Jira connection to use. |         |
+| Search Type  | Attribute to search         |         |
+| Search Value | Value to search for         |         |
 
-### Find User
+### Find User {#finduser}
 
 Find User by attribute
 
-| Input        | Comments            | Default |
-| ------------ | ------------------- | ------- |
-| Connection   |                     |         |
-| Search Value | Value to search for |         |
+| Input        | Comments                    | Default |
+| ------------ | --------------------------- | ------- |
+| Connection   | The Jira connection to use. |         |
+| Search Value | Value to search for         |         |
 
-### Get Board
+### Get Board {#getboard}
 
 Get information and metadata of a board by Id
 
-| Input      | Comments                     | Default |
-| ---------- | ---------------------------- | ------- |
-| Connection |                              |         |
-| Board ID   | Provide the ID of the Board. |         |
+| Input      | Comments                                 | Default |
+| ---------- | ---------------------------------------- | ------- |
+| Connection | The Jira connection to use.              |         |
+| Board ID   | The unique identifier of the Jira board. |         |
 
-### Get Comments
+### Get Comments {#getcomments}
 
 Get all the comments on a given issue
 
-| Input      | Comments                     | Default |
-| ---------- | ---------------------------- | ------- |
-| Connection |                              |         |
-| Issue ID   | Provide the ID of the Issue. |         |
+| Input      | Comments                                 | Default |
+| ---------- | ---------------------------------------- | ------- |
+| Connection | The Jira connection to use.              |         |
+| Issue ID   | The unique identifier of the Jira issue. |         |
 
-### Get Current User
+### Get Current User {#getcurrentuser}
 
 Get the information and metadata of the current user
 
-| Input      | Comments | Default |
-| ---------- | -------- | ------- |
-| Connection |          |         |
+| Input      | Comments                    | Default |
+| ---------- | --------------------------- | ------- |
+| Connection | The Jira connection to use. |         |
 
-### Get Issue
+### Get Issue {#getissue}
 
 Get the information and metadata of an issue
 
-| Input      | Comments                     | Default |
-| ---------- | ---------------------------- | ------- |
-| Connection |                              |         |
-| Issue ID   | Provide the ID of the Issue. |         |
+| Input      | Comments                                 | Default |
+| ---------- | ---------------------------------------- | ------- |
+| Connection | The Jira connection to use.              |         |
+| Issue ID   | The unique identifier of the Jira issue. |         |
 
-### Get Project
+### Get Project {#getproject}
 
 Get the information and metadata of a project
 
-| Input      | Comments                               | Default |
-| ---------- | -------------------------------------- | ------- |
-| Connection |                                        |         |
-| Project ID | Provide the ID or Name of the Project. |         |
+| Input      | Comments                                           | Default |
+| ---------- | -------------------------------------------------- | ------- |
+| Connection | The Jira connection to use.                        |         |
+| Project ID | The unique identifier or name of the Jira project. |         |
 
-### Get Status List
+### Get Status List {#getstatuslist}
 
 Returns a status list
 
-| Input       | Comments                                                                         | Default |
-| ----------- | -------------------------------------------------------------------------------- | ------- |
-| Connection  |                                                                                  |         |
-| Project ID  | Provide the ID or Name of the Project.                                           |         |
-| Max Results | Provide a value for the maximum amount of results to be returned in the request. |         |
-| Start At    | Provide the index of the first item to return (to start from)                    | 0       |
+| Input       | Comments                                                           | Default |
+| ----------- | ------------------------------------------------------------------ | ------- |
+| Connection  | The Jira connection to use.                                        |         |
+| Project ID  | The unique identifier or name of the Jira project.                 |         |
+| Max Results | The maximum number of results to return per page.                  |         |
+| Start At    | The index of the first item to return in the result set (0-based). | 0       |
 
-### Get User
+### Get User {#getuser}
 
 Get information and metadata about an user by id
 
 | Input      | Comments                                                                                                                | Default |
 | ---------- | ----------------------------------------------------------------------------------------------------------------------- | ------- |
-| Connection |                                                                                                                         |         |
-| Account ID | Provide the Account ID of the account to use.                                                                           |         |
+| Connection | The Jira connection to use.                                                                                             |         |
+| Account ID | The unique Atlassian account ID of the user.                                                                            |         |
 | Expand     | The response may contain a list under the \_expandable property; you can specify any of its values separated by commas. |         |
 
-### Get Version
+### Get Version {#getversion}
 
 Get the information and metadata of an existing version
 
-| Input      | Comments                       | Default |
-| ---------- | ------------------------------ | ------- |
-| Connection |                                |         |
-| Version ID | Provide the ID of the Version. |         |
+| Input      | Comments                              | Default |
+| ---------- | ------------------------------------- | ------- |
+| Connection | The Jira connection to use.           |         |
+| Version ID | The unique identifier of the version. |         |
 
-### List Assignable Users for Project
+### List Assignable Users for Project {#listassignableusers}
 
 Returns a list of users assignable to the given project
 
-| Input       | Comments                                                                         | Default |
-| ----------- | -------------------------------------------------------------------------------- | ------- |
-| Connection  |                                                                                  |         |
-| Project Key | Provide a string value for the key of the project.                               |         |
-| Start At    | Provide the index of the first item to return (to start from)                    | 0       |
-| Max Results | Provide a value for the maximum amount of results to be returned in the request. |         |
+| Input       | Comments                                                           | Default |
+| ----------- | ------------------------------------------------------------------ | ------- |
+| Connection  | The Jira connection to use.                                        |         |
+| Project Key | The project key identifier (e.g., PROJ, ENG, SALES).               |         |
+| Start At    | The index of the first item to return in the result set (0-based). | 0       |
+| Max Results | The maximum number of results to return per page.                  |         |
 
-### List Boards
+### List Boards {#listboards}
 
 Retrieve a list of existing boards
 
-| Input       | Comments                                                                         | Default |
-| ----------- | -------------------------------------------------------------------------------- | ------- |
-| Connection  |                                                                                  |         |
-| Start At    | Provide the index of the first item to return (to start from)                    | 0       |
-| Max Results | Provide a value for the maximum amount of results to be returned in the request. |         |
-| Filter      | The filter applied to the list of dashboards.                                    | my      |
+| Input       | Comments                                                           | Default |
+| ----------- | ------------------------------------------------------------------ | ------- |
+| Connection  | The Jira connection to use.                                        |         |
+| Start At    | The index of the first item to return in the result set (0-based). | 0       |
+| Max Results | The maximum number of results to return per page.                  |         |
+| Filter      | The filter applied to the list of dashboards.                      | my      |
 
-### List Board Sprints
+### List Board Sprints {#listboardssprints}
 
 List all sprints within a board
 
-| Input       | Comments                                                                         | Default |
-| ----------- | -------------------------------------------------------------------------------- | ------- |
-| Connection  |                                                                                  |         |
-| Board ID    | Provide the ID of the Board.                                                     |         |
-| Start At    | Provide the index of the first item to return (to start from)                    | 0       |
-| Max Results | Provide a value for the maximum amount of results to be returned in the request. |         |
+| Input       | Comments                                                           | Default |
+| ----------- | ------------------------------------------------------------------ | ------- |
+| Connection  | The Jira connection to use.                                        |         |
+| Board ID    | The unique identifier of the Jira board.                           |         |
+| Start At    | The index of the first item to return in the result set (0-based). | 0       |
+| Max Results | The maximum number of results to return per page.                  |         |
 
-### List Issue Attachments
+### List Issue Attachments {#listissueattachments}
 
 Returns a list of issue attachments
 
-| Input      | Comments                     | Default |
-| ---------- | ---------------------------- | ------- |
-| Issue ID   | Provide the ID of the Issue. |         |
-| Connection |                              |         |
+| Input      | Comments                                 | Default |
+| ---------- | ---------------------------------------- | ------- |
+| Issue ID   | The unique identifier of the Jira issue. |         |
+| Connection | The Jira connection to use.              |         |
 
-### List Issue Custom Fields
+### List Issue Custom Fields {#listissuecustomfields}
 
 List all configured issue fields
 
-| Input      | Comments | Default |
-| ---------- | -------- | ------- |
-| Connection |          |         |
+| Input      | Comments                    | Default |
+| ---------- | --------------------------- | ------- |
+| Connection | The Jira connection to use. |         |
 
-### List Issue Fields
+### List Issue Fields {#listissuefields}
 
 List all non-custom issue fields
 
-| Input      | Comments | Default |
-| ---------- | -------- | ------- |
-| Connection |          |         |
+| Input      | Comments                    | Default |
+| ---------- | --------------------------- | ------- |
+| Connection | The Jira connection to use. |         |
 
-### List Issue Link Types
+### List Issue Link Types {#listissuelinktypes}
 
 List all available issue link types
 
-| Input      | Comments | Default |
-| ---------- | -------- | ------- |
-| Connection |          |         |
+| Input      | Comments                    | Default |
+| ---------- | --------------------------- | ------- |
+| Connection | The Jira connection to use. |         |
 
-### List Issues by Project
+### List Issues by Project {#listissues}
 
 Returns a list of issues for a specific project
 
 | Input           | Comments                                                                                                                                                                                                                           | Default |
 | --------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
-| Connection      |                                                                                                                                                                                                                                    |         |
-| Project ID      | Provide the ID or Name of the Project.                                                                                                                                                                                             |         |
+| Connection      | The Jira connection to use.                                                                                                                                                                                                        |         |
+| Project ID      | The unique identifier or name of the Jira project.                                                                                                                                                                                 |         |
 | Next Page Token | Token for cursor-based pagination. Use the token returned from the previous response to get the next page of results. Leave empty for the first page.                                                                              |         |
-| Max Results     | Provide a value for the maximum amount of results to be returned in the request.                                                                                                                                                   |         |
+| Max Results     | The maximum number of results to return per page.                                                                                                                                                                                  |         |
 | Fields          | Comma-separated list of fields to return. Defaults to common navigable fields (summary, status, assignee, reporter, priority, issuetype, project, created, updated). Use '\*all' for all fields or specify individual field names. |         |
 
-### List Issue Transitions
+### List Issue Transitions {#listissuetransitions}
 
 Returns a list of issue transitions
 
-| Input      | Comments                     | Default |
-| ---------- | ---------------------------- | ------- |
-| Connection |                              |         |
-| Issue ID   | Provide the ID of the Issue. |         |
+| Input      | Comments                                 | Default |
+| ---------- | ---------------------------------------- | ------- |
+| Connection | The Jira connection to use.              |         |
+| Issue ID   | The unique identifier of the Jira issue. |         |
 
-### List Issue Types
+### List Issue Types {#listissuetypes}
 
 Returns a list of issue types
 
-| Input      | Comments | Default |
-| ---------- | -------- | ------- |
-| Connection |          |         |
+| Input      | Comments                    | Default |
+| ---------- | --------------------------- | ------- |
+| Connection | The Jira connection to use. |         |
 
-### List Issue Worklogs
+### List Issue Worklogs {#listissueworklogs}
 
 Returns a list of issue worklogs
 
-| Input      | Comments                     | Default |
-| ---------- | ---------------------------- | ------- |
-| Connection |                              |         |
-| Issue ID   | Provide the ID of the Issue. |         |
+| Input      | Comments                                 | Default |
+| ---------- | ---------------------------------------- | ------- |
+| Connection | The Jira connection to use.              |         |
+| Issue ID   | The unique identifier of the Jira issue. |         |
 
-### List Priorities
+### List Priorities {#listpriorities}
 
 Returns a list of all priorities
 
-| Input       | Comments                                                                         | Default |
-| ----------- | -------------------------------------------------------------------------------- | ------- |
-| Connection  |                                                                                  |         |
-| Max Results | Provide a value for the maximum amount of results to be returned in the request. |         |
-| Start At    | Provide the index of the first item to return (to start from)                    | 0       |
+| Input       | Comments                                                           | Default |
+| ----------- | ------------------------------------------------------------------ | ------- |
+| Connection  | The Jira connection to use.                                        |         |
+| Max Results | The maximum number of results to return per page.                  |         |
+| Start At    | The index of the first item to return in the result set (0-based). | 0       |
 
-### List Projects
+### List Projects {#listprojects}
 
 Retrieve a list of all projects
 
-| Input       | Comments                                                                         | Default |
-| ----------- | -------------------------------------------------------------------------------- | ------- |
-| Connection  |                                                                                  |         |
-| Max Results | Provide a value for the maximum amount of results to be returned in the request. |         |
-| Start At    | Provide the index of the first item to return (to start from)                    | 0       |
+| Input       | Comments                                                           | Default |
+| ----------- | ------------------------------------------------------------------ | ------- |
+| Connection  | The Jira connection to use.                                        |         |
+| Max Results | The maximum number of results to return per page.                  |         |
+| Start At    | The index of the first item to return in the result set (0-based). | 0       |
 
-### List Versions
+### List Versions {#listversions}
 
 Returns a list of all versions
 
-| Input       | Comments                                                                         | Default |
-| ----------- | -------------------------------------------------------------------------------- | ------- |
-| Connection  |                                                                                  |         |
-| Project ID  | Provide the ID or Name of the Project.                                           |         |
-| Max Results | Provide a value for the maximum amount of results to be returned in the request. |         |
-| Start At    | Provide the index of the first item to return (to start from)                    | 0       |
+| Input       | Comments                                                           | Default |
+| ----------- | ------------------------------------------------------------------ | ------- |
+| Connection  | The Jira connection to use.                                        |         |
+| Project ID  | The unique identifier or name of the Jira project.                 |         |
+| Max Results | The maximum number of results to return per page.                  |         |
+| Start At    | The index of the first item to return in the result set (0-based). | 0       |
 
-### List Webhooks
+### List Webhooks {#listwebhooks}
 
 List all webhooks configured, including those for other integrations
 
-| Input      | Comments                                                | Default |
-| ---------- | ------------------------------------------------------- | ------- |
-| Connection |                                                         |         |
-| Fetch All  | Turn on to fetch more than the default limit of results | false   |
+| Input      | Comments                                                                | Default |
+| ---------- | ----------------------------------------------------------------------- | ------- |
+| Connection | The Jira connection to use.                                             |         |
+| Fetch All  | When true, automatically fetches all pages of results using pagination. | false   |
 
-### Query
+### Query {#queryv3}
 
 Search your entire Jira site using a JQL query.
 
 | Input       | Comments                                                                                                                | Default |
 | ----------- | ----------------------------------------------------------------------------------------------------------------------- | ------- |
-| Connection  |                                                                                                                         |         |
-| Search      | Provide a string value to search on.                                                                                    |         |
+| Connection  | The Jira connection to use.                                                                                             |         |
+| Search      | The search term to use when searching for records.                                                                      |         |
 | Expand      | The response may contain a list under the \_expandable property; you can specify any of its values separated by commas. |         |
-| Max Results | Provide a value for the maximum amount of results to be returned in the request.                                        |         |
+| Max Results | The maximum number of results to return per page.                                                                       |         |
 
-### Raw Request
+### Raw Request {#rawrequest}
 
 Send raw HTTP request to Jira
 
 | Input                   | Comments                                                                                                                                                                                                                                                                                        | Default                    |
 | ----------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------- |
-| Connection              |                                                                                                                                                                                                                                                                                                 |                            |
+| Connection              | The Jira connection to use.                                                                                                                                                                                                                                                                     |                            |
 | URL                     | Input the path only (/rest/api/3/project/recent), The base URL is already included (https://api.atlassian.com/ex/jira/<CLOUD_ID>). For example, to connect to https://api.atlassian.com/ex/jira/<CLOUD_ID>/rest/api/3/project/recent, only /rest/api/3/project/recent is entered in this field. | /rest/api/3/project/recent |
 | Method                  | The HTTP method to use.                                                                                                                                                                                                                                                                         |                            |
 | Data                    | The HTTP body payload to send to the URL.                                                                                                                                                                                                                                                       |                            |
@@ -492,83 +547,83 @@ Send raw HTTP request to Jira
 | Max Retry Count         | The maximum number of retries to attempt. Specify 0 for no retries.                                                                                                                                                                                                                             | 0                          |
 | Use Exponential Backoff | Specifies whether to use a pre-defined exponential backoff strategy for retries. When enabled, 'Retry Delay (ms)' is ignored.                                                                                                                                                                   | false                      |
 
-### Refresh Webhook
+### Refresh Webhook {#refreshwebhook}
 
 Refresh webhook expiration by ID
 
 | Input      | Comments                     | Default |
 | ---------- | ---------------------------- | ------- |
-| Connection |                              |         |
+| Connection | The Jira connection to use.  |         |
 | Webhook ID | ID of the webhook to refresh |         |
 
-### Search Issues
+### Search Issues {#searchissues}
 
 Returns a list of issues that match the given string of text
 
 | Input       | Comments                                                                                                                                                                                                                           | Default |
 | ----------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
-| Connection  |                                                                                                                                                                                                                                    |         |
-| Search      | Provide a string value to search on.                                                                                                                                                                                               |         |
-| Project Key | Provide a string value for the key of the project.                                                                                                                                                                                 |         |
+| Connection  | The Jira connection to use.                                                                                                                                                                                                        |         |
+| Search      | The search term to use when searching for records.                                                                                                                                                                                 |         |
+| Project Key | The project key identifier (e.g., PROJ, ENG, SALES).                                                                                                                                                                               |         |
 | Fields      | Comma-separated list of fields to return. Defaults to common navigable fields (summary, status, assignee, reporter, priority, issuetype, project, created, updated). Use '\*all' for all fields or specify individual field names. |         |
 
-### Search Projects
+### Search Projects {#searchprojects}
 
 Returns a list of projects that match the given string of text
 
-| Input      | Comments                             | Default |
-| ---------- | ------------------------------------ | ------- |
-| Connection |                                      |         |
-| Search     | Provide a string value to search on. |         |
+| Input      | Comments                                           | Default |
+| ---------- | -------------------------------------------------- | ------- |
+| Connection | The Jira connection to use.                        |         |
+| Search     | The search term to use when searching for records. |         |
 
-### Search Users
+### Search Users {#searchusers}
 
 Returns a single user that matches the given string of text
 
-| Input      | Comments                             | Default |
-| ---------- | ------------------------------------ | ------- |
-| Connection |                                      |         |
-| Search     | Provide a string value to search on. |         |
+| Input      | Comments                                           | Default |
+| ---------- | -------------------------------------------------- | ------- |
+| Connection | The Jira connection to use.                        |         |
+| Search     | The search term to use when searching for records. |         |
 
-### Transition Issue
+### Transition Issue {#transitionissue}
 
 Transition an existing issue by Id
 
-| Input         | Comments                          | Default |
-| ------------- | --------------------------------- | ------- |
-| Connection    |                                   |         |
-| Issue ID      | Provide the ID of the Issue.      |         |
-| Transition ID | Provide the ID of the Transition. |         |
+| Input         | Comments                                       | Default |
+| ------------- | ---------------------------------------------- | ------- |
+| Connection    | The Jira connection to use.                    |         |
+| Issue ID      | The unique identifier of the Jira issue.       |         |
+| Transition ID | The unique identifier of the issue transition. |         |
 
-### Update Comment
+### Update Comment {#updatecomment}
 
 Update the contents and metadata of an existing comment.
 
 | Input          | Comments                                                                                                      | Default |
 | -------------- | ------------------------------------------------------------------------------------------------------------- | ------- |
-| Connection     |                                                                                                               |         |
-| Issue ID       | Provide the ID of the Issue.                                                                                  |         |
-| Comment ID     | Provide the Comment ID.                                                                                       |         |
-| Comment        | Provide a string value for the comment.                                                                       |         |
+| Connection     | The Jira connection to use.                                                                                   |         |
+| Issue ID       | The unique identifier of the Jira issue.                                                                      |         |
+| Comment ID     | The unique identifier of the comment.                                                                         |         |
+| Comment        | The text content of the comment to add or update.                                                             |         |
 | Dynamic Fields | A field for dynamic inputs that can be configured at deploy time with the use of a key value config variable. |         |
 | Values         | The names of the fields and their values to use when creating/updating a record                               |         |
 
-### Update Issue
+### Update Issue {#updateissue}
 
 Update an existing issue within a given project
 
 | Input               | Comments                                                                                                                                                                                                                           | Default                                                                                                                                                                                                                         |
 | ------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Connection          |                                                                                                                                                                                                                                    |                                                                                                                                                                                                                                 |
-| Issue ID            | Provide the ID of the Issue.                                                                                                                                                                                                       |                                                                                                                                                                                                                                 |
-| Project ID          | Provide the ID or Name of the Project.                                                                                                                                                                                             |                                                                                                                                                                                                                                 |
-| Summary             | Provide a string value for the summary of the issue.                                                                                                                                                                               |                                                                                                                                                                                                                                 |
-| Description         | Provide a string value for the description of the issue.                                                                                                                                                                           |                                                                                                                                                                                                                                 |
+| Connection          | The Jira connection to use.                                                                                                                                                                                                        |                                                                                                                                                                                                                                 |
+| Issue ID            | The unique identifier of the Jira issue.                                                                                                                                                                                           |                                                                                                                                                                                                                                 |
+| Project ID          | The unique identifier or name of the Jira project.                                                                                                                                                                                 |                                                                                                                                                                                                                                 |
+| Summary             | A brief summary or title for the issue.                                                                                                                                                                                            |                                                                                                                                                                                                                                 |
+| Description         | A detailed description of the issue.                                                                                                                                                                                               |                                                                                                                                                                                                                                 |
 | ADF Description     | The above json code will print: 'Some text' in the Jira Issue description, to get more info visit: https://developer.atlassian.com/cloud/jira/platform/apis/document/playground/ to get a JSON representation of your description. | <code>{<br /> "version": 1,<br /> "type": "doc",<br /> "content": [<br /> {<br /> "type": "paragraph",<br /> "content": [<br /> {<br /> "type": "text",<br /> "text": "Some text"<br /> }<br /> ]<br /> }<br /> ]<br />}</code> |
 | Issue Type Name     | Provide a value for the name type of the issue. Use this field or the Issue Type ID field.                                                                                                                                         |                                                                                                                                                                                                                                 |
 | Issue Type ID       | Provide the ID of the Issue Type. Use this field or the Issue Type Name field.                                                                                                                                                     |                                                                                                                                                                                                                                 |
-| Assignee Account ID | Provide the Account ID for the person being assigned the issue.                                                                                                                                                                    |                                                                                                                                                                                                                                 |
-| Reporter Account ID | Provide the Account ID for the person that is reporting the issue.                                                                                                                                                                 |                                                                                                                                                                                                                                 |
+| Assignee Account ID | The Atlassian account ID of the user to assign the issue to.                                                                                                                                                                       |                                                                                                                                                                                                                                 |
+| Reporter Account ID | The Atlassian account ID of the user reporting the issue.                                                                                                                                                                          |                                                                                                                                                                                                                                 |
 | Fix Versions        | Provide JSON data for the fix versions. Your object must have a property 'id'                                                                                                                                                      |                                                                                                                                                                                                                                 |
 | Priority            | Provide the unique identifier of the priority. This value can either be an Id, key, or name of the desired record.                                                                                                                 |                                                                                                                                                                                                                                 |
 | Labels              | Provide a list of labels for the issue.                                                                                                                                                                                            |                                                                                                                                                                                                                                 |
@@ -577,21 +632,21 @@ Update an existing issue within a given project
 | Dynamic Fields      | A field for dynamic inputs that can be configured at deploy time with the use of a key value config variable.                                                                                                                      |                                                                                                                                                                                                                                 |
 | Values              | The names of the fields and their values to use when creating/updating a record                                                                                                                                                    |                                                                                                                                                                                                                                 |
 
-### Update Version
+### Update Version {#updateversion}
 
 Update an existing version by Id
 
 | Input          | Comments                                                                                                      | Default |
 | -------------- | ------------------------------------------------------------------------------------------------------------- | ------- |
-| Connection     |                                                                                                               |         |
-| Version ID     | Provide the ID of the Version.                                                                                |         |
-| Description    | Provide a string value for the description of the issue.                                                      |         |
+| Connection     | The Jira connection to use.                                                                                   |         |
+| Version ID     | The unique identifier of the version.                                                                         |         |
+| Description    | A detailed description of the issue.                                                                          |         |
 | Version Name   | Provide a string value for the name of the version.                                                           |         |
-| Archived       | This flag determines if the given version is archived.                                                        | false   |
-| Released       | This flag determines if the given version has been released.                                                  | false   |
+| Archived       | When true, marks the version as archived.                                                                     | false   |
+| Released       | When true, marks the version as released.                                                                     | false   |
 | Start Date     | Provide a value for the startDate.                                                                            |         |
 | Release Date   | Provide a valid date for the release of the given version.                                                    |         |
-| Project Key    | Provide a string value for the key of the project.                                                            |         |
-| Project ID     | Provide the ID or Name of the Project.                                                                        |         |
+| Project Key    | The project key identifier (e.g., PROJ, ENG, SALES).                                                          |         |
+| Project ID     | The unique identifier or name of the Jira project.                                                            |         |
 | Dynamic Fields | A field for dynamic inputs that can be configured at deploy time with the use of a key value config variable. |         |
 | Values         | The names of the fields and their values to use when creating/updating a record                               |         |

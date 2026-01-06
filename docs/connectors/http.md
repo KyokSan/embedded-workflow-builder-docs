@@ -9,7 +9,7 @@ Make HTTP requests to URLs such as REST APIs, Webhooks, etc
 
 ## Connections
 
-### API Key
+### API Key {#apikey}
 
 API Key connection
 
@@ -20,7 +20,7 @@ If an API Key Connection is supplied, an `Authorization: Basic ${APIKEY}` header
 | API Key               | API Key  |         |
 | Authentication Scheme |          | Basic   |
 
-### Basic Username/Password
+### Basic Username/Password {#basic}
 
 Basic Username and Password connection
 
@@ -31,7 +31,7 @@ If a Basic Auth Connection is supplied, an `Authorization: Basic ${base64(USERNA
 | Username | Username |         |
 | Password | Password |         |
 
-### OAuth 2.0 Authorization Code
+### OAuth 2.0 Authorization Code {#authorizationcode}
 
 OAuth 2.0 Authorization Code flow
 
@@ -50,7 +50,7 @@ Read about how OAuth 2.0 works [here](../oauth2.md).
 | Client Secret | Client Secret of your app for the API                   |         |
 | Headers       | Additional header to supply to authorization requests   |         |
 
-### OAuth 2.0 Client Credentials
+### OAuth 2.0 Client Credentials {#clientcredentials}
 
 OAuth 2.0 Client Credentials flow
 
@@ -67,7 +67,7 @@ Read about how OAuth 2.0 works [here](../oauth2.md).
 
 ## Actions
 
-### DELETE request
+### DELETE request {#httpdelete}
 
 Issue a HTTP DELETE request
 
@@ -88,7 +88,7 @@ Issue a HTTP DELETE request
 | Ignore SSL Errors (Not Recommended) | When this flag is enabled, SSL certificate errors will be ignored. Use this flag with caution - ignoring SSL errors presents security issues. This should only be used for testing purposes.     | false   |
 | Max Redirects                       | The maximum number of redirects to follow.                                                                                                                                                       | 5       |
 
-### GET Request
+### GET Request {#httpget}
 
 Issue a HTTP GET request
 
@@ -109,7 +109,7 @@ Issue a HTTP GET request
 | Debug Request                       | Enabling this flag will log out the current request.                                                                                                                                             | false   |
 | Ignore SSL Errors (Not Recommended) | When this flag is enabled, SSL certificate errors will be ignored. Use this flag with caution - ignoring SSL errors presents security issues. This should only be used for testing purposes.     | false   |
 
-### PATCH request
+### PATCH request {#httppatch}
 
 Issue a HTTP PATCH request
 
@@ -131,7 +131,7 @@ Issue a HTTP PATCH request
 | Ignore SSL Errors (Not Recommended) | When this flag is enabled, SSL certificate errors will be ignored. Use this flag with caution - ignoring SSL errors presents security issues. This should only be used for testing purposes.     | false   |
 | Max Redirects                       | The maximum number of redirects to follow.                                                                                                                                                       | 5       |
 
-### POST/PUT Form Data Request
+### POST/PUT Form Data Request {#httppostformdata}
 
 POST/PUT data as multipart/form-data. Often useful for uploading binary data.
 
@@ -156,7 +156,7 @@ POST/PUT data as multipart/form-data. Often useful for uploading binary data.
 | Ignore SSL Errors (Not Recommended) | When this flag is enabled, SSL certificate errors will be ignored. Use this flag with caution - ignoring SSL errors presents security issues. This should only be used for testing purposes.     | false   |
 | Max Redirects                       | The maximum number of redirects to follow.                                                                                                                                                       | 5       |
 
-### POST Request
+### POST Request {#httppost}
 
 Issue a HTTP POST request
 
@@ -178,7 +178,7 @@ Issue a HTTP POST request
 | Ignore SSL Errors (Not Recommended) | When this flag is enabled, SSL certificate errors will be ignored. Use this flag with caution - ignoring SSL errors presents security issues. This should only be used for testing purposes.     | false   |
 | Max Redirects                       | The maximum number of redirects to follow.                                                                                                                                                       | 5       |
 
-### PUT request
+### PUT request {#httpput}
 
 Issue a HTTP PUT request
 

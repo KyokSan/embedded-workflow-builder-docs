@@ -9,7 +9,7 @@ Send, receive and manage messages within an Amazon (AWS) SQS queue
 
 ## Connections
 
-### AWS Role ARN
+### AWS Role ARN {#awsassumerole}
 
 Connect to AWS using an assumed role
 
@@ -61,7 +61,7 @@ To create and assign a user a role:
 | Secret Access Key | An AWS IAM Secret Access Key                                                                                                                                                                                                                                  |         |
 | External ID       | Provides enhanced security measures to the connection. Optional, but recommended. Please check [AWS docs](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_common-scenarios_third-party.html#id_roles_third-party_external-id) for more information. |         |
 
-### AWS SQS Access Key and Secret
+### AWS SQS Access Key and Secret {#apikeysecret}
 
 Authenticates requests to Amazon SQS using an API Key and API Secret
 
@@ -76,7 +76,7 @@ Read more about SQS IAM policies in the [AWS docs](https://docs.aws.amazon.com/A
 
 ## Triggers
 
-### New Messages
+### New Messages {#pollmessagestrigger}
 
 Checks for new messages in the queue on a configured schedule.
 
@@ -91,7 +91,7 @@ Checks for new messages in the queue on a configured schedule.
 
 ## Actions
 
-### Create Dead Letter Queue
+### Create Dead Letter Queue {#createdeadletterqueue}
 
 Create an Amazon SQS Dead Letter Queue
 
@@ -109,7 +109,7 @@ Create an Amazon SQS Dead Letter Queue
 | Dynamic Secret Access Key   | Use this input to authenticate with AWS if you are using a dynamically-generated secret access key. Otherwise, use the connection to enter a static secret access key.                                                                                                                          |         |
 | Dynamic Session Token       | Use this input to authenticate with AWS if you are using a OPTIONAL dynamically-generated session token.                                                                                                                                                                                        |         |
 
-### Create Queue
+### Create Queue {#createqueue}
 
 Create an Amazon SQS Queue
 
@@ -125,7 +125,7 @@ Create an Amazon SQS Queue
 | Dynamic Secret Access Key   | Use this input to authenticate with AWS if you are using a dynamically-generated secret access key. Otherwise, use the connection to enter a static secret access key.           |         |
 | Dynamic Session Token       | Use this input to authenticate with AWS if you are using a OPTIONAL dynamically-generated session token.                                                                         |         |
 
-### Delete Message
+### Delete Message {#deletemessage}
 
 Delete a message from an Amazon SQS Queue
 
@@ -139,7 +139,7 @@ Delete a message from an Amazon SQS Queue
 | Dynamic Secret Access Key | Use this input to authenticate with AWS if you are using a dynamically-generated secret access key. Otherwise, use the connection to enter a static secret access key.                         |            |
 | Dynamic Session Token     | Use this input to authenticate with AWS if you are using a OPTIONAL dynamically-generated session token.                                                                                       |            |
 
-### Delete Queue
+### Delete Queue {#deletequeue}
 
 Delete an Amazon SQS Queue
 
@@ -152,7 +152,7 @@ Delete an Amazon SQS Queue
 | Dynamic Secret Access Key | Use this input to authenticate with AWS if you are using a dynamically-generated secret access key. Otherwise, use the connection to enter a static secret access key. |            |
 | Dynamic Session Token     | Use this input to authenticate with AWS if you are using a OPTIONAL dynamically-generated session token.                                                               |            |
 
-### Get a Queue's URL
+### Get a Queue's URL {#getqueueurl}
 
 Get the URL of an Amazon SQS Queue given its name
 
@@ -165,7 +165,7 @@ Get the URL of an Amazon SQS Queue given its name
 | Dynamic Secret Access Key | Use this input to authenticate with AWS if you are using a dynamically-generated secret access key. Otherwise, use the connection to enter a static secret access key.           |         |
 | Dynamic Session Token     | Use this input to authenticate with AWS if you are using a OPTIONAL dynamically-generated session token.                                                                         |         |
 
-### List Queues
+### List Queues {#listqueues}
 
 Fetch a list of Amazon SQS Queues
 
@@ -181,7 +181,7 @@ Fetch a list of Amazon SQS Queues
 | Dynamic Secret Access Key | Use this input to authenticate with AWS if you are using a dynamically-generated secret access key. Otherwise, use the connection to enter a static secret access key. |         |
 | Dynamic Session Token     | Use this input to authenticate with AWS if you are using a OPTIONAL dynamically-generated session token.                                                               |         |
 
-### Receive Messages
+### Receive Messages {#receivemessages}
 
 Receive messages from an Amazon SQS Queue
 
@@ -196,7 +196,7 @@ Receive messages from an Amazon SQS Queue
 | Dynamic Secret Access Key | Use this input to authenticate with AWS if you are using a dynamically-generated secret access key. Otherwise, use the connection to enter a static secret access key.                                                                                                                                   |            |
 | Dynamic Session Token     | Use this input to authenticate with AWS if you are using a OPTIONAL dynamically-generated session token.                                                                                                                                                                                                 |            |
 
-### Send Message
+### Send Message {#sendmessage}
 
 Send a message to an Amazon SQS Queue
 

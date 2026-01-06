@@ -9,7 +9,7 @@ Interact with Anthropic&#x27;s Claude models
 
 ## Connections
 
-### Anthropic API
+### Anthropic API {#anthropic}
 
 Connection to Anthropic's Claude API
 
@@ -24,7 +24,7 @@ To generate an API key:
 
 ## Actions
 
-### Chat
+### Chat {#chat}
 
 Start a new conversation with Claude
 
@@ -37,7 +37,7 @@ Start a new conversation with Claude
 | Max Tokens    | Maximum number of tokens to generate (default: 4096).                | 4096                     |
 | Temperature   | Randomness of the output (0-1, default: 1).                          | 1                        |
 
-### Count Tokens
+### Count Tokens {#counttokens}
 
 Count the number of tokens in a message or conversation
 
@@ -47,7 +47,7 @@ Count the number of tokens in a message or conversation
 | Model      | The Claude model to use.                 | claude-3-5-sonnet-latest |
 | Message    | The message to send in the conversation. |                          |
 
-### Get Model
+### Get Model {#getmodel}
 
 Get details of a specific Claude model
 
@@ -56,7 +56,7 @@ Get details of a specific Claude model
 | Connection | Anthropic API connection. |                          |
 | Model      | The Claude model to use.  | claude-3-5-sonnet-latest |
 
-### List Models
+### List Models {#listmodels}
 
 List all available Claude models
 
@@ -68,7 +68,7 @@ List all available Claude models
 | After ID   | ID of the object to use as a cursor for pagination. Returns the page of results immediately after this object.  |         |
 | Limit      | Number of items to return per page. Defaults to 20. Range: 1-3.                                                 | 20      |
 
-### Raw Request
+### Raw Request {#rawrequest}
 
 Send raw HTTP request to Anthropic
 

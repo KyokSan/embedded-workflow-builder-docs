@@ -12,7 +12,7 @@ Use the Google Docs component to create, and collaborate on online documents.
 
 ## Connections
 
-### Google Docs OAuth2
+### Google Docs OAuth2 {#googledocsoauth2}
 
 Google Docs OAuth2 Connection
 
@@ -44,7 +44,7 @@ Read about how OAuth 2.0 works [here](../oauth2.md).
 
 ## Actions
 
-### Batch Update Documents
+### Batch Update Documents {#batchupdatedocuments}
 
 Applies one or more updates to the document.
 
@@ -56,7 +56,7 @@ Applies one or more updates to the document.
 | Required Revision ID | The optional revision ID of the document the write request is applied to. If this is not the latest revision of the document, the request is not processed and returns a 400 bad request error. |                                                                              |
 | Target Revision ID   | The optional target revision ID of the document the write request is applied to.                                                                                                                |                                                                              |
 
-### Create Document
+### Create Document {#createdocument}
 
 Creates a blank document using the title given in the request.
 
@@ -65,7 +65,7 @@ Creates a blank document using the title given in the request.
 | Connection |                                      |         |
 | Title      | The title of the document to create. |         |
 
-### Get Document
+### Get Document {#getdocument}
 
 Gets the latest version of the specified document.
 
@@ -75,7 +75,7 @@ Gets the latest version of the specified document.
 | Document ID           | The ID of the document to retrieve.                 |                            |
 | Suggestions View Mode | The suggestions view mode to apply to the document. | DEFAULT_FOR_CURRENT_ACCESS |
 
-### Raw Request
+### Raw Request {#rawrequest}
 
 Send raw HTTP request to Google Docs
 

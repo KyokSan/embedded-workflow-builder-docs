@@ -9,7 +9,7 @@ Interact with message queues and publish-subscribe topics (in a namespace)
 
 ## Connections
 
-### Connection String
+### Connection String {#connection-string}
 
 Connection String
 
@@ -17,7 +17,7 @@ Connection String
 | ----------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ------- |
 | Connection String | The connection string for your Azure Service Bus namespace. You can find this in the Azure Portal under the 'Shared access policies' tab. |         |
 
-### OAuth 2.0
+### OAuth 2.0 {#oauth}
 
 OAuth 2.0
 
@@ -35,13 +35,13 @@ Read about how OAuth 2.0 works [here](../oauth2.md).
 
 ## Triggers
 
-### Webhook
+### Webhook {#subscriptionmessagewebhook}
 
 Receive and validate webhook requests from Azure Service Bus for webhooks you configure.
 
 ## Actions
 
-### Create or Update Namespaces
+### Create or Update Namespaces {#createorupdatenamespaces}
 
 Creates or updates a service namespace. Once created, this namespace's resource manifest is immutable. This operation is idempotent.
 
@@ -64,7 +64,7 @@ Creates or updates a service namespace. Once created, this namespace's resource 
 | SKU                               | SKU of the namespace.                                                                                                                             |         |
 | Tags                              | Resource tags.                                                                                                                                    |         |
 
-### Create or Update Queue
+### Create or Update Queue {#createorupdatequeue}
 
 Creates or updates a Service Bus queue. This operation is idempotent.
 
@@ -92,7 +92,7 @@ Creates or updates a Service Bus queue. This operation is idempotent.
 | Requires Session                        | Value indicating if a subscription supports the concept of sessions.                                                                                                                                                                         | false   |
 | Status                                  | Status of the messaging entity.                                                                                                                                                                                                              |         |
 
-### Create or Update Rules
+### Create or Update Rules {#createorupdaterules}
 
 Creates a new rule and updates an existing rule
 
@@ -110,7 +110,7 @@ Creates a new rule and updates an existing rule
 | Filter Type         | Filter type that is evaluated against a BrokeredMessage.                                                                                          |         |
 | SQL Filter          | Represents a filter which is a composition of an expression and an action that is executed in the pub/sub pipeline.                               |         |
 
-### Create or Update Subscription
+### Create or Update Subscription {#createorupdatesubscription}
 
 Creates a topic subscription.
 
@@ -139,7 +139,7 @@ Creates a topic subscription.
 | Is Durable                                     | For client-affine subscriptions, this value indicates whether the subscription is durable or not.                                                                                                                                            | false   |
 | Is Shared                                      | For client-affine subscriptions, this value indicates whether the subscription is shared or not.                                                                                                                                             | false   |
 
-### Create or Update Topic
+### Create or Update Topic {#createorupdatetopic}
 
 Creates or updates a topic in the specified namespace.
 
@@ -162,7 +162,7 @@ Creates or updates a topic in the specified namespace.
 | Status                                  | Status of the messaging entity.                                                                                                                                                                                                              |         |
 | Support Ordering                        | Value that indicates whether the topic supports ordering.                                                                                                                                                                                    | false   |
 
-### Delete Namespace
+### Delete Namespace {#deletenamespace}
 
 Deletes an existing namespace. This operation also removes all associated resources under the namespace.
 
@@ -173,7 +173,7 @@ Deletes an existing namespace. This operation also removes all associated resour
 | Resource Group Name | Name of the Resource group within the Azure subscription.                                                                                         |         |
 | Subscription ID     | Subscription credentials that uniquely identify a Microsoft Azure subscription. The subscription ID forms part of the URI for every service call. |         |
 
-### Delete Queue
+### Delete Queue {#deletequeue}
 
 Deletes a queue from the specified namespace in a resource group.
 
@@ -185,7 +185,7 @@ Deletes a queue from the specified namespace in a resource group.
 | Subscription ID     | Subscription credentials that uniquely identify a Microsoft Azure subscription. The subscription ID forms part of the URI for every service call. |         |
 | Queue Name          | The queue name.                                                                                                                                   |         |
 
-### Delete Rule
+### Delete Rule {#deleterule}
 
 Deletes an existing rule.
 
@@ -199,7 +199,7 @@ Deletes an existing rule.
 | Subscription Name   | The subscription name.                                                                                                                            |         |
 | Rule Name           | The rule name.                                                                                                                                    |         |
 
-### Delete Subscriptions
+### Delete Subscriptions {#deletesubscriptions}
 
 Deletes a subscription from the specified topic.
 
@@ -212,7 +212,7 @@ Deletes a subscription from the specified topic.
 | Topic Name          | The topic name.                                                                                                                                   |         |
 | Subscription Name   | The subscription name.                                                                                                                            |         |
 
-### Delete Topic
+### Delete Topic {#deletetopic}
 
 Deletes a topic from the specified namespace and resource group.
 
@@ -224,7 +224,7 @@ Deletes a topic from the specified namespace and resource group.
 | Subscription ID     | Subscription credentials that uniquely identify a Microsoft Azure subscription. The subscription ID forms part of the URI for every service call. |         |
 | Topic Name          | The topic name.                                                                                                                                   |         |
 
-### Get Namespaces
+### Get Namespaces {#getnamespaces}
 
 Gets a description for the specified namespace.
 
@@ -235,7 +235,7 @@ Gets a description for the specified namespace.
 | Resource Group Name | Name of the Resource group within the Azure subscription.                                                                                         |         |
 | Namespace Name      | The namespace name                                                                                                                                |         |
 
-### Get Queue
+### Get Queue {#getqueue}
 
 Returns a description for the specified queue.
 
@@ -247,7 +247,7 @@ Returns a description for the specified queue.
 | Namespace Name      | The namespace name                                                                                                                                |         |
 | Queue Name          | The queue name.                                                                                                                                   |         |
 
-### Get Rule
+### Get Rule {#getrule}
 
 Retrieves the description for the specified rule.
 
@@ -261,7 +261,7 @@ Retrieves the description for the specified rule.
 | Subscription Name   | The subscription name.                                                                                                                            |         |
 | Rule Name           | The rule name.                                                                                                                                    |         |
 
-### Get Subscriptions
+### Get Subscriptions {#getsubscriptions}
 
 Returns a subscription description for the specified topic.
 
@@ -274,7 +274,7 @@ Returns a subscription description for the specified topic.
 | Topic Name          | The topic name.                                                                                                                                   |         |
 | Subscription Name   | The subscription name.                                                                                                                            |         |
 
-### Get Topic
+### Get Topic {#gettopic}
 
 Gets all the topics in a namespace
 
@@ -286,7 +286,7 @@ Gets all the topics in a namespace
 | Subscription ID     | Subscription credentials that uniquely identify a Microsoft Azure subscription. The subscription ID forms part of the URI for every service call. |         |
 | Topic Name          | The topic name.                                                                                                                                   |         |
 
-### List Namespaces
+### List Namespaces {#listnamespaces}
 
 Gets all the available namespaces within the subscription, irrespective of the resource groups.
 
@@ -295,7 +295,7 @@ Gets all the available namespaces within the subscription, irrespective of the r
 | Connection      |                                                                                                                                                   |         |
 | Subscription ID | Subscription credentials that uniquely identify a Microsoft Azure subscription. The subscription ID forms part of the URI for every service call. |         |
 
-### List Namespaces By Resource Group
+### List Namespaces By Resource Group {#listnamespacesbyresourcegroup}
 
 Gets the available namespaces within a resource group.
 
@@ -305,7 +305,7 @@ Gets the available namespaces within a resource group.
 | Resource Group Name | Name of the Resource group within the Azure subscription.                                                                                         |         |
 | Subscription ID     | Subscription credentials that uniquely identify a Microsoft Azure subscription. The subscription ID forms part of the URI for every service call. |         |
 
-### List Queues
+### List Queues {#listqueues}
 
 Gets the queues within a namespace.
 
@@ -318,7 +318,7 @@ Gets the queues within a namespace.
 | Skip                | Skip is only used if a previous operation returned a partial result. If a previous response contains a nextLink element, the value of the nextLink element will include a skip parameter that specifies a starting point to use for subsequent calls. |         |
 | Top                 | May be used to limit the number of results to the most recent N usageDetails.                                                                                                                                                                         |         |
 
-### List Rules
+### List Rules {#listrules}
 
 List all the rules within given topic-subscription
 
@@ -333,7 +333,7 @@ List all the rules within given topic-subscription
 | Skip                | Skip is only used if a previous operation returned a partial result. If a previous response contains a nextLink element, the value of the nextLink element will include a skip parameter that specifies a starting point to use for subsequent calls. |         |
 | Top                 | May be used to limit the number of results to the most recent N usageDetails.                                                                                                                                                                         |         |
 
-### List Subscriptions
+### List Subscriptions {#listsubscriptions}
 
 List all the subscriptions
 
@@ -342,7 +342,7 @@ List all the subscriptions
 | Connection |                     |            |
 | Version    | Version of the API. | 2016-06-01 |
 
-### List Subscriptions By Topic
+### List Subscriptions By Topic {#listsubscriptionsbytopic}
 
 List all the subscriptions under a specified topic.
 
@@ -357,7 +357,7 @@ List all the subscriptions under a specified topic.
 | Top                 | May be used to limit the number of results to the most recent N usageDetails.                                                                                                                                                                         |         |
 | Topic Name          | The topic name.                                                                                                                                                                                                                                       |         |
 
-### List Topics By Namespace
+### List Topics By Namespace {#listtopicsbynamespace}
 
 Gets all the topics in a namespace
 
@@ -371,7 +371,7 @@ Gets all the topics in a namespace
 | Skip                | Skip is only used if a previous operation returned a partial result. If a previous response contains a nextLink element, the value of the nextLink element will include a skip parameter that specifies a starting point to use for subsequent calls. |         |
 | Top                 | May be used to limit the number of results to the most recent N usageDetails.                                                                                                                                                                         |         |
 
-### Raw Request
+### Raw Request {#rawrequest}
 
 Send raw HTTP request to Azure Service Bus
 
@@ -394,7 +394,7 @@ Send raw HTTP request to Azure Service Bus
 | Max Retry Count         | The maximum number of retries to attempt. Specify 0 for no retries.                                                                                                                                                                                                                                                                                                                                                                                                 | 0       |
 | Use Exponential Backoff | Specifies whether to use a pre-defined exponential backoff strategy for retries. When enabled, 'Retry Delay (ms)' is ignored.                                                                                                                                                                                                                                                                                                                                       | false   |
 
-### Receive Messages from Queue
+### Receive Messages from Queue {#receivemessagesfromqueue}
 
 Receive messages from a queue. Receive messages from a queue will remove the message from the queue.
 
@@ -408,7 +408,7 @@ Receive messages from a queue. Receive messages from a queue will remove the mes
 | Return Full Messages | If true, the full message objects will be returned including message ID, sequence number, delivery metadata, etc. If false, only the messages bodies will be returned.                                                                   | false   |
 | Peek                 | If true, the messages will be peeked from the queue, which doesn't alter the visibility of the message. If false, the messages will be received from the queue. https://learn.microsoft.com/en-us/rest/api/storageservices/peek-messages | false   |
 
-### Send Message to Queue
+### Send Message to Queue {#sendmessagetoqueue}
 
 Send a single message to a queue.
 
@@ -426,7 +426,7 @@ Send a single message to a queue.
 | Subject                    | An optional subject for the message.                                                                                                                                     |         |
 | To                         | An optional address that specifies the intended recipient of the message. https://learn.microsoft.com/en-us/dotnet/api/azure.messaging.servicebus.servicebusmessage.to   |         |
 
-### Send Multiple Messages to Queue
+### Send Multiple Messages to Queue {#sendmessagestoqueue}
 
 Send multiple plain text messages to a queue.
 

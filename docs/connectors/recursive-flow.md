@@ -9,7 +9,7 @@ This component allows a flow to call itself with a cursor in order to process la
 
 ## Triggers
 
-### Recursive Trigger
+### Recursive Trigger {#recursivetrigger}
 
 Accept a request from an 'Invoke Recursive Trigger' step
 
@@ -20,15 +20,15 @@ Accept a request from an 'Invoke Recursive Trigger' step
 
 ## Actions
 
-### Get Recursive Cursor
+### Get Recursive Cursor {#getcursor}
 
 Get the current value of the recursive trigger cursor
 
-### Invoke Recursive Trigger
+### Invoke Recursive Trigger {#invokerecursive}
 
 Invoke the current flow with the current cursor
 
-### Set Recursive Cursor
+### Set Recursive Cursor {#setcursor}
 
 Set the value of the recursive cursor for the next loop iteration or recursive trigger invocation
 

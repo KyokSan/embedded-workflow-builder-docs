@@ -9,7 +9,7 @@ Manage customers on the Customer.io platform
 
 ## Connections
 
-### API Key
+### API Key {#apikey}
 
 Authenticate requests to Customer.io using an API key & secret
 
@@ -24,7 +24,7 @@ Read more about authentication in the [Customer.io docs](https://customer.io/doc
 
 ## Actions
 
-### Destroy
+### Destroy {#destroy}
 
 Delete a customer by unique ID
 
@@ -34,7 +34,7 @@ Delete a customer by unique ID
 | Region     | Provide the region in which your account is configured on.                       |         |
 | Connection |                                                                                  |         |
 
-### Identify
+### Identify {#identify}
 
 Create or update a customer
 
@@ -45,7 +45,7 @@ Create or update a customer
 | Customer Data | Provide key and value pairs that make up a customer record. The key must be a string, and the value can either be a string, number, array, or an object. |         |
 | Connection    |                                                                                                                                                          |         |
 
-### Raw Request - Track API
+### Raw Request - Track API {#rawrequest}
 
 Send raw HTTP request to Customer.io
 
@@ -69,7 +69,7 @@ Send raw HTTP request to Customer.io
 | Max Retry Count         | The maximum number of retries to attempt.                                                                                                                                                                                                    | 0       |
 | Use Exponential Backoff | Specifies whether to use a pre-defined exponential backoff strategy for retries.                                                                                                                                                             | false   |
 
-### Track
+### Track {#track}
 
 Track customer events
 
@@ -81,7 +81,7 @@ Track customer events
 | Event Name | Provide a string value for the name of the new event.                             |         |
 | Connection |                                                                                   |         |
 
-### Track Page View
+### Track Page View {#trackpageview}
 
 Track customer history
 

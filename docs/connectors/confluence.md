@@ -9,7 +9,7 @@ Confluence is an open and shared workspace platform provided by Atlassian. Use t
 
 ## Connections
 
-### Confluence Basic
+### Confluence Basic {#basic}
 
 Confluence Basic
 
@@ -28,7 +28,7 @@ For additional information on generating an API token from Confluence Cloud, ref
 | API Token | Provide an api token to authenticate all requests with. Cloud users need to generate an API token for this value. |         |
 | Host      | Provide a string value for the URL of your Confluence account.                                                    |         |
 
-### Confluence OAuth 2.0
+### Confluence OAuth 2.0 {#oauth2}
 
 Confluence OAuth 2.0
 
@@ -67,7 +67,7 @@ Read about how OAuth 2.0 works [here](../oauth2.md).
 
 ## Actions
 
-### Create Content Property for Attachment
+### Create Content Property for Attachment {#createcontentpropertyforattachment}
 
 Creates a new content property for an attachment.
 
@@ -78,7 +78,7 @@ Creates a new content property for an attachment.
 | Body Data     | The list of settings for this Function.              | <code>{<br /> "key": "<string>",<br /> "value": "<string>"<br />}</code> |
 | Debug Request | Enabling this flag will log out the current request. | false                                                                    |
 
-### Create Content Property for Custom Content
+### Create Content Property for Custom Content {#createcontentpropertyforcustomcontent}
 
 Creates a new content property for a Custom Content.
 
@@ -89,7 +89,7 @@ Creates a new content property for a Custom Content.
 | Body Data         | The list of settings for this Function.              | <code>{<br /> "key": "<string>",<br /> "value": "<string>"<br />}</code> |
 | Debug Request     | Enabling this flag will log out the current request. | false                                                                    |
 
-### Create Content Property for Page
+### Create Content Property for Page {#createcontentpropertyforpage}
 
 Creates a new content property for a page.
 
@@ -100,7 +100,7 @@ Creates a new content property for a page.
 | Body Data     | The list of settings for this Function.              | <code>{<br /> "key": "<string>",<br /> "value": "<string>"<br />}</code> |
 | Debug Request | Enabling this flag will log out the current request. | false                                                                    |
 
-### Create Page
+### Create Page {#createpage}
 
 Creates a page in the space.
 
@@ -117,7 +117,7 @@ Creates a page in the space.
 | Query Parameters | Query parameters to pass in to your request. Ex. Key: include-versions Value: true                       |                                                                                    |
 | Debug Request    | Enabling this flag will log out the current request.                                                     | false                                                                              |
 
-### Delete Attachment
+### Delete Attachment {#deleteattachment}
 
 Deletes a specific attachment.
 
@@ -128,7 +128,7 @@ Deletes a specific attachment.
 | Purge         | If attempting to purge the attachment.               | false   |
 | Debug Request | Enabling this flag will log out the current request. | false   |
 
-### Delete Content Property for a Custom Content
+### Delete Content Property for a Custom Content {#deletecontentpropertyforcustomcontent}
 
 Deletes a content property for a Custom Content by its id.
 
@@ -139,7 +139,7 @@ Deletes a content property for a Custom Content by its id.
 | Property Id       | The ID of the content property to be returned.       |         |
 | Debug Request     | Enabling this flag will log out the current request. | false   |
 
-### Delete Content Property for an Attachment
+### Delete Content Property for an Attachment {#deletecontentpropertyforattachment}
 
 Deletes a content property for an attachment by its id.
 
@@ -150,7 +150,7 @@ Deletes a content property for an attachment by its id.
 | Property Id   | The ID of the content property to be returned.       |         |
 | Debug Request | Enabling this flag will log out the current request. | false   |
 
-### Delete Content Property for Page
+### Delete Content Property for Page {#deletecontentpropertyforpage}
 
 Deletes a content property for a page by its id.
 
@@ -161,7 +161,7 @@ Deletes a content property for a page by its id.
 | Property Id   | The ID of the content property to be returned.       |         |
 | Debug Request | Enabling this flag will log out the current request. | false   |
 
-### Delete Page
+### Delete Page {#deletepage}
 
 Delete a page by id.
 
@@ -173,7 +173,7 @@ Delete a page by id.
 | Draft         | If attempting to delete a page that is a draft.      | false   |
 | Debug Request | Enabling this flag will log out the current request. | false   |
 
-### Get Attachment
+### Get Attachment {#getattachment}
 
 Returns a specific attachment.
 
@@ -184,7 +184,7 @@ Returns a specific attachment.
 | Query Parameters | Query parameters to pass in to your request. Ex. Key: include-versions Value: true |         |
 | Debug Request    | Enabling this flag will log out the current request.                               | false   |
 
-### Get Attachments for Page
+### Get Attachments for Page {#getpageattachment}
 
 Returns the attachments of specific page.
 
@@ -197,7 +197,7 @@ Returns the attachments of specific page.
 | Query Parameters | Query parameters to pass in to your request. Ex. Key: include-versions Value: true                                                                                                 |         |
 | Debug Request    | Enabling this flag will log out the current request.                                                                                                                               | false   |
 
-### Get Content Properties for Custom Content
+### Get Content Properties for Custom Content {#getcontentpropertiesforcustomcontent}
 
 Retrieves a specific Content Property by ID that is attached to a specified custom content.
 
@@ -208,7 +208,7 @@ Retrieves a specific Content Property by ID that is attached to a specified cust
 | Property Id       | The ID of the content property to be returned.       |         |
 | Debug Request     | Enabling this flag will log out the current request. | false   |
 
-### Get Content Property for Attachment
+### Get Content Property for Attachment {#getcontentpropertiesforattachments}
 
 Retrieves a specific Content Property by ID that is attached to a specified attachment.
 
@@ -219,7 +219,7 @@ Retrieves a specific Content Property by ID that is attached to a specified atta
 | Property Id   | The ID of the content property to be returned.       |         |
 | Debug Request | Enabling this flag will log out the current request. | false   |
 
-### Get Content Property for Page
+### Get Content Property for Page {#getcontentpropertiesforpage}
 
 Retrieves a specific Content Property by ID that is attached to a specified page.
 
@@ -230,7 +230,7 @@ Retrieves a specific Content Property by ID that is attached to a specified page
 | Property Id   | The ID of the content property to be returned.       |         |
 | Debug Request | Enabling this flag will log out the current request. | false   |
 
-### Get Page
+### Get Page {#getpage}
 
 Returns a specific Page.
 
@@ -250,7 +250,7 @@ Returns a specific Page.
 | Include Favorited By Current User Status | Includes whether this page has been favorited by the current user.                                                                                       | false   |
 | Debug Request                            | Enabling this flag will log out the current request.                                                                                                     | false   |
 
-### Get Space
+### Get Space {#getspace}
 
 Returns a specific space.
 
@@ -261,7 +261,7 @@ Returns a specific space.
 | Query Parameters | Query parameters to pass in to your request. Ex. Key: include-versions Value: true |         |
 | Debug Request    | Enabling this flag will log out the current request.                               | false   |
 
-### List Attachments
+### List Attachments {#listattachments}
 
 Returns all attachments.
 
@@ -273,7 +273,7 @@ Returns all attachments.
 | Query Parameters | Query parameters to pass in to your request. Ex. Key: include-versions Value: true                                                                                                 |         |
 | Debug Request    | Enabling this flag will log out the current request.                                                                                                                               | false   |
 
-### List Content Properties for Attachments
+### List Content Properties for Attachments {#listcontentpropertiesforattachments}
 
 Retrieves all Content Properties tied to a specified attachment.
 
@@ -287,7 +287,7 @@ Retrieves all Content Properties tied to a specified attachment.
 | Query Parameters | Query parameters to pass in to your request. Ex. Key: include-versions Value: true                                                                                                 |         |
 | Debug Request    | Enabling this flag will log out the current request.                                                                                                                               | false   |
 
-### List Content Properties for Custom Content
+### List Content Properties for Custom Content {#listcontentpropertiesforcustomcontent}
 
 Retrieves Content Properties tied to a specified Custom Content.
 
@@ -301,7 +301,7 @@ Retrieves Content Properties tied to a specified Custom Content.
 | Query Parameters  | Query parameters to pass in to your request. Ex. Key: include-versions Value: true                                                                                                 |         |
 | Debug Request     | Enabling this flag will log out the current request.                                                                                                                               | false   |
 
-### List Content Properties for Page
+### List Content Properties for Page {#listcontentpropertiesforpage}
 
 Retrieves Content Properties tied to a specified page.
 
@@ -315,7 +315,7 @@ Retrieves Content Properties tied to a specified page.
 | Query Parameters | Query parameters to pass in to your request. Ex. Key: include-versions Value: true                                                                                                 |         |
 | Debug Request    | Enabling this flag will log out the current request.                                                                                                                               | false   |
 
-### List Pages
+### List Pages {#listpages}
 
 Returns all pages.
 
@@ -332,7 +332,7 @@ Returns all pages.
 | Body Format   | The content format types to be returned in the body field of the response.                                                                                                         |         |
 | Debug Request | Enabling this flag will log out the current request.                                                                                                                               | false   |
 
-### List Pages in Space
+### List Pages in Space {#listpagesinspace}
 
 Returns all pages in a space.
 
@@ -349,7 +349,7 @@ Returns all pages in a space.
 | Cursor        | Used for pagination, this opaque cursor will be returned in the next URL in the Link response header. Use the relative URL in the Link header to retrieve the next set of results. |         |
 | Debug Request | Enabling this flag will log out the current request.                                                                                                                               | false   |
 
-### List Spaces
+### List Spaces {#listspaces}
 
 Returns all spaces.
 
@@ -361,7 +361,7 @@ Returns all spaces.
 | Query Parameters | Query parameters to pass in to your request. Ex. Key: include-versions Value: true                                                                                                 |         |
 | Debug Request    | Enabling this flag will log out the current request.                                                                                                                               | false   |
 
-### Raw GraphQL Request
+### Raw GraphQL Request {#graphqlrequest}
 
 Send raw GraphQL request to Confluence
 
@@ -373,7 +373,7 @@ Send raw GraphQL request to Confluence
 | Headers           | Custom headers to send along with your request                                          |                                                                                                                                                                                                      |
 | Debug Request     | When true, the entire request and response (including auth headers) will be logged out. | false                                                                                                                                                                                                |
 
-### Raw Request
+### Raw Request {#rawrequest}
 
 Send raw HTTP request to Confluence
 
@@ -396,7 +396,7 @@ Send raw HTTP request to Confluence
 | Max Retry Count         | The maximum number of retries to attempt. Specify 0 for no retries.                                                                                                                                                                                                 | 0       |
 | Use Exponential Backoff | Specifies whether to use a pre-defined exponential backoff strategy for retries. When enabled, 'Retry Delay (ms)' is ignored.                                                                                                                                       | false   |
 
-### Update Content Property for Attachment
+### Update Content Property for Attachment {#updatecontentpropertyforattachment}
 
 Update a content property for attachment by its id.
 
@@ -408,7 +408,7 @@ Update a content property for attachment by its id.
 | Body Data     | The list of settings for this Function.              | <code>{<br /> "key": "<string>",<br /> "value": "<string>",<br /> "version": {<br /> "number": 84,<br /> "message": "<string>"<br /> }<br />}</code> |
 | Debug Request | Enabling this flag will log out the current request. | false                                                                                                                                                |
 
-### Update Content Property for Custom Content
+### Update Content Property for Custom Content {#updatecontentpropertyforcustomcontent}
 
 Update a content property for a Custom Content by its id.
 
@@ -420,7 +420,7 @@ Update a content property for a Custom Content by its id.
 | Body Data         | The list of settings for this Function.              | <code>{<br /> "key": "<string>",<br /> "value": "<string>",<br /> "version": {<br /> "number": 84,<br /> "message": "<string>"<br /> }<br />}</code> |
 | Debug Request     | Enabling this flag will log out the current request. | false                                                                                                                                                |
 
-### Update Content Property for Page
+### Update Content Property for Page {#updatecontentpropertyforpage}
 
 Update a content property for a page by its id.
 
@@ -432,7 +432,7 @@ Update a content property for a page by its id.
 | Body Data     | The list of settings for this Function.              | <code>{<br /> "key": "<string>",<br /> "value": "<string>",<br /> "version": {<br /> "number": 84,<br /> "message": "<string>"<br /> }<br />}</code> |
 | Debug Request | Enabling this flag will log out the current request. | false                                                                                                                                                |
 
-### Update Page
+### Update Page {#updatepage}
 
 Update a page by id.
 

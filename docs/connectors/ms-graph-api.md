@@ -9,7 +9,7 @@ Interact with the Microsoft Graph API
 
 ## Connections
 
-### OAuth 2.0 Authorization Code
+### OAuth 2.0 Authorization Code {#oauth}
 
 OAuth 2.0 Authorization Code Connectivity for Microsoft Graph API
 
@@ -48,7 +48,7 @@ Read about how OAuth 2.0 works [here](../oauth2.md).
 
 ## Actions
 
-### Raw Request
+### Raw Request {#rawrequest}
 
 Send raw HTTP request to Microsoft Graph API
 

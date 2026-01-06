@@ -9,628 +9,660 @@ Use the Microsoft Intune component to manage users, devices, and applications.
 
 ## Connections
 
-### OAuth 2.0
+### OAuth 2.0 {#msintuneoauth2}
 
 OAuth 2.0 Connectivity for Microsoft Intune
 
-To create an new Microsoft Intune App Registration:
+To connect to Microsoft Intune using OAuth 2.0, create an app registration in Microsoft Entra.
 
-1. Navigate to the [Microsoft Entra](https://entra.microsoft.com/) **Identity** > **Applications** > **App registrations** and select **New registration**.
-   1. Set the Supported Account types to **Accounts in any organizational directory (Any Azure AD directory - Multitenant)** so that users outside of your organization (i.e. your customers) can authenticate.
-   2. Set the Redirect URI dropdown as a "Web" platform. In that section add the OAuth callback URL `https://oauth2.%WHITE_LABEL_BASE_URL%/callback` - as a **Redirect URI**.
-   3. Select Register to complete.
-2. From the App menu navigate to **Certificates & Secrets** for the app and add a new **Client Secret**. Save the **Value** for the **Client Secret** in the connection's configuration.
-3. Navigate to the **Overview** page save the value listed as the **Application (client) ID**. This will be your **Client ID** for the connection configuration.
-4. Navigate to **API Permissions** and select **Add Permission**, select the square labeled **Microsoft Graph**, and then **Delegated permissions**. Under the DeviceManagementManagedDevices section select **DeviceManagementManagedDevices.PrivilegedOperations, DeviceManagementManagedDevices.Read.All. I**n addition to any other permissions that will be required by your integration. You can use DeviceManagementManagedDevices.ReadWrite.All to get started building and choose a more refined set at a later time.
+#### Prerequisites
 
-To configure the OAuth 2.0 connection:
+- A Microsoft account with administrative access to Microsoft Entra (formerly Azure AD)
 
-1. Add a Microsoft Intune OAuth 2.0 connection configuration variable:
-   1. Use the **Application (client) ID** value for the **Client ID** field.
-   2. Use the **Client Secret** for the same named field.
-   3. Use the default **Authorize URL**.
-   4. Additionally, some actions may require authentication with your Tenant ID. To complete, replace the **common** portion of the Token URL with your Tenant ID.
-      1. Example: **https://login.microsoftonline.com/common/oauth2/v2.0/token**
-         becomes **https://login.microsoftonline.com/abf988bf-86f1-41af-91ab-2d7cd011db46/oauth2/v2.0/token**
+#### Setup Steps
+
+1. Navigate to the [Microsoft Entra admin center](https://entra.microsoft.com/) and go to **Identity** > **Applications** > **App registrations**, then select **New registration**.
+2. Configure the app registration:
+   - Set **Supported account types** to **Accounts in any organizational directory (Any Azure AD directory - Multitenant)** to allow users from different organizations to authenticate.
+   - Under **Redirect URI**, select **Web** as the platform and enter: `https://oauth2.%WHITE_LABEL_BASE_URL%/callback`
+   - Select **Register** to complete the initial setup.
+3. Navigate to **Certificates & Secrets** and create a new **Client Secret**. Copy the **Value** immediately (it will not be shown again).
+4. Navigate to the **Overview** page and copy the **Application (client) ID**.
+5. Navigate to **API Permissions** and select **Add a permission**:
+   - Select **Microsoft Graph**
+   - Select **Delegated permissions**
+   - Under **DeviceManagementManagedDevices**, add the required permissions such as **DeviceManagementManagedDevices.PrivilegedOperations.All** and **DeviceManagementManagedDevices.Read.All**
+   - Add any additional permissions required by the integration
+
+For more information on available permissions, refer to the [Microsoft Graph permissions reference](https://learn.microsoft.com/en-us/graph/permissions-reference).
+
+#### Configure the Connection
+
+1. Enter the **Application (client) ID** as the **Client ID**
+2. Enter the **Client Secret** value copied earlier
+3. Use the default **Authorize URL**: `https://login.microsoftonline.com/common/oauth2/v2.0/authorize`
+4. For **Token URL**, replace **common** with the Tenant ID when authenticating to a specific tenant:
+   - Default: `https://login.microsoftonline.com/common/oauth2/v2.0/token`
+   - With Tenant ID: `https://login.microsoftonline.com/abf988bf-86f1-41af-91ab-2d7cd011db46/oauth2/v2.0/token`
+
+:::note Tenant-Specific Authentication
+Some actions require tenant-specific authentication. Replace the **common** portion of the Token URL with the specific Tenant ID when connecting to a particular organization.
+:::
 
 This connection uses OAuth 2.0, a common authentication mechanism for integrations.
 Read about how OAuth 2.0 works [here](../oauth2.md).
 
-| Input         | Comments                                                      | Default                                                                                                                                                                                                                                                                                                  |
-| ------------- | ------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Authorize URL | The OAuth 2.0 Authorization URL for Microsoft Intune          | https://login.microsoftonline.com/common/oauth2/v2.0/authorize                                                                                                                                                                                                                                           |
-| Token URL     | The OAuth 2.0 Token URL for Microsoft Intune                  | https://login.microsoftonline.com/common/oauth2/v2.0/token                                                                                                                                                                                                                                               |
-| Scopes        | Microsoft Intune Scopes.                                      | DeviceManagementManagedDevices.PrivilegedOperations.All DeviceManagementApps.ReadWrite.All DeviceManagementManagedDevices.ReadWrite.All Group.ReadWrite.All Domain.ReadWrite.All User.ReadWrite.All Directory.ReadWrite.All AuditLog.Read.All DeviceManagementConfiguration.ReadWrite.All offline_access |
-| Client ID     | Get this value from your App Registration in the Azure Portal |                                                                                                                                                                                                                                                                                                          |
-| Client Secret | Get this value from your App Registration in the Azure Portal |                                                                                                                                                                                                                                                                                                          |
+| Input         | Comments                                                                                                                                                                                                                                                                                                              | Default                                                                                                                                                                                                                                                                                                  |
+| ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Authorize URL | The OAuth 2.0 Authorization URL for Microsoft Intune. For multi-tenant apps, use /common. For single-tenant apps, replace /common with your tenant ID.                                                                                                                                                                | https://login.microsoftonline.com/common/oauth2/v2.0/authorize                                                                                                                                                                                                                                           |
+| Token URL     | The OAuth 2.0 Token URL for Microsoft Intune. For multi-tenant apps, use /common. For single-tenant apps, replace /common with your tenant ID.                                                                                                                                                                        | https://login.microsoftonline.com/common/oauth2/v2.0/token                                                                                                                                                                                                                                               |
+| Scopes        | Space-separated list of Microsoft Graph API permission scopes. Common scopes include DeviceManagementManagedDevices, DeviceManagementApps, Directory, Group, User permissions. [Learn more](https://learn.microsoft.com/en-us/graph/permissions-reference)                                                            | DeviceManagementManagedDevices.PrivilegedOperations.All DeviceManagementApps.ReadWrite.All DeviceManagementManagedDevices.ReadWrite.All Group.ReadWrite.All Domain.ReadWrite.All User.ReadWrite.All Directory.ReadWrite.All AuditLog.Read.All DeviceManagementConfiguration.ReadWrite.All offline_access |
+| Client ID     | Application (client) ID from your App Registration in the Azure Portal. Navigate to Azure Active Directory > App registrations > [Your App] to find this value. [Learn more](https://learn.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app)                                                |                                                                                                                                                                                                                                                                                                          |
+| Client Secret | Client secret value from your App Registration in the Azure Portal. Navigate to Azure Active Directory > App registrations > [Your App] > Certificates & secrets to generate a new secret. [Learn more](https://learn.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app#add-a-client-secret) |                                                                                                                                                                                                                                                                                                          |
 
-### OAuth 2.0 (Client Credentials)
+### OAuth 2.0 Client Credentials {#oauth2-client-credentials}
 
 OAuth 2.0 Client Credentials Connectivity for Microsoft Intune
 
-To create an new Microsoft Intune App Registration:
+To connect to Microsoft Intune using the OAuth 2.0 Client Credentials flow, create an app registration in Microsoft Entra. The client credentials flow is used for server-to-server authentication where the application acts on its own behalf rather than on behalf of a specific user.
 
-1. Navigate to the [Microsoft Entra](https://entra.microsoft.com/) **Identity** > **Applications** > **App registrations** and select **New registration**.
-   1. Set the Supported Account types to **Accounts in any organizational directory (Any Azure AD directory - Multitenant)** so that users outside of your organization (i.e. your customers) can authenticate.
-   2. Set the Redirect URI dropdown as a "Web" platform. In that section add the OAuth callback URL `https://oauth2.%WHITE_LABEL_BASE_URL%/callback` - as a **Redirect URI**.
-   3. Select Register to complete.
-2. From the App menu navigate to **Certificates & Secrets** for the app and add a new **Client Secret**. Save the **Value** for the **Client Secret** in the connection's configuration.
-3. Navigate to the **Overview** page save the value listed as the **Application (client) ID**. This will be your **Client ID** for the connection configuration.
-4. Navigate to **API Permissions** and select **Add Permission**, select the square labeled **Microsoft Graph**, and then **Application permissions**. Now apply all permissions relevant for your use-case.
-5. After applying all permissions relevant for your use-case, click on **Grant Admin Consent** in order to transfer permissions the client credentials flow after a successful connection.
+#### Prerequisites
 
-To configure the OAuth 2.0 connection:
+- A Microsoft account with administrative access to Microsoft Entra (formerly Azure AD)
+- Admin consent privileges to grant application-level permissions
 
-1. Add a Microsoft Intune OAuth 2.0 connection configuration variable:
-   1. Use the **Application (client) ID** value for the **Client ID** field.
-   2. Use the **Client Secret** for the same named field.
-   3. Use the default **Authorize URL**.
-   4. Use the default scope that comes set up with the connection.
-   5. All actions for the client credentials flow require authentication with your Tenant ID. To complete authentication, replace the **common** portion of the Token URL with your Tenant ID.
-      1. Example: **https://login.microsoftonline.com/common/oauth2/v2.0/token**
-         becomes **https://login.microsoftonline.com/abf988bf-86f1-41af-91ab-2d7cd011db46/oauth2/v2.0/token**
+#### Setup Steps
+
+1. Navigate to the [Microsoft Entra admin center](https://entra.microsoft.com/) and go to **Identity** > **Applications** > **App registrations**, then select **New registration**.
+2. Configure the app registration:
+   - Set **Supported account types** to **Accounts in any organizational directory (Any Azure AD directory - Multitenant)** to allow authentication across different organizations.
+   - Under **Redirect URI**, select **Web** as the platform and enter: `https://oauth2.%WHITE_LABEL_BASE_URL%/callback`
+   - Select **Register** to complete the initial setup.
+3. Navigate to **Certificates & Secrets** and create a new **Client Secret**. Copy the **Value** immediately (it will not be shown again).
+4. Navigate to the **Overview** page and copy the **Application (client) ID**.
+5. Navigate to **API Permissions** and select **Add a permission**:
+   - Select **Microsoft Graph**
+   - Select **Application permissions**
+   - Add all permissions required for the intended use case
+6. After adding all required permissions, select **Grant admin consent** to authorize the application to use these permissions. This step is required for the client credentials flow to function properly.
+
+For more information on application vs delegated permissions, refer to the [Microsoft Graph permissions reference](https://learn.microsoft.com/en-us/graph/permissions-reference).
+
+#### Configure the Connection
+
+1. Enter the **Application (client) ID** as the **Client ID**
+2. Enter the **Client Secret** value copied earlier
+3. Use the default **Authorize URL**: `https://login.microsoftonline.com/common/oauth2/v2.0/authorize`
+4. For **Token URL**, replace **common** with the specific Tenant ID (required for client credentials flow):
+   - Default format: `https://login.microsoftonline.com/common/oauth2/v2.0/token`
+   - With Tenant ID: `https://login.microsoftonline.com/abf988bf-86f1-41af-91ab-2d7cd011db46/oauth2/v2.0/token`
+5. Use the default scope: `https://graph.microsoft.com/.default`
+
+:::note Client Credentials Flow Requirement
+The client credentials flow requires a tenant-specific Token URL. Replace **common** with the actual Tenant ID for all actions using this connection type.
+:::
 
 This connection uses OAuth 2.0, a common authentication mechanism for integrations.
 Read about how OAuth 2.0 works [here](../oauth2.md).
 
-| Input         | Comments                                                      | Default                                                                  |
-| ------------- | ------------------------------------------------------------- | ------------------------------------------------------------------------ |
-| Token URL     | The OAuth 2.0 Token URL for Microsoft Intune                  | https://login.microsoftonline.com/**<YOUR_TENANT_ID>**/oauth2/v2.0/token |
-| Scopes        | Microsoft Intune Scopes.                                      | https://graph.microsoft.com/.default                                     |
-| Client ID     | Get this value from your App Registration in the Azure Portal |                                                                          |
-| Client Secret | Get this value from your App Registration in the Azure Portal |                                                                          |
+| Input         | Comments                                                                                                                                                                                                                                                                                                              | Default                                                                  |
+| ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
+| Token URL     | The OAuth 2.0 Token URL for Microsoft Intune. <strong>Important:</strong> Replace **<YOUR_TENANT_ID>** with your Azure AD tenant ID. Find your tenant ID in Azure Portal > Azure Active Directory > Overview.                                                                                                         | https://login.microsoftonline.com/**<YOUR_TENANT_ID>**/oauth2/v2.0/token |
+| Scopes        | The scope for Microsoft Graph API access. For client credentials flow, use https://graph.microsoft.com/.default to request all permissions configured in your app registration. [Learn more](https://learn.microsoft.com/en-us/graph/auth-v2-service)                                                                 | https://graph.microsoft.com/.default                                     |
+| Client ID     | Application (client) ID from your App Registration in the Azure Portal. Navigate to Azure Active Directory > App registrations > [Your App] to find this value. [Learn more](https://learn.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app)                                                |                                                                          |
+| Client Secret | Client secret value from your App Registration in the Azure Portal. Navigate to Azure Active Directory > App registrations > [Your App] > Certificates & secrets to generate a new secret. [Learn more](https://learn.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app#add-a-client-secret) |                                                                          |
 
 ## Triggers
 
-### Resource Trigger
+### Resource Trigger {#resourcetrigger}
 
 Get notified to this flow when the specified resource changes.
 
-| Input                | Comments                                                                                                                                                                                   | Default |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------- |
-| Expiration Date Time | Specifies the date and time when the webhook subscription expires. The time is in UTC, and can be an amount of time from subscription creation that varies for the resource subscribed to. |         |
-| Change Type          | Indicates the type of change in the subscribed resource that raises a change notification.                                                                                                 |         |
-| Resource             | The resource that will be monitored for changes. See https://learn.microsoft.com/en-us/graph/api/resources/change-notifications-api-overview?view=graph-rest-1.0                           |         |
-| Connection           |                                                                                                                                                                                            |         |
+| Input                | Comments                                                                                                                                                                                                                          | Default |
+| -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
+| Expiration Date Time | The date and time when the webhook subscription expires in UTC format (ISO 8601). The maximum duration varies by resource type. [Learn more](https://learn.microsoft.com/en-us/graph/api/resources/subscription)                  |         |
+| Change Type          | The type of change that will trigger notifications. Select one or more change types to monitor.                                                                                                                                   |         |
+| Resource             | The Microsoft Graph resource path to monitor for changes (e.g., users, groups, devices/managedDevices). [Learn more](https://learn.microsoft.com/en-us/graph/api/resources/change-notifications-api-overview?view=graph-rest-1.0) |         |
+| Connection           | The Microsoft Intune connection to use.                                                                                                                                                                                           |         |
 
 ## Actions
 
-### Add Group Member
+### Add Group Member {#addmembertogroup}
 
 Add a single member to a security or Microsoft 365 group.
 
 | Input      | Comments                                            | Default |
 | ---------- | --------------------------------------------------- | ------- |
-| Connection |                                                     |         |
+| Connection | The Microsoft Intune connection to use.             |         |
 | Group Id   | The unique identifier of a MS365 or Security group. |         |
-| Member Id  | The unique identifier of a member.                  |         |
+| Member Id  | The unique identifier of a member (UUID format).    |         |
 
-### Add Group Members
+### Add Group Members {#addmemberstogroup}
 
 Add members to a security or Microsoft 365 group.
 
-| Input              | Comments                                                                                                             | Default |
-| ------------------ | -------------------------------------------------------------------------------------------------------------------- | ------- |
-| Connection         |                                                                                                                      |         |
-| Group Id           | The unique identifier of a MS365 or Security group.                                                                  |         |
-| Member Ids         | The unique identifiers of members. Comma separated. You must fill either this input or the Dynamic member IDs input. |         |
-| Dynamic Member Ids | The unique identifiers of members. You must fill either this input or the member IDs input.                          |         |
+| Input              | Comments                                                                                                                    | Default |
+| ------------------ | --------------------------------------------------------------------------------------------------------------------------- | ------- |
+| Connection         | The Microsoft Intune connection to use.                                                                                     |         |
+| Group Id           | The unique identifier of a MS365 or Security group.                                                                         |         |
+| Member Ids         | Comma-separated list of member unique identifiers (UUIDs). You must fill either this input or the Dynamic member IDs input. |         |
+| Dynamic Member Ids | Array of member unique identifiers (UUIDs). You must fill either this input or the member IDs input.                        |         |
 
-### Assign Device Compliance Policy
+### Assign Device Compliance Policy {#assigndevicecompliancepolicy}
 
 Assign a device compliance policy by ID.
 
-| Input                       | Comments                                                          | Default |
-| --------------------------- | ----------------------------------------------------------------- | ------- |
-| Connection                  |                                                                   |         |
-| Device Compliance Policy Id | Unique Identifier for the device to assign the compliance policy. |         |
-| Assign Id                   | Key of the entity.                                                |         |
-| Target                      | The device compliance policy assignment target                    |         |
-| Collection Id               | Unique Identifier for the target collection.                      |         |
+| Input                       | Comments                                                                                                                           | Default |
+| --------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ------- |
+| Connection                  | The Microsoft Intune connection to use.                                                                                            |         |
+| Device Compliance Policy Id | Unique Identifier for the device to assign the compliance policy.                                                                  |         |
+| Assign Id                   | The unique identifier for the policy assignment.                                                                                   |         |
+| Target                      | The device compliance policy assignment target type (e.g., configurationManagerCollectionAssignmentTarget, groupAssignmentTarget). |         |
+| Collection Id               | The unique identifier for the Configuration Manager target collection.                                                             |         |
 
-### Assign Mobile App
+### Assign Mobile App {#assignmobileapp}
 
 Assign a mobile app to a group.
 
 | Input         | Comments                                                                                                                                                                                                                                                                                                                                                                                 | Default |
 | ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
-| Connection    |                                                                                                                                                                                                                                                                                                                                                                                          |         |
+| Connection    | The Microsoft Intune connection to use.                                                                                                                                                                                                                                                                                                                                                  |         |
 | Mobile App Id | Unique Identifier for the mobile app to assign.                                                                                                                                                                                                                                                                                                                                          |         |
-| Group Id      | The unique identifier of the group that you want to assign the app to.                                                                                                                                                                                                                                                                                                                   |         |
+| Group Id      | The unique identifier of the group to assign the app to (UUID format).                                                                                                                                                                                                                                                                                                                   |         |
 | Intent        | The intent of the assignment for the managed app. A 'Required' option will force the app to be installed on the device. An 'Available' option will make the app available for the user to install. An 'Uninstall' option will remove the app from the device. An 'Available Without Enrollment' option will make the app available for the user to install without enrolling the device. |         |
-| Target        | The mobile app assignment target                                                                                                                                                                                                                                                                                                                                                         |         |
-| Settings      | The mobile app assignment settings                                                                                                                                                                                                                                                                                                                                                       |         |
+| Target        | The mobile app assignment target type. Common values include allLicensedUsersAssignmentTarget, groupAssignmentTarget, allDevicesAssignmentTarget.                                                                                                                                                                                                                                        |         |
+| Settings      | The mobile app assignment settings type. The value depends on the app platform (e.g., windowsUniversalAppXAppAssignmentSettings, iosLobAppAssignmentSettings).                                                                                                                                                                                                                           |         |
 
-### Create Group
+### Create Group {#creategroup}
 
 Create a group.
 
-| Input            | Comments                                                                           | Default |
-| ---------------- | ---------------------------------------------------------------------------------- | ------- |
-| Connection       |                                                                                    |         |
-| Display Name     | The name to display in the address book for the group.                             |         |
-| Mail Nickname    | The mail alias for the group, unique for Microsoft 365 groups in the organization. |         |
-| Security Enabled | Specifies whether the group is a security group.                                   | false   |
-| Mail Enabled     | Set to true for mail-enabled groups.                                               | false   |
-| Description      | A description for the group.                                                       |         |
-| Assigned Labels  | The list of sensitivity label pairs (label ID, label name) associated with a group |         |
-| Visibility       | The display name for the group                                                     |         |
-| Body Fields      | Extra fields to include in the request body.                                       |         |
+| Input            | Comments                                                                                                 | Default |
+| ---------------- | -------------------------------------------------------------------------------------------------------- | ------- |
+| Connection       | The Microsoft Intune connection to use.                                                                  |         |
+| Display Name     | The name to display in the address book for the group.                                                   |         |
+| Mail Nickname    | The mail alias for the group, unique for Microsoft 365 groups in the organization.                       |         |
+| Security Enabled | When true, creates a security group. Security groups are used to control access to resources.            | false   |
+| Mail Enabled     | When true, creates a mail-enabled group that can receive email messages.                                 | false   |
+| Description      | A description for the group.                                                                             |         |
+| Assigned Labels  | The list of sensitivity label pairs (label ID, label name) associated with a group                       |         |
+| Visibility       | Specifies the visibility of the group. Possible values are Private, Public, or Hiddenmembership.         |         |
+| Body Fields      | Additional JSON properties to include in the request body. These will be merged with other input values. |         |
 
-### Create Managed App
+### Create Managed App {#createmanagedapp}
 
 Create a new App object.
 
 | Input                        | Comments                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | Default |
 | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------- |
-| Connection                   |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |         |
-| OData App Type               | The type of app to create. This depends on the platform of the app. Check the Microsoft Graph API documentation for the correct type. Documentation for an Office Suite app can be found here https://learn.microsoft.com/en-us/graph/api/intune-apps-officesuiteapp-create?view=graph-rest-beta                                                                                                                                                                                                                                     |         |
-| Display Name                 | Add a name for the app. This name will be visible in the Intune apps list and to users in the Company Portal.​                                                                                                                                                                                                                                                                                                                                                                                                                       |         |
-| Description                  | Help your device users understand what the app is and/or what they can do in the app. This comments will be visible to them in Company Portal.                                                                                                                                                                                                                                                                                                                                                                                       |         |
+| Connection                   | The Microsoft Intune connection to use.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |         |
+| OData App Type               | The OData type of the app to create (e.g., #microsoft.graph.officeSuiteApp, #microsoft.graph.win32LobApp). This depends on the platform of the app. [Learn more](https://learn.microsoft.com/en-us/graph/api/intune-apps-officesuiteapp-create?view=graph-rest-beta)                                                                                                                                                                                                                                                                 |         |
+| Display Name                 | The name for the app. This name will be visible in the Intune apps list and to users in the Company Portal.                                                                                                                                                                                                                                                                                                                                                                                                                          |         |
+| Description                  | A description of the app that helps users understand what it is and what they can do with it. This description will be visible in Company Portal.                                                                                                                                                                                                                                                                                                                                                                                    |         |
 | Publisher                    | The name of the developer or company that distributes the app. This information will be visible to users in Company Portal.                                                                                                                                                                                                                                                                                                                                                                                                          |         |
-| Icon Image Type              | The type of the Icon image. This field is required if the Icon Image Data is provided.                                                                                                                                                                                                                                                                                                                                                                                                                                               |         |
-| Icon Image Data              | The base64 encoded image data for the Icon image. This field is required if the Icon Image Type is provided.                                                                                                                                                                                                                                                                                                                                                                                                                         |         |
-| Is Featured                  | Show this as a featured app in the Company Portal. Featured apps are prominently placed in Company Portal so that users can quickly get to them.                                                                                                                                                                                                                                                                                                                                                                                     | false   |
-| Privacy Information URL      | Provide a link for people who want to learn more about the app's privacy settings and terms. The privacy URL will be visible to users in Company Portal.                                                                                                                                                                                                                                                                                                                                                                             |         |
-| Information URL              | Link people to a website or documentation that has more information about the app. The information URL will be visible to users in Company Portal.                                                                                                                                                                                                                                                                                                                                                                                   |         |
-| Owner                        | The name of the person in your organization who manages licensing or is the point-of-contact for this app. This name will be visible to people signed in to the admin center.​                                                                                                                                                                                                                                                                                                                                                       |         |
-| Developer                    | The name of the company or Individual that developed the app. This information will be visible to people signed into the admin center.                                                                                                                                                                                                                                                                                                                                                                                               |         |
-| Notes                        | Add additional notes about the app. Notes will be visible to people signed in to the admin center.                                                                                                                                                                                                                                                                                                                                                                                                                                   |         |
+| Icon Image Type              | The MIME type of the app icon image (e.g., image/png, image/jpeg). This field is required if the Icon Image Data is provided.                                                                                                                                                                                                                                                                                                                                                                                                        |         |
+| Icon Image Data              | The base64-encoded image data for the app icon. This field is required if the Icon Image Type is provided.                                                                                                                                                                                                                                                                                                                                                                                                                           |         |
+| Is Featured                  | When true, displays this as a featured app in the Company Portal. Featured apps are prominently placed so users can quickly access them.                                                                                                                                                                                                                                                                                                                                                                                             | false   |
+| Privacy Information URL      | A link to the app's privacy policy and terms. This URL will be visible to users in Company Portal.                                                                                                                                                                                                                                                                                                                                                                                                                                   |         |
+| Information URL              | A link to a website or documentation with more information about the app. This URL will be visible to users in Company Portal.                                                                                                                                                                                                                                                                                                                                                                                                       |         |
+| Owner                        | The name of the person in your organization who manages licensing or is the point-of-contact for this app. This name will be visible in the admin center.                                                                                                                                                                                                                                                                                                                                                                            |         |
+| Developer                    | The name of the company or individual that developed the app. This information will be visible in the admin center.                                                                                                                                                                                                                                                                                                                                                                                                                  |         |
+| Notes                        | Additional notes about the app for documentation purposes. Notes will be visible in the admin center.                                                                                                                                                                                                                                                                                                                                                                                                                                |         |
 | Specific Platform Properties | The specific properties for the app to be created, generic properties like '@odata.type', 'displayName', 'description', etc. are alredy covered by the other inputs. This input should be a JSON object with the specific properties for the app to be created. Check the Microsoft Graph API documentation for the correct properties for the app type you are creating. Documentation for an Office Suite app can be found here https://learn.microsoft.com/en-us/graph/api/intune-apps-officesuiteapp-create?view=graph-rest-beta |         |
 
-### Create Mobile App Assignment
+### Create Mobile App Assignment {#createmobileappassignment}
 
 Create a mobile app assignment.
 
 | Input         | Comments                                                                                                                                                                                                                                                                                                                                                                                 | Default |
 | ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
-| Connection    |                                                                                                                                                                                                                                                                                                                                                                                          |         |
+| Connection    | The Microsoft Intune connection to use.                                                                                                                                                                                                                                                                                                                                                  |         |
 | Mobile App Id | The ID of the mobile app to create the assignment for.                                                                                                                                                                                                                                                                                                                                   |         |
 | Intent        | The intent of the assignment for the managed app. A 'Required' option will force the app to be installed on the device. An 'Available' option will make the app available for the user to install. An 'Uninstall' option will remove the app from the device. An 'Available Without Enrollment' option will make the app available for the user to install without enrolling the device. |         |
-| Target        | The mobile app assignment target                                                                                                                                                                                                                                                                                                                                                         |         |
-| Settings      | The mobile app assignment settings                                                                                                                                                                                                                                                                                                                                                       |         |
+| Target        | The mobile app assignment target type. Common values include allLicensedUsersAssignmentTarget, groupAssignmentTarget, allDevicesAssignmentTarget.                                                                                                                                                                                                                                        |         |
+| Settings      | The mobile app assignment settings type. The value depends on the app platform (e.g., windowsUniversalAppXAppAssignmentSettings, iosLobAppAssignmentSettings).                                                                                                                                                                                                                           |         |
 
-### Create Subscription
+### Create Subscription {#createsubscription}
 
 Create a subscription.
 
-| Input                      | Comments                                                                                                                                                                                                                                                        | Default |
-| -------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
-| Connection                 |                                                                                                                                                                                                                                                                 |         |
-| Change Type                | Indicates the type of change in the subscribed resource that raises a change notification.                                                                                                                                                                      |         |
-| Notification URL           | The URL to send notifications to.                                                                                                                                                                                                                               |         |
-| Resource                   | The resource that will be monitored for changes. See https://learn.microsoft.com/en-us/graph/api/resources/change-notifications-api-overview?view=graph-rest-1.0                                                                                                |         |
-| Expiration Date Time       | Specifies the date and time when the webhook subscription expires. The time is in UTC, and can be an amount of time from subscription creation that varies for the resource subscribed to.                                                                      |         |
-| Lifecycle Notification URL | Required for Teams resources if the expirationDateTime value is more than 1 hour from now; optional otherwise. The URL of the endpoint that receives lifecycle notifications, including subscriptionRemoved, reauthorizationRequired, and missed notifications. |         |
-| Body Fields                | Extra fields to include in the request body.                                                                                                                                                                                                                    |         |
+| Input                      | Comments                                                                                                                                                                                                                          | Default |
+| -------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
+| Connection                 | The Microsoft Intune connection to use.                                                                                                                                                                                           |         |
+| Change Type                | The type of change that will trigger notifications. Select one or more change types to monitor.                                                                                                                                   |         |
+| Notification URL           | The URL endpoint that will receive webhook notifications when changes occur.                                                                                                                                                      |         |
+| Resource                   | The Microsoft Graph resource path to monitor for changes (e.g., users, groups, devices/managedDevices). [Learn more](https://learn.microsoft.com/en-us/graph/api/resources/change-notifications-api-overview?view=graph-rest-1.0) |         |
+| Expiration Date Time       | The date and time when the webhook subscription expires in UTC format (ISO 8601). The maximum duration varies by resource type. [Learn more](https://learn.microsoft.com/en-us/graph/api/resources/subscription)                  |         |
+| Lifecycle Notification URL | The URL endpoint that receives lifecycle notifications (subscriptionRemoved, reauthorizationRequired, missed notifications). Required for Teams resources if the expirationDateTime value is more than 1 hour from now.           |         |
+| Body Fields                | Additional JSON properties to include in the request body. These will be merged with other input values.                                                                                                                          |         |
 
-### Create User
+### Create User {#createuser}
 
 Create a new user.
 
 | Input                              | Comments                                                                                                                                                                                                                                                                                                               | Default |
 | ---------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
-| Connection                         |                                                                                                                                                                                                                                                                                                                        |         |
-| Account Enabled                    | Indicates if the account is enabled.                                                                                                                                                                                                                                                                                   | true    |
+| Connection                         | The Microsoft Intune connection to use.                                                                                                                                                                                                                                                                                |         |
+| Account Enabled                    | When true, enables the user account. When false, the account is disabled and the user cannot sign in.                                                                                                                                                                                                                  | true    |
 | Display Name                       | The display name of the user.                                                                                                                                                                                                                                                                                          |         |
-| Force Change Password Next Sign In | Indicates if the user is forced to change their password on next sign in.                                                                                                                                                                                                                                              | true    |
-| Password                           | The password of the user.                                                                                                                                                                                                                                                                                              |         |
-| User Principal Name                | The user principal name of the user.                                                                                                                                                                                                                                                                                   |         |
-| Domain                             | The domain for the user, this must be an existing domain in the tenant, you can list them using the 'List Domains' action.                                                                                                                                                                                             |         |
+| Force Change Password Next Sign In | When true, forces the user to change their password on next sign in.                                                                                                                                                                                                                                                   | true    |
+| Password                           | The password for the user account. Must meet your organization's password complexity requirements.                                                                                                                                                                                                                     |         |
+| User Principal Name                | The user principal name (username) for the user. This will be combined with the domain to create the full user principal name (e.g., john.doe@contoso.com).                                                                                                                                                            |         |
+| Domain                             | The domain for the user. This must be an existing verified domain in your tenant. Use the 'List Domains' action to retrieve available domains.                                                                                                                                                                         |         |
 | Additional Properties              | Additional properties that are not covered by the other inputs. This should be a JSON object and will be merged with the other inputs. You can get additional properties from the Microsoft Graph API documentation https://learn.microsoft.com/en-us/graph/api/resources/user?view=graph-rest-1.0#json-representation |         |
 
-### Delete Group
+### Delete Group {#deletegroup}
 
 Delete a single group.
 
-| Input      | Comments                    | Default |
-| ---------- | --------------------------- | ------- |
-| Connection |                             |         |
-| Group Id   | The ID of the group delete. |         |
+| Input      | Comments                                | Default |
+| ---------- | --------------------------------------- | ------- |
+| Connection | The Microsoft Intune connection to use. |         |
+| Group Id   | The ID of the group delete.             |         |
 
-### Delete Group Member
+### Delete Group Member {#deletememberfromgroup}
 
 Delete a member from a security or Microsoft 365 group.
 
 | Input      | Comments                                                               | Default |
 | ---------- | ---------------------------------------------------------------------- | ------- |
-| Connection |                                                                        |         |
-| Group Id   | The unique identifier of the group that you want to assign the app to. |         |
-| Member Id  | The unique identifier of a member.                                     |         |
+| Connection | The Microsoft Intune connection to use.                                |         |
+| Group Id   | The unique identifier of the group to assign the app to (UUID format). |         |
+| Member Id  | The unique identifier of a member (UUID format).                       |         |
 
-### Delete Managed App
+### Delete Managed App {#deletemanagedapp}
 
 Deletes an App.
 
-| Input         | Comments                     | Default |
-| ------------- | ---------------------------- | ------- |
-| Connection    |                              |         |
-| Mobile App ID | The ID of the app to delete. |         |
+| Input         | Comments                                | Default |
+| ------------- | --------------------------------------- | ------- |
+| Connection    | The Microsoft Intune connection to use. |         |
+| Mobile App ID | The ID of the app to delete.            |         |
 
-### Delete Managed Device
+### Delete Managed Device {#deletemanageddevice}
 
 Deletes a Managed Device.
 
 | Input             | Comments                                    | Default |
 | ----------------- | ------------------------------------------- | ------- |
-| Connection        |                                             |         |
+| Connection        | The Microsoft Intune connection to use.     |         |
 | Managed Device Id | Unique Identifier for the device to delete. |         |
 
-### Delete Mobile App Assignment
+### Delete Mobile App Assignment {#deletemobileappassignment}
 
 Delete a single mobile app assignment.
 
 | Input                    | Comments                                                | Default |
 | ------------------------ | ------------------------------------------------------- | ------- |
-| Connection               |                                                         |         |
+| Connection               | The Microsoft Intune connection to use.                 |         |
 | Mobile App Id            | The ID of the mobile app to delete the assignment from. |         |
 | Mobile App Assignment Id | The ID of the mobile app assignment to delete.          |         |
 
-### Delete Subscription by Id
+### Delete Subscription by Id {#deletesubscription}
 
 Delete a single subscription by its ID.
 
-| Input           | Comments                              | Default |
-| --------------- | ------------------------------------- | ------- |
-| Connection      |                                       |         |
-| Subscription ID | The ID of the subscription to delete. |         |
+| Input           | Comments                                | Default |
+| --------------- | --------------------------------------- | ------- |
+| Connection      | The Microsoft Intune connection to use. |         |
+| Subscription ID | The ID of the subscription to delete.   |         |
 
-### Delete Subscriptions from an Endpoint
+### Delete Subscriptions from an Endpoint {#deleteallsubscription}
 
 Delete all subscriptions from an endpoint.
 
 | Input            | Comments                                        | Default |
 | ---------------- | ----------------------------------------------- | ------- |
-| Connection       |                                                 |         |
+| Connection       | The Microsoft Intune connection to use.         |         |
 | Notification URL | The URL from which to delete all subscriptions. |         |
 
-### Delete User
+### Delete User {#deleteuser}
 
 Deletes a User.
 
 | Input      | Comments                                                                                  | Default |
 | ---------- | ----------------------------------------------------------------------------------------- | ------- |
-| Connection |                                                                                           |         |
+| Connection | The Microsoft Intune connection to use.                                                   |         |
 | User Id    | Unique Identifier for the user to delete. This can be the user's id or userPrincipalName. |         |
 
-### Get Detected App
+### Get Detected App {#getdetectedapp}
 
 Read properties and relationships of the Detected Apps object.
 
 | Input           | Comments                                            | Default |
 | --------------- | --------------------------------------------------- | ------- |
-| Connection      |                                                     |         |
+| Connection      | The Microsoft Intune connection to use.             |         |
 | Detected App Id | Unique Identifier for the detected app to retrieve. |         |
 
-### Get Device Compliance Policy
+### Get Device Compliance Policy {#getdevicecompliancepolicy}
 
 Get a device compliance policy by ID.
 
 | Input                       | Comments                                                        | Default |
 | --------------------------- | --------------------------------------------------------------- | ------- |
-| Connection                  |                                                                 |         |
+| Connection                  | The Microsoft Intune connection to use.                         |         |
 | Device Compliance Policy Id | Unique Identifier for the device compliance policy to retrieve. |         |
 
-### Get Device Compliance Policy Setting State Summary
+### Get Device Compliance Policy Setting State Summary {#getdevicecompliancepolicysettingstatesummary}
 
 Retrieve a device compliance policy setting state summary by its ID.
 
 | Input                                             | Comments                                                                              | Default |
 | ------------------------------------------------- | ------------------------------------------------------------------------------------- | ------- |
-| Connection                                        |                                                                                       |         |
+| Connection                                        | The Microsoft Intune connection to use.                                               |         |
 | Device Compliance Policy Setting State Summary Id | Unique Identifier for the device compliance policy setting state summary to retrieve. |         |
 
-### Get Device Configuration
+### Get Device Configuration {#getdeviceconfigurations}
 
 Get the device configurations.
 
 | Input                   | Comments                                      | Default |
 | ----------------------- | --------------------------------------------- | ------- |
-| Connection              |                                               |         |
+| Connection              | The Microsoft Intune connection to use.       |         |
 | Device Configuration Id | Unique Identifier for the device to retrieve. |         |
 
-### Get Directory Audit
+### Get Directory Audit {#getdirectoyaudit}
 
 Get a specific Microsoft Entra audit log item.
 
 | Input              | Comments                                                                  | Default |
 | ------------------ | ------------------------------------------------------------------------- | ------- |
-| Connection         |                                                                           |         |
+| Connection         | The Microsoft Intune connection to use.                                   |         |
 | Microsoft Entra Id | The unique identifier for the Microsoft Entra audit log item to retrieve. |         |
 
-### Get Group
+### Get Group {#getgroup}
 
 Retrieve a single group.
 
-| Input      | Comments                      | Default |
-| ---------- | ----------------------------- | ------- |
-| Connection |                               |         |
-| Group Id   | The ID of the group retrieve. |         |
+| Input      | Comments                                | Default |
+| ---------- | --------------------------------------- | ------- |
+| Connection | The Microsoft Intune connection to use. |         |
+| Group Id   | The ID of the group retrieve.           |         |
 
-### Get Managed App
+### Get Managed App {#getmanagedapp}
 
 Read properties and relationships of an App object.
 
 | Input      | Comments                                                                                      | Default |
 | ---------- | --------------------------------------------------------------------------------------------- | ------- |
-| Connection |                                                                                               |         |
+| Connection | The Microsoft Intune connection to use.                                                       |         |
 | App Id     | The unique identifier of a managed app. You can get this from the 'List Managed Apps' action. |         |
 
-### Get Managed Device
+### Get Managed Device {#getmanageddevice}
 
 Read properties and relationships of the Managed Device object.
 
 | Input             | Comments                                      | Default |
 | ----------------- | --------------------------------------------- | ------- |
-| Connection        |                                               |         |
+| Connection        | The Microsoft Intune connection to use.       |         |
 | Managed Device Id | Unique Identifier for the device to retrieve. |         |
 
-### Get Mobile App
+### Get Mobile App {#getmobileapp}
 
 Retrieve a single mobile app.
 
-| Input         | Comments                                     | Default |
-| ------------- | -------------------------------------------- | ------- |
-| Connection    |                                              |         |
-| Mobile App Id | Unique Identifier for the mobile app to get. |         |
+| Input         | Comments                                            | Default |
+| ------------- | --------------------------------------------------- | ------- |
+| Connection    | The Microsoft Intune connection to use.             |         |
+| Mobile App Id | Unique identifier for the mobile app (UUID format). |         |
 
-### Get Mobile App Assignment
+### Get Mobile App Assignment {#getmobileappassignment}
 
 Retrieve a single mobile app assignment.
 
 | Input                    | Comments                                                | Default |
 | ------------------------ | ------------------------------------------------------- | ------- |
-| Connection               |                                                         |         |
-| Mobile App Id            | Unique Identifier for the mobile app to get.            |         |
+| Connection               | The Microsoft Intune connection to use.                 |         |
+| Mobile App Id            | Unique identifier for the mobile app (UUID format).     |         |
 | Mobile App Assignment Id | Unique Identifier for the mobile app assignment to get. |         |
 
-### Get Subscription
+### Get Subscription {#getsubscription}
 
 Retrieve a single subscription.
 
-| Input           | Comments                                | Default |
-| --------------- | --------------------------------------- | ------- |
-| Connection      |                                         |         |
-| Subscription ID | The ID of the subscription to retrieve. |         |
+| Input           | Comments                                                 | Default |
+| --------------- | -------------------------------------------------------- | ------- |
+| Connection      | The Microsoft Intune connection to use.                  |         |
+| Subscription ID | The unique identifier of the subscription (UUID format). |         |
 
-### Get User
+### Get User {#getuser}
 
 Read properties and relationships of the User object.
 
 | Input      | Comments                                                                               | Default |
 | ---------- | -------------------------------------------------------------------------------------- | ------- |
-| Connection |                                                                                        |         |
+| Connection | The Microsoft Intune connection to use.                                                |         |
 | User Id    | Unique Identifier for the user to get. This can be the user's id or userPrincipalName. |         |
-| Select     | Filters properties (columns).                                                          |         |
+| Select     | Comma-separated list of properties to include in the response. Reduces payload size.   |         |
 
-### List Detected Apps
+### List Detected Apps {#listdetectedapps}
 
 List properties and relationships of the Detected Apps objects.
 
-| Input      | Comments                                                                                                                           | Default |
-| ---------- | ---------------------------------------------------------------------------------------------------------------------------------- | ------- |
-| Connection |                                                                                                                                    |         |
-| Filter     | Filters results (rows).                                                                                                            |         |
-| Select     | Filters properties (columns).                                                                                                      |         |
-| Expand     | Retrieves related resources.                                                                                                       |         |
-| Order By   | Orders results.                                                                                                                    |         |
-| Top        | Sets the page size of results.                                                                                                     |         |
-| Skip       | Indexes into a result set. Also used by some APIs to implement paging and can be used together with $top to manually page results. |         |
-| Count      | Retrieves the total count of matching resources.                                                                                   | false   |
-| Search     | Returns results based on search criteria.                                                                                          |         |
-| Format     | Returns the results in the specified media format.                                                                                 |         |
-| Skip Token | Retrieves the next page of results from result sets that span multiple pages.                                                      |         |
+| Input      | Comments                                                                                         | Default |
+| ---------- | ------------------------------------------------------------------------------------------------ | ------- |
+| Connection | The Microsoft Intune connection to use.                                                          |         |
+| Filter     | OData filter expression to filter results. Supports operators like eq, ne, startswith, contains. |         |
+| Select     | Comma-separated list of properties to include in the response. Reduces payload size.             |         |
+| Expand     | Comma-separated list of relationships to expand and include in the response.                     |         |
+| Order By   | Property to sort results by. Add 'asc' or 'desc' suffix for sort direction.                      |         |
+| Top        | Maximum number of results to return per page.                                                    |         |
+| Skip       | Number of results to skip. Use with $top for manual pagination.                                  |         |
+| Count      | When true, retrieves the total count of matching resources.                                      | false   |
+| Search     | Returns results based on search criteria. Use format 'property:value' for specific searches.     |         |
+| Format     | Response format. Typically 'json' for JSON output.                                               |         |
+| Skip Token | Token from a previous response's @odata.nextLink to retrieve the next page of results.           |         |
 
-### List Device Compliance Policies
+### List Device Compliance Policies {#listdevicecompliancepolicies}
 
 List all device compliance policies.
 
-| Input      | Comments | Default |
-| ---------- | -------- | ------- |
-| Connection |          |         |
+| Input      | Comments                                | Default |
+| ---------- | --------------------------------------- | ------- |
+| Connection | The Microsoft Intune connection to use. |         |
 
-### List Device Compliance Policy Setting State Summaries
+### List Device Compliance Policy Setting State Summaries {#listdevicecompliancepolicysettingstatesummaries}
 
 Retrieve a list of device compliance policy setting state summaries.
 
-| Input      | Comments | Default |
-| ---------- | -------- | ------- |
-| Connection |          |         |
+| Input      | Comments                                | Default |
+| ---------- | --------------------------------------- | ------- |
+| Connection | The Microsoft Intune connection to use. |         |
 
-### List Device Configurations
+### List Device Configurations {#listdeviceconfigurations}
 
 List all device configurations.
 
-| Input      | Comments | Default |
-| ---------- | -------- | ------- |
-| Connection |          |         |
+| Input      | Comments                                | Default |
+| ---------- | --------------------------------------- | ------- |
+| Connection | The Microsoft Intune connection to use. |         |
 
-### List Directory Audits
+### List Directory Audits {#listdirectoryaudits}
 
 Retrieve a list of directory audits.
 
-| Input      | Comments                                                                      | Default |
-| ---------- | ----------------------------------------------------------------------------- | ------- |
-| Connection |                                                                               |         |
-| Fetch All  | Set to true to retrieve all results.                                          | false   |
-| Filter     | Filters results (rows).                                                       |         |
-| Order By   | Orders results.                                                               |         |
-| Top        | Sets the page size of results.                                                |         |
-| Skip Token | Retrieves the next page of results from result sets that span multiple pages. |         |
+| Input      | Comments                                                                                         | Default |
+| ---------- | ------------------------------------------------------------------------------------------------ | ------- |
+| Connection | The Microsoft Intune connection to use.                                                          |         |
+| Fetch All  | When true, fetches all pages of results using pagination.                                        | false   |
+| Filter     | OData filter expression to filter results. Supports operators like eq, ne, startswith, contains. |         |
+| Order By   | Property to sort results by. Add 'asc' or 'desc' suffix for sort direction.                      |         |
+| Top        | Maximum number of results to return per page.                                                    |         |
+| Skip Token | Token from a previous response's @odata.nextLink to retrieve the next page of results.           |         |
 
-### List Domains
+### List Domains {#listdomains}
 
 Retrieve a list of domain objects.
 
-| Input      | Comments                                                                                                                           | Default |
-| ---------- | ---------------------------------------------------------------------------------------------------------------------------------- | ------- |
-| Connection |                                                                                                                                    |         |
-| Filter     | Filters results (rows).                                                                                                            |         |
-| Select     | Filters properties (columns).                                                                                                      |         |
-| Expand     | Retrieves related resources.                                                                                                       |         |
-| Order By   | Orders results.                                                                                                                    |         |
-| Top        | Sets the page size of results.                                                                                                     |         |
-| Skip       | Indexes into a result set. Also used by some APIs to implement paging and can be used together with $top to manually page results. |         |
-| Count      | Retrieves the total count of matching resources.                                                                                   | false   |
-| Search     | Returns results based on search criteria.                                                                                          |         |
-| Format     | Returns the results in the specified media format.                                                                                 |         |
-| Skip Token | Retrieves the next page of results from result sets that span multiple pages.                                                      |         |
+| Input      | Comments                                                                                         | Default |
+| ---------- | ------------------------------------------------------------------------------------------------ | ------- |
+| Connection | The Microsoft Intune connection to use.                                                          |         |
+| Filter     | OData filter expression to filter results. Supports operators like eq, ne, startswith, contains. |         |
+| Select     | Comma-separated list of properties to include in the response. Reduces payload size.             |         |
+| Expand     | Comma-separated list of relationships to expand and include in the response.                     |         |
+| Order By   | Property to sort results by. Add 'asc' or 'desc' suffix for sort direction.                      |         |
+| Top        | Maximum number of results to return per page.                                                    |         |
+| Skip       | Number of results to skip. Use with $top for manual pagination.                                  |         |
+| Count      | When true, retrieves the total count of matching resources.                                      | false   |
+| Search     | Returns results based on search criteria. Use format 'property:value' for specific searches.     |         |
+| Format     | Response format. Typically 'json' for JSON output.                                               |         |
+| Skip Token | Token from a previous response's @odata.nextLink to retrieve the next page of results.           |         |
 
-### List Group Members
+### List Group Members {#listmembersfromgroup}
 
 List all members of a security or Microsoft 365 group.
 
-| Input      | Comments                                            | Default |
-| ---------- | --------------------------------------------------- | ------- |
-| Connection |                                                     |         |
-| Group Id   | The unique identifier of a MS365 or Security group. |         |
-| Filter     | Filters results (rows).                             |         |
-| Count      | Retrieves the total count of matching resources.    | false   |
-| Select     | Filters properties (columns).                       |         |
-| Search     | Returns results based on search criteria.           |         |
-| Top        | Sets the page size of results.                      |         |
-| Expand     | Retrieves related resources.                        |         |
+| Input      | Comments                                                                                         | Default |
+| ---------- | ------------------------------------------------------------------------------------------------ | ------- |
+| Connection | The Microsoft Intune connection to use.                                                          |         |
+| Group Id   | The unique identifier of a MS365 or Security group.                                              |         |
+| Filter     | OData filter expression to filter results. Supports operators like eq, ne, startswith, contains. |         |
+| Count      | When true, retrieves the total count of matching resources.                                      | false   |
+| Select     | Comma-separated list of properties to include in the response. Reduces payload size.             |         |
+| Search     | Returns results based on search criteria. Use format 'property:value' for specific searches.     |         |
+| Top        | Maximum number of results to return per page.                                                    |         |
+| Expand     | Comma-separated list of relationships to expand and include in the response.                     |         |
 
-### List Groups
+### List Groups {#listgroups}
 
 List all groups.
 
-| Input      | Comments                                         | Default |
-| ---------- | ------------------------------------------------ | ------- |
-| Connection |                                                  |         |
-| Fetch All  | Set to true to retrieve all results.             | false   |
-| Count      | Retrieves the total count of matching resources. | false   |
-| Expand     | Retrieves related resources.                     |         |
-| Filter     | Filters results (rows).                          |         |
-| Order By   | Orders results.                                  |         |
-| Search     | Returns results based on search criteria.        |         |
-| Select     | Filters properties (columns).                    |         |
-| Top        | Sets the page size of results.                   |         |
+| Input      | Comments                                                                                         | Default |
+| ---------- | ------------------------------------------------------------------------------------------------ | ------- |
+| Connection | The Microsoft Intune connection to use.                                                          |         |
+| Fetch All  | When true, fetches all pages of results using pagination.                                        | false   |
+| Count      | When true, retrieves the total count of matching resources.                                      | false   |
+| Expand     | Comma-separated list of relationships to expand and include in the response.                     |         |
+| Filter     | OData filter expression to filter results. Supports operators like eq, ne, startswith, contains. |         |
+| Order By   | Property to sort results by. Add 'asc' or 'desc' suffix for sort direction.                      |         |
+| Search     | Returns results based on search criteria. Use format 'property:value' for specific searches.     |         |
+| Select     | Comma-separated list of properties to include in the response. Reduces payload size.             |         |
+| Top        | Maximum number of results to return per page.                                                    |         |
 
-### List Managed Apps
+### List Managed Apps {#listmanagedapps}
 
 List all managed apps in Intune.
 
-| Input      | Comments                                                                                                                           | Default                                                                                                                                      |
-| ---------- | ---------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| Connection |                                                                                                                                    |                                                                                                                                              |
-| Filter     | Filters results (rows).                                                                                                            | (microsoft.graph.managedApp/appAvailability eq null or microsoft.graph.managedApp/appAvailability eq 'lineOfBusiness' or isAssigned eq true) |
-| Select     | Filters properties (columns).                                                                                                      |                                                                                                                                              |
-| Expand     | Retrieves related resources.                                                                                                       |                                                                                                                                              |
-| Order By   | Orders results.                                                                                                                    |                                                                                                                                              |
-| Top        | Sets the page size of results.                                                                                                     |                                                                                                                                              |
-| Skip       | Indexes into a result set. Also used by some APIs to implement paging and can be used together with $top to manually page results. |                                                                                                                                              |
-| Count      | Retrieves the total count of matching resources.                                                                                   | false                                                                                                                                        |
-| Search     | Returns results based on search criteria.                                                                                          |                                                                                                                                              |
-| Format     | Returns the results in the specified media format.                                                                                 |                                                                                                                                              |
-| Skip Token | Retrieves the next page of results from result sets that span multiple pages.                                                      |                                                                                                                                              |
+| Input      | Comments                                                                                         | Default                                                                                                                                      |
+| ---------- | ------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| Connection | The Microsoft Intune connection to use.                                                          |                                                                                                                                              |
+| Filter     | OData filter expression to filter results. Supports operators like eq, ne, startswith, contains. | (microsoft.graph.managedApp/appAvailability eq null or microsoft.graph.managedApp/appAvailability eq 'lineOfBusiness' or isAssigned eq true) |
+| Select     | Comma-separated list of properties to include in the response. Reduces payload size.             |                                                                                                                                              |
+| Expand     | Comma-separated list of relationships to expand and include in the response.                     |                                                                                                                                              |
+| Order By   | Property to sort results by. Add 'asc' or 'desc' suffix for sort direction.                      |                                                                                                                                              |
+| Top        | Maximum number of results to return per page.                                                    |                                                                                                                                              |
+| Skip       | Number of results to skip. Use with $top for manual pagination.                                  |                                                                                                                                              |
+| Count      | When true, retrieves the total count of matching resources.                                      | false                                                                                                                                        |
+| Search     | Returns results based on search criteria. Use format 'property:value' for specific searches.     |                                                                                                                                              |
+| Format     | Response format. Typically 'json' for JSON output.                                               |                                                                                                                                              |
+| Skip Token | Token from a previous response's @odata.nextLink to retrieve the next page of results.           |                                                                                                                                              |
 
-### List Managed Devices
+### List Managed Devices {#listmanageddevices}
 
 List properties and relationships of the Managed Device objects.
 
-| Input      | Comments                                                                                                                           | Default |
-| ---------- | ---------------------------------------------------------------------------------------------------------------------------------- | ------- |
-| Connection |                                                                                                                                    |         |
-| Filter     | Filters results (rows).                                                                                                            |         |
-| Select     | Filters properties (columns).                                                                                                      |         |
-| Expand     | Retrieves related resources.                                                                                                       |         |
-| Order By   | Orders results.                                                                                                                    |         |
-| Top        | Sets the page size of results.                                                                                                     |         |
-| Skip       | Indexes into a result set. Also used by some APIs to implement paging and can be used together with $top to manually page results. |         |
-| Count      | Retrieves the total count of matching resources.                                                                                   | false   |
-| Search     | Returns results based on search criteria.                                                                                          |         |
-| Format     | Returns the results in the specified media format.                                                                                 |         |
-| Skip Token | Retrieves the next page of results from result sets that span multiple pages.                                                      |         |
+| Input      | Comments                                                                                         | Default |
+| ---------- | ------------------------------------------------------------------------------------------------ | ------- |
+| Connection | The Microsoft Intune connection to use.                                                          |         |
+| Filter     | OData filter expression to filter results. Supports operators like eq, ne, startswith, contains. |         |
+| Select     | Comma-separated list of properties to include in the response. Reduces payload size.             |         |
+| Expand     | Comma-separated list of relationships to expand and include in the response.                     |         |
+| Order By   | Property to sort results by. Add 'asc' or 'desc' suffix for sort direction.                      |         |
+| Top        | Maximum number of results to return per page.                                                    |         |
+| Skip       | Number of results to skip. Use with $top for manual pagination.                                  |         |
+| Count      | When true, retrieves the total count of matching resources.                                      | false   |
+| Search     | Returns results based on search criteria. Use format 'property:value' for specific searches.     |         |
+| Format     | Response format. Typically 'json' for JSON output.                                               |         |
+| Skip Token | Token from a previous response's @odata.nextLink to retrieve the next page of results.           |         |
 
-### List Mobile App Assignments
+### List Mobile App Assignments {#listmobileappassignments}
 
 List all assignments for a mobile app.
 
-| Input         | Comments                                                                                                                           | Default |
-| ------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ------- |
-| Connection    |                                                                                                                                    |         |
-| Mobile App Id | Unique Identifier for the mobile app to get.                                                                                       |         |
-| Fetch All     | Set to true to retrieve all results.                                                                                               | false   |
-| Filter        | Filters results (rows).                                                                                                            |         |
-| Select        | Filters properties (columns).                                                                                                      |         |
-| Expand        | Retrieves related resources.                                                                                                       |         |
-| Order By      | Orders results.                                                                                                                    |         |
-| Top           | Sets the page size of results.                                                                                                     |         |
-| Skip          | Indexes into a result set. Also used by some APIs to implement paging and can be used together with $top to manually page results. |         |
-| Count         | Retrieves the total count of matching resources.                                                                                   | false   |
-| Search        | Returns results based on search criteria.                                                                                          |         |
-| Format        | Returns the results in the specified media format.                                                                                 |         |
-| Skip Token    | Retrieves the next page of results from result sets that span multiple pages.                                                      |         |
+| Input         | Comments                                                                                         | Default |
+| ------------- | ------------------------------------------------------------------------------------------------ | ------- |
+| Connection    | The Microsoft Intune connection to use.                                                          |         |
+| Mobile App Id | Unique identifier for the mobile app (UUID format).                                              |         |
+| Fetch All     | When true, fetches all pages of results using pagination.                                        | false   |
+| Filter        | OData filter expression to filter results. Supports operators like eq, ne, startswith, contains. |         |
+| Select        | Comma-separated list of properties to include in the response. Reduces payload size.             |         |
+| Expand        | Comma-separated list of relationships to expand and include in the response.                     |         |
+| Order By      | Property to sort results by. Add 'asc' or 'desc' suffix for sort direction.                      |         |
+| Top           | Maximum number of results to return per page.                                                    |         |
+| Skip          | Number of results to skip. Use with $top for manual pagination.                                  |         |
+| Count         | When true, retrieves the total count of matching resources.                                      | false   |
+| Search        | Returns results based on search criteria. Use format 'property:value' for specific searches.     |         |
+| Format        | Response format. Typically 'json' for JSON output.                                               |         |
+| Skip Token    | Token from a previous response's @odata.nextLink to retrieve the next page of results.           |         |
 
-### List Mobile Apps
+### List Mobile Apps {#listmobileapps}
 
 Retrieve a list of mobile apps.
 
-| Input      | Comments                                                                                                                           | Default |
-| ---------- | ---------------------------------------------------------------------------------------------------------------------------------- | ------- |
-| Connection |                                                                                                                                    |         |
-| Fetch All  | Set to true to retrieve all results.                                                                                               | false   |
-| Filter     | Filters results (rows).                                                                                                            |         |
-| Select     | Filters properties (columns).                                                                                                      |         |
-| Expand     | Retrieves related resources.                                                                                                       |         |
-| Order By   | Orders results.                                                                                                                    |         |
-| Top        | Sets the page size of results.                                                                                                     |         |
-| Skip       | Indexes into a result set. Also used by some APIs to implement paging and can be used together with $top to manually page results. |         |
-| Count      | Retrieves the total count of matching resources.                                                                                   | false   |
-| Search     | Returns results based on search criteria.                                                                                          |         |
-| Format     | Returns the results in the specified media format.                                                                                 |         |
-| Skip Token | Retrieves the next page of results from result sets that span multiple pages.                                                      |         |
+| Input      | Comments                                                                                         | Default |
+| ---------- | ------------------------------------------------------------------------------------------------ | ------- |
+| Connection | The Microsoft Intune connection to use.                                                          |         |
+| Fetch All  | When true, fetches all pages of results using pagination.                                        | false   |
+| Filter     | OData filter expression to filter results. Supports operators like eq, ne, startswith, contains. |         |
+| Select     | Comma-separated list of properties to include in the response. Reduces payload size.             |         |
+| Expand     | Comma-separated list of relationships to expand and include in the response.                     |         |
+| Order By   | Property to sort results by. Add 'asc' or 'desc' suffix for sort direction.                      |         |
+| Top        | Maximum number of results to return per page.                                                    |         |
+| Skip       | Number of results to skip. Use with $top for manual pagination.                                  |         |
+| Count      | When true, retrieves the total count of matching resources.                                      | false   |
+| Search     | Returns results based on search criteria. Use format 'property:value' for specific searches.     |         |
+| Format     | Response format. Typically 'json' for JSON output.                                               |         |
+| Skip Token | Token from a previous response's @odata.nextLink to retrieve the next page of results.           |         |
 
-### List Software Update Status Summary
+### List Software Update Status Summary {#listsoftwareupdatestatussummary}
 
 List the status summary of a software update.
 
-| Input      | Comments                                                                      | Default |
-| ---------- | ----------------------------------------------------------------------------- | ------- |
-| Connection |                                                                               |         |
-| Fetch All  | Set to true to retrieve all results.                                          | false   |
-| Select     | Filters properties (columns).                                                 |         |
-| Expand     | Retrieves related resources.                                                  |         |
-| Search     | Returns results based on search criteria.                                     |         |
-| Format     | Returns the results in the specified media format.                            |         |
-| Skip Token | Retrieves the next page of results from result sets that span multiple pages. |         |
+| Input      | Comments                                                                                     | Default |
+| ---------- | -------------------------------------------------------------------------------------------- | ------- |
+| Connection | The Microsoft Intune connection to use.                                                      |         |
+| Fetch All  | When true, fetches all pages of results using pagination.                                    | false   |
+| Select     | Comma-separated list of properties to include in the response. Reduces payload size.         |         |
+| Expand     | Comma-separated list of relationships to expand and include in the response.                 |         |
+| Search     | Returns results based on search criteria. Use format 'property:value' for specific searches. |         |
+| Format     | Response format. Typically 'json' for JSON output.                                           |         |
+| Skip Token | Token from a previous response's @odata.nextLink to retrieve the next page of results.       |         |
 
-### List Subscriptions
+### List Subscriptions {#listsubscriptions}
 
 List all Subscriptions.
 
-| Input      | Comments                                                                      | Default |
-| ---------- | ----------------------------------------------------------------------------- | ------- |
-| Connection |                                                                               |         |
-| Fetch All  | Set to true to retrieve all results.                                          | false   |
-| Skip Token | Retrieves the next page of results from result sets that span multiple pages. |         |
+| Input      | Comments                                                                               | Default |
+| ---------- | -------------------------------------------------------------------------------------- | ------- |
+| Connection | The Microsoft Intune connection to use.                                                |         |
+| Fetch All  | When true, fetches all pages of results using pagination.                              | false   |
+| Skip Token | Token from a previous response's @odata.nextLink to retrieve the next page of results. |         |
 
-### List Users
+### List Users {#listusers}
 
 Retrieve a list of user objects.
 
-| Input      | Comments                                                                                                                           | Default |
-| ---------- | ---------------------------------------------------------------------------------------------------------------------------------- | ------- |
-| Connection |                                                                                                                                    |         |
-| Filter     | Filters results (rows).                                                                                                            |         |
-| Select     | Filters properties (columns).                                                                                                      |         |
-| Expand     | Retrieves related resources.                                                                                                       |         |
-| Order By   | Orders results.                                                                                                                    |         |
-| Top        | Sets the page size of results.                                                                                                     |         |
-| Skip       | Indexes into a result set. Also used by some APIs to implement paging and can be used together with $top to manually page results. |         |
-| Count      | Retrieves the total count of matching resources.                                                                                   | false   |
-| Search     | Returns results based on search criteria.                                                                                          |         |
-| Format     | Returns the results in the specified media format.                                                                                 |         |
-| Skip Token | Retrieves the next page of results from result sets that span multiple pages.                                                      |         |
+| Input      | Comments                                                                                         | Default |
+| ---------- | ------------------------------------------------------------------------------------------------ | ------- |
+| Connection | The Microsoft Intune connection to use.                                                          |         |
+| Filter     | OData filter expression to filter results. Supports operators like eq, ne, startswith, contains. |         |
+| Select     | Comma-separated list of properties to include in the response. Reduces payload size.             |         |
+| Expand     | Comma-separated list of relationships to expand and include in the response.                     |         |
+| Order By   | Property to sort results by. Add 'asc' or 'desc' suffix for sort direction.                      |         |
+| Top        | Maximum number of results to return per page.                                                    |         |
+| Skip       | Number of results to skip. Use with $top for manual pagination.                                  |         |
+| Count      | When true, retrieves the total count of matching resources.                                      | false   |
+| Search     | Returns results based on search criteria. Use format 'property:value' for specific searches.     |         |
+| Format     | Response format. Typically 'json' for JSON output.                                               |         |
+| Skip Token | Token from a previous response's @odata.nextLink to retrieve the next page of results.           |         |
 
-### Raw Request
+### Raw Request {#rawrequest}
 
 Send raw HTTP request to Microsoft Intune API
 
 | Input                   | Comments                                                                                                                                                                                                                                                                                                                | Default |
 | ----------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
-| Connection              |                                                                                                                                                                                                                                                                                                                         |         |
+| Connection              | The Microsoft Intune connection to use.                                                                                                                                                                                                                                                                                 |         |
 | API Version             | The version of the API to use.                                                                                                                                                                                                                                                                                          |         |
 | URL                     | Input the path only (/deviceManagement/detectedApps), The base URL is already included (https://graph.microsoft.com/v1.0). For example, to connect to https://graph.microsoft.com/v1.0/deviceManagement/detectedApps, only /deviceManagement/detectedApps is entered in this field. e.g. /deviceManagement/detectedApps |         |
 | Method                  | The HTTP method to use.                                                                                                                                                                                                                                                                                                 |         |
@@ -648,47 +680,47 @@ Send raw HTTP request to Microsoft Intune API
 | Max Retry Count         | The maximum number of retries to attempt. Specify 0 for no retries.                                                                                                                                                                                                                                                     | 0       |
 | Use Exponential Backoff | Specifies whether to use a pre-defined exponential backoff strategy for retries. When enabled, 'Retry Delay (ms)' is ignored.                                                                                                                                                                                           | false   |
 
-### Reprocess User License Assignment
+### Reprocess User License Assignment {#reprocessuserlicenseassignment}
 
 Reprocess all group-based license assignments for the user.
 
 | Input      | Comments                                                                                                            | Default |
 | ---------- | ------------------------------------------------------------------------------------------------------------------- | ------- |
-| Connection |                                                                                                                     |         |
+| Connection | The Microsoft Intune connection to use.                                                                             |         |
 | User Id    | Unique Identifier for the user to reprocess the license assignment. This can be the user's id or userPrincipalName. |         |
 
-### Retire Managed Device
+### Retire Managed Device {#retiredevice}
 
 Retire a device from Intune management upon employee offboarding.
 
 | Input             | Comments                                    | Default |
 | ----------------- | ------------------------------------------- | ------- |
-| Connection        |                                             |         |
+| Connection        | The Microsoft Intune connection to use.     |         |
 | Managed Device Id | Unique Identifier for the device to retire. |         |
 
-### Update Group
+### Update Group {#updategroup}
 
 Update a single group.
 
-| Input            | Comments                                                                                       | Default |
-| ---------------- | ---------------------------------------------------------------------------------------------- | ------- |
-| Connection       |                                                                                                |         |
-| Group Id         | The ID of the group update.                                                                    |         |
-| Display Name     | The name to display in the address book for the group.                                         |         |
-| Mail Nickname    | The mail alias for the group, unique for Microsoft 365 groups in the organization.             |         |
-| Security Enabled | Set to true for mail-enabled groups. If Not Set the input will not be included in the request. |         |
-| Description      | A description for the group.                                                                   |         |
-| Assigned Labels  | The list of sensitivity label pairs (label ID, label name) associated with a group             |         |
-| Visibility       | The display name for the group                                                                 |         |
-| Body Fields      | Extra fields to include in the request body.                                                   |         |
+| Input            | Comments                                                                                                 | Default |
+| ---------------- | -------------------------------------------------------------------------------------------------------- | ------- |
+| Connection       | The Microsoft Intune connection to use.                                                                  |         |
+| Group Id         | The ID of the group update.                                                                              |         |
+| Display Name     | The name to display in the address book for the group.                                                   |         |
+| Mail Nickname    | The mail alias for the group, unique for Microsoft 365 groups in the organization.                       |         |
+| Security Enabled | Set to true for mail-enabled groups. If Not Set the input will not be included in the request.           |         |
+| Description      | A description for the group.                                                                             |         |
+| Assigned Labels  | The list of sensitivity label pairs (label ID, label name) associated with a group                       |         |
+| Visibility       | Specifies the visibility of the group. Possible values are Private, Public, or Hiddenmembership.         |         |
+| Body Fields      | Additional JSON properties to include in the request body. These will be merged with other input values. |         |
 
-### Update Managed App
+### Update Managed App {#updatemanagedapp}
 
 Update an App object.
 
 | Input                        | Comments                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | Default |
 | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------- |
-| Connection                   |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |         |
+| Connection                   | The Microsoft Intune connection to use.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |         |
 | Mobile App ID                | The ID of the app to update.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |         |
 | OData App Type               | The type of app to update. This depends on the platform of the app. Check the Microsoft Graph API documentation for the correct type. Documentation for an Office Suite app can be found here https://learn.microsoft.com/en-us/graph/api/intune-apps-officesuiteapp-update?view=graph-rest-beta                                                                                                                                                                                                                                     |         |
 | Display Name                 | Update the name for the app. This name will be visible in the Intune apps list and to users in the Company Portal.​                                                                                                                                                                                                                                                                                                                                                                                                                  |         |
@@ -704,38 +736,38 @@ Update an App object.
 | Notes                        | Update any notes about the app. This information will be visible to people signed into the admin center.​                                                                                                                                                                                                                                                                                                                                                                                                                            |         |
 | Specific Platform Properties | The specific properties for the app to be updated, generic properties like '@odata.type', 'displayName', 'description', etc. are alredy covered by the other inputs. This input should be a JSON object with the specific properties for the app to be updated. Check the Microsoft Graph API documentation for the correct properties for the app type you are updating. Documentation for an Office Suite app can be found here https://learn.microsoft.com/en-us/graph/api/intune-apps-officesuiteapp-update?view=graph-rest-beta |         |
 
-### Update Managed Device
+### Update Managed Device {#updatemanageddevice}
 
 Update the properties of a Managed Device object.
 
 | Input               | Comments                                                                                                                                           | Default |
 | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
-| Connection          |                                                                                                                                                    |         |
-| Managed Device Id   | Unique Identifier for the device to update.                                                                                                        |         |
-| Managed Device Name | Update the automatically generated name to identify a device.                                                                                      |         |
-| Notes               | Updated notes for the device. Intended to be used for additional information about the device.                                                     |         |
+| Connection          | The Microsoft Intune connection to use.                                                                                                            |         |
+| Managed Device Id   | Unique identifier for the managed device to update (UUID format).                                                                                  |         |
+| Managed Device Name | Update the device name to make it easier to identify.                                                                                              |         |
+| Notes               | Additional notes about the device for documentation purposes.                                                                                      |         |
 | Extra Fields        | Additional fields to update on the device. This is an object that can contain any additional fields that might not be covered by the other inputs. |         |
 
-### Update Mobile App Assignment
+### Update Mobile App Assignment {#updatemobileappassignment}
 
 Update a mobile app assignment.
 
 | Input                    | Comments                                                                                                                                                                                                                                                                                                                                                                                 | Default |
 | ------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
-| Connection               |                                                                                                                                                                                                                                                                                                                                                                                          |         |
+| Connection               | The Microsoft Intune connection to use.                                                                                                                                                                                                                                                                                                                                                  |         |
 | Mobile App Id            | The ID of the mobile app to update the assignment from.                                                                                                                                                                                                                                                                                                                                  |         |
 | Mobile App Assignment Id | The ID of the mobile app assignment to update.                                                                                                                                                                                                                                                                                                                                           |         |
 | Intent                   | The intent of the assignment for the managed app. A 'Required' option will force the app to be installed on the device. An 'Available' option will make the app available for the user to install. An 'Uninstall' option will remove the app from the device. An 'Available Without Enrollment' option will make the app available for the user to install without enrolling the device. |         |
-| Target                   | The mobile app assignment target                                                                                                                                                                                                                                                                                                                                                         |         |
-| Settings                 | The mobile app assignment settings                                                                                                                                                                                                                                                                                                                                                       |         |
+| Target                   | The mobile app assignment target type. Common values include allLicensedUsersAssignmentTarget, groupAssignmentTarget, allDevicesAssignmentTarget.                                                                                                                                                                                                                                        |         |
+| Settings                 | The mobile app assignment settings type. The value depends on the app platform (e.g., windowsUniversalAppXAppAssignmentSettings, iosLobAppAssignmentSettings).                                                                                                                                                                                                                           |         |
 
-### Update Software Update Status Summary
+### Update Software Update Status Summary {#updatesoftwareupdatestatussummary}
 
 Update the status summary of a software update.
 
 | Input                       | Comments                                                                    | Default |
 | --------------------------- | --------------------------------------------------------------------------- | ------- |
-| Connection                  |                                                                             |         |
+| Connection                  | The Microsoft Intune connection to use.                                     |         |
 | Display Name                | The display name of the software update status summary.                     |         |
 | Compliant Device Count      | The number of devices that are compliant with the software update.          |         |
 | Non-Compliant Device Count  | The number of devices that are not compliant with the software update.      |         |
@@ -752,39 +784,39 @@ Update the status summary of a software update.
 | Conflict User Count         | The number of users that have a conflict with the software update.          |         |
 | Not Applicable User Count   | The number of users that are not applicable for the software update.        |         |
 
-### Update Subscription
+### Update Subscription {#updatesubscription}
 
 Update a single subscription.
 
-| Input                | Comments                                                                                                                                                                                   | Default |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------- |
-| Connection           |                                                                                                                                                                                            |         |
-| Subscription ID      | The ID of the subscription to update.                                                                                                                                                      |         |
-| Notification URL     | The URL to send notifications to.                                                                                                                                                          |         |
-| Expiration Date Time | Specifies the date and time when the webhook subscription expires. The time is in UTC, and can be an amount of time from subscription creation that varies for the resource subscribed to. |         |
+| Input                | Comments                                                                                                                                                                                                         | Default |
+| -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
+| Connection           | The Microsoft Intune connection to use.                                                                                                                                                                          |         |
+| Subscription ID      | The ID of the subscription to update.                                                                                                                                                                            |         |
+| Notification URL     | The URL endpoint that will receive webhook notifications when changes occur.                                                                                                                                     |         |
+| Expiration Date Time | The date and time when the webhook subscription expires in UTC format (ISO 8601). The maximum duration varies by resource type. [Learn more](https://learn.microsoft.com/en-us/graph/api/resources/subscription) |         |
 
-### Update User
+### Update User {#updateuser}
 
 Update the properties of a User object.
 
 | Input                 | Comments                                                                                                                                                                                                                                                                                                                         | Default |
 | --------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
-| Connection            |                                                                                                                                                                                                                                                                                                                                  |         |
-| User Id               | Unique Identifier for the user to update. This can be the user's id or userPrincipalName.                                                                                                                                                                                                                                        |         |
-| Account Enabled       | Indicates if the account is enabled.                                                                                                                                                                                                                                                                                             | true    |
+| Connection            | The Microsoft Intune connection to use.                                                                                                                                                                                                                                                                                          |         |
+| User Id               | Unique identifier for the user to update. This can be the user's ID (UUID format) or userPrincipalName (email format).                                                                                                                                                                                                           |         |
+| Account Enabled       | When true, enables the user account. When false, the account is disabled and the user cannot sign in.                                                                                                                                                                                                                            | true    |
 | Display Name          | The display name of the user.                                                                                                                                                                                                                                                                                                    |         |
-| User Principal Name   | The updated user principal name of the user. Required if 'Domain' input is provided.                                                                                                                                                                                                                                             |         |
-| Domain                | The updated domain for the user, this must be an existing domain in the tenant, you can list them using the 'List Domains' action. Required if 'User Principal Name' input is provided.                                                                                                                                          |         |
+| User Principal Name   | The updated user principal name (username) for the user. This will be combined with the domain to create the full user principal name. Required if 'Domain' input is provided.                                                                                                                                                   |         |
+| Domain                | The updated domain for the user. This must be an existing verified domain in your tenant. Use the 'List Domains' action to retrieve available domains. Required if 'User Principal Name' input is provided.                                                                                                                      |         |
 | First Name            | The updated first name of the user.                                                                                                                                                                                                                                                                                              |         |
 | Last Name             | The updated last name of the user.                                                                                                                                                                                                                                                                                               |         |
 | Job Title             | The updated job title of the user.                                                                                                                                                                                                                                                                                               |         |
 | Additional Properties | Additional properties to update that are not covered by the other inputs. This should be a JSON object and will be merged with the other inputs. You can get additional properties from the Microsoft Graph API documentation https://learn.microsoft.com/en-us/graph/api/resources/user?view=graph-rest-1.0#json-representation |         |
 
-### Wipe Device
+### Wipe Device {#wipedevice}
 
 Remotely wipe a compromised or lost device.
 
 | Input             | Comments                                  | Default |
 | ----------------- | ----------------------------------------- | ------- |
-| Connection        |                                           |         |
+| Connection        | The Microsoft Intune connection to use.   |         |
 | Managed Device Id | Unique Identifier for the device to wipe. |         |

@@ -9,7 +9,7 @@ Easily manage your customers, orders, and products in your WooCommerce platform
 
 ## Connections
 
-### WooCommerce Basic Auth
+### WooCommerce Basic Auth {#basic}
 
 Authenticate requests to Woo Commerce with values obtained from your wordpress site.
 
@@ -35,7 +35,7 @@ For additional information regarding authentication, please refer to the [WooCom
 
 ## Actions
 
-### Create Customer
+### Create Customer {#createcustomer}
 
 Create a new customer record
 
@@ -62,7 +62,7 @@ Create a new customer record
 | Shipping Postal Code | Provide a string value for the postal code of the billing address.                      |         |
 | Optional Values      | For each item, provide an optional key value pair to be injected into the request body. |         |
 
-### Create Order
+### Create Order {#createorder}
 
 Create a new order record
 
@@ -92,7 +92,7 @@ Create a new order record
 | Shipping Postal Code | Provide a string value for the postal code of the billing address.                      |         |
 | Optional Values      | For each item, provide an optional key value pair to be injected into the request body. |         |
 
-### Create Product
+### Create Product {#createproduct}
 
 Create a new product record
 
@@ -108,7 +108,7 @@ Create a new product record
 | Images          | For each item, provide a link to the image stored in your media library                 |         |
 | Optional Values | For each item, provide an optional key value pair to be injected into the request body. |         |
 
-### Create Product Category
+### Create Product Category {#createproductcategory}
 
 Create a new product category record
 
@@ -119,7 +119,7 @@ Create a new product category record
 | Image Link    | Provide a link to an image to represent your category. |         |
 | Description   | Provide a description for the product.                 |         |
 
-### Create Refund
+### Create Refund {#createrefund}
 
 Create a refund on an existing order
 
@@ -130,7 +130,7 @@ Create a refund on an existing order
 | Refund Amount | Provide a value for the refund amount.                                       |         |
 | Line Items    | Provide a JSON array, with objects each specifying details of the line item. |         |
 
-### Delete Customer
+### Delete Customer {#deletecustomer}
 
 Delete the information and metadata of the given user
 
@@ -139,7 +139,7 @@ Delete the information and metadata of the given user
 | Connection | The connection to be used.                                                       |         |
 | Customer   | Provide a unique identifier for the desired customer. This value should be an id |         |
 
-### Delete Order
+### Delete Order {#deleteorder}
 
 Delete the information and metadata of an order
 
@@ -148,7 +148,7 @@ Delete the information and metadata of an order
 | Connection | The connection to be used.                  |         |
 | Order Id   | Provide the unique identifier of the order. |         |
 
-### Delete Product
+### Delete Product {#deleteproduct}
 
 Delete the information and metadata of a given product
 
@@ -157,7 +157,7 @@ Delete the information and metadata of a given product
 | Connection | The connection to be used.                        |         |
 | Product Id | Provide a unique identifier of the given product. |         |
 
-### Delete Product Category
+### Delete Product Category {#deleteproductcategory}
 
 Delete Product Category
 
@@ -166,7 +166,7 @@ Delete Product Category
 | Connection  | The connection to be used.                           |         |
 | Category Id | Provide a unique identifier of an existing category. |         |
 
-### Delete Refund
+### Delete Refund {#deleterefund}
 
 Delete the information and metadata of a refund
 
@@ -176,7 +176,7 @@ Delete the information and metadata of a refund
 | Order Id   | Provide the unique identifier of the order.        |         |
 | Refund Id  | Provide a unique identifier of an existing refund. |         |
 
-### Get Coupon Totals Report
+### Get Coupon Totals Report {#getcoupontotalsreport}
 
 Returns the information and metadata of a Coupon Totals Report
 
@@ -187,7 +187,7 @@ Returns the information and metadata of a Coupon Totals Report
 | Start Date | Return sales for a specific start date, the date need to be in the YYYY-MM-DD format. |         |
 | End Date   | Return sales for a specific end date, the date need to be in the YYYY-MM-DD format.   |         |
 
-### Get Customer
+### Get Customer {#getcustomer}
 
 Returns the information and metadata of the given user
 
@@ -196,7 +196,7 @@ Returns the information and metadata of the given user
 | Connection | The connection to be used.                                                       |         |
 | Customer   | Provide a unique identifier for the desired customer. This value should be an id |         |
 
-### Get Customer Totals Report
+### Get Customer Totals Report {#getcustomertotalsreport}
 
 Returns the information and metadata of a Customer Totals Report
 
@@ -207,7 +207,7 @@ Returns the information and metadata of a Customer Totals Report
 | End Date   | Return sales for a specific end date, the date need to be in the YYYY-MM-DD format.   |         |
 | Start Date | Return sales for a specific start date, the date need to be in the YYYY-MM-DD format. |         |
 
-### Get Order
+### Get Order {#getorder}
 
 Returns the information and metadata of an order
 
@@ -216,7 +216,7 @@ Returns the information and metadata of an order
 | Connection | The connection to be used.                  |         |
 | Order Id   | Provide the unique identifier of the order. |         |
 
-### Get Order Totals Report
+### Get Order Totals Report {#getordertotalsreport}
 
 Returns the information and metadata of a Order Totals Report
 
@@ -224,7 +224,7 @@ Returns the information and metadata of a Order Totals Report
 | ---------- | -------------------------- | ------- |
 | Connection | The connection to be used. |         |
 
-### Get Product
+### Get Product {#getproduct}
 
 Returns the information and metadata of a given product
 
@@ -233,7 +233,7 @@ Returns the information and metadata of a given product
 | Connection | The connection to be used.                        |         |
 | Product Id | Provide a unique identifier of the given product. |         |
 
-### Get Product Category
+### Get Product Category {#getproductcategory}
 
 Returns the information and metadata of the product category
 
@@ -242,7 +242,7 @@ Returns the information and metadata of the product category
 | Connection  | The connection to be used.                           |         |
 | Category Id | Provide a unique identifier of an existing category. |         |
 
-### Get Product Totals Report
+### Get Product Totals Report {#getproducttotalsreport}
 
 Returns the information and metadata of a Product Totals Report
 
@@ -250,7 +250,7 @@ Returns the information and metadata of a Product Totals Report
 | ---------- | -------------------------- | ------- |
 | Connection | The connection to be used. |         |
 
-### Get Refund
+### Get Refund {#getrefund}
 
 Returns the information and metadata of a refund
 
@@ -260,7 +260,7 @@ Returns the information and metadata of a refund
 | Order Id   | Provide the unique identifier of the order.        |         |
 | Refund Id  | Provide a unique identifier of an existing refund. |         |
 
-### Get Review Totals Report
+### Get Review Totals Report {#getreviewtotalsreport}
 
 Returns the information and metadata of a Review Totals Report
 
@@ -268,7 +268,7 @@ Returns the information and metadata of a Review Totals Report
 | ---------- | -------------------------- | ------- |
 | Connection | The connection to be used. |         |
 
-### Get Sales Report
+### Get Sales Report {#getsalesreport}
 
 Returns the information and metadata of a Sales Report
 
@@ -279,7 +279,7 @@ Returns the information and metadata of a Sales Report
 | Start Date | Return sales for a specific start date, the date need to be in the YYYY-MM-DD format. |         |
 | End Date   | Return sales for a specific end date, the date need to be in the YYYY-MM-DD format.   |         |
 
-### Get Top Sellers Report
+### Get Top Sellers Report {#gettopsellersreport}
 
 Returns the information and metadata of a Sales Report
 
@@ -290,7 +290,7 @@ Returns the information and metadata of a Sales Report
 | Start Date | Return sales for a specific start date, the date need to be in the YYYY-MM-DD format. |         |
 | End Date   | Return sales for a specific end date, the date need to be in the YYYY-MM-DD format.   |         |
 
-### List Customers
+### List Customers {#listcustomers}
 
 Returns a list of all active customers
 
@@ -306,7 +306,7 @@ Returns a list of all active customers
 | After            | Limit response to resources published after a given ISO8601 compliant date.  |         |
 | Extra Parameters | Extra parameters to be passed to the request.                                |         |
 
-### List Orders
+### List Orders {#listorders}
 
 Returns a list of all orders
 
@@ -322,7 +322,7 @@ Returns a list of all orders
 | Extra Parameters | Extra parameters to be passed to the request.                                |         |
 | Fetch All        | If true, all pages will be fetched.                                          | false   |
 
-### List Product Categories
+### List Product Categories {#listproductcategories}
 
 Returns a list of all product categories
 
@@ -338,7 +338,7 @@ Returns a list of all product categories
 | After            | Limit response to resources published after a given ISO8601 compliant date.  |         |
 | Extra Parameters | Extra parameters to be passed to the request.                                |         |
 
-### List Products
+### List Products {#listproducts}
 
 Returns a list of all active products
 
@@ -354,7 +354,7 @@ Returns a list of all active products
 | Extra Parameters | Extra parameters to be passed to the request.                                |         |
 | Fetch All        | If true, all pages will be fetched.                                          | false   |
 
-### List Refunds
+### List Refunds {#listrefunds}
 
 Returns a list of all refunds on an existing order
 
@@ -371,7 +371,7 @@ Returns a list of all refunds on an existing order
 | Extra Parameters | Extra parameters to be passed to the request.                                |         |
 | Fetch All        | If true, all pages will be fetched.                                          | false   |
 
-### List Reports
+### List Reports {#listreports}
 
 Returns a list of all reports
 
@@ -387,7 +387,7 @@ Returns a list of all reports
 | Search           | Search for a specific string.                                                |         |
 | Extra Parameters | Extra parameters to be passed to the request.                                |         |
 
-### Raw Request
+### Raw Request {#rawrequest}
 
 Send raw HTTP request to WooCommerce
 
@@ -410,7 +410,7 @@ Send raw HTTP request to WooCommerce
 | Max Retry Count         | The maximum number of retries to attempt. Specify 0 for no retries.                                                                                                                                                       | 0       |
 | Use Exponential Backoff | Specifies whether to use a pre-defined exponential backoff strategy for retries. When enabled, 'Retry Delay (ms)' is ignored.                                                                                             | false   |
 
-### Update Customer
+### Update Customer {#updatecustomer}
 
 Update an existing customer record
 
@@ -437,7 +437,7 @@ Update an existing customer record
 | Shipping Country     | Provide a string value for the country of the billing address.                   |         |
 | Shipping Postal Code | Provide a string value for the postal code of the billing address.               |         |
 
-### Update Product
+### Update Product {#updateproduct}
 
 Create a new product record
 

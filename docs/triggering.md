@@ -33,7 +33,7 @@ You can then select the frequency of the trigger, such as "every 5 minutes", "ev
 ## App event triggers
 
 App event triggers run when data changes in a third-party application.
-For example, you may want to be notified when an [Asana Project](./connectors/asana.md#workspace-projects-trigger) is created, updated, or deleted, or when a [PagerDuty Incident](./connectors/pagerduty.md#incidents-trigger) occurs.
+For example, you may want to be notified when an [Asana Project](./connectors/asana.md#workspaceprojectstrigger) is created, updated, or deleted, or when a [PagerDuty Incident](./connectors/pagerduty.md#incidentstrigger) occurs.
 
 If the connector you're working with does not have a built-in app event trigger, you can use the [universal webhook trigger](#universal-webhook-triggers) to receive event notifications from a third-party application, or the [schedule trigger](#schedule-triggers) to periodically check for updates from the third party.
 
@@ -137,7 +137,7 @@ curl \
 
 - The request body - `{"Payload Key 1":"Payload Value 1","Do Thing?":true,"quantity":123}` - is parsed (if JSON) and is accessible to the %WORKFLOW% by referencing the trigger's `results.body.data.KEY-NAME`. Non-JSON payloads (like XML, images, etc.) are accessible through `results.rawBody` and can be parsed in subsequent steps that handle that type of data.
 - The request headers are accessible through the trigger's `results.headers.HEADER-NAME`.
-- The URL path - `my/custom/path` - is accessible through the trigger's `results.pathFragment`. You can pass that data into the built-in [split string](./connectors/text-manipulation.md#split-string) action and split on the `/` character to split the URL path into an array `['my','custom','path']`.
+- The URL path - `my/custom/path` - is accessible through the trigger's `results.pathFragment`. You can pass that data into the built-in [split string](./connectors/text-manipulation.md#split) action and split on the `/` character to split the URL path into an array `['my','custom','path']`.
 - The URL parameters - `?param-one=ParamValueOne&param-two=ParamValueTwo` are parsed and accessible through the trigger's `results.queryParameters.PARAMETER-NAME`.
 
 ![Webhook request payload example](./assets/triggering/http-request.png)
@@ -177,7 +177,7 @@ The first name in this example is accessible by referencing the trigger's `resul
 ### Webhook security
 
 Webhooks are often secured using Hashed Message Authentication Codes (HMAC) to ensure that the request is coming from an expected source.
-You can use the [Hash](./connectors/hash.md#hmac-webhook-trigger) connector's HMAC trigger to implement HMAC security for your webhook requests.
+You can use the [Hash](./connectors/hash.md#hmacwebhooktrigger) connector's HMAC trigger to implement HMAC security for your webhook requests.
 This trigger will reject any request that is not properly signed with the expected HMAC signature.
 
 ### Synchronous and asynchronous invocations
@@ -216,7 +216,7 @@ If you would like to provide a different HTTP status code in response to a webho
 
    You can also provide a static text response body and response headers within the universal webhook trigger configuration drawer.
 
-2. To provide a dynamic HTTP response dependent on the request, write custom JavaScript code using a [Code Block Trigger](./connectors/code.md#code-block-trigger).
+2. To provide a dynamic HTTP response dependent on the request, write custom JavaScript code using a [Code Block Trigger](./connectors/code.md#runcodetrigger).
 
    ```javascript title="Custom JavaScript code for a trigger"
    module.exports = async ({ logger, configVars }, payload) => {
@@ -248,7 +248,7 @@ If you would like to provide a different HTTP status code in response to a webho
 When a %WORKFLOW% is invoked **synchronously**, the external application waits for the %WORKFLOW% to finish running before receiving a response.
 The response will contain the results of the _last step_ of the %WORKFLOW%, usually in the form of a JSON object.
 
-If you would like to return a custom HTTP status code, response body, or response headers, you can do so by using a [Code Block](./connectors/code.md#code-block) step at the end of your %WORKFLOW%.
+If you would like to return a custom HTTP status code, response body, or response headers, you can do so by using a [Code Block](./connectors/code.md#runcode) step at the end of your %WORKFLOW%.
 
 ```javascript
 module.exports = async (context, stepResults) => {

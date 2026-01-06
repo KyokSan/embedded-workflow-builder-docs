@@ -9,7 +9,7 @@ Manage sheets, rows, and workspaces in the Smartsheet platform
 
 ## Connections
 
-### API Key
+### API Key {#apikey}
 
 Authenticate requests to Smartsheet using an API Key
 
@@ -21,7 +21,7 @@ Information about getting started and creating API keys with [Smartsheet](https:
 | Base URL | Most applications use Smartsheet commercial, but you can choose to use a government endpoint if your customers are government entities. | https://api.smartsheet.com/2.0/ |
 | API Key  | Provide a string value for the API Key.                                                                                                 |                                 |
 
-### OAuth 2.0
+### OAuth 2.0 {#templatedoauth}
 
 Authenticate requests to Smartsheet using OAuth 2.0.
 
@@ -52,7 +52,7 @@ Read about how OAuth 2.0 works [here](../oauth2.md).
 | App client id | This is generated when you create an app within Smartsheet's 'Developer Tools'                                                                                                                             |                                                                                                                                                                                                                                   |
 | App secret    | This is generated when you create an app within Smartsheet's 'Developer Tools'                                                                                                                             |                                                                                                                                                                                                                                   |
 
-### OAuth 2.0 (Deprecated)
+### OAuth 2.0 (Deprecated) {#smartsheet oauth2}
 
 Authenticate requests to Smartsheet using OAuth 2.0. Please replace this with the latest OAuth 2.0 connection.
 
@@ -86,13 +86,13 @@ Read about how OAuth 2.0 works [here](../oauth2.md).
 
 ## Triggers
 
-### Webhook
+### Webhook {#smartsheetwebhook}
 
 Receive and validate webhook requests from Smartsheet for webhooks you configure.
 
 ## Actions
 
-### Add Column to Sheet
+### Add Column to Sheet {#columnsaddtosheet}
 
 Add column to sheet
 
@@ -111,7 +111,7 @@ Add column to sheet
 | Validation     | Indicates whether validation has been enabled for the column | false   |
 | Width          | Display width of the column in pixels                        |         |
 
-### Add Comment
+### Add Comment {#commentscreate}
 
 Add a comment to a discussion
 
@@ -122,7 +122,7 @@ Add a comment to a discussion
 | Discussion ID |          |         |
 | Text          |          |         |
 
-### Add/Update Row
+### Add/Update Row {#rowsaddtosheet}
 
 Add or update a row on a sheet
 
@@ -137,7 +137,7 @@ Add or update a row on a sheet
 | Allow Partial Success       | When specified with a value of true, enables partial success for this bulk operation                                                          | false    |
 | Override Validation         | You may use the query string parameter **overrideValidation** with a value of **true** to allow a cell value outside of the validation limits | false    |
 
-### Copy Rows
+### Copy Rows {#copyrows}
 
 Copy Rows to Another Sheet
 
@@ -148,7 +148,7 @@ Copy Rows to Another Sheet
 | Row Ids              | The IDs of the rows to move or copy from the source sheet |         |
 | Destination Sheet ID |                                                           |         |
 
-### Copy Sheet
+### Copy Sheet {#copysheet}
 
 Copy Sheet
 
@@ -160,7 +160,7 @@ Copy Sheet
 | Destination Type | Type of the destination container                                                | home    |
 | New Name         | Name of the new copy                                                             |         |
 
-### Create Discussion
+### Create Discussion {#discussionscreate}
 
 Create a discussion in a sheet or on a row
 
@@ -171,7 +171,7 @@ Create a discussion in a sheet or on a row
 | Row ID (Optional) |          |         |
 | Comment           | Comment  |         |
 
-### Create Folder
+### Create Folder {#createfolder}
 
 Create Folder
 
@@ -182,7 +182,7 @@ Create Folder
 | Workspace ID (Optional) | Create in this workspace. Optional.                                                                      |         |
 | Folder Name             |                                                                                                          |         |
 
-### Create Sheet
+### Create Sheet {#createsheet}
 
 Create a new sheet
 
@@ -194,7 +194,7 @@ Create a new sheet
 | Sheet Name              |                                                                                                                       |                                                                                                                                                                                                                        |
 | Columns                 | See https://smartsheet-platform.github.io/api-docs/?shell#column-types for additional information about column types. | <code>[<br /> {<br /> "title": "Favorite",<br /> "type": "CHECKBOX",<br /> "symbol": "STAR"<br /> },<br /> {<br /> "title": "Primary Column",<br /> "primary": true,<br /> "type": "TEXT_NUMBER"<br /> }<br />]</code> |
 
-### Create Webhook
+### Create Webhook {#createwebhook}
 
 Create and enable a webhook
 
@@ -206,7 +206,7 @@ Create and enable a webhook
 | Sheet ID          |                                                                                                                                                                                                                       |         |
 | Allow Duplicates? | By default this action checks if a webhook with this callback and sheet ID already exists. If it does, this action does not configure a new webhook. Toggle this to true to allow the creation of duplicate webhooks. | false   |
 
-### Create Workspace
+### Create Workspace {#createworkspace}
 
 Create Workspace
 
@@ -215,7 +215,7 @@ Create Workspace
 | Connection     |          |         |
 | Workspace Name |          |         |
 
-### Delete Column
+### Delete Column {#columndelete}
 
 Delete column from a sheet
 
@@ -225,7 +225,7 @@ Delete column from a sheet
 | Sheet ID   |          |         |
 | Column ID  |          |         |
 
-### Delete Comment
+### Delete Comment {#commentdelete}
 
 Delete a comment by ID
 
@@ -235,7 +235,7 @@ Delete a comment by ID
 | Sheet ID   |          |         |
 | Comment ID |          |         |
 
-### Delete Discussion
+### Delete Discussion {#discussiondelete}
 
 Delete a discussion from a sheet or row
 
@@ -245,7 +245,7 @@ Delete a discussion from a sheet or row
 | Sheet ID      |          |         |
 | Discussion ID |          |         |
 
-### Delete Folder
+### Delete Folder {#deletefolder}
 
 Delete Folder
 
@@ -254,7 +254,7 @@ Delete Folder
 | Connection |                                                                                      |         |
 | Folder ID  | Folder ID where you can create sheets, sights, reports, templates, and other folders |         |
 
-### Delete Instance Webhooks
+### Delete Instance Webhooks {#deleteinstancewebhooks}
 
 Delete all Smartsheet webhooks that point to a flow in this instance
 
@@ -262,7 +262,7 @@ Delete all Smartsheet webhooks that point to a flow in this instance
 | ---------- | -------- | ------- |
 | Connection |          |         |
 
-### Delete Row
+### Delete Row {#deleterow}
 
 Delete Row
 
@@ -272,7 +272,7 @@ Delete Row
 | Sheet ID   |          |         |
 | Row ID     |          |         |
 
-### Delete Sheet
+### Delete Sheet {#deletesheet}
 
 Delete Sheet
 
@@ -281,7 +281,7 @@ Delete Sheet
 | Connection |          |         |
 | Sheet ID   |          |         |
 
-### Delete Webhook
+### Delete Webhook {#deletewebhook}
 
 Delete webhook
 
@@ -290,7 +290,7 @@ Delete webhook
 | Connection |          |         |
 | Webhook ID |          |         |
 
-### Delete Workspace
+### Delete Workspace {#deleteworkspace}
 
 Delete Workspace
 
@@ -299,7 +299,7 @@ Delete Workspace
 | Connection   |          |         |
 | Workspace ID |          |         |
 
-### Edit Comment
+### Edit Comment {#commentedit}
 
 Edit a comment by ID
 
@@ -310,7 +310,7 @@ Edit a comment by ID
 | Comment ID |          |         |
 | Text       |          |         |
 
-### Get column
+### Get column {#columnget}
 
 Get Column by ID
 
@@ -320,7 +320,7 @@ Get Column by ID
 | Sheet ID   |          |         |
 | Column ID  |          |         |
 
-### Get Comment
+### Get Comment {#commentget}
 
 Get a comment by ID
 
@@ -330,7 +330,7 @@ Get a comment by ID
 | Sheet ID   |          |         |
 | Comment ID |          |         |
 
-### Get Contact
+### Get Contact {#getcontact}
 
 Get Contact
 
@@ -339,7 +339,7 @@ Get Contact
 | Connection |                                         |         |
 | Contact ID | contactId of the contact being accessed |         |
 
-### Get Discussion
+### Get Discussion {#discussionget}
 
 Get discussion by ID
 
@@ -349,7 +349,7 @@ Get discussion by ID
 | Sheet ID      |          |         |
 | Discussion ID |          |         |
 
-### Get Folder
+### Get Folder {#getfolder}
 
 Get Folder
 
@@ -358,7 +358,7 @@ Get Folder
 | Connection |                                                                                      |         |
 | Folder ID  | Folder ID where you can create sheets, sights, reports, templates, and other folders |         |
 
-### Get Group
+### Get Group {#getgroup}
 
 Get Group
 
@@ -367,7 +367,7 @@ Get Group
 | Connection |          |         |
 | Group ID   |          |         |
 
-### Get Report
+### Get Report {#getreport}
 
 Get report including one page of rows, attachments, discussions and source sheets
 
@@ -378,7 +378,7 @@ Get report including one page of rows, attachments, discussions and source sheet
 | Pagination Page Size | The maximum number of items to return per page | 100     |
 | Pagination Page      | Which page to return                           | 1       |
 
-### Get Reports
+### Get Reports {#getreports}
 
 Get Reports
 
@@ -387,7 +387,7 @@ Get Reports
 | Connection     |                                                                                                                                         |         |
 | Modified Since | When specified with a date and time value, response only includes the objects that are modified on or after the date and time specified |         |
 
-### Get Row
+### Get Row {#rowget}
 
 Get the contents of a row by ID
 
@@ -397,7 +397,7 @@ Get the contents of a row by ID
 | Sheet ID   |          |         |
 | Row ID     |          |         |
 
-### Get Sheet
+### Get Sheet {#getsheet}
 
 Get sheet by sheet ID
 
@@ -408,7 +408,7 @@ Get sheet by sheet ID
 | Pagination Page Size | The maximum number of items to return per page | 100     |
 | Pagination Page      | Which page to return                           | 1       |
 
-### Get Sheet Attachment
+### Get Sheet Attachment {#attachmentsget}
 
 Get metadata about an attachment on a sheet
 
@@ -418,7 +418,7 @@ Get metadata about an attachment on a sheet
 | Sheet ID      |          |         |
 | Attachment ID |          |         |
 
-### Get Sheet Publish Status
+### Get Sheet Publish Status {#getsheetpublish}
 
 Get Sheet Publish Status
 
@@ -427,7 +427,7 @@ Get Sheet Publish Status
 | Connection |          |         |
 | Sheet ID   |          |         |
 
-### Get Sheet Version
+### Get Sheet Version {#getsheetversion}
 
 Get Sheet Version
 
@@ -436,7 +436,7 @@ Get Sheet Version
 | Connection |          |         |
 | Sheet ID   |          |         |
 
-### Get User
+### Get User {#getuser}
 
 Get User
 
@@ -445,7 +445,7 @@ Get User
 | Connection |                                                                       |         |
 | User ID    | The ID of a user to fetch. Enter 'me' to get currently logged in user |         |
 
-### Get Webhook
+### Get Webhook {#getwebhook}
 
 Get webhook by ID
 
@@ -454,7 +454,7 @@ Get webhook by ID
 | Connection |          |         |
 | Webhook ID |          |         |
 
-### Get Workspace
+### Get Workspace {#getworkspace}
 
 Get Workspace
 
@@ -464,7 +464,7 @@ Get Workspace
 | Workspace ID |                                   |         |
 | Load All     | Set to true to see nested folders | false   |
 
-### List Attachments on Row
+### List Attachments on Row {#attachmentslistonrow}
 
 List attachments on a row of a sheet
 
@@ -477,7 +477,7 @@ List attachments on a row of a sheet
 | Pagination Page Size | The maximum number of items to return per page | 100     |
 | Fetch All            | Turn on to fetch all results using pagination  | true    |
 
-### List Attachments on Sheet
+### List Attachments on Sheet {#attachmentslistonsheet}
 
 List attachments on a sheet
 
@@ -489,7 +489,7 @@ List attachments on a sheet
 | Pagination Page Size | The maximum number of items to return per page | 100     |
 | Fetch All            | Turn on to fetch all results using pagination  | true    |
 
-### List Columns
+### List Columns {#columnslistonsheet}
 
 List the columns of a sheet
 
@@ -501,7 +501,7 @@ List the columns of a sheet
 | Pagination Page Size | The maximum number of items to return per page | 100     |
 | Fetch All            | Turn on to fetch all results using pagination  | true    |
 
-### List Contacts
+### List Contacts {#listcontacts}
 
 List Contacts
 
@@ -512,7 +512,7 @@ List Contacts
 | Pagination Page      | Which page to return                           | 1       |
 | Pagination Page Size | The maximum number of items to return per page | 100     |
 
-### List Discussion Attachments
+### List Discussion Attachments {#discussionlistattachments}
 
 List Discussion Attachments
 
@@ -525,7 +525,7 @@ List Discussion Attachments
 | Pagination Page Size | The maximum number of items to return per page | 100     |
 | Fetch All            | Turn on to fetch all results using pagination  | true    |
 
-### List Discussions
+### List Discussions {#discussionslist}
 
 List discussions on a sheet or row
 
@@ -538,7 +538,7 @@ List discussions on a sheet or row
 | Pagination Page Size | The maximum number of items to return per page | 100     |
 | Fetch All            | Turn on to fetch all results using pagination  | true    |
 
-### List Events
+### List Events {#listevents}
 
 Gets events that are occurring in your Smartsheet organization account
 
@@ -549,7 +549,7 @@ Gets events that are occurring in your Smartsheet organization account
 | Stream Position | Indicates next set of events to return                      |                      |
 | Max Count       | Maximum number of events to return as response to this call | 1000                 |
 
-### List Favorites
+### List Favorites {#getfavorites}
 
 List Favorites
 
@@ -560,7 +560,7 @@ List Favorites
 | Pagination Page      | Which page to return                           | 1       |
 | Pagination Page Size | The maximum number of items to return per page | 100     |
 
-### List Folders
+### List Folders {#listfolders}
 
 List folders, subfolders or workspace folders
 
@@ -573,7 +573,7 @@ List folders, subfolders or workspace folders
 | Pagination Page         | Which page to return                                                                            | 1       |
 | Pagination Page Size    | The maximum number of items to return per page                                                  | 100     |
 
-### List Groups
+### List Groups {#listgroups}
 
 List Org Groups
 
@@ -585,7 +585,7 @@ List Org Groups
 | Pagination Page      | Which page to return                                                                                                                    | 1       |
 | Pagination Page Size | The maximum number of items to return per page                                                                                          | 100     |
 
-### List Home Contents
+### List Home Contents {#listhomecontents}
 
 Get a nested list of all Home objects, including dashboards, folders, reports, sheets, templates, and workspaces, as shown on the "Home" tab.
 
@@ -593,7 +593,7 @@ Get a nested list of all Home objects, including dashboards, folders, reports, s
 | ---------- | -------- | ------- |
 | Connection |          |         |
 
-### List Sheets
+### List Sheets {#listsheets}
 
 List Sheets
 
@@ -605,7 +605,7 @@ List Sheets
 | Pagination Page      | Which page to return                                                                                                                    | 1       |
 | Pagination Page Size | The maximum number of items to return per page                                                                                          | 100     |
 
-### List Users
+### List Users {#listusers}
 
 List Users
 
@@ -618,7 +618,7 @@ List Users
 | Pagination Page      | Which page to return                                                                                                                    | 1       |
 | Pagination Page Size | The maximum number of items to return per page                                                                                          | 100     |
 
-### List Webhooks
+### List Webhooks {#listwebhooks}
 
 List Webhooks
 
@@ -627,7 +627,7 @@ List Webhooks
 | Connection |                                                                                                                                                                                    |         |
 | Show All   | By default only webhooks whose callback URLs match a flow in the current instance are shown. Toggle this to 'true' to show all webhooks (even those for other apps and instances). | false   |
 
-### List Workspaces
+### List Workspaces {#listworkspaces}
 
 List Workspaces
 
@@ -638,7 +638,7 @@ List Workspaces
 | Pagination Page      | Which page to return                           | 1       |
 | Pagination Page Size | The maximum number of items to return per page | 100     |
 
-### Move Folder
+### Move Folder {#movefolder}
 
 Move Folder
 
@@ -648,7 +648,7 @@ Move Folder
 | Folder ID             | Folder ID where you can create sheets, sights, reports, templates, and other folders |         |
 | Destination Folder ID | Folder ID where you can create sheets, sights, reports, templates, and other folders |         |
 
-### Move Rows
+### Move Rows {#moverows}
 
 Move Rows to Another Sheet
 
@@ -659,7 +659,7 @@ Move Rows to Another Sheet
 | Row IDs              | The Ids of the rows to move or copy from the source sheet |         |
 | Destination Sheet ID |                                                           |         |
 
-### Move Sheet
+### Move Sheet {#movesheet}
 
 Move Sheet
 
@@ -670,7 +670,7 @@ Move Sheet
 | Destination ID   | The ID of the destination container (when copying or moving a sheet or a folder) |         |
 | Destination Type | Type of the destination container                                                | home    |
 
-### Raw Request
+### Raw Request {#rawrequest}
 
 Send raw HTTP request to Smartsheet
 
@@ -693,7 +693,7 @@ Send raw HTTP request to Smartsheet
 | Max Retry Count         | The maximum number of retries to attempt. Specify 0 for no retries.                                                                                                                                           | 0       |
 | Use Exponential Backoff | Specifies whether to use a pre-defined exponential backoff strategy for retries. When enabled, 'Retry Delay (ms)' is ignored.                                                                                 | false   |
 
-### Search Sheets
+### Search Sheets {#searchsheet}
 
 Search sheets for a particular phrase
 
@@ -703,7 +703,7 @@ Search sheets for a particular phrase
 | Sheet ID (Optional) | The ID of the sheet to search. Omit to search all sheets. |         |
 | Text to search for  | Text with which to perform the search                     |         |
 
-### Send Sheet
+### Send Sheet {#sheetsend}
 
 Send Sheet via Email
 
@@ -719,7 +719,7 @@ Send Sheet via Email
 | Message    | The message of the email                                    |         |
 | Subject    | The subject of the email                                    |         |
 
-### Set Sheet Publish
+### Set Sheet Publish {#setsheetpublish}
 
 Set Sheet Publish Status
 
@@ -736,7 +736,7 @@ Set Sheet Publish Status
 | Read Write Default View      | Indicates which view the user has set for a read-write, default view of the published sheet                                | CALENDAR |
 | Read Write Enabled           | If **true**,a rich version of the sheet is published with the ability to edit cells and manage attachments and discussions | true     |
 
-### Templates List
+### Templates List {#templateslist}
 
 List User-Created Templates
 
@@ -747,7 +747,7 @@ List User-Created Templates
 | Pagination Page      | Which page to return                           | 1       |
 | Pagination Page Size | The maximum number of items to return per page | 100     |
 
-### Templates List Public
+### Templates List Public {#templateslistpublic}
 
 List Public Templates
 
@@ -758,7 +758,7 @@ List Public Templates
 | Pagination Page      | Which page to return                           | 1       |
 | Pagination Page Size | The maximum number of items to return per page | 100     |
 
-### Update Folder
+### Update Folder {#updatefolder}
 
 Update folder name
 
@@ -768,7 +768,7 @@ Update folder name
 | Folder ID   | Folder ID where you can create sheets, sights, reports, templates, and other folders |         |
 | Folder Name |                                                                                      |         |
 
-### Update Sheet
+### Update Sheet {#updatesheet}
 
 Update Sheet
 
@@ -778,7 +778,7 @@ Update Sheet
 | Sheet ID   |          |         |
 | New Name   |          |         |
 
-### Update Workspace
+### Update Workspace {#updateworkspace}
 
 Update Workspace
 

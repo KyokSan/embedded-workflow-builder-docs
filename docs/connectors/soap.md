@@ -9,7 +9,7 @@ Interact with a SOAP-based API
 
 ## Connections
 
-### Basic Authentication
+### Basic Authentication {#basicauth}
 
 | Input               | Comments                                           | Default |
 | ------------------- | -------------------------------------------------- | ------- |
@@ -20,7 +20,7 @@ Interact with a SOAP-based API
 
 ## Actions
 
-### Describe Client
+### Describe Client {#describeclient}
 
 Description of services, ports and methods as a JavaScript object
 
@@ -29,7 +29,7 @@ Description of services, ports and methods as a JavaScript object
 | Connection      |                                                |         |
 | WSDL Definition | The WSDL definition's raw XML in string format |         |
 
-### Get Authentication
+### Get Authentication {#getwsdlauth}
 
 Retrieve authentication data from a SOAP endpoint by calling the specified authentication method
 
@@ -38,7 +38,7 @@ Retrieve authentication data from a SOAP endpoint by calling the specified authe
 | Connection      |                                                |         |
 | WSDL Definition | The WSDL definition's raw XML in string format |         |
 
-### Get WSDL Definition
+### Get WSDL Definition {#getwsdlbyurl}
 
 Retrieves a WSDL Definition from a given endpoint and returns the raw XML
 
@@ -46,7 +46,7 @@ Retrieves a WSDL Definition from a given endpoint and returns the raw XML
 | -------- | ------------------- | ------- |
 | WSDL URL | The URL of the WSDL |         |
 
-### Request
+### Request {#sendrequest}
 
 Makes a request to the SOAP webservice using the specified method
 

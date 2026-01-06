@@ -9,7 +9,7 @@ Connect to an Active Directory server.
 
 ## Connections
 
-### LDAP Connection
+### LDAP Connection {#ldapconnection}
 
 Connection to an LDAP server
 
@@ -32,7 +32,7 @@ Ensure these details are correctly configured in the connection settings to esta
 
 ## Actions
 
-### Add Entry
+### Add Entry {#addentry}
 
 Add entry in Active Directory.
 
@@ -43,7 +43,7 @@ Add entry in Active Directory.
 | Attributes to Add | The attributes to add to the entry. Must be a JSON object. |         |
 | Debug Request     | Enabling this flag will log out the current request.       | false   |
 
-### Add Group
+### Add Group {#addgroup}
 
 Add group in Active Directory.
 
@@ -56,7 +56,7 @@ Add group in Active Directory.
 | sAMAccountName | The sAMAccountName of the group to add.              |         |
 | Debug Request  | Enabling this flag will log out the current request. | false   |
 
-### Add User
+### Add User {#adduser}
 
 Add a user in Active Directory.
 
@@ -70,7 +70,7 @@ Add a user in Active Directory.
 | Password            | The password of the user to add.                     |         |
 | Debug Request       | Enabling this flag will log out the current request. | false   |
 
-### Add User to Group
+### Add User to Group {#addusertogroup}
 
 Add a user to a group in Active Directory.
 
@@ -81,7 +81,7 @@ Add a user to a group in Active Directory.
 | User DN to Add | The DN of the user to add to the group.              |         |
 | Debug Request  | Enabling this flag will log out the current request. | false   |
 
-### Bind
+### Bind {#bind}
 
 Bind test in Active Directory.
 
@@ -90,7 +90,7 @@ Bind test in Active Directory.
 | Connection    |                                                      |         |
 | Debug Request | Enabling this flag will log out the current request. | false   |
 
-### Delete Entry
+### Delete Entry {#deleteentry}
 
 Delete an entry in Active Directory.
 
@@ -100,7 +100,7 @@ Delete an entry in Active Directory.
 | DN to Delete  | The DN of the entry to delete.                       |         |
 | Debug Request | Enabling this flag will log out the current request. | false   |
 
-### Disable User Account
+### Disable User Account {#disableuseraccount}
 
 Disable a user in Active Directory.
 
@@ -110,7 +110,7 @@ Disable a user in Active Directory.
 | User DN       | The DN of the user to disable.                       |         |
 | Debug Request | Enabling this flag will log out the current request. | false   |
 
-### Extended Operation
+### Extended Operation {#extendedoperation}
 
 Perform an extended operation in Active Directory.
 
@@ -121,7 +121,7 @@ Perform an extended operation in Active Directory.
 | Value         | The value to send with the extended operation.       |         |
 | Debug Request | Enabling this flag will log out the current request. | false   |
 
-### Is Authenticated
+### Is Authenticated {#isauthenticated}
 
 Check if the connection is authenticated.
 
@@ -130,7 +130,7 @@ Check if the connection is authenticated.
 | Connection    |                                                      |         |
 | Debug Request | Enabling this flag will log out the current request. | false   |
 
-### Move User to Organizational Unit
+### Move User to Organizational Unit {#moveusertoorganizationalunit}
 
 Move user to Organizational unit in Active Directory.
 
@@ -141,7 +141,7 @@ Move user to Organizational unit in Active Directory.
 | New OU User DN | The new DN for the user.                             |         |
 | Debug Request  | Enabling this flag will log out the current request. | false   |
 
-### Remove User From Group
+### Remove User From Group {#removeuserfromgroup}
 
 Remove a user from group in Active Directory.
 
@@ -152,7 +152,7 @@ Remove a user from group in Active Directory.
 | User DN to Remove | The DN of the user to remove from the group.         |         |
 | Debug Request     | Enabling this flag will log out the current request. | false   |
 
-### Rename Entry
+### Rename Entry {#renameentry}
 
 Rename an entry in Active Directory.
 
@@ -163,7 +163,7 @@ Rename an entry in Active Directory.
 | New Relative DN | The new relative DN for the entry.                   |         |
 | Debug Request   | Enabling this flag will log out the current request. | false   |
 
-### Search Entries
+### Search Entries {#search}
 
 Search entries in Active Directory.
 
@@ -177,7 +177,7 @@ Search entries in Active Directory.
 | Include References | Include references in the search results.                                                     | false            |
 | Debug Request      | Enabling this flag will log out the current request.                                          | false            |
 
-### Search Groups
+### Search Groups {#searchgroups}
 
 Search groups in Active Directory.
 
@@ -187,7 +187,7 @@ Search groups in Active Directory.
 | Additional Attributes | Additional attributes to include in the search results. |         |
 | Debug Request         | Enabling this flag will log out the current request.    | false   |
 
-### Search Users
+### Search Users {#searchusers}
 
 Search users in Active Directory.
 
@@ -197,7 +197,7 @@ Search users in Active Directory.
 | Additional Attributes | Additional attributes to include in the search results. |         |
 | Debug Request         | Enabling this flag will log out the current request.    | false   |
 
-### Set Password to User
+### Set Password to User {#setpasswordtouser}
 
 Set user password in Active Directory.
 
@@ -208,7 +208,7 @@ Set user password in Active Directory.
 | New Password  | The new password for the user.                       |         |
 | Debug Request | Enabling this flag will log out the current request. | false   |
 
-### Update Entry
+### Update Entry {#updateentry}
 
 Update entry in Active Directory.
 
@@ -219,7 +219,7 @@ Update entry in Active Directory.
 | Changes         | The changes to apply to the entry. Must be an array of operations. |         |
 | Debug Request   | Enabling this flag will log out the current request.               | false   |
 
-### Update User
+### Update User {#updateuser}
 
 Update user in Active Directory.
 

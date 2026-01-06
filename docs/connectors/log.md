@@ -9,7 +9,7 @@ Write out a log message
 
 ## Actions
 
-### Write Log Message
+### Write Log Message {#writelog}
 
 Write a log message
 
@@ -18,7 +18,7 @@ Write a log message
 | Log Level   | The log level to use for this log line. Options are: debug, info, warn, or error | info    |
 | Log Message | The message to log                                                               |         |
 
-### Write Metric(s)
+### Write Metric(s) {#writemetric}
 
 Write metric(s) to an external log provider
 

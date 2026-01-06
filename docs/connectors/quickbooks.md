@@ -9,7 +9,7 @@ Create and manage customers and invoices within Intuit QuickBooks
 
 ## Connections
 
-### QuickBooks OAuth 2.0
+### QuickBooks OAuth 2.0 {#oauth2}
 
 Authenticate requests to QuickBooks using values obtained from the Developer Console.
 
@@ -36,7 +36,7 @@ Read about how OAuth 2.0 works [here](../oauth2.md).
 
 ## Actions
 
-### Batch Request
+### Batch Request {#batchrequest}
 
 Perform a batch request
 
@@ -45,7 +45,7 @@ Perform a batch request
 | Connection          |                                                                                                                                                                     |         |
 | Batch Request Items | An array of batch request items to be executed; see https://developer.intuit.com/app/developer/qbo/docs/api/accounting/all-entities/batch for detailed information. |         |
 
-### Create a refund receipt
+### Create a refund receipt {#createrefundreceipt}
 
 Create a new Refund Receipt in QuickBooks
 
@@ -65,7 +65,7 @@ Create a new Refund Receipt in QuickBooks
 | Billing Latitude   | Provide a value for the latitude of the billing address.                                                                                                                                                                                                                                                                                         |                                                                                                                                                                                  |
 | Billing Longitude  | Provide a value for the longitude of the billing address.                                                                                                                                                                                                                                                                                        |                                                                                                                                                                                  |
 
-### Create a sales receipt
+### Create a sales receipt {#createreceipt}
 
 Create a new Sales Receipt in QuickBooks
 
@@ -83,7 +83,7 @@ Create a new Sales Receipt in QuickBooks
 | Payment Method Id        | Provide a value for the id of a payment method associated with this transaction.                                                                                                                                                                                                                                                                 |         |
 | Payment Method Name      | Provide a value for the name of a payment method associated with this transaction.                                                                                                                                                                                                                                                               |         |
 
-### Create Invoice
+### Create Invoice {#createinvoice}
 
 Create an Invoice with the specified data
 
@@ -92,7 +92,7 @@ Create an Invoice with the specified data
 | Connection |                                                                     |         |
 | Data       | This is a string of JSON data that represents a QuickBooks invoice. |         |
 
-### Create Item
+### Create Item {#createnoninventoryitem}
 
 Create a new non-inventory item in QuickBooks
 
@@ -102,7 +102,7 @@ Create a new non-inventory item in QuickBooks
 | Non-Inventory Item Data | The attributes of the non-inventory item to create    |         |
 | API Minor Version       | Provide the version of the API you would like to use. |         |
 
-### Create Note Attachment
+### Create Note Attachment {#createnoteattachment}
 
 Use this endpoint to attach a note to an object.
 
@@ -115,7 +115,7 @@ Use this endpoint to attach a note to an object.
 | API Minor Version      | Provide the version of the API you would like to use.                                                                                                                                                                                                                        | 75      |
 | Include on Send        | Used when Entity Reference Type references a transaction object. This field indicates whether or not the attachment is sent with the transaction when Save and Send button is clicked in the QuickBooks UI or when the Send endpoint (send email) is invoked for the object. | false   |
 
-### Create Purchase Order
+### Create Purchase Order {#createpurchaseorder}
 
 Create a new Purchase Order
 
@@ -128,7 +128,7 @@ Create a new Purchase Order
 | Dynamic Fields  | A field for dynamic inputs that can be configured at deploy time with the use of a key/value config variable.                                                                                                                             |         |
 | Optional Values | The names of optional fields and their values to use when creating/updating a record. For example, if you have a custom configured field that is not represented as an input, here you are able to specify its key and assign it a value. |         |
 
-### Create Resource
+### Create Resource {#createresource}
 
 Create a new resource in QuickBooks
 
@@ -138,7 +138,7 @@ Create a new resource in QuickBooks
 | Resource Attributes | A list of attributes used to create a resource in QuickBooks. For more information refer to https://developer.intuit.com/app/developer/qbo/docs/api/accounting/all-entities/customer. |         |
 | Resource Type       |                                                                                                                                                                                       |         |
 
-### Delete a refund receipt
+### Delete a refund receipt {#deleterefundreceipt}
 
 Delete an existing Refund Receipt in QuickBooks
 
@@ -148,7 +148,7 @@ Delete an existing Refund Receipt in QuickBooks
 | Sync Token | The Sync Token of a resource in QuickBooks |         |
 | Receipt Id | Provide a value for the Id of the receipt. |         |
 
-### Delete Attachable
+### Delete Attachable {#deleteattachable}
 
 This operation deletes an attachable object.
 
@@ -158,7 +158,7 @@ This operation deletes an attachable object.
 | Attachable Payload | The full payload of the attachable as returned in a read response. Could be a reference from a previously executed "Read an Attachable" action response data. |         |
 | API Minor Version  | Provide the version of the API you would like to use.                                                                                                         | 75      |
 
-### Delete Purchase Order
+### Delete Purchase Order {#deletepurchaseorder}
 
 Delete an existing Purchase Order
 
@@ -168,7 +168,7 @@ Delete an existing Purchase Order
 | Purchase Order Id | The id of the purchase order to delete.         |         |
 | Sync Token        | The sync token of the purchase order to delete. |         |
 
-### Download Attachment
+### Download Attachment {#downloadattachment}
 
 Retrieves a temporary download URL to the specified attachableID.
 
@@ -178,7 +178,7 @@ Retrieves a temporary download URL to the specified attachableID.
 | Attachable Id     | The unique identifier of the attachment               |         |
 | API Minor Version | Provide the version of the API you would like to use. | 75      |
 
-### Find Resource by Id
+### Find Resource by Id {#findresource}
 
 Returns a full Resource in QuickBooks
 
@@ -188,7 +188,7 @@ Returns a full Resource in QuickBooks
 | Resource Type |                                            |         |
 | Id            | The Primary ID of a resource in QuickBooks |         |
 
-### Get a refund receipt
+### Get a refund receipt {#getrefundreceipt}
 
 Get the value of an existing Refund Receipt in QuickBooks
 
@@ -197,7 +197,7 @@ Get the value of an existing Refund Receipt in QuickBooks
 | Connection |                                            |         |
 | Receipt Id | Provide a value for the Id of the receipt. |         |
 
-### Get a refund receipt as PDF
+### Get a refund receipt as PDF {#getrefundreceiptaspdf}
 
 Get the value of an existing Refund Receipt in QuickBooks as a PDF
 
@@ -206,7 +206,7 @@ Get the value of an existing Refund Receipt in QuickBooks as a PDF
 | Connection |                                            |         |
 | Receipt Id | Provide a value for the Id of the receipt. |         |
 
-### Get Company Info
+### Get Company Info {#getcompanyinfo}
 
 Retrieve information about the company
 
@@ -214,7 +214,7 @@ Retrieve information about the company
 | ---------- | -------- | ------- |
 | Connection |          |         |
 
-### Get Customer By Display Name
+### Get Customer By Display Name {#getcustomerbydisplayname}
 
 Retrieve information about the Customer which matches the given Display Name
 
@@ -223,7 +223,7 @@ Retrieve information about the Customer which matches the given Display Name
 | Connection            |                                             |         |
 | Customer Display Name | This represents the customer's display name |         |
 
-### Get Customer By Id
+### Get Customer By Id {#getcustomerbyid}
 
 Retrieve information about the Customer which matches the given id
 
@@ -232,7 +232,7 @@ Retrieve information about the Customer which matches the given id
 | Connection  |                                |         |
 | Customer Id | The id of the customer to get. |         |
 
-### Get Invoice By Id
+### Get Invoice By Id {#getinvoicebyid}
 
 Retrieve information about the Invoice which matches the given id
 
@@ -241,7 +241,7 @@ Retrieve information about the Invoice which matches the given id
 | Connection |                               |         |
 | Invoice Id | The id of the invoice to get. |         |
 
-### Get Sales Receipt
+### Get Sales Receipt {#getreceipt}
 
 Get the information and metadata of a Sales Receipt by Id
 
@@ -250,7 +250,7 @@ Get the information and metadata of a Sales Receipt by Id
 | Connection |                                            |         |
 | Receipt Id | Provide a value for the Id of the receipt. |         |
 
-### Get Vendor Expenses
+### Get Vendor Expenses {#queryvendorexpenses}
 
 Retrieve information about vendor expenses
 
@@ -259,7 +259,7 @@ Retrieve information about vendor expenses
 | Connection   |                                                                                                                                                                                                                                                                                               |         |
 | Query Params | Customize the information returned in the report by specifying query parameters with the query. Listed here are the query parameters available for this report: customer, vendor, end_date, date_macro, class, sort_order, summarize_column_id, department, accounting_method, and start_date |         |
 
-### List Accounts
+### List Accounts {#listaccounts}
 
 Retrieve a list of all Accounts
 
@@ -270,7 +270,7 @@ Retrieve a list of all Accounts
 | Start Position | The starting position to return results from. |         |
 | Connection     |                                               |         |
 
-### List Attachments
+### List Attachments {#listattachments}
 
 Retrieve a list of all Attachments linked to an entity.
 
@@ -280,7 +280,7 @@ Retrieve a list of all Attachments linked to an entity.
 | Attachable Entity Id   | The id of the entity that the attachable is linked to.   |         |
 | Connection             |                                                          |         |
 
-### List Customers
+### List Customers {#listcustomers}
 
 Retrieve a list of all Customers.
 
@@ -291,7 +291,7 @@ Retrieve a list of all Customers.
 | Start Position | The starting position to return results from. |         |
 | Connection     |                                               |         |
 
-### List Invoices
+### List Invoices {#listinvoices}
 
 Retrieve a list of all Invoices
 
@@ -302,7 +302,7 @@ Retrieve a list of all Invoices
 | Start Position | The starting position to return results from. |         |
 | Connection     |                                               |         |
 
-### List Purchase Orders
+### List Purchase Orders {#listpurchaseorders}
 
 Retrieve a list of all Purchase Orders
 
@@ -313,7 +313,7 @@ Retrieve a list of all Purchase Orders
 | Start Position | The starting position to return results from. |         |
 | Connection     |                                               |         |
 
-### List Refund Receipts
+### List Refund Receipts {#listrefundreceipts}
 
 Retrieve a list of all Refund Receipts
 
@@ -324,7 +324,7 @@ Retrieve a list of all Refund Receipts
 | Start Position | The starting position to return results from. |         |
 | Connection     |                                               |         |
 
-### Query Resource
+### Query Resource {#queryresource}
 
 Query a QuickBooks resource using their SQL-like data query language
 
@@ -334,7 +334,7 @@ Query a QuickBooks resource using their SQL-like data query language
 | Query String      | Must be a valid query string as defined by the QuickBooks API. Single quotes must be escaped with a backslash. |         |
 | API Minor Version | Provide the version of the API you would like to use.                                                          |         |
 
-### Raw Request
+### Raw Request {#rawrequest}
 
 Send raw HTTP request to QuickBooks
 
@@ -356,7 +356,7 @@ Send raw HTTP request to QuickBooks
 | Max Retry Count         | The maximum number of retries to attempt. Specify 0 for no retries.                                                                                                                                                                                                                                                                                           | 0       |
 | Use Exponential Backoff | Specifies whether to use a pre-defined exponential backoff strategy for retries. When enabled, 'Retry Delay (ms)' is ignored.                                                                                                                                                                                                                                 | false   |
 
-### Read an Attachable
+### Read an Attachable {#readanattachable}
 
 Read one attachable
 
@@ -366,7 +366,7 @@ Read one attachable
 | Attachable Id     | The unique identifier of the attachment               |         |
 | API Minor Version | Provide the version of the API you would like to use. | 75      |
 
-### Send a refund receipt
+### Send a refund receipt {#sendrefundreceipt}
 
 send an existing Refund Receipt to the email saved in QuickBooks
 
@@ -375,7 +375,7 @@ send an existing Refund Receipt to the email saved in QuickBooks
 | Connection |                                            |         |
 | Receipt Id | Provide a value for the Id of the receipt. |         |
 
-### Send a refund receipt
+### Send a refund receipt {#sendrefundreceipttoemail}
 
 Send an existing Refund Receipt in QuickBooks to any email
 
@@ -385,7 +385,7 @@ Send an existing Refund Receipt in QuickBooks to any email
 | Receipt Id | Provide a value for the Id of the receipt.    |         |
 | Email      | Provide a valid email to send the receipt to. |         |
 
-### Update Attachable
+### Update Attachable {#updateattachable}
 
 Update any of the writable fields of an existing attachable object.
 
@@ -395,7 +395,7 @@ Update any of the writable fields of an existing attachable object.
 | Update Request Body | The request body must include all writable fields of the existing object as returned in a read response. Writable fields omitted from the request body are set to NULL. The ID of the object to update is specified in the request body. |         |
 | API Minor Version   | Provide the version of the API you would like to use.                                                                                                                                                                                    | 75      |
 
-### Update Purchase Order
+### Update Purchase Order {#updatepurchaseorder}
 
 Update an existing Purchase Order
 
@@ -411,7 +411,7 @@ Update an existing Purchase Order
 | Dynamic Fields    | A field for dynamic inputs that can be configured at deploy time with the use of a key/value config variable.                                                                                                                             |         |
 | Optional Values   | The names of optional fields and their values to use when creating/updating a record. For example, if you have a custom configured field that is not represented as an input, here you are able to specify its key and assign it a value. |         |
 
-### Update refund receipt
+### Update refund receipt {#updaterefundreceipt}
 
 Update the contents of an existing Refund Receipt in QuickBooks
 
@@ -432,7 +432,7 @@ Update the contents of an existing Refund Receipt in QuickBooks
 | Optional Values    | The names of optional fields and their values to use when creating/updating a record. For example, if you have a custom configured field that is not represented as an input, here you are able to specify its key and assign it a value.                                                                                                        |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 | Custom Fields      | Specify any optional custom fields to be attached. A custom field is a JavaScript Object that consists of a DefinitionId: String, Type: String, and Name: String. If you don't want to supply any custom fields, simply provide an empty JavaScript Array []                                                                                     |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 
-### Update Resource
+### Update Resource {#updateresource}
 
 Updates a Resource in QuickBooks
 
@@ -445,7 +445,7 @@ Updates a Resource in QuickBooks
 | Id                  | The Primary ID of a resource in QuickBooks                                                                                                                                            |         |
 | Resource Data       | An optional full map of the resource data                                                                                                                                             |         |
 
-### Upload Attachment
+### Upload Attachment {#uploadattachment}
 
 Upload one attachment
 
@@ -461,7 +461,7 @@ Upload one attachment
 | File Type              | The file type of the attachment                                                                                                                                                                                                                                              |         |
 | Include on Send        | Used when Entity Reference Type references a transaction object. This field indicates whether or not the attachment is sent with the transaction when Save and Send button is clicked in the QuickBooks UI or when the Send endpoint (send email) is invoked for the object. | false   |
 
-### Void Invoice
+### Void Invoice {#voidinvoice}
 
 Voids an Invoice
 

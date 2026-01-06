@@ -9,7 +9,7 @@ Use the Toast component to manage Employees, Jobs, Cash Entries, and more.
 
 ## Connections
 
-### Toast Client Credentials
+### Toast Client Credentials {#toastclientcredentials}
 
 Connection for Toast Client Credentials
 
@@ -23,7 +23,7 @@ To authenticate via OAuth 2.0 You must provide a client identifier (clientId) an
 
 ## Triggers
 
-### Webhook
+### Webhook {#webhook}
 
 Receive and validate webhook requests from Toast for webhooks you configure.
 
@@ -33,7 +33,7 @@ Receive and validate webhook requests from Toast for webhooks you configure.
 
 ## Actions
 
-### Create Employee
+### Create Employee {#createemployee}
 
 Creates a restaurant employee record.
 
@@ -52,7 +52,7 @@ Creates a restaurant employee record.
 | Additional Fields      | Additional fields that might not be covered by the standard inputs. This is a JSON object. See https://doc.toasttab.com/openapi/labor/tag/Data-definitions/schema/Employee/ for more information.                                                                |         |
 | Debug Request          | Enabling this flag will log out the current request.                                                                                                                                                                                                             | false   |
 
-### Create Shift
+### Create Shift {#createshift}
 
 Creates a schedule shift for a restaurant employee.
 
@@ -68,7 +68,7 @@ Creates a schedule shift for a restaurant employee.
 | Additional Fields      | Additional fields that might not be covered by the standard inputs. This is a JSON object. See https://doc.toasttab.com/openapi/labor/tag/Data-definitions/schema/Shift/ for more information.  |         |
 | Debug Request          | Enabling this flag will log out the current request.                                                                                                                                            | false   |
 
-### Delete Employee
+### Delete Employee {#deleteemployee}
 
 Deletes a restaurant employee record by marking the record as deleted.
 
@@ -79,7 +79,7 @@ Deletes a restaurant employee record by marking the record as deleted.
 | Employee ID            | The GUID of the employee to delete.                                                                                                               |         |
 | Debug Request          | Enabling this flag will log out the current request.                                                                                              | false   |
 
-### Delete Shift
+### Delete Shift {#deleteshift}
 
 Marks an existing schedule shift record for a restaurant employee as deleted.
 
@@ -90,7 +90,7 @@ Marks an existing schedule shift record for a restaurant employee as deleted.
 | Shift ID               | The shift identifier, either the Toast platform GUID or an external identifier.                                                                   |         |
 | Debug Request          | Enabling this flag will log out the current request.                                                                                              | false   |
 
-### Get Employee
+### Get Employee {#getemployee}
 
 Returns an Employee object containing information about one restaurant employee.
 
@@ -101,7 +101,7 @@ Returns an Employee object containing information about one restaurant employee.
 | Employee ID            | The GUID of the employee to retrieve.                                                                                                             |         |
 | Debug Request          | Enabling this flag will log out the current request.                                                                                              | false   |
 
-### Get One Job
+### Get One Job {#getonejob}
 
 Returns a Job object containing information about one employee job at a restaurant.
 
@@ -112,7 +112,7 @@ Returns a Job object containing information about one employee job at a restaura
 | Job ID                 | The Toast platform GUID or an external identifier for the job.                                                                                    |         |
 | Debug Request          | Enabling this flag will log out the current request.                                                                                              | false   |
 
-### Get Shift
+### Get Shift {#getshift}
 
 Performs Get Shift
 
@@ -123,7 +123,7 @@ Performs Get Shift
 | Shift ID               | The shift identifier, either the Toast platform GUID or an external identifier.                                                                   |         |
 | Debug Request          | Enabling this flag will log out the current request.                                                                                              | false   |
 
-### Get Time Entry
+### Get Time Entry {#gettimeentry}
 
 Returns a TimeEntry object containing information about one employee shift.
 
@@ -136,7 +136,7 @@ Returns a TimeEntry object containing information about one employee shift.
 | Include Missed Breaks  | Indicate whether missed breaks should be returned in the breaks array for the time entries.                                                       | false   |
 | Debug Request          | Enabling this flag will log out the current request.                                                                                              | false   |
 
-### List Accessible Restaurants
+### List Accessible Restaurants {#listaccessiblerestaurants}
 
 Returns an array of PartnerAccessExternalRep objects that contain information about the Toast restaurants that your partner API client can access.
 
@@ -146,7 +146,7 @@ Returns an array of PartnerAccessExternalRep objects that contain information ab
 | Last Modified | Limits the return data to restaurants that changed their access configuration for a partner API client after a specific date and time. |         |
 | Debug Request | Enabling this flag will log out the current request.                                                                                   | false   |
 
-### List Cash Entries
+### List Cash Entries {#listcashentries}
 
 Returns information about cash added to or removed from a cash drawer or other cash storage device.
 
@@ -157,7 +157,7 @@ Returns information about cash added to or removed from a cash drawer or other c
 | Business Date          | The business date the cash entries were created, in the format yyyymmdd.                                                                          |         |
 | Debug Request          | Enabling this flag will log out the current request.                                                                                              | false   |
 
-### List Connected Restaurants
+### List Connected Restaurants {#listconnectedrestaurants}
 
 Returns a PaginatedResponse object that contains a paginated array of the restaurants that have connected to your integrated partner service.
 
@@ -169,7 +169,7 @@ Returns a PaginatedResponse object that contains a paginated array of the restau
 | Page Token    | Returns a specific set of restaurants in the response value. You get the token string for the next page of connected restaurants from the nextPageToken value of the PaginatedResponse object for a page of results.                        |         |
 | Debug Request | Enabling this flag will log out the current request.                                                                                                                                                                                        | false   |
 
-### List Deposits
+### List Deposits {#listdeposits}
 
 Returns an array of Deposit objects containing information about cash removed from a restaurant to be deposited in a bank or other financial institution during one business day.
 
@@ -180,7 +180,7 @@ Returns an array of Deposit objects containing information about cash removed fr
 | Business Date          | The business date the deposits were created, in the format yyyymmdd.                                                                              |         |
 | Debug Request          | Enabling this flag will log out the current request.                                                                                              | false   |
 
-### List Employees
+### List Employees {#listemployees}
 
 Returns an array of Employee objects containing information about restaurant employees.
 
@@ -191,7 +191,7 @@ Returns an array of Employee objects containing information about restaurant emp
 | Employee IDs           | An optional identifier that filters return values for a specific employee. The identifier can be a Toast platform GUID or an external identifier. |         |
 | Debug Request          | Enabling this flag will log out the current request.                                                                                              | false   |
 
-### List Jobs
+### List Jobs {#listjobs}
 
 Returns an array of Job objects containing information about the employee jobs configured at a restaurant.
 
@@ -202,7 +202,7 @@ Returns an array of Job objects containing information about the employee jobs c
 | Job IDs                | An optional job identifier, either the Toast platform GUID or an external identifier assigned by the client.                                      |         |
 | Debug Request          | Enabling this flag will log out the current request.                                                                                              | false   |
 
-### List Shifts
+### List Shifts {#listshifts}
 
 Returns an array of Shift objects that contain information about schedule shifts for restaurant employees.
 
@@ -215,7 +215,7 @@ Returns an array of Shift objects that contain information about schedule shifts
 | Shift IDs              | An optional identifier that filters return values for a specific shift. The identifier can be a Toast platform GUID or an external identifier. If present, the shifts resource will only return the shifts you specify.                                                                                                                               |         |
 | Debug Request          | Enabling this flag will log out the current request.                                                                                                                                                                                                                                                                                                  | false   |
 
-### List Time Entries
+### List Time Entries {#listtimeentries}
 
 Returns an array of Time Entry objects that contain information about employee shift events.
 
@@ -233,7 +233,7 @@ Returns an array of Time Entry objects that contain information about employee s
 | Time Entry IDs         | A time entry identifier, either the Toast platform GUID or an external identifier.                                                                                                                                                                                                                                                |         |
 | Debug Request          | Enabling this flag will log out the current request.                                                                                                                                                                                                                                                                              | false   |
 
-### Raw Request
+### Raw Request {#rawrequest}
 
 Send raw HTTP request to Toast.
 
@@ -256,7 +256,7 @@ Send raw HTTP request to Toast.
 | Max Retry Count         | The maximum number of retries to attempt. Specify 0 for no retries.                                                                                                                                                                               | 0       |
 | Use Exponential Backoff | Specifies whether to use a pre-defined exponential backoff strategy for retries. When enabled, 'Retry Delay (ms)' is ignored.                                                                                                                     | false   |
 
-### Update Employee
+### Update Employee {#updateemployee}
 
 Performs Update Employee
 
@@ -274,7 +274,7 @@ Performs Update Employee
 | Additional Fields      | Additional fields that might not be covered by the standard inputs. This is a JSON object. See https://doc.toasttab.com/openapi/labor/tag/Data-definitions/schema/Employee/ for more information. |         |
 | Debug Request          | Enabling this flag will log out the current request.                                                                                                                                              | false   |
 
-### Update Shift
+### Update Shift {#updateshift}
 
 Updates an existing schedule shift record for a restaurant employee.
 

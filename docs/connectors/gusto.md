@@ -9,7 +9,7 @@ Manage payroll, benefits, and human resource within Gusto
 
 ## Connections
 
-### Gusto OAuth 2.0 Connection
+### Gusto OAuth 2.0 Connection {#gustooauth}
 
 Connect to Gusto via OAuth 2.0
 
@@ -29,7 +29,7 @@ Read about how OAuth 2.0 works [here](../oauth2.md).
 
 ## Triggers
 
-### Webhook
+### Webhook {#gustowebhooktrigger}
 
 Receive and validate webhook requests from Gusto for webhooks you configure.
 
@@ -39,7 +39,7 @@ Receive and validate webhook requests from Gusto for webhooks you configure.
 
 ## Actions
 
-### Create Employee
+### Create Employee {#createemployee}
 
 Create an employee of a company
 
@@ -54,7 +54,7 @@ Create an employee of a company
 | Email Address          | The employee's personal email address. |         |
 | Social Security Number | The employee's social security number. |         |
 
-### Create Webhook Subscription
+### Create Webhook Subscription {#createwebhooksubscription}
 
 Creates a Webhook Subscription to receive notifications when entities change for Gusto.
 
@@ -64,7 +64,7 @@ Creates a Webhook Subscription to receive notifications when entities change for
 | Webhook URL        | The URL for the webhook subscription.                                                    |         |
 | Subscription Types | Types of notifications to receive when entities change. Enter as comma-separated values. |         |
 
-### Delete Webhook Subscription
+### Delete Webhook Subscription {#deletewebhooksubscription}
 
 Deletes the Webhook Subscription associated with the provided UUID for Gusto.
 
@@ -73,7 +73,7 @@ Deletes the Webhook Subscription associated with the provided UUID for Gusto.
 | Connection                |                                |         |
 | Webhook Subscription UUID | The webhook subscription UUID. |         |
 
-### Find Employee by Email
+### Find Employee by Email {#findemployeebyemail}
 
 Get an employee by personal email address.
 
@@ -83,7 +83,7 @@ Get an employee by personal email address.
 | Company ID    | A UUID representing a company.         |         |
 | Email Address | The employee's personal email address. |         |
 
-### Get Company by ID
+### Get Company by ID {#getcompany}
 
 Get company metadata by ID
 
@@ -92,7 +92,7 @@ Get company metadata by ID
 | Connection |                                |         |
 | Company ID | A UUID representing a company. |         |
 
-### Get Employee
+### Get Employee {#getemployee}
 
 Get an employee by ID
 
@@ -101,7 +101,7 @@ Get an employee by ID
 | Connection  |                                 |         |
 | Employee ID | A UUID representing a employee. |         |
 
-### Get Pay Schedule by ID
+### Get Pay Schedule by ID {#getpayschedule}
 
 Get a pay schedules for a company by pay schedule ID
 
@@ -111,7 +111,7 @@ Get a pay schedules for a company by pay schedule ID
 | Company ID      | A UUID representing a company.      |         |
 | Pay Schedule ID | A UUID representing a pay schedule. |         |
 
-### Get Webhook Events
+### Get Webhook Events {#getwebhookevents}
 
 Get webhook events based on the partner application's scopes for Gusto.
 
@@ -123,7 +123,7 @@ Get webhook events based on the partner application's scopes for Gusto.
 | Starting After UUID        | Serves as a cursor, returns all events occurring after specified UUID (exclusive).                |         |
 | Event Type                 | A string containing the exact event name or use a wildcard match to filter for a group of events. |         |
 
-### Get Webhook Subscription
+### Get Webhook Subscription {#getwebhooksubscription}
 
 Returns the Webhook Subscription associated with the provided UUID for Gusto.
 
@@ -132,7 +132,7 @@ Returns the Webhook Subscription associated with the provided UUID for Gusto.
 | Connection                |                                |         |
 | Webhook Subscription UUID | The webhook subscription UUID. |         |
 
-### List Companies
+### List Companies {#listcompanies}
 
 List all companies that the currently authenticated user is a part of
 
@@ -141,7 +141,7 @@ List all companies that the currently authenticated user is a part of
 | Connection      |                                                                                             |         |
 | Pagination Page | Which page of results to fetch. See https://docs.gusto.com/app-integrations/docs/pagination |         |
 
-### List Company Admins
+### List Company Admins {#listcompanyadmins}
 
 List all admin users at a company
 
@@ -151,7 +151,7 @@ List all admin users at a company
 | Company ID      | A UUID representing a company.                                                              |         |
 | Pagination Page | Which page of results to fetch. See https://docs.gusto.com/app-integrations/docs/pagination |         |
 
-### List Employees
+### List Employees {#listemployees}
 
 List employees of a company
 
@@ -161,7 +161,7 @@ List employees of a company
 | Company ID      | A UUID representing a company.                                                              |         |
 | Pagination Page | Which page of results to fetch. See https://docs.gusto.com/app-integrations/docs/pagination |         |
 
-### List Pay Schedules
+### List Pay Schedules {#listpayschedules}
 
 List pay schedules for a company
 
@@ -171,7 +171,7 @@ List pay schedules for a company
 | Company ID      | A UUID representing a company.                                                              |         |
 | Pagination Page | Which page of results to fetch. See https://docs.gusto.com/app-integrations/docs/pagination |         |
 
-### List Webhook Subscriptions
+### List Webhook Subscriptions {#listwebhooksubscriptions}
 
 Returns all webhook subscriptions associated with the provided Partner API token for Gusto.
 
@@ -179,7 +179,7 @@ Returns all webhook subscriptions associated with the provided Partner API token
 | ---------- | -------- | ------- |
 | Connection |          |         |
 
-### Raw Request
+### Raw Request {#rawrequest}
 
 Send raw HTTP request to Gusto
 
@@ -202,7 +202,7 @@ Send raw HTTP request to Gusto
 | Max Retry Count         | The maximum number of retries to attempt. Specify 0 for no retries.                                                                                                                                     | 0          |
 | Use Exponential Backoff | Specifies whether to use a pre-defined exponential backoff strategy for retries. When enabled, 'Retry Delay (ms)' is ignored.                                                                           | false      |
 
-### Terminate Employee
+### Terminate Employee {#terminateemployee}
 
 End an employee's employment
 
@@ -213,7 +213,7 @@ End an employee's employment
 | Termination Date         | The date the employee was terminated.                  |         |
 | Run Termination Payroll? | Whether to run a termination payroll for the employee. | false   |
 
-### Update Webhook Subscription
+### Update Webhook Subscription {#updatewebhooksubscription}
 
 Updates the Webhook Subscription associated with the provided UUID for Gusto.
 

@@ -63,7 +63,7 @@ module.exports = async (
 ## Looping a certain number of times
 
 Sometimes you'll want to loop a set number of times.
-For those situations, a [Repeat X Times](./connectors/loop.md#repeat-x-times) action can help.
+For those situations, a [Repeat X Times](./connectors/loop.md#loopntimes) action can help.
 
 Programmatically, the **Repeat X Times** action is similar to a `for` loop like this:
 

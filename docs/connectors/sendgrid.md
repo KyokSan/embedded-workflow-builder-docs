@@ -9,7 +9,7 @@ Send emails through SendGrid
 
 ## Connections
 
-### SendGrid API Key
+### SendGrid API Key {#apikey}
 
 Authenticate requests to SendGrid using values obtained from the SendGrid Developer Console.
 
@@ -21,13 +21,13 @@ Information about getting started and creating API keys with [SendGrid](https://
 
 ## Triggers
 
-### Webhook
+### Webhook {#webhook}
 
 Receive and validate webhook requests from SendGrid for webhooks you configure.
 
 ## Actions
 
-### Add or Update Contact
+### Add or Update Contact {#addorupdatecontact}
 
 Add or update a contact. This can also be used to add contacts to a list.
 
@@ -37,7 +37,7 @@ Add or update a contact. This can also be used to add contacts to a list.
 | List IDs   | Comma-separated IDs of the lists to add the contact to. These lists must already exist.       |         |
 | Contacts   | An array of contact objects to add or update. See SendGrid docs for contact object structure. |         |
 
-### Create List
+### Create List {#createlist}
 
 Create a new contact list
 
@@ -46,7 +46,7 @@ Create a new contact list
 | Connection |                                 |         |
 | List Name  | The name of the list to create. |         |
 
-### Get All Field Definitions
+### Get All Field Definitions {#getallfielddefinitions}
 
 Retrieve all custom field definitions with pagination support
 
@@ -56,7 +56,7 @@ Retrieve all custom field definitions with pagination support
 | Page Size  | Number of results to return per page (max 100).          |         |
 | Page Token | Token for fetching the next or previous page of results. |         |
 
-### Get All Lists
+### Get All Lists {#getalllists}
 
 Retrieve all contact lists with pagination support
 
@@ -66,7 +66,7 @@ Retrieve all contact lists with pagination support
 | Page Size  | Number of results to return per page (max 100).          |         |
 | Page Token | Token for fetching the next or previous page of results. |         |
 
-### Get Contacts by Emails
+### Get Contacts by Emails {#getcontactsbyemails}
 
 Retrieve contacts by their email addresses.
 
@@ -75,7 +75,7 @@ Retrieve contacts by their email addresses.
 | Connection |                                                |         |
 | Emails     | Comma-separated email addresses to search for. |         |
 
-### Get Import Status
+### Get Import Status {#getimportstatus}
 
 Check the status of a contact import job
 
@@ -84,7 +84,7 @@ Check the status of a contact import job
 | Connection |                                                                                              |         |
 | Job ID     | The job ID returned from Import Contacts, Add/Update Contact, or Delete Contacts operations. |         |
 
-### Get List by ID
+### Get List by ID {#getlistbyid}
 
 Retrieve a specific contact list by its ID
 
@@ -94,7 +94,7 @@ Retrieve a specific contact list by its ID
 | List ID                 | The ID of the list to retrieve.                          |         |
 | Include Sample Contacts | Whether to include a sample of contacts in the response. | false   |
 
-### Initiate Contacts Import
+### Initiate Contacts Import {#initiatecontactsimport}
 
 Initiates a CSV contact import. Returns a URL and headers for uploading the CSV file.
 
@@ -105,7 +105,7 @@ Initiates a CSV contact import. Returns a URL and headers for uploading the CSV 
 | Field Mappings | An array of field definition IDs to map the uploaded CSV columns. Use null to skip a column. Get IDs from 'Get All Field Definitions' action. |         |
 | Is Compressed  | Set to true if the CSV file will be gzip-compressed.                                                                                          | false   |
 
-### Raw Request
+### Raw Request {#rawrequest}
 
 Send raw HTTP request to SendGrid
 
@@ -128,7 +128,7 @@ Send raw HTTP request to SendGrid
 | Max Retry Count         | The maximum number of retries to attempt. Specify 0 for no retries.                                                                                                                                           | 0       |
 | Use Exponential Backoff | Specifies whether to use a pre-defined exponential backoff strategy for retries. When enabled, 'Retry Delay (ms)' is ignored.                                                                                 | false   |
 
-### Send Email
+### Send Email {#sendemail}
 
 Send a single email to one or more recipients
 
@@ -154,7 +154,7 @@ Send a single email to one or more recipients
 | Multiple Attachments  | Provide an array of attachments to send with the email. See https://www.twilio.com/docs/sendgrid/api-reference/mail-send/mail-send#request-body for more information.                                              |                 |
 | Subscription Tracking | When set to true, inserts a subscription management link at the bottom of the text and HTML bodies of your email                                                                                                   | false           |
 
-### Send Multiple Emails
+### Send Multiple Emails {#sendmultipleemails}
 
 Send a separate email to each recipient
 

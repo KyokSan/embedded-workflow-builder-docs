@@ -57,12 +57,11 @@ The results of one step can be fed into subsequent steps through [step inputs](#
 ### Step results
 
 Each step in your %WORKFLOW% produces a result.
-For example, an [SFTP - List Directory](./connectors/sftp.md#list-directory) step will return a list of strings representing file names.
+For example, an [SFTP - List Directory](./connectors/sftp.md#listdirectory) step will return a list of strings representing file names.
 
 ![SFTP list directory result](./assets/building/sftp-list-directory.png)
 
-An [SFTP - Read File](./connectors/sftp.md#read-file) step will return the contents of a file that is pulled from an SFTP server (in this example, an image was fetched).
-
+An [SFTP - Read File](./connectors/sftp.md#readfile) step will return the contents of a file that is pulled from an SFTP server (in this example, an image was fetched).
 ![SFTP list read file](./assets/building/sftp-read-file.png)
 
 Step results take one of three forms:

@@ -9,7 +9,7 @@ Perform common operations on strings and arrays of strings
 
 ## Actions
 
-### Decode Base64
+### Decode Base64 {#decodebase64}
 
 Convert the input string from base64 encoding
 
@@ -17,7 +17,7 @@ Convert the input string from base64 encoding
 | ----------- | -------- | ------- |
 | Base64 Text |          |         |
 
-### Encode Base64
+### Encode Base64 {#encodebase64}
 
 Convert the input string or file to base64 encoding
 
@@ -25,7 +25,7 @@ Convert the input string or file to base64 encoding
 | ------------ | -------- | ------- |
 | Text or file |          |         |
 
-### Extract Substring
+### Extract Substring {#slice}
 
 Extract a substring from a string
 
@@ -35,7 +35,7 @@ Extract a substring from a string
 | Slice start | The index on which to start the slice of the text. |         |
 | Slice stop  | The index on which to stop the slice of the text.  |         |
 
-### Find & Replace
+### Find & Replace {#replace}
 
 Find and replace all instances of one substring with another
 
@@ -45,7 +45,7 @@ Find and replace all instances of one substring with another
 | Substring to find and be replaced                 | This is the substring that is to be replaced.                                             |         |
 | The substring to replace instances of 'find' with | The substring to replace instances of 'find' with. Can be a string or regular expression. |         |
 
-### Find & Replace Multiple Substrings
+### Find & Replace Multiple Substrings {#replacemultiplesubstring}
 
 Find and replace all instances of multiple substrings with another
 
@@ -54,7 +54,7 @@ Find and replace all instances of multiple substrings with another
 | Text         | This is the text to manipulate |         |
 | Replace With | Replace                        |         |
 
-### HTML Decode
+### HTML Decode {#htmldecode}
 
 Decode HTML-encoded input string
 
@@ -62,7 +62,7 @@ Decode HTML-encoded input string
 | ----- | ------------------------------ | ------- |
 | Text  | This is the text to manipulate |         |
 
-### HTML Encode
+### HTML Encode {#htmlencode}
 
 Convert input string to HTML-encoded equivalent
 
@@ -70,7 +70,7 @@ Convert input string to HTML-encoded equivalent
 | ----- | ------------------------------ | ------- |
 | Text  | This is the text to manipulate |         |
 
-### Join
+### Join {#join}
 
 Join strings together using an optional separator to form a single string.
 
@@ -79,7 +79,7 @@ Join strings together using an optional separator to form a single string.
 | Strings   | A set of strings to join together into a single string. |         |
 | Separator | The separator to use to split or concatenate text.      |         |
 
-### Join Lines
+### Join Lines {#joinlines}
 
 Join strings together with a newline character
 
@@ -89,7 +89,7 @@ Join strings together with a newline character
 | Newline type       | The type of newline to use.                             | <br />  |
 | Number of newlines | The number of newlines to insert.                       | 1       |
 
-### Lower Case
+### Lower Case {#lowercase}
 
 Convert the input string to lower case
 
@@ -97,7 +97,7 @@ Convert the input string to lower case
 | ----- | ------------------------------ | ------- |
 | Text  | This is the text to manipulate |         |
 
-### Match Regex
+### Match Regex {#match}
 
 Match a string against a regular expression
 
@@ -107,7 +107,7 @@ Match a string against a regular expression
 | Regex       | A regular expression to match against the text that is supplied.                                                                                                                                                                      |         |
 | Regex Flags | Flags to apply to the regular expression. For example, you can specify 'd' to ensure capture groups are returned. See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_expressions#advanced_searching_with_flags | g       |
 
-### Remove Whitespace
+### Remove Whitespace {#trim}
 
 Remove leading and trailing whitespace from a string
 
@@ -115,7 +115,7 @@ Remove leading and trailing whitespace from a string
 | ----- | ------------------------------ | ------- |
 | Text  | This is the text to manipulate |         |
 
-### Split Lines
+### Split Lines {#splitlines}
 
 Split a block of text on newline characters (\n)
 
@@ -124,7 +124,7 @@ Split a block of text on newline characters (\n)
 | Text               | This is the text to manipulate              |         |
 | Filter Blank Lines | Filter blank lines (like trailing newlines) | true    |
 
-### Split String
+### Split String {#split}
 
 Split a string into a list of strings on a separator character
 
@@ -133,7 +133,7 @@ Split a string into a list of strings on a separator character
 | Text      | This is the text to manipulate                     |         |
 | Separator | The separator to use to split or concatenate text. |         |
 
-### String Length
+### String Length {#stringlength}
 
 Get the length of a string
 
@@ -141,7 +141,7 @@ Get the length of a string
 | ----- | ------------------------------ | ------- |
 | Text  | This is the text to manipulate |         |
 
-### Upper Case
+### Upper Case {#uppercase}
 
 Convert the input string to UPPER CASE
 

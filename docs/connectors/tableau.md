@@ -9,7 +9,7 @@ Manage projects and workbooks in your Tableau site
 
 ## Connections
 
-### Tableau Token Connection
+### Tableau Token Connection {#privatekey}
 
 Authenticates requests to Tableau using a token
 
@@ -39,7 +39,7 @@ For additional information regarding authentication, please refer to the [Tablea
 
 ## Triggers
 
-### Scheduled Event
+### Scheduled Event {#tableautrigger}
 
 Receive data from scheduled events in real time with webhook subscriptions.
 
@@ -53,7 +53,7 @@ Receive data from scheduled events in real time with webhook subscriptions.
 
 ## Actions
 
-### Create Project
+### Create Project {#createproject}
 
 Create a new project inside your Tableau site
 
@@ -67,7 +67,7 @@ Create a new project inside your Tableau site
 | Connection          |                                                                                                                                                                                  |         |
 | Debug Request       | This flag will enable debugging and logging of the action's web request.                                                                                                         | false   |
 
-### Create User
+### Create User {#createuser}
 
 Create a new user in your tableau site
 
@@ -80,7 +80,7 @@ Create a new user in your tableau site
 | Connection    |                                                                                                          |         |
 | Debug Request | This flag will enable debugging and logging of the action's web request.                                 | false   |
 
-### Create Webhook
+### Create Webhook {#createwebhook}
 
 Creates a new webhook for a site.
 
@@ -95,7 +95,7 @@ Creates a new webhook for a site.
 | Debug Request   | This flag will enable debugging and logging of the action's web request.                                     | false   |
 | API Version     | The version of the Tableau API to use                                                                        | 3.6     |
 
-### Delete Projects
+### Delete Projects {#deleteprojects}
 
 Delete an existing project by Id
 
@@ -106,7 +106,7 @@ Delete an existing project by Id
 | Connection    |                                                                          |         |
 | Debug Request | This flag will enable debugging and logging of the action's web request. | false   |
 
-### Delete User
+### Delete User {#deleteuser}
 
 Delete an existing user by Id
 
@@ -117,7 +117,7 @@ Delete an existing user by Id
 | Connection    |                                                                          |         |
 | Debug Request | This flag will enable debugging and logging of the action's web request. | false   |
 
-### Delete Webhook
+### Delete Webhook {#deletewebhook}
 
 Deletes the specified webhook.
 
@@ -129,7 +129,7 @@ Deletes the specified webhook.
 | Debug Request | This flag will enable debugging and logging of the action's web request. | false   |
 | API Version   | The version of the Tableau API to use                                    | 3.6     |
 
-### Delete Workbooks
+### Delete Workbooks {#deleteworkbook}
 
 Delete an existing workbook by Id
 
@@ -140,7 +140,7 @@ Delete an existing workbook by Id
 | Connection    |                                                                          |         |
 | Debug Request | This flag will enable debugging and logging of the action's web request. | false   |
 
-### Get Project
+### Get Project {#getproject}
 
 Get an existing project
 
@@ -151,7 +151,7 @@ Get an existing project
 | Connection    |                                                                          |         |
 | Debug Request | This flag will enable debugging and logging of the action's web request. | false   |
 
-### Get User
+### Get User {#getuser}
 
 Get an existing user by Id
 
@@ -162,7 +162,7 @@ Get an existing user by Id
 | Connection    |                                                                          |         |
 | Debug Request | This flag will enable debugging and logging of the action's web request. | false   |
 
-### Get Webhook
+### Get Webhook {#getwebhook}
 
 Returns information about the specified webhook.
 
@@ -174,7 +174,7 @@ Returns information about the specified webhook.
 | Debug Request | This flag will enable debugging and logging of the action's web request. | false   |
 | API Version   | The version of the Tableau API to use                                    | 3.6     |
 
-### Get Workbooks
+### Get Workbooks {#getworkbook}
 
 Get an existing workbook by Id
 
@@ -185,7 +185,7 @@ Get an existing workbook by Id
 | Connection    |                                                                          |         |
 | Debug Request | This flag will enable debugging and logging of the action's web request. | false   |
 
-### List Connections
+### List Connections {#listconnections}
 
 Retrieve a list of connections connected to your Tableau site
 
@@ -198,7 +198,7 @@ Retrieve a list of connections connected to your Tableau site
 | Connection    |                                                                                   |         |
 | Debug Request | This flag will enable debugging and logging of the action's web request.          | false   |
 
-### List Projects
+### List Projects {#listprojects}
 
 Retrieve a list of projects connected to your Tableau site
 
@@ -210,7 +210,7 @@ Retrieve a list of projects connected to your Tableau site
 | Connection    |                                                                                   |         |
 | Debug Request | This flag will enable debugging and logging of the action's web request.          | false   |
 
-### List users
+### List users {#listusers}
 
 Retrieve a list of users connected to your Tableau site
 
@@ -222,7 +222,7 @@ Retrieve a list of users connected to your Tableau site
 | Connection    |                                                                                   |         |
 | Debug Request | This flag will enable debugging and logging of the action's web request.          | false   |
 
-### List Webhooks
+### List Webhooks {#listwebhooks}
 
 Returns a list of all the webhooks on the specified site.
 
@@ -235,7 +235,7 @@ Returns a list of all the webhooks on the specified site.
 | Debug Request | This flag will enable debugging and logging of the action's web request.          | false   |
 | API Version   | The version of the Tableau API to use                                             | 3.6     |
 
-### List Workbooks
+### List Workbooks {#listworkbooks}
 
 Retrieve a list of workbooks connected to your Tableau site
 
@@ -247,7 +247,7 @@ Retrieve a list of workbooks connected to your Tableau site
 | Connection    |                                                                                   |         |
 | Debug Request | This flag will enable debugging and logging of the action's web request.          | false   |
 
-### Publish Workbook
+### Publish Workbook {#publishworkbook}
 
 Publishes a workbook on the specified site.
 
@@ -264,7 +264,7 @@ Publishes a workbook on the specified site.
 | Workbook XML           |                                                                                                                                                                                                                                                                                                    |         |
 | Workbook File Contents | The twbx file to upload as binary data.                                                                                                                                                                                                                                                            |         |
 
-### Raw Request
+### Raw Request {#rawrequest}
 
 Send raw HTTP request to Tableau
 
@@ -288,7 +288,7 @@ Send raw HTTP request to Tableau
 | Use Exponential Backoff | Specifies whether to use a pre-defined exponential backoff strategy for retries. When enabled, 'Retry Delay (ms)' is ignored.                                                                                                                                                                                                                                                                                                                                                    | false   |
 | API Version             | The version of the Tableau API to use                                                                                                                                                                                                                                                                                                                                                                                                                                            | 3.6     |
 
-### Search Connections
+### Search Connections {#searchconnections}
 
 Search for a specific Connection in a Workbook
 
@@ -303,7 +303,7 @@ Search for a specific Connection in a Workbook
 | Page Number   | Provide an integer value for the page offset for the given object's results.      |         |
 | Page Size     | Provide an integer value for the maximum amount of results that will be returned. |         |
 
-### Search Projects
+### Search Projects {#searchprojects}
 
 Search for a specific project by a string of text
 
@@ -317,7 +317,7 @@ Search for a specific project by a string of text
 | Page Number   | Provide an integer value for the page offset for the given object's results.      |         |
 | Page Size     | Provide an integer value for the maximum amount of results that will be returned. |         |
 
-### Search Users
+### Search Users {#searchusers}
 
 Search for a specific User by a string of text
 
@@ -331,7 +331,7 @@ Search for a specific User by a string of text
 | Page Number   | Provide an integer value for the page offset for the given object's results.      |         |
 | Page Size     | Provide an integer value for the maximum amount of results that will be returned. |         |
 
-### Search Workbooks
+### Search Workbooks {#searchworkbooks}
 
 Search for a specific Workbook by a string of text
 
@@ -346,7 +346,7 @@ Search for a specific Workbook by a string of text
 | Page Number     | Provide an integer value for the page offset for the given object's results.      |         |
 | Page Size       | Provide an integer value for the maximum amount of results that will be returned. |         |
 
-### Test Webhook
+### Test Webhook {#testwebhook}
 
 Tests the specified webhook. Sends an empty payload to the configured destination URL of the webhook and returns the response from the server.
 
@@ -358,7 +358,7 @@ Tests the specified webhook. Sends an empty payload to the configured destinatio
 | Debug Request | This flag will enable debugging and logging of the action's web request. | false   |
 | API Version   | The version of the Tableau API to use                                    | 3.6     |
 
-### Update Connection
+### Update Connection {#updateconnection}
 
 Update the information and metadata of an existing connection by Id
 
@@ -376,7 +376,7 @@ Update the information and metadata of an existing connection by Id
 | Connection            |                                                                                             |         |
 | Debug Request         | This flag will enable debugging and logging of the action's web request.                    | false   |
 
-### Update Project
+### Update Project {#updateproject}
 
 Update the contents and metadata of an existing project by Id
 
@@ -391,7 +391,7 @@ Update the contents and metadata of an existing project by Id
 | Connection          |                                                                                                                                                                                  |         |
 | Debug Request       | This flag will enable debugging and logging of the action's web request.                                                                                                         | false   |
 
-### Update User
+### Update User {#updateuser}
 
 Update the information and metadata of an existing user
 
@@ -405,7 +405,7 @@ Update the information and metadata of an existing user
 | Connection    |                                                                                                          |         |
 | Debug Request | This flag will enable debugging and logging of the action's web request.                                 | false   |
 
-### Update Webhook
+### Update Webhook {#updatewebhook}
 
 Modify the properties of an existing webhook.
 
@@ -422,7 +422,7 @@ Modify the properties of an existing webhook.
 | Debug Request          | This flag will enable debugging and logging of the action's web request.                                     | false   |
 | API Version            | The version of the Tableau API to use                                                                        | 3.6     |
 
-### Update Workbook
+### Update Workbook {#updateworkbook}
 
 Update the information and metadata of an existing workbook by Id
 

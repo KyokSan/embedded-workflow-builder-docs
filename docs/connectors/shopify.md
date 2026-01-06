@@ -9,7 +9,7 @@ Manage customers, products, and orders in your Shopify platform
 
 ## Connections
 
-### Admin API Access Token
+### Admin API Access Token {#adminapiaccesstoken}
 
 Authenticate requests to Shopify using an access token.
 
@@ -23,7 +23,7 @@ Before publishing an integration for customers, we recommend you switch to OAuth
 | Admin API Access Token | Generate from the 'API credentials' tab of a private Shopify app that you own |                                   |
 | Host                   | The domain of your Shopify platform, without the https://                     | YOUR-SHOPIFY-DOMAIN.myshopify.com |
 
-### OAuth 2.0
+### OAuth 2.0 {#oauth2-dynamic-inputs}
 
 Authenticate requests to Shopify using values obtained from the Developer Console. Allows for using a single `domain` input instead of entering separate authorization URL's.
 
@@ -44,7 +44,7 @@ Read about how OAuth 2.0 works [here](../oauth2.md).
 | API Key    | Obtain this by creating an app at [Shopify Partners](https://partners.shopify.com/)                                                                                                                   |                                                                                                                                                                                                                              |
 | API Secret | Obtain this by creating an app at [Shopify Partners](https://partners.shopify.com/)                                                                                                                   |                                                                                                                                                                                                                              |
 
-### OAuth 2.0 (Deprecated)
+### OAuth 2.0 (Deprecated) {#oauth2}
 
 Authenticate requests to Shopify using values obtained from the Developer Console.
 
@@ -62,7 +62,7 @@ Read about how OAuth 2.0 works [here](../oauth2.md).
 
 ## Triggers
 
-### Event Topic Webhook
+### Event Topic Webhook {#eventtopicwebhookgql}
 
 Set event based webhooks and get notified when these event types are created, updated, or deleted.
 
@@ -72,7 +72,7 @@ Set event based webhooks and get notified when these event types are created, up
 | Secret Key    | The Shopify app's client secret, viewable from the Partner Dashboard.       |         |
 | Webhook Topic | The topic for the webhook. This is the event that will trigger the webhook. |         |
 
-### Event Topic Webhook (Deprecated)
+### Event Topic Webhook (Deprecated) {#eventtopicwebhook}
 
 Set event based webhooks and get notified when these event types are created, updated, or deleted. This version of the trigger is being deprecated. Please replace trigger with Event Topic Webhook.
 
@@ -82,7 +82,7 @@ Set event based webhooks and get notified when these event types are created, up
 | Connection       |                                                                      |         |
 | Event Topic Name | Event that triggers the webhook.                                     |         |
 
-### Webhook
+### Webhook {#webhook}
 
 Receive and validate webhook requests from Shopify for webhooks you configure.
 
@@ -92,7 +92,7 @@ Receive and validate webhook requests from Shopify for webhooks you configure.
 
 ## Actions
 
-### Cancel Order
+### Cancel Order {#cancelordergql}
 
 Cancel an existing order.
 
@@ -106,7 +106,7 @@ Cancel an existing order.
 | Notify Customer | Whether the customer should be notified of the cancellation.                           | false   |
 | Staff Note      | A staff-facing note about the order cancellation. This is not visible to the customer. |         |
 
-### Close Order
+### Close Order {#closeordergql}
 
 Closes a completed order.
 
@@ -115,7 +115,7 @@ Closes a completed order.
 | Connection |                                     |         |
 | Order ID   | Provide the unique ID of the order. |         |
 
-### Complete Draft Order
+### Complete Draft Order {#completedraftordergql}
 
 Mark a draft order as complete.
 
@@ -124,7 +124,7 @@ Mark a draft order as complete.
 | Connection     |                                                       |         |
 | Draft Order Id | Provide a value for the unique ID of the draft order. |         |
 
-### Connect Inventory Item To Location
+### Connect Inventory Item To Location {#connectinventorylevelgql}
 
 Connect an existing Inventory Item to an existing Location.
 
@@ -134,7 +134,7 @@ Connect an existing Inventory Item to an existing Location.
 | Location ID       | The ID of the location that the inventory level belongs to. |         |
 | Inventory Item Id | Provide a unique ID of a Inventory Item.                    |         |
 
-### Count Collections
+### Count Collections {#countcollectionsgql}
 
 Count all available collections.
 
@@ -142,7 +142,7 @@ Count all available collections.
 | ---------- | -------- | ------- |
 | Connection |          |         |
 
-### Count Customers
+### Count Customers {#countcustomersgql}
 
 Retrieve a count of all the customers connected to your platform.
 
@@ -150,7 +150,7 @@ Retrieve a count of all the customers connected to your platform.
 | ---------- | -------- | ------- |
 | Connection |          |         |
 
-### Count Draft Orders
+### Count Draft Orders {#countdraftordersgql}
 
 Returns a count of all draft orders. Note: This action currently utilizes an unstable version of the Shopify Admin GraphQL API and is subject to change.
 
@@ -159,7 +159,7 @@ Returns a count of all draft orders. Note: This action currently utilizes an uns
 | Connection    |                                                      |         |
 | Debug Request | Enabling this flag will log out the current request. | false   |
 
-### Count Location
+### Count Location {#countlocationsgql}
 
 Count the number of locations enabled on your platform.
 
@@ -167,7 +167,7 @@ Count the number of locations enabled on your platform.
 | ---------- | -------- | ------- |
 | Connection |          |         |
 
-### Count Orders
+### Count Orders {#countordersgql}
 
 Returns a count of all orders.
 
@@ -175,7 +175,7 @@ Returns a count of all orders.
 | ---------- | -------- | ------- |
 | Connection |          |         |
 
-### Count Product Images
+### Count Product Images {#countproductimagesgql}
 
 Count all product images connected to your platform.
 
@@ -184,7 +184,7 @@ Count all product images connected to your platform.
 | Connection |                                     |         |
 | Product ID | Provide a value for the product Id. |         |
 
-### Count Products
+### Count Products {#countproducts}
 
 Count all Products in your account.
 
@@ -192,7 +192,7 @@ Count all Products in your account.
 | ---------- | -------- | ------- |
 | Connection |          |         |
 
-### Count Variants
+### Count Variants {#countvariantsgql}
 
 Count all product variants.
 
@@ -200,7 +200,7 @@ Count all product variants.
 | ---------- | -------- | ------- |
 | Connection |          |         |
 
-### Create Account Activation URL
+### Create Account Activation URL {#createaccountactivationurlgql}
 
 Create an account activation URL for an existing customer.
 
@@ -209,7 +209,7 @@ Create an account activation URL for an existing customer.
 | Connection |                                                    |         |
 | Customer   | Provide a value for the unique ID of the customer. |         |
 
-### Create Customer
+### Create Customer {#createcustomer}
 
 Create a new customer.
 
@@ -229,7 +229,7 @@ Create a new customer.
 | Tax Exempt      | Determines if the customer is tax exempt.                                                                                                             | false   |
 | Metafields      | Provide a JSON array containing metadata objects.                                                                                                     |         |
 
-### Create Draft Orders
+### Create Draft Orders {#createdraftordergql}
 
 Create a new draft order.
 
@@ -244,7 +244,7 @@ Create a new draft order.
 | Tags                 | Provide a list of tags for the draft order.                                                |         |
 | Additional Fields    | Additional fields that might not be covered by the standard inputs. This is a JSON object. |         |
 
-### Create Fulfillment Service
+### Create Fulfillment Service {#createfulfillmentservicegql}
 
 Create a fulfillment service.
 
@@ -256,7 +256,7 @@ Create a fulfillment service.
 | Inventory Management     | Whether the fulfillment services tracks product inventory and provides updates to Shopify. | false   |
 | Tracking Support         | Whether the fulfillment service supports tracking numbers for packages.                    | false   |
 
-### Create Order
+### Create Order {#createordergql}
 
 Create a new order.
 
@@ -265,7 +265,7 @@ Create a new order.
 | Connection |                                            |         |
 | Order Data | JSON data to be sent as the Order payload. |         |
 
-### Create Product
+### Create Product {#createproductgql}
 
 Create a new product.
 
@@ -282,7 +282,7 @@ Create a new product.
 | Tags              | Provide a list of tags for the product.                                                    |         |
 | Additional Fields | Additional fields that might not be covered by the standard inputs. This is a JSON object. |         |
 
-### Create Product Image
+### Create Product Image {#createproductimagegql}
 
 Create a new image on an existing product.
 
@@ -293,7 +293,7 @@ Create a new image on an existing product.
 | Image URL      | Provide the URL of the image.       |         |
 | Image Alt Text | Provide the alt text for the image. |         |
 
-### Create Variant
+### Create Variant {#createvariantgql}
 
 Create a new variant of the provided product.
 
@@ -303,7 +303,7 @@ Create a new variant of the provided product.
 | Product ID | Provide a value for the product Id.                |         |
 | Variant    | Provide a JSON object containing the variant data. |         |
 
-### Create Webhook
+### Create Webhook {#createwebhook}
 
 Creates a webhook for the desired topic in your Shopify store.
 
@@ -314,7 +314,7 @@ Creates a webhook for the desired topic in your Shopify store.
 | Post URL       | Provide a string value for the URL the newly created webhook will post to. You can use this input to configure your Shopify trigger.                                                                                |         |
 | Webhook Format | Provide a string value for the format you would like your webhook to return.                                                                                                                                        | json    |
 
-### Delete Collection
+### Delete Collection {#deletecollectiongql}
 
 Delete a collection by ID.
 
@@ -323,7 +323,7 @@ Delete a collection by ID.
 | Connection    |                                      |         |
 | Collection ID | Provide a unique ID of a collection. |         |
 
-### Delete Customer
+### Delete Customer {#deletecustomergql}
 
 Delete an existing customer.
 
@@ -332,7 +332,7 @@ Delete an existing customer.
 | Connection |                                                    |         |
 | Customer   | Provide a value for the unique ID of the customer. |         |
 
-### Delete Draft Order
+### Delete Draft Order {#deletedraftordergql}
 
 Delete the information and metadata of a Draft Order.
 
@@ -341,7 +341,7 @@ Delete the information and metadata of a Draft Order.
 | Connection     |                                                       |         |
 | Draft Order Id | Provide a value for the unique ID of the draft order. |         |
 
-### Delete Fulfillment Service
+### Delete Fulfillment Service {#deletefulfillmentservicegql}
 
 Deletes an existing fulfillment service.
 
@@ -350,7 +350,7 @@ Deletes an existing fulfillment service.
 | Connection             |                                                   |         |
 | Fulfillment Service ID | Provide the unique ID of the fulfillment service. |         |
 
-### Delete Instance Webhooks
+### Delete Instance Webhooks {#deleteinstancewebhooks}
 
 Delete all webhooks related to this instance.
 
@@ -358,7 +358,7 @@ Delete all webhooks related to this instance.
 | ---------- | -------- | ------- |
 | Connection |          |         |
 
-### Delete Inventory Levels
+### Delete Inventory Levels {#deleteinventorylevelsgql}
 
 Delete the information and metadata of an Inventory Level.
 
@@ -367,7 +367,7 @@ Delete the information and metadata of an Inventory Level.
 | Connection         |                                            |         |
 | Inventory Level Id | Provide a unique ID of an Inventory Level. |         |
 
-### Delete Metafield
+### Delete Metafield {#deletemetafieldgql}
 
 Delete a resource metafield. Note: This action currently utilizes an unstable version of the Shopify Admin GraphQL API and is subject to change.
 
@@ -378,7 +378,7 @@ Delete a resource metafield. Note: This action currently utilizes an unstable ve
 | Owner ID   | Provide the owner ID of the metafield to delete.  |         |
 | Namespace  | Provide the namespace of the metafield to delete. |         |
 
-### Delete Order
+### Delete Order {#deleteordergql}
 
 Delete an existing order by Id.
 
@@ -387,7 +387,7 @@ Delete an existing order by Id.
 | Connection |                                     |         |
 | Order ID   | Provide the unique ID of the order. |         |
 
-### Delete Product
+### Delete Product {#deleteproductgql}
 
 Delete an existing product.
 
@@ -396,7 +396,7 @@ Delete an existing product.
 | Connection |                                     |         |
 | Product ID | Provide a value for the product Id. |         |
 
-### Delete Product Image
+### Delete Product Image {#deleteproductimagegql}
 
 Delete the information and metadata of a product image connected to your platform.
 
@@ -406,7 +406,7 @@ Delete the information and metadata of a product image connected to your platfor
 | Product ID | Provide a value for the product Id.     |         |
 | Image ID   | Provide a unique ID of a product image. |         |
 
-### Delete Variant
+### Delete Variant {#deletevariantgql}
 
 Delete an existing variant by Id.
 
@@ -416,7 +416,7 @@ Delete an existing variant by Id.
 | Product ID | Provide a value for the product Id. |         |
 | Variant ID | Provide a unique ID of a variant.   |         |
 
-### Delete Webhook
+### Delete Webhook {#deletewebhook}
 
 Delete a webhook by ID.
 
@@ -425,7 +425,7 @@ Delete a webhook by ID.
 | Connection |                               |         |
 | Webhook ID | The ID of an existing webhook |         |
 
-### Get Collection
+### Get Collection {#getcollectiongql}
 
 Get a collection by Id.
 
@@ -434,7 +434,7 @@ Get a collection by Id.
 | Connection    |                                      |         |
 | Collection ID | Provide a unique ID of a collection. |         |
 
-### Get Customer
+### Get Customer {#getcustomer}
 
 Get a customers information and metadata by Id.
 
@@ -443,7 +443,7 @@ Get a customers information and metadata by Id.
 | Customer   | Provide a value for the unique ID of the customer. |         |
 | Connection |                                                    |         |
 
-### Get Draft Order
+### Get Draft Order {#getdraftordergql}
 
 Get the information and metadata of a Draft Order.
 
@@ -452,7 +452,7 @@ Get the information and metadata of a Draft Order.
 | Connection     |                                                       |         |
 | Draft Order Id | Provide a value for the unique ID of the draft order. |         |
 
-### Get Fulfillment
+### Get Fulfillment {#getfulfillmentgql}
 
 Get the information and metadata of a fulfillment enabled on your platform.
 
@@ -461,7 +461,7 @@ Get the information and metadata of a fulfillment enabled on your platform.
 | Connection     |                                       |         |
 | Fulfillment Id | Provide a unique ID of a fulfillment. |         |
 
-### Get Fulfillment Order
+### Get Fulfillment Order {#getfulfillmentorder}
 
 Retrieve a specific fulfillment order.
 
@@ -470,7 +470,7 @@ Retrieve a specific fulfillment order.
 | Connection           |                                            |         |
 | Fulfillment Order ID | Provide a unique ID of a fulfillment order |         |
 
-### Get Fulfillment Service
+### Get Fulfillment Service {#getfulfillmentservicegql}
 
 Retrieve a fulfillment service enabled on your platform by its ID.
 
@@ -479,7 +479,7 @@ Retrieve a fulfillment service enabled on your platform by its ID.
 | Connection             |                                                   |         |
 | Fulfillment Service ID | Provide the unique ID of the fulfillment service. |         |
 
-### Get Inventory Item
+### Get Inventory Item {#getinventoryitemsgql}
 
 Get the information and metadata of an Inventory Item enabled on your platform.
 
@@ -488,7 +488,7 @@ Get the information and metadata of an Inventory Item enabled on your platform.
 | Inventory Item Id | Provide a unique ID of a Inventory Item. |         |
 | Connection        |                                          |         |
 
-### Get Inventory Levels
+### Get Inventory Levels {#getinventorylevelsgql}
 
 Get the information and metadata of an Inventory Level.
 
@@ -498,7 +498,7 @@ Get the information and metadata of an Inventory Level.
 | Inventory Level Id | Provide a unique ID of an Inventory Level.           |         |
 | Debug Request      | Enabling this flag will log out the current request. | false   |
 
-### Get Location
+### Get Location {#getlocationsgql}
 
 Get the information and metadata of a location enabled on your platform.
 
@@ -507,7 +507,7 @@ Get the information and metadata of a location enabled on your platform.
 | Connection  |                                                             |         |
 | Location ID | The ID of the location that the inventory level belongs to. |         |
 
-### Get Order
+### Get Order {#getordergql}
 
 Get the information and metadata about an order.
 
@@ -516,7 +516,7 @@ Get the information and metadata about an order.
 | Connection |                                     |         |
 | Order ID   | Provide the unique ID of the order. |         |
 
-### Get Order (Deprecated)
+### Get Order (Deprecated) {#getorder}
 
 Get the information and metadata about an order. This version of the action is being deprecated. Please replace action with Get Order.
 
@@ -525,7 +525,7 @@ Get the information and metadata about an order. This version of the action is b
 | Order ID   | Provide the unique ID of the order. |         |
 | Connection |                                     |         |
 
-### Get Product
+### Get Product {#getproduct}
 
 Get the information and metadata of a product by Id.
 
@@ -534,7 +534,7 @@ Get the information and metadata of a product by Id.
 | Product ID | Provide a value for the product Id. |         |
 | Connection |                                     |         |
 
-### Get Product Image
+### Get Product Image {#getproductimagegql}
 
 Get the information and metadata of a product image connected to your platform.
 
@@ -544,7 +544,7 @@ Get the information and metadata of a product image connected to your platform.
 | Product ID | Provide a value for the product Id.                             |         |
 | Image ID   | Provide a unique ID of a product image. Use only the ID number. |         |
 
-### Get Shop Configuration
+### Get Shop Configuration {#getshopconfig}
 
 Retrieve the shop's current configuration.
 
@@ -552,7 +552,7 @@ Retrieve the shop's current configuration.
 | ---------- | -------- | ------- |
 | Connection |          |         |
 
-### Get Variant
+### Get Variant {#getvariantgql}
 
 Get the information or metadata of a variant by Id.
 
@@ -561,7 +561,7 @@ Get the information or metadata of a variant by Id.
 | Connection |                                   |         |
 | Variant ID | Provide a unique ID of a variant. |         |
 
-### List Collections
+### List Collections {#listcollectionsgql}
 
 List all collections enabled on your platform.
 
@@ -573,7 +573,7 @@ List all collections enabled on your platform.
 | Page Offset Cursor | Provide a cursor to offset the results. This is used to get the next page of results.                                                                                          |         |
 | Debug Request      | Enabling this flag will log out the current request.                                                                                                                           | false   |
 
-### List Currencies
+### List Currencies {#listcurrenciesgql}
 
 List all currencies enabled on your platform.
 
@@ -584,7 +584,7 @@ List all currencies enabled on your platform.
 | Fetch All          | API is limited to 250 records per page max, turn this ON to get all data from all pages. When turned ON, the 'Limit' and 'Page Offset Cursor' inputs are ignored.              | false   |
 | Page Offset Cursor | Provide a cursor to offset the results. This is used to get the next page of results.                                                                                          |         |
 
-### List Customers
+### List Customers {#listcustomers}
 
 List all customers connected to your platform.
 
@@ -595,7 +595,7 @@ List all customers connected to your platform.
 | Page Offset Token | Provide the page offset token for the given object's results. This is a unique ID used to access a certain page of results.                                                                                                 |         |
 | Connection        |                                                                                                                                                                                                                             |         |
 
-### List Draft Orders
+### List Draft Orders {#listdraftorders}
 
 List all draft orders.
 
@@ -606,7 +606,7 @@ List all draft orders.
 | Page Offset Token | Provide the page offset token for the given object's results. This is a unique ID used to access a certain page of results.                                                                                                 |         |
 | Connection        |                                                                                                                                                                                                                             |         |
 
-### List Fulfillment Orders
+### List Fulfillment Orders {#listfulfillmentorders}
 
 Retrieves a list of fulfillment orders for a specific order.
 
@@ -615,7 +615,7 @@ Retrieves a list of fulfillment orders for a specific order.
 | Connection |                                     |         |
 | Order ID   | Provide the unique ID of the order. |         |
 
-### List Fulfillments
+### List Fulfillments {#listfulfillments}
 
 List all fulfillments enabled on your platform.
 
@@ -627,7 +627,7 @@ List all fulfillments enabled on your platform.
 | Page Offset Token | Provide the page offset token for the given object's results. This is a unique ID used to access a certain page of results.                                                                                                 |         |
 | Connection        |                                                                                                                                                                                                                             |         |
 
-### List Fulfillment Services
+### List Fulfillment Services {#listfulfillmentservicesgql}
 
 List all fulfillment services enabled on your platform.
 
@@ -635,7 +635,7 @@ List all fulfillment services enabled on your platform.
 | ---------- | -------- | ------- |
 | Connection |          |         |
 
-### List Inventory Items
+### List Inventory Items {#listinventoryitemsgql}
 
 List all Inventory Items enabled on your platform.
 
@@ -647,7 +647,7 @@ List all Inventory Items enabled on your platform.
 | Limit              | Provide an integer value for the maximum amount of results that will be returned. Provide a value from 1 to 250. To get more than 250 results, turn the 'Fetch All' toggle ON. | 50      |
 | Page Offset Cursor | Provide a cursor to offset the results. This is used to get the next page of results.                                                                                          |         |
 
-### List Inventory Levels At Location
+### List Inventory Levels At Location {#listinventorylevelsgql}
 
 List all Inventory Levels.
 
@@ -659,7 +659,7 @@ List all Inventory Levels.
 | Limit              | Provide an integer value for the maximum amount of results that will be returned. Provide a value from 1 to 250. To get more than 250 results, turn the 'Fetch All' toggle ON. | 50      |
 | Page Offset Cursor | Provide a cursor to offset the results. This is used to get the next page of results.                                                                                          |         |
 
-### List Locations
+### List Locations {#listlocationsgql}
 
 List all locations enabled on your platform.
 
@@ -670,7 +670,7 @@ List all locations enabled on your platform.
 | Fetch All          | API is limited to 250 records per page max, turn this ON to get all data from all pages. When turned ON, the 'Limit' and 'Page Offset Cursor' inputs are ignored.              | false   |
 | Page Offset Cursor | Provide a cursor to offset the results. This is used to get the next page of results.                                                                                          |         |
 
-### List Metafields
+### List Metafields {#listmetafieldsgql}
 
 List resource metafields. Note: This action currently utilizes an unstable version of the Shopify Admin GraphQL API and is subject to change.
 
@@ -682,7 +682,7 @@ List resource metafields. Note: This action currently utilizes an unstable versi
 | Fetch All          | API is limited to 250 records per page max, turn this ON to get all data from all pages. When turned ON, the 'Limit' and 'Page Offset Cursor' inputs are ignored.              | false   |
 | Page Offset Cursor | Provide a cursor to offset the results. This is used to get the next page of results.                                                                                          |         |
 
-### List Orders
+### List Orders {#listordersgql}
 
 List all orders.
 
@@ -694,7 +694,7 @@ List all orders.
 | Limit              | Provide an integer value for the maximum amount of results that will be returned. Provide a value from 1 to 250. To get more than 250 results, turn the 'Fetch All' toggle ON. | 50      |
 | Page Offset Cursor | Provide a cursor to offset the results. This is used to get the next page of results.                                                                                          |         |
 
-### List Orders (Deprecated)
+### List Orders (Deprecated) {#listorders}
 
 List all orders. This version of the action is being deprecated. Please replace action with List Orders.
 
@@ -718,7 +718,7 @@ List all orders. This version of the action is being deprecated. Please replace 
 | Updated At Max     | Show orders last updated at or before date. ISO 8601 format like 2021-10-01 or 2021-10-01T00:00:00-04:00 for exact time.                                                                                                    |         |
 | Updated At Min     | Show orders last updated at or after date. ISO 8601 format like 2021-10-01 or 2021-10-01T00:00:00-04:00 for exact time.                                                                                                     |         |
 
-### List Product Images
+### List Product Images {#listproductimages}
 
 List all product images connected to your platform.
 
@@ -727,7 +727,7 @@ List all product images connected to your platform.
 | Product ID | Provide a value for the product Id. |         |
 | Connection |                                     |         |
 
-### List Products
+### List Products {#listproducts}
 
 List all products connected to your platform.
 
@@ -738,7 +738,7 @@ List all products connected to your platform.
 | Page Offset Token | Provide the page offset token for the given object's results. This is a unique ID used to access a certain page of results.                                                                                                 |         |
 | Connection        |                                                                                                                                                                                                                             |         |
 
-### List Variants
+### List Variants {#listvariantsgql}
 
 List all variants connected to the provided product.
 
@@ -750,7 +750,7 @@ List all variants connected to the provided product.
 | Limit              | Provide an integer value for the maximum amount of results that will be returned. Provide a value from 1 to 250. To get more than 250 results, turn the 'Fetch All' toggle ON. | 50      |
 | Page Offset Cursor | Provide a cursor to offset the results. This is used to get the next page of results.                                                                                          |         |
 
-### List Webhooks
+### List Webhooks {#listwebhooks}
 
 List all webhooks or webhooks for this instance.
 
@@ -759,7 +759,7 @@ List all webhooks or webhooks for this instance.
 | Connection                  |                                                |         |
 | Show only instance webhooks | Show only webhooks that point to this instance | true    |
 
-### Raw Request
+### Raw Request {#graphqlrawrequest}
 
 Send raw GraphQL request to Shopify.
 
@@ -771,7 +771,7 @@ Send raw GraphQL request to Shopify.
 | Variables         | Variables to pass to the query or mutation.                                                                |         |
 | Variables Object  | Variables to pass to the query or mutation.                                                                |         |
 
-### Raw Request (Deprecated)
+### Raw Request (Deprecated) {#rawrequest}
 
 Send raw HTTP request to Shopify. This version of the action uses REST and is being deprecated. Please replace action with the Raw Request utilizing GraphQL.
 
@@ -796,7 +796,7 @@ Send raw HTTP request to Shopify. This version of the action uses REST and is be
 | API Version             | Shopify versions its API. See https://shopify.dev/docs/api/release-notes for a list of available versions.                                                                                                                                                                                       | 2024-10 |
 | Return Headers          | Return response headers in the output object.                                                                                                                                                                                                                                                    | false   |
 
-### Set Metafield
+### Set Metafield {#setmetafieldgql}
 
 Set a resource metafield. Note: This action currently utilizes an unstable version of the Shopify Admin GraphQL API and is subject to change.
 
@@ -809,7 +809,7 @@ Set a resource metafield. Note: This action currently utilizes an unstable versi
 | Type       | Provide a type for the metafield. Required when there is no corresponding definition for the given namespace, key, and owner resource type. |         |
 | Namespace  | Provide a namespace for the metafield.                                                                                                      |         |
 
-### Update Customer
+### Update Customer {#updatecustomergql}
 
 Update the information and metadata of an existing customer by Id.
 
@@ -828,7 +828,7 @@ Update the information and metadata of an existing customer by Id.
 | Metafields        | Provide a JSON array containing metadata objects.                                          |         |
 | Additional Fields | Additional fields that might not be covered by the standard inputs. This is a JSON object. |         |
 
-### Update Fulfillment Service
+### Update Fulfillment Service {#updatefulfillmentservicegql}
 
 Modify an existing fulfillment service.
 
@@ -842,7 +842,7 @@ Modify an existing fulfillment service.
 | Tracking Support         | Whether the fulfillment service supports tracking numbers for packages.                    |         |
 | Debug Request            | Enabling this flag will log out the current request.                                       | false   |
 
-### Update Inventory Item
+### Update Inventory Item {#updateinventoryitemsgql}
 
 Update the information and metadata of an Inventory Item enabled on your platform.
 
@@ -854,7 +854,7 @@ Update the information and metadata of an Inventory Item enabled on your platfor
 | Cost              | Unit cost associated with the inventory item, the currency is the shop's default currency. |         |
 | Tracked           | Whether the inventory item is tracked.                                                     |         |
 
-### Update Product
+### Update Product {#updateproductgql}
 
 Update the information and metadata of an existing product by Id.
 
@@ -872,7 +872,7 @@ Update the information and metadata of an existing product by Id.
 | Tags              | For each list item, provide a string you would like to tag the product with.               |         |
 | Additional Fields | Additional fields that might not be covered by the standard inputs. This is a JSON object. |         |
 
-### Update Variant
+### Update Variant {#updatevariantgql}
 
 Update the information and metadata of an existing product variant by Id.
 

@@ -9,7 +9,7 @@ Stop the execution of an instance
 
 ## Actions
 
-### Stop Execution
+### Stop Execution {#stopexecution}
 
 Terminates the current execution
 

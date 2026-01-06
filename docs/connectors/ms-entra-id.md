@@ -9,7 +9,7 @@ Microsoft Entra ID (Formerly Azure Active Directory) is a cloud-based identity a
 
 ## Connections
 
-### OAuth 2.0
+### OAuth 2.0 {#msentraidoauth2}
 
 OAuth 2.0 Connectivity for Microsoft Entra ID
 
@@ -53,7 +53,7 @@ Read about how OAuth 2.0 works [here](../oauth2.md).
 
 ## Triggers
 
-### Group Trigger
+### Group Trigger {#grouptrigger}
 
 Get notified to this flow when a group changes.
 
@@ -63,7 +63,7 @@ Get notified to this flow when a group changes.
 | Change Type          | Indicates the type of change that raises a notification.                                                                                                                                           |         |
 | Expiration Date Time | The date and time when the trigger subscription expires. If not specified, the subscription defaults to 29 days from the current date and time. This trigger must be reactivated after expiration. |         |
 
-### User Trigger
+### User Trigger {#usertrigger}
 
 Get notified to this flow when a user changes.
 
@@ -73,13 +73,13 @@ Get notified to this flow when a user changes.
 | Change Type          | Indicates the type of change that raises a notification.                                                                                                                                           |         |
 | Expiration Date Time | The date and time when the trigger subscription expires. If not specified, the subscription defaults to 29 days from the current date and time. This trigger must be reactivated after expiration. |         |
 
-### Webhook
+### Webhook {#webhook}
 
 Receive and validate webhook requests from Microsoft Entra ID for webhooks you configure.
 
 ## Actions
 
-### Add Member to Group
+### Add Member to Group {#addmembertogroup}
 
 Add a member to a group.
 
@@ -90,7 +90,7 @@ Add a member to a group.
 | Group Member OData ID | The @odata.id property with a reference by ID to a supported group member object type. |         |
 | Debug Request         | Enabling this flag will log out the current request.                                   | false   |
 
-### Create Application
+### Create Application {#createapplication}
 
 Creates (registers) a new application.
 
@@ -101,7 +101,7 @@ Creates (registers) a new application.
 | Additional Properties | Additional properties that are not covered by the other inputs. This should be a JSON object and will be merged with the other inputs. https://learn.microsoft.com/en-us/graph/api/application-post-applications |         |
 | Debug Request         | Enabling this flag will log out the current request.                                                                                                                                                             | false   |
 
-### Create Group
+### Create Group {#creategroup}
 
 Create a new group. It can be a Microsoft 365 group, dynamic group, or security group.
 
@@ -116,7 +116,7 @@ Create a new group. It can be a Microsoft 365 group, dynamic group, or security 
 | Additional Properties | Additional properties that are not covered by the other inputs. This should be a JSON object and will be merged with the other inputs. https://learn.microsoft.com/en-us/graph/api/group-post-groups              |         |
 | Debug Request         | Enabling this flag will log out the current request.                                                                                                                                                              | false   |
 
-### Create Subscription
+### Create Subscription {#createsubscription}
 
 Create a subscription to receive notifications when changes occur in the specified object.
 
@@ -131,7 +131,7 @@ Create a subscription to receive notifications when changes occur in the specifi
 | Header                | A list of headers to send with the request.                                                                                                                                                                        |         |
 | Debug Request         | Enabling this flag will log out the current request.                                                                                                                                                               | false   |
 
-### Create User
+### Create User {#createuser}
 
 Create a new user.
 
@@ -147,7 +147,7 @@ Create a new user.
 | Additional Properties              | Additional properties that are not covered by the other inputs. This should be a JSON object and will be merged with the other inputs. https://learn.microsoft.com/en-us/graph/api/user-post-users |         |
 | Debug Request                      | Enabling this flag will log out the current request.                                                                                                                                               | false   |
 
-### Delete Application
+### Delete Application {#deleteapplication}
 
 Delete application object.
 
@@ -157,7 +157,7 @@ Delete application object.
 | Application Object ID | The ID of the application to delete.                 |         |
 | Debug Request         | Enabling this flag will log out the current request. | false   |
 
-### Delete Group
+### Delete Group {#deletegroup}
 
 Delete group object.
 
@@ -167,7 +167,7 @@ Delete group object.
 | Group Id      | The ID of the group to delete.                       |         |
 | Debug Request | Enabling this flag will log out the current request. | false   |
 
-### Delete Instanced Subscriptions
+### Delete Instanced Subscriptions {#deleteinstancedsubscriptions}
 
 Delete all webhooks that point to a flow in this instance.
 
@@ -176,7 +176,7 @@ Delete all webhooks that point to a flow in this instance.
 | Connection    |                                                      |         |
 | Debug Request | Enabling this flag will log out the current request. | false   |
 
-### Delete Subscription
+### Delete Subscription {#deletesubscription}
 
 Deletes a subscription object.
 
@@ -186,7 +186,7 @@ Deletes a subscription object.
 | Subscription ID | The ID of the subscription to delete.                |         |
 | Debug Request   | Enabling this flag will log out the current request. | false   |
 
-### Delete User
+### Delete User {#deleteuser}
 
 Deletes a User.
 
@@ -196,7 +196,7 @@ Deletes a User.
 | User Id       | Unique Identifier for the user to delete. This can be the user's id or userPrincipalName. |         |
 | Debug Request | Enabling this flag will log out the current request.                                      | false   |
 
-### Get Application
+### Get Application {#getapplication}
 
 Read properties of an application object.
 
@@ -206,7 +206,7 @@ Read properties of an application object.
 | Application Object ID | The ID of the application to read.                   |         |
 | Debug Request         | Enabling this flag will log out the current request. | false   |
 
-### Get Group
+### Get Group {#getgroup}
 
 Read properties of a group object.
 
@@ -217,7 +217,7 @@ Read properties of a group object.
 | Select        | Filters properties (columns).                        |         |
 | Debug Request | Enabling this flag will log out the current request. | false   |
 
-### Get Subscription
+### Get Subscription {#getsubscription}
 
 Read properties of a subscription object.
 
@@ -227,7 +227,7 @@ Read properties of a subscription object.
 | Subscription ID | The ID of the subscription to read.                  |         |
 | Debug Request   | Enabling this flag will log out the current request. | false   |
 
-### Get User
+### Get User {#getuser}
 
 Read properties and relationships of the User object.
 
@@ -238,7 +238,7 @@ Read properties and relationships of the User object.
 | Select        | Filters properties (columns).                                                          |         |
 | Debug Request | Enabling this flag will log out the current request.                                   | false   |
 
-### List Applications
+### List Applications {#listapplications}
 
 Retrieve the list of applications in the organization.
 
@@ -256,7 +256,7 @@ Retrieve the list of applications in the organization.
 | Eventual Consistency Level Header | Add the header to the request to specify the eventual consistency level. Required for some OData properties.     | false   |
 | Debug Request                     | Enabling this flag will log out the current request.                                                             | false   |
 
-### List Changes
+### List Changes {#listchanges}
 
 Track changes in an object and its children over time.
 
@@ -271,7 +271,7 @@ Track changes in an object and its children over time.
 | Return Minimal         | Returns only the object properties that have changed since the last round when using @odata.deltaLink.                                                                           | false   |
 | Debug Request          | Enabling this flag will log out the current request.                                                                                                                             | false   |
 
-### List Group
+### List Group {#listgroup}
 
 List group objects and their properties.
 
@@ -289,7 +289,7 @@ List group objects and their properties.
 | Eventual Consistency Level Header | Add the header to the request to specify the eventual consistency level. Required for some OData properties.     | false   |
 | Debug Request                     | Enabling this flag will log out the current request.                                                             | false   |
 
-### List Group Members
+### List Group Members {#listgroupmembers}
 
 Get the direct members of this group from the members navigation property.
 
@@ -307,7 +307,7 @@ Get the direct members of this group from the members navigation property.
 | Eventual Consistency Level Header | Add the header to the request to specify the eventual consistency level. Required for some OData properties.     | false   |
 | Debug Request                     | Enabling this flag will log out the current request.                                                             | false   |
 
-### List Subscriptions
+### List Subscriptions {#listsubscriptions}
 
 Lists active subscriptions.
 
@@ -317,7 +317,7 @@ Lists active subscriptions.
 | Get All Paginated Results | Set to true to retrieve all subscriptions.           | false   |
 | Debug Request             | Enabling this flag will log out the current request. | false   |
 
-### List Users
+### List Users {#listusers}
 
 Retrieve a list of user objects.
 
@@ -335,7 +335,7 @@ Retrieve a list of user objects.
 | Eventual Consistency Level Header | Add the header to the request to specify the eventual consistency level. Required for some OData properties.     | false   |
 | Debug Request                     | Enabling this flag will log out the current request.                                                             | false   |
 
-### Raw Request
+### Raw Request {#rawrequest}
 
 Send raw HTTP request to Microsoft Entra ID.
 
@@ -358,7 +358,7 @@ Send raw HTTP request to Microsoft Entra ID.
 | Max Retry Count         | The maximum number of retries to attempt. Specify 0 for no retries.                                                                                                                                         | 0       |
 | Use Exponential Backoff | Specifies whether to use a pre-defined exponential backoff strategy for retries. When enabled, 'Retry Delay (ms)' is ignored.                                                                               | false   |
 
-### Remove Member of Group
+### Remove Member of Group {#removememberofgroup}
 
 Remove a member from a Microsoft 365 group or a security group through the members navigation property.
 
@@ -369,7 +369,7 @@ Remove a member from a Microsoft 365 group or a security group through the membe
 | Member ID     | The ID of the member to remove from the group.       |         |
 | Debug Request | Enabling this flag will log out the current request. | false   |
 
-### Update Subscription
+### Update Subscription {#updatesubscription}
 
 Updates a subscription expiration time for renewal and/or updates the notificationUrl for delivery.
 
@@ -381,7 +381,7 @@ Updates a subscription expiration time for renewal and/or updates the notificati
 | Expiration Date Time | Specifies the date and time when the webhook subscription expires. The time is in UTC, and can be an amount of time from subscription creation that varies for the resource subscribed to. |         |
 | Debug Request        | Enabling this flag will log out the current request.                                                                                                                                       | false   |
 
-### Update User
+### Update User {#updateuser}
 
 Update the properties of a User object.
 
@@ -399,7 +399,7 @@ Update the properties of a User object.
 | Additional Properties | Additional properties that are not covered by the other inputs. This should be a JSON object and will be merged with the other inputs. https://learn.microsoft.com/en-us/graph/api/user-update |         |
 | Debug Request         | Enabling this flag will log out the current request.                                                                                                                                           | false   |
 
-### Upsert Application
+### Upsert Application {#upsertapplication}
 
 Create a new application if it doesn't exist, or update the properties of an existing application.
 
@@ -412,7 +412,7 @@ Create a new application if it doesn't exist, or update the properties of an exi
 | Additional Properties | Additional properties that are not covered by the other inputs. This should be a JSON object and will be merged with the other inputs. https://learn.microsoft.com/en-us/graph/api/application-upsert |         |
 | Debug Request         | Enabling this flag will log out the current request.                                                                                                                                                  | false   |
 
-### Upsert Group
+### Upsert Group {#upsertgroup}
 
 Create a new group if it doesn't exist, or update the properties of an existing group.
 

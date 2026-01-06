@@ -9,7 +9,7 @@ Manage files stored in Box
 
 ## Connections
 
-### Box Developer Token
+### Box Developer Token {#apikey}
 
 Box Developer Token
 
@@ -17,7 +17,7 @@ A **Developer Token** is a short-lived (60-minute) token that you can use for te
 A developer token allows you to use the Box API to access your personal Box account only.
 
 :::note
-When your integration is ready for production, you'll need an [OAuth 2.0](#box-oauth-20-connection) connection to authenticate your customers' Box accounts.
+When your integration is ready for production, you'll need an [OAuth 2.0](#oauth2) connection to authenticate your customers' Box accounts.
 You can also do your testing with OAuth.
 :::
 
@@ -25,7 +25,7 @@ You can also do your testing with OAuth.
 | --------------- | -------------------------------------------------- | ------- |
 | Developer Token | A short-lived developer token for testing purposes |         |
 
-### Box OAuth 2.0 Connection
+### Box OAuth 2.0 Connection {#oauth2}
 
 Box OAuth 2.0 Connection
 
@@ -56,13 +56,13 @@ Read about how OAuth 2.0 works [here](../oauth2.md).
 
 ## Triggers
 
-### Webhook
+### Webhook {#webhook}
 
 Receive and validate webhook requests from Box for webhooks you configure.
 
 ## Actions
 
-### Add Shared Link to File
+### Add Shared Link to File {#addsharedlinktofile}
 
 Adds a shared link to a file
 
@@ -76,7 +76,7 @@ Adds a shared link to a file
 | Shared Link Vanity Name | The custom vanity name for the shared link                                    |                                                                                                     |
 | Connection              |                                                                               |                                                                                                     |
 
-### Add Shared Link to Folder
+### Add Shared Link to Folder {#addsharedlinktofolder}
 
 Adds a shared link to a folder
 
@@ -90,7 +90,7 @@ Adds a shared link to a folder
 | Shared Link Vanity Name        | The custom vanity name for the shared link                                    |                                                                             |
 | Connection                     |                                                                               |                                                                             |
 
-### Copy Object
+### Copy Object {#copyobject}
 
 Copy a Folder or File from one path to another
 
@@ -100,7 +100,7 @@ Copy a Folder or File from one path to another
 | To Path    | This represents the destination files's path. Include a leading / |         |
 | Connection |                                                                   |         |
 
-### Create Folder
+### Create Folder {#createfolder}
 
 Create a Folder at the specified path
 
@@ -109,7 +109,7 @@ Create a Folder at the specified path
 | Path       | This represents the files's path. Include a leading / |         |
 | Connection |                                                       |         |
 
-### Create Webhook
+### Create Webhook {#createwebhook}
 
 Create a webhook to send data from Box to an instance URL
 
@@ -123,7 +123,7 @@ Create a webhook to send data from Box to an instance URL
 | Secondary Signature Key | A signature key used to validate webhook requests        |         |
 | Connection              |                                                          |         |
 
-### Delete Instance Webhooks
+### Delete Instance Webhooks {#deleteinstancewebhooks}
 
 Delete all Box webhooks that point to a flow in this instance
 
@@ -131,7 +131,7 @@ Delete all Box webhooks that point to a flow in this instance
 | ---------- | -------- | ------- |
 | Connection |          |         |
 
-### Delete Object
+### Delete Object {#deleteobject}
 
 Delete a Folder or File at the specified path
 
@@ -140,7 +140,7 @@ Delete a Folder or File at the specified path
 | Path       | This represents the files's path. Include a leading / |         |
 | Connection |                                                       |         |
 
-### Delete Webhook
+### Delete Webhook {#deletewebhook}
 
 Delete a webhook by ID
 
@@ -149,7 +149,7 @@ Delete a webhook by ID
 | Connection |                       |         |
 | Webhook ID | The ID of the webhook |         |
 
-### Download File
+### Download File {#downloadfile}
 
 Download the file at the specified path
 
@@ -158,7 +158,7 @@ Download the file at the specified path
 | Path       | This represents the files's path. Include a leading / |         |
 | Connection |                                                       |         |
 
-### Find File For Shared Link
+### Find File For Shared Link {#findfileforsharedlink}
 
 Returns the file represented by a shared link
 
@@ -169,7 +169,7 @@ Returns the file represented by a shared link
 | Fields               | A comma-separated list of attributes to include in the response. |         |
 | Connection           |                                                                  |         |
 
-### Find Folder For Shared Link
+### Find Folder For Shared Link {#findfolderforsharedlink}
 
 Returns the folder represented by a shared link
 
@@ -180,7 +180,7 @@ Returns the folder represented by a shared link
 | Fields               | A comma-separated list of attributes to include in the response. |         |
 | Connection           |                                                                  |         |
 
-### Get Current User
+### Get Current User {#getcurrentuser}
 
 Get the information and metadata of the user that is currently logged in
 
@@ -188,7 +188,7 @@ Get the information and metadata of the user that is currently logged in
 | ---------- | -------- | ------- |
 | Connection |          |         |
 
-### Get File Download URL
+### Get File Download URL {#getfiledownloadurl}
 
 Get a URL to download the file at the specified path
 
@@ -197,7 +197,7 @@ Get a URL to download the file at the specified path
 | Path       | This represents the files's path. Include a leading / |         |
 | Connection |                                                       |         |
 
-### Get Shared Link For File
+### Get Shared Link For File {#getsharedlinkforfile}
 
 Gets the shared link for a file
 
@@ -206,7 +206,7 @@ Gets the shared link for a file
 | File ID    | The unique identifier of the file |         |
 | Connection |                                   |         |
 
-### Get Shared Link For Folder
+### Get Shared Link For Folder {#getsharedlinkforfolder}
 
 Gets the shared link for a folder
 
@@ -215,7 +215,7 @@ Gets the shared link for a folder
 | Folder ID  | The unique identifier that represents a folder |         |
 | Connection |                                                |         |
 
-### List Folder
+### List Folder {#listfolderwithpagination}
 
 List Folder contents at the specified path.
 
@@ -229,7 +229,7 @@ List Folder contents at the specified path.
 | Offset          | The offset of the item at which to begin the response.                                                                                                                                                                          |         |
 | Connection      |                                                                                                                                                                                                                                 |         |
 
-### List Folder (Deprecated)
+### List Folder (Deprecated) {#listfolder}
 
 List Folder contents at the specified path. This version of the action is being deprecated. Please replace action with List Folder.
 
@@ -241,7 +241,7 @@ List Folder contents at the specified path. This version of the action is being 
 | Offset     | The offset of the item at which to begin the response.                                                          |         |
 | Connection |                                                                                                                 |         |
 
-### List Webhooks
+### List Webhooks {#listwebhooks}
 
 List all webhooks configured in Box, including those for other integrations
 
@@ -253,7 +253,7 @@ List all webhooks configured in Box, including those for other integrations
 | Fetch All                   | Set to true to retrieve all results.                                                                            | false   |
 | Show Only Instance Webhooks | Show only webhooks that point to this instance                                                                  | true    |
 
-### Move Object
+### Move Object {#moveobject}
 
 Move a Folder or File from one path to another
 
@@ -263,7 +263,7 @@ Move a Folder or File from one path to another
 | To Path    | This represents the destination files's path. Include a leading / |         |
 | Connection |                                                                   |         |
 
-### Path Details
+### Path Details {#pathdetails}
 
 Get detailed information about folders/files in the specified path
 
@@ -272,7 +272,7 @@ Get detailed information about folders/files in the specified path
 | Path       | This represents the files's path. Include a leading / |         |
 | Connection |                                                       |         |
 
-### Raw Request
+### Raw Request {#rawrequest}
 
 Send raw HTTP request to Box
 
@@ -295,7 +295,7 @@ Send raw HTTP request to Box
 | Max Retry Count         | The maximum number of retries to attempt. Specify 0 for no retries.                                                                                                                                 | 0       |
 | Use Exponential Backoff | Specifies whether to use a pre-defined exponential backoff strategy for retries. When enabled, 'Retry Delay (ms)' is ignored.                                                                       | false   |
 
-### Remove Shared Link from File
+### Remove Shared Link from File {#removesharedlinkfromfile}
 
 Removes a shared link from a file
 
@@ -304,7 +304,7 @@ Removes a shared link from a file
 | File ID    | The unique identifier of the file |         |
 | Connection |                                   |         |
 
-### Remove Shared Link from Folder
+### Remove Shared Link from Folder {#removesharedlinkfromfolder}
 
 Removes a shared link from a folder
 
@@ -313,7 +313,7 @@ Removes a shared link from a folder
 | Folder ID  | The unique identifier that represents a folder |         |
 | Connection |                                                |         |
 
-### Update Shared Link on File
+### Update Shared Link on File {#updatesharedlinktofile}
 
 Updates a shared link on a file
 
@@ -327,7 +327,7 @@ Updates a shared link on a file
 | Shared Link Vanity Name | The custom vanity name for the shared link                                    |                                                                                                     |
 | Connection              |                                                                               |                                                                                                     |
 
-### Update Shared Link on Folder
+### Update Shared Link on Folder {#updatesharedlinkonfolder}
 
 Updates a shared link on a folder
 
@@ -341,7 +341,7 @@ Updates a shared link on a folder
 | Shared Link Vanity Name        | The custom vanity name for the shared link                                    |                                                                             |
 | Connection                     |                                                                               |                                                                             |
 
-### Upload File
+### Upload File {#uploadfile}
 
 Upload a file to the specified path
 

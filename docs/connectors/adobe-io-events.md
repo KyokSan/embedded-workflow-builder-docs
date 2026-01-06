@@ -9,7 +9,7 @@ Adobe I/O Events notifies you when changes occur. Use the Adobe I/O Events compo
 
 ## Connections
 
-### Adobe I/O Connection
+### Adobe I/O Connection {#adobeioconnection}
 
 Adobe I/O Connection
 
@@ -43,13 +43,13 @@ Read about how OAuth 2.0 works [here](../oauth2.md).
 
 ## Triggers
 
-### Webhook
+### Webhook {#adobeioeventwebhook}
 
 Receive and validate webhook requests from Adobe I/O for webhooks you configure
 
 ## Actions
 
-### Create Events Provider
+### Create Events Provider {#createeventsprovider}
 
 Create an Adobe I/O Events Provider
 
@@ -63,7 +63,7 @@ Create an Adobe I/O Events Provider
 | Provider Description       | The description of this Events Provider, as shown on the Adobe Developer Console       |         |
 | Provider Documentation URL | The documentation url of this Events Provider, as shown on the Adobe Developer Console |         |
 
-### Create Webhook/Journal Registration
+### Create Webhook/Journal Registration {#createwebhook}
 
 Create a Webhook/Journal registration for given workspace
 
@@ -81,7 +81,7 @@ Create a Webhook/Journal registration for given workspace
 | Runtime Action           | Runtime action to be invoked by the published events                                                                                                                                                                     |                                                                                   |
 | Enabled                  | Enable or disable the registration                                                                                                                                                                                       | true                                                                              |
 
-### Delete Events Provider
+### Delete Events Provider {#deleteeventsprovider}
 
 Delete an Adobe I/O Events Provider by ID
 
@@ -93,7 +93,7 @@ Delete an Adobe I/O Events Provider by ID
 | Workspace ID             | The workspace Id              |         |
 | Provider ID              | The requested provider Id     |         |
 
-### Delete Instanced Webhooks
+### Delete Instanced Webhooks {#deleteinstancedwebhooks}
 
 Delete all Adobe I/O Webhook Registrations entitled to the provided Workspace ID
 
@@ -104,7 +104,7 @@ Delete all Adobe I/O Webhook Registrations entitled to the provided Workspace ID
 | Project ID               | The project Id                |         |
 | Workspace ID             | The workspace Id              |         |
 
-### Delete Registration (Webhook/Journal)
+### Delete Registration (Webhook/Journal) {#deleteregistration}
 
 Delete Registration by Registration ID (Webhook/Journal)
 
@@ -116,7 +116,7 @@ Delete Registration by Registration ID (Webhook/Journal)
 | Workspace ID             | The workspace Id                                     |         |
 | Registration ID          | The registration Id associated with the registration |         |
 
-### Get Events Provider
+### Get Events Provider {#geteventsprovider}
 
 View Adobe I/O Events Provider by ID
 
@@ -126,7 +126,7 @@ View Adobe I/O Events Provider by ID
 | Provider ID    | The requested provider Id                                           |         |
 | Event Metadata | The optional boolean to fetch or not this provider's event metadata | false   |
 
-### List All Registrations
+### List All Registrations {#listallregistrations}
 
 List all Adobe I/O Events Registrations entitled to the provided Workspace ID
 
@@ -137,7 +137,7 @@ List all Adobe I/O Events Registrations entitled to the provided Workspace ID
 | Project ID               | The project Id                |         |
 | Workspace ID             | The workspace Id              |         |
 
-### List Events Providers
+### List Events Providers {#listeventsproviders}
 
 List all Adobe I/O Events Providers entitled to the provided Organization ID
 
@@ -146,7 +146,7 @@ List all Adobe I/O Events Providers entitled to the provided Organization ID
 | Connection               |                               |         |
 | Consumer Organization ID | Your consumer organization Id |         |
 
-### Raw Request
+### Raw Request {#rawrequest}
 
 Send raw HTTP request to Adobe I/O Events
 
@@ -169,7 +169,7 @@ Send raw HTTP request to Adobe I/O Events
 | Max Retry Count         | The maximum number of retries to attempt.                                                                                                                                                                                                                                                                                     | 0       |
 | Use Exponential Backoff | Specifies whether to use a pre-defined exponential backoff strategy for retries.                                                                                                                                                                                                                                              | false   |
 
-### Update Events Provider
+### Update Events Provider {#updateeventsprovider}
 
 Update an Adobe I/O Events Provider
 

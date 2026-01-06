@@ -9,7 +9,7 @@ Manage Marketo records
 
 ## Connections
 
-### Marketo OAuth 2.0
+### Marketo OAuth 2.0 {#oauth2}
 
 Marketo OAuth 2.0 Connection
 
@@ -28,7 +28,7 @@ Read about how OAuth 2.0 works [here](../oauth2.md).
 
 ## Actions
 
-### Delete Companies
+### Delete Companies {#deletecompanies}
 
 Delete one or more Companies.
 
@@ -38,7 +38,7 @@ Delete one or more Companies.
 | Delete By  | The type of deletion method                                                   | dedupeFields |
 | Ids        | An array of objects that specify the id->value mapping for objects to delete. |              |
 
-### Delete Custom Objects
+### Delete Custom Objects {#deletecustomobjects}
 
 Delete one or more Custom Objects.
 
@@ -49,7 +49,7 @@ Delete one or more Custom Objects.
 | Delete By          | The type of deletion method                                                   | dedupeFields |
 | Ids                | An array of objects that specify the id->value mapping for objects to delete. |              |
 
-### Delete Leads
+### Delete Leads {#deleteleads}
 
 Delete one or more Leads by their Marketo id.
 
@@ -58,7 +58,7 @@ Delete one or more Leads by their Marketo id.
 | Connection |                                               |         |
 | Ids        | The Marketo id(s) of the record(s) to delete. |         |
 
-### Delete Named Accounts
+### Delete Named Accounts {#deletenamedaccounts}
 
 Delete one or more Named Accounts.
 
@@ -68,7 +68,7 @@ Delete one or more Named Accounts.
 | Delete By  | The type of deletion method                                                   | dedupeFields |
 | Ids        | An array of objects that specify the id->value mapping for objects to delete. |              |
 
-### Delete Opportunities
+### Delete Opportunities {#deleteopportunities}
 
 Delete one or more Opportunities.
 
@@ -78,7 +78,7 @@ Delete one or more Opportunities.
 | Delete By  | The type of deletion method                                                   | dedupeFields |
 | Ids        | An array of objects that specify the id->value mapping for objects to delete. |              |
 
-### Delete Sales Persons
+### Delete Sales Persons {#deletesalespersons}
 
 Delete one or more Sales Persons.
 
@@ -88,7 +88,7 @@ Delete one or more Sales Persons.
 | Delete By  | The type of deletion method                                                   | dedupeFields |
 | Ids        | An array of objects that specify the id->value mapping for objects to delete. |              |
 
-### Describe Company
+### Describe Company {#describecompany}
 
 Returns metadata about companies and the fields available for interaction via the API.
 
@@ -96,7 +96,7 @@ Returns metadata about companies and the fields available for interaction via th
 | ---------- | -------- | ------- |
 | Connection |          |         |
 
-### Describe Custom Object
+### Describe Custom Object {#describecustomobject}
 
 Returns metadata regarding a given custom object.
 
@@ -105,7 +105,7 @@ Returns metadata regarding a given custom object.
 | Connection         |                               |         |
 | Custom Object Name | The name of the Custom Object |         |
 
-### Describe Lead
+### Describe Lead {#describelead}
 
 Returns metadata about lead objects in the target instance, including a list of all fields available for interaction via the APIs.
 
@@ -113,7 +113,7 @@ Returns metadata about lead objects in the target instance, including a list of 
 | ---------- | -------- | ------- |
 | Connection |          |         |
 
-### Describe Named Account
+### Describe Named Account {#describenamedaccount}
 
 Returns metadata about Named Accounts and the fields available for interaction via the API.
 
@@ -121,7 +121,7 @@ Returns metadata about Named Accounts and the fields available for interaction v
 | ---------- | -------- | ------- |
 | Connection |          |         |
 
-### Describe Opportunities
+### Describe Opportunities {#describeopportunities}
 
 Returns metadata about Opportunities and the fields available for interaction via the API.
 
@@ -129,7 +129,7 @@ Returns metadata about Opportunities and the fields available for interaction vi
 | ---------- | -------- | ------- |
 | Connection |          |         |
 
-### Describe Sales Person
+### Describe Sales Person {#describesalesperson}
 
 Returns metadata about Sales Persons and the fields available for interaction via the API.
 
@@ -137,7 +137,7 @@ Returns metadata about Sales Persons and the fields available for interaction vi
 | ---------- | -------- | ------- |
 | Connection |          |         |
 
-### Get Companies By Filter
+### Get Companies By Filter {#getcompaniesbyfilter}
 
 Retrieves company records from the destination instance based on the submitted filter.
 
@@ -151,7 +151,7 @@ Retrieves company records from the destination instance based on the submitted f
 | Next Page Token | A token will be returned by this endpoint if the result set is greater than the batch size and can be passed in a subsequent call through this parameter |         |
 | Fetch All       | Whether to fetch all records or just the first page.                                                                                                     | false   |
 
-### Get Custom Objects By Filter
+### Get Custom Objects By Filter {#getcustomobjectsbyfilter}
 
 Retrieves a list of custom objects records based on filter and set of values.
 
@@ -165,7 +165,7 @@ Retrieves a list of custom objects records based on filter and set of values.
 | Batch Size         | The batch size to return                                                                                                                                 |         |
 | Next Page Token    | A token will be returned by this endpoint if the result set is greater than the batch size and can be passed in a subsequent call through this parameter |         |
 
-### Get Lead By Id
+### Get Lead By Id {#getleadbyid}
 
 Retrieves a single lead record through its Marketo id.
 
@@ -175,7 +175,7 @@ Retrieves a single lead record through its Marketo id.
 | Lead Id    | The Marketo lead id.           |         |
 | Fields     | List of field names to include |         |
 
-### Get Leads By Filter
+### Get Leads By Filter {#getleadsbyfilter}
 
 Returns a list of up to 300 leads based on a list of values in a particular field.
 
@@ -188,7 +188,7 @@ Returns a list of up to 300 leads based on a list of values in a particular fiel
 | Batch Size      | The batch size to return                                                                                                                                 |         |
 | Next Page Token | A token will be returned by this endpoint if the result set is greater than the batch size and can be passed in a subsequent call through this parameter |         |
 
-### Get Named Accounts By Filter
+### Get Named Accounts By Filter {#getnamedaccountsbyfilter}
 
 Retrieves Named Account records from the destination instance based on the submitted filter.
 
@@ -201,7 +201,7 @@ Retrieves Named Account records from the destination instance based on the submi
 | Batch Size      | The batch size to return                                                                                                                                 |         |
 | Next Page Token | A token will be returned by this endpoint if the result set is greater than the batch size and can be passed in a subsequent call through this parameter |         |
 
-### Get Opportunities By Filter
+### Get Opportunities By Filter {#getopportunitiesbyfilter}
 
 Retrieves Opportunity records from the destination instance based on the submitted filter.
 
@@ -214,7 +214,7 @@ Retrieves Opportunity records from the destination instance based on the submitt
 | Batch Size      | The batch size to return                                                                                                                                 |         |
 | Next Page Token | A token will be returned by this endpoint if the result set is greater than the batch size and can be passed in a subsequent call through this parameter |         |
 
-### Get Sales Persons By Filter
+### Get Sales Persons By Filter {#getsalespersonsbyfilter}
 
 Retrieves Sales Person records from the destination instance based on the submitted filter.
 
@@ -227,7 +227,7 @@ Retrieves Sales Person records from the destination instance based on the submit
 | Batch Size      | The batch size to return                                                                                                                                 |         |
 | Next Page Token | A token will be returned by this endpoint if the result set is greater than the batch size and can be passed in a subsequent call through this parameter |         |
 
-### Get Searchable Lead Fields
+### Get Searchable Lead Fields {#getsearchableleadfields}
 
 Returns list of searchable fields on lead objects in the target instance.
 
@@ -235,7 +235,7 @@ Returns list of searchable fields on lead objects in the target instance.
 | ---------- | -------- | ------- |
 | Connection |          |         |
 
-### List Custom Objects
+### List Custom Objects {#listcustomobjects}
 
 Returns a list of Custom Object types available in the target instance, along with id and deduplication information for each type.
 
@@ -243,7 +243,7 @@ Returns a list of Custom Object types available in the target instance, along wi
 | ---------- | -------- | ------- |
 | Connection |          |         |
 
-### Raw Request
+### Raw Request {#rawrequest}
 
 Send raw HTTP request to Marketo
 
@@ -265,7 +265,7 @@ Send raw HTTP request to Marketo
 | Max Retry Count         | The maximum number of retries to attempt. Specify 0 for no retries.                                                                                                                              | 0       |
 | Use Exponential Backoff | Specifies whether to use a pre-defined exponential backoff strategy for retries. When enabled, 'Retry Delay (ms)' is ignored.                                                                    | false   |
 
-### Sync Companies (Create, Update, Upsert)
+### Sync Companies (Create, Update, Upsert) {#synccompanies}
 
 Allows inserting, updating, or upserting of company records into Marketo.
 
@@ -276,7 +276,7 @@ Allows inserting, updating, or upserting of company records into Marketo.
 | Companies    | An array of Company objects to use as input for synchronization.                                                                          |                |
 | Dedupe Field | Field to deduplicate on. If the value in the field for a given record is not unique, an error will be returned for the individual record. | dedupeFields   |
 
-### Sync Custom Objects (Create, Update, Upsert)
+### Sync Custom Objects (Create, Update, Upsert) {#synccustomobjects}
 
 Inserts, updates, or upserts custom object records to the target instance.
 
@@ -288,7 +288,7 @@ Inserts, updates, or upserts custom object records to the target instance.
 | Custom Objects     | An array of Custom Objects to use as input for synchronization.                                                                           |                |
 | Dedupe Field       | Field to deduplicate on. If the value in the field for a given record is not unique, an error will be returned for the individual record. | dedupeFields   |
 
-### Sync Leads (Create, Update, Upsert)
+### Sync Leads (Create, Update, Upsert) {#syncleads}
 
 Syncs a list of leads to the target instance.
 
@@ -301,7 +301,7 @@ Syncs a list of leads to the target instance.
 | Lookup Field     | Field to deduplicate on. The field must be present in each lead record of the input. Defaults to email if unset.                                     | email          |
 | Partition Name   | Name of the partition to operate on, if applicable. Should be set whenever possible, when interacting with an instance where partitions are enabled. |                |
 
-### Sync Named Accounts (Create, Update, Upsert)
+### Sync Named Accounts (Create, Update, Upsert) {#syncnamedaccounts}
 
 Allows inserts, updates, or upserts of Named Accounts to the target instance.
 
@@ -312,7 +312,7 @@ Allows inserts, updates, or upserts of Named Accounts to the target instance.
 | Named Accounts | An array of Named Account objects to use as input for synchronization.                                                                    |                |
 | Dedupe Field   | Field to deduplicate on. If the value in the field for a given record is not unique, an error will be returned for the individual record. | dedupeFields   |
 
-### Sync Opportunities (Create, Update, Upsert)
+### Sync Opportunities (Create, Update, Upsert) {#syncopportunities}
 
 Allows inserts, updates, or upserts of Opportunities to the target instance.
 
@@ -323,7 +323,7 @@ Allows inserts, updates, or upserts of Opportunities to the target instance.
 | Opportunities | An array of Opportunities objects to use as input for synchronization.                                                                    |                |
 | Dedupe Field  | Field to deduplicate on. If the value in the field for a given record is not unique, an error will be returned for the individual record. | dedupeFields   |
 
-### Sync Sales Persons (Create, Update, Upsert)
+### Sync Sales Persons (Create, Update, Upsert) {#syncsalespersons}
 
 Allows inserts, updates, or upserts of Sales Persons to the target instance.
 

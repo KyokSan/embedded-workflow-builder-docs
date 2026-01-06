@@ -9,7 +9,7 @@ Manage records and associations in the HubSpot CRM platform
 
 ## Connections
 
-### OAuth 2.0
+### OAuth 2.0 {#oauth2}
 
 Authenticate requests to Hubspot using OAuth 2.0.
 
@@ -148,7 +148,7 @@ Read about how OAuth 2.0 works [here](../oauth2.md).
 | App ID            | The App ID from the HubSpot Developer Console. Required for Webhooks.                                                     |                                         |
 | Developer API Key | The Developer API Key from the HubSpot Developer Console. Required for Webhooks.                                          |                                         |
 
-### Private App Access Token
+### Private App Access Token {#privateappaccesstoken}
 
 Authenticate requests to Hubspot using a private app access token.
 
@@ -181,7 +181,7 @@ To generate a private app access token:
 | ------------ | ------------------------------------------------------------------------------------------------------------------------------- | ------- |
 | Access Token | An access token generated when you create a private app. For testing purposes only - use OAuth 2.0 for production integrations. |         |
 
-### Webhook Authentication
+### Webhook Authentication {#hubspotoauthtrigger}
 
 Authenticate HubSpot webhooks using Client Secret for signature verification only.
 
@@ -227,7 +227,7 @@ After configuring the connection, webhook subscriptions must be set up:
 
 ## Triggers
 
-### Event Type Subscription
+### Event Type Subscription {#eventtypesubscription}
 
 Receive CRM event notifications from HubSpot. Automatically creates and manages a webhook subscription for selected event types when the instance is deployed, and removes the subscription when the instance is deleted.
 
@@ -237,7 +237,7 @@ Receive CRM event notifications from HubSpot. Automatically creates and manages 
 | Event Types                | Events to listen for. Make sure to have the right permissions.                                   |         |
 | Overwrite Webhook Settings | When true, overwrites existing webhook settings. HubSpot only permits one Target URL per App ID. | false   |
 
-### New and Updated Custom Records
+### New and Updated Custom Records {#pollchangescustomobjectstrigger}
 
 Checks for new and updated records in a specified custom object type on a configured schedule.
 
@@ -249,7 +249,7 @@ Checks for new and updated records in a specified custom object type on a config
 | Object Type          | The type of custom object to search for.                                                                                                                                                                                                                |         |
 | Search Properties    | Include properties such as filters and sorts, or specify the properties to be returned. If empty, only the default properties will be returned. For more information, see [HubSpot CRM Search API](https://developers.hubspot.com/docs/api/crm/search). |         |
 
-### New and Updated Records
+### New and Updated Records {#pollchangestrigger}
 
 Checks for new and updated records in a selected HubSpot object type on a configured schedule.
 
@@ -261,7 +261,7 @@ Checks for new and updated records in a selected HubSpot object type on a config
 | Search Endpoint      | The endpoint to search for objects or engagements. For Custom objects don't forget to fill the Object Type input.                                                                                                                                       |         |
 | Search Properties    | Include properties such as filters and sorts, or specify the properties to be returned. If empty, only the default properties will be returned. For more information, see [HubSpot CRM Search API](https://developers.hubspot.com/docs/api/crm/search). |         |
 
-### Webhook
+### Webhook {#webhook}
 
 Receive and validate webhook requests from HubSpot for manually configured webhook subscriptions.
 
@@ -271,7 +271,7 @@ Receive and validate webhook requests from HubSpot for manually configured webho
 
 ## Actions
 
-### Archive Association
+### Archive Association {#archiveassociations}
 
 Remove the associations between two provided objects
 
@@ -285,7 +285,7 @@ Remove the associations between two provided objects
 | Timeout             | The maximum time a client will await a request                                                                                                                                                                |         |
 | Connection          | The connection to use for authenticating requests to HubSpot.                                                                                                                                                 |         |
 
-### Archive Batch Contacts
+### Archive Batch Contacts {#archivebatchcontacts}
 
 Archive a batch of contacts by ID
 
@@ -295,7 +295,7 @@ Archive a batch of contacts by ID
 | Timeout     | The maximum time a client will await a request                |         |
 | Connection  | The connection to use for authenticating requests to HubSpot. |         |
 
-### Archive Batch Engagement
+### Archive Batch Engagement {#archivebatchengagement}
 
 Archives a batch of selected engagements by their IDs.
 
@@ -306,7 +306,7 @@ Archives a batch of selected engagements by their IDs.
 | Engagement Ids    | A list of engagement IDs.                                     |         |
 | Timeout           | The maximum time a client will await a request                |         |
 
-### Cancel Import
+### Cancel Import {#cancelimport}
 
 Cancels an active import.
 
@@ -316,7 +316,7 @@ Cancels an active import.
 | Import Id  | The unique identifier of the import.                          |         |
 | Timeout    | The maximum time a client will await a request                |         |
 
-### Create Association
+### Create Association {#createassociations}
 
 Create an association between the objects identified in the step
 
@@ -330,7 +330,7 @@ Create an association between the objects identified in the step
 | Timeout             | The maximum time a client will await a request                                                                                                                                                                |         |
 | Connection          | The connection to use for authenticating requests to HubSpot.                                                                                                                                                 |         |
 
-### Create Batch Contacts
+### Create Batch Contacts {#createbatchcontacts}
 
 Create a batch of contacts
 
@@ -340,7 +340,7 @@ Create a batch of contacts
 | Batch Contacts | An array of contact objects to create. See [HubSpot Contacts API](https://developers.hubspot.com/docs/api/crm/contacts) for properties. |         |
 | Timeout        | The maximum time a client will await a request                                                                                          |         |
 
-### Create Batch Engagement
+### Create Batch Engagement {#createbatchengagement}
 
 Creates a batch of selected engagements.
 
@@ -351,7 +351,7 @@ Creates a batch of selected engagements.
 | Batch Engagements | An array of engagements.                                      |         |
 | Timeout           | The maximum time a client will await a request                |         |
 
-### Create Company
+### Create Company {#createcompany}
 
 Create a new company
 
@@ -369,7 +369,7 @@ Create a new company
 | Timeout        | The maximum time a client will await a request                                                                |         |
 | Connection     | The connection to use for authenticating requests to HubSpot.                                                 |         |
 
-### Create Contact
+### Create Contact {#createcontact}
 
 Create a new contact
 
@@ -386,7 +386,7 @@ Create a new contact
 | Timeout        | The maximum time a client will await a request                                                                                                     |         |
 | Connection     | The connection to use for authenticating requests to HubSpot.                                                                                      |         |
 
-### Create Custom Object
+### Create Custom Object {#createcustomobject}
 
 Creates new custom object schema
 
@@ -405,7 +405,7 @@ Creates new custom object schema
 | Values                       | The names of the fields and their values to use when creating/updating a record.                                                         |                         |
 | Dynamic Fields               | A field for dynamic inputs that can be configured at deploy time with the use of a key value config variable.                            |                         |
 
-### Create Deal
+### Create Deal {#createdeal}
 
 Create a new deal
 
@@ -424,7 +424,7 @@ Create a new deal
 | Timeout        | The maximum time a client will await a request                                                                                                                            |         |
 | Connection     | The connection to use for authenticating requests to HubSpot.                                                                                                             |         |
 
-### Create Engagement
+### Create Engagement {#createengagement}
 
 Create a communication, email, call, meeting, note, postal mail or task engagement in HubSpot CRM.
 
@@ -436,7 +436,7 @@ Create a communication, email, call, meeting, note, postal mail or task engageme
 | Properties        | A properties object, attributes depend on the engagement type. For possible properties for each engagement type refer to [HubSpot Engagements API](https://developers.hubspot.com/docs/api/crm/tasks). |         |
 | Timeout           | The maximum time a client will await a request                                                                                                                                                         |         |
 
-### Create Line Item
+### Create Line Item {#createlineitem}
 
 Create a new line item
 
@@ -453,7 +453,7 @@ Create a new line item
 | Timeout                        | The maximum time a client will await a request                                                                                        |         |
 | Connection                     | The connection to use for authenticating requests to HubSpot.                                                                         |         |
 
-### Create Product
+### Create Product {#createproduct}
 
 Create a new product
 
@@ -470,7 +470,7 @@ Create a new product
 | Timeout                     | The maximum time a client will await a request                                                                                        |         |
 | Connection                  | The connection to use for authenticating requests to HubSpot.                                                                         |         |
 
-### Create Webhook
+### Create Webhook {#createwebhook}
 
 Create a webhook in HubSpot
 
@@ -482,7 +482,7 @@ Create a webhook in HubSpot
 | Active        | When true, the subscription is active. When false, the subscription is paused.                           | false   |
 | Timeout       | The maximum time a client will await a request                                                           |         |
 
-### Delete all Instanced Webhooks
+### Delete all Instanced Webhooks {#deleteallwebhooks}
 
 Delete all webhooks created by this instance in HubSpot
 
@@ -491,7 +491,7 @@ Delete all webhooks created by this instance in HubSpot
 | Connection | The connection to use for authenticating requests to HubSpot. |         |
 | Timeout    | The maximum time a client will await a request                |         |
 
-### Delete Company
+### Delete Company {#deletecompany}
 
 Delete an existing company by Id
 
@@ -501,7 +501,7 @@ Delete an existing company by Id
 | Timeout    | The maximum time a client will await a request                |         |
 | Connection | The connection to use for authenticating requests to HubSpot. |         |
 
-### Delete Contact
+### Delete Contact {#deletecontact}
 
 Delete a contact by Id
 
@@ -511,7 +511,7 @@ Delete a contact by Id
 | Timeout    | The maximum time a client will await a request                |         |
 | Connection | The connection to use for authenticating requests to HubSpot. |         |
 
-### Delete Custom Object
+### Delete Custom Object {#deletecustomobject}
 
 Removes custom object schema
 
@@ -522,7 +522,7 @@ Removes custom object schema
 | Timeout                 | The maximum time a client will await a request                |         |
 | Return Archived Results | When true, returns only results that have been archived.      | false   |
 
-### Delete Deal
+### Delete Deal {#deletedeal}
 
 Delete a deal by its Id
 
@@ -532,7 +532,7 @@ Delete a deal by its Id
 | Timeout    | The maximum time a client will await a request                |         |
 | Connection | The connection to use for authenticating requests to HubSpot. |         |
 
-### Delete Engagement
+### Delete Engagement {#deleteengagement}
 
 Deletes an engagement by its ID.
 
@@ -543,7 +543,7 @@ Deletes an engagement by its ID.
 | Engagement Id     | The unique identifier of the engagement. A taskId, meetingId, etc. |         |
 | Timeout           | The maximum time a client will await a request                     |         |
 
-### Delete Line Item
+### Delete Line Item {#deletelineitem}
 
 Delete an existing line item by Id
 
@@ -553,7 +553,7 @@ Delete an existing line item by Id
 | Timeout      | The maximum time a client will await a request                |         |
 | Connection   | The connection to use for authenticating requests to HubSpot. |         |
 
-### Delete Product
+### Delete Product {#deleteproduct}
 
 Delete a product by Id
 
@@ -563,7 +563,7 @@ Delete a product by Id
 | Timeout    | The maximum time a client will await a request                |         |
 | Connection | The connection to use for authenticating requests to HubSpot. |         |
 
-### Delete Webhook
+### Delete Webhook {#deletewebhook}
 
 Delete a webhook by ID in HubSpot
 
@@ -573,7 +573,7 @@ Delete a webhook by ID in HubSpot
 | Subscription ID | The ID of the subscription to delete                          |         |
 | Timeout         | The maximum time a client will await a request                |         |
 
-### Export CRM Data
+### Export CRM Data {#exportcrmdata}
 
 Begins exporting CRM data for the portal as specified in the request body.
 
@@ -591,7 +591,7 @@ Begins exporting CRM data for the portal as specified in the request body.
 | Associated Object Type                                       | The name or ID of an associated object to include in the export. If you include an associated object, the export will contain the associated record IDs of that object and the records' primary display property value.                                     |         |
 | Timeout                                                      | The maximum time a client will await a request                                                                                                                                                                                                              |         |
 
-### Get an Import
+### Get an Import {#getanimport}
 
 Get a complete summary of an import record, including any updates.
 
@@ -601,7 +601,7 @@ Get a complete summary of an import record, including any updates.
 | Import Id  | The unique identifier of the import.                          |         |
 | Timeout    | The maximum time a client will await a request                |         |
 
-### Get Batch Contacts
+### Get Batch Contacts {#getbatchcontacts}
 
 Read a batch of contacts by internal ID, or unique property values.
 
@@ -615,7 +615,7 @@ Read a batch of contacts by internal ID, or unique property values.
 | Return Archived Results | When true, returns only results that have been archived.      | false   |
 | Timeout                 | The maximum time a client will await a request                |         |
 
-### Get Company
+### Get Company {#getcompany}
 
 Retrieve the information or metadata of a company by Id, domain, or name
 
@@ -630,7 +630,7 @@ Retrieve the information or metadata of a company by Id, domain, or name
 | Timeout                         | The maximum time a client will await a request                                   |         |
 | Connection                      | The connection to use for authenticating requests to HubSpot.                    |         |
 
-### Get Contact
+### Get Contact {#getcontact}
 
 Get the information and metadata of a contact by Id or Email
 
@@ -644,7 +644,7 @@ Get the information and metadata of a contact by Id or Email
 | Timeout                         | The maximum time a client will await a request                                                                                                     |         |
 | Connection                      | The connection to use for authenticating requests to HubSpot.                                                                                      |         |
 
-### Get Current User
+### Get Current User {#getcurrentuser}
 
 Return information about the current session's user.
 
@@ -653,7 +653,7 @@ Return information about the current session's user.
 | Timeout    | The maximum time a client will await a request                |         |
 | Connection | The connection to use for authenticating requests to HubSpot. |         |
 
-### Get Custom Object
+### Get Custom Object {#getcustomobject}
 
 Retrieves a specific custom object
 
@@ -663,7 +663,7 @@ Retrieves a specific custom object
 | Timeout     | The maximum time a client will await a request                |         |
 | Object Type | The type of object.                                           |         |
 
-### Get Deal
+### Get Deal {#getdealbyid}
 
 Retrieve information and metadata about a deal by its Id or name
 
@@ -677,7 +677,7 @@ Retrieve information and metadata about a deal by its Id or name
 | Timeout                         | The maximum time a client will await a request                                   |         |
 | Connection                      | The connection to use for authenticating requests to HubSpot.                    |         |
 
-### Get Engagement
+### Get Engagement {#getengagement}
 
 Get a communication, email, call, meeting, note, postal mail or task engagement object from HubSpot CRM.
 
@@ -693,7 +693,7 @@ Get a communication, email, call, meeting, note, postal mail or task engagement 
 | Id Property                     | The name of a property whose values are unique for this object type.                                                                                        |         |
 | Timeout                         | The maximum time a client will await a request                                                                                                              |         |
 
-### Get Line Item
+### Get Line Item {#getlineitem}
 
 Retrieve the information and metadata of a line item by Id
 
@@ -707,7 +707,7 @@ Retrieve the information and metadata of a line item by Id
 | Timeout                         | The maximum time a client will await a request                                   |         |
 | Connection                      | The connection to use for authenticating requests to HubSpot.                    |         |
 
-### Get Product
+### Get Product {#getproduct}
 
 Retrieve the information and metadata of a product by Id or name
 
@@ -721,7 +721,7 @@ Retrieve the information and metadata of a product by Id or name
 | Timeout                         | The maximum time a client will await a request                                   |         |
 | Connection                      | The connection to use for authenticating requests to HubSpot.                    |         |
 
-### Import CRM Data
+### Import CRM Data {#importcrmdata}
 
 Import CRM records and activities into your HubSpot account, such as contacts, companies, and notes.
 
@@ -737,7 +737,7 @@ Import CRM records and activities into your HubSpot account, such as contacts, c
 | Create Contact List From Import | When true, creates a static list of the contacts from your import.                                                                                                                                                                                                                                                                                                                                      | false          |
 | Timeout                         | The maximum time a client will await a request                                                                                                                                                                                                                                                                                                                                                          |                |
 
-### List Active Imports
+### List Active Imports {#listactiveimports}
 
 Returns a paged list of active imports for this account.
 
@@ -746,7 +746,7 @@ Returns a paged list of active imports for this account.
 | Connection | The connection to use for authenticating requests to HubSpot. |         |
 | Timeout    | The maximum time a client will await a request                |         |
 
-### List Association Types
+### List Association Types {#listassociationtypes}
 
 Retrieve a list of all association types available between two objects
 
@@ -757,7 +757,7 @@ Retrieve a list of all association types available between two objects
 | To Object Type   | The type of the "to" object. Choose from "Contacts", "Companies", "Deals", "Tickets", "Calls", "Quotes", "Line_items", "Meetings", "Products", "Feedback_submissions", or a custom object you have defined.   |         |
 | Timeout          | The maximum time a client will await a request                                                                                                                                                                |         |
 
-### List Companies
+### List Companies {#listcompanies}
 
 Retrieve a list of all companies
 
@@ -772,7 +772,7 @@ Retrieve a list of all companies
 | Limit                           | The maximum number of items that will be returned by the search.                                        |         |
 | Start After                     | Specify the pagination token that's returned by a previous request to retrieve the next page of results |         |
 
-### List Contacts
+### List Contacts {#listcontacts}
 
 Retrieve a list of all contacts
 
@@ -787,7 +787,7 @@ Retrieve a list of all contacts
 | Limit                           | The maximum number of items that will be returned by the search.                                        |         |
 | Start After                     | Specify the pagination token that's returned by a previous request to retrieve the next page of results |         |
 
-### List Custom Objects
+### List Custom Objects {#listcustomobjects}
 
 Retrieve all custom objects
 
@@ -798,7 +798,7 @@ Retrieve all custom objects
 | Return Archived Results         | When true, returns only results that have been archived.                         | false   |
 | Additional Properties To Return | For each item, provide a property you would like to be returned in the response. |         |
 
-### List Deals
+### List Deals {#listdeals}
 
 Retrieve a list of all deals
 
@@ -813,7 +813,7 @@ Retrieve a list of all deals
 | Limit                           | The maximum number of items that will be returned by the search.                                        |         |
 | Start After                     | Specify the pagination token that's returned by a previous request to retrieve the next page of results |         |
 
-### List Engagements
+### List Engagements {#listengagements}
 
 List engagement objects from HubSpot CRM, including communications, emails, calls, meetings, notes, postal mail, and tasks.
 
@@ -824,7 +824,7 @@ List engagement objects from HubSpot CRM, including communications, emails, call
 | Properties To Return | Properties to be returned in the response. If the specified property is not present on the requested object, it will be ignored. |         |
 | Timeout              | The maximum time a client will await a request                                                                                   |         |
 
-### List Line Items
+### List Line Items {#listlineitems}
 
 Retrieve a list of all line items
 
@@ -839,7 +839,7 @@ Retrieve a list of all line items
 | Limit                           | The maximum number of items that will be returned by the search.                                        |         |
 | Start After                     | Specify the pagination token that's returned by a previous request to retrieve the next page of results |         |
 
-### List Products
+### List Products {#listproducts}
 
 Retrieve a list of all products
 
@@ -854,7 +854,7 @@ Retrieve a list of all products
 | Limit                           | The maximum number of items that will be returned by the search.                                        |         |
 | Start After                     | Specify the pagination token that's returned by a previous request to retrieve the next page of results |         |
 
-### List Properties
+### List Properties {#listproperties}
 
 Retrieve a list of all configured object properties.
 
@@ -864,7 +864,7 @@ Retrieve a list of all configured object properties.
 | Object Type | The type of object.                                           |         |
 | Timeout     | The maximum time a client will await a request                |         |
 
-### List Webhooks
+### List Webhooks {#listwebhooks}
 
 List all webhooks for a server
 
@@ -873,7 +873,7 @@ List all webhooks for a server
 | Connection | The connection to use for authenticating requests to HubSpot. |         |
 | Timeout    | The maximum time a client will await a request                |         |
 
-### Raw Request
+### Raw Request {#rawrequest}
 
 Send raw HTTP request to HubSpot
 
@@ -895,7 +895,7 @@ Send raw HTTP request to HubSpot
 | Max Retry Count         | The maximum number of retries to attempt. Specify 0 for no retries.                                                                                                                                                                        | 0       |
 | Use Exponential Backoff | Specifies whether to use a pre-defined exponential backoff strategy for retries. When enabled, 'Retry Delay (ms)' is ignored.                                                                                                              | false   |
 
-### Read Association
+### Read Association {#readassociations}
 
 Get the Ids of the objects associated with those specified in the step
 
@@ -907,7 +907,7 @@ Get the Ids of the objects associated with those specified in the step
 | Timeout          | The maximum time a client will await a request                                                                                                                                                                |         |
 | Connection       | The connection to use for authenticating requests to HubSpot.                                                                                                                                                 |         |
 
-### Search
+### Search {#search}
 
 Use the search endpoints to filter, sort, and search objects, records, and engagements across your CRM.
 
@@ -921,7 +921,7 @@ Use the search endpoints to filter, sort, and search objects, records, and engag
 | Fetch All         | Turn this ON to get more than 200 results. Note that this can be a large amount of data.                                                                                                                                                                | false   |
 | Timeout           | The maximum time a client will await a request                                                                                                                                                                                                          |         |
 
-### Search Deals
+### Search Deals {#searchdeals}
 
 Returns a list of deals that match the given properties
 
@@ -935,7 +935,7 @@ Returns a list of deals that match the given properties
 | Timeout       | The maximum time a client will await a request                                                                  |         |
 | Connection    | The connection to use for authenticating requests to HubSpot.                                                   |         |
 
-### Update Batch Contacts
+### Update Batch Contacts {#updatebatchcontacts}
 
 Update a batch of contacts
 
@@ -945,7 +945,7 @@ Update a batch of contacts
 | Batch Contacts | An array of contact objects to update. See [HubSpot Contacts API](https://developers.hubspot.com/docs/api/crm/contacts) for properties. |         |
 | Timeout        | The maximum time a client will await a request                                                                                          |         |
 
-### Update Batch Engagement
+### Update Batch Engagement {#updatebatchengagement}
 
 Updates a batch of selected engagements.
 
@@ -956,7 +956,7 @@ Updates a batch of selected engagements.
 | Batch Engagements | An array of engagement objects to update. Each engagement object must contain the required properties for the specified engagement type. See [HubSpot Engagements API](https://developers.hubspot.com/docs/api/crm/tasks) for more information. |         |
 | Timeout           | The maximum time a client will await a request                                                                                                                                                                                                  |         |
 
-### Update Company
+### Update Company {#updatecompany}
 
 Update the information and metadata of an existing company
 
@@ -975,7 +975,7 @@ Update the information and metadata of an existing company
 | Timeout        | The maximum time a client will await a request                                                                |         |
 | Connection     | The connection to use for authenticating requests to HubSpot.                                                 |         |
 
-### Update Contact
+### Update Contact {#updatecontact}
 
 Update the information and metadata of an existing contact
 
@@ -993,7 +993,7 @@ Update the information and metadata of an existing contact
 | Timeout        | The maximum time a client will await a request                                                                |         |
 | Connection     | The connection to use for authenticating requests to HubSpot.                                                 |         |
 
-### Update Custom Object
+### Update Custom Object {#updatecustomobject}
 
 Updates an object's schema
 
@@ -1009,7 +1009,7 @@ Updates an object's schema
 | Values                                                 | The names of the fields and their values to use when creating/updating a record.                              |                         |
 | Dynamic Fields                                         | A field for dynamic inputs that can be configured at deploy time with the use of a key value config variable. |                         |
 
-### Update Deal
+### Update Deal {#updatedeal}
 
 Update the information or metadata of an existing deal
 
@@ -1029,7 +1029,7 @@ Update the information or metadata of an existing deal
 | Timeout        | The maximum time a client will await a request                                                                                                                            |         |
 | Connection     | The connection to use for authenticating requests to HubSpot.                                                                                                             |         |
 
-### Update Engagement
+### Update Engagement {#updateengagement}
 
 Update a communication, email, call, meeting, note, postal mail or task engagement in HubSpot CRM.
 
@@ -1042,7 +1042,7 @@ Update a communication, email, call, meeting, note, postal mail or task engageme
 | Id Property       | The name of a property whose values are unique for this object type.                                                                                                                                             |         |
 | Timeout           | The maximum time a client will await a request                                                                                                                                                                   |         |
 
-### Update Line Item
+### Update Line Item {#updatelineitem}
 
 Update an the information and metadata of an existing line item
 
@@ -1060,7 +1060,7 @@ Update an the information and metadata of an existing line item
 | Timeout                        | The maximum time a client will await a request                                                                                        |         |
 | Connection                     | The connection to use for authenticating requests to HubSpot.                                                                         |         |
 
-### Update Product
+### Update Product {#updateproduct}
 
 Update the information and metadata of an existing product
 
@@ -1078,7 +1078,7 @@ Update the information and metadata of an existing product
 | Timeout                     | The maximum time a client will await a request                                                                                        |         |
 | Connection                  | The connection to use for authenticating requests to HubSpot.                                                                         |         |
 
-### Validate Connection
+### Validate Connection {#validateconnection}
 
 Returns a boolean value that specifies whether the provided Connection is valid
 

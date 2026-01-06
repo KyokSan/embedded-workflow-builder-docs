@@ -1,44 +1,102 @@
 ---
 title: Sage Intacct Connector
 sidebar_label: Sage Intacct
-description: Use the Sage Intacct component to manage Invoices, Payments, Vendors, and more.
+description: Manage financial data including invoices, payments, vendors, and customers in Sage Intacct.
 ---
 
 ![Sage Intacct](./assets/sage-intacct.png#connector-icon)
-Use the Sage Intacct component to manage Invoices, Payments, Vendors, and more.
+Manage financial data including invoices, payments, vendors, and customers in Sage Intacct.
 
 ## Connections
 
-### Sage Intacct Connection
+### Sage Intacct Connection {#sageintacctconnection}
 
 Web Service Authentication
 
-Web Service Authentication
+To connect to Sage Intacct, Web Services credentials are required. These credentials consist of sender credentials (provided by Sage Intacct) and company/user credentials (created within the Sage Intacct platform).
 
-1. Web Services credentials consist of a sender ID and password. These are provisioned by Sage Intacct for customers/partners with an active Web Services developer license.
-2. Company credentials consist of either:
-   1. A company ID, user ID, and password - this is called **login authentication**.
-   2. A temporary session ID - this is called **session authentication**.
-3. To Authenticate through Sage Intacct you must establish an API session that provides you with a session ID. The session timeout is calculated based on the [session duration](https://www.intacct.com/ia/docs/en_US/help_action/Company/Company_setup/Company_Information/Security/company-sign-in-settings.htm?cshid=Company_sign_in_settings) specified for the user or company plus the current time.
+Sage Intacct uses a dual authentication model:
 
-| Input           | Comments                                        | Default |
-| --------------- | ----------------------------------------------- | ------- |
-| Sender ID       | Sender ID for Web Services Authentication       |         |
-| Sender Password | Sender Password for Web Services Authentication |         |
-| Company ID      | Company ID for Web Services Authentication      |         |
-| User ID         | User ID for Web Services Authentication         |         |
-| User Password   | User Password for Web Services Authentication   |         |
-| Entity ID       | Entity ID for Web Services Authentication       |         |
+- **Sender credentials** (Sender ID and Sender Password) are provisioned by Sage Intacct for customers or partners with an active Web Services developer license
+- **Company credentials** (Company ID, User ID, and User Password) are created within the Sage Intacct account
+
+Refer to [Sage Intacct's Web Services documentation](https://developer.intacct.com/web-services/) for additional information on authentication.
+
+#### Prerequisites
+
+- An active Sage Intacct account with a Web Services developer license
+- Administrative access to configure Web Services settings
+- Sender ID and Sender Password provisioned by Sage Intacct
+- A Sage Intacct user account with appropriate API permissions
+
+#### Setup Steps
+
+To obtain Web Services credentials:
+
+1. **Obtain Sender Credentials**:
+   - Contact Sage Intacct support or the account representative to request Web Services access
+   - Once provisioned, Sage Intacct will provide a **Sender ID** and **Sender Password**
+   - These credentials are used to authenticate the integration at the organization level
+
+2. **Enable Web Services in Sage Intacct**:
+   - Log in to Sage Intacct as an administrator
+   - Navigate to **Company** > **Setup** > **Company** > **Security**
+   - Locate the **Web Services authorizations** section
+   - Enable Web Services for the organization
+
+3. **Identify Company Credentials**:
+   - The **Company ID** is the unique identifier for the Sage Intacct company
+   - This is typically visible in the Sage Intacct URL or company settings
+   - Navigate to **Company** > **Setup** > **Company** > **Company info** to verify the Company ID
+
+4. **Create or Identify API User**:
+   - Create a dedicated user account for API access or use an existing user
+   - Navigate to **Company** > **Admin** > **Web Services users**
+   - Ensure the user has the necessary permissions for the integration's operations
+   - Note the **User ID** (username) and **User Password** for this account
+
+5. **Determine Entity ID (Multi-Entity Only)**:
+   - If the Sage Intacct account uses multiple entities, determine the **Entity ID** for the entity to access
+   - Navigate to **Company** > **Setup** > **Entities** to view available entities
+   - If using a single-entity account, the Entity ID can be left blank
+
+#### Configure the Connection
+
+Enter the following credentials into the connection configuration:
+
+- **Sender ID**: The Sender ID provided by Sage Intacct for Web Services authentication
+- **Sender Password**: The Sender Password provided by Sage Intacct
+- **Company ID**: The unique company identifier in Sage Intacct
+- **User ID**: The username of the Web Services user account
+- **User Password**: The password for the Web Services user account
+- **Entity ID** (optional): The entity identifier for multi-entity environments. Leave blank for single-entity accounts.
+
+:::note Multi-Entity Environments
+For Sage Intacct accounts with multiple entities, specify the **Entity ID** to connect to a specific entity. If left blank, the integration will use the default entity associated with the user account.
+:::
+
+:::warning Security Best Practice
+Use a dedicated user account for API integrations with minimal required permissions. Avoid using personal administrator accounts for Web Services authentication.
+:::
+
+| Input           | Comments                                                                                                                                                   | Default |
+| --------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
+| Sender ID       | The Sender ID provided by Sage Intacct for Web Services authentication. Find this in your Sage Intacct account under Company > Setup > Company > Security. |         |
+| Sender Password | The Sender Password for Web Services authentication. This password is set when configuring Web Services access in Sage Intacct.                            |         |
+| Company ID      | Your Sage Intacct Company ID. This is your unique company identifier in Sage Intacct.                                                                      |         |
+| User ID         | The User ID (username) for Web Services authentication. This must be a user with appropriate API permissions.                                              |         |
+| User Password   | The password for the Web Services user account.                                                                                                            |         |
+| Entity ID       | Optional entity ID for multi-entity Sage Intacct environments. Leave blank if your organization uses a single entity.                                      |         |
 
 ## Actions
 
-### Create AR Advance
+### Create AR Advance {#createaradvance}
 
 Creates a new AR Advance.
 
 | Input                  | Comments                                                                                                                                                                   | Default |
 | ---------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
-| Connection             |                                                                                                                                                                            |         |
+| Connection             | The Sage Intacct connection to use.                                                                                                                                        |         |
 | Payment Date           | Date the advance payment was made, in the mm/dd/yyyy format.                                                                                                               |         |
 | Receipt Date           | Receipt date in the mm/dd/yyyy format. If automatic summaries are enabled, this is the date on which the advance will be posted to the General Ledger.                     |         |
 | Payment Method         | Payment method used for the advance.                                                                                                                                       |         |
@@ -48,21 +106,21 @@ Creates a new AR Advance.
 | Undeposited Account No | Undeposited funds account number. A create request must contain FINANCIALENTITY or UNDEPOSITEDACCOUNTNO when automatic summaries are enabled.                              |         |
 | Additional XML Tags    | Additional XML tags that might not be covered by the standard inputs.                                                                                                      |         |
 
-### Create Bill
+### Create Bill {#createbill}
 
 Create a new bill.
 
 | Input                 | Comments                                                                                          | Default                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | --------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Connection            |                                                                                                   |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| Bill Transaction Date | Transaction date                                                                                  |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| Bill GL Posting Date  | General ledger posting date                                                                       |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| Connection            | The Sage Intacct connection to use.                                                               |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| Bill Transaction Date | Transaction date in MM/DD/YYYY format                                                             |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| Bill GL Posting Date  | General ledger posting date in MM/DD/YYYY format                                                  |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 | Vendor ID             | The vendor ID.                                                                                    |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 | Bill Number           | A Bill Number identifier                                                                          |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 | Reference Number      | A reference number for the bill                                                                   |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 | Description           | Description of the bill                                                                           |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 | Term Name             | Payment term, this should be a previously created term                                            |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| Recommended to pay on | Payment date                                                                                      |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| Recommended to pay on | Payment date in MM/DD/YYYY format                                                                 |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 | Attachments ID        | Id of an attachment group of one or more supporting files                                         |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 | Due Date              | Due date                                                                                          |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 | Payment Priority      |                                                                                                   |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
@@ -71,51 +129,51 @@ Create a new bill.
 | Base Currency         | Base currency code                                                                                |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 | AP Bill Items         | AP bill items, must have at least 1. Each item must be wrapped in <APBILLITEM></APBILLITEM> tags. | <APBILLITEM><br /> <ACCOUNTNO>10000</ACCOUNTNO><br /> <TRX_AMOUNT>100.12</TRX_AMOUNT><br /> <ENTRYDESCRIPTION>Line 1 of my bill</ENTRYDESCRIPTION><br /> <LOCATIONID>Alder</LOCATIONID><br /> <DEPARTMENTID>12345</DEPARTMENTID><br /></APBILLITEM><br /><APBILLITEM><br /> <ACCOUNTNO>10000</ACCOUNTNO><br /> <TRX_AMOUNT>100.12</TRX_AMOUNT><br /> <ENTRYDESCRIPTION>Line 2 of my bill</ENTRYDESCRIPTION><br /> <LOCATIONID>Alder</LOCATIONID><br /> <DEPARTMENTID>12345</DEPARTMENTID><br /></APBILLITEM> |
 
-### Create Contact
+### Create Contact {#createcontact}
 
 Creates a new contact.
 
-| Input                   | Comments                                         | Default |
-| ----------------------- | ------------------------------------------------ | ------- |
-| Connection              |                                                  |         |
-| Contact Name            | Contact name to create                           |         |
-| Print Name As           | Determine the format the name should be printed. |         |
-| Active Status           | Flag indicating if the status is active          |         |
-| Address Line 1          | First line's address                             |         |
-| Address Line 2          | Second line's address                            |         |
-| Cellular Phone Number   | Cellular phone number                            |         |
-| City                    | City name.                                       |         |
-| Company Name            | Name of the company                              |         |
-| Contact Tax Group Name  | Name of the tax group                            |         |
-| Country                 | Country name.                                    |         |
-| Fax Number              | Fax number                                       |         |
-| First Name              | First name                                       |         |
-| Last Name               | Last name                                        |         |
-| Middle Name             | Middle name                                      |         |
-| Pager Number            | Pager number                                     |         |
-| Prefix                  | Prefix for the name                              |         |
-| Primary Email Address   | Primary email address                            |         |
-| Primary Phone Number    | Primary phone number                             |         |
-| Primary URL             | Primary URL                                      |         |
-| Secondary Email Address | Secondary email address                          |         |
-| Secondary Phone Number  | Secondary phone number                           |         |
-| Secondary URL           | Secondary URL                                    |         |
-| State/Province          | State or province                                |         |
-| Tax ID                  | Tax identification number                        |         |
-| Taxable                 | Flag indicating if taxable                       |         |
-| ZIP/Postal Code         | ZIP or postal code.                              |         |
+| Input                   | Comments                                                                                   | Default |
+| ----------------------- | ------------------------------------------------------------------------------------------ | ------- |
+| Connection              | The Sage Intacct connection to use.                                                        |         |
+| Contact Name            | Contact name to create                                                                     |         |
+| Print Name As           | Determine the format the name should be printed.                                           |         |
+| Active Status           | When true, the record is active and available for use. When false, the record is inactive. |         |
+| Address Line 1          | First line's address                                                                       |         |
+| Address Line 2          | Second line's address                                                                      |         |
+| Cellular Phone Number   | Cellular phone number                                                                      |         |
+| City                    | City name.                                                                                 |         |
+| Company Name            | Name of the company                                                                        |         |
+| Contact Tax Group Name  | Name of the tax group                                                                      |         |
+| Country                 | Country name.                                                                              |         |
+| Fax Number              | Fax number                                                                                 |         |
+| First Name              | First name                                                                                 |         |
+| Last Name               | Last name                                                                                  |         |
+| Middle Name             | Middle name                                                                                |         |
+| Pager Number            | Pager number                                                                               |         |
+| Prefix                  | Prefix for the name                                                                        |         |
+| Primary Email Address   | Primary email address                                                                      |         |
+| Primary Phone Number    | Primary phone number                                                                       |         |
+| Primary URL             | Primary URL                                                                                |         |
+| Secondary Email Address | Secondary email address                                                                    |         |
+| Secondary Phone Number  | Secondary phone number                                                                     |         |
+| Secondary URL           | Secondary URL                                                                              |         |
+| State/Province          | State or province                                                                          |         |
+| Tax ID                  | Tax identification number (EIN/SSN)                                                        |         |
+| Taxable                 | When true, the item is subject to taxation. When false, the item is tax-exempt.            |         |
+| ZIP/Postal Code         | ZIP or postal code.                                                                        |         |
 
-### Create Customer
+### Create Customer {#createcustomer}
 
 Creates a customer and specifies a display contact and a contact list (provided via customer contacts).
 
 | Input                                    | Comments                                                                                                                                                                                                                                                                                                                                                                                                                                             | Default |
 | ---------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
-| Connection                               |                                                                                                                                                                                                                                                                                                                                                                                                                                                      |         |
+| Connection                               | The Sage Intacct connection to use.                                                                                                                                                                                                                                                                                                                                                                                                                  |         |
 | Customer ID                              | Unique ID. Required if company does not use document sequencing, or you can provide a value to use instead of the document sequence value.                                                                                                                                                                                                                                                                                                           |         |
-| Customer Name                            | Name                                                                                                                                                                                                                                                                                                                                                                                                                                                 |         |
+| Customer Name                            | Customer name                                                                                                                                                                                                                                                                                                                                                                                                                                        |         |
 | One Time                                 | One time. Use false for No, true for Yes. If you want to simplify your customer list page by displaying only your regularly-used customers, we recommend you select this option for customers that you use only once or just occasionally. These customers will not appear in the customer list page unless you click Include one-time use at the top of the list page, in which case, you'll see all your customers regardless of frequency of use. |         |
-| Active Status                            | Flag indicating if the status is active                                                                                                                                                                                                                                                                                                                                                                                                              |         |
+| Active Status                            | When true, the record is active and available for use. When false, the record is inactive.                                                                                                                                                                                                                                                                                                                                                           |         |
 | Last Name                                | Last name                                                                                                                                                                                                                                                                                                                                                                                                                                            |         |
 | First Name                               | First name                                                                                                                                                                                                                                                                                                                                                                                                                                           |         |
 | Middle Name                              | Middle name                                                                                                                                                                                                                                                                                                                                                                                                                                          |         |
@@ -138,7 +196,7 @@ Creates a customer and specifies a display contact and a contact list (provided 
 | ZIP/Postal Code                          | ZIP or postal code.                                                                                                                                                                                                                                                                                                                                                                                                                                  |         |
 | Country                                  | Country name.                                                                                                                                                                                                                                                                                                                                                                                                                                        |         |
 | ISO Country Code                         | ISO country code. When ISO country codes are enabled in a company, both COUNTRY and ISOCOUNTRYCODE must be provided.                                                                                                                                                                                                                                                                                                                                 |         |
-| Excluded From Contact List               | Flag indicating if excluded from contact lists                                                                                                                                                                                                                                                                                                                                                                                                       |         |
+| Excluded From Contact List               | When true, this contact will be excluded from contact lists and searches. When false, the contact appears in all lists.                                                                                                                                                                                                                                                                                                                              |         |
 | Customer Type ID                         | Identifier for the type of customer                                                                                                                                                                                                                                                                                                                                                                                                                  |         |
 | Sales Rep Employee ID                    | Employee ID of the sales representative                                                                                                                                                                                                                                                                                                                                                                                                              |         |
 | Parent Customer ID                       | Identifier of the parent customer                                                                                                                                                                                                                                                                                                                                                                                                                    |         |
@@ -149,12 +207,12 @@ Creates a customer and specifies a display contact and a contact list (provided 
 | Offset AR GL Account No                  | Offset AR GL account number                                                                                                                                                                                                                                                                                                                                                                                                                          |         |
 | Default Revenue GL Account No            | Default AR GL account number                                                                                                                                                                                                                                                                                                                                                                                                                         |         |
 | Shipping Method                          | Shipping method                                                                                                                                                                                                                                                                                                                                                                                                                                      |         |
-| Resale Number                            | Resale number                                                                                                                                                                                                                                                                                                                                                                                                                                        |         |
-| Taxable                                  | Flag indicating if taxable                                                                                                                                                                                                                                                                                                                                                                                                                           |         |
+| Resale Number                            | Resale certificate number for tax-exempt purchases                                                                                                                                                                                                                                                                                                                                                                                                   |         |
+| Taxable                                  | When true, the item is subject to taxation. When false, the item is tax-exempt.                                                                                                                                                                                                                                                                                                                                                                      |         |
 | Contact Tax Group Name                   | Name of the tax group                                                                                                                                                                                                                                                                                                                                                                                                                                |         |
-| Tax ID                                   | Tax identification number                                                                                                                                                                                                                                                                                                                                                                                                                            |         |
-| Credit Limit                             | Credit limit                                                                                                                                                                                                                                                                                                                                                                                                                                         |         |
-| On Hold                                  | Flag indicating if on hold                                                                                                                                                                                                                                                                                                                                                                                                                           |         |
+| Tax ID                                   | Tax identification number (EIN/SSN)                                                                                                                                                                                                                                                                                                                                                                                                                  |         |
+| Credit Limit                             | Credit limit amount                                                                                                                                                                                                                                                                                                                                                                                                                                  |         |
+| On Hold                                  | When true, the account is placed on hold and transactions are suspended. When false, the account operates normally.                                                                                                                                                                                                                                                                                                                                  |         |
 | Delivery Method                          | Delivery method. Use either Print, E-Mail, or Print#~#E-Mail for both. If using E-Mail, the customer contact must have a valid e-mail address.                                                                                                                                                                                                                                                                                                       |         |
 | Default Invoice Message                  | Default message for invoices                                                                                                                                                                                                                                                                                                                                                                                                                         |         |
 | Comments                                 | Additional comments                                                                                                                                                                                                                                                                                                                                                                                                                                  |         |
@@ -174,13 +232,13 @@ Creates a customer and specifies a display contact and a contact list (provided 
 | Restricted Department                    | Restricted department IDs. Use if OBJECTRESTRICTION is Restricted                                                                                                                                                                                                                                                                                                                                                                                    |         |
 | Custom Fields                            | Custom field names and values as defined for this object                                                                                                                                                                                                                                                                                                                                                                                             |         |
 
-### Create Invoice
+### Create Invoice {#createinvoice}
 
 Creates an invoice.
 
 | Input                | Comments                                                                                      | Default                                                                                                                                                                                                                                                                                                                                                                                                                              |
 | -------------------- | --------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Connection           |                                                                                               |                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| Connection           | The Sage Intacct connection to use.                                                           |                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | Invoice Line Items   | Invoice lines, must have at least 1. Each item must be wrapped in <lineitem></lineitem> tags. | <lineitem><br /> <glaccountno>10016</glaccountno><br /> <amount>345.43</amount><br /> <locationid>oriongroup</locationid><br /> <departmentid>D200</departmentid><br /> <classid>C12</classid><br /></lineitem><br /><lineitem><br /> <glaccountno>10016</glaccountno><br /> <amount>345.43</amount><br /> <locationid>oriongroup</locationid><br /> <departmentid>D200</departmentid><br /> <classid>C12</classid><br /></lineitem> |
 | Customer ID          | The customer ID to create the invoice for.                                                    |                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | Date Created         | Invoice date creation date                                                                    |                                                                                                                                                                                                                                                                                                                                                                                                                                      |
@@ -202,13 +260,13 @@ Creates an invoice.
 | Attachments ID       | Id of an attachment group of one or more supporting files                                     |                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | Custom Fields        | Custom field names and values as defined for this object                                      |                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 
-### Create Project
+### Create Project {#createproject}
 
 Creates a new project.
 
 | Input               | Comments                                                                                                                                                   | Default |
 | ------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
-| Connection          |                                                                                                                                                            |         |
+| Connection          | The Sage Intacct connection to use.                                                                                                                        |         |
 | Project Name        | Project name for the to-be-created object.                                                                                                                 |         |
 | Project Category    | Project category for the to-be-created object.                                                                                                             |         |
 | Project ID          | Unique ID for the project. Required if company does not use document sequencing, or you can provide a value to use instead of the document sequence value. |         |
@@ -220,17 +278,17 @@ Creates a new project.
 | Status              | Use false for Inactive, true for Active. (Default: true)                                                                                                   | true    |
 | Additional Fields   | Additional fields that are not covered by the standard inputs.                                                                                             |         |
 
-### Create Vendor
+### Create Vendor {#createvendor}
 
 Creates a new vendor.
 
 | Input                                                | Comments                                                                                                                                                                                                                                                                                                                                                                                                                                  | Default |
 | ---------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
-| Connection                                           |                                                                                                                                                                                                                                                                                                                                                                                                                                           |         |
+| Connection                                           | The Sage Intacct connection to use.                                                                                                                                                                                                                                                                                                                                                                                                       |         |
 | Vendor ID                                            | Unique ID for the vendor. Required if company does not use document sequencing, or you can provide a value to use instead of the document sequence value.                                                                                                                                                                                                                                                                                 |         |
 | Vendor Name                                          |                                                                                                                                                                                                                                                                                                                                                                                                                                           |         |
 | One Time                                             | One time. Use false for No, true for Yes. If you want to simplify your vendor list page by displaying only your regularly-used vendors, we recommend you select this option for vendors that you use only once or just occasionally. These vendors will not appear in the vendor list page unless you click Include one-time use at the top of the list page, in which case, you'll see all your vendors regardless of frequently of use. |         |
-| Active Status                                        | Flag indicating if the status is active                                                                                                                                                                                                                                                                                                                                                                                                   |         |
+| Active Status                                        | When true, the record is active and available for use. When false, the record is inactive.                                                                                                                                                                                                                                                                                                                                                |         |
 | Last Name                                            | Last name                                                                                                                                                                                                                                                                                                                                                                                                                                 |         |
 | First Name                                           | First name                                                                                                                                                                                                                                                                                                                                                                                                                                |         |
 | Middle Name                                          | Middle name                                                                                                                                                                                                                                                                                                                                                                                                                               |         |
@@ -253,21 +311,21 @@ Creates a new vendor.
 | ZIP/Postal Code                                      | ZIP or postal code.                                                                                                                                                                                                                                                                                                                                                                                                                       |         |
 | Country                                              | Country name.                                                                                                                                                                                                                                                                                                                                                                                                                             |         |
 | ISO Country Code                                     | ISO country code. When ISO country codes are enabled in a company, both COUNTRY and ISOCOUNTRYCODE must be provided.                                                                                                                                                                                                                                                                                                                      |         |
-| Excluded From Contact List                           | Flag indicating if excluded from contact lists                                                                                                                                                                                                                                                                                                                                                                                            |         |
+| Excluded From Contact List                           | When true, this contact will be excluded from contact lists and searches. When false, the contact appears in all lists.                                                                                                                                                                                                                                                                                                                   |         |
 | Vendor Type ID                                       |                                                                                                                                                                                                                                                                                                                                                                                                                                           |         |
 | Parent Vendor ID                                     |                                                                                                                                                                                                                                                                                                                                                                                                                                           |         |
 | GL Group Name                                        | Name of the GL group                                                                                                                                                                                                                                                                                                                                                                                                                      |         |
-| Tax ID                                               | Tax identification number                                                                                                                                                                                                                                                                                                                                                                                                                 |         |
+| Tax ID                                               | Tax identification number (EIN/SSN)                                                                                                                                                                                                                                                                                                                                                                                                       |         |
 | Form 1099 Name                                       |                                                                                                                                                                                                                                                                                                                                                                                                                                           |         |
 | Form 1099 Type                                       |                                                                                                                                                                                                                                                                                                                                                                                                                                           |         |
 | Form 1099 Box                                        |                                                                                                                                                                                                                                                                                                                                                                                                                                           |         |
 | Attachments ID                                       | Id of an attachment group of one or more supporting files                                                                                                                                                                                                                                                                                                                                                                                 |         |
 | Default Expense GL Account No                        |                                                                                                                                                                                                                                                                                                                                                                                                                                           |         |
 | Offset GL Account No                                 |                                                                                                                                                                                                                                                                                                                                                                                                                                           |         |
-| Taxable                                              | Flag indicating if taxable                                                                                                                                                                                                                                                                                                                                                                                                                |         |
+| Taxable                                              | When true, the item is subject to taxation. When false, the item is tax-exempt.                                                                                                                                                                                                                                                                                                                                                           |         |
 | Contact Tax Group Name                               | Name of the tax group                                                                                                                                                                                                                                                                                                                                                                                                                     |         |
-| Credit Limit                                         | Credit limit                                                                                                                                                                                                                                                                                                                                                                                                                              |         |
-| On Hold                                              | Flag indicating if on hold                                                                                                                                                                                                                                                                                                                                                                                                                |         |
+| Credit Limit                                         | Credit limit amount                                                                                                                                                                                                                                                                                                                                                                                                                       |         |
+| On Hold                                              | When true, the account is placed on hold and transactions are suspended. When false, the account operates normally.                                                                                                                                                                                                                                                                                                                       |         |
 | Do Not Pay                                           |                                                                                                                                                                                                                                                                                                                                                                                                                                           |         |
 | Comments                                             | Additional comments                                                                                                                                                                                                                                                                                                                                                                                                                       |         |
 | Default Currency                                     | Default currency code                                                                                                                                                                                                                                                                                                                                                                                                                     |         |
@@ -293,144 +351,144 @@ Creates a new vendor.
 | Restricted Department                                | Restricted department IDs. Use if OBJECTRESTRICTION is Restricted                                                                                                                                                                                                                                                                                                                                                                         |         |
 | Custom Fields                                        | Custom field names and values as defined for this object                                                                                                                                                                                                                                                                                                                                                                                  |         |
 
-### Delete Object
+### Delete Object {#deleteobject}
 
 Deletes different objects in Sage Intacct.
 
 | Input      | Comments                                                               | Default |
 | ---------- | ---------------------------------------------------------------------- | ------- |
-| Connection |                                                                        |         |
+| Connection | The Sage Intacct connection to use.                                    |         |
 | Object     | Type of object to delete                                               |         |
 | Keys       | A key or comma-separated list (123,456) of keys (RECORDNO's) to delete |         |
 
-### Get AP Payment
+### Get AP Payment {#getappayment}
 
 Retrieve a single AP Payment.
 
 | Input      | Comments                                 | Default |
 | ---------- | ---------------------------------------- | ------- |
-| Connection |                                          |         |
+| Connection | The Sage Intacct connection to use.      |         |
 | Field      | Field to retrieve, use \* for all fields |         |
-| Record No  | Record number                            |         |
+| Record No  | The unique record number identifier      |         |
 
-### Get AR Adjustment
+### Get AR Adjustment {#getaradjustment}
 
 Retrieve a single AR Adjustment.
 
 | Input      | Comments                                 | Default |
 | ---------- | ---------------------------------------- | ------- |
-| Connection |                                          |         |
+| Connection | The Sage Intacct connection to use.      |         |
 | Field      | Field to retrieve, use \* for all fields |         |
-| Record No  | Record number                            |         |
+| Record No  | The unique record number identifier      |         |
 
-### Get AR Adjustment Line
+### Get AR Adjustment Line {#getaradjustmentline}
 
 Retrieve a single AR Adjustment Line.
 
 | Input      | Comments                                 | Default |
 | ---------- | ---------------------------------------- | ------- |
-| Connection |                                          |         |
+| Connection | The Sage Intacct connection to use.      |         |
 | Field      | Field to retrieve, use \* for all fields |         |
-| Record No  | Record number                            |         |
+| Record No  | The unique record number identifier      |         |
 
-### Get AR Advance
+### Get AR Advance {#getaradvance}
 
 Retrieve a single AR Advance.
 
 | Input      | Comments                                 | Default |
 | ---------- | ---------------------------------------- | ------- |
-| Connection |                                          |         |
+| Connection | The Sage Intacct connection to use.      |         |
 | Field      | Field to retrieve, use \* for all fields |         |
-| Record No  | Record number                            |         |
+| Record No  | The unique record number identifier      |         |
 
-### Get AR Payment
+### Get AR Payment {#getarpayment}
 
 Retrieve a single AR Payment.
 
 | Input      | Comments                                 | Default |
 | ---------- | ---------------------------------------- | ------- |
-| Connection |                                          |         |
+| Connection | The Sage Intacct connection to use.      |         |
 | Field      | Field to retrieve, use \* for all fields |         |
-| Record No  | Record number                            |         |
+| Record No  | The unique record number identifier      |         |
 
-### Get Bill
+### Get Bill {#getbill}
 
 Retrieve a single bill.
 
 | Input      | Comments                                 | Default |
 | ---------- | ---------------------------------------- | ------- |
-| Connection |                                          |         |
+| Connection | The Sage Intacct connection to use.      |         |
 | Field      | Field to retrieve, use \* for all fields |         |
-| Record No  | Record number                            |         |
+| Record No  | The unique record number identifier      |         |
 
-### Get Contact
+### Get Contact {#getcontact}
 
 Retrieve a single contact.
 
 | Input      | Comments                                 | Default |
 | ---------- | ---------------------------------------- | ------- |
-| Connection |                                          |         |
+| Connection | The Sage Intacct connection to use.      |         |
 | Field      | Field to retrieve, use \* for all fields |         |
-| Record No  | Record number                            |         |
+| Record No  | The unique record number identifier      |         |
 
-### Get Customer
+### Get Customer {#getcustomer}
 
 Retrieve a single customer.
 
 | Input      | Comments                                 | Default |
 | ---------- | ---------------------------------------- | ------- |
-| Connection |                                          |         |
+| Connection | The Sage Intacct connection to use.      |         |
 | Field      | Field to retrieve, use \* for all fields |         |
-| Record No  | Record number                            |         |
+| Record No  | The unique record number identifier      |         |
 
-### Get Invoice
+### Get Invoice {#getinvoice}
 
 Retrieve a single invoice.
 
 | Input      | Comments                                 | Default |
 | ---------- | ---------------------------------------- | ------- |
-| Connection |                                          |         |
+| Connection | The Sage Intacct connection to use.      |         |
 | Field      | Field to retrieve, use \* for all fields |         |
-| Record No  | Record number                            |         |
+| Record No  | The unique record number identifier      |         |
 
-### Get Project
+### Get Project {#getproject}
 
 Retrieve a project by record number.
 
-| Input      | Comments                                  | Default |
-| ---------- | ----------------------------------------- | ------- |
-| Connection |                                           |         |
-| Field      | Field to retrieve, use \* for all fields  |         |
-| Record No  | Record number of the project to retrieve. |         |
+| Input      | Comments                                                        | Default |
+| ---------- | --------------------------------------------------------------- | ------- |
+| Connection | The Sage Intacct connection to use.                             |         |
+| Field      | Field to retrieve, use \* for all fields                        |         |
+| Record No  | The unique record number identifier of the project to retrieve. |         |
 
-### Get Vendor
+### Get Vendor {#getvendor}
 
 Retrieve a single vendor.
 
 | Input      | Comments                                 | Default |
 | ---------- | ---------------------------------------- | ------- |
-| Connection |                                          |         |
+| Connection | The Sage Intacct connection to use.      |         |
 | Field      | Field to retrieve, use \* for all fields |         |
-| Record No  | Record number                            |         |
+| Record No  | The unique record number identifier      |         |
 
-### Query and List Records
+### Query and List Records {#queryandlist}
 
 Lists specified criteria based on a query.
 
 | Input       | Comments                                                                                                                          | Default |
 | ----------- | --------------------------------------------------------------------------------------------------------------------------------- | ------- |
-| Connection  |                                                                                                                                   |         |
+| Connection  | The Sage Intacct connection to use.                                                                                               |         |
 | Field       | Field to retrieve, use \* for all fields                                                                                          |         |
 | Object Name | Name of the object to query. Possible values are: VENDOR, APBILL, APPYMT, ARPYMT, ARADJUSTMENT, ARADJUSTMENTITEM, ARADVANCE, etc. |         |
-| Query       | Query to filter the records                                                                                                       |         |
+| Query       | Query filter expression to filter the records                                                                                     |         |
 
-### Raw Request
+### Raw Request {#rawrequest}
 
 Send raw HTTP request to Sage Intacct
 
 | Input                   | Comments                                                                                                                                                                                                                                                                                                                                                                        | Default                                                                                                                                         |
 | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
-| Connection              |                                                                                                                                                                                                                                                                                                                                                                                 |                                                                                                                                                 |
+| Connection              | The Sage Intacct connection to use.                                                                                                                                                                                                                                                                                                                                             |                                                                                                                                                 |
 | Data                    | The raw XML function to execute. Add the structure as per the Sage Intacct API documentation. For the provided default example, you can check 'Query and List Contacts' function at https://developer.intacct.com/api/company-console/contacts/. Follow this same pattern for any other API function that you want to execute. Authentication is already handled by the action. | <query><br /><object>CONTACT</object><br /><select><br /> <field>RECORDNO</field><br /> <field>CONTACTNAME</field><br /></select><br /></query> |
 | Header                  | A list of headers to send with the request. Sage Intacct API is XML based. Content-Type: 'application/xml' header is already added.                                                                                                                                                                                                                                             |                                                                                                                                                 |
 | Response Type           | The type of data you expect in the response. You can request json or xml data.                                                                                                                                                                                                                                                                                                  | json                                                                                                                                            |
@@ -441,13 +499,13 @@ Send raw HTTP request to Sage Intacct
 | Max Retry Count         | The maximum number of retries to attempt. Specify 0 for no retries.                                                                                                                                                                                                                                                                                                             | 0                                                                                                                                               |
 | Use Exponential Backoff | Specifies whether to use a pre-defined exponential backoff strategy for retries. When enabled, 'Retry Delay (ms)' is ignored.                                                                                                                                                                                                                                                   | false                                                                                                                                           |
 
-### Update AR Adjustment
+### Update AR Adjustment {#updatearadjustment}
 
 Update an existing AR Adjustment.
 
 | Input                    | Comments                                                                                                                         | Default |
 | ------------------------ | -------------------------------------------------------------------------------------------------------------------------------- | ------- |
-| Connection               |                                                                                                                                  |         |
+| Connection               | The Sage Intacct connection to use.                                                                                              |         |
 | Record Number            | AR Adjustment RECORDNO of bill to update.                                                                                        |         |
 | Customer ID              | AR Adjustment CUSTOMERID to update.                                                                                              |         |
 | Date Created             | AR Adjustment DATECREATED to update.                                                                                             |         |
@@ -461,13 +519,13 @@ Update an existing AR Adjustment.
 | Action                   | Action. Use Draft or Submit. (Default: Submit)                                                                                   |         |
 | Additional XML Tags      | Additional XML tags that might not be covered by the standard inputs.                                                            |         |
 
-### Update AR Advance
+### Update AR Advance {#updatearadvance}
 
 Update an existing AR Advance.
 
 | Input                  | Comments                                                                                                                                                                                                                                                                                       | Default |
 | ---------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
-| Connection             |                                                                                                                                                                                                                                                                                                |         |
+| Connection             | The Sage Intacct connection to use.                                                                                                                                                                                                                                                            |         |
 | Record No              | AR Advance RECORDNO to update.                                                                                                                                                                                                                                                                 |         |
 | AR Advance Items       | AR Advance ARADVANCEITEMS to update. <strong>Note:</strong> To add an advance line, supply all the original lines along with the new one. To delete a line, supply only the lines that you want to keep. To modify a line, supply all the original lines and change the field values you want. |         |
 | Payment Date           | AR Advance PAYMENTDATE to update.                                                                                                                                                                                                                                                              |         |
@@ -477,51 +535,51 @@ Update an existing AR Advance.
 | Undeposited Account No | AR Advance UNDEPOSITEDACCOUNTNO to update.                                                                                                                                                                                                                                                     |         |
 | Additional XML Tags    | Additional XML tags that might not be covered by the standard inputs.                                                                                                                                                                                                                          |         |
 
-### Update Contact
+### Update Contact {#updatecontact}
 
 Update an existing contact.
 
-| Input                   | Comments                                         | Default |
-| ----------------------- | ------------------------------------------------ | ------- |
-| Connection              |                                                  |         |
-| Contact Name            | Full name of the contact                         |         |
-| Print Name As           | Determine the format the name should be printed. |         |
-| Active Status           | Flag indicating if the status is active          |         |
-| Address Line 1          | First line's address                             |         |
-| Address Line 2          | Second line's address                            |         |
-| Cellular Phone Number   | Cellular phone number                            |         |
-| City                    | City name.                                       |         |
-| Company Name            | Name of the company                              |         |
-| Contact Tax Group Name  | Name of the tax group                            |         |
-| Country                 | Country name.                                    |         |
-| Fax Number              | Fax number                                       |         |
-| First Name              | First name                                       |         |
-| Last Name               | Last name                                        |         |
-| Middle Name             | Middle name                                      |         |
-| Pager Number            | Pager number                                     |         |
-| Prefix                  | Prefix for the name                              |         |
-| Primary Email Address   | Primary email address                            |         |
-| Primary Phone Number    | Primary phone number                             |         |
-| Primary URL             | Primary URL                                      |         |
-| Secondary Email Address | Secondary email address                          |         |
-| Secondary Phone Number  | Secondary phone number                           |         |
-| Secondary URL           | Secondary URL                                    |         |
-| State/Province          | State or province                                |         |
-| Tax ID                  | Tax identification number                        |         |
-| Taxable                 | Flag indicating if taxable                       |         |
-| ZIP/Postal Code         | ZIP or postal code.                              |         |
+| Input                   | Comments                                                                                   | Default |
+| ----------------------- | ------------------------------------------------------------------------------------------ | ------- |
+| Connection              | The Sage Intacct connection to use.                                                        |         |
+| Contact Name            | Full name of the contact                                                                   |         |
+| Print Name As           | Determine the format the name should be printed.                                           |         |
+| Active Status           | When true, the record is active and available for use. When false, the record is inactive. |         |
+| Address Line 1          | First line's address                                                                       |         |
+| Address Line 2          | Second line's address                                                                      |         |
+| Cellular Phone Number   | Cellular phone number                                                                      |         |
+| City                    | City name.                                                                                 |         |
+| Company Name            | Name of the company                                                                        |         |
+| Contact Tax Group Name  | Name of the tax group                                                                      |         |
+| Country                 | Country name.                                                                              |         |
+| Fax Number              | Fax number                                                                                 |         |
+| First Name              | First name                                                                                 |         |
+| Last Name               | Last name                                                                                  |         |
+| Middle Name             | Middle name                                                                                |         |
+| Pager Number            | Pager number                                                                               |         |
+| Prefix                  | Prefix for the name                                                                        |         |
+| Primary Email Address   | Primary email address                                                                      |         |
+| Primary Phone Number    | Primary phone number                                                                       |         |
+| Primary URL             | Primary URL                                                                                |         |
+| Secondary Email Address | Secondary email address                                                                    |         |
+| Secondary Phone Number  | Secondary phone number                                                                     |         |
+| Secondary URL           | Secondary URL                                                                              |         |
+| State/Province          | State or province                                                                          |         |
+| Tax ID                  | Tax identification number (EIN/SSN)                                                        |         |
+| Taxable                 | When true, the item is subject to taxation. When false, the item is tax-exempt.            |         |
+| ZIP/Postal Code         | ZIP or postal code.                                                                        |         |
 
-### Update Customer
+### Update Customer {#updatecustomer}
 
 Updates an existing customer in Intacct. The customer is identified by the customer ID.
 
 | Input                                    | Comments                                                                                                                                                                                                                                                                                                                                                                                                                                             | Default |
 | ---------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
-| Connection                               |                                                                                                                                                                                                                                                                                                                                                                                                                                                      |         |
+| Connection                               | The Sage Intacct connection to use.                                                                                                                                                                                                                                                                                                                                                                                                                  |         |
 | Customer ID                              | Unique ID. Required if company does not use document sequencing, or you can provide a value to use instead of the document sequence value.                                                                                                                                                                                                                                                                                                           |         |
-| Customer Name                            | Name                                                                                                                                                                                                                                                                                                                                                                                                                                                 |         |
+| Customer Name                            | Customer name                                                                                                                                                                                                                                                                                                                                                                                                                                        |         |
 | One Time                                 | One time. Use false for No, true for Yes. If you want to simplify your customer list page by displaying only your regularly-used customers, we recommend you select this option for customers that you use only once or just occasionally. These customers will not appear in the customer list page unless you click Include one-time use at the top of the list page, in which case, you'll see all your customers regardless of frequency of use. |         |
-| Active Status                            | Flag indicating if the status is active                                                                                                                                                                                                                                                                                                                                                                                                              |         |
+| Active Status                            | When true, the record is active and available for use. When false, the record is inactive.                                                                                                                                                                                                                                                                                                                                                           |         |
 | Last Name                                | Last name                                                                                                                                                                                                                                                                                                                                                                                                                                            |         |
 | First Name                               | First name                                                                                                                                                                                                                                                                                                                                                                                                                                           |         |
 | Middle Name                              | Middle name                                                                                                                                                                                                                                                                                                                                                                                                                                          |         |
@@ -544,7 +602,7 @@ Updates an existing customer in Intacct. The customer is identified by the custo
 | ZIP/Postal Code                          | ZIP or postal code.                                                                                                                                                                                                                                                                                                                                                                                                                                  |         |
 | Country                                  | Country name.                                                                                                                                                                                                                                                                                                                                                                                                                                        |         |
 | ISO Country Code                         | ISO country code. When ISO country codes are enabled in a company, both COUNTRY and ISOCOUNTRYCODE must be provided.                                                                                                                                                                                                                                                                                                                                 |         |
-| Excluded From Contact List               | Flag indicating if excluded from contact lists                                                                                                                                                                                                                                                                                                                                                                                                       |         |
+| Excluded From Contact List               | When true, this contact will be excluded from contact lists and searches. When false, the contact appears in all lists.                                                                                                                                                                                                                                                                                                                              |         |
 | Customer Type ID                         | Identifier for the type of customer                                                                                                                                                                                                                                                                                                                                                                                                                  |         |
 | Sales Rep Employee ID                    | Employee ID of the sales representative                                                                                                                                                                                                                                                                                                                                                                                                              |         |
 | Parent Customer ID                       | Identifier of the parent customer                                                                                                                                                                                                                                                                                                                                                                                                                    |         |
@@ -555,12 +613,12 @@ Updates an existing customer in Intacct. The customer is identified by the custo
 | Offset AR GL Account No                  | Offset AR GL account number                                                                                                                                                                                                                                                                                                                                                                                                                          |         |
 | Default Revenue GL Account No            | Default AR GL account number                                                                                                                                                                                                                                                                                                                                                                                                                         |         |
 | Shipping Method                          | Shipping method                                                                                                                                                                                                                                                                                                                                                                                                                                      |         |
-| Resale Number                            | Resale number                                                                                                                                                                                                                                                                                                                                                                                                                                        |         |
-| Taxable                                  | Flag indicating if taxable                                                                                                                                                                                                                                                                                                                                                                                                                           |         |
+| Resale Number                            | Resale certificate number for tax-exempt purchases                                                                                                                                                                                                                                                                                                                                                                                                   |         |
+| Taxable                                  | When true, the item is subject to taxation. When false, the item is tax-exempt.                                                                                                                                                                                                                                                                                                                                                                      |         |
 | Contact Tax Group Name                   | Name of the tax group                                                                                                                                                                                                                                                                                                                                                                                                                                |         |
-| Tax ID                                   | Tax identification number                                                                                                                                                                                                                                                                                                                                                                                                                            |         |
-| Credit Limit                             | Credit limit                                                                                                                                                                                                                                                                                                                                                                                                                                         |         |
-| On Hold                                  | Flag indicating if on hold                                                                                                                                                                                                                                                                                                                                                                                                                           |         |
+| Tax ID                                   | Tax identification number (EIN/SSN)                                                                                                                                                                                                                                                                                                                                                                                                                  |         |
+| Credit Limit                             | Credit limit amount                                                                                                                                                                                                                                                                                                                                                                                                                                  |         |
+| On Hold                                  | When true, the account is placed on hold and transactions are suspended. When false, the account operates normally.                                                                                                                                                                                                                                                                                                                                  |         |
 | Delivery Method                          | Delivery method. Use either Print, E-Mail, or Print#~#E-Mail for both. If using E-Mail, the customer contact must have a valid e-mail address.                                                                                                                                                                                                                                                                                                       |         |
 | Default Invoice Message                  | Default message for invoices                                                                                                                                                                                                                                                                                                                                                                                                                         |         |
 | Comments                                 | Additional comments                                                                                                                                                                                                                                                                                                                                                                                                                                  |         |
@@ -580,13 +638,13 @@ Updates an existing customer in Intacct. The customer is identified by the custo
 | Restricted Department                    | Restricted department IDs. Use if OBJECTRESTRICTION is Restricted                                                                                                                                                                                                                                                                                                                                                                                    |         |
 | Custom Fields                            | Custom field names and values as defined for this object                                                                                                                                                                                                                                                                                                                                                                                             |         |
 
-### Update Invoice
+### Update Invoice {#updateinvoice}
 
 Updates an invoice.
 
 | Input              | Comments                                                                                                                                                               | Default                                                                                                                                                                                                                                                                                                                                                                                                                              |
 | ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Connection         |                                                                                                                                                                        |                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| Connection         | The Sage Intacct connection to use.                                                                                                                                    |                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | Record Number      | Invoice RECORDNO to update                                                                                                                                             |                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | Customer ID        | Unique ID. Required if company does not use document sequencing, or you can provide a value to use instead of the document sequence value.                             |                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | Date Created       | Invoice date creation date                                                                                                                                             |                                                                                                                                                                                                                                                                                                                                                                                                                                      |
@@ -606,13 +664,13 @@ Updates an invoice.
 | Custom Fields      | Custom field names and values as defined for this object                                                                                                               |                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | Invoice Line Items | To update an existing line use <updatelineitem></updatelineitem> otherwise to create a new line item use <lineitem></lineitem> instead.You can mix types in the array. | <lineitem><br /> <glaccountno>10016</glaccountno><br /> <amount>345.43</amount><br /> <locationid>oriongroup</locationid><br /> <departmentid>D200</departmentid><br /> <classid>C12</classid><br /></lineitem><br /><lineitem><br /> <glaccountno>10016</glaccountno><br /> <amount>345.43</amount><br /> <locationid>oriongroup</locationid><br /> <departmentid>D200</departmentid><br /> <classid>C12</classid><br /></lineitem> |
 
-### Update Project
+### Update Project {#updateproject}
 
 Updates an existing project.
 
 | Input               | Comments                                                       | Default |
 | ------------------- | -------------------------------------------------------------- | ------- |
-| Connection          |                                                                |         |
+| Connection          | The Sage Intacct connection to use.                            |         |
 | Project ID          | Project ID to update.                                          |         |
 | Project Name        | Project name for the to-be-updated object.                     |         |
 | Project Category    | Project category for the to-be-updated object.                 |         |
@@ -624,17 +682,17 @@ Updates an existing project.
 | Status              |                                                                |         |
 | Additional Fields   | Additional fields that are not covered by the standard inputs. |         |
 
-### Update Vendor
+### Update Vendor {#updatevendor}
 
 Updates an existing vendor.
 
 | Input                                                | Comments                                                                                                                                                                                                                                                                                                                                                                                                                                  | Default |
 | ---------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
-| Connection                                           |                                                                                                                                                                                                                                                                                                                                                                                                                                           |         |
+| Connection                                           | The Sage Intacct connection to use.                                                                                                                                                                                                                                                                                                                                                                                                       |         |
 | Vendor ID                                            | Unique ID for the vendor. Required if company does not use document sequencing, or you can provide a value to use instead of the document sequence value.                                                                                                                                                                                                                                                                                 |         |
 | Vendor Name                                          |                                                                                                                                                                                                                                                                                                                                                                                                                                           |         |
 | One Time                                             | One time. Use false for No, true for Yes. If you want to simplify your vendor list page by displaying only your regularly-used vendors, we recommend you select this option for vendors that you use only once or just occasionally. These vendors will not appear in the vendor list page unless you click Include one-time use at the top of the list page, in which case, you'll see all your vendors regardless of frequently of use. |         |
-| Active Status                                        | Flag indicating if the status is active                                                                                                                                                                                                                                                                                                                                                                                                   |         |
+| Active Status                                        | When true, the record is active and available for use. When false, the record is inactive.                                                                                                                                                                                                                                                                                                                                                |         |
 | Last Name                                            | Last name                                                                                                                                                                                                                                                                                                                                                                                                                                 |         |
 | First Name                                           | First name                                                                                                                                                                                                                                                                                                                                                                                                                                |         |
 | Middle Name                                          | Middle name                                                                                                                                                                                                                                                                                                                                                                                                                               |         |
@@ -657,21 +715,21 @@ Updates an existing vendor.
 | ZIP/Postal Code                                      | ZIP or postal code.                                                                                                                                                                                                                                                                                                                                                                                                                       |         |
 | Country                                              | Country name.                                                                                                                                                                                                                                                                                                                                                                                                                             |         |
 | ISO Country Code                                     | ISO country code. When ISO country codes are enabled in a company, both COUNTRY and ISOCOUNTRYCODE must be provided.                                                                                                                                                                                                                                                                                                                      |         |
-| Excluded From Contact List                           | Flag indicating if excluded from contact lists                                                                                                                                                                                                                                                                                                                                                                                            |         |
+| Excluded From Contact List                           | When true, this contact will be excluded from contact lists and searches. When false, the contact appears in all lists.                                                                                                                                                                                                                                                                                                                   |         |
 | Vendor Type ID                                       |                                                                                                                                                                                                                                                                                                                                                                                                                                           |         |
 | Parent Vendor ID                                     |                                                                                                                                                                                                                                                                                                                                                                                                                                           |         |
 | GL Group Name                                        | Name of the GL group                                                                                                                                                                                                                                                                                                                                                                                                                      |         |
-| Tax ID                                               | Tax identification number                                                                                                                                                                                                                                                                                                                                                                                                                 |         |
+| Tax ID                                               | Tax identification number (EIN/SSN)                                                                                                                                                                                                                                                                                                                                                                                                       |         |
 | Form 1099 Name                                       |                                                                                                                                                                                                                                                                                                                                                                                                                                           |         |
 | Form 1099 Type                                       |                                                                                                                                                                                                                                                                                                                                                                                                                                           |         |
 | Form 1099 Box                                        |                                                                                                                                                                                                                                                                                                                                                                                                                                           |         |
 | Attachments ID                                       | Id of an attachment group of one or more supporting files                                                                                                                                                                                                                                                                                                                                                                                 |         |
 | Default Expense GL Account No                        |                                                                                                                                                                                                                                                                                                                                                                                                                                           |         |
 | Offset GL Account No                                 |                                                                                                                                                                                                                                                                                                                                                                                                                                           |         |
-| Taxable                                              | Flag indicating if taxable                                                                                                                                                                                                                                                                                                                                                                                                                |         |
+| Taxable                                              | When true, the item is subject to taxation. When false, the item is tax-exempt.                                                                                                                                                                                                                                                                                                                                                           |         |
 | Contact Tax Group Name                               | Name of the tax group                                                                                                                                                                                                                                                                                                                                                                                                                     |         |
-| Credit Limit                                         | Credit limit                                                                                                                                                                                                                                                                                                                                                                                                                              |         |
-| On Hold                                              | Flag indicating if on hold                                                                                                                                                                                                                                                                                                                                                                                                                |         |
+| Credit Limit                                         | Credit limit amount                                                                                                                                                                                                                                                                                                                                                                                                                       |         |
+| On Hold                                              | When true, the account is placed on hold and transactions are suspended. When false, the account operates normally.                                                                                                                                                                                                                                                                                                                       |         |
 | Do Not Pay                                           |                                                                                                                                                                                                                                                                                                                                                                                                                                           |         |
 | Comments                                             | Additional comments                                                                                                                                                                                                                                                                                                                                                                                                                       |         |
 | Default Currency                                     | Default currency code                                                                                                                                                                                                                                                                                                                                                                                                                     |         |

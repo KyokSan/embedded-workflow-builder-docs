@@ -9,7 +9,7 @@ Manage calendars and events in Google Calendar
 
 ## Connections
 
-### Google Calendar OAuth 2.0
+### Google Calendar OAuth 2.0 {#oauth2}
 
 Authenticate requests to Google Calendar using values obtained from the Google Cloud Platform.
 
@@ -32,7 +32,7 @@ Read about how OAuth 2.0 works [here](../oauth2.md).
 
 ## Actions
 
-### Create Calendar
+### Create Calendar {#createcalendar}
 
 Create a new calendar
 
@@ -43,7 +43,7 @@ Create a new calendar
 | Time Zone   | Provide a valid value for the timezone of the event. For a complete list of timezones refer to the google docs. |         |
 | Connection  |                                                                                                                 |         |
 
-### Create Event
+### Create Event {#createevent}
 
 Create a new event in a given calendar
 
@@ -64,7 +64,7 @@ Create a new event in a given calendar
 | Connection              |                                                                                                                                     |                                                                                                                                                                               |
 | Send Updates            | Whether to send notifications about the creation of the new event. Note that some emails might still be sent. The default is false. |                                                                                                                                                                               |
 
-### Delete Calendar
+### Delete Calendar {#deletecalendar}
 
 Delete an existing calendar by Id
 
@@ -73,7 +73,7 @@ Delete an existing calendar by Id
 | Calendar Id | Provide a string value for the id of the calendar. |         |
 | Connection  |                                                    |         |
 
-### Delete Event
+### Delete Event {#deleteevent}
 
 Delete an event by an Id
 
@@ -84,7 +84,7 @@ Delete an event by an Id
 | Connection   |                                                                          |         |
 | Send Updates | Guests who should receive notifications about the deletion of the event. |         |
 
-### Get Calendar
+### Get Calendar {#getcalendar}
 
 Get the information and metadata of a calendar by Id
 
@@ -93,7 +93,7 @@ Get the information and metadata of a calendar by Id
 | Connection  |                                                    |         |
 | Calendar Id | Provide a string value for the id of the calendar. |         |
 
-### Get Event
+### Get Event {#getevent}
 
 Get the information and metadata of an event by Id
 
@@ -103,7 +103,7 @@ Get the information and metadata of an event by Id
 | Event Id    | Provide the unique identifier of the event.        |         |
 | Connection  |                                                    |         |
 
-### List Calendars
+### List Calendars {#listcalendar}
 
 List all calendars
 
@@ -114,7 +114,7 @@ List all calendars
 | Connection  |                                                                                                                  |         |
 | Fetch All   | If true, fetches all pages of results, ignoring the 'Max Results' and 'Page Token' inputs.                       | false   |
 
-### List Events
+### List Events {#listevents}
 
 List all events in a given calendar
 
@@ -137,7 +137,7 @@ List all events in a given calendar
 | Updated Min             | Lower bound for an event's last modification time (as a RFC 3339 timestamp) to filter by. When specified, entries deleted since this time will always be included regardless of showDeleted. Optional. The default is not to filter by last modification time. |         |
 | Time Zone               | Time zone used in the response. Optional.                                                                                                                                                                                                                      |         |
 
-### Raw Request
+### Raw Request {#rawrequest}
 
 Send raw HTTP request to Google Calendar
 
@@ -159,7 +159,7 @@ Send raw HTTP request to Google Calendar
 | Max Retry Count         | The maximum number of retries to attempt. Specify 0 for no retries.                                                                                                                                                        | 0       |
 | Use Exponential Backoff | Specifies whether to use a pre-defined exponential backoff strategy for retries. When enabled, 'Retry Delay (ms)' is ignored.                                                                                              | false   |
 
-### Update Event
+### Update Event {#updateevent}
 
 Update the information and metadata of an existing event
 

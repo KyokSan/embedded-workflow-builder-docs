@@ -9,7 +9,7 @@ Gorgias is a customer support platform designed to help e-commerce businesses ma
 
 ## Connections
 
-### Gorgias API Key
+### Gorgias API Key {#gorgias-api-key}
 
 Connection to Gorgias using an API Key.
 
@@ -29,7 +29,7 @@ Once completed, you can start performing requests directly from the [API documen
 | Username | Your username for Gorgias. e.g. john@example.com                         |         |
 | API Key  | Your API Key for Gorgias.                                                |         |
 
-### Gorgias OAuth 2.0
+### Gorgias OAuth 2.0 {#gorgias-oauth2}
 
 Connection to Gorgias using OAuth 2.0. Using OAuth2 is mandatory for public applications.
 
@@ -63,7 +63,7 @@ Read about how OAuth 2.0 works [here](../oauth2.md).
 
 ## Actions
 
-### Create Customer
+### Create Customer {#createcustomer}
 
 Create a customer.
 
@@ -78,7 +78,7 @@ Create a customer.
 | Debug Request | Enabling this flag will log out the current request.                                                                                  | false   |
 | Connection    | Select the Gorgias connection type for this request: OAuth2 or API Key.                                                               |         |
 
-### Create Ticket
+### Create Ticket {#createticket}
 
 Create a new ticket.
 
@@ -109,7 +109,7 @@ Create a new ticket.
 | Debug Request                  | Enabling this flag will log out the current request.                                                                                                                                                                       | false   |
 | Connection                     | Select the Gorgias connection type for this request: OAuth2 or API Key.                                                                                                                                                    |         |
 
-### Create Ticket Message
+### Create Ticket Message {#createticketmessage}
 
 Create a message for a ticket.
 
@@ -135,7 +135,7 @@ Create a message for a ticket.
 | Debug Request | Enabling this flag will log out the current request.                                                                                                                       | false   |
 | Connection    | Select the Gorgias connection type for this request: OAuth2 or API Key.                                                                                                    |         |
 
-### Delete Customer
+### Delete Customer {#deletecustomer}
 
 Delete a customer.
 
@@ -145,7 +145,7 @@ Delete a customer.
 | Debug Request | Enabling this flag will log out the current request.                    | false   |
 | Connection    | Select the Gorgias connection type for this request: OAuth2 or API Key. |         |
 
-### Delete Ticket
+### Delete Ticket {#deleteticket}
 
 Delete a ticket.
 
@@ -155,7 +155,7 @@ Delete a ticket.
 | Debug Request | Enabling this flag will log out the current request.                    | false   |
 | Connection    | Select the Gorgias connection type for this request: OAuth2 or API Key. |         |
 
-### Delete Ticket Custom Field
+### Delete Ticket Custom Field {#deleteticketcustomfield}
 
 Delete a ticket's custom field value.
 
@@ -166,7 +166,7 @@ Delete a ticket's custom field value.
 | Debug Request   | Enabling this flag will log out the current request.                    | false   |
 | Connection      | Select the Gorgias connection type for this request: OAuth2 or API Key. |         |
 
-### Download File
+### Download File {#downloadfile}
 
 Download a file.
 
@@ -178,7 +178,7 @@ Download a file.
 | Debug Request | Enabling this flag will log out the current request.                    | false   |
 | Connection    | Select the Gorgias connection type for this request: OAuth2 or API Key. |         |
 
-### Get Account
+### Get Account {#getaccount}
 
 Retrieve your account.
 
@@ -187,7 +187,7 @@ Retrieve your account.
 | Debug Request | Enabling this flag will log out the current request.                    | false   |
 | Connection    | Select the Gorgias connection type for this request: OAuth2 or API Key. |         |
 
-### Get Customer
+### Get Customer {#getcustomer}
 
 Retrieve a customer.
 
@@ -197,7 +197,7 @@ Retrieve a customer.
 | Debug Request | Enabling this flag will log out the current request.                    | false   |
 | Connection    | Select the Gorgias connection type for this request: OAuth2 or API Key. |         |
 
-### Get Event
+### Get Event {#getevent}
 
 Retrieve an event.
 
@@ -207,7 +207,7 @@ Retrieve an event.
 | Debug Request | Enabling this flag will log out the current request.                    | false   |
 | Connection    | Select the Gorgias connection type for this request: OAuth2 or API Key. |         |
 
-### Get Ticket
+### Get Ticket {#getticket}
 
 Retrieve a ticket.
 
@@ -218,7 +218,7 @@ Retrieve a ticket.
 | Debug Request | Enabling this flag will log out the current request.                    | false   |
 | Connection    | Select the Gorgias connection type for this request: OAuth2 or API Key. |         |
 
-### Get Ticket Message
+### Get Ticket Message {#getticketmessage}
 
 Retrieve a message.
 
@@ -229,7 +229,7 @@ Retrieve a message.
 | Debug Request | Enabling this flag will log out the current request.                    | false   |
 | Connection    | Select the Gorgias connection type for this request: OAuth2 or API Key. |         |
 
-### List Customers
+### List Customers {#listcustomers}
 
 List customers, paginated, and ordered by their name (alphabetical order).
 
@@ -248,7 +248,7 @@ List customers, paginated, and ordered by their name (alphabetical order).
 | Debug Request | Enabling this flag will log out the current request.                                                                                  | false   |
 | Connection    | Select the Gorgias connection type for this request: OAuth2 or API Key.                                                               |         |
 
-### List Events
+### List Events {#listevents}
 
 List events, paginated, and ordered by their creation date, with the most recently created first.
 
@@ -266,7 +266,7 @@ List events, paginated, and ordered by their creation date, with the most recent
 | Debug Request    | Enabling this flag will log out the current request.                                                                                     | false   |
 | Connection       | Select the Gorgias connection type for this request: OAuth2 or API Key.                                                                  |         |
 
-### List Messages
+### List Messages {#listmessages}
 
 List messages matching the given parameters.
 
@@ -280,7 +280,7 @@ List messages matching the given parameters.
 | Debug Request | Enabling this flag will log out the current request.                                                                          | false   |
 | Connection    | Select the Gorgias connection type for this request: OAuth2 or API Key.                                                       |         |
 
-### List Ticket Custom Fields
+### List Ticket Custom Fields {#listticketcustomfields}
 
 List all custom fields for a ticket.
 
@@ -290,7 +290,7 @@ List all custom fields for a ticket.
 | Debug Request | Enabling this flag will log out the current request.                    | false   |
 | Connection    | Select the Gorgias connection type for this request: OAuth2 or API Key. |         |
 
-### List Tickets
+### List Tickets {#listtickets}
 
 List tickets, paginated and ordered by the attribute of the given view.
 
@@ -308,7 +308,7 @@ List tickets, paginated and ordered by the attribute of the given view.
 | Debug Request | Enabling this flag will log out the current request.                                                                        | false   |
 | Connection    | Select the Gorgias connection type for this request: OAuth2 or API Key.                                                     |         |
 
-### Raw Request
+### Raw Request {#rawrequest}
 
 Send raw HTTP request to Gorgias API.
 
@@ -331,7 +331,7 @@ Send raw HTTP request to Gorgias API.
 | Max Retry Count         | The maximum number of retries to attempt. Specify 0 for no retries.                                                                                                                                                         | 0       |
 | Use Exponential Backoff | Specifies whether to use a pre-defined exponential backoff strategy for retries. When enabled, 'Retry Delay (ms)' is ignored.                                                                                               | false   |
 
-### Search
+### Search {#search}
 
 Search for resources.
 
@@ -343,7 +343,7 @@ Search for resources.
 | Debug Request | Enabling this flag will log out the current request.                    | false   |
 | Connection    | Select the Gorgias connection type for this request: OAuth2 or API Key. |         |
 
-### Update Customer
+### Update Customer {#updatecustomer}
 
 Update a customer.
 
@@ -359,7 +359,7 @@ Update a customer.
 | Debug Request | Enabling this flag will log out the current request.                                                                                  | false   |
 | Connection    | Select the Gorgias connection type for this request: OAuth2 or API Key.                                                               |         |
 
-### Update Customer Data
+### Update Customer Data {#updatecustomerdata}
 
 Set a customer's data.
 
@@ -371,7 +371,7 @@ Set a customer's data.
 | Debug Request | Enabling this flag will log out the current request.                                                  | false   |
 | Connection    | Select the Gorgias connection type for this request: OAuth2 or API Key.                               |         |
 
-### Update Ticket
+### Update Ticket {#updateticket}
 
 Update a ticket.
 
@@ -401,7 +401,7 @@ Update a ticket.
 | Debug Request                  | Enabling this flag will log out the current request.                                                                                                                                                                       | false   |
 | Connection                     | Select the Gorgias connection type for this request: OAuth2 or API Key.                                                                                                                                                    |         |
 
-### Update Ticket Custom Fields
+### Update Ticket Custom Fields {#updateticketcustomfields}
 
 Update a ticket's custom fields values.
 
@@ -412,7 +412,7 @@ Update a ticket's custom fields values.
 | Debug Request | Enabling this flag will log out the current request.                    | false   |
 | Connection    | Select the Gorgias connection type for this request: OAuth2 or API Key. |         |
 
-### Upload Files
+### Upload Files {#uploadfiles}
 
 Upload a file or several files.
 

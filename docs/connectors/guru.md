@@ -9,7 +9,7 @@ Manage cards, collections, and folders in the Guru knowledge management platform
 
 ## Connections
 
-### User Token
+### User Token {#guruusertoken}
 
 Authenticate with Guru using a user token for read/write access
 
@@ -29,7 +29,7 @@ Authenticate with Guru using a user token for read/write access
 
 ## Triggers
 
-### Webhook Events
+### Webhook Events {#webhook}
 
 Manages Guru webhook subscriptions for your instance. On instance deploy, this trigger creates a webhook subscription in Guru (or reuses an existing one with matching URL and events). On instance deletion, it removes the subscription. The trigger validates incoming webhook requests and handles all webhook lifecycle management automatically.
 
@@ -42,7 +42,7 @@ Manages Guru webhook subscriptions for your instance. On instance deploy, this t
 
 ## Actions
 
-### Add User Group Member
+### Add User Group Member {#addusergroupmember}
 
 Add a user group member
 
@@ -54,7 +54,7 @@ Add a user group member
 | Email      | The user's email address. <strong>Important:</strong> Must be an existing Guru user. |         |
 | Group ID   | The ID of the group.                                                                 |         |
 
-### Create Card
+### Create Card {#createcard}
 
 Create a new card in Guru
 
@@ -67,7 +67,7 @@ Create a new card in Guru
 | Share Status          | The sharing status of the card.                  | TEAM    |
 | Additional Properties | Additional properties to include in the request. |         |
 
-### Create Folder
+### Create Folder {#createfolder}
 
 Create a new folder in a collection
 
@@ -79,7 +79,7 @@ Create a new folder in a collection
 | Folder Description | A description of the folder.                               |         |
 | Parent Folder ID   | The ID of the parent folder (optional for nested folders). |         |
 
-### Create Webhook Subscription
+### Create Webhook Subscription {#createwebhooksubscription}
 
 Create a new webhook subscription to receive real-time Guru events
 
@@ -91,7 +91,7 @@ Create a new webhook subscription to receive real-time Guru events
 | Active        | Whether the webhook subscription is active.                                                                          | true                                          |
 | Delivery Mode | The delivery mode of the webhook subscription.                                                                       | BATCH                                         |
 
-### Delete All Webhook Subscriptions
+### Delete All Webhook Subscriptions {#deleteallwebhooksubscriptions}
 
 Delete all webhook subscriptions for the current user (use with caution)
 
@@ -99,7 +99,7 @@ Delete all webhook subscriptions for the current user (use with caution)
 | ---------- | -------- | ------- |
 | Connection |          |         |
 
-### Delete Card
+### Delete Card {#deletecard}
 
 Delete a card from Guru
 
@@ -108,7 +108,7 @@ Delete a card from Guru
 | Connection |                                    |         |
 | Card ID    | The unique identifier of the card. |         |
 
-### Delete Folder
+### Delete Folder {#deletefolder}
 
 Delete a folder from Guru
 
@@ -117,7 +117,7 @@ Delete a folder from Guru
 | Connection |                                      |         |
 | Folder ID  | The unique identifier of the folder. |         |
 
-### Delete User Group Member
+### Delete User Group Member {#deleteusergroupmember}
 
 Remove a user from a user group
 
@@ -127,7 +127,7 @@ Remove a user from a user group
 | Group ID   | The ID of the group.  |         |
 | Member ID  | The ID of the member. |         |
 
-### Delete Webhook Subscription
+### Delete Webhook Subscription {#deletewebhooksubscription}
 
 Delete a webhook subscription to stop receiving events
 
@@ -136,7 +136,7 @@ Delete a webhook subscription to stop receiving events
 | Connection |                                       |         |
 | Webhook ID | The unique identifier of the webhook. |         |
 
-### Get Card
+### Get Card {#getcard}
 
 Retrieve a specific card with extended information including teams and collaborators
 
@@ -145,7 +145,7 @@ Retrieve a specific card with extended information including teams and collabora
 | Connection |                                    |         |
 | Card ID    | The unique identifier of the card. |         |
 
-### Get Card Folders
+### Get Card Folders {#getcardfolders}
 
 Get the folders that contain a specific card
 
@@ -154,7 +154,7 @@ Get the folders that contain a specific card
 | Connection |                                    |         |
 | Card ID    | The unique identifier of the card. |         |
 
-### Get Collection
+### Get Collection {#getcollection}
 
 Retrieve details of a specific collection by ID
 
@@ -163,7 +163,7 @@ Retrieve details of a specific collection by ID
 | Connection    |                                          |         |
 | Collection ID | The unique identifier of the collection. |         |
 
-### Get Folder
+### Get Folder {#getfolder}
 
 Retrieve details of a specific folder by ID
 
@@ -172,7 +172,7 @@ Retrieve details of a specific folder by ID
 | Connection |                                      |         |
 | Folder ID  | The unique identifier of the folder. |         |
 
-### Get Folder Items
+### Get Folder Items {#getfolderitems}
 
 Retrieve all items (cards and subfolders) in a specific folder
 
@@ -182,7 +182,7 @@ Retrieve all items (cards and subfolders) in a specific folder
 | Folder ID  | The unique identifier of the folder.   |         |
 | Fetch All  | Turn on to fetch more than 50 folders. | false   |
 
-### Get Team Analytics
+### Get Team Analytics {#getteamanalytics}
 
 Retrieve analytics data for the team
 
@@ -194,7 +194,7 @@ Retrieve analytics data for the team
 | To Date    | The end date of the time range in YYYY-MM-DD format.   |         |
 | Fetch All  | Turn on to fetch more than 500 events.                 | false   |
 
-### Get Webhook Subscription
+### Get Webhook Subscription {#getwebhooksubscription}
 
 Retrieve details of a specific webhook subscription
 
@@ -203,7 +203,7 @@ Retrieve details of a specific webhook subscription
 | Connection |                                       |         |
 | Webhook ID | The unique identifier of the webhook. |         |
 
-### List Card Verifiers
+### List Card Verifiers {#listcardverifiers}
 
 List the verifiers for a card
 
@@ -212,7 +212,7 @@ List the verifiers for a card
 | Connection |                                    |         |
 | Card ID    | The unique identifier of the card. |         |
 
-### List Collection Group Access
+### List Collection Group Access {#listcollectiongroupaccess}
 
 Get details of all groups with access to a collection
 
@@ -221,7 +221,7 @@ Get details of all groups with access to a collection
 | Connection    |                                          |         |
 | Collection ID | The unique identifier of the collection. |         |
 
-### List Collections
+### List Collections {#listcollections}
 
 Retrieve a list of all collections accessible to the user
 
@@ -230,7 +230,7 @@ Retrieve a list of all collections accessible to the user
 | Connection |                                       |         |
 | Search     | The search term to use in the search. |         |
 
-### List Folders
+### List Folders {#listfolders}
 
 Retrieve a list of all folders
 
@@ -241,7 +241,7 @@ Retrieve a list of all folders
 | Search     | The search term to use in the search.                                                                      |         |
 | Fetch All  | Turn on to fetch more than 110 folders.                                                                    | false   |
 
-### List Team Members
+### List Team Members {#listteammembers}
 
 Retrieve a list of all team members
 
@@ -251,7 +251,7 @@ Retrieve a list of all team members
 | Search     | The search term to use in the search.  |         |
 | Fetch All  | Turn on to fetch more than 50 members. | false   |
 
-### List User Groups
+### List User Groups {#listusergroups}
 
 Returns all groups on the team
 
@@ -259,7 +259,7 @@ Returns all groups on the team
 | ---------- | -------- | ------- |
 | Connection |          |         |
 
-### List Webhook Subscriptions
+### List Webhook Subscriptions {#listwebhooksubscriptions}
 
 Retrieve all webhook subscriptions for the current user
 
@@ -267,7 +267,7 @@ Retrieve all webhook subscriptions for the current user
 | ---------- | -------- | ------- |
 | Connection |          |         |
 
-### Raw Request
+### Raw Request {#rawrequest}
 
 Send raw HTTP request to Guru API
 
@@ -289,7 +289,7 @@ Send raw HTTP request to Guru API
 | Max Retry Count         | The maximum number of retries to attempt. Specify 0 for no retries.                                                                                                                                     | 0       |
 | Use Exponential Backoff | Specifies whether to use a pre-defined exponential backoff strategy for retries. When enabled, 'Retry Delay (ms)' is ignored.                                                                           | false   |
 
-### Search Cards
+### Search Cards {#searchcards}
 
 Search for cards and content in Guru
 
@@ -302,7 +302,7 @@ Search for cards and content in Guru
 | Max Results  | The maximum number of results to return.                                                                   |         |
 | Fetch All    | Turn on to fetch more than 50 cards.                                                                       | false   |
 
-### Search Folders
+### Search Folders {#searchfolders}
 
 Search for folders by title or description
 
@@ -312,7 +312,7 @@ Search for folders by title or description
 | Search Terms  | Search terms to use in the search.       |         |
 | Collection ID | The unique identifier of the collection. |         |
 
-### Test Webhook
+### Test Webhook {#testwebhook}
 
 Send a test event to a webhook subscription to verify it's working
 
@@ -322,7 +322,7 @@ Send a test event to a webhook subscription to verify it's working
 | Webhook ID | The unique identifier of the webhook. |         |
 | Test Data  | The data to send to the webhook.      |         |
 
-### Unverify Card
+### Unverify Card {#unverifycard}
 
 Remove verification from a card
 
@@ -332,7 +332,7 @@ Remove verification from a card
 | Card ID             | The unique identifier of the card.           |         |
 | Verification Reason | Optional reason for the verification status. |         |
 
-### Update Card
+### Update Card {#updatecard}
 
 Update an existing card in Guru
 
@@ -345,7 +345,7 @@ Update an existing card in Guru
 | Share Status          | The sharing status of the card.                  |         |
 | Additional Properties | Additional properties to include in the request. |         |
 
-### Update Folder
+### Update Folder {#updatefolder}
 
 Update an existing folder
 
@@ -357,7 +357,7 @@ Update an existing folder
 | Folder Description | A description of the folder.                               |         |
 | Parent Folder ID   | The ID of the parent folder (optional for nested folders). |         |
 
-### Update Webhook Subscription
+### Update Webhook Subscription {#updatewebhooksubscription}
 
 Update an existing webhook subscription settings
 
@@ -370,7 +370,7 @@ Update an existing webhook subscription settings
 | Active        | Whether the webhook subscription is active.                                                                          | true                                          |
 | Delivery Mode | The delivery mode of the webhook subscription.                                                                       | BATCH                                         |
 
-### Verify Card
+### Verify Card {#verifycard}
 
 Mark a card as verified
 
@@ -381,7 +381,7 @@ Mark a card as verified
 | Verification Status | The verification status to set for the card. |         |
 | Verification Reason | Optional reason for the verification status. |         |
 
-### Who Am I
+### Who Am I {#whoami}
 
 Get information about the current authenticated user
 

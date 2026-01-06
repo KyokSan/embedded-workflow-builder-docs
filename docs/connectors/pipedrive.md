@@ -9,7 +9,7 @@ Manage leads, companies, activities, and more on the Pipedrive platform
 
 ## Connections
 
-### OAuth 2.0
+### OAuth 2.0 {#oauth2}
 
 OAuth 2.0 connection for Pipedrive
 
@@ -25,7 +25,7 @@ Read about how OAuth 2.0 works [here](../oauth2.md).
 
 ## Triggers
 
-### Webhook Trigger
+### Webhook Trigger {#pipedrivetrigger}
 
 Receive data from Pipedrive in real time with webhook subscriptions.
 
@@ -41,7 +41,7 @@ Receive data from Pipedrive in real time with webhook subscriptions.
 
 ## Actions
 
-### Add Call Log
+### Add Call Log {#addcalllog}
 
 Add a call log
 
@@ -62,7 +62,7 @@ Add a call log
 | Deal ID           | The ID of the deal this call is associated with                                              |         |
 | Note              | The note for the call log in HTML format                                                     |         |
 
-### Add Channel
+### Add Channel {#addchannel}
 
 Add a channel
 
@@ -75,7 +75,7 @@ Add a channel
 | Template Support    | If true, enables templates logic on UI                         | false   |
 | Provider Type       | It controls the icons (like the icon next to the conversation) | other   |
 
-### Add Deal
+### Add Deal {#adddeal}
 
 Add a deal
 
@@ -96,7 +96,7 @@ Add a deal
 | Visible To          | The visibility of the deal. See https://developers.pipedrive.com/docs/api/v1/Deals#addDeal. |         |
 | Add Time            | The optional creation date & time of the deal in UTC                                        |         |
 
-### Add Deal Follower
+### Add Deal Follower {#adddealfollower}
 
 Add a follower to a deal
 
@@ -106,7 +106,7 @@ Add a follower to a deal
 | Deal ID    | The ID of the deal |         |
 | User ID    | The ID of the user |         |
 
-### Add Deal Participant
+### Add Deal Participant {#adddealparticipant}
 
 Add a participant to a deal
 
@@ -116,7 +116,7 @@ Add a participant to a deal
 | Deal ID    | The ID of the deal   |         |
 | Person ID  | The ID of the person |         |
 
-### Add Deal Product
+### Add Deal Product {#adddealproduct}
 
 Add a product to the deal, eventually creating a new item called a deal-product
 
@@ -134,7 +134,7 @@ Add a product to the deal, eventually creating a new item called a deal-product
 | Tax                  | The tax percentage                                               | 0       |
 | Is Enabled           | Whether the product is enabled on the deal or not                | false   |
 
-### Add File
+### Add File {#addfile}
 
 Upload and add a new file to a deal, person, org, product, activity or lead
 
@@ -146,7 +146,7 @@ Upload and add a new file to a deal, person, org, product, activity or lead
 | Entity Type | The type of entity to attach the file to                                                                         |         |
 | Entity ID   | The numerical ID of the deal, person, org, product or activity, or UUID of the lead to associate this file with. |         |
 
-### Add Lead
+### Add Lead {#addlead}
 
 Add a lead
 
@@ -163,7 +163,7 @@ Add a lead
 | Visible To          | The visibility of the lead                                                             |         |
 | Was Seen            | A flag indicating whether the lead was seen by someone in the Pipedrive UI             | false   |
 
-### Add Lead Label
+### Add Lead Label {#addleadlabel}
 
 Add a lead label
 
@@ -173,7 +173,7 @@ Add a lead label
 | Name       | The name of the lead label |         |
 | Color      | The color of the label     |         |
 
-### Add Organization
+### Add Organization {#addorganization}
 
 Add an organization
 
@@ -185,7 +185,7 @@ Add an organization
 | Visible To | The visibility of the organization                                      |         |
 | Add Time   | The optional creation date & time of the organization in UTC            |         |
 
-### Add Organization Follower
+### Add Organization Follower {#addorganizationfollower}
 
 Add a follower to an organization
 
@@ -195,7 +195,7 @@ Add a follower to an organization
 | Organization ID | The ID of the organization |         |
 | User ID         | The ID of the user         |         |
 
-### Add Person
+### Add Person {#addperson}
 
 Add a person
 
@@ -211,7 +211,7 @@ Add a person
 | Marketing Status | If the person does not have a valid email address, then the marketing status is **not set** and "no_consent" is returned for the "marketing_status" value when the new person is created |         |
 | Add Time         | The optional creation date & time of the person in UTC                                                                                                                                   |         |
 
-### Add Person Follower
+### Add Person Follower {#addpersonfollower}
 
 Add a follower to a person
 
@@ -221,7 +221,7 @@ Add a follower to a person
 | Person ID  | The ID of the person                                               |         |
 | User ID    | If supplied, only persons owned by the given user will be returned |         |
 
-### Add Pipeline
+### Add Pipeline {#addpipeline}
 
 Add a new pipeline
 
@@ -231,7 +231,7 @@ Add a new pipeline
 | Name             | The name of the pipeline                                          |         |
 | Deal Probability | Whether deal probability is disabled or enabled for this pipeline | false   |
 
-### Add Product
+### Add Product {#addproduct}
 
 Add a product
 
@@ -246,7 +246,7 @@ Add a product
 | Owner ID   | The ID of the user who will be marked as the owner of this product                                                                         |         |
 | Prices     | An array of objects, each containing: "currency" (string), "price" (number), "cost" (number, optional), "overhead_cost" (number, optional) |         |
 
-### Add Product Follower
+### Add Product Follower {#addproductfollower}
 
 Add a follower to a product
 
@@ -256,7 +256,7 @@ Add a follower to a product
 | Product ID | The ID of the product |         |
 | User ID    | The ID of the user    |         |
 
-### Add Stage
+### Add Stage {#addstage}
 
 Add a new stage
 
@@ -269,7 +269,7 @@ Add a new stage
 | Rotten Flag      | Whether deals in this stage can become rotten                              | false   |
 | Rotten Days      | The number of days the deals not updated in this stage would become rotten |         |
 
-### Cancel Recurring Subscription (Deprecated)
+### Cancel Recurring Subscription (Deprecated) {#cancelrecurringsubscription}
 
 Cancel a recurring subscription
 
@@ -279,7 +279,7 @@ Cancel a recurring subscription
 | Subscription ID | The ID of the subscription        |         |
 | End Date        | The subscription termination date |         |
 
-### Create Webhook
+### Create Webhook {#createwebhook}
 
 Create a new webhook
 
@@ -294,7 +294,7 @@ Create a new webhook
 | HTTP Auth Password | The password for HTTP Basic Auth                                                                                                                                                                                                                                                                                                                                                                                                  |         |
 | Connection         |                                                                                                                                                                                                                                                                                                                                                                                                                                   |         |
 
-### Delete Activity
+### Delete Activity {#deleteactivity}
 
 Delete an activity
 
@@ -303,7 +303,7 @@ Delete an activity
 | Connection  |                        |         |
 | Activity ID | The ID of the activity |         |
 
-### Delete Call Log
+### Delete Call Log {#deletecalllog}
 
 Delete a call log
 
@@ -312,7 +312,7 @@ Delete a call log
 | Connection  |                                              |         |
 | Call Log ID | The ID received when you create the call log |         |
 
-### Delete Channel
+### Delete Channel {#deletechannel}
 
 Delete a channel
 
@@ -321,7 +321,7 @@ Delete a channel
 | Connection |                                                   |         |
 | Id         | The ID of the channel provided by the integration |         |
 
-### Delete Conversation
+### Delete Conversation {#deleteconversation}
 
 Delete a conversation
 
@@ -331,7 +331,7 @@ Delete a conversation
 | Channel ID      | The ID of the channel provided by the integration      |         |
 | Conversation ID | The ID of the conversation provided by the integration |         |
 
-### Delete Deal
+### Delete Deal {#deletedeal}
 
 Delete a deal
 
@@ -340,7 +340,7 @@ Delete a deal
 | Connection |                    |         |
 | Deal ID    | The ID of the deal |         |
 
-### Delete Deal Field
+### Delete Deal Field {#deletedealfield}
 
 Delete a deal field
 
@@ -349,7 +349,7 @@ Delete a deal field
 | Connection    |                          |         |
 | Deal Field ID | The ID of the deal field |         |
 
-### Delete Deal Follower
+### Delete Deal Follower {#deletedealfollower}
 
 Delete a follower from a deal
 
@@ -359,7 +359,7 @@ Delete a follower from a deal
 | Deal ID     | The ID of the deal     |         |
 | Follower ID | The ID of the follower |         |
 
-### Delete Deal Participant
+### Delete Deal Participant {#deletedealparticipant}
 
 Delete a participant from a deal
 
@@ -369,7 +369,7 @@ Delete a participant from a deal
 | Deal ID             | The ID of the deal                    |         |
 | Deal Participant ID | The ID of the participant of the deal |         |
 
-### Delete Deal Product
+### Delete Deal Product {#deletedealproduct}
 
 Delete an attached product from a deal
 
@@ -379,7 +379,7 @@ Delete an attached product from a deal
 | Deal ID               | The ID of the deal        |         |
 | Product Attachment ID | The product attachment ID |         |
 
-### Delete File
+### Delete File {#deletefile}
 
 Delete a file
 
@@ -388,7 +388,7 @@ Delete a file
 | Connection |                  |         |
 | File ID    | The ID of a file |         |
 
-### Delete Lead
+### Delete Lead {#deletelead}
 
 Delete a lead
 
@@ -397,7 +397,7 @@ Delete a lead
 | Connection |                    |         |
 | Lead ID    | The ID of the lead |         |
 
-### Delete Lead Label
+### Delete Lead Label {#deleteleadlabel}
 
 Delete a lead label
 
@@ -406,7 +406,7 @@ Delete a lead label
 | Connection    |                          |         |
 | Lead Label ID | The ID of the lead label |         |
 
-### Delete Mail Thread
+### Delete Mail Thread {#deletemailthread}
 
 Delete mail thread
 
@@ -415,7 +415,7 @@ Delete mail thread
 | Connection     |                           |         |
 | Mail Thread ID | The ID of the mail thread |         |
 
-### Delete Organization
+### Delete Organization {#deleteorganization}
 
 Delete an organization
 
@@ -424,7 +424,7 @@ Delete an organization
 | Connection      |                            |         |
 | Organization ID | The ID of the organization |         |
 
-### Delete Organization Follower
+### Delete Organization Follower {#deleteorganizationfollower}
 
 Delete a follower from an organization
 
@@ -434,7 +434,7 @@ Delete a follower from an organization
 | Organization ID | The ID of the organization |         |
 | Follower ID     | The ID of the follower     |         |
 
-### Delete Person
+### Delete Person {#deleteperson}
 
 Delete a person
 
@@ -443,7 +443,7 @@ Delete a person
 | Connection |                      |         |
 | Person ID  | The ID of the person |         |
 
-### Delete Person Field
+### Delete Person Field {#deletepersonfield}
 
 Delete a person field
 
@@ -452,7 +452,7 @@ Delete a person field
 | Connection      |                     |         |
 | Person Field ID | The ID of the field |         |
 
-### Delete Person Follower
+### Delete Person Follower {#deletepersonfollower}
 
 Delete a follower from a person
 
@@ -462,7 +462,7 @@ Delete a follower from a person
 | Person ID   | The ID of the person   |         |
 | Follower ID | The ID of the follower |         |
 
-### Delete Person Picture
+### Delete Person Picture {#deletepersonpicture}
 
 Delete person picture
 
@@ -471,7 +471,7 @@ Delete person picture
 | Connection |                      |         |
 | Person ID  | The ID of the person |         |
 
-### Delete Pipeline
+### Delete Pipeline {#deletepipeline}
 
 Delete a pipeline
 
@@ -480,7 +480,7 @@ Delete a pipeline
 | Connection  |                        |         |
 | Pipeline ID | The ID of the pipeline |         |
 
-### Delete Product
+### Delete Product {#deleteproduct}
 
 Delete a product
 
@@ -489,7 +489,7 @@ Delete a product
 | Connection |                       |         |
 | Product ID | The ID of the product |         |
 
-### Delete Product Field
+### Delete Product Field {#deleteproductfield}
 
 Delete a product field
 
@@ -498,7 +498,7 @@ Delete a product field
 | Connection       |                             |         |
 | Product Field ID | The ID of the product field |         |
 
-### Delete Product Follower
+### Delete Product Follower {#deleteproductfollower}
 
 Delete a follower from a product
 
@@ -508,7 +508,7 @@ Delete a follower from a product
 | Product ID  | The ID of the product                                           |         |
 | Follower ID | The ID of the relationship between the follower and the product |         |
 
-### Delete Stage
+### Delete Stage {#deletestage}
 
 Delete a stage
 
@@ -517,7 +517,7 @@ Delete a stage
 | Connection |                     |         |
 | Stage ID   | The ID of the stage |         |
 
-### Delete Subscription (Deprecated)
+### Delete Subscription (Deprecated) {#deletesubscription}
 
 Delete a subscription
 
@@ -526,7 +526,7 @@ Delete a subscription
 | Connection      |                            |         |
 | Subscription ID | The ID of the subscription |         |
 
-### Delete Webhook
+### Delete Webhook {#deletewebhook}
 
 Delete a webhook
 
@@ -535,7 +535,7 @@ Delete a webhook
 | Webhook ID | The ID of the webhook |         |
 | Connection |                       |         |
 
-### Download File
+### Download File {#downloadfile}
 
 Download one file
 
@@ -544,7 +544,7 @@ Download one file
 | Connection |                  |         |
 | File ID    | The ID of a file |         |
 
-### Find Subscription By Deal (Deprecated)
+### Find Subscription By Deal (Deprecated) {#findsubscriptionbydeal}
 
 Find subscription by deal
 
@@ -553,7 +553,7 @@ Find subscription by deal
 | Connection |                    |         |
 | Deal ID    | The ID of the deal |         |
 
-### Find Users By Name
+### Find Users By Name {#findusersbyname}
 
 Find users by name
 
@@ -563,7 +563,7 @@ Find users by name
 | Term            | The search term to look for                                                  |         |
 | Search By Email | When enabled, the term will only be matched against email addresses of users | 1       |
 
-### Get Activities
+### Get Activities {#getactivities}
 
 Get all activities assigned to a particular user
 
@@ -578,7 +578,7 @@ Get all activities assigned to a particular user
 | Sort Direction | The sorting direction.                                                                           | desc    |
 | Cursor         | For pagination, the marker (an opaque string value) representing the first item on the next page |         |
 
-### Get Activity
+### Get Activity {#getactivity}
 
 Get details of an activity
 
@@ -587,7 +587,7 @@ Get details of an activity
 | Connection  |                        |         |
 | Activity ID | The ID of the activity |         |
 
-### Get Activity Fields
+### Get Activity Fields {#getactivityfields}
 
 Get all activity fields
 
@@ -595,7 +595,7 @@ Get all activity fields
 | ---------- | -------- | ------- |
 | Connection |          |         |
 
-### Get Activity Types
+### Get Activity Types {#getactivitytypes}
 
 Get all activity types
 
@@ -603,7 +603,7 @@ Get all activity types
 | ---------- | -------- | ------- |
 | Connection |          |         |
 
-### Get Call Log
+### Get Call Log {#getcalllog}
 
 Get details of a call log
 
@@ -612,7 +612,7 @@ Get details of a call log
 | Connection  |                                              |         |
 | Call Log ID | The ID received when you create the call log |         |
 
-### Get Company Addons
+### Get Company Addons {#getcompanyaddons}
 
 Get all add-ons for a single company
 
@@ -620,7 +620,7 @@ Get all add-ons for a single company
 | ---------- | -------- | ------- |
 | Connection |          |         |
 
-### Get Currencies
+### Get Currencies {#getcurrencies}
 
 Get all supported currencies
 
@@ -629,7 +629,7 @@ Get all supported currencies
 | Connection |                                                                            |         |
 | Term       | Optional search term that is searched for from currency's name and/or code |         |
 
-### Get Current User
+### Get Current User {#getcurrentuser}
 
 Get current user data
 
@@ -637,7 +637,7 @@ Get current user data
 | ---------- | -------- | ------- |
 | Connection |          |         |
 
-### Get Deal
+### Get Deal {#getdeal}
 
 Get details of a deal
 
@@ -646,7 +646,7 @@ Get details of a deal
 | Connection |                    |         |
 | Deal ID    | The ID of the deal |         |
 
-### Get Deal Activities
+### Get Deal Activities {#getdealactivities}
 
 List activities associated with a deal
 
@@ -660,7 +660,7 @@ List activities associated with a deal
 | Sort By        | The field name to sort by                                                                        |         |
 | Sort Direction | The sorting direction.                                                                           |         |
 
-### Get Deal Field
+### Get Deal Field {#getdealfield}
 
 Get one deal field
 
@@ -669,7 +669,7 @@ Get one deal field
 | Connection    |                          |         |
 | Deal Field ID | The ID of the deal field |         |
 
-### Get Deal Fields
+### Get Deal Fields {#getdealfields}
 
 Get all deal fields
 
@@ -679,7 +679,7 @@ Get all deal fields
 | Start      | Pagination start     | 0       |
 | Limit      | Items shown per page |         |
 
-### Get Deal Files
+### Get Deal Files {#getdealfiles}
 
 List files attached to a deal
 
@@ -693,7 +693,7 @@ List files attached to a deal
 | Include Deleted Files | When enabled, the list of files will also include deleted files                                  |         |
 | Sort                  | The field names and sorting mode separated by a comma ("field_name_1 ASC", "field_name_2 DESC")  |         |
 
-### Get Deal Followers
+### Get Deal Followers {#getdealfollowers}
 
 List followers of a deal
 
@@ -704,7 +704,7 @@ List followers of a deal
 | Limit      | Items shown per page                                                                             |         |
 | Cursor     | For pagination, the marker (an opaque string value) representing the first item on the next page |         |
 
-### Get Deal Mail Messages
+### Get Deal Mail Messages {#getdealmailmessages}
 
 List mail messages associated with a deal
 
@@ -716,7 +716,7 @@ List mail messages associated with a deal
 | Limit      | Items shown per page                                                                             |         |
 | Cursor     | For pagination, the marker (an opaque string value) representing the first item on the next page |         |
 
-### Get Deal Participants
+### Get Deal Participants {#getdealparticipants}
 
 List participants of a deal
 
@@ -728,7 +728,7 @@ List participants of a deal
 | Limit      | Items shown per page                                                                             |         |
 | Cursor     | For pagination, the marker (an opaque string value) representing the first item on the next page |         |
 
-### Get Deal Persons (Deprecated)
+### Get Deal Persons (Deprecated) {#getdealpersons}
 
 List all persons associated with a deal
 
@@ -741,7 +741,7 @@ List all persons associated with a deal
 | Sort By        | The field name to sort by                                                                        |         |
 | Sort Direction | The sorting direction.                                                                           |         |
 
-### Get Deal Products
+### Get Deal Products {#getdealproducts}
 
 List products attached to a deal
 
@@ -754,7 +754,7 @@ List products attached to a deal
 | Sort By        | The field name to sort by                                                                        |         |
 | Sort Direction | The sorting direction.                                                                           |         |
 
-### Get Deals
+### Get Deals {#getdeals}
 
 Get all deals
 
@@ -770,7 +770,7 @@ Get all deals
 | Status         | Only fetch deals with a specific status                                                             |         |
 | Connection     |                                                                                                     |         |
 
-### Get Deals Summary
+### Get Deals Summary {#getdealssummary}
 
 Get deals summary
 
@@ -782,7 +782,7 @@ Get deals summary
 | User ID    | Only deals matching the given user will be returned |         |
 | Stage ID   | Only deals within the given stage will be returned  |         |
 
-### Get Deals Timeline
+### Get Deals Timeline {#getdealstimeline}
 
 Get deals timeline
 
@@ -799,7 +799,7 @@ Get deals timeline
 | Exclude Deals           | Whether to exclude deals list (1) or not (0)                         |         |
 | Totals Convert Currency | The 3-letter currency code of any of the supported currencies        |         |
 
-### Get Deal Users
+### Get Deal Users {#getdealusers}
 
 List permitted users
 
@@ -808,7 +808,7 @@ List permitted users
 | Connection |                    |         |
 | Deal ID    | The ID of the deal |         |
 
-### Get File Metadata by ID
+### Get File Metadata by ID {#getfile}
 
 Get metadata about one file by ID
 
@@ -817,7 +817,7 @@ Get metadata about one file by ID
 | Connection |                  |         |
 | File ID    | The ID of a file |         |
 
-### Get Filter
+### Get Filter {#getfilter}
 
 Get one filter
 
@@ -826,7 +826,7 @@ Get one filter
 | Connection |                      |         |
 | Filter ID  | The ID of the filter |         |
 
-### Get Filters
+### Get Filters {#getfilters}
 
 Get all filters
 
@@ -835,7 +835,7 @@ Get all filters
 | Connection |                               |         |
 | Type       | The types of filters to fetch |         |
 
-### Get Lead
+### Get Lead {#getlead}
 
 Get one lead
 
@@ -844,7 +844,7 @@ Get one lead
 | Connection |                    |         |
 | Lead ID    | The ID of the lead |         |
 
-### Get Lead Labels
+### Get Lead Labels {#getleadlabels}
 
 Get all lead labels
 
@@ -852,7 +852,7 @@ Get all lead labels
 | ---------- | -------- | ------- |
 | Connection |          |         |
 
-### Get Leads
+### Get Leads {#getleads}
 
 Get all leads
 
@@ -866,7 +866,7 @@ Get all leads
 | Filter ID       | The ID of the filter to use                                                                     |         |
 | Sort            | The field names and sorting mode separated by a comma ("field_name_1 ASC", "field_name_2 DESC") |         |
 
-### Get Lead Sources
+### Get Lead Sources {#getleadsources}
 
 Get all lead sources
 
@@ -874,7 +874,7 @@ Get all lead sources
 | ---------- | -------- | ------- |
 | Connection |          |         |
 
-### Get Mail Message
+### Get Mail Message {#getmailmessage}
 
 Get one mail message
 
@@ -884,7 +884,7 @@ Get one mail message
 | Id           | The ID of the mail message to fetch             |         |
 | Include Body | Whether to include the full message body or not | 1       |
 
-### Get Mail Thread
+### Get Mail Thread {#getmailthread}
 
 Get one mail thread
 
@@ -893,7 +893,7 @@ Get one mail thread
 | Connection     |                           |         |
 | Mail Thread ID | The ID of the mail thread |         |
 
-### Get Mail Thread Messages
+### Get Mail Thread Messages {#getmailthreadmessages}
 
 Get all mail messages of mail thread
 
@@ -902,7 +902,7 @@ Get all mail messages of mail thread
 | Connection     |                           |         |
 | Mail Thread ID | The ID of the mail thread |         |
 
-### Get Mail Threads
+### Get Mail Threads {#getmailthreads}
 
 Get mail threads
 
@@ -913,7 +913,7 @@ Get mail threads
 | Start      | Pagination start            | 0       |
 | Limit      | Items shown per page        |         |
 
-### Get Note Fields
+### Get Note Fields {#getnotefields}
 
 Get all note fields
 
@@ -921,7 +921,7 @@ Get all note fields
 | ---------- | -------- | ------- |
 | Connection |          |         |
 
-### Get Organization
+### Get Organization {#getorganization}
 
 Get details of an organization
 
@@ -930,7 +930,7 @@ Get details of an organization
 | Connection      |                            |         |
 | Organization ID | The ID of the organization |         |
 
-### Get Organization Activities
+### Get Organization Activities {#getorganizationactivities}
 
 List activities associated with an organization
 
@@ -942,7 +942,7 @@ List activities associated with an organization
 | Cursor          | For pagination, the marker (an opaque string value) representing the first item on the next page |         |
 | Done            | Whether the activity is done or not                                                              | false   |
 
-### Get Organization Deals
+### Get Organization Deals {#getorganizationdeals}
 
 List deals associated with an organization
 
@@ -956,7 +956,7 @@ List deals associated with an organization
 | Sort By         | The field name to sort by                                                                        |         |
 | Sort Direction  | The sorting direction.                                                                           |         |
 
-### Get Organization Files
+### Get Organization Files {#getorganizationfiles}
 
 List files attached to an organization
 
@@ -969,7 +969,7 @@ List files attached to an organization
 | Include Deleted Files | When enabled, the list of files will also include deleted files                                 |         |
 | Sort                  | The field names and sorting mode separated by a comma ("field_name_1 ASC", "field_name_2 DESC") |         |
 
-### Get Organization Followers
+### Get Organization Followers {#getorganizationfollowers}
 
 List followers of an organization
 
@@ -980,7 +980,7 @@ List followers of an organization
 | Limit           | Items shown per page                                                                             |         |
 | Cursor          | For pagination, the marker (an opaque string value) representing the first item on the next page |         |
 
-### Get Organization Mail Messages
+### Get Organization Mail Messages {#getorganizationmailmessages}
 
 List mail messages associated with an organization
 
@@ -991,7 +991,7 @@ List mail messages associated with an organization
 | Start           | Pagination start           | 0       |
 | Limit           | Items shown per page       |         |
 
-### Get Organization Persons
+### Get Organization Persons {#getorganizationpersons}
 
 List persons of an organization
 
@@ -1002,7 +1002,7 @@ List persons of an organization
 | Limit           | Items shown per page                                                                             |         |
 | Cursor          | For pagination, the marker (an opaque string value) representing the first item on the next page |         |
 
-### Get Organizations
+### Get Organizations {#getorganizations}
 
 Get all organizations
 
@@ -1016,7 +1016,7 @@ Get all organizations
 | Filter ID      | The ID of the filter to use                                                                         |         |
 | Connection     |                                                                                                     |         |
 
-### Get Organization Updates
+### Get Organization Updates {#getorganizationupdates}
 
 List updates about an organization
 
@@ -1029,7 +1029,7 @@ List updates about an organization
 | All Changes     | Whether to show custom field updates or not                      |         |
 | Items           | A comma-separated string for filtering out item specific updates |         |
 
-### Get Organization Users
+### Get Organization Users {#getorganizationusers}
 
 List permitted users
 
@@ -1038,7 +1038,7 @@ List permitted users
 | Connection      |                            |         |
 | Organization ID | The ID of the organization |         |
 
-### Get Permission Set
+### Get Permission Set {#getpermissionset}
 
 Get one permission set
 
@@ -1047,7 +1047,7 @@ Get one permission set
 | Connection        |                              |         |
 | Permission Set ID | The ID of the permission set |         |
 
-### Get Permission Set Assignments
+### Get Permission Set Assignments {#getpermissionsetassignments}
 
 List permission set assignments
 
@@ -1058,7 +1058,7 @@ List permission set assignments
 | Start             | Pagination start             | 0       |
 | Limit             | Items shown per page         |         |
 
-### Get Permission Sets
+### Get Permission Sets {#getpermissionsets}
 
 Get all permission sets
 
@@ -1066,7 +1066,7 @@ Get all permission sets
 | ---------- | -------- | ------- |
 | Connection |          |         |
 
-### Get Person
+### Get Person {#getperson}
 
 Get details of a person
 
@@ -1075,7 +1075,7 @@ Get details of a person
 | Connection |                      |         |
 | Person ID  | The ID of the person |         |
 
-### Get Person Activities
+### Get Person Activities {#getpersonactivities}
 
 List activities associated with a person
 
@@ -1087,7 +1087,7 @@ List activities associated with a person
 | Cursor     | For pagination, the marker (an opaque string value) representing the first item on the next page |         |
 | Done       | Whether the activity is done or not                                                              | false   |
 
-### Get Person Deals
+### Get Person Deals {#getpersondeals}
 
 List deals associated with a person
 
@@ -1101,7 +1101,7 @@ List deals associated with a person
 | Sort By        | The field name to sort by                                                                        |         |
 | Sort Direction | The sorting direction.                                                                           |         |
 
-### Get Person Field
+### Get Person Field {#getpersonfield}
 
 Get one person field
 
@@ -1110,7 +1110,7 @@ Get one person field
 | Connection      |                     |         |
 | Person Field ID | The ID of the field |         |
 
-### Get Person Field Details
+### Get Person Field Details {#getpersonfielddetails}
 
 Get details of a specific field for a person
 

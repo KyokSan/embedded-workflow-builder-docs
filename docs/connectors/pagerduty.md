@@ -9,7 +9,7 @@ PagerDuty is a platform for managing on-call operations. This component supports
 
 ## Connections
 
-### Api Key
+### Api Key {#pagerduty-api-key}
 
 Your PagerDuty API Key
 
@@ -25,7 +25,7 @@ Steps to generate and use an API Key for PagerDuty:
 | ----- | -------- | ------- |
 | Token |          |         |
 
-### OAuth 2.0
+### OAuth 2.0 {#pagerduty-oauth}
 
 OAuth 2.0 flow
 
@@ -56,7 +56,7 @@ Read about how OAuth 2.0 works [here](../oauth2.md).
 
 ## Triggers
 
-### Incidents Trigger
+### Incidents Trigger {#incidentstrigger}
 
 Handle Incident webhook notifications from PagerDuty.
 
@@ -68,7 +68,7 @@ Handle Incident webhook notifications from PagerDuty.
 | Filter ID           | The ID of the object being used as the filter. |         |
 | Filter Type         | The type of object being used as the filter.   |         |
 
-### Service Trigger
+### Service Trigger {#servicetrigger}
 
 Handle Service webhook notifications from PagerDuty.
 
@@ -82,7 +82,7 @@ Handle Service webhook notifications from PagerDuty.
 
 ## Actions
 
-### Create Incident
+### Create Incident {#createincident}
 
 Create an Incident
 
@@ -92,7 +92,7 @@ Create an Incident
 | Incident      | JSON object body of the incident to be created       |         |
 | Debug Request | Enabling this flag will log out the current request. | false   |
 
-### Create Incident Note
+### Create Incident Note {#createincidentnote}
 
 Create a note on an incident
 
@@ -103,7 +103,7 @@ Create a note on an incident
 | Note          | Note to create.                                      |         |
 | Debug Request | Enabling this flag will log out the current request. | false   |
 
-### Create Service
+### Create Service {#createservice}
 
 Create a service
 
@@ -113,7 +113,7 @@ Create a service
 | Service       | JSON object body of the Service to create            |         |
 | Debug Request | Enabling this flag will log out the current request. | false   |
 
-### Create Template
+### Create Template {#createtemplate}
 
 Create a template in PagerDuty's API
 
@@ -123,7 +123,7 @@ Create a template in PagerDuty's API
 | Template Object | JSON object body of the new Template to be created   |         |
 | Debug Request   | Enabling this flag will log out the current request. | false   |
 
-### Create User
+### Create User {#createuser}
 
 Create a user
 
@@ -133,7 +133,7 @@ Create a user
 | User          | JSON object body of the User to create.              |         |
 | Debug Request | Enabling this flag will log out the current request. | false   |
 
-### Create Webhook Subscription
+### Create Webhook Subscription {#createwebhooksubscription}
 
 Create a webhook subscription
 
@@ -143,7 +143,7 @@ Create a webhook subscription
 | Webhook Subscription |                                                      |         |
 | Debug Request        | Enabling this flag will log out the current request. | false   |
 
-### Delete All Instance Webhooks
+### Delete All Instance Webhooks {#deleteallinstancewebhooks}
 
 Delete all webhooks associated with this instance
 
@@ -151,7 +151,7 @@ Delete all webhooks associated with this instance
 | ---------- | -------- | ------- |
 | Connection |          |         |
 
-### Delete Service
+### Delete Service {#deleteservice}
 
 Delete a service
 
@@ -161,7 +161,7 @@ Delete a service
 | Service ID    | The ID of the Service.                               |         |
 | Debug Request | Enabling this flag will log out the current request. | false   |
 
-### Delete Template
+### Delete Template {#deletetemplate}
 
 Delete a template
 
@@ -171,7 +171,7 @@ Delete a template
 | Id            | The ID of the Template.                              |         |
 | Debug Request | Enabling this flag will log out the current request. | false   |
 
-### Delete User
+### Delete User {#deleteuser}
 
 Delete a user
 
@@ -181,7 +181,7 @@ Delete a user
 | Id            | The ID of the User to update.                        |         |
 | Debug Request | Enabling this flag will log out the current request. | false   |
 
-### Delete Webhook Subscription
+### Delete Webhook Subscription {#deletewebhooksubscription}
 
 Delete a webhook subscription
 
@@ -191,7 +191,7 @@ Delete a webhook subscription
 | Webhook ID.   | The ID of the webhook.                               |         |
 | Debug Request | Enabling this flag will log out the current request. | false   |
 
-### Enable Webhook Subscription
+### Enable Webhook Subscription {#enablewebhooksubscription}
 
 Enable a webhook subscription
 
@@ -201,7 +201,7 @@ Enable a webhook subscription
 | Webhook ID.   | The ID of the webhook.                               |         |
 | Debug Request | Enabling this flag will log out the current request. | false   |
 
-### Get Change Event
+### Get Change Event {#getchangeevent}
 
 Get a Change Event
 
@@ -211,7 +211,7 @@ Get a Change Event
 | Event Id      | The ID of the Change Event.                          |         |
 | Debug Request | Enabling this flag will log out the current request. | false   |
 
-### Get Incident
+### Get Incident {#getincident}
 
 Get an incident
 
@@ -222,7 +222,7 @@ Get an incident
 | Include       | Array of additional details to include               |         |
 | Debug Request | Enabling this flag will log out the current request. | false   |
 
-### Get Incident Alert
+### Get Incident Alert {#getincidentalert}
 
 Get an alert
 
@@ -233,7 +233,7 @@ Get an alert
 | Incident Alert ID | The ID of the Incident Alert                         |         |
 | Debug Request     | Enabling this flag will log out the current request. | false   |
 
-### Get Service
+### Get Service {#getservice}
 
 Get a service
 
@@ -244,7 +244,7 @@ Get a service
 | Include       | Array of additional details to include.              |         |
 | Debug Request | Enabling this flag will log out the current request. | false   |
 
-### Get Template
+### Get Template {#gettemplate}
 
 Get a template
 
@@ -254,7 +254,7 @@ Get a template
 | Id            | The ID of the Template.                              |         |
 | Debug Request | Enabling this flag will log out the current request. | false   |
 
-### Get User
+### Get User {#getuser}
 
 Get a user
 
@@ -265,7 +265,7 @@ Get a user
 | Include       | Array of additional Models to include in response.   |         |
 | Debug Request | Enabling this flag will log out the current request. | false   |
 
-### Get Webhook Subscription
+### Get Webhook Subscription {#getwebhooksubscription}
 
 Get a webhook subscription
 
@@ -275,7 +275,7 @@ Get a webhook subscription
 | Webhook ID.   | The ID of the webhook.                               |         |
 | Debug Request | Enabling this flag will log out the current request. | false   |
 
-### List Change Events
+### List Change Events {#listchangeevents}
 
 List Change Events
 
@@ -292,7 +292,7 @@ List Change Events
 | Until           | The end of the date range over which you want to search, as a UTC ISO 8601 datetime string.                                                                           |         |
 | Debug Request   | Enabling this flag will log out the current request.                                                                                                                  | false   |
 
-### List Incident Alerts
+### List Incident Alerts {#listincidentalerts}
 
 List alerts for an incident
 
@@ -310,7 +310,7 @@ List alerts for an incident
 | Include       | Array of additional details to include                                                                                                                                |         |
 | Debug Request | Enabling this flag will log out the current request.                                                                                                                  | false   |
 
-### List Incident Notes
+### List Incident Notes {#listincidentnotes}
 
 List notes for an incident
 
@@ -320,7 +320,7 @@ List notes for an incident
 | Incident ID   | The ID of the Incident                               |         |
 | Debug Request | Enabling this flag will log out the current request. | false   |
 
-### List Incidents
+### List Incidents {#listincidents}
 
 List incidents
 
@@ -345,7 +345,7 @@ List incidents
 | Until         | The end of the date range over which you want to search, as a UTC ISO 8601 datetime string.                                                                           |         |
 | Debug Request | Enabling this flag will log out the current request.                                                                                                                  | false   |
 
-### List Notifications
+### List Notifications {#listnotifications}
 
 List notifications
 
@@ -363,7 +363,7 @@ List notifications
 | Include       | Array of additional details to include                                                                                                                                |         |
 | Debug Request | Enabling this flag will log out the current request.                                                                                                                  | false   |
 
-### List Priorities
+### List Priorities {#listpriorities}
 
 List priorities
 
@@ -376,7 +376,7 @@ List priorities
 | Total         | By default the total field in pagination responses is set to null to provide the fastest possible response times. Set total to true for the response to be populated. | false   |
 | Debug Request | Enabling this flag will log out the current request.                                                                                                                  | false   |
 
-### List Services
+### List Services {#listservices}
 
 List services
 
@@ -395,7 +395,7 @@ List services
 | Name          | Filters the results, showing only services with the specified name                                                                                                    |         |
 | Debug Request | Enabling this flag will log out the current request.                                                                                                                  | false   |
 
-### List Templates
+### List Templates {#gettemplates}
 
 List all templates
 
@@ -411,7 +411,7 @@ List all templates
 | Sort By       | Used to specify both the field you wish to sort the results on (name/created_at), as well as the direction (asc/desc) of the results                                  | created_at:asc |
 | Debug Request | Enabling this flag will log out the current request.                                                                                                                  | false          |
 
-### List Users
+### List Users {#listusers}
 
 List all users
 
@@ -427,7 +427,7 @@ List all users
 | Include       | Array of additional Models to include in response.                                                                                                                    |         |
 | Debug Request | Enabling this flag will log out the current request.                                                                                                                  | false   |
 
-### List Webhook Subscriptions
+### List Webhook Subscriptions {#listwebhooksubscriptions}
 
 List webhook subscriptions
 
@@ -442,7 +442,7 @@ List webhook subscriptions
 | Filter Id     | The ID of the resource to filter upon.                                                                                                                                |         |
 | Debug Request | Enabling this flag will log out the current request.                                                                                                                  | false   |
 
-### Manage Incident Alerts
+### Manage Incident Alerts {#updateincidentalerts}
 
 Manage alerts
 
@@ -456,7 +456,7 @@ Manage alerts
 | Alerts        | An array of alert objects, including the parameters to update for each alert                                                                                          |         |
 | Debug Request | Enabling this flag will log out the current request.                                                                                                                  | false   |
 
-### Manage Incidents
+### Manage Incidents {#updateincidents}
 
 Manage Incidents
 
@@ -469,7 +469,7 @@ Manage Incidents
 | Incidents     | An array of incidents, including the parameters to update.                                                                                                            |         |
 | Debug Request | Enabling this flag will log out the current request.                                                                                                                  | false   |
 
-### Raw Request
+### Raw Request {#rawrequest}
 
 Issue a raw HTTP request
 
@@ -492,7 +492,7 @@ Issue a raw HTTP request
 | Max Retry Count         | The maximum number of retries to attempt. Specify 0 for no retries.                                                                                                                              | 0       |
 | Use Exponential Backoff | Specifies whether to use a pre-defined exponential backoff strategy for retries. When enabled, 'Retry Delay (ms)' is ignored.                                                                    | false   |
 
-### Render Template
+### Render Template {#rendertemplate}
 
 Render a template
 
@@ -504,7 +504,7 @@ Render a template
 | Update Message | An optional status update message that will be sent to the template. |         |
 | Debug Request  | Enabling this flag will log out the current request.                 | false   |
 
-### Send Change Event
+### Send Change Event {#sendchangeevent}
 
 Send Change Event to Events API
 
@@ -513,7 +513,7 @@ Send Change Event to Events API
 | Change Event To Send | The JSON object body of the event.                   |         |
 | Debug Request        | Enabling this flag will log out the current request. | false   |
 
-### Send Event
+### Send Event {#sendevent}
 
 Sends PagerDuty a trigger event to report a new event
 
@@ -522,7 +522,7 @@ Sends PagerDuty a trigger event to report a new event
 | Event to Send | The JSON object body of the event.                   |         |
 | Debug Request | Enabling this flag will log out the current request. | false   |
 
-### Test Webhook Subscription
+### Test Webhook Subscription {#testwebhooksubscription}
 
 Test a webhook subscription
 
@@ -532,7 +532,7 @@ Test a webhook subscription
 | Webhook ID.   | The ID of the webhook.                               |         |
 | Debug Request | Enabling this flag will log out the current request. | false   |
 
-### Update Change Event
+### Update Change Event {#updatechangeevent}
 
 Update a Change Event
 
@@ -543,7 +543,7 @@ Update a Change Event
 | Change Event to Update | The JSON object body of the event.                   |         |
 | Debug Request          | Enabling this flag will log out the current request. | false   |
 
-### Update Incident
+### Update Incident {#updateincident}
 
 Update an incident
 
@@ -554,7 +554,7 @@ Update an incident
 | Incident      | The parameters of the incident to update             |         |
 | Debug Request | Enabling this flag will log out the current request. | false   |
 
-### Update Incident Alert
+### Update Incident Alert {#updateincidentalert}
 
 Update an incident alert
 
@@ -566,7 +566,7 @@ Update an incident alert
 | Alerts            | An array of alert objects, including the parameters to update for each alert |         |
 | Debug Request     | Enabling this flag will log out the current request.                         | false   |
 
-### Update Service
+### Update Service {#updateservice}
 
 Update a service
 
@@ -577,7 +577,7 @@ Update a service
 | Service       | JSON object body of the Service to update            |         |
 | Debug Request | Enabling this flag will log out the current request. | false   |
 
-### Update Template
+### Update Template {#updatetemplate}
 
 Update a template
 
@@ -588,7 +588,7 @@ Update a template
 | Template      | JSON object body of the Template to be updated       |         |
 | Debug Request | Enabling this flag will log out the current request. | false   |
 
-### Update User
+### Update User {#updateuser}
 
 Update a user
 
@@ -599,7 +599,7 @@ Update a user
 | User          | JSON object body of the User to create.              |         |
 | Debug Request | Enabling this flag will log out the current request. | false   |
 
-### Update Webhook Subscription
+### Update Webhook Subscription {#updatewebhooksubscription}
 
 Update a webhook subscription
 

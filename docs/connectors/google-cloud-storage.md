@@ -9,7 +9,7 @@ Manage files in a Google Cloud Platform (GCP) Cloud Storage bucket
 
 ## Connections
 
-### Google Cloud Storage Private Key
+### Google Cloud Storage Private Key {#privatekey}
 
 Authenticate requests to Google Cloud Storage using a Private Key
 
@@ -60,7 +60,7 @@ Ensure the service account has the appropriate permissions to access the Cloud S
 | Private Key  | The private key from the JSON key file. Include the entire key including BEGIN and END markers. |         |
 | Project ID   | The ID of the Google Cloud Platform project that hosts the storage bucket.                      |         |
 
-### Google OAuth 2.0
+### Google OAuth 2.0 {#googleoauth}
 
 Authenticate requests to Google Cloud Storage using Google OAuth 2.0
 
@@ -76,7 +76,7 @@ Read about how OAuth 2.0 works [here](../oauth2.md).
 
 ## Actions
 
-### Complete Multipart Upload
+### Complete Multipart Upload {#completemultipartupload}
 
 Completes a multipart upload for a file in Google Cloud Storage
 
@@ -88,7 +88,7 @@ Completes a multipart upload for a file in Google Cloud Storage
 | Destination Bucket | The name of the bucket where the file will be copied. When copying files within a single bucket, use the same bucket name for both source and destination.                                         |         |
 | Connection         |                                                                                                                                                                                                    |         |
 
-### Copy Files
+### Copy Files {#copyfile}
 
 Copy a file from one Google Cloud Storage bucket to another
 
@@ -100,7 +100,7 @@ Copy a file from one Google Cloud Storage bucket to another
 | Destination File Name | The destination file path within the bucket. Do not include a leading slash.                                                                               |         |
 | Connection            |                                                                                                                                                            |         |
 
-### Create Bucket
+### Create Bucket {#createbucket}
 
 Create a new Bucket inside Google Cloud Storage
 
@@ -113,7 +113,7 @@ Create a new Bucket inside Google Cloud Storage
 | Location       | The geographic location where the bucket will be created. Defaults to 'US'. See https://cloud.google.com/storage/docs/locations for available locations. |         |
 | Storage Class  | The storage class for the bucket. See https://cloud.google.com/storage/docs/storage-classes for details.                                                 |         |
 
-### Create Multipart Upload
+### Create Multipart Upload {#createmultipartupload}
 
 Create a multipart upload for a file in Google Cloud Storage
 
@@ -124,7 +124,7 @@ Create a multipart upload for a file in Google Cloud Storage
 | Destination Bucket | The name of the bucket where the file will be copied. When copying files within a single bucket, use the same bucket name for both source and destination. |         |
 | Connection         |                                                                                                                                                            |         |
 
-### Delete Bucket
+### Delete Bucket {#deletebucket}
 
 Delete an existing Bucket from the Google Cloud Storage
 
@@ -133,7 +133,7 @@ Delete an existing Bucket from the Google Cloud Storage
 | Bucket Name | The name of the Google Cloud Storage bucket. Bucket names contain only lowercase letters, numbers, hyphens, and underscores. |         |
 | Connection  |                                                                                                                              |         |
 
-### Delete File
+### Delete File {#deletefile}
 
 Delete a file from a Google Cloud Storage bucket
 
@@ -143,7 +143,7 @@ Delete a file from a Google Cloud Storage bucket
 | Bucket Name | The name of the Google Cloud Storage bucket. Bucket names contain only lowercase letters, numbers, hyphens, and underscores. |         |
 | Connection  |                                                                                                                              |         |
 
-### Download File
+### Download File {#downloadfile}
 
 Download a file from Google Cloud Storage
 
@@ -153,7 +153,7 @@ Download a file from Google Cloud Storage
 | Bucket Name | The name of the Google Cloud Storage bucket. Bucket names contain only lowercase letters, numbers, hyphens, and underscores. |         |
 | Connection  |                                                                                                                              |         |
 
-### Generate Presigned URL
+### Generate Presigned URL {#generatepresignedurl}
 
 Generate a presigned URL to upload a file in Google Cloud Storage
 
@@ -164,7 +164,7 @@ Generate a presigned URL to upload a file in Google Cloud Storage
 | Bucket Name     | The name of the Google Cloud Storage bucket. Bucket names contain only lowercase letters, numbers, hyphens, and underscores.                         |         |
 | Expiration Time | The expiration time for the presigned URL in seconds. Defaults to 3600 (1 hour).                                                                     | 3600    |
 
-### Get Bucket
+### Get Bucket {#getbucket}
 
 Get the information and metadata of an existing Bucket from the Google Cloud Storage
 
@@ -173,7 +173,7 @@ Get the information and metadata of an existing Bucket from the Google Cloud Sto
 | Bucket Name | The name of the Google Cloud Storage bucket. Bucket names contain only lowercase letters, numbers, hyphens, and underscores. |         |
 | Connection  |                                                                                                                              |         |
 
-### Get File
+### Get File {#getfile}
 
 Get the information and metadata of a file from Google Cloud Storage
 
@@ -183,7 +183,7 @@ Get the information and metadata of a file from Google Cloud Storage
 | Bucket Name | The name of the Google Cloud Storage bucket. Bucket names contain only lowercase letters, numbers, hyphens, and underscores. |         |
 | Connection  |                                                                                                                              |         |
 
-### List Buckets
+### List Buckets {#listbuckets}
 
 List buckets in a Google Cloud Storage project
 
@@ -192,7 +192,7 @@ List buckets in a Google Cloud Storage project
 | Fetch All Results | When true, automatically fetches all pages of results using pagination. | false   |
 | Connection        |                                                                         |         |
 
-### List Files
+### List Files {#listfilesv2}
 
 List files in a Google Cloud Storage bucket
 
@@ -205,7 +205,7 @@ List files in a Google Cloud Storage bucket
 | Max Results       | The maximum number of results to return per page. Must be between 1 and 50.                                                                                         |         |
 | Fetch All Results | When true, automatically fetches all pages of results using pagination.                                                                                             | false   |
 
-### Move File
+### Move File {#movefile}
 
 Move a file from one Google Cloud Storage bucket to another
 
@@ -217,7 +217,7 @@ Move a file from one Google Cloud Storage bucket to another
 | Destination File Name | The destination file path within the bucket. Do not include a leading slash.                                                                               |         |
 | Connection            |                                                                                                                                                            |         |
 
-### Raw Request
+### Raw Request {#rawrequest}
 
 Send raw HTTP request to Google Cloud Storage
 
@@ -239,7 +239,7 @@ Send raw HTTP request to Google Cloud Storage
 | Max Retry Count         | The maximum number of retries to attempt. Specify 0 for no retries.                                                                                                                              | 0       |
 | Use Exponential Backoff | Specifies whether to use a pre-defined exponential backoff strategy for retries. When enabled, 'Retry Delay (ms)' is ignored.                                                                    | false   |
 
-### Save File
+### Save File {#savefile}
 
 Save a file to Google Cloud Storage
 
@@ -251,7 +251,7 @@ Save a file to Google Cloud Storage
 | File Metadata | When true, returns the file metadata after saving. Read access to the bucket is required.                                                          | true    |
 | Connection    |                                                                                                                                                    |         |
 
-### Upload Part of a Multipart Upload
+### Upload Part of a Multipart Upload {#uploadpartofamultipartupload}
 
 Upload a part of a multipart upload to Google Cloud Storage
 

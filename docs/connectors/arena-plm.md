@@ -9,7 +9,7 @@ Interact with items and resources in Arena PLM
 
 ## Connections
 
-### Arena PLM Basic Auth
+### Arena PLM Basic Auth {#arenaplmbasicauth}
 
 Arena PLM Basic Auth
 
@@ -26,7 +26,7 @@ In addition to email address and password, your customer will also need to know 
 
 ## Actions
 
-### Raw Request
+### Raw Request {#rawrequest}
 
 Send raw HTTP request to Arena PLM
 

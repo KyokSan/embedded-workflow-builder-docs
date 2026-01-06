@@ -9,7 +9,7 @@ Manage invoices, items, accounts, payments and more objects from your Xero accou
 
 ## Connections
 
-### Xero OAuth 2.0
+### Xero OAuth 2.0 {#oauth2}
 
 Authenticate requests to Xero using values obtained from the developer console.
 
@@ -47,7 +47,7 @@ Read about how OAuth 2.0 works [here](../oauth2.md).
 | Client Secret | Provide the Client Secret you generated from the Xero Developer Console.                                                                                 |                                                                               |
 | Tenant Name   | The name of the tenant you are requesting access to.                                                                                                     |                                                                               |
 
-### Xero OAuth 2.0 Client Credentials
+### Xero OAuth 2.0 Client Credentials {#xerooauthclientcredentials}
 
 Authenticate requests to Xero using client credentials (Custom Connection).
 
@@ -89,7 +89,7 @@ Read about how OAuth 2.0 works [here](../oauth2.md).
 
 ## Triggers
 
-### Webhook
+### Webhook {#webhook}
 
 Receive and validate webhook requests from Xero for webhooks you configure.
 
@@ -99,7 +99,7 @@ Receive and validate webhook requests from Xero for webhooks you configure.
 
 ## Actions
 
-### Add Notes To Invoice
+### Add Notes To Invoice {#addnotetoinvoice}
 
 Add additional notes to an invoice by Id
 
@@ -109,7 +109,7 @@ Add additional notes to an invoice by Id
 | Notes      | Provide a string value for notes to add to an object. |         |
 | Connection | The connection to use.                                |         |
 
-### Add Note To Item
+### Add Note To Item {#addnotetoitem}
 
 Add a note to an item's history by Id
 
@@ -119,7 +119,7 @@ Add a note to an item's history by Id
 | Notes      | Provide a string value for notes to add to an object. |         |
 | Connection | The connection to use.                                |         |
 
-### Archive Account
+### Archive Account {#archiveaccount}
 
 Archive the information and metadata of an account by Id
 
@@ -128,7 +128,7 @@ Archive the information and metadata of an account by Id
 | Account ID | Provide a string value for the Account ID |         |
 | Connection | The connection to use.                    |         |
 
-### Archive Contact
+### Archive Contact {#archivecontact}
 
 Archive the information and metadata of a contact by Id
 
@@ -137,7 +137,7 @@ Archive the information and metadata of a contact by Id
 | Contact ID | Provide a string value for the Contact ID. |         |
 | Connection | The connection to use.                     |         |
 
-### Create Account
+### Create Account {#createaccount}
 
 Create a new account
 
@@ -151,7 +151,7 @@ Create a new account
 | Show In Expense Claims | This value will determine if your account will show in expense claims. This field is required for certain accounts.                                                                    | false   |
 | Connection             | The connection to use.                                                                                                                                                                 |         |
 
-### Create Attachment
+### Create Attachment {#createattachment}
 
 Add an attachment to an existing object. Existing attachments with that file name will be overridden.
 
@@ -164,7 +164,7 @@ Add an attachment to an existing object. Existing attachments with that file nam
 | Content Type | MIME type of the file you want to upload                                                                                                                             |         |
 | Connection   | The connection to use.                                                                                                                                               |         |
 
-### Create Contact
+### Create Contact {#createcontact}
 
 Create a new contact
 
@@ -189,7 +189,7 @@ Create a new contact
 | Default Currency             | Provide a valid type of currency.                                                                                                                                                                                                                                                                                                                  |         |
 | Additional Fields            | Additional fields that might not be covered by the standard inputs. See https://developer.xero.com/documentation/api/accounting/contacts#post-contacts for additional fields.                                                                                                                                                                      |         |
 
-### Create Invoice
+### Create Invoice {#createinvoice}
 
 Create a new invoice
 
@@ -212,7 +212,7 @@ Create a new invoice
 | Additional Fields | Additional fields that might not be covered by the standard inputs. See https://developer.xero.com/documentation/api/accounting/invoices#post-invoices for additional fields.                                                   |         |
 | Connection        | The connection to use.                                                                                                                                                                                                          |         |
 
-### Create Item
+### Create Item {#createitem}
 
 Create a new Item
 
@@ -233,7 +233,7 @@ Create a new Item
 | Is Purchased                 | Provide a boolean value to determine if the item has been purchased yet.                                                                                | false   |
 | Connection                   | The connection to use.                                                                                                                                  |         |
 
-### Delete Account
+### Delete Account {#deleteaccount}
 
 Delete the information and metadata of an account by Id
 
@@ -242,7 +242,7 @@ Delete the information and metadata of an account by Id
 | Account ID | Provide a string value for the Account ID |         |
 | Connection | The connection to use.                    |         |
 
-### Delete Invoice
+### Delete Invoice {#deleteinvoice}
 
 Delete the information and metadata of an invoice by Id
 
@@ -251,7 +251,7 @@ Delete the information and metadata of an invoice by Id
 | Invoice ID | Provide a string value for the Invoice ID. |         |
 | Connection | The connection to use.                     |         |
 
-### Delete Item
+### Delete Item {#deleteitem}
 
 Delete the information and metadata of an item by Id
 
@@ -260,7 +260,7 @@ Delete the information and metadata of an item by Id
 | Item ID    | Provide a string value for the Item ID. |         |
 | Connection | The connection to use.                  |         |
 
-### Get Account
+### Get Account {#getaccount}
 
 Get the information and metadata of an account by Id
 
@@ -269,7 +269,7 @@ Get the information and metadata of an account by Id
 | Account ID | Provide a string value for the Account ID |         |
 | Connection | The connection to use.                    |         |
 
-### Get Attachment
+### Get Attachment {#getattachment}
 
 Get an attachment by ID
 
@@ -280,7 +280,7 @@ Get an attachment by ID
 | File Name   | Provide a string value for the name of the file you want to attach to the object. The File Name will become the unique identifier of the file for update operations. |         |
 | Connection  | The connection to use.                                                                                                                                               |         |
 
-### Get Contact
+### Get Contact {#getcontact}
 
 Get the information and metadata of a contact by Id
 
@@ -289,7 +289,7 @@ Get the information and metadata of a contact by Id
 | Contact ID | Provide a string value for the Contact ID. |         |
 | Connection | The connection to use.                     |         |
 
-### Get Contact History
+### Get Contact History {#getcontacthistory}
 
 Get the information and metadata of a contact's history by Id
 
@@ -298,7 +298,7 @@ Get the information and metadata of a contact's history by Id
 | Contact ID | Provide a string value for the Contact ID. |         |
 | Connection | The connection to use.                     |         |
 
-### Get Invoice
+### Get Invoice {#getinvoice}
 
 Get the information and metadata of an invoice by Id
 
@@ -307,7 +307,7 @@ Get the information and metadata of an invoice by Id
 | Invoice ID | Provide a string value for the Invoice ID. |         |
 | Connection | The connection to use.                     |         |
 
-### Get Item
+### Get Item {#getitem}
 
 Get the information and metadata of an item by Id
 
@@ -316,7 +316,7 @@ Get the information and metadata of an item by Id
 | Item ID    | Provide a string value for the Item ID. |         |
 | Connection | The connection to use.                  |         |
 
-### Get Item History
+### Get Item History {#getitemhistory}
 
 Get the information and metadata of an items's history by Id
 
@@ -325,7 +325,7 @@ Get the information and metadata of an items's history by Id
 | Item ID    | Provide a string value for the Item ID. |         |
 | Connection | The connection to use.                  |         |
 
-### Get Payment
+### Get Payment {#getpayment}
 
 Get the information and metadata of a payment by id
 
@@ -334,7 +334,7 @@ Get the information and metadata of a payment by id
 | Payment ID | Provide a string value for the Id of the payment. |         |
 | Connection | The connection to use.                            |         |
 
-### Get Payment History
+### Get Payment History {#getpaymenthistory}
 
 Get the information and metadata of a payment's history by Id
 
@@ -343,7 +343,7 @@ Get the information and metadata of a payment's history by Id
 | Payment ID | Provide a string value for the Id of the payment. |         |
 | Connection | The connection to use.                            |         |
 
-### List Accounts
+### List Accounts {#listaccounts}
 
 List all accounts
 
@@ -353,7 +353,7 @@ List all accounts
 | Modified After | Only contacts created or modified since this timestamp will be returned.                                |         |
 | Where          | The where parameter allows you to filter on endpoints and elements that don't have explicit parameters. |         |
 
-### List Connections
+### List Connections {#listconnections}
 
 List all connections
 
@@ -361,7 +361,7 @@ List all connections
 | ---------- | ---------------------- | ------- |
 | Connection | The connection to use. |         |
 
-### List Contacts
+### List Contacts {#listcontacts}
 
 List all contacts
 
@@ -373,7 +373,7 @@ List all contacts
 | Modified After | Only contacts created or modified since this timestamp will be returned.                                                                                                                  |         |
 | Where          | The where parameter allows you to filter on endpoints and elements that don't have explicit parameters.                                                                                   |         |
 
-### List Invoices
+### List Invoices {#listinvoices}
 
 List all invoices
 
@@ -385,7 +385,7 @@ List all invoices
 | Modified After | Only contacts created or modified since this timestamp will be returned.                                                                                                                  |         |
 | Where          | The where parameter allows you to filter on endpoints and elements that don't have explicit parameters.                                                                                   |         |
 
-### List Items
+### List Items {#listitems}
 
 List all items
 
@@ -395,7 +395,7 @@ List all items
 | Modified After | Only contacts created or modified since this timestamp will be returned.                                |         |
 | Where          | The where parameter allows you to filter on endpoints and elements that don't have explicit parameters. |         |
 
-### List Payments
+### List Payments {#listpayments}
 
 List all payments
 
@@ -407,7 +407,7 @@ List all payments
 | Modified After | Only contacts created or modified since this timestamp will be returned.                                                                                                                  |         |
 | Where          | The where parameter allows you to filter on endpoints and elements that don't have explicit parameters.                                                                                   |         |
 
-### Pay Invoice
+### Pay Invoice {#payinvoice}
 
 Create a new payment on an existing AP/AR invoice
 
@@ -419,7 +419,7 @@ Create a new payment on an existing AP/AR invoice
 | Payment Amount | Provide a string value for the amount of the payment. This value must be less than or equal to the outstanding amount owed on the invoice. |         |
 | Connection     | The connection to use.                                                                                                                     |         |
 
-### Raw Request
+### Raw Request {#rawrequest}
 
 Send raw HTTP request to Xero
 
@@ -441,7 +441,7 @@ Send raw HTTP request to Xero
 | Max Retry Count         | The maximum number of retries to attempt. Specify 0 for no retries.                                                                                                                                                  | 0       |
 | Use Exponential Backoff | Specifies whether to use a pre-defined exponential backoff strategy for retries. When enabled, 'Retry Delay (ms)' is ignored.                                                                                        | false   |
 
-### Reverse Payment
+### Reverse Payment {#reversepayment}
 
 Reverse a payment by Id
 
@@ -450,7 +450,7 @@ Reverse a payment by Id
 | Payment ID | Provide a string value for the Id of the payment. |         |
 | Connection | The connection to use.                            |         |
 
-### Send Invoice
+### Send Invoice {#sendinvoice}
 
 Send an existing accounts receivable invoice through email
 
@@ -459,7 +459,7 @@ Send an existing accounts receivable invoice through email
 | Invoice ID | Provide a string value for the Invoice ID. |         |
 | Connection | The connection to use.                     |         |
 
-### Update Account
+### Update Account {#updateaccount}
 
 Update the information and metadata of an existing account by Id
 
@@ -476,7 +476,7 @@ Update the information and metadata of an existing account by Id
 | Show In Expense Claims     | This value will determine if your account will show in expense claims. This field is required for certain accounts.                                                                    | false   |
 | Connection                 | The connection to use.                                                                                                                                                                 |         |
 
-### Update Contact
+### Update Contact {#updatecontact}
 
 Update the information and metadata of a contact by Id
 
@@ -503,7 +503,7 @@ Update the information and metadata of a contact by Id
 | Additional Fields            | Additional fields that might not be covered by the standard inputs. See https://developer.xero.com/documentation/api/accounting/contacts#post-contacts for additional fields.                                                                                                                                                                      |         |
 | Connection                   | The connection to use.                                                                                                                                                                                                                                                                                                                             |         |
 
-### Update Item
+### Update Item {#updateitem}
 
 Update the information and metadata of an item by Id
 
@@ -526,7 +526,7 @@ Update the information and metadata of an item by Id
 | Optional Values              | For each item, provide a key and value to be used in the request body.                                                                                  |         |
 | Connection                   | The connection to use.                                                                                                                                  |         |
 
-### Void Invoice
+### Void Invoice {#voidinvoice}
 
 Void an existing approved invoice that has no payments applied to it.
 

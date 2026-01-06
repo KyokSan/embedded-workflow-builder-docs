@@ -9,7 +9,7 @@ Manage AWS Glue crawlers, jobs and triggers
 
 ## Connections
 
-### AWS Glue Access Key and Secret
+### AWS Glue Access Key and Secret {#apikeysecret}
 
 Authenticates requests to AWS Glue using an API Key and API Secret.
 
@@ -22,7 +22,7 @@ Read more about Glue IAM actions in the [AWS docs](https://docs.aws.amazon.com/g
 | Access Key ID     | An AWS IAM Access Key ID     |         |
 | Secret Access Key | An AWS IAM Secret Access Key |         |
 
-### AWS Role ARN
+### AWS Role ARN {#awsassumerole}
 
 Connect to AWS using an assumed role
 
@@ -76,7 +76,7 @@ To create and assign a user a role:
 
 ## Actions
 
-### Get Job Run
+### Get Job Run {#getjobrun}
 
 Retrieves the metadata for a given job run.
 
@@ -87,7 +87,7 @@ Retrieves the metadata for a given job run.
 | Run Id     | Provide a string value for the run Id.                                  |         |
 | Connection |                                                                         |         |
 
-### List Crawlers
+### List Crawlers {#listcrawlers}
 
 List Crawlers available in AWS Glue
 
@@ -98,7 +98,7 @@ List Crawlers available in AWS Glue
 | Marker     | Specify the pagination token that's returned by a previous request to retrieve the next page of results       |         |
 | Connection |                                                                                                               |         |
 
-### List Jobs
+### List Jobs {#listjobs}
 
 List job schemas available in AWS Glue
 
@@ -109,7 +109,7 @@ List job schemas available in AWS Glue
 | Max Items  | Provide an integer value for the maximum amount of items that will be returned. Provide a value from 1 to 50. |         |
 | Connection |                                                                                                               |         |
 
-### List Triggers
+### List Triggers {#listtriggers}
 
 List the names of all triggers in the account.
 
@@ -120,7 +120,7 @@ List the names of all triggers in the account.
 | Marker     | Specify the pagination token that's returned by a previous request to retrieve the next page of results       |         |
 | Connection |                                                                                                               |         |
 
-### Start Crawler
+### Start Crawler {#startcrawler}
 
 Starts an existing crawler in AWS Glue.
 
@@ -130,7 +130,7 @@ Starts an existing crawler in AWS Glue.
 | Name       | Provide a string value for the name (NOT the ARN).                      |         |
 | Connection |                                                                         |         |
 
-### Start Job Run
+### Start Job Run {#startjobrun}
 
 Starts a job run using a AWS Glue job definition.
 
@@ -143,7 +143,7 @@ Starts a job run using a AWS Glue job definition.
 | args                   | Optional key value parameters to pass into a job.                                                                                                                                   |         |
 | Connection             |                                                                                                                                                                                     |         |
 
-### Start Trigger
+### Start Trigger {#starttrigger}
 
 Starts an existing trigger in AWS Glue.
 
@@ -153,7 +153,7 @@ Starts an existing trigger in AWS Glue.
 | Name       | Provide a string value for the name (NOT the ARN).                      |         |
 | Connection |                                                                         |         |
 
-### Stop Crawler
+### Stop Crawler {#stopcrawler}
 
 If the specified crawler is running, stops the crawl
 
@@ -163,7 +163,7 @@ If the specified crawler is running, stops the crawl
 | Name       | Provide a string value for the name (NOT the ARN).                      |         |
 | Connection |                                                                         |         |
 
-### Stop Job Run
+### Stop Job Run {#stopjobrun}
 
 Stops one or more job runs for a specified job definition
 
@@ -174,7 +174,7 @@ Stops one or more job runs for a specified job definition
 | Job Run Ids | Provide a list of job run Ids                                           |         |
 | Connection  |                                                                         |         |
 
-### Stop trigger
+### Stop trigger {#stoptrigger}
 
 Stops a specified trigger
 

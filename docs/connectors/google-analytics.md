@@ -9,7 +9,7 @@ Manage Google Analytics
 
 ## Connections
 
-### Google Analytics OAuth 2.0
+### Google Analytics OAuth 2.0 {#oauth2}
 
 Authenticate requests to Google Analytics using values obtained from the Google Cloud Platform.
 
@@ -33,7 +33,7 @@ Read about how OAuth 2.0 works [here](../oauth2.md).
 
 ## Actions
 
-### Get Custom Dimension
+### Get Custom Dimension {#getcustomdimension}
 
 Get a Custom Dimensions
 
@@ -44,7 +44,7 @@ Get a Custom Dimensions
 | Account ID          |          |         |
 | Web Property ID     |          |         |
 
-### Get Custom Metric
+### Get Custom Metric {#getcustommetric}
 
 Get a Custom Metric
 
@@ -55,7 +55,7 @@ Get a Custom Metric
 | Account ID       |          |         |
 | Web Property ID  |          |         |
 
-### Get Profile
+### Get Profile {#getprofile}
 
 Get a Google Analytics Profile
 
@@ -66,7 +66,7 @@ Get a Google Analytics Profile
 | Web Property ID |          |         |
 | Profile ID      |          |         |
 
-### Get View Data
+### Get View Data {#getdata}
 
 Get Analytics data for a View (profile)
 
@@ -86,7 +86,7 @@ Get Analytics data for a View (profile)
 | Items Per Page        |                                                                          | 1000    |
 | Include Empty Rows    |                                                                          | false   |
 
-### Get Web Property
+### Get Web Property {#getwebproperty}
 
 Get Web Property
 
@@ -96,7 +96,7 @@ Get Web Property
 | Account ID      |          |         |
 | Web Property ID |          |         |
 
-### Link User to Account
+### Link User to Account {#adduser}
 
 Link a User by email to specified Account
 
@@ -106,7 +106,7 @@ Link a User by email to specified Account
 | Account ID |          |         |
 | Email      |          |         |
 
-### List Accounts
+### List Accounts {#listaccounts}
 
 Paginated listing of Accounts
 
@@ -116,7 +116,7 @@ Paginated listing of Accounts
 | Start Index    |          | 1       |
 | Items Per Page |          | 1000    |
 
-### List Custom Dimensions
+### List Custom Dimensions {#listcustomdimensions}
 
 List Custom Dimensions for the given Web Property
 
@@ -128,7 +128,7 @@ List Custom Dimensions for the given Web Property
 | Start Index     |          | 1       |
 | Items Per Page  |          | 1000    |
 
-### List Custom Metrics
+### List Custom Metrics {#listcustommetrics}
 
 List Custom Metrics for the given Web Property
 
@@ -140,7 +140,7 @@ List Custom Metrics for the given Web Property
 | Start Index     |          | 1       |
 | Items Per Page  |          | 1000    |
 
-### List Profiles
+### List Profiles {#listprofiles}
 
 List Profiles associated with the specified Account ID
 
@@ -152,7 +152,7 @@ List Profiles associated with the specified Account ID
 | Start Index     |          | 1       |
 | Items Per Page  |          | 1000    |
 
-### List Web Properties
+### List Web Properties {#listwebproperties}
 
 List Web Properties associated with the specified Account ID
 
@@ -163,7 +163,7 @@ List Web Properties associated with the specified Account ID
 | Start Index    |          | 1       |
 | Items Per Page |          | 1000    |
 
-### Raw Request
+### Raw Request {#rawrequest}
 
 Send raw HTTP request to Google Analytics
 

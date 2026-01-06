@@ -9,7 +9,7 @@ Send and receive messages on an AMQP-based message broker
 
 ## Connections
 
-### AMQP Connection
+### AMQP Connection {#amqp}
 
 Authenticate requests to an amqp server
 
@@ -19,7 +19,7 @@ For example, if you are told that your AMQP server is hosted at `amqps://amqp.ex
 AMQP often requires authentication (a username and password), but some AMQP servers are anonymous and do not require authentication.
 If the server you're interacting with is allows anonymous authentication, you can omit the **username** and **password** fields.
 
-You can verify that your settings are correct using the this component's [Check AMQP Connection](#check-amqp-connection) action.
+You can verify that your settings are correct using the this component's [Check AMQP Connection](#checkconnection) action.
 
 | Input    | Comments                                                                   | Default     |
 | -------- | -------------------------------------------------------------------------- | ----------- |
@@ -32,7 +32,7 @@ You can verify that your settings are correct using the this component's [Check 
 
 ## Actions
 
-### Acknowledge Message
+### Acknowledge Message {#acknowledgemessage}
 
 Acknowledge a previously fetched message
 
@@ -41,7 +41,7 @@ Acknowledge a previously fetched message
 | Connection |                                                                                   |         |
 | Message    | An AMQP message. This must reference the results of a previous 'Get Message' step |         |
 
-### Check AMQP Connection
+### Check AMQP Connection {#checkconnection}
 
 Verify that an AMQP server is available, and return the server's connection information. This is helpful for debugging purposes.
 
@@ -49,7 +49,7 @@ Verify that an AMQP server is available, and return the server's connection info
 | ---------- | -------- | ------- |
 | Connection |          |         |
 
-### Get Message
+### Get Message {#getmessage}
 
 Receives a message from an AMQP-based queue
 
@@ -59,7 +59,7 @@ Receives a message from an AMQP-based queue
 | Connection          |                                                                |         |
 | Acknowledge Message | Automatically mark the message received as "Acknowledged"      | true    |
 
-### Publish Message
+### Publish Message {#publishmessage}
 
 Add a message to an AMQP-based queue
 
@@ -72,7 +72,7 @@ Add a message to an AMQP-based queue
 | Route Message | If you would like to route this message, check this box.                                                                          | false   |
 | Message       | Provide a message to push on to the queue.                                                                                        |         |
 
-### Reject Message
+### Reject Message {#rejectmessage}
 
 Rejects one message from an AMQP-based queue
 

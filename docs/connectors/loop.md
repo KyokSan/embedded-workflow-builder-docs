@@ -9,11 +9,11 @@ Repeat a set of steps by iterating over items in a dataset or a fixed number of 
 
 ## Actions
 
-### Break Loop
+### Break Loop {#breakloop}
 
 Breaks out of the current Loop, causing execution to resume after the containing Loop.
 
-### Repeat for Each
+### Repeat for Each {#loopoveritems}
 
 Loop over items. Applies each step in sequence, and returns a new collection of the results. Items must be an Array or Object.
 
@@ -21,7 +21,7 @@ Loop over items. Applies each step in sequence, and returns a new collection of 
 | ----- | --------------------------------------------------------------------------------------------------------------------------------- | ------- |
 | Items | These are the items to loop over. This must be an Array (list) or Object, and should be a reference to a previous step's results. |         |
 
-### Repeat X Times
+### Repeat X Times {#loopntimes}
 
 Loops over the the steps in the loop N times, or until a loop break occurs.
 

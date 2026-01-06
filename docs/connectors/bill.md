@@ -9,7 +9,7 @@ Use the Bill component to manage Bank Accounts, Invoices, Bills, and more.
 
 ## Connections
 
-### Client Credentials
+### Client Credentials {#billconnection}
 
 The following credentials are needed to authenticate with the BILL API:
 
@@ -36,7 +36,7 @@ The following credentials are needed to authenticate with the BILL API:
 
 ## Actions
 
-### Authenticate MFA session
+### Authenticate MFA session {#mfaauthenticate}
 
 Use this action to authenticate an MFA session. Session only last 30 days.
 
@@ -48,7 +48,7 @@ Use this action to authenticate an MFA session. Session only last 30 days.
 | Session ID    | The session ID received from the 'Generate an MFA challenge ID' action.   |         |
 | Debug Request | Enabling this flag will log out the current request.                      | false   |
 
-### Bulk Create Bills
+### Bulk Create Bills {#bulkcreatebills}
 
 Bulk create bill objects.
 
@@ -58,7 +58,7 @@ Bulk create bill objects.
 | Bills to Create | An array of bill objects to create. See https://developer.bill.com/reference/ap-vendortransactions-bulkcreatebill for more information. |         |
 | Debug Request   | Enabling this flag will log out the current request.                                                                                    | false   |
 
-### Bulk Create Customers
+### Bulk Create Customers {#bulkcreatecustomers}
 
 Bulk create customer objects.
 
@@ -68,7 +68,7 @@ Bulk create customer objects.
 | Customers to Create | An array of customer objects to create. See https://developer.bill.com/reference/ar-customermgmt-bulkcreatecustomer for more information. |         |
 | Debug Request       | Enabling this flag will log out the current request.                                                                                      | false   |
 
-### Bulk Create Invoices
+### Bulk Create Invoices {#bulkcreateinvoices}
 
 Bulk create invoice objects.
 
@@ -78,7 +78,7 @@ Bulk create invoice objects.
 | Invoices to Create | An array of invoice objects to create. See https://developer.bill.com/reference/ar-customertransactions-bulkcreateinvoice for more information. |         |
 | Debug Request      | Enabling this flag will log out the current request.                                                                                            | false   |
 
-### Bulk Create Vendor
+### Bulk Create Vendor {#bulkcreatevendor}
 
 Bulk create vendor objects.
 
@@ -88,7 +88,7 @@ Bulk create vendor objects.
 | Vendors to Create | An array of vendor objects to create. See https://developer.bill.com/reference/ap-vendormgmt-bulkcreatevendor for more information. |         |
 | Debug Request     | Enabling this flag will log out the current request.                                                                                | false   |
 
-### Bulk Create Vendor Bank Accounts
+### Bulk Create Vendor Bank Accounts {#bulkcreatevendorbankaccounts}
 
 Bulk create vendor bank account objects.
 
@@ -100,7 +100,7 @@ Bulk create vendor bank account objects.
 | Vendor Bank Accounts to Create | An array of vendor bank account objects to create. See https://developer.bill.com/reference/ap-vendormgmt-bulkcreatevendorbankaccount for more information. |         |
 | Debug Request                  | Enabling this flag will log out the current request.                                                                                                        | false   |
 
-### Bulk Update Bills
+### Bulk Update Bills {#bulkupdatebills}
 
 Bulk update bill objects.
 
@@ -110,7 +110,7 @@ Bulk update bill objects.
 | Bills to Update | An array of bill objects to update. See https://developer.bill.com/reference/ap-vendortransactions-bulkupdatebill for more information. |         |
 | Debug Request   | Enabling this flag will log out the current request.                                                                                    | false   |
 
-### Bulk Update Customers
+### Bulk Update Customers {#bulkupdatecustomers}
 
 Bulk update customer objects.
 
@@ -120,7 +120,7 @@ Bulk update customer objects.
 | Customers to Update | An array of customer objects to update. See https://developer.bill.com/reference/ar-customermgmt-bulkupdatecustomer for more information. |         |
 | Debug Request       | Enabling this flag will log out the current request.                                                                                      | false   |
 
-### Bulk Update Invoices
+### Bulk Update Invoices {#bulkupdateinvoices}
 
 Bulk update invoice objects.
 
@@ -130,7 +130,7 @@ Bulk update invoice objects.
 | Invoices to Update | An array of invoice objects to update. See https://developer.bill.com/reference/ar-customertransactions-bulkupdateinvoice for more information. |         |
 | Debug Request      | Enabling this flag will log out the current request.                                                                                            | false   |
 
-### Bulk Update Vendors
+### Bulk Update Vendors {#bulkupdatevendors}
 
 Bulk update vendor objects.
 
@@ -140,7 +140,7 @@ Bulk update vendor objects.
 | Vendors to Update | An array of vendor objects to update. See https://developer.bill.com/reference/ap-vendormgmt-bulkupdatevendor for more information. |         |
 | Debug Request     | Enabling this flag will log out the current request.                                                                                | false   |
 
-### Create Bill
+### Create Bill {#createbill}
 
 Create a bill object.
 
@@ -156,7 +156,7 @@ Create a bill object.
 | Additional Fields              | Additional fields that might not be covered by the standard inputs. See https://developer.bill.com/reference/ap-vendortransactions-createbill for more information. |         |
 | Debug Request                  | Enabling this flag will log out the current request.                                                                                                                | false   |
 
-### Create Customer
+### Create Customer {#createcustomer}
 
 Create a customer object.
 
@@ -167,7 +167,7 @@ Create a customer object.
 | Additional Fields | Additional fields that might not be covered by the standard inputs. See https://developer.bill.com/reference/ar-customermgmt-createcustomer for more information. |         |
 | Debug Request     | Enabling this flag will log out the current request.                                                                                                              | false   |
 
-### Create Customer Bank Account
+### Create Customer Bank Account {#createcustomerbankaccount}
 
 Create a customer bank account object.
 
@@ -182,7 +182,7 @@ Create a customer bank account object.
 | Additional Fields | Additional fields that might not be covered by the standard inputs. See https://developer.bill.com/reference/ar-customermgmt-createcustomerbankaccount for more information. |         |
 | Debug Request     | Enabling this flag will log out the current request.                                                                                                                         | false   |
 
-### Create Invoice
+### Create Invoice {#createinvoice}
 
 Create an invoice object.
 
@@ -197,7 +197,7 @@ Create an invoice object.
 | Additional Fields  | Additional fields that might not be covered by the standard inputs. See https://developer.bill.com/reference/ar-customertransactions-createinvoice for more information. |         |
 | Debug Request      | Enabling this flag will log out the current request.                                                                                                                     | false   |
 
-### Create Vendor
+### Create Vendor {#createvendor}
 
 Create a vendor object.
 
@@ -210,7 +210,7 @@ Create a vendor object.
 | Additional Fields | Additional fields that might not be covered by the standard inputs. See https://developer.bill.com/reference/ap-vendormgmt-createvendor for more information. |         |
 | Debug Request     | Enabling this flag will log out the current request.                                                                                                          | false   |
 
-### Create Vendor Bank Account
+### Create Vendor Bank Account {#createvendorbankaccount}
 
 Create a vendor bank account object.
 
@@ -225,7 +225,7 @@ Create a vendor bank account object.
 | Additional Fields | Additional fields that might not be covered by the standard inputs. See https://developer.bill.com/reference/ap-vendormgmt-createvendorbankaccount for more information. |         |
 | Debug Request     | Enabling this flag will log out the current request.                                                                                                                     | false   |
 
-### Delete Bill
+### Delete Bill {#deletebill}
 
 Delete a bill object.
 
@@ -235,7 +235,7 @@ Delete a bill object.
 | Bill ID       | Bill ID.                                             |         |
 | Debug Request | Enabling this flag will log out the current request. | false   |
 
-### Delete Customer
+### Delete Customer {#deletecustomer}
 
 Delete a customer object.
 
@@ -245,7 +245,7 @@ Delete a customer object.
 | Customer ID   | ID of the customer.                                  |         |
 | Debug Request | Enabling this flag will log out the current request. | false   |
 
-### Delete Invoice
+### Delete Invoice {#deleteinvoice}
 
 Delete an invoice object.
 
@@ -255,7 +255,7 @@ Delete an invoice object.
 | Invoice ID    | The ID of the invoice.                               |         |
 | Debug Request | Enabling this flag will log out the current request. | false   |
 
-### Delete Vendor
+### Delete Vendor {#deletevendor}
 
 Delete a vendor object.
 
@@ -265,7 +265,7 @@ Delete a vendor object.
 | Vendor ID     | ID of the vendor.                                    |         |
 | Debug Request | Enabling this flag will log out the current request. | false   |
 
-### Delete Vendor Bank Account
+### Delete Vendor Bank Account {#deletevendorbankaccount}
 
 Delete a vendor bank account object.
 
@@ -277,7 +277,7 @@ Delete a vendor bank account object.
 | Vendor Bank Account ID | ID of the vendor bank account.                                          |         |
 | Debug Request          | Enabling this flag will log out the current request.                    | false   |
 
-### Generate an MFA challenge ID
+### Generate an MFA challenge ID {#generatemfachallengeid}
 
 Use this action to create a trusted MFA session.
 
@@ -287,7 +287,7 @@ Use this action to create a trusted MFA session.
 | Use backup    | Turn this On to use the backup mobile device for MFA. | false   |
 | Debug Request | Enabling this flag will log out the current request.  | false   |
 
-### Get Bill
+### Get Bill {#getbill}
 
 Read a bill object.
 
@@ -297,7 +297,7 @@ Read a bill object.
 | Bill ID       | Bill ID.                                             |         |
 | Debug Request | Enabling this flag will log out the current request. | false   |
 
-### Get Customer
+### Get Customer {#getcustomer}
 
 Read a customer object.
 
@@ -307,7 +307,7 @@ Read a customer object.
 | Customer ID   | ID of the customer.                                  |         |
 | Debug Request | Enabling this flag will log out the current request. | false   |
 
-### Get Customer Bank Account
+### Get Customer Bank Account {#getcustomerbankaccount}
 
 Read a customer bank account object.
 
@@ -317,7 +317,7 @@ Read a customer bank account object.
 | Customer Bank Account ID | ID of the customer bank account.                     |         |
 | Debug Request            | Enabling this flag will log out the current request. | false   |
 
-### Get Invoice
+### Get Invoice {#getinvoice}
 
 Read an invoice object.
 
@@ -327,7 +327,7 @@ Read an invoice object.
 | Invoice ID    | The ID of the invoice.                               |         |
 | Debug Request | Enabling this flag will log out the current request. | false   |
 
-### Get Vendor
+### Get Vendor {#getvendor}
 
 Read a vendor object.
 
@@ -337,7 +337,7 @@ Read a vendor object.
 | Vendor ID     | ID of the vendor.                                    |         |
 | Debug Request | Enabling this flag will log out the current request. | false   |
 
-### Get Vendor Bank Account
+### Get Vendor Bank Account {#getvendorbankaccount}
 
 Read a vendor bank account object.
 
@@ -347,7 +347,7 @@ Read a vendor bank account object.
 | Vendor Bank Account ID | ID of the vendor bank account.                       |         |
 | Debug Request          | Enabling this flag will log out the current request. | false   |
 
-### List Bills
+### List Bills {#listbills}
 
 List bill objects.
 
@@ -361,7 +361,7 @@ List bill objects.
 | Nested        | Set as true to include additional nested data in the response.                                                              | false   |
 | Debug Request | Enabling this flag will log out the current request.                                                                        | false   |
 
-### List Customer
+### List Customer {#listcustomer}
 
 List customer objects.
 
@@ -375,7 +375,7 @@ List customer objects.
 | Nested        | Set as true to include additional nested data in the response.                                                            | false   |
 | Debug Request | Enabling this flag will log out the current request.                                                                      | false   |
 
-### List Customer Bank Account
+### List Customer Bank Account {#listcustomerbankaccount}
 
 List customer bank account objects.
 
@@ -389,7 +389,7 @@ List customer bank account objects.
 | Nested        | Set as true to include additional nested data in the response.                                                                       | false   |
 | Debug Request | Enabling this flag will log out the current request.                                                                                 | false   |
 
-### List Invoices
+### List Invoices {#listinvoice}
 
 List invoice objects.
 
@@ -403,7 +403,7 @@ List invoice objects.
 | Nested        | Set as true to include additional nested data in the response.                                                                   | false   |
 | Debug Request | Enabling this flag will log out the current request.                                                                             | false   |
 
-### List Vendor Bank Accounts
+### List Vendor Bank Accounts {#listvendorbankaccounts}
 
 List vendor bank account objects.
 
@@ -417,7 +417,7 @@ List vendor bank account objects.
 | Nested        | Set as true to include additional nested data in the response.                                                                   | false   |
 | Debug Request | Enabling this flag will log out the current request.                                                                             | false   |
 
-### List Vendors
+### List Vendors {#listvendors}
 
 List vendor objects.
 
@@ -431,7 +431,7 @@ List vendor objects.
 | Nested        | Set as true to include additional nested data in the response.                                                        | false   |
 | Debug Request | Enabling this flag will log out the current request.                                                                  | false   |
 
-### Raw Request
+### Raw Request {#rawrequest}
 
 Send raw HTTP request to Bill.
 
@@ -454,7 +454,7 @@ Send raw HTTP request to Bill.
 | Max Retry Count         | The maximum number of retries to attempt. Specify 0 for no retries.                                                                                                                                              | 0       |
 | Use Exponential Backoff | Specifies whether to use a pre-defined exponential backoff strategy for retries. When enabled, 'Retry Delay (ms)' is ignored.                                                                                    | false   |
 
-### Update Bill
+### Update Bill {#updatebill}
 
 Update a bill object.
 
@@ -471,7 +471,7 @@ Update a bill object.
 | Additional Fields              | Additional fields that might not be covered by the standard inputs. See https://developer.bill.com/reference/ap-vendortransactions-updatebill for more information. |         |
 | Debug Request                  | Enabling this flag will log out the current request.                                                                                                                | false   |
 
-### Update Customer
+### Update Customer {#updatecustomer}
 
 Update a customer object.
 
@@ -483,7 +483,7 @@ Update a customer object.
 | Additional Fields | Additional fields that might not be covered by the standard inputs. See https://developer.bill.com/reference/ar-customermgmt-updatecustomer for more information. |         |
 | Debug Request     | Enabling this flag will log out the current request.                                                                                                              | false   |
 
-### Update Invoice
+### Update Invoice {#updateinvoice}
 
 Update an invoice object.
 
@@ -499,7 +499,7 @@ Update an invoice object.
 | Additional Fields  | Additional fields that might not be covered by the standard inputs.                             |         |
 | Debug Request      | Enabling this flag will log out the current request.                                            | false   |
 
-### Update Vendor
+### Update Vendor {#updatevendor}
 
 Update a vendor object.
 

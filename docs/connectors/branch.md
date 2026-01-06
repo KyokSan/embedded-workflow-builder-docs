@@ -9,7 +9,7 @@ Choose which step to execute next based on a condition or value
 
 ## Actions
 
-### If Condition is Met
+### If Condition is Met {#branchonexpression}
 
 Branch on Expression. Choose which step to execute next based on a condition.
 
@@ -17,7 +17,7 @@ Branch on Expression. Choose which step to execute next based on a condition.
 | --------- | ---------------------------------------------------- | ------- |
 | Condition | The set of conditions to satisfy in order to branch. |         |
 
-### If Value Equals
+### If Value Equals {#branchonvalue}
 
 Branch on value. Choose which step to execute next based on a value.
 
@@ -26,7 +26,7 @@ Branch on value. Choose which step to execute next based on a value.
 | Input Value          | The value used for routing to a branch. This should reference a config variable or output from a previous step. |         |
 | Branch Value Mapping | The branches that are associated with an expected value.                                                        |         |
 
-### Select Executed Step Result
+### Select Executed Step Result {#selectexecutedstepresult}
 
 Given a collection of step results, returns the results of whichever step was executed and returned a result.
 

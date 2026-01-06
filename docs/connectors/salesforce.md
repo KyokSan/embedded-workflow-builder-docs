@@ -9,7 +9,7 @@ Query, create, update or delete Salesforce records
 
 ## Connections
 
-### Salesforce Basic Connection
+### Salesforce Basic Connection {#basic}
 
 Authenticate requests to Salesforce using basic auth.
 
@@ -27,37 +27,36 @@ You can manage security tokens by clicking your profile picture on the top-right
 | Password  | The password of the Salesforce account              |         |
 | Login URL | Your SalesForce Login URL - required for Basic Auth |         |
 
-### Salesforce OAuth 2.0
+### Salesforce OAuth 2.0 {#oauth2}
 
 Authenticate requests to Salesforce using values obtained from the developer console.
 
-If you select OAuth 2.0, you will need to create and configure a [Connected App](https://help.salesforce.com/s/articleView?id=sf.connected_app_create.htm&type=5) within Salesforce.
+OAuth 2.0 gives your users a simple way to authorize your application.
+To use OAuth 2.0, you will need to create and configure a [Connected App](https://help.salesforce.com/s/articleView?id=xcloud.connected_app_create.htm&type=5) within Salesforce:
 
-- When you create your "Connected App" be sure to check **Enable OAuth Settings**, and enter the OAuth callback URL `https://oauth2.%WHITE_LABEL_BASE_URL%/callback` as a **Callback URL**.
-- Consult Salesforce to determine the proper OAuth Scopes to assign - to grant your integrations the same permissions that the user authenticating through OAuth has, select **Full access (full)**.
-  Also select **Perform requests at any time**.
-  Select **Require Secret for Web Server Flow** and **Require Secret for Refresh Token Flow**:
+1. Log in to your Salesforce account
+1. Navigate to **Setup** by clicking the gear icon in the upper right corner
+1. Open **Apps** > **External Client Apps** > **Settings**
+1. Enable **Allow creation of connected apps** if it is not already enabled
+1. Select **New Connected App**
+   - When you create your "Connected App" be sure to check **Enable OAuth Settings**, and enter the OAuth callback URL `https://oauth2.%WHITE_LABEL_BASE_URL%/callback` as a **Callback URL**.
+   - Consult Salesforce to determine the proper OAuth Scopes to assign.
+     To grant your integrations the same permissions that the user authenticating through OAuth has, select **Full access (full)**.
+     Also select **Perform requests at any time (refresh_token, offline_access)**.
+     Select **Require Secret for Web Server Flow** and **Require Secret for Refresh Token Flow**:
 
-<Screenshot
-  filename="components/salesforce/create-connected-app.png"
-  alt="Manage Connected Apps in Salesforce Platform Tools"
-/>
+./assets
 
-Once the app has been created, you will be provided with a **Consumer Key** and **Consumer Secret**.
+Next select **Save** and **Continue**.
+Then, get the app's **Consumer Key** and **Consumer Secret** by selecting **Manage Consumer Details**.
 Take note of these keys:
 
-<Screenshot
-  filename="components/salesforce/get-keys.png"
-  alt="Manage Connected Apps in Salesforce Platform Tools with Consumer and Secret Keys"
-/>
+./assets
 
-If you need to return to this screen, click **PLATFORM TOOLS** -> **Apps** -> **App Manager**, click the dropdown menu to the right of your app and select **Edit**.
+If you need to return to this screen, select **Apps** > **App Manager**, click the dropdown menu to the right of your app and select **Edit**.
 From there you can manage callback URLs.
-Click **Save** and then **Manage Consumer Details** to view the consumer key and secret again.
 
-Now, configure OAuth 2.0 settings.
-
-Add a Salesforce action to your integration.
+Now, add a Salesforce action to your integration.
 This will automatically create a connection config variable for Salesforce.
 Enter the **Consumer Key** and **Consumer Secret** that you noted previously.
 
@@ -81,7 +80,7 @@ Read about how OAuth 2.0 works [here](../oauth2.md).
 
 ## Triggers
 
-### Flow Outbound Message Webhook
+### Flow Outbound Message Webhook {#flowoutboundmessagetrigger}
 
 Trigger for handling Flow-based outbound message webhooks from Salesforce. Creates a complete record-triggered Flow with outbound message action and webhook receiver.
 
@@ -96,7 +95,7 @@ Trigger for handling Flow-based outbound message webhooks from Salesforce. Creat
 | Filter Formula      | Optional formula to filter which records trigger the flow.                                                                                                       |                 |
 | Connection          |                                                                                                                                                                  |                 |
 
-### New and Updated Records
+### New and Updated Records {#pollchangestrigger}
 
 Checks for new and updated records in Salesforce.
 
@@ -112,11 +111,11 @@ Checks for new and updated records in Salesforce.
 | Field Value Types    | For each item, provide the key and the type corresponding to the field Value you entered above. You can assign a value a type of Boolean, Number, or String. |         |
 | Max Records To Fetch | You can set the maximum number of records the trigger will fetch. By default, it will fetch up to 20,000 records.                                            | 20000   |
 
-### Webhook
+### Webhook {#webhook}
 
 Trigger for handling webhook requests from the Salesforce platform. Returns the expected response to Salesforce and converts the XML payload to an object for more convenient use in the rest of the flow.
 
-### Workflow Outbound Message Webhook (Deprecated)
+### Workflow Outbound Message Webhook (Deprecated) {#workflowtrigger}
 
 Trigger for handling workflow rule triggers from the Salesforce platform. Creates a Workflow Outbound Message and a Workflow Rule. Salesforce is ending support for Workflow Rules December 25th, 2025. It is recommended to migrate to actions and triggers going forward.
 
@@ -133,7 +132,7 @@ Trigger for handling workflow rule triggers from the Salesforce platform. Create
 
 ## Actions
 
-### Abort a Bulk Job
+### Abort a Bulk Job {#abortbulkjob}
 
 Aborts a Job
 
@@ -143,7 +142,7 @@ Aborts a Job
 | Version     | Salesforce API Version Number.                                                   | 63.0    |
 | Bulk Job Id | The ID of the Bulk Job. This is the ID returned from the Create Bulk Job action. |         |
 
-### Abort a Bulk Query Job
+### Abort a Bulk Query Job {#abortbulkqueryjob}
 
 Aborts a query job.
 
@@ -153,7 +152,7 @@ Aborts a query job.
 | Version      | Salesforce API Version Number.   | 63.0    |
 | Query Job Id | The ID of the query job to abort |         |
 
-### Activate Flow
+### Activate Flow {#activateflow}
 
 Activate a Flow in Salesforce by name
 
@@ -163,7 +162,7 @@ Activate a Flow in Salesforce by name
 | Flow Name  | The name for the Flow. Accepts both display names and API names. Display names are automatically converted to API format, while API names are used as is. |         |
 | Connection |                                                                                                                                                           |         |
 
-### Add Attachment
+### Add Attachment {#addattachment}
 
 Attach a file to a Parent record object (Account, Opportunity, etc.)
 
@@ -175,7 +174,7 @@ Attach a file to a Parent record object (Account, Opportunity, etc.)
 | File Name     | The name of the file you wish to upload                          |         |
 | File Contents | Reference a file from a previous step, or enter plain text here. |         |
 
-### Add User Permission Set
+### Add User Permission Set {#adduserpermissionset}
 
 Adds a Permission Set to the specified User
 
@@ -186,7 +185,7 @@ Adds a Permission Set to the specified User
 | Permission Set | Provide the name of the Permission Set |         |
 | Connection     |                                        |         |
 
-### Bulk Insert Records
+### Bulk Insert Records {#bulkinsertrecords}
 
 Creates new Salesforce Records
 
@@ -198,7 +197,7 @@ Creates new Salesforce Records
 | File                   | The file to be uploaded                                     |         |
 | Connection             |                                                             |         |
 
-### Bulk Upsert Records
+### Bulk Upsert Records {#bulkupsertrecords}
 
 Updates Salesforce Records if they exists, otherwise creates new Salesforce Records
 
@@ -210,7 +209,7 @@ Updates Salesforce Records if they exists, otherwise creates new Salesforce Reco
 | File                   | The file to be uploaded                                     |         |
 | Connection             |                                                             |         |
 
-### Complete Upload Bulk Job
+### Complete Upload Bulk Job {#completeuploadbulkjob}
 
 Notifies Salesforce servers that the upload of job data is complete and is ready for processing. You can’t add any more job data.
 
@@ -220,7 +219,7 @@ Notifies Salesforce servers that the upload of job data is complete and is ready
 | Version     | Salesforce API Version Number.                                                   | 63.0    |
 | Bulk Job Id | The ID of the Bulk Job. This is the ID returned from the Create Bulk Job action. |         |
 
-### Composite Requests
+### Composite Requests {#compositerequests}
 
 Send multiple requests in a single HTTP call
 
@@ -232,7 +231,7 @@ Send multiple requests in a single HTTP call
 | Collate Subrequests | Controls whether the API collates unrelated subrequests to bulkify them (true) or not (false).                                                                                                                                 | false   |
 | Composite Request   | Collection of subrequests to execute.                                                                                                                                                                                          |         |
 
-### Create a Bulk Job
+### Create a Bulk Job {#createbulkjob}
 
 Creates a job representing a bulk operation and its associated data that is sent to Salesforce for asynchronous processing.
 
@@ -247,7 +246,7 @@ Creates a job representing a bulk operation and its associated data that is sent
 | Column Delimiter       | The delimiter to use for the columns                                                                                                | COMMA   |
 | Line Ending            | The line ending to use for the file                                                                                                 | LF      |
 
-### Create Account
+### Create Account {#createaccount}
 
 Create a Salesforce Account Record
 
@@ -276,7 +275,7 @@ Create a Salesforce Account Record
 | Postal Code            | The zip code of the object's address                                                                          |         |
 | Connection             |                                                                                                               |         |
 
-### Create Bulk Query Job
+### Create Bulk Query Job {#createbulkqueryjob}
 
 Creates a query job.
 
@@ -289,7 +288,7 @@ Creates a query job.
 | Column Delimiter | The delimiter to use for the columns | COMMA   |
 | Line Ending      | The line ending to use for the file  | LF      |
 
-### Create Contact
+### Create Contact {#createcontact}
 
 Create a Salesforce contact
 
@@ -322,7 +321,7 @@ Create a Salesforce contact
 | Postal Code            | The zip code of the object's address                                                                          |         |
 | Connection             |                                                                                                               |         |
 
-### Create Customer
+### Create Customer {#createcustomer}
 
 Create a Salesforce customer
 
@@ -338,7 +337,7 @@ Create a Salesforce customer
 | Total Lifetime Value | The total revenue amount gained from this customer.                                                                                                                        |         |
 | Connection           |                                                                                                                                                                            |         |
 
-### Create Flow
+### Create Flow {#createflow}
 
 Create a draft flow in Salesforce
 
@@ -351,7 +350,7 @@ Create a draft flow in Salesforce
 | Flow Metadata | Additional Flow metadata in JSON format. This will be merged with other inputs.                                                                                                       |             |
 | Connection    |                                                                                                                                                                                       |             |
 
-### Create Lead
+### Create Lead {#createlead}
 
 Create a Salesforce Lead Record
 
@@ -379,7 +378,7 @@ Create a Salesforce Lead Record
 | Lead Status         | The status of the lead. Examples of valid values include: Open, Working, Closed - Converted, Closed - Not Converted |         |
 | Connection          |                                                                                                                     |         |
 
-### Create Metadata
+### Create Metadata {#createobjectsfrommetadata}
 
 Create new metadata components.
 
@@ -390,7 +389,7 @@ Create new metadata components.
 | Metadata Type | The type of metadata to act upon.                                                  | CustomObject                                                                                                                                                                                                                                                                                                  |
 | Metadata      | See https://jsforce.github.io/document/#create-metadata for related documentation. | <code>[<br /> {<br /> "fullName": "TestObject1__c",<br /> "label": "Test Object 1",<br /> "pluralLabel": "Test Object 1",<br /> "nameField": {<br /> "type": "Text",<br /> "label": "Test Object Name"<br /> },<br /> "deploymentStatus": "Deployed",<br /> "sharingModel": "ReadWrite"<br /> }<br />]</code> |
 
-### Create Metadata Fields
+### Create Metadata Fields {#createfieldsfrommetadata}
 
 Create custom fields from metadata
 
@@ -401,7 +400,7 @@ Create custom fields from metadata
 | Metadata Type | The type of metadata to act upon.                                                  | CustomField                                                                                                                                                                                                                     |
 | Metadata      | See https://jsforce.github.io/document/#create-metadata for related documentation. | <code>[<br /> {<br /> "fullName": "Contact.FieldName1__c",<br /> "label": "Field Name 1",<br /> "type": "Text",<br /> "length": 80,<br /> "inlineHelpText": "Text that appears in the ? next to a field."<br /> }<br />]</code> |
 
-### Create Opportunity
+### Create Opportunity {#createopportunity}
 
 Create a Salesforce Opportunity Record, which is a sale or pending deal
 
@@ -422,7 +421,7 @@ Create a Salesforce Opportunity Record, which is a sale or pending deal
 | Name             | The name of the object                                                                                        |         |
 | Connection       |                                                                                                               |         |
 
-### Create Outbound Message
+### Create Outbound Message {#createworkflowoutboundmessage}
 
 Create a new Outbound Message.
 
@@ -438,7 +437,7 @@ Create a new Outbound Message.
 | Dynamic Fields         | Dynamic Fields, provided by value collection config variable, to include in the Outbound Message      |         |
 | Connection             |                                                                                                       |         |
 
-### Create Profile
+### Create Profile {#createprofile}
 
 Create a Salesforce Profile
 
@@ -451,7 +450,7 @@ Create a Salesforce Profile
 | User License | Identifier for associated UserLicense.                                                                                                                                              |         |
 | Connection   |                                                                                                                                                                                     |         |
 
-### Create Record
+### Create Record {#createrecord}
 
 Create a Salesforce Record
 
@@ -463,7 +462,7 @@ Create a Salesforce Record
 | Field Values   | Name of a record's fields and their corresponding values                                                      |         |
 | Connection     |                                                                                                               |         |
 
-### Create User
+### Create User {#createuser}
 
 Create a Salesforce User
 
@@ -481,7 +480,7 @@ Create a Salesforce User
 | Email Address  | The email address for the object                                                                              |         |
 | Connection     |                                                                                                               |         |
 
-### Create Workflow Rule (Deprecated)
+### Create Workflow Rule (Deprecated) {#createworkflowrule}
 
 Create a Workflow Rule. Workflow Rules are being deprecated by Salesforce. Please migrate to using Flow based actions
 
@@ -498,7 +497,7 @@ Create a Workflow Rule. Workflow Rules are being deprecated by Salesforce. Pleas
 | Outbound Message Actions | Full Names of the Outbound Message Actions for this Rule to fire                                                                                                                                                                                                                        |              |
 | Connection               |                                                                                                                                                                                                                                                                                         |              |
 
-### Deactivate Flow
+### Deactivate Flow {#deactivateflow}
 
 Deactivate a Flow in Salesforce by name
 
@@ -508,7 +507,7 @@ Deactivate a Flow in Salesforce by name
 | Flow Name  | The name for the Flow. Accepts both display names and API names. Display names are automatically converted to API format, while API names are used as is. |         |
 | Connection |                                                                                                                                                           |         |
 
-### Delete a Bulk Job
+### Delete a Bulk Job {#deletebulkjob}
 
 Deletes a job.
 
@@ -518,7 +517,7 @@ Deletes a job.
 | Version     | Salesforce API Version Number.                                                   | 63.0    |
 | Bulk Job Id | The ID of the Bulk Job. This is the ID returned from the Create Bulk Job action. |         |
 
-### Delete A Bulk Query Job
+### Delete A Bulk Query Job {#deletebulkqueryjob}
 
 Deletes a query job.
 
@@ -528,7 +527,7 @@ Deletes a query job.
 | Version      | Salesforce API Version Number.    | 63.0    |
 | Query Job Id | The ID of the query job to delete |         |
 
-### Delete Account
+### Delete Account {#deleteaccount}
 
 Delete an existing account record
 
@@ -539,7 +538,7 @@ Delete an existing account record
 | Record ID    | The ID of a Salesforce Record                            |         |
 | Connection   |                                                          |         |
 
-### Delete Contact
+### Delete Contact {#deletecontact}
 
 Delete an existing contact record
 
@@ -549,7 +548,7 @@ Delete an existing contact record
 | Record ID  | The ID of a Salesforce Record  |         |
 | Connection |                                |         |
 
-### Delete Customer
+### Delete Customer {#deletecustomer}
 
 Delete an existing customer record
 
@@ -559,7 +558,7 @@ Delete an existing customer record
 | Record ID  | The ID of a Salesforce Record  |         |
 | Connection |                                |         |
 
-### Delete Flow
+### Delete Flow {#deleteflow}
 
 Delete a Flow from Salesforce by name
 
@@ -569,7 +568,7 @@ Delete a Flow from Salesforce by name
 | Flow Name  | The name for the Flow. Accepts both display names and API names. Display names are automatically converted to API format, while API names are used as is. |         |
 | Connection |                                                                                                                                                           |         |
 
-### Delete Instanced Flows and Outbound Messages
+### Delete Instanced Flows and Outbound Messages {#deleteinstancedflowsandoutboundmessages}
 
 Delete all instanced flows and outbound messages for a given endpoint URL
 
@@ -579,7 +578,7 @@ Delete all instanced flows and outbound messages for a given endpoint URL
 | Endpoint URL | The endpoint URL to delete the instanced flows and outbound messages for. |         |
 | Connection   |                                                                           |         |
 
-### Delete Lead
+### Delete Lead {#deletelead}
 
 Delete a Salesforce Lead Record
 
@@ -589,7 +588,7 @@ Delete a Salesforce Lead Record
 | Record ID  | The ID of a Salesforce Record  |         |
 | Connection |                                |         |
 
-### Delete Metadata
+### Delete Metadata {#deletemetadata}
 
 Delete one or more metadata components.
 
@@ -600,7 +599,7 @@ Delete one or more metadata components.
 | Version           | Salesforce API Version Number.          | 63.0         |
 | Object Full Names | The full names of the objects to delete |              |
 
-### Delete Opportunity
+### Delete Opportunity {#deleteopportunity}
 
 Delete an existing opportunity record
 
@@ -610,7 +609,7 @@ Delete an existing opportunity record
 | Record ID  | The ID of a Salesforce Record  |         |
 | Connection |                                |         |
 
-### Delete Profile
+### Delete Profile {#deleteprofile}
 
 Delete a Salesforce Profile
 
@@ -620,7 +619,7 @@ Delete a Salesforce Profile
 | Record ID  | The ID of a Salesforce Record  |         |
 | Connection |                                |         |
 
-### Delete Record
+### Delete Record {#deleterecord}
 
 Delete an existing Salesforce Record
 
@@ -631,7 +630,7 @@ Delete an existing Salesforce Record
 | Record ID   | The ID of a Salesforce Record  |         |
 | Connection  |                                |         |
 
-### Delete Workflow Outbound Message
+### Delete Workflow Outbound Message {#deleteworkflowoutboundmessage}
 
 Delete a Workflow Outbound Message
 
@@ -641,7 +640,7 @@ Delete a Workflow Outbound Message
 | Full Name Identifier | Unique identifier for Metadata objects |         |
 | Connection           |                                        |         |
 
-### Delete Workflow Rule (Deprecated)
+### Delete Workflow Rule (Deprecated) {#deleteworkflowrule}
 
 Delete a Workflow Rule. Workflow Rules are being deprecated by Salesforce. Please migrate to using Flow based actions.
 
@@ -651,7 +650,7 @@ Delete a Workflow Rule. Workflow Rules are being deprecated by Salesforce. Pleas
 | Full Name Identifier | Unique identifier for Metadata objects |         |
 | Connection           |                                        |         |
 
-### Describe Customer SObject
+### Describe Customer SObject {#describecustomersobject}
 
 Metadata description API for Salesforce object.
 
@@ -660,7 +659,7 @@ Metadata description API for Salesforce object.
 | Version    | Salesforce API Version Number. | 63.0    |
 | Connection |                                |         |
 
-### Describe Object
+### Describe Object {#describeobject}
 
 Describe attributes of a Salesforce Record Type
 
@@ -670,7 +669,7 @@ Describe attributes of a Salesforce Record Type
 | Record Type | The type of Salesforce Record. |         |
 | Connection  |                                |         |
 
-### Describe Permissions
+### Describe Permissions {#describepermissions}
 
 Describe permissions of a Salesforce Record Type
 
@@ -680,7 +679,7 @@ Describe permissions of a Salesforce Record Type
 | Record Type | The type of Salesforce Record. |         |
 | Connection  |                                |         |
 
-### Find Record
+### Find Record {#findrecord}
 
 Find a single Salesforce Record
 
@@ -693,7 +692,7 @@ Find a single Salesforce Record
 | Field Value Types | For each item, provide the key and the type corresponding to the field Value you entered above. You can assign a value a type of Boolean, Number, or String. |         |
 | Connection        |                                                                                                                                                              |         |
 
-### Find Records
+### Find Records {#findrecords}
 
 Find and fetch Salesforce Records
 
@@ -711,7 +710,7 @@ Find and fetch Salesforce Records
 | Max Records To Fetch | If Fetch All is enabled, you can specify the maximum records to fetch, by default it will fetch up to 20,000 records.                                                                                                                                    | 20000   |
 | Connection           |                                                                                                                                                                                                                                                          |         |
 
-### Get Attachment
+### Get Attachment {#getattachment}
 
 Get a file attachment from an account, opportunity or contact
 
@@ -721,7 +720,7 @@ Get a file attachment from an account, opportunity or contact
 | Version    | Salesforce API Version Number.          | 63.0    |
 | File Id    | The id of the file you wish to retrieve |         |
 
-### Get Bulk Job Failed Record Results
+### Get Bulk Job Failed Record Results {#getjobfailedrecordresults}
 
 Retrieves a list of failed records for a completed insert, delete, update or upsert job.
 
@@ -731,7 +730,7 @@ Retrieves a list of failed records for a completed insert, delete, update or ups
 | Version     | Salesforce API Version Number.                                                   | 63.0    |
 | Bulk Job Id | The ID of the Bulk Job. This is the ID returned from the Create Bulk Job action. |         |
 
-### Get Bulk Job Info
+### Get Bulk Job Info {#getbulkjob}
 
 Retrieves detailed information about a job.
 
@@ -741,7 +740,7 @@ Retrieves detailed information about a job.
 | Version     | Salesforce API Version Number.                                                   | 63.0    |
 | Bulk Job Id | The ID of the Bulk Job. This is the ID returned from the Create Bulk Job action. |         |
 
-### Get Bulk Job Successful Record Results
+### Get Bulk Job Successful Record Results {#getjobsuccessfulrecordresults}
 
 Retrieves the successful record results for a job.
 
@@ -751,7 +750,7 @@ Retrieves the successful record results for a job.
 | Version     | Salesforce API Version Number.                                                   | 63.0    |
 | Bulk Job Id | The ID of the Bulk Job. This is the ID returned from the Create Bulk Job action. |         |
 
-### Get Current User
+### Get Current User {#getcurrentuser}
 
 Return information about the current session's user
 
@@ -760,7 +759,7 @@ Return information about the current session's user
 | Version    | Salesforce API Version Number. | 63.0    |
 | Connection |                                |         |
 
-### Get Customer
+### Get Customer {#getcustomer}
 
 Gets an existing customer record
 
@@ -770,7 +769,7 @@ Gets an existing customer record
 | Record ID  | The ID of a Salesforce Record  |         |
 | Connection |                                |         |
 
-### Get File
+### Get File {#getfile}
 
 Retrieves a file from Salesforce ContentVersion
 
@@ -780,7 +779,7 @@ Retrieves a file from Salesforce ContentVersion
 | Version            | Salesforce API Version Number.                       | 63.0    |
 | Connection         |                                                      |         |
 
-### Get Flow
+### Get Flow {#getflow}
 
 Get details of a specific Flow by name
 
@@ -790,7 +789,7 @@ Get details of a specific Flow by name
 | Flow Name  | The name for the Flow. Accepts both display names and API names. Display names are automatically converted to API format, while API names are used as is. |         |
 | Connection |                                                                                                                                                           |         |
 
-### Get Information About a Bulk Query Job
+### Get Information About a Bulk Query Job {#getqueryjobinformation}
 
 Gets information about one query job.
 
@@ -800,7 +799,7 @@ Gets information about one query job.
 | Version      | Salesforce API Version Number. | 63.0    |
 | Query Job Id | The ID of the query job        |         |
 
-### Get Information About All Query Jobs
+### Get Information About All Query Jobs {#getallqueryjobinformation}
 
 Gets information about all query jobs in the org.
 
@@ -813,7 +812,7 @@ Gets information about all query jobs in the org.
 | Concurrency Mode       | For future use. Gets information only about jobs matching the specified concurrency mode.                                                            | parallel |
 | Query Locator          | A string that identifies a specific set of query results. Providing a value for this parameter returns only that set of results.                     |          |
 
-### Get Record
+### Get Record {#getrecord}
 
 Get a single Salesforce Record by Id
 
@@ -824,7 +823,7 @@ Get a single Salesforce Record by Id
 | Record ID   | The ID of a Salesforce Record  |         |
 | Connection  |                                |         |
 
-### Get Results for a Bulk Query Job
+### Get Results for a Bulk Query Job {#getqueryjobresults}
 
 Gets the results for a query job. The job must be in a Job Complete state
 
@@ -836,7 +835,7 @@ Gets the results for a query job. The job must be in a Job Complete state
 | Locator      | A string that identifies a specific set of query results. Providing a value for this parameter returns only that set of results. |         |
 | Max Records  | The maximum number of records to retrieve per set of results for the query. The request is still subject to the size limits.     |         |
 
-### List Bulk Jobs
+### List Bulk Jobs {#listbulkjobs}
 
 Retrieves all jobs in the org.
 
@@ -848,7 +847,7 @@ Retrieves all jobs in the org.
 | Job Type               | Gets information only about jobs matching the specified job type.                                                                                    |         |
 | Locator                | A string that identifies a specific set of query results. Providing a value for this parameter returns only that set of results.                     |         |
 
-### List Composite Resources
+### List Composite Resources {#listcompositeresources}
 
 Gets a list of URIs for other composite resources.
 
@@ -857,7 +856,7 @@ Gets a list of URIs for other composite resources.
 | Connection |                                |         |
 | Version    | Salesforce API Version Number. | 63.0    |
 
-### List Contacts
+### List Contacts {#listcontacts}
 
 List all contacts records
 
@@ -874,7 +873,7 @@ List all contacts records
 | Max Records To Fetch | If Fetch All is enabled, you can specify the maximum records to fetch, by default it will fetch up to 20,000 records.                                                                                                                                    | 20000   |
 | Connection           |                                                                                                                                                                                                                                                          |         |
 
-### List Customers
+### List Customers {#listcustomers}
 
 List all customer records
 
@@ -891,7 +890,7 @@ List all customer records
 | Max Records To Fetch | If Fetch All is enabled, you can specify the maximum records to fetch, by default it will fetch up to 20,000 records.                                                                                                                                    | 20000   |
 | Connection           |                                                                                                                                                                                                                                                          |         |
 
-### List Flows
+### List Flows {#listflows}
 
 List all Flows in the Salesforce org
 
@@ -900,7 +899,7 @@ List all Flows in the Salesforce org
 | Version    | Salesforce API Version Number. | 63.0    |
 | Connection |                                |         |
 
-### List Leads
+### List Leads {#listleads}
 
 List all lead records
 
@@ -917,7 +916,7 @@ List all lead records
 | Max Records To Fetch | If Fetch All is enabled, you can specify the maximum records to fetch, by default it will fetch up to 20,000 records.                                                                                                                                    | 20000   |
 | Connection           |                                                                                                                                                                                                                                                          |         |
 
-### List Metadata
+### List Metadata {#listobjectmetadata}
 
 Get all metadata components.
 
@@ -927,7 +926,7 @@ Get all metadata components.
 | Metadata Type | The type of metadata to act upon. | CustomObject |
 | Version       | Salesforce API Version Number.    | 63.0         |
 
-### List Opportunities
+### List Opportunities {#listopportunities}
 
 List all opportunity records
 
@@ -944,7 +943,7 @@ List all opportunity records
 | Max Records To Fetch | If Fetch All is enabled, you can specify the maximum records to fetch, by default it will fetch up to 20,000 records.                                                                                                                                    | 20000   |
 | Connection           |                                                                                                                                                                                                                                                          |         |
 
-### List Outbound Messages
+### List Outbound Messages {#listworkflowoutboundmessages}
 
 Retrieve all Outbound Messages.
 
@@ -953,7 +952,7 @@ Retrieve all Outbound Messages.
 | Version    | Salesforce API Version Number. | 63.0    |
 | Connection |                                |         |
 
-### List Profiles
+### List Profiles {#listprofiles}
 
 List all profile records
 
@@ -970,7 +969,7 @@ List all profile records
 | Max Records To Fetch | If Fetch All is enabled, you can specify the maximum records to fetch, by default it will fetch up to 20,000 records.                                                                                                                                    | 20000   |
 | Connection           |                                                                                                                                                                                                                                                          |         |
 
-### List Users
+### List Users {#listusers}
 
 List all user records
 
@@ -987,7 +986,7 @@ List all user records
 | Max Records To Fetch | If Fetch All is enabled, you can specify the maximum records to fetch, by default it will fetch up to 20,000 records.                                                                                                                                    | 20000   |
 | Connection           |                                                                                                                                                                                                                                                          |         |
 
-### List Workflow Rules (Deprecated)
+### List Workflow Rules (Deprecated) {#listworkflowrules}
 
 List all Workflow Rules. Workflow Rules are being deprecated by Salesforce. Please migrate to using Flow based actions
 
@@ -996,7 +995,7 @@ List all Workflow Rules. Workflow Rules are being deprecated by Salesforce. Plea
 | Version    | Salesforce API Version Number. | 63.0    |
 | Connection |                                |         |
 
-### Raw Request
+### Raw Request {#rawrequest}
 
 Send raw HTTP request to Salesforce
 
@@ -1020,7 +1019,7 @@ Send raw HTTP request to Salesforce
 | Max Retry Count         | The maximum number of retries to attempt. Specify 0 for no retries.                                                                                                                                                                                                                                                        | 0       |
 | Use Exponential Backoff | Specifies whether to use a pre-defined exponential backoff strategy for retries. When enabled, 'Retry Delay (ms)' is ignored.                                                                                                                                                                                              | false   |
 
-### Read Metadata of Object
+### Read Metadata of Object {#getobjectmetadatabyname}
 
 Get the metadata of an object by full name
 
@@ -1031,7 +1030,7 @@ Get the metadata of an object by full name
 | Version          | Salesforce API Version Number.    | 63.0         |
 | Object Full Name |                                   |              |
 
-### Remove User Permission Set
+### Remove User Permission Set {#removeuserpermissionset}
 
 Removes a Permission Set from the specified User
 
@@ -1042,7 +1041,7 @@ Removes a Permission Set from the specified User
 | Permission Set | Provide the name of the Permission Set |         |
 | Connection     |                                        |         |
 
-### Salesforce Query
+### Salesforce Query {#query}
 
 Run an SOQL Query Against SalesForce
 
@@ -1052,7 +1051,7 @@ Run an SOQL Query Against SalesForce
 | SOQL Query | A SalesForce Object Query Language (SOQL) query |         |
 | Connection |                                                 |         |
 
-### Send Transactional Email
+### Send Transactional Email {#sendtransactionalemail}
 
 Sends a message to a single recipient via Salesforce
 
@@ -1066,7 +1065,7 @@ Sends a message to a single recipient via Salesforce
 | Connection            |                                            |         |
 | Version               | Salesforce API Version Number.             | 63.0    |
 
-### Subscribe to Record Change (Deprecated)
+### Subscribe to Record Change (Deprecated) {#subscribetorecordchange}
 
 Create a Workflow Rule to subscribe to Record Changes in Salesforce. Workflow Rules are being deprecated by Salesforce. Please migrate to using Flow based actions
 
@@ -1085,7 +1084,7 @@ Create a Workflow Rule to subscribe to Record Changes in Salesforce. Workflow Ru
 | Dynamic Fields         | Dynamic Fields, provided by value collection config variable, to include in the Outbound Message                                                                                  |              |
 | Connection             |                                                                                                                                                                                   |              |
 
-### Subscribe to Record Changes
+### Subscribe to Record Changes {#subscribetorecordchanges}
 
 Subscribe to Record Changes in Salesforce using an outbound message action.
 
@@ -1102,7 +1101,7 @@ Subscribe to Record Changes in Salesforce using an outbound message action.
 | Filter Formula      | Optional formula to filter which records trigger the flow.                                                                                                       |                 |
 | Connection          |                                                                                                                                                                  |                 |
 
-### Update Account
+### Update Account {#updateaccount}
 
 Update an existing account record
 
@@ -1132,7 +1131,7 @@ Update an existing account record
 | Postal Code            | The zip code of the object's address                                                                          |         |
 | Connection             |                                                                                                               |         |
 
-### Update Contact
+### Update Contact {#updatecontact}
 
 Update an existing contact record
 
@@ -1166,7 +1165,7 @@ Update an existing contact record
 | Postal Code            | The zip code of the object's address                                                                          |         |
 | Connection             |                                                                                                               |         |
 
-### Update Customer
+### Update Customer {#updatecustomer}
 
 Update an existing customer record
 
@@ -1183,7 +1182,7 @@ Update an existing customer record
 | Total Lifetime Value | The total revenue amount gained from this customer.                                                                                                                        |         |
 | Connection           |                                                                                                                                                                            |         |
 
-### Update Flow
+### Update Flow {#updateflow}
 
 Update an existing Flow in Salesforce by name
 
@@ -1196,7 +1195,7 @@ Update an existing Flow in Salesforce by name
 | Flow Metadata | Additional Flow metadata in JSON format. This will be merged with other inputs.                                                                           |         |
 | Connection    |                                                                                                                                                           |         |
 
-### Update Lead
+### Update Lead {#updatelead}
 
 Update a Salesforce Lead Record
 
@@ -1225,7 +1224,7 @@ Update a Salesforce Lead Record
 | Annual Revenue      | The estimated annual revenue of the object                                                                          |         |
 | Connection          |                                                                                                                     |         |
 
-### Update Metadata
+### Update Metadata {#updatemetadata}
 
 Update one or more metadata components.
 
@@ -1236,7 +1235,7 @@ Update one or more metadata components.
 | Metadata Type | The type of metadata to act upon.                                                   | CustomField |
 | Metadata      | Check https://jsforce.github.io/document/#update-metadata for related documentation |             |
 
-### Update Opportunity
+### Update Opportunity {#updateopportunity}
 
 Update an existing opportunity record
 
@@ -1258,7 +1257,7 @@ Update an existing opportunity record
 | Name             | The name of the object                                                                                        |         |
 | Connection       |                                                                                                               |         |
 
-### Update Profile
+### Update Profile {#updateprofile}
 
 Update a Salesforce Profile
 
@@ -1271,7 +1270,7 @@ Update a Salesforce Profile
 | Permissions | Key/value object with permission name keys and boolean value indicating if a permission is granted or not. Use 'Describe Permissions' to retrieve the permissions of a Record Type. |         |
 | Connection  |                                                                                                                                                                                     |         |
 
-### Update Record
+### Update Record {#updaterecord}
 
 Updates an existing Salesforce Record
 
@@ -1284,7 +1283,7 @@ Updates an existing Salesforce Record
 | Field Values   | Name of a record's fields and their corresponding values                                                      |         |
 | Connection     |                                                                                                               |         |
 
-### Update User
+### Update User {#updateuser}
 
 Update a Salesforce User
 
@@ -1296,7 +1295,7 @@ Update a Salesforce User
 | Field Values   | Name of a record's fields and their corresponding values                                                      |         |
 | Connection     |                                                                                                               |         |
 
-### Upload Bulk Job Data
+### Upload Bulk Job Data {#uploadjobdata}
 
 Uploads data for a job using CSV data you provide.
 
@@ -1307,7 +1306,7 @@ Uploads data for a job using CSV data you provide.
 | Bulk Job Id | The ID of the Bulk Job. This is the ID returned from the Create Bulk Job action. |         |
 | File        | The file to be uploaded                                                          |         |
 
-### Upload File
+### Upload File {#uploadfile}
 
 Uploads a file to Salesforce ContentVersion
 
@@ -1318,7 +1317,7 @@ Uploads a file to Salesforce ContentVersion
 | File           | The file to be uploaded                                                                                                                                                                             |         |
 | Path On Client | The complete path of the document. One of the fields that determines the FileType. Specify a complete path including the path extension in order for the document to be visible in the Preview tab. |         |
 
-### Upsert Record
+### Upsert Record {#upsertrecord}
 
 Updates a Salesforce Record if it exists, otherwise creates a new Salesforce Record
 
@@ -1330,7 +1329,7 @@ Updates a Salesforce Record if it exists, otherwise creates a new Salesforce Rec
 | Records                | The records to be upserted                                  |         |
 | Connection             |                                                             |         |
 
-### Validate Connection
+### Validate Connection {#validateconnection}
 
 Returns a boolean value that specifies whether the provided Connection is valid
 

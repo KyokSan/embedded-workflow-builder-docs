@@ -9,7 +9,7 @@ Rippling makes it easy to manage your company&#x27;s Payroll, Benefits, HR, and 
 
 ## Connections
 
-### Bearer API Key
+### Bearer API Key {#bearerapikey}
 
 If you are using Rippling's API to access endpoints on behalf of your own company, please use your API key
 
@@ -17,7 +17,7 @@ If you are using Rippling's API to access endpoints on behalf of your own compan
 | ------------- | -------- | ------- |
 | Authorization |          |         |
 
-### OAuth 2.0
+### OAuth 2.0 {#authorizationcode}
 
 To use OAuth 2.0 with Rippling you will need to coordinate with them in accordance with their [Partner Requirements](https://developer.rippling.com/documentation/distribute/getting-started/requirements). Additionally, you may also refer to the [Installation OAuth Guide](https://developer.rippling.com/documentation/distribute/guides/installation).
 
@@ -44,7 +44,7 @@ Read about how OAuth 2.0 works [here](../oauth2.md).
 
 ## Actions
 
-### Delete Groups Group Id
+### Delete Groups Group Id {#deletegroupsgroupid}
 
 DELETE Group
 
@@ -53,7 +53,7 @@ DELETE Group
 | Connection |                                                 |         |
 | Group Id   | Unique identifier for the group within Rippling |         |
 
-### Get Companies
+### Get Companies {#getcompanies}
 
 GET Current Company
 
@@ -61,7 +61,7 @@ GET Current Company
 | ---------- | -------- | ------- |
 | Connection |          |         |
 
-### Get Company Activity
+### Get Company Activity {#getcompanyactivity}
 
 GET Company Activity
 
@@ -73,7 +73,7 @@ GET Company Activity
 | Next       | Specifies the pagination cursor to the next page                        |         |
 | Limit      | Specifies the number of results to page (maximum: 1000) (default: 1000) |         |
 
-### Get Custom Fields
+### Get Custom Fields {#getcustomfields}
 
 GET Custom Fields
 
@@ -83,7 +83,7 @@ GET Custom Fields
 | Limit      | Sets a limit on the returned values |         |
 | Offset     | Offsets the returned values         |         |
 
-### Get Departments
+### Get Departments {#getdepartments}
 
 GET Departments
 
@@ -93,7 +93,7 @@ GET Departments
 | Limit      | Sets a limit on the returned values |         |
 | Offset     | Offsets the returned values         |         |
 
-### Get Employees
+### Get Employees {#getemployees}
 
 GET Employees
 
@@ -103,7 +103,7 @@ GET Employees
 | Limit      | Sets a limit on the returned values |         |
 | Offset     | Offsets the returned values         |         |
 
-### Get Employees Employee Id
+### Get Employees Employee Id {#getemployeesemployeeid}
 
 GET Employee
 
@@ -112,7 +112,7 @@ GET Employee
 | Connection  |                                                    |         |
 | Employee Id | Unique identifier for the employee within Rippling |         |
 
-### Get Employees Include Terminated
+### Get Employees Include Terminated {#getemployeesincludeterminated}
 
 GET Employees (Including Terminated)
 
@@ -123,7 +123,7 @@ GET Employees (Including Terminated)
 | Offset     | Offsets the returned values                                                                                                       |         |
 | EIN        | Employer identification number, also known as the Federal Emplower Identification Number or the Federal Tax Identification Number |         |
 
-### Get Groups
+### Get Groups {#getgroups}
 
 GET Groups
 
@@ -131,7 +131,7 @@ GET Groups
 | ---------- | -------- | ------- |
 | Connection |          |         |
 
-### Get Leave Requests
+### Get Leave Requests {#getleaverequests}
 
 GET Leave Requests
 
@@ -149,7 +149,7 @@ GET Leave Requests
 | From         | Filter to capture whether the leave request overlaps with a date range |         |
 | To           | Filter to capture whether the leave request overlaps with a date range |         |
 
-### Get Levels
+### Get Levels {#getlevels}
 
 GET Levels
 
@@ -159,7 +159,7 @@ GET Levels
 | Limit      | Sets a limit on the returned values |         |
 | Offset     | Offsets the returned values         |         |
 
-### Get Me
+### Get Me {#getme}
 
 GET Current User
 
@@ -167,7 +167,7 @@ GET Current User
 | ---------- | -------- | ------- |
 | Connection |          |         |
 
-### Get Saml Idp Metadata
+### Get Saml Idp Metadata {#getsamlidpmetadata}
 
 GET SAML Metadata
 
@@ -175,7 +175,7 @@ GET SAML Metadata
 | ---------- | -------- | ------- |
 | Connection |          |         |
 
-### Get Teams
+### Get Teams {#getteams}
 
 GET Teams
 
@@ -185,7 +185,7 @@ GET Teams
 | Limit      | Sets a limit on the returned values |         |
 | Offset     | Offsets the returned values         |         |
 
-### Get Work Locations
+### Get Work Locations {#getworklocations}
 
 GET Work Locations
 
@@ -195,7 +195,7 @@ GET Work Locations
 | Limit      | Sets a limit on the returned values |         |
 | Offset     | Offsets the returned values         |         |
 
-### Patch Groups Group Id
+### Patch Groups Group Id {#patchgroupsgroupid}
 
 PATCH Group
 
@@ -208,7 +208,7 @@ PATCH Group
 | Users      | The array of users within the Group             |         |
 | Version    | The version identifier of the Group             |         |
 
-### Post Ats Candidates Push Candidate
+### Post Ats Candidates Push Candidate {#postatscandidatespushcandidate}
 
 POST New Candidate
 
@@ -230,7 +230,7 @@ POST New Candidate
 | Employment Type | The ENUM type of employment the user will have within Rippling                                          |         |
 | Attachments     |                                                                                                         |         |
 
-### Post Groups
+### Post Groups {#postgroups}
 
 POST Groups
 
@@ -241,7 +241,7 @@ POST Groups
 | Spoke Id   | The unique ID for the group, this can be the unique identifier for the group entity object within your application |         |
 | Users      | An array of Rippling IDs that will be in the group                                                                 |         |
 
-### Post Mark App Installed
+### Post Mark App Installed {#postmarkappinstalled}
 
 Mark App Installed
 
@@ -249,7 +249,7 @@ Mark App Installed
 | ---------- | -------- | ------- |
 | Connection |          |         |
 
-### Process Leave Requests
+### Process Leave Requests {#processleaverequests}
 
 POST Process Leave Request
 
@@ -259,7 +259,7 @@ POST Process Leave Request
 | Id         | Unique identifier of the leave request being processed |         |
 | Action     | The action to be taken on the leave request            |         |
 
-### Put Groups Group Id
+### Put Groups Group Id {#putgroupsgroupid}
 
 PUT Group
 
@@ -272,7 +272,7 @@ PUT Group
 | Users      | The array of users within the Group             |         |
 | Version    | The version identifier of the Group             |         |
 
-### Raw Request
+### Raw Request {#rawrequest}
 
 Send raw HTTP request to Rippling
 

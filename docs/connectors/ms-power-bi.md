@@ -9,7 +9,7 @@ Interact with and modify Power BI datasets
 
 ## Connections
 
-### OAuth 2.0
+### OAuth 2.0 {#oauth}
 
 OAuth 2.0 Connectivity for Microsoft Power BI
 
@@ -79,7 +79,7 @@ Read about how OAuth 2.0 works [here](../oauth2.md).
 
 ## Actions
 
-### Create Dataset
+### Create Dataset {#createdataset}
 
 Creates a new dataset on 'My Workspace'
 
@@ -90,7 +90,7 @@ Creates a new dataset on 'My Workspace'
 | Columns      | An array of column definitions that define the table schema. Each column must have a name and dataType. Supported data types: Int64, Double, Boolean, DateTime, String, Decimal. |         |
 | Table Name   | The name of the table within the dataset.                                                                                                                                        |         |
 
-### Create Rows
+### Create Rows {#createrow}
 
 Adds new data rows to the specified table within the specified dataset from 'My Workspace'
 
@@ -101,7 +101,7 @@ Adds new data rows to the specified table within the specified dataset from 'My 
 | Table Name | The name of the table within the dataset.                                                                                                                                                          |         |
 | Rows       | An array of row objects to insert into the table. Each object should contain key-value pairs matching the table's column names.                                                                    |         |
 
-### Delete Rows
+### Delete Rows {#deleterows}
 
 Deletes all rows from the specified table within the specified dataset from 'My Workspace'
 
@@ -111,7 +111,7 @@ Deletes all rows from the specified table within the specified dataset from 'My 
 | Dataset ID | The unique identifier of the dataset. A dataset is a collection of tables that can be used to generate reports and visuals in Power BI. Datasets must be 'Push' datasets to be accessible via API. |         |
 | Table Name | The name of the table within the dataset.                                                                                                                                                          |         |
 
-### List Datasets
+### List Datasets {#listdatasets}
 
 Returns a list of datasets from 'My Workspace'
 
@@ -121,7 +121,7 @@ Returns a list of datasets from 'My Workspace'
 | Top         | The maximum number of results to return. Must be a value between 1 and 1000.                  |         |
 | Page Offset | The number of entries to skip for pagination. Used to retrieve results beyond the first page. |         |
 
-### List Groups
+### List Groups {#listgroups}
 
 Returns a list of workspaces the user has access to
 
@@ -131,7 +131,7 @@ Returns a list of workspaces the user has access to
 | Page Offset | The number of entries to skip for pagination. Used to retrieve results beyond the first page. |         |
 | Top         | The maximum number of results to return. Must be a value between 1 and 1000.                  |         |
 
-### List Reports
+### List Reports {#listreports}
 
 Returns a list of reports from 'My Workspace'
 
@@ -141,7 +141,7 @@ Returns a list of reports from 'My Workspace'
 | Top         | The maximum number of results to return. Must be a value between 1 and 1000.                  |         |
 | Page Offset | The number of entries to skip for pagination. Used to retrieve results beyond the first page. |         |
 
-### List Tables
+### List Tables {#listtables}
 
 Returns a list of tables tables within the specified dataset from 'My Workspace'
 
@@ -152,7 +152,7 @@ Returns a list of tables tables within the specified dataset from 'My Workspace'
 | Top         | The maximum number of results to return. Must be a value between 1 and 1000.                                                                                                                       |         |
 | Page Offset | The number of entries to skip for pagination. Used to retrieve results beyond the first page.                                                                                                      |         |
 
-### Raw Request
+### Raw Request {#rawrequest}
 
 Send raw HTTP request to Microsoft Power BI
 
@@ -175,7 +175,7 @@ Send raw HTTP request to Microsoft Power BI
 | Max Retry Count         | The maximum number of retries to attempt. Specify 0 for no retries.                                                                                                                                                      | 0        |
 | Use Exponential Backoff | Specifies whether to use a pre-defined exponential backoff strategy for retries. When enabled, 'Retry Delay (ms)' is ignored.                                                                                            | false    |
 
-### Update Table
+### Update Table {#updatetable}
 
 Updates the metadata and schema for the specified table within the specified dataset from 'My Workspace'
 

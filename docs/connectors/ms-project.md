@@ -9,7 +9,7 @@ Make queries to reporting data from a Project Web App instance
 
 ## Connections
 
-### OAuth 2.0
+### OAuth 2.0 {#oauth}
 
 OAuth 2.0 Connectivity for Microsoft Project
 
@@ -56,7 +56,7 @@ Read about how OAuth 2.0 works [here](../oauth2.md).
 
 ## Actions
 
-### Check In Draft Project
+### Check In Draft Project {#checkindraftproject}
 
 Mark the status of an existing project to 'Checked In'
 
@@ -65,7 +65,7 @@ Mark the status of an existing project to 'Checked In'
 | Connection   |                                     |         |
 | Project GUID | Provide a string value for the GUID |         |
 
-### Checkout Project
+### Checkout Project {#checkoutproject}
 
 Mark an existing project's status as 'Checked Out'
 
@@ -74,7 +74,7 @@ Mark an existing project's status as 'Checked Out'
 | Connection   |                                     |         |
 | Project GUID | Provide a string value for the GUID |         |
 
-### Create Draft Assignment
+### Create Draft Assignment {#createdraftassignment}
 
 Create a new assignment in a given draft product
 
@@ -88,7 +88,7 @@ Create a new assignment in a given draft product
 | Finish Date           | Provide a valid date time value for the finish date of the assignment |         |
 | Notes                 | Provide a string value for notes.                                     |         |
 
-### Create Draft Project Resources
+### Create Draft Project Resources {#createdraftprojectresources}
 
 Create a new Resource in an existing draft project
 
@@ -101,7 +101,7 @@ Create a new Resource in an existing draft project
 | Account      | Provide the unique identifier of the account.        |         |
 | Name         | Provide a string value for the name of the resource. |         |
 
-### Create Draft Task
+### Create Draft Task {#createdrafttask}
 
 Create a new task in a draft project
 
@@ -115,7 +115,7 @@ Create a new task in a draft project
 | Parent Id       | Provide the unique identifier of the parent object.             |         |
 | Finish Date     | Provide a valid datetime value for the finish date of the task. |         |
 
-### Create Project
+### Create Project {#createproject}
 
 Create a new project
 
@@ -126,7 +126,7 @@ Create a new project
 | Project Description | Provide a string value for the description of the project.                                           |         |
 | Project Start Date  | Provide a valid datetime value for the start date of the project.                                    |         |
 
-### Delete Draft Task
+### Delete Draft Task {#deletedrafttask}
 
 Delete an existing task from a draft project
 
@@ -136,7 +136,7 @@ Delete an existing task from a draft project
 | Project GUID | Provide a string value for the GUID       |         |
 | Task Id      | Provide a unique identifier for the task. |         |
 
-### Delete Project
+### Delete Project {#deleteproject}
 
 Delete the contents and metadata of an existing project by Id
 
@@ -145,7 +145,7 @@ Delete the contents and metadata of an existing project by Id
 | Connection   |                                     |         |
 | Project GUID | Provide a string value for the GUID |         |
 
-### Get Assignment
+### Get Assignment {#getassignments}
 
 Get the information and metadata of an assignment by Id
 
@@ -154,7 +154,7 @@ Get the information and metadata of an assignment by Id
 | Connection   |                                     |         |
 | Project GUID | Provide a string value for the GUID |         |
 
-### Get Draft Task
+### Get Draft Task {#getdrafttask}
 
 Get the information or metadata of a task inside a draft project
 
@@ -164,7 +164,7 @@ Get the information or metadata of a task inside a draft project
 | Project GUID | Provide a string value for the GUID       |         |
 | Task Id      | Provide a unique identifier for the task. |         |
 
-### Get Project
+### Get Project {#getproject}
 
 Get the information and metadata of a project by Id
 
@@ -173,7 +173,7 @@ Get the information and metadata of a project by Id
 | Connection   |                                     |         |
 | Project GUID | Provide a string value for the GUID |         |
 
-### Get Project Resource
+### Get Project Resource {#getprojectresources}
 
 Get the information and metadata of an existing Project Resource by Id
 
@@ -183,7 +183,7 @@ Get the information and metadata of an existing Project Resource by Id
 | Project GUID | Provide a string value for the GUID            |         |
 | Resource Id  | Provide the unique identifier for the resource |         |
 
-### Get Task
+### Get Task {#gettask}
 
 Get the information and metadata of a task by Id
 
@@ -193,7 +193,7 @@ Get the information and metadata of a task by Id
 | Project GUID | Provide a string value for the GUID       |         |
 | Task Id      | Provide a unique identifier for the task. |         |
 
-### List Assignments
+### List Assignments {#listassignments}
 
 List all the assignments in a given project
 
@@ -204,7 +204,7 @@ List all the assignments in a given project
 | Page Size    | Provide an integer value for the maximum results returned per page when paginating results. |         |
 | Page Number  | Provide an integer value for which page to return when paginating results.                  |         |
 
-### List Draft Assignments
+### List Draft Assignments {#listdraftassignments}
 
 List all the assignments in a given draft project
 
@@ -213,7 +213,7 @@ List all the assignments in a given draft project
 | Connection   |                                     |         |
 | Project GUID | Provide a string value for the GUID |         |
 
-### list Draft Project Resources
+### list Draft Project Resources {#listdraftprojectresources}
 
 List all resources in a draft project
 
@@ -224,7 +224,7 @@ List all resources in a draft project
 | Page Size    | Provide an integer value for the maximum results returned per page when paginating results. |         |
 | Page Number  | Provide an integer value for which page to return when paginating results.                  |         |
 
-### List Draft Tasks
+### List Draft Tasks {#listdrafttasks}
 
 List all tasks in a draft project
 
@@ -235,7 +235,7 @@ List all tasks in a draft project
 | Page Size    | Provide an integer value for the maximum results returned per page when paginating results. |         |
 | Page Number  | Provide an integer value for which page to return when paginating results.                  |         |
 
-### list Project Resources
+### list Project Resources {#listprojectresources}
 
 List all resources in an existing project
 
@@ -244,7 +244,7 @@ List all resources in an existing project
 | Connection   |                                     |         |
 | Project GUID | Provide a string value for the GUID |         |
 
-### List Projects
+### List Projects {#listprojects}
 
 List all the projects in a given sharepoint site
 
@@ -255,7 +255,7 @@ List all the projects in a given sharepoint site
 | Page Size    | Provide an integer value for the maximum results returned per page when paginating results. |         |
 | Page Number  | Provide an integer value for which page to return when paginating results.                  |         |
 
-### List Tasks
+### List Tasks {#listtasks}
 
 List all the tasks in a given project
 
@@ -266,7 +266,7 @@ List all the tasks in a given project
 | Page Size    | Provide an integer value for the maximum results returned per page when paginating results. |         |
 | Page Number  | Provide an integer value for which page to return when paginating results.                  |         |
 
-### Publish Draft Project
+### Publish Draft Project {#publishdraftproject}
 
 Publish the draft of an existing project
 
@@ -275,7 +275,7 @@ Publish the draft of an existing project
 | Connection   |                                     |         |
 | Project GUID | Provide a string value for the GUID |         |
 
-### Raw Request
+### Raw Request {#rawrequest}
 
 Send raw HTTP request to Microsoft Project
 
@@ -298,7 +298,7 @@ Send raw HTTP request to Microsoft Project
 | Max Retry Count         | The maximum number of retries to attempt. Specify 0 for no retries.                                                                                                                                                                                                                                                                                                                  | 0       |
 | Use Exponential Backoff | Specifies whether to use a pre-defined exponential backoff strategy for retries. When enabled, 'Retry Delay (ms)' is ignored.                                                                                                                                                                                                                                                        | false   |
 
-### Remove Project
+### Remove Project {#removeproject}
 
 Remove the contents and metadata of an existing project by Id
 
@@ -307,7 +307,7 @@ Remove the contents and metadata of an existing project by Id
 | Connection   |                                     |         |
 | Project GUID | Provide a string value for the GUID |         |
 
-### Submit Product To Workflow
+### Submit Product To Workflow {#submitproject}
 
 Submit an existing project to a given workflow
 
@@ -316,7 +316,7 @@ Submit an existing project to a given workflow
 | Connection   |                                     |         |
 | Project GUID | Provide a string value for the GUID |         |
 
-### Update Draft
+### Update Draft {#updatedraft}
 
 Update the draft of an existing project
 
@@ -325,7 +325,7 @@ Update the draft of an existing project
 | Connection   |                                     |         |
 | Project GUID | Provide a string value for the GUID |         |
 
-### Verify Draft
+### Verify Draft {#verifydraft}
 
 Verify the draft of an existing project
 

@@ -9,7 +9,7 @@ Manage files and directories on an FTP server
 
 ## Connections
 
-### Username, password and endpoint
+### Username, password and endpoint {#basic}
 
 Basic auth username and password and endpoint
 
@@ -36,7 +36,7 @@ If your component fails to connect, verify the hostname, port and security infor
 
 ## Actions
 
-### Delete File
+### Delete File {#deletefile}
 
 Delete a file from a FTP server
 
@@ -46,7 +46,7 @@ Delete a file from a FTP server
 | Verbose Logging | Enables verbose logging for debugging purposes. | false   |
 | Path            | Path of file to delete                          |         |
 
-### List Directory
+### List Directory {#listdirectory}
 
 List the contents of a directory
 
@@ -56,7 +56,7 @@ List the contents of a directory
 | Verbose Logging | Enables verbose logging for debugging purposes. | false   |
 | Path            | Path of directory on FTP server to list         |         |
 
-### Move File
+### Move File {#movefile}
 
 Move a file on an FTP server
 
@@ -67,7 +67,7 @@ Move a file on an FTP server
 | Source Path      | Path of file to move                            |         |
 | Destination Path | Path of file to move                            |         |
 
-### Read File
+### Read File {#readfile}
 
 Read a file from FTP
 
@@ -77,7 +77,7 @@ Read a file from FTP
 | Verbose Logging | Enables verbose logging for debugging purposes. | false   |
 | Path            | Path of file on FTP server to read data from    |         |
 
-### Write File
+### Write File {#writefile}
 
 Write a file to FTP
 

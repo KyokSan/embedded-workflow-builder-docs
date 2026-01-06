@@ -9,7 +9,7 @@ SAP Business One is an integrated enterprise resource planning (ERP) solution de
 
 ## Connections
 
-### SAP Business One Authentication
+### SAP Business One Authentication {#sap-business-one-auth}
 
 Authentication for SAP Business One
 
@@ -31,7 +31,7 @@ To start a Business One API session:
 
 ## Actions
 
-### Close Invoice
+### Close Invoice {#closeinvoice}
 
 Invoke the method Close.
 
@@ -41,7 +41,7 @@ Invoke the method Close.
 | Connection    |                                                      |         |
 | Debug Request | Enabling this flag will log out the current request. | false   |
 
-### Create Business Partner
+### Create Business Partner {#createbusinesspartner}
 
 Create an instance of Business Partners
 
@@ -54,7 +54,7 @@ Create an instance of Business Partners
 | Connection    |                                                      |         |
 | Debug Request | Enabling this flag will log out the current request. | false   |
 
-### Create Invoice
+### Create Invoice {#createinvoice}
 
 Create an instance of Invoices.
 
@@ -66,7 +66,7 @@ Create an instance of Invoices.
 | Connection    |                                                      |         |
 | Debug Request | Enabling this flag will log out the current request. | false   |
 
-### Create Item
+### Create Item {#createitem}
 
 Retrieve all or some selected properties from an instance of Items with the given id.
 
@@ -79,7 +79,7 @@ Retrieve all or some selected properties from an instance of Items with the give
 | Connection    |                                                      |         |
 | Debug Request | Enabling this flag will log out the current request. | false   |
 
-### Create Order
+### Create Order {#createorder}
 
 Create an instance of Orders.
 
@@ -92,7 +92,7 @@ Create an instance of Orders.
 | Connection    |                                                      |         |
 | Debug Request | Enabling this flag will log out the current request. | false   |
 
-### Create Price List
+### Create Price List {#createpricelist}
 
 Create an instance of Price Lists
 
@@ -103,7 +103,7 @@ Create an instance of Price Lists
 | Connection      |                                                      |         |
 | Debug Request   | Enabling this flag will log out the current request. | false   |
 
-### Create Purchase Order
+### Create Purchase Order {#createpurchaseorder}
 
 Create an instance of Purchase Orders.
 
@@ -115,7 +115,7 @@ Create an instance of Purchase Orders.
 | Connection     |                                                      |         |
 | Debug Request  | Enabling this flag will log out the current request. | false   |
 
-### Create Record
+### Create Record {#createrecord}
 
 Create a new record in SAP Business One.
 
@@ -126,7 +126,7 @@ Create a new record in SAP Business One.
 | Connection    |                                                      |         |
 | Debug Request | Enabling this flag will log out the current request. | false   |
 
-### Create Warehouse
+### Create Warehouse {#createwarehouse}
 
 Create an instance of Warehouses.
 
@@ -139,7 +139,7 @@ Create an instance of Warehouses.
 | Connection            |                                                      |         |
 | Debug Request         | Enabling this flag will log out the current request. | false   |
 
-### Delete Business Partner
+### Delete Business Partner {#deletebusinesspartner}
 
 Delete an instance of BusinessPartners with the specified id.
 
@@ -149,7 +149,7 @@ Delete an instance of BusinessPartners with the specified id.
 | Connection    |                                                      |         |
 | Debug Request | Enabling this flag will log out the current request. | false   |
 
-### Delete Item
+### Delete Item {#deleteitem}
 
 Delete an instance of Items with the specified id.
 
@@ -159,7 +159,7 @@ Delete an instance of Items with the specified id.
 | Connection    |                                                      |         |
 | Debug Request | Enabling this flag will log out the current request. | false   |
 
-### Delete Price List
+### Delete Price List {#deletepricelist}
 
 Delete an instance of Items with the specified id.
 
@@ -169,7 +169,7 @@ Delete an instance of Items with the specified id.
 | Connection        |                                                      |         |
 | Debug Request     | Enabling this flag will log out the current request. | false   |
 
-### Delete Record
+### Delete Record {#deleterecord}
 
 Delete an existing record in SAP Business One.
 
@@ -180,7 +180,7 @@ Delete an existing record in SAP Business One.
 | Connection    |                                                      |         |
 | Debug Request | Enabling this flag will log out the current request. | false   |
 
-### Delete Warehouse
+### Delete Warehouse {#deletewarehouse}
 
 Delete an instance of Warehouses with the specified id.
 
@@ -190,7 +190,7 @@ Delete an instance of Warehouses with the specified id.
 | Connection     |                                                      |         |
 | Debug Request  | Enabling this flag will log out the current request. | false   |
 
-### Get Business Partner
+### Get Business Partner {#getbusinesspartner}
 
 Retrieve all or some selected properties from an instance of BusinessPartners with the given id.
 
@@ -201,7 +201,7 @@ Retrieve all or some selected properties from an instance of BusinessPartners wi
 | Connection    |                                                                                                                                         |         |
 | Debug Request | Enabling this flag will log out the current request.                                                                                    | false   |
 
-### Get Invoice
+### Get Invoice {#getinvoice}
 
 Retrieve all or some selected properties from an instance of Warehouses with the given id.
 
@@ -212,7 +212,7 @@ Retrieve all or some selected properties from an instance of Warehouses with the
 | Connection    |                                                                                                                                         |         |
 | Debug Request | Enabling this flag will log out the current request.                                                                                    | false   |
 
-### Get Item
+### Get Item {#getitem}
 
 Retrieve all or some selected properties from an instance of Items with the given id.
 
@@ -223,7 +223,7 @@ Retrieve all or some selected properties from an instance of Items with the give
 | Connection    |                                                                                                                                         |         |
 | Debug Request | Enabling this flag will log out the current request.                                                                                    | false   |
 
-### Get Order
+### Get Order {#getorder}
 
 Retrieve all or some selected properties from an instance of Orders with the given id.
 
@@ -234,7 +234,7 @@ Retrieve all or some selected properties from an instance of Orders with the giv
 | Connection    |                                                                                                                                         |         |
 | Debug Request | Enabling this flag will log out the current request.                                                                                    | false   |
 
-### Get Price List
+### Get Price List {#getpricelist}
 
 Retrieve all or some selected properties from an instance of PriceLists with the given id.
 
@@ -245,7 +245,7 @@ Retrieve all or some selected properties from an instance of PriceLists with the
 | Connection        |                                                                                                                                         |         |
 | Debug Request     | Enabling this flag will log out the current request.                                                                                    | false   |
 
-### Get Purchase Order
+### Get Purchase Order {#getpurchaseorder}
 
 Retrieve all or some selected properties from an instance of Purchase Orders with the given id.
 
@@ -256,7 +256,7 @@ Retrieve all or some selected properties from an instance of Purchase Orders wit
 | Connection                    |                                                                                                                                         |         |
 | Debug Request                 | Enabling this flag will log out the current request.                                                                                    | false   |
 
-### Get Record
+### Get Record {#getrecord}
 
 Retrieve a single record from SAP Business One.
 
@@ -268,7 +268,7 @@ Retrieve a single record from SAP Business One.
 | Connection    |                                                                                                                                         |         |
 | Debug Request | Enabling this flag will log out the current request.                                                                                    | false   |
 
-### Get Warehouse
+### Get Warehouse {#getwarehouse}
 
 Retrieve all or some selected properties from an instance of Warehouses with the given id.
 
@@ -279,7 +279,7 @@ Retrieve all or some selected properties from an instance of Warehouses with the
 | Connection     |                                                                                                                                         |         |
 | Debug Request  | Enabling this flag will log out the current request.                                                                                    | false   |
 
-### Get Warehouse Location
+### Get Warehouse Location {#getwarehouselocation}
 
 Retrieve all or some selected properties from an instance of Warehouse Location with the given id.
 
@@ -290,7 +290,7 @@ Retrieve all or some selected properties from an instance of Warehouse Location 
 | Connection            |                                                                                                                                         |         |
 | Debug Request         | Enabling this flag will log out the current request.                                                                                    | false   |
 
-### List Business Partners
+### List Business Partners {#listbusinesspartners}
 
 Retrieve a collection of Business Partners with all or some selected properties
 
@@ -306,7 +306,7 @@ Retrieve a collection of Business Partners with all or some selected properties
 | Custom Query Params | Custom query parameters to be included in the request                                                                                   |         |
 | Debug Request       | Enabling this flag will log out the current request.                                                                                    | false   |
 
-### List Invoices
+### List Invoices {#listinvoices}
 
 Retrieve a collection of Invoices with all or some selected properties in the given order by specifying the given filter condition.
 
@@ -322,7 +322,7 @@ Retrieve a collection of Invoices with all or some selected properties in the gi
 | Custom Query Params | Custom query parameters to be included in the request                                                                                   |         |
 | Debug Request       | Enabling this flag will log out the current request.                                                                                    | false   |
 
-### List Items
+### List Items {#listitems}
 
 Retrieve a collection of Items with all or some selected properties.
 
@@ -338,7 +338,7 @@ Retrieve a collection of Items with all or some selected properties.
 | Custom Query Params | Custom query parameters to be included in the request                                                                                   |         |
 | Debug Request       | Enabling this flag will log out the current request.                                                                                    | false   |
 
-### List Orders
+### List Orders {#listorders}
 
 Retrieve a collection of Orders with all or some selected properties
 
@@ -354,7 +354,7 @@ Retrieve a collection of Orders with all or some selected properties
 | Custom Query Params | Custom query parameters to be included in the request                                                                                   |         |
 | Debug Request       | Enabling this flag will log out the current request.                                                                                    | false   |
 
-### List Price Lists
+### List Price Lists {#listpricelists}
 
 Retrieve a collection of PriceLists with all or some selected properties.
 
@@ -370,7 +370,7 @@ Retrieve a collection of PriceLists with all or some selected properties.
 | Custom Query Params | Custom query parameters to be included in the request                                                                                   |         |
 | Debug Request       | Enabling this flag will log out the current request.                                                                                    | false   |
 
-### List Purchase Orders
+### List Purchase Orders {#listpurchaseorders}
 
 Retrieve a collection of Purchase Orders with all or some selected properties.
 
@@ -386,7 +386,7 @@ Retrieve a collection of Purchase Orders with all or some selected properties.
 | Custom Query Params | Custom query parameters to be included in the request                                                                                   |         |
 | Debug Request       | Enabling this flag will log out the current request.                                                                                    | false   |
 
-### List Records
+### List Records {#listrecords}
 
 Retrieve a list of records from SAP Business One.
 
@@ -403,7 +403,7 @@ Retrieve a list of records from SAP Business One.
 | Custom Query Params | Custom query parameters to be included in the request                                                                                   |         |
 | Debug Request       | Enabling this flag will log out the current request.                                                                                    | false   |
 
-### List Warehouse Locations
+### List Warehouse Locations {#listwarehouselocations}
 
 Retrieve a collection of Warehouses Locations with all or some selected properties in the given order by specifying the given filter condition.
 
@@ -419,7 +419,7 @@ Retrieve a collection of Warehouses Locations with all or some selected properti
 | Custom Query Params | Custom query parameters to be included in the request                                                                                   |         |
 | Debug Request       | Enabling this flag will log out the current request.                                                                                    | false   |
 
-### List Warehouses
+### List Warehouses {#listwarehouses}
 
 Retrieve a collection of Warehouses with all or some selected properties in the given order by specifying the given filter condition.
 
@@ -435,7 +435,7 @@ Retrieve a collection of Warehouses with all or some selected properties in the 
 | Custom Query Params | Custom query parameters to be included in the request                                                                                   |         |
 | Debug Request       | Enabling this flag will log out the current request.                                                                                    | false   |
 
-### Raw Request
+### Raw Request {#rawrequest}
 
 Send raw HTTP request to the SAP Business One API
 
@@ -458,7 +458,7 @@ Send raw HTTP request to the SAP Business One API
 | Use Exponential Backoff | Specifies whether to use a pre-defined exponential backoff strategy for retries. When enabled, 'Retry Delay (ms)' is ignored.                                                                    | false   |
 | Connection              |                                                                                                                                                                                                  |         |
 
-### Update Business Partner
+### Update Business Partner {#updatebusinesspartner}
 
 Update an instance of Business Partners
 
@@ -471,7 +471,7 @@ Update an instance of Business Partners
 | Connection    |                                                      |         |
 | Debug Request | Enabling this flag will log out the current request. | false   |
 
-### Update Invoice
+### Update Invoice {#updateinvoice}
 
 Update an instance of Invoices.
 
@@ -483,7 +483,7 @@ Update an instance of Invoices.
 | Connection    |                                                      |         |
 | Debug Request | Enabling this flag will log out the current request. | false   |
 
-### Update Item
+### Update Item {#updateitem}
 
 Update an instance of Items
 
@@ -496,7 +496,7 @@ Update an instance of Items
 | Connection    |                                                      |         |
 | Debug Request | Enabling this flag will log out the current request. | false   |
 
-### Update Order
+### Update Order {#updateorder}
 
 Update an instance of Orders.
 
@@ -508,7 +508,7 @@ Update an instance of Orders.
 | Connection    |                                                      |         |
 | Debug Request | Enabling this flag will log out the current request. | false   |
 
-### Update Price List
+### Update Price List {#updatepricelist}
 
 Update an instance of Price Lists.
 
@@ -520,7 +520,7 @@ Update an instance of Price Lists.
 | Connection        |                                                      |         |
 | Debug Request     | Enabling this flag will log out the current request. | false   |
 
-### Update Purchase Order
+### Update Purchase Order {#updatepurchaseorder}
 
 Update an instance of Purchase Orders.
 
@@ -532,7 +532,7 @@ Update an instance of Purchase Orders.
 | Connection                    |                                                      |         |
 | Debug Request                 | Enabling this flag will log out the current request. | false   |
 
-### Update Record
+### Update Record {#updaterecord}
 
 Update an existing record in SAP Business One.
 
@@ -544,7 +544,7 @@ Update an existing record in SAP Business One.
 | Connection    |                                                      |         |
 | Debug Request | Enabling this flag will log out the current request. | false   |
 
-### Update Warehouse
+### Update Warehouse {#updatewarehouse}
 
 Update an instance of Warehouses.
 

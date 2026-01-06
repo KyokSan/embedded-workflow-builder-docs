@@ -9,7 +9,7 @@ GoTo Webinar is a platform for hosting, managing, and attending live or pre-reco
 
 ## Connections
 
-### OAuth 2.0
+### OAuth 2.0 {#gotowebinaroauth2connection}
 
 GoTo Webinar OAuth2 Connection
 
@@ -33,7 +33,7 @@ Read about how OAuth 2.0 works [here](../oauth2.md).
 
 ## Triggers
 
-### User Subscription
+### User Subscription {#usersubscriptiontrigger}
 
 Triggers when a user subscribes to a plan
 
@@ -45,7 +45,7 @@ Triggers when a user subscribes to a plan
 
 ## Actions
 
-### Cancel Webinar
+### Cancel Webinar {#cancelwebinar}
 
 Cancels a specific webinar.
 
@@ -56,7 +56,7 @@ Cancels a specific webinar.
 | Send Cancellation Email | Indicates whether cancellation notice emails should be sent. Default behavior is false.                                  |         |
 | Delete All              | Specifies whether all scheduled sessions should be deleted if the webinar is part of a series. Default behavior is true. | false   |
 
-### Create Registrant
+### Create Registrant {#createregistrant}
 
 Register an attendee for a scheduled webinar.
 
@@ -83,7 +83,7 @@ Register an attendee for a scheduled webinar.
 | Purchasing Role        | The role of the registrant in the purchasing process.                                                             |         |
 | Responses              | The responses to the custom questions.                                                                            |         |
 
-### Create User Subscription
+### Create User Subscription {#createusersubscription}
 
 A new user subscriptions will be created as a webhook.
 
@@ -94,7 +94,7 @@ A new user subscriptions will be created as a webhook.
 | Event Name    | The name of the event to subscribe to.                                               |         |
 | Event Version | The version of the event to subscribe to.                                            | 1.0.0   |
 
-### Create Webinar
+### Create Webinar {#createwebinar}
 
 Creates a single session webinar, a sequence of webinars, or a series of webinars.
 
@@ -117,7 +117,7 @@ Creates a single session webinar, a sequence of webinars, or a series of webinar
 | Should Send Absentee Follow Up Email | Whether or not to send an absentee follow up email to the registrants.                                                                                                                                                                                 |         |
 | Should Send Attendee Follow Up Email | Whether or not to send an attendee follow up email to the registrants.                                                                                                                                                                                 |         |
 
-### Delete Instanced Subscriptions
+### Delete Instanced Subscriptions {#deleteinstancedwebhooksaction}
 
 Deletes all subscriptions that point to a flow in this instance
 
@@ -125,7 +125,7 @@ Deletes all subscriptions that point to a flow in this instance
 | ---------- | -------- | ------- |
 | Connection |          |         |
 
-### Delete Registrant
+### Delete Registrant {#deleteregistrant}
 
 Removes a webinar registrant from current registrations for the specified webinar. The webinar must be a scheduled, future webinar.
 
@@ -135,7 +135,7 @@ Removes a webinar registrant from current registrations for the specified webina
 | Webinar Key    | The key identifier of the webinar. |         |
 | Registrant Key | The key of the registrant.         |         |
 
-### Delete User Subscriptions
+### Delete User Subscriptions {#deleteusersubscription}
 
 Deletes one or more user subscriptions.
 
@@ -145,7 +145,7 @@ Deletes one or more user subscriptions.
 | User Subscription Keys | The subscription keys to act upon.                                                                                                                                                                 |         |
 | Delete Webhooks        | Set to true if you want the affiliated webhook deleted with the user subscription. Note, deleting the webhook will also delete any other user subscriptions tied to the corresponding webhook key. | false   |
 
-### Get Attendee
+### Get Attendee {#getattendee}
 
 Retrieve registration details for a particular attendee of a specific webinar session
 
@@ -156,7 +156,7 @@ Retrieve registration details for a particular attendee of a specific webinar se
 | Session Key    | The key of the webinar session.    |         |
 | Registrant Key | The key of the registrant.         |         |
 
-### Get Registrant
+### Get Registrant {#getregistrant}
 
 Retrieve registration details for a specific registrant.
 
@@ -166,7 +166,7 @@ Retrieve registration details for a specific registrant.
 | Webinar Key    | The key identifier of the webinar. |         |
 | Registrant Key | The key of the registrant.         |         |
 
-### Get User Subscription
+### Get User Subscription {#getusersubscription}
 
 Retrieve a user subscription by User Subscription Key.
 
@@ -175,7 +175,7 @@ Retrieve a user subscription by User Subscription Key.
 | Connection            |                                                 |         |
 | User Subscription Key | The unique identifier of the user subscription. |         |
 
-### Get Webinars
+### Get Webinars {#getwebinars}
 
 Returns upcoming and past webinars for the currently authenticated organizer that are scheduled within the specified date/time range.
 
@@ -189,7 +189,7 @@ Returns upcoming and past webinars for the currently authenticated organizer tha
 | Page Number | The page number to be displayed. The first page is 0.                                                                          |         |
 | Page Size   | The page size to use in pagination, Maximum value is 200.                                                                      |         |
 
-### List All Attendees for all Webinar Sessions
+### List All Attendees for all Webinar Sessions {#listattendees}
 
 Returns all attendees for all sessions of the specified webinar.
 
@@ -199,7 +199,7 @@ Returns all attendees for all sessions of the specified webinar.
 | Fetch All   | If true, all pages will be fetched. If false, only the first page will be fetched. | false   |
 | Webinar Key | The key identifier of the webinar.                                                 |         |
 
-### List Registrants
+### List Registrants {#listregistrants}
 
 Retrieve registration details for all registrants of a specific webinar.
 
@@ -210,7 +210,7 @@ Retrieve registration details for all registrants of a specific webinar.
 | Page Number | The page number to be displayed. The first page is 0.     |         |
 | Page Size   | The page size to use in pagination, Maximum value is 200. |         |
 
-### List Session Attendees
+### List Session Attendees {#listsessionattendees}
 
 Retrieve details for all attendees of a specific webinar session.
 
@@ -220,7 +220,7 @@ Retrieve details for all attendees of a specific webinar session.
 | Webinar Key | The key identifier of the webinar. |         |
 | Session Key | The key of the webinar session.    |         |
 
-### List User Subscriptions
+### List User Subscriptions {#listusersubscriptions}
 
 Retrieve a list of user subscriptions.
 
@@ -228,7 +228,7 @@ Retrieve a list of user subscriptions.
 | ---------- | -------- | ------- |
 | Connection |          |         |
 
-### Raw Request
+### Raw Request {#rawrequest}
 
 Send a raw HTTP request to GoTo Webinar.
 
@@ -251,7 +251,7 @@ Send a raw HTTP request to GoTo Webinar.
 | Max Retry Count         | The maximum number of retries to attempt. Specify 0 for no retries.                                                                                                                              | 0       |
 | Use Exponential Backoff | Specifies whether to use a pre-defined exponential backoff strategy for retries. When enabled, 'Retry Delay (ms)' is ignored.                                                                    | false   |
 
-### Update User Subscription
+### Update User Subscription {#updateusersubscription}
 
 Updates an existing user subscription.
 
@@ -263,7 +263,7 @@ Updates an existing user subscription.
 | User Subscription State | The state of the user subscription                                                   |         |
 | Webhook URL             | A HTTPs url that can accept posted events. It should return 200 OK for GET requests. |         |
 
-### Update Webinar
+### Update Webinar {#updatewebinar}
 
 Updates a specific webinar.
 

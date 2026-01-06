@@ -9,7 +9,7 @@ Qlik is a business analytics platform. Use the Qlik component to manage your Dat
 
 ## Connections
 
-### API Key
+### API Key {#apikey}
 
 [API keys](https://qlik.dev/authenticate/api-key/generate-your-first-api-key) must first be enabled by an Admin:
 
@@ -31,7 +31,7 @@ Generate API Keys:
 | API Key | API Key for your Qlik User                                                                    |         |
 | Tenant  | The tenant of your Qlik account, the first part of your URL: v34wwyjhxohtob1.us.qlikcloud.com |         |
 
-### OAuth 2.0
+### OAuth 2.0 {#oauth2}
 
 Allows a client application to use an OAuth flow to request user authorization.
 
@@ -56,7 +56,7 @@ Read about how OAuth 2.0 works [here](../oauth2.md).
 
 ## Actions
 
-### Create Data Asset
+### Create Data Asset {#createdataassets}
 
 Save a new data asset.
 
@@ -68,7 +68,7 @@ Save a new data asset.
 | Technical Name | Technical name of the application             |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 | Data Asset     | The data asset to create or update.           | <code>{<br /> "name": "string",<br /> "tags": [],<br /> "appId": "string",<br /> "ownerId": "string",<br /> "spaceId": "string",<br /> "version": 0,<br /> "tenantId": "string",<br /> "createdBy": "string",<br /> "properties": {},<br /> "createdTime": "2023-10-12T17:32:07.820Z",<br /> "description": "string",<br /> "dataStoreInfo": {<br /> "id": "string",<br /> "name": "string",<br /> "type": "string"<br /> },<br /> "lastModifiedBy": "string",<br /> "lastModifiedTime": "2023-10-12T17:32:07.820Z",<br /> "technicalDescription": "string"<br />}</code> |
 
-### Create Data Store
+### Create Data Store {#createdatastore}
 
 Save a new data store.
 
@@ -80,7 +80,7 @@ Save a new data store.
 | Technical Name | Technical name of the data store    |                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 | Data Store     | The data store to create or update. | <code>{<br /> "name": "string",<br /> "tags": [],<br /> "ownerId": "string",<br /> "spaceId": "string",<br /> "version": 0,<br /> "tenantId": "string",<br /> "createdBy": "string",<br /> "properties": {},<br /> "createdTime": "2023-10-12T19:55:20.881Z",<br /> "description": "string",<br /> "lastModifiedBy": "string",<br /> "lastModifiedTime": "2023-10-12T19:55:20.881Z",<br /> "technicalDescription": "string"<br />}</code> |
 
-### Create New Data Set
+### Create New Data Set {#createdataset}
 
 Save new data set.
 
@@ -92,7 +92,7 @@ Save new data set.
 | Secure QRI     | Secure QRI of the application                                                                                                                                                                                                                                                                                                                          |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 | Data Set       | The data set to create or update.                                                                                                                                                                                                                                                                                                                      | <code>{<br /> "tags": [],<br /> "type": "string",<br /> "name": "string",<br /> "schema": {<br /> "anomalies": [],<br /> "dataFields": [<br /> {<br /> "name": "string",<br /> "tags": [],<br /> "alias": "string",<br /> "index": 0,<br /> "orphan": true,<br /> "dataType": {<br /> "type": "DATE",<br /> "properties": {},<br /> "originalType": "string"<br /> },<br /> "nullable": true,<br /> "userTags": [<br /> {<br /> "id": "string",<br /> "name": "string"<br /> }<br /> ],<br /> "encrypted": true,<br /> "sensitive": true,<br /> "primaryKey": true,<br /> "properties": {},<br /> "description": "string",<br /> "ordinalPositionInKey": 0<br /> }<br /> ],<br /> "schemaName": "string",<br /> "loadOptions": {},<br /> "effectiveDate": "2023-10-11T22:12:27.408Z",<br /> "overrideSchemaAnomalies": true<br /> },<br /> "ownerId": "string",<br /> "spaceId": "string",<br /> "version": 0,<br /> "tenantId": "string",<br /> "createdBy": "string",<br /> "properties": {},<br /> "createdTime": "2023-10-11T22:12:27.408Z",<br /> "description": "string",<br /> "operational": {<br /> "size": 0,<br /> "status": "string",<br /> "endDate": "2023-10-11T22:12:27.408Z",<br /> "location": "string",<br /> "rowCount": 0,<br /> "startDate": "2023-10-11T22:12:27.408Z",<br /> "logMessage": "string",<br /> "tableOwner": "string",<br /> "lastLoadTime": "2023-10-11T22:12:27.408Z",<br /> "contentUpdated": true,<br /> "lastUpdateTime": "2023-10-11T22:12:27.408Z",<br /> "tableConnectionInfo": {<br /> "tableName": "string",<br /> "selectionScript": "string",<br /> "additionalProperties": {}<br /> }<br /> },<br /> "dataAssetInfo": {<br /> "id": "string",<br /> "name": "string",<br /> "dataStoreInfo": {<br /> "id": "string",<br /> "name": "string",<br /> "type": "string"<br /> }<br /> },<br /> "lastModifiedBy": "string",<br /> "classifications": {<br /> "subjectArea": "string",<br /> "personalInformation": [<br /> {<br /> "fieldName": "string",<br /> "tableName": "string",<br /> "fieldAlias": "string"<br /> }<br /> ],<br /> "sensitiveInformation": [<br /> {<br /> "fieldName": "string",<br /> "tableName": "string",<br /> "fieldAlias": "string"<br /> }<br /> ]<br /> },<br /> "lastModifiedTime": "2023-10-11T22:12:27.408Z",<br /> "additionalSchemas": [<br /> {<br /> "anomalies": [],<br /> "dataFields": [<br /> {<br /> "name": "string",<br /> "tags": [],<br /> "alias": "string",<br /> "index": 0,<br /> "orphan": true,<br /> "dataType": {<br /> "type": "DATE",<br /> "properties": {},<br /> "originalType": "string"<br /> },<br /> "nullable": true,<br /> "userTags": [<br /> {<br /> "id": "string",<br /> "name": "string"<br /> }<br /> ],<br /> "encrypted": true,<br /> "sensitive": true,<br /> "primaryKey": true,<br /> "properties": {},<br /> "description": "string",<br /> "ordinalPositionInKey": 0<br /> }<br /> ],<br /> "schemaName": "string",<br /> "loadOptions": {},<br /> "effectiveDate": "2023-10-11T22:12:27.408Z",<br /> "overrideSchemaAnomalies": true<br /> }<br /> ],<br /> "technicalDescription": "string"<br />}</code> |
 
-### Create Report
+### Create Report {#createreport}
 
 Request a new report generation.
 
@@ -101,7 +101,7 @@ Request a new report generation.
 | Connection |                            |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | Report     | The report data to create. | <code>{<br /> "type": "composition-1.0",<br /> "output": {<br /> "type": "pdfcomposition",<br /> "outputId": "composition1",<br /> "pdfCompositionOutput": {<br /> "pdfOutputs": [<br /> {<br /> "size": "A4",<br /> "align": {<br /> "vertical": "middle",<br /> "horizontal": "center"<br /> },<br /> "resizeType": "autofit",<br /> "orientation": "A"<br /> },<br /> {<br /> "size": "A4",<br /> "align": {<br /> "vertical": "middle",<br /> "horizontal": "center"<br /> },<br /> "resizeType": "autofit",<br /> "orientation": "A"<br /> }<br /> ]<br /> }<br /> },<br /> "definitions": {<br /> "selectionsByState": {<br /> "sel1": {<br /> "$": [<br /> {<br /> "values": [<br /> {<br /> "text": "Arizona",<br /> "isNumeric": false<br /> }<br /> ],<br /> "fieldName": "Region",<br /> "defaultIsNumeric": false<br /> }<br /> ]<br /> }<br /> }<br /> },<br /> "compositionTemplates": [<br /> {<br /> "type": "sense-sheet-1.0",<br /> "senseSheetTemplate": {<br /> "appId": "2451e58e-a1b9-4047-abf6-315e91d8a610",<br /> "sheet": {<br /> "id": "5ffe3801-1b6d-439d-a849-84d0748358f1"<br /> },<br /> "selectionsByStateDef": "sel1"<br /> }<br /> },<br /> {<br /> "type": "sense-sheet-1.0",<br /> "senseSheetTemplate": {<br /> "appId": "2451e58e-a1b9-4047-abf6-315e91d8a610",<br /> "sheet": {<br /> "id": "ffrxJyA"<br /> },<br /> "selectionsByStateDef": "sel1"<br /> }<br /> }<br /> ]<br />}</code> |
 
-### Create Space
+### Create Space {#createspace}
 
 Creates a space.
 
@@ -112,7 +112,7 @@ Creates a space.
 | Space Description | The description of the space. Personal spaces do not have a description. |         |
 | Type              | The type of space such as shared, managed, and so on.                    | shared  |
 
-### Delete App
+### Delete App {#deleteapp}
 
 Deletes a specific app.
 
@@ -121,7 +121,7 @@ Deletes a specific app.
 | Connection |                                               |         |
 | App ID     | The ID of the app you would like to retrieve. |         |
 
-### Delete Data Assets
+### Delete Data Assets {#deletedataassets}
 
 Batch delete data assets by IDs.
 
@@ -130,7 +130,7 @@ Batch delete data assets by IDs.
 | Connection     |                                                      |         |
 | Data Asset IDs | The IDs of the data assets you would like to delete. |         |
 
-### Delete Data File
+### Delete Data File {#deletedatafile}
 
 Deletes a specific Data File.
 
@@ -139,7 +139,7 @@ Deletes a specific Data File.
 | Connection   |                                                     |         |
 | Data File ID | The id of the data file you would like to retrieve. |         |
 
-### Delete Data Set
+### Delete Data Set {#deletedataset}
 
 Delete data set by ID.
 
@@ -148,7 +148,7 @@ Delete data set by ID.
 | Connection   |                                                    |         |
 | Data Set IDs | The IDs of the data sets you would like to delete. |         |
 
-### Delete Data Stores
+### Delete Data Stores {#deletedatastores}
 
 Batch delete data stores by IDs.
 
@@ -157,7 +157,7 @@ Batch delete data stores by IDs.
 | Connection     |                                                      |         |
 | Data Store IDs | The IDs of the data stores you would like to delete. |         |
 
-### Delete Data Stores Assets
+### Delete Data Stores Assets {#deletedatastoresassets}
 
 Batch delete data stores by IDs.
 
@@ -167,7 +167,7 @@ Batch delete data stores by IDs.
 | Data Store IDs | The IDs of the data stores you would like to delete. |         |
 | Data Asset IDs | The IDs of the data assets you would like to delete. |         |
 
-### Delete Space
+### Delete Space {#deletespace}
 
 Deletes a space by ID.
 
@@ -176,7 +176,7 @@ Deletes a space by ID.
 | Connection |                                               |         |
 | Space ID   | The ID of the space you would like to delete. |         |
 
-### Get App
+### Get App {#getapp}
 
 Retrieves information for a specific app.
 
@@ -185,7 +185,7 @@ Retrieves information for a specific app.
 | Connection |                                               |         |
 | App ID     | The ID of the app you would like to retrieve. |         |
 
-### Get Data Asset
+### Get Data Asset {#getdataassets}
 
 Get data asset by ID.
 
@@ -195,7 +195,7 @@ Get data asset by ID.
 | Data Assets ID | The ID of the data set you would like to retrieve. |         |
 | Projections    | Fields name to return in the response.             |         |
 
-### Get Data File
+### Get Data File {#getdatafile}
 
 Get descriptive info for the specified data file.
 
@@ -204,7 +204,7 @@ Get descriptive info for the specified data file.
 | Connection   |                                                     |         |
 | Data File ID | The id of the data file you would like to retrieve. |         |
 
-### Get Data Set
+### Get Data Set {#getdataset}
 
 Get data set by ID.
 
@@ -214,7 +214,7 @@ Get data set by ID.
 | Data Set ID | The ID of the data set you would like to retrieve. |         |
 | Projections | Fields name to return in the response.             |         |
 
-### Get Data Store
+### Get Data Store {#getdatastore}
 
 Get data store by ID.
 
@@ -223,7 +223,7 @@ Get data store by ID.
 | Connection    |                                                      |         |
 | Data Store ID | The ID of the data store you would like to retrieve. |         |
 
-### Get My User
+### Get My User {#getmyuser}
 
 Redirects to retrieve the user resource associated with the JWT claims.
 
@@ -231,7 +231,7 @@ Redirects to retrieve the user resource associated with the JWT claims.
 | ---------- | -------- | ------- |
 | Connection |          |         |
 
-### Get Report Request Status
+### Get Report Request Status {#getreportrequeststatus}
 
 Get report request processing status.
 
@@ -240,7 +240,7 @@ Get report request processing status.
 | Connection |                                                  |         |
 | Report ID  | The ID of the report you would like to retrieve. |         |
 
-### Get Space
+### Get Space {#getspace}
 
 Retrieves a single space by ID.
 
@@ -249,7 +249,7 @@ Retrieves a single space by ID.
 | Connection |                                                 |         |
 | Space ID   | The ID of the space you would like to retrieve. |         |
 
-### List Data Files
+### List Data Files {#listdatafiles}
 
 Get all data files.
 
@@ -260,7 +260,7 @@ Get all data files.
 | Page         | If present, the cursor that starts the page of data that is returned. |         |
 | Query Params | A list of params to send with the request.                            |         |
 
-### List Data Stores
+### List Data Stores {#listdatastores}
 
 Get all data stores.
 
@@ -272,7 +272,7 @@ Get all data stores.
 | Projections | Fields name to return in the response.                                                              |         |
 | Sort        | Comma-separated fields and field start with '-' character sorts the result set in descending order. |         |
 
-### List Spaces
+### List Spaces {#listspaces}
 
 Get all Spaces.
 
@@ -283,7 +283,7 @@ Get all Spaces.
 | Sort         | Comma-separated fields and field start with '-' character sorts the result set in descending order. |         |
 | Query Params | A list of params to send with the request.                                                          |         |
 
-### List Users
+### List Users {#listusers}
 
 Get all Users.
 
@@ -294,7 +294,7 @@ Get all Users.
 | Sort         | Comma-separated fields and field start with '-' character sorts the result set in descending order. |         |
 | Query Params | A list of params to send with the request.                                                          |         |
 
-### Raw Request
+### Raw Request {#rawrequest}
 
 Send raw HTTP request to Qlik
 
@@ -317,7 +317,7 @@ Send raw HTTP request to Qlik
 | Max Retry Count         | The maximum number of retries to attempt.                                                                                                                                                                                               | 0       |
 | Use Exponential Backoff | Specifies whether to use a pre-defined exponential backoff strategy for retries.                                                                                                                                                        | false   |
 
-### Update Data Asset
+### Update Data Asset {#updatedataassets}
 
 Update data asset by ID.
 
@@ -330,7 +330,7 @@ Update data asset by ID.
 | Technical Name | Technical name of the application                  |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 | Data Asset     | The data asset to create or update.                | <code>{<br /> "name": "string",<br /> "tags": [],<br /> "appId": "string",<br /> "ownerId": "string",<br /> "spaceId": "string",<br /> "version": 0,<br /> "tenantId": "string",<br /> "createdBy": "string",<br /> "properties": {},<br /> "createdTime": "2023-10-12T17:32:07.820Z",<br /> "description": "string",<br /> "dataStoreInfo": {<br /> "id": "string",<br /> "name": "string",<br /> "type": "string"<br /> },<br /> "lastModifiedBy": "string",<br /> "lastModifiedTime": "2023-10-12T17:32:07.820Z",<br /> "technicalDescription": "string"<br />}</code> |
 
-### Update Data Set
+### Update Data Set {#updatedataset}
 
 Update data set by ID.
 
@@ -343,7 +343,7 @@ Update data set by ID.
 | Secure QRI     | Secure QRI of the application                                                                                                                                                                                                                                                                                                                          |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 | Data Set       | The data set to create or update.                                                                                                                                                                                                                                                                                                                      | <code>{<br /> "tags": [],<br /> "type": "string",<br /> "name": "string",<br /> "schema": {<br /> "anomalies": [],<br /> "dataFields": [<br /> {<br /> "name": "string",<br /> "tags": [],<br /> "alias": "string",<br /> "index": 0,<br /> "orphan": true,<br /> "dataType": {<br /> "type": "DATE",<br /> "properties": {},<br /> "originalType": "string"<br /> },<br /> "nullable": true,<br /> "userTags": [<br /> {<br /> "id": "string",<br /> "name": "string"<br /> }<br /> ],<br /> "encrypted": true,<br /> "sensitive": true,<br /> "primaryKey": true,<br /> "properties": {},<br /> "description": "string",<br /> "ordinalPositionInKey": 0<br /> }<br /> ],<br /> "schemaName": "string",<br /> "loadOptions": {},<br /> "effectiveDate": "2023-10-11T22:12:27.408Z",<br /> "overrideSchemaAnomalies": true<br /> },<br /> "ownerId": "string",<br /> "spaceId": "string",<br /> "version": 0,<br /> "tenantId": "string",<br /> "createdBy": "string",<br /> "properties": {},<br /> "createdTime": "2023-10-11T22:12:27.408Z",<br /> "description": "string",<br /> "operational": {<br /> "size": 0,<br /> "status": "string",<br /> "endDate": "2023-10-11T22:12:27.408Z",<br /> "location": "string",<br /> "rowCount": 0,<br /> "startDate": "2023-10-11T22:12:27.408Z",<br /> "logMessage": "string",<br /> "tableOwner": "string",<br /> "lastLoadTime": "2023-10-11T22:12:27.408Z",<br /> "contentUpdated": true,<br /> "lastUpdateTime": "2023-10-11T22:12:27.408Z",<br /> "tableConnectionInfo": {<br /> "tableName": "string",<br /> "selectionScript": "string",<br /> "additionalProperties": {}<br /> }<br /> },<br /> "dataAssetInfo": {<br /> "id": "string",<br /> "name": "string",<br /> "dataStoreInfo": {<br /> "id": "string",<br /> "name": "string",<br /> "type": "string"<br /> }<br /> },<br /> "lastModifiedBy": "string",<br /> "classifications": {<br /> "subjectArea": "string",<br /> "personalInformation": [<br /> {<br /> "fieldName": "string",<br /> "tableName": "string",<br /> "fieldAlias": "string"<br /> }<br /> ],<br /> "sensitiveInformation": [<br /> {<br /> "fieldName": "string",<br /> "tableName": "string",<br /> "fieldAlias": "string"<br /> }<br /> ]<br /> },<br /> "lastModifiedTime": "2023-10-11T22:12:27.408Z",<br /> "additionalSchemas": [<br /> {<br /> "anomalies": [],<br /> "dataFields": [<br /> {<br /> "name": "string",<br /> "tags": [],<br /> "alias": "string",<br /> "index": 0,<br /> "orphan": true,<br /> "dataType": {<br /> "type": "DATE",<br /> "properties": {},<br /> "originalType": "string"<br /> },<br /> "nullable": true,<br /> "userTags": [<br /> {<br /> "id": "string",<br /> "name": "string"<br /> }<br /> ],<br /> "encrypted": true,<br /> "sensitive": true,<br /> "primaryKey": true,<br /> "properties": {},<br /> "description": "string",<br /> "ordinalPositionInKey": 0<br /> }<br /> ],<br /> "schemaName": "string",<br /> "loadOptions": {},<br /> "effectiveDate": "2023-10-11T22:12:27.408Z",<br /> "overrideSchemaAnomalies": true<br /> }<br /> ],<br /> "technicalDescription": "string"<br />}</code> |
 
-### Update Data Store
+### Update Data Store {#updatedatastore}
 
 Updates the information for a specific Data Store.
 
@@ -356,7 +356,7 @@ Updates the information for a specific Data Store.
 | Technical Name | Technical name of the data store                     |                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 | Data Store     | The data store to create or update.                  | <code>{<br /> "name": "string",<br /> "tags": [],<br /> "ownerId": "string",<br /> "spaceId": "string",<br /> "version": 0,<br /> "tenantId": "string",<br /> "createdBy": "string",<br /> "properties": {},<br /> "createdTime": "2023-10-12T19:55:20.881Z",<br /> "description": "string",<br /> "lastModifiedBy": "string",<br /> "lastModifiedTime": "2023-10-12T19:55:20.881Z",<br /> "technicalDescription": "string"<br />}</code> |
 
-### Updates Space
+### Updates Space {#updatespace}
 
 Updates a space.
 

@@ -9,7 +9,7 @@ PDQ provides a suite of management tools to automate software deployment, manage
 
 ## Connections
 
-### API Key
+### API Key {#pdq-api-key}
 
 Connection to the PDQ API
 
@@ -27,7 +27,7 @@ Follow these steps to [generate a new API key](https://connect.pdq.com/hc/en-us/
 
 ## Actions
 
-### Create Deployment
+### Create Deployment {#createdeployment}
 
 Deploy a package version to target devices or groups
 
@@ -38,7 +38,7 @@ Deploy a package version to target devices or groups
 | Connection    |                                                      |         |
 | Debug Request | Enabling this flag will log out the current request. | false   |
 
-### Get Device
+### Get Device {#getdevice}
 
 Retrieve a device by ID
 
@@ -48,7 +48,7 @@ Retrieve a device by ID
 | Connection    |                                                      |         |
 | Debug Request | Enabling this flag will log out the current request. | false   |
 
-### Get Package
+### Get Package {#getpackage}
 
 Retrieve a package by ID
 
@@ -58,7 +58,7 @@ Retrieve a package by ID
 | Connection    |                                                      |         |
 | Debug Request | Enabling this flag will log out the current request. | false   |
 
-### List Devices
+### List Devices {#listdevices}
 
 Retrieve a list of devices
 
@@ -75,7 +75,7 @@ Retrieve a list of devices
 | Connection          |                                                                                                                                           |         |
 | Debug Request       | Enabling this flag will log out the current request.                                                                                      | false   |
 
-### List Groups
+### List Groups {#listgroups}
 
 Retrieve a list of groups
 
@@ -90,7 +90,7 @@ Retrieve a list of groups
 | Connection          |                                                                                                                                           |         |
 | Debug Request       | Enabling this flag will log out the current request.                                                                                      | false   |
 
-### List Packages
+### List Packages {#listpackages}
 
 Retrieve a list of packages
 
@@ -105,7 +105,7 @@ Retrieve a list of packages
 | Connection          |                                                                                                                                           |         |
 | Debug Request       | Enabling this flag will log out the current request.                                                                                      | false   |
 
-### Raw Request
+### Raw Request {#rawrequest}
 
 Send raw HTTP request to the PDQ API
 

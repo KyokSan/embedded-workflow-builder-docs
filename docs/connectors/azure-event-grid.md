@@ -9,7 +9,7 @@ Azure Event Grid is an event routing service that can be used to build event dri
 
 ## Connections
 
-### Microsoft Event Grid OAuth Connection
+### Microsoft Event Grid OAuth Connection {#azure-event-grid-oauth2}
 
 Connect to Microsoft Event Grid
 
@@ -52,7 +52,7 @@ Read about how OAuth 2.0 works [here](../oauth2.md).
 
 ## Triggers
 
-### Event Grid Trigger
+### Event Grid Trigger {#mytrigger}
 
 Handle validation and delivery of Event Grid events
 
@@ -62,7 +62,7 @@ Handle validation and delivery of Event Grid events
 
 ## Actions
 
-### Create or Update Event Subscription
+### Create or Update Event Subscription {#createorupdateeventsubscription}
 
 Asynchronously creates a new event subscription or updates an existing event subscription based on the specified scope.
 
@@ -78,7 +78,7 @@ Asynchronously creates a new event subscription or updates an existing event sub
 | Body Fields             | Extra fields to include in the body of the request.                                                 |         |
 | Debug Request           | Enabling this flag will log out the current request.                                                | false   |
 
-### Delete Event Subscription
+### Delete Event Subscription {#deleteeventsubscription}
 
 Delete an existing event subscription.
 
@@ -91,7 +91,7 @@ Delete an existing event subscription.
 | Event Subscription Name | The name of the event subscription to use.           |         |
 | Debug Request           | Enabling this flag will log out the current request. | false   |
 
-### Get Event Subscription
+### Get Event Subscription {#geteventsubscription}
 
 Get properties of an event subscription.
 
@@ -104,7 +104,7 @@ Get properties of an event subscription.
 | Event Subscription Name | The name of the event subscription to use.           |         |
 | Debug Request           | Enabling this flag will log out the current request. | false   |
 
-### List Event Subscriptions
+### List Event Subscriptions {#listeventsubscriptions}
 
 List all event subscriptions that have been created for a specific topic.
 
@@ -120,7 +120,7 @@ List all event subscriptions that have been created for a specific topic.
 | Next Link           | The next link to fetch the next page of results.                                                                                                                                                                                                                    |         |
 | Debug Request       | Enabling this flag will log out the current request.                                                                                                                                                                                                                | false   |
 
-### Publish Events
+### Publish Events {#publishevents}
 
 Publishes a batch of events to an Azure Event Grid topic.
 
@@ -132,7 +132,7 @@ Publishes a batch of events to an Azure Event Grid topic.
 | Events           | The events to publish. The events must match the schema of the topic. |         |
 | Debug Request    | Enabling this flag will log out the current request.                  | false   |
 
-### Update Event Subscription
+### Update Event Subscription {#updateeventsubscription}
 
 Asynchronously updates an existing event subscription.
 

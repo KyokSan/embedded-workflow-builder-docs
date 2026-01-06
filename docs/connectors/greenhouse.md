@@ -9,7 +9,7 @@ Interact with the Greenhouse API
 
 ## Connections
 
-### API Key
+### API Key {#apitoken}
 
 The Greenhouse Harvest API uses Basic Auth over HTTPS for authentication. The username is your Greenhouse API token and the password should be blank. Unauthenticated requests will return an HTTP 401 response.
 
@@ -37,7 +37,7 @@ The Greenhouse Harvest API uses Basic Auth over HTTPS for authentication. The us
 
 ## Triggers
 
-### Webhook
+### Webhook {#webhook}
 
 Receive and validate webhook requests from Greenhouse for webhooks you configure.
 
@@ -48,7 +48,7 @@ Receive and validate webhook requests from Greenhouse for webhooks you configure
 
 ## Actions
 
-### Create a Candidate
+### Create a Candidate {#createcandidate}
 
 Create a new candidate.
 
@@ -73,7 +73,7 @@ Create a new candidate.
 | Custom Fields          | Array of hashes containing new custom field values. Passing an empty array does nothing. |                         |
 | Debug Request          | Enabling this flag will log out the current request.                                     | false                   |
 
-### Create a Job
+### Create a Job {#createjob}
 
 Create a new job.
 
@@ -94,7 +94,7 @@ Create a new job.
 | Opening Ids            | This may be used instead of office_ids and represents the ID of the office in an external system. If this is used, office_ids must be blank and vice versa.                                                                                                                                                                                                            | <code>["000000"]</code> |
 | Debug Request          | Enabling this flag will log out the current request.                                                                                                                                                                                                                                                                                                                   | false                   |
 
-### Create a User
+### Create a User {#createuser}
 
 Create a new user
 
@@ -115,7 +115,7 @@ Create a new user
 | Custom Fields           | Array of hashes containing new custom field values. Passing an empty array does nothing.                                                                                                                              |                         |
 | Debug Request           | Enabling this flag will log out the current request.                                                                                                                                                                  | false                   |
 
-### Delete a Candidate
+### Delete a Candidate {#deletecandidate}
 
 Delete a candidate by id
 
@@ -127,7 +127,7 @@ Delete a candidate by id
 | Candidate ID         | ID of the candidate to delete.                                       |         |
 | Debug Request        | Enabling this flag will log out the current request.                 | false   |
 
-### Delete Application
+### Delete Application {#deleteapplication}
 
 Delete an application by id
 
@@ -139,7 +139,7 @@ Delete an application by id
 | On Behalf Of User ID | ID of the user issuing this request. Required for auditing purposes. |         |
 | Debug Request        | Enabling this flag will log out the current request.                 | false   |
 
-### Disable a User
+### Disable a User {#disableuser}
 
 Disable an existing user
 
@@ -151,7 +151,7 @@ Disable an existing user
 | Email                | The user's email address. Must be a valid email address.             |         |
 | Debug Request        | Enabling this flag will log out the current request.                 | false   |
 
-### Edit a Candidate
+### Edit a Candidate {#editcandidate}
 
 Edit an existing candidate.
 
@@ -177,7 +177,7 @@ Edit an existing candidate.
 | Coordinator            | An object representing the candidate's new coordinator                                   |                         |
 | Debug Request          | Enabling this flag will log out the current request.                                     | false                   |
 
-### Edit a Job
+### Edit a Job {#editjob}
 
 Edit a job by id
 
@@ -200,7 +200,7 @@ Edit a job by id
 | Custom Fields             | Array of hashes containing new custom field values. Passing an empty array does nothing.                                                                        |                         |
 | Debug Request             | Enabling this flag will log out the current request.                                                                                                            | false                   |
 
-### Edit Application
+### Edit Application {#editapplication}
 
 Edit an Application by id
 
@@ -217,7 +217,7 @@ Edit an Application by id
 | Prospect Stage ID    | The ID of the prospect pool stage for the application                                    |         |
 | Debug Request        | Enabling this flag will log out the current request.                                     | false   |
 
-### Edit a User
+### Edit a User {#edituser}
 
 Edit an existing user
 
@@ -237,7 +237,7 @@ Edit an existing user
 | Custom Fields           | Array of hashes containing new custom field values. Passing an empty array does nothing.                                                                                                               |                         |
 | Debug Request           | Enabling this flag will log out the current request.                                                                                                                                                   | false                   |
 
-### Enable a User
+### Enable a User {#enableuser}
 
 Enable an existing user
 
@@ -249,7 +249,7 @@ Enable an existing user
 | Email                | The user's email address. Must be a valid email address.             |         |
 | Debug Request        | Enabling this flag will log out the current request.                 | false   |
 
-### Get a Candidate
+### Get a Candidate {#getcandidate}
 
 Get a candidate by id
 
@@ -260,7 +260,7 @@ Get a candidate by id
 | Candidate ID  | The Id of the candidate                              |         |
 | Debug Request | Enabling this flag will log out the current request. | false   |
 
-### Get a Job
+### Get a Job {#getjob}
 
 Get a Job by id
 
@@ -271,7 +271,7 @@ Get a Job by id
 | Job ID        | If supplied, only return candidates that have applied to this job. Will return both when a candidate has applied to a job and when they're a prospect for a job |         |
 | Debug Request | Enabling this flag will log out the current request.                                                                                                            | false   |
 
-### Get Application
+### Get Application {#getapplication}
 
 Get an Application by id
 
@@ -282,7 +282,7 @@ Get an Application by id
 | Application ID | ID of the application                                |         |
 | Debug Request  | Enabling this flag will log out the current request. | false   |
 
-### Get User
+### Get User {#getuser}
 
 Get a user by id
 
@@ -293,7 +293,7 @@ Get a user by id
 | On Behalf Of User ID | ID of the user to get.                               |         |
 | Debug Request        | Enabling this flag will log out the current request. | false   |
 
-### List Applications
+### List Applications {#listapplications}
 
 Get a list of applications
 
@@ -310,7 +310,7 @@ Get a list of applications
 | Last Activity After | Return only applications where ‘last_activity_at' is at or after this timestamp. Timestamp must be in in ISO-8601 format.                                                                                    |         |
 | Debug Request       | Enabling this flag will log out the current request.                                                                                                                                                         | false   |
 
-### List Candidates
+### List Candidates {#listcandidates}
 
 Get a list of Candidates
 
@@ -329,7 +329,7 @@ Get a list of Candidates
 | Candidate Ids  | If supplied, return only the candidates with the given ids. These are supplied as a comma separated string. e.g.: “candidate_ids=123,456,789”. When combined with job_id, only return candidates with an application on the job. A maximum of 50 candidates can be returned this way. |         |
 | Debug Request  | Enabling this flag will log out the current request.                                                                                                                                                                                                                                  | false   |
 
-### List Jobs
+### List Jobs {#listjobs}
 
 Get a list of jobs
 
@@ -353,7 +353,7 @@ Get a list of jobs
 | Custom Fields          | Array of hashes containing new custom field values. Passing an empty array does nothing.                      |         |
 | Debug Request          | Enabling this flag will log out the current request.                                                          | false   |
 
-### List Users
+### List Users {#listusers}
 
 Get a list of Users
 
@@ -372,7 +372,7 @@ Get a list of Users
 | Candidate Ids  | When true, include user attributes. Otherwise excludes user attributes.                                       | false   |
 | Debug Request  | Enabling this flag will log out the current request.                                                          | false   |
 
-### Raw Request
+### Raw Request {#rawrequest}
 
 Send raw HTTP request to Greenhouse
 

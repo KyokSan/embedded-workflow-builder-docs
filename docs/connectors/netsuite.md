@@ -9,7 +9,7 @@ Manage NetSuite records
 
 ## Connections
 
-### NetSuite OAuth Auth Code
+### NetSuite OAuth Auth Code {#oauth}
 
 NetSuite OAuth 2.0 Connection
 
@@ -72,7 +72,7 @@ Read about how OAuth 2.0 works [here](../oauth2.md).
 | Consumer Key (Client ID)        | Generate a consumer key when you create your OAuth 2.0 app in NetSuite                                                                                                                             |                                                                                    |
 | Consumer Secret (Client Secret) | Generate a consumer secret when you create your OAuth 2.0 app in NetSuite                                                                                                                          |                                                                                    |
 
-### Netsuite OAuth Client Credentials
+### Netsuite OAuth Client Credentials {#oauthclientcredentials}
 
 Netsuite OAuth 2.0 Client Credentials Connection
 
@@ -170,7 +170,7 @@ To test the connection, try running a simple action like **Make Raw Request** wi
 
 ## Actions
 
-### Create Record
+### Create Record {#createrecord}
 
 Create record of specified type
 
@@ -181,7 +181,7 @@ Create record of specified type
 | Payload     | Data payload to send in the action request. See https://system.netsuite.com/help/helpcenter/en_US/APIs/REST_API_Browser/record/v1/2022.1/index.html for details. | <code>{<br /> "entityid": "New Customer",<br /> "companyname": "My Company",<br /> "subsidiary": {<br /> "id": "1"<br /> }<br />}</code> |
 | Debug       | When true, enables additional logging information.                                                                                                               | false                                                                                                                                    |
 
-### Delete Record
+### Delete Record {#deleterecord}
 
 Delete record of the specified type
 
@@ -192,7 +192,7 @@ Delete record of the specified type
 | Record ID   | The unique identifier of the record.               |         |
 | Debug       | When true, enables additional logging information. | false   |
 
-### Get Record
+### Get Record {#getrecord}
 
 Get record of specified type
 
@@ -206,7 +206,7 @@ Get record of specified type
 | Fields to Return     | Specific fields and sublists to return in the request. If unspecified, the full record is returned. |         |
 | Debug                | When true, enables additional logging information.                                                  | false   |
 
-### List Records
+### List Records {#listrecord}
 
 List records of specified type
 
@@ -219,7 +219,7 @@ List records of specified type
 | Pagination Offset | Fetch records offset by this value.                                                                                                |         |
 | Debug             | When true, enables additional logging information.                                                                                 | false   |
 
-### Raw Request
+### Raw Request {#rawrequest}
 
 Send raw HTTP request to NetSuite
 
@@ -243,7 +243,7 @@ Send raw HTTP request to NetSuite
 | Use Exponential Backoff | Specifies whether to use a pre-defined exponential backoff strategy for retries. When enabled, 'Retry Delay (ms)' is ignored.                                                                                                                                                                   | false   |
 | Service Type            | The type of service to use.                                                                                                                                                                                                                                                                     | record  |
 
-### SuiteQL Query
+### SuiteQL Query {#suiteqlquery}
 
 Execute a SuiteQL Query through Netsuite's REST Web Service
 
@@ -255,7 +255,7 @@ Execute a SuiteQL Query through Netsuite's REST Web Service
 | SuiteQL Payload   | Data payload to send in the action request. See https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_157909186990.html for details. | SELECT email, COUNT(\*) as count FROM transaction GROUP BY email |
 | Debug             | When true, enables additional logging information.                                                                                                   | false                                                            |
 
-### Update Record
+### Update Record {#updaterecord}
 
 Update record of the specified type
 

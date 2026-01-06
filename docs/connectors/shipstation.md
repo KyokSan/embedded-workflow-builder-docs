@@ -9,7 +9,7 @@ ShipStation is an ecommerce shipping software solution.
 
 ## Connections
 
-### ShipStation API Key
+### ShipStation API Key {#shipstationapikey}
 
 Prerequisites
 Before setting up a ShipStation connection, ensure you have:
@@ -40,13 +40,13 @@ This will enable authenticated requests to ShipStation.
 
 ## Triggers
 
-### Webhook
+### Webhook {#shipstationwebhooktrigger}
 
 Receive and validate webhook requests from ShipStation for webhooks you configure.
 
 ## Actions
 
-### Create Label for Order
+### Create Label for Order {#createlabelfororder}
 
 Creates a shipping label for a specified order.
 
@@ -61,7 +61,7 @@ Creates a shipping label for a specified order.
 | Connection   |                                                                                    |         |
 | Fields       | A list of additional fields to include in the label for order.                     |         |
 
-### Create or Update Multiple Orders
+### Create or Update Multiple Orders {#createorupdatemultipleorders}
 
 Create or update multiple orders in one request.
 
@@ -70,7 +70,7 @@ Create or update multiple orders in one request.
 | Orders Array | Provide an array of order objects to create or update multiple orders. | <code>[<br /> {<br /> "orderNumber": "TEST-ORDER-001",<br /> "orderDate": "2023-09-08T12:34:56.000Z",<br /> "orderStatus": "awaiting_shipment",<br /> "billTo": {<br /> "name": "John Doe",<br /> "street1": "123 Main St",<br /> "city": "Anytown",<br /> "state": "CA",<br /> "postalCode": "12345",<br /> "country": "US"<br /> },<br /> "shipTo": {<br /> "name": "John Doe",<br /> "street1": "123 Main St",<br /> "city": "Anytown",<br /> "state": "CA",<br /> "postalCode": "12345",<br /> "country": "US"<br /> }<br /> },<br /> {<br /> "orderNumber": "TEST-ORDER-002",<br /> "orderDate": "2023-09-09T12:34:56.000Z",<br /> "orderStatus": "awaiting_payment",<br /> "billTo": {<br /> "name": "Jane Doe",<br /> "street1": "456 Another St",<br /> "city": "Othertown",<br /> "state": "NY",<br /> "postalCode": "67890",<br /> "country": "US"<br /> },<br /> "shipTo": {<br /> "name": "Jane Doe",<br /> "street1": "456 Another St",<br /> "city": "Othertown",<br /> "state": "NY",<br /> "postalCode": "67890",<br /> "country": "US"<br /> }<br /> }<br />]</code> |
 | Connection   |                                                                        |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 
-### Create or Update Order
+### Create or Update Order {#createorupdateorder}
 
 Create a new order or update an existing one.
 
@@ -86,7 +86,7 @@ Create a new order or update an existing one.
 | Field            | A list of additional fields to include in the order.                                                                                                                               |                                                                                                                                                                                                                                                                          |
 | Debug Request    | Enabling this flag will log out the current request.                                                                                                                               | false                                                                                                                                                                                                                                                                    |
 
-### Create Shipment Label
+### Create Shipment Label {#createshipmentlabel}
 
 Creates a shipping label.
 
@@ -102,7 +102,7 @@ Creates a shipping label.
 | Origin Address    | Provide the origin address in JSON format.                                              | <code>{<br /> "name": "John Smith",<br /> "company": "JS Company",<br /> "street1": "456 Elm St",<br /> "city": "San Francisco",<br /> "state": "CA",<br /> "postalCode": "94107",<br /> "country": "US",<br /> "phone": "987-654-3210",<br /> "residential": false<br />}</code> |
 | Field             | A list of additional fields to include in the shipment.                                 |                                                                                                                                                                                                                                                                                   |
 
-### Create Warehouse
+### Create Warehouse {#createwarehouse}
 
 Adds a Ship From Location (formerly known as warehouse) to your account.
 
@@ -114,7 +114,7 @@ Adds a Ship From Location (formerly known as warehouse) to your account.
 | Return Address       | The return address. If not specified, the origin address will be used.   |         |
 | Is Default Warehouse | Specifies whether or not this will be your default Ship From Location.   | false   |
 
-### Deactivate Store
+### Deactivate Store {#deactivatestore}
 
 Deactivates the specified store.
 
@@ -123,7 +123,7 @@ Deactivates the specified store.
 | Connection |                                              |         |
 | Store ID   | Unique identifier for the store to retrieve. |         |
 
-### Delete Instanced Webhooks
+### Delete Instanced Webhooks {#deleteinstancedwebhooks}
 
 Deletes all webhooks that point to a flow in this instance.
 
@@ -131,7 +131,7 @@ Deletes all webhooks that point to a flow in this instance.
 | ---------- | -------- | ------- |
 | Connection |          |         |
 
-### Delete Order
+### Delete Order {#deleteorder}
 
 Soft delete an order from the database, setting it to inactive.
 
@@ -140,7 +140,7 @@ Soft delete an order from the database, setting it to inactive.
 | Order ID   | The system generated identifier for the Order. |         |
 | Connection |                                                |         |
 
-### Delete Warehouse
+### Delete Warehouse {#deletewarehouse}
 
 Removes a warehouse (or Ship From location) from ShipStation's UI. Sets it to Inactive status.
 
@@ -149,7 +149,7 @@ Removes a warehouse (or Ship From location) from ShipStation's UI. Sets it to In
 | Connection   |                                                  |         |
 | Warehouse ID | Unique identifier for the warehouse to retrieve. |         |
 
-### Get Customer
+### Get Customer {#getcustomer}
 
 Retrieve a specific customer by their system generated identifier
 
@@ -158,7 +158,7 @@ Retrieve a specific customer by their system generated identifier
 | Customer ID | System generated identifier for the Customer. |         |
 | Connection  |                                               |         |
 
-### Get Order
+### Get Order {#getorder}
 
 Retrieve a single order from the database.
 
@@ -167,7 +167,7 @@ Retrieve a single order from the database.
 | Order ID   | The system generated identifier for the Order. |         |
 | Connection |                                                |         |
 
-### Get Product
+### Get Product {#getproduct}
 
 Retrieve a specific product from the database by its ID.
 
@@ -176,7 +176,7 @@ Retrieve a specific product from the database by its ID.
 | Product ID | The system generated identifier for the Product. |         |
 | Connection |                                                  |         |
 
-### Get Store
+### Get Store {#getstore}
 
 Retrieve detailed information about a specific store.
 
@@ -185,7 +185,7 @@ Retrieve detailed information about a specific store.
 | Connection |                                              |         |
 | Store ID   | Unique identifier for the store to retrieve. |         |
 
-### Get Warehouse
+### Get Warehouse {#getwarehouse}
 
 Retrieve detailed information about a specific Ship From Location (formerly known as warehouse).
 
@@ -194,7 +194,7 @@ Retrieve detailed information about a specific Ship From Location (formerly know
 | Connection   |                                                  |         |
 | Warehouse ID | Unique identifier for the warehouse to retrieve. |         |
 
-### List Carriers
+### List Carriers {#listcarriers}
 
 List all shipping providers connected to this ShipStation account.
 
@@ -202,7 +202,7 @@ List all shipping providers connected to this ShipStation account.
 | ---------- | -------- | ------- |
 | Connection |          |         |
 
-### List Customers
+### List Customers {#listcustomers}
 
 Retrieve a list of customers based on specified criteria
 
@@ -218,7 +218,7 @@ Retrieve a list of customers based on specified criteria
 | Page Size      | Requested page size. Max value is 500.                                                                  |         |
 | Connection     |                                                                                                         |         |
 
-### List Fulfillments
+### List Fulfillments {#listfulfillments}
 
 Retrieve a list of fulfillments based on specified criteria
 
@@ -230,7 +230,7 @@ Retrieve a list of fulfillments based on specified criteria
 | Page           | Page number.                                                                         |         |
 | Page Size      | Requested page size. Max value is 500.                                               |         |
 
-### List Orders
+### List Orders {#listorders}
 
 Retrieve a list of orders based on specified criteria.
 
@@ -242,7 +242,7 @@ Retrieve a list of orders based on specified criteria.
 | Page Size     | Requested page size. Max value is 500. |         |
 | Connection    |                                        |         |
 
-### List Packages
+### List Packages {#listpackages}
 
 Retrieves a list of packages for the specified carrier.
 
@@ -251,7 +251,7 @@ Retrieves a list of packages for the specified carrier.
 | Carrier Code | The carrier's code |         |
 | Connection   |                    |         |
 
-### List Products
+### List Products {#listproducts}
 
 Obtains a list of products that match the specified criteria.
 
@@ -271,7 +271,7 @@ Obtains a list of products that match the specified criteria.
 | Page Size           | Requested page size. Max value is 500.                                     |         |
 | Show Inactive       | Determines whether inactive stores will be returned in the list of stores. | false   |
 
-### List Services
+### List Services {#listservices}
 
 Retrieves the list of available shipping services provided by the specified carrier.
 
@@ -280,7 +280,7 @@ Retrieves the list of available shipping services provided by the specified carr
 | Carrier Code | The carrier's code |         |
 | Connection   |                    |         |
 
-### List Shipments
+### List Shipments {#listshipments}
 
 Obtains a list of shipments that match the specified criteria.
 
@@ -297,7 +297,7 @@ Obtains a list of shipments that match the specified criteria.
 | Page                   | Page number.                                                                                                |         |
 | Page Size              | Requested page size. Max value is 500.                                                                      |         |
 
-### List Stores
+### List Stores {#liststores}
 
 Retrieve the list of installed stores on the account.
 
@@ -307,7 +307,7 @@ Retrieve the list of installed stores on the account.
 | Show Inactive  | Determines whether inactive stores will be returned in the list of stores.                                    | false   |
 | Marketplace ID | Returns stores of this marketplace type. Provide as a string and it will be converted to a number internally. |         |
 
-### List Users
+### List Users {#listusers}
 
 Retrieve the list of users on the account.
 
@@ -316,7 +316,7 @@ Retrieve the list of users on the account.
 | Connection          |                                                                          |         |
 | Show Inactive Users | Determines whether inactive users will be returned in the list of users. | false   |
 
-### List Warehouses
+### List Warehouses {#listwarehouses}
 
 Retrieves a list of your Ship From Locations (formerly known as warehouses).
 
@@ -324,7 +324,7 @@ Retrieves a list of your Ship From Locations (formerly known as warehouses).
 | ---------- | -------- | ------- |
 | Connection |          |         |
 
-### List Webhooks
+### List Webhooks {#listwebhooks}
 
 Retrieves a list of registered webhooks for the account.
 
@@ -332,7 +332,7 @@ Retrieves a list of registered webhooks for the account.
 | ---------- | -------- | ------- |
 | Connection |          |         |
 
-### Raw Request
+### Raw Request {#rawrequest}
 
 Send raw HTTP request to ShipStation
 
@@ -355,7 +355,7 @@ Send raw HTTP request to ShipStation
 | Use Exponential Backoff | Specifies whether to use a pre-defined exponential backoff strategy for retries.                                                    | false   |
 | Connection              |                                                                                                                                     |         |
 
-### Subscribe to Webhook
+### Subscribe to Webhook {#subscribetowebhook}
 
 Subscribes to a specific type of webhook in ShipStation.
 
@@ -367,7 +367,7 @@ Subscribes to a specific type of webhook in ShipStation.
 | Store ID      | If passed in, the webhooks will only be triggered for this store_id. |         |
 | Friendly Name | Display name for the webhook.                                        |         |
 
-### Unsubscribe to Webhook
+### Unsubscribe to Webhook {#unsubscribetowebhook}
 
 Unsubscribes from a specific type of webhook in ShipStation.
 
@@ -376,7 +376,7 @@ Unsubscribes from a specific type of webhook in ShipStation.
 | Connection |                                                                    |         |
 | Webhook ID | A unique ID generated by ShipStation and assigned to each webhook. |         |
 
-### Update Product
+### Update Product {#updateproduct}
 
 Updates an existing product.
 
@@ -386,7 +386,7 @@ Updates an existing product.
 | Product Data | The complete data for updating the product. This call does not support partial updates. | <code>{<br /> "aliases": null,<br /> "productId": 123456789,<br /> "sku": "BEAU-000"<br />}</code> |
 | Connection   |                                                                                         |                                                                                                    |
 
-### Update Store
+### Update Store {#updatestore}
 
 Updates an existing store.
 
@@ -396,7 +396,7 @@ Updates an existing store.
 | Store ID          | Unique identifier for the store to retrieve.                                       |                                                                                                                 |
 | Store Update Data | All the data needed to update an existing store. Must provide the entire resource. | <code>{<br /> "storeId": 12345,<br /> "storeName": "WooCommerce Store",<br /> "marketplaceId": 36<br />}</code> |
 
-### Update Warehouse
+### Update Warehouse {#updatewarehouse}
 
 Updates an existing Ship From Location (formerly known as warehouse).
 

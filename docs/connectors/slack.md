@@ -9,7 +9,7 @@ Send messages to Slack channels and users
 
 ## Connections
 
-### Slack OAuth 2.0
+### Slack OAuth 2.0 {#oauth2}
 
 Authenticate requests to Slack using values obtained from the developer console.
 
@@ -82,11 +82,11 @@ Read about how OAuth 2.0 works [here](../oauth2.md).
 | Signing Secret |                                                                                                                                                                                                                                                                                        |                                                                                               |
 | Is User        | Flip the flag to true if you want to access the API as a User. If flipped you must also provide a 'user_scope' query parameter to the end of the Authorize URL. Leaving the flag false will grant you a Bot token instead.                                                             | false                                                                                         |
 
-### Slack Webhook URL
+### Slack Webhook URL {#webhookurl}
 
 Authenticate requests to Slack using a Webhook URL.
 
-The [Slack Message from Webhook](#slack-message-from-webhook) and the [Slack Block Message from Webhook](#slack-block-message-from-webhook) actions are the only Slack actions that do not authenticate with OAuth.
+The [Slack Message from Webhook](#postslackmessage) and the [Slack Block Message from Webhook](#postwebhookblockmessage) actions are the only Slack actions that do not authenticate with OAuth.
 Instead, it uses Slack [Incoming Webhooks](https://api.slack.com/messaging/webhooks).
 For your customers to use this authorization method, they will need to create their own Slack apps and incoming webhooks.
 
@@ -104,7 +104,7 @@ To generate a Slack incoming webhook URL:
 
 ## Triggers
 
-### App Webhook
+### App Webhook {#slashcommandwebhook}
 
 Trigger for handling slash command and modal webhooks from Slack
 
@@ -113,7 +113,7 @@ Trigger for handling slash command and modal webhooks from Slack
 | Response Body |          |            |
 | Content Type  |          | text/plain |
 
-### Events API Webhook
+### Events API Webhook {#webhook}
 
 Receive and validate webhook requests from Slack's Events API for webhooks you configure.
 
@@ -123,7 +123,7 @@ Receive and validate webhook requests from Slack's Events API for webhooks you c
 
 ## Actions
 
-### Archive Conversation
+### Archive Conversation {#archiveconversation}
 
 Archive an existing conversation
 
@@ -132,7 +132,7 @@ Archive an existing conversation
 | Channel Name or ID | The name or static ID of the Slack channel. |         |
 | Connection         | The connection to use                       |         |
 
-### Close Conversation
+### Close Conversation {#closeconversation}
 
 Close an existing conversation
 
@@ -141,7 +141,7 @@ Close an existing conversation
 | Conversation Name | The name of the Slack conversation. |         |
 | Connection        | The connection to use               |         |
 
-### Conversation Exists
+### Conversation Exists {#conversationexists}
 
 Returns true if the conversation already exists
 
@@ -150,7 +150,7 @@ Returns true if the conversation already exists
 | Channel Name or ID | The name or static ID of the Slack channel. |         |
 | Connection         | The connection to use                       |         |
 
-### Create Conversation
+### Create Conversation {#createconversation}
 
 Create a new conversation
 
@@ -161,7 +161,7 @@ Create a new conversation
 | Team Id           | The Id of the Slack team.                                      |         |
 | Connection        | The connection to use                                          |         |
 
-### Delete a pending scheduled message
+### Delete a pending scheduled message {#deletependingmessage}
 
 Delete the content and metadata of a pending scheduled message from a queue
 
@@ -171,7 +171,7 @@ Delete the content and metadata of a pending scheduled message from a queue
 | Channel ID | The static ID of the Slack channel.                                |         |
 | Connection | The connection to use                                              |         |
 
-### Delete message
+### Delete message {#deletemessage}
 
 Delete the content and metadata of an existing message
 
@@ -181,7 +181,7 @@ Delete the content and metadata of an existing message
 | Channel ID | The static ID of the Slack channel.                                |         |
 | Connection | The connection to use                                              |         |
 
-### Get Conversation History
+### Get Conversation History {#getconversationshistory}
 
 Get the history of a conversation
 
@@ -197,7 +197,7 @@ Get the history of a conversation
 | Oldest               | Only messages after this Unix timestamp will be included in results                                        |         |
 | Connection           | The connection to use                                                                                      |         |
 
-### Get User By Email
+### Get User By Email {#getuser}
 
 Get a user's information by email
 
@@ -206,7 +206,7 @@ Get a user's information by email
 | Email      | Provide a string value for the email address of the user. |         |
 | Connection | The connection to use                                     |         |
 
-### Get User By ID
+### Get User By ID {#getuserbyid}
 
 Get a user's information by ID
 
@@ -215,7 +215,7 @@ Get a user's information by ID
 | User Id    | Provide a string value for the unique identifier of the user you want to send the message to. |         |
 | Connection | The connection to use                                                                         |         |
 
-### Invite User To Conversation
+### Invite User To Conversation {#inviteusertoconversation}
 
 Invite a user to an existing conversation
 
@@ -225,7 +225,7 @@ Invite a user to an existing conversation
 | User Id            | Provide a string value for the unique identifier of the user you want to send the message to. |         |
 | Connection         | The connection to use                                                                         |         |
 
-### Leave Conversations
+### Leave Conversations {#leaveconversation}
 
 Leave an existing conversation
 
@@ -234,7 +234,7 @@ Leave an existing conversation
 | Channel Name or ID | The name or static ID of the Slack channel. |         |
 | Connection         | The connection to use                       |         |
 
-### List Conversation Members
+### List Conversation Members {#listconversationmembers}
 
 List all members of a conversation
 
@@ -246,7 +246,7 @@ List all members of a conversation
 | Cursor             | Provide a cursor pointing to the page you would like to access |         |
 | Connection         | The connection to use                                          |         |
 
-### List Conversations
+### List Conversations {#listconversations}
 
 List all conversations
 
@@ -263,7 +263,7 @@ List all conversations
 | Include multi-party IM (mpim) channels? |                                                                                    | false   |
 | Include IM channels?                    |                                                                                    | false   |
 
-### List Files
+### List Files {#listfiles}
 
 List all available files
 
@@ -273,7 +273,7 @@ List all available files
 | Fetch All  | Make the action handle pagination, returning all results.      | false   |
 | Cursor     | Provide a cursor pointing to the page you would like to access |         |
 
-### List Scheduled Messages
+### List Scheduled Messages {#listscheduledmessages}
 
 List all scheduled messages
 
@@ -281,7 +281,7 @@ List all scheduled messages
 | ---------- | --------------------- | ------- |
 | Connection | The connection to use |         |
 
-### List Users
+### List Users {#listusers}
 
 List Users
 
@@ -293,7 +293,7 @@ List Users
 | Team Id    | The Id of the Slack team.                                      |         |
 | Connection | The connection to use                                          |         |
 
-### List Users Conversations
+### List Users Conversations {#listusersconversations}
 
 List Users Conversations
 
@@ -306,7 +306,7 @@ List Users Conversations
 | Team Id    | The Id of the Slack team.                                                                     |         |
 | Connection | The connection to use                                                                         |         |
 
-### Open Views
+### Open Views {#openview}
 
 Open a view for a user.
 
@@ -316,7 +316,7 @@ Open a view for a user.
 | Trigger ID | Exchange a trigger to post to the user.                                                              |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 | Connection | The connection to use                                                                                |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 
-### Post Block Message
+### Post Block Message {#postblockmessage}
 
 Post a message to a slack channel
 
@@ -329,7 +329,7 @@ Post a message to a slack channel
 | Connection         | The connection to use                                                                                                                                                        |                                                                                                                                                                          |
 | Message Id         | A unique identifier of a message or thread to reply to (thread_ts)                                                                                                           |                                                                                                                                                                          |
 
-### Post Ephemeral Message
+### Post Ephemeral Message {#postephemeralmessage}
 
 Post an ephemeral message to a user or channel
 
@@ -341,7 +341,7 @@ Post an ephemeral message to a user or channel
 | Message            | The message to send the Slack channel.                                                                 |         |
 | Connection         | The connection to use                                                                                  |         |
 
-### Post Message
+### Post Message {#postmessage}
 
 Post a message to a slack channel
 
@@ -353,7 +353,7 @@ Post a message to a slack channel
 | Connection         | The connection to use                                                                                  |         |
 | Message Id         | A unique identifier of a message or thread to reply to (thread_ts)                                     |         |
 
-### Publish View
+### Publish View {#publishview}
 
 Publish a static view for a User.
 
@@ -363,7 +363,7 @@ Publish a static view for a User.
 | User Id    | Provide a string value for the unique identifier of the user you want to send the message to.        |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 | Connection | The connection to use                                                                                |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 
-### Push Views
+### Push Views {#pushview}
 
 Push a view onto the stack of a root view.
 
@@ -373,7 +373,7 @@ Push a view onto the stack of a root view.
 | Trigger ID | Exchange a trigger to post to the user.                                                              |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 | Connection | The connection to use                                                                                |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 
-### Raw Request
+### Raw Request {#rawrequest}
 
 Send raw HTTP request to Slack
 
@@ -395,7 +395,7 @@ Send raw HTTP request to Slack
 | Max Retry Count         | The maximum number of retries to attempt. Specify 0 for no retries.                                                                                                                               | 0       |
 | Use Exponential Backoff | Specifies whether to use a pre-defined exponential backoff strategy for retries. When enabled, 'Retry Delay (ms)' is ignored.                                                                     | false   |
 
-### Rename Conversation
+### Rename Conversation {#renameconversation}
 
 Rename an existing conversation
 
@@ -405,7 +405,7 @@ Rename an existing conversation
 | New Conversation Name | The name of the Slack conversation. |         |
 | Connection            | The connection to use               |         |
 
-### Search All
+### Search All {#searchall}
 
 Searches for messages and files matching a query.
 
@@ -420,7 +420,7 @@ Searches for messages and files matching a query.
 | Team Id        | Encoded team id to search in, required if org token is used                                                  |         |
 | Connection     | The connection to use                                                                                        |         |
 
-### Search Files
+### Search Files {#searchfiles}
 
 Searches for files matching a query.
 
@@ -435,7 +435,7 @@ Searches for files matching a query.
 | Team Id        | Encoded team id to search in, required if org token is used                                                  |         |
 | Connection     | The connection to use                                                                                        |         |
 
-### Search Messages
+### Search Messages {#searchmessages}
 
 Searches for messages matching a query.
 
@@ -450,7 +450,7 @@ Searches for messages matching a query.
 | Team Id        | Encoded team id to search in, required if org token is used                                                  |         |
 | Connection     | The connection to use                                                                                        |         |
 
-### Set Conversation Purpose
+### Set Conversation Purpose {#setconversationpurpose}
 
 Set the purpose of an existing conversation
 
@@ -460,7 +460,7 @@ Set the purpose of an existing conversation
 | Connection           | The connection to use                                             |         |
 | Conversation Purpose | Provide a string value for the purpose of the given conversation. |         |
 
-### Set Conversation Topic
+### Set Conversation Topic {#setconversationtopic}
 
 Set the purpose of an existing conversation
 
@@ -471,7 +471,7 @@ Set the purpose of an existing conversation
 | User Id            | Provide a string value for the unique identifier of the user you want to send the message to. |         |
 | Conversation Topic | Provide a string value for the topic of the given conversation.                               |         |
 
-### Slack Block Message From Webhook
+### Slack Block Message From Webhook {#postwebhookblockmessage}
 
 Post a block formatted message to a Slack channel from a webhook URL
 
@@ -481,7 +481,7 @@ Post a block formatted message to a Slack channel from a webhook URL
 | Alt Message | This message will override if your block cannot be sent                                                                                                                      |                                                                                                                                                                          |
 | Blocks      | A JSON array containing blocks (objects) that make up the desired message. Use Slack's Block Kit Builder (https://app.slack.com/block-kit-builder/) to build block messages. | <code>{<br /> "blocks": [<br /> {<br /> "type": "section",<br /> "text": {<br /> "type": "plain_text",<br /> "text": "Hello world"<br /> }<br /> }<br /> ]<br />}</code> |
 
-### Slack Message From Webhook
+### Slack Message From Webhook {#postslackmessage}
 
 Post a message to a Slack channel from a webhook URL
 
@@ -490,7 +490,7 @@ Post a message to a Slack channel from a webhook URL
 | Connection | The connection to use                  |         |
 | Message    | The message to send the Slack channel. |         |
 
-### Update Message
+### Update Message {#updatemessage}
 
 Update the contents of an existing message
 
@@ -501,7 +501,7 @@ Update the contents of an existing message
 | Channel ID | The static ID of the Slack channel.                                |         |
 | Connection | The connection to use                                              |         |
 
-### Update Views
+### Update Views {#updateview}
 
 Update an existing view.
 
@@ -512,7 +512,7 @@ Update an existing view.
 | External ID | A unique identifier of the view to be updated. Either view_id or external_id is required.            |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 | Connection  | The connection to use                                                                                |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 
-### Upload File
+### Upload File {#uploadfile}
 
 Upload a new file to a slack conversation
 

@@ -9,7 +9,7 @@ SAP SuccessFactors is a human resources platform that provides cloud-based solut
 
 ## Connections
 
-### API Key Authentication
+### API Key Authentication {#sap-successfactors-api-key-authentication}
 
 API Key Authentication for SAP SuccessFactors Connection
 
@@ -65,7 +65,7 @@ Save both `private.pem` (private key) and `public.pem` (certificate) files for l
 | API Server              | Your SAP SuccessFactors api server, if you are not sure, please contact your SAP SuccessFactors administrator. If empty the sandbox environment will be used (sandbox.api.sap.com) |         |
 | Protocol                | The SAP SuccessFactors protocol to use                                                                                                                                             |         |
 
-### Basic Authentication
+### Basic Authentication {#sap-successfactors-basic-authentication}
 
 Basic Authentication for SAP SuccessFactors Connection
 
@@ -90,7 +90,7 @@ Basic Authentication for SAP SuccessFactors Connection
 
 ## Actions
 
-### Create a Record
+### Create a Record {#createrecord}
 
 Create a new record in component
 
@@ -100,7 +100,7 @@ Create a new record in component
 | Additional Inputs | Additional inputs to be passed to the action |         |
 | Connection        |                                              |         |
 
-### Create Candidate
+### Create Candidate {#createcandidate}
 
 Add a new entity to Candidate
 
@@ -113,7 +113,7 @@ Add a new entity to Candidate
 | Additional Inputs | Additional inputs to be passed to the action |         |
 | Connection        |                                              |         |
 
-### Create Job Application
+### Create Job Application {#createjobapplication}
 
 Add a new entity to JobApplication
 
@@ -124,7 +124,7 @@ Add a new entity to JobApplication
 | Additional Inputs  | Additional inputs to be passed to the action                    |         |
 | Connection         |                                                                 |         |
 
-### Create Job Requisition
+### Create Job Requisition {#createjobrequisition}
 
 Add a new entity to JobRequisition
 
@@ -134,7 +134,7 @@ Add a new entity to JobRequisition
 | Additional Inputs | The required fields for the selected template |         |
 | Connection        |                                               |         |
 
-### Create Onboarding Candidate Info
+### Create Onboarding Candidate Info {#createonboardingcandidateinfo}
 
 Add a new entity to OnboardingCandidateInfo
 
@@ -143,7 +143,7 @@ Add a new entity to OnboardingCandidateInfo
 | Additional Inputs | Additional inputs to be passed to the action |         |
 | Connection        |                                              |         |
 
-### Delete Job Requisition
+### Delete Job Requisition {#deletejobrequisition}
 
 Delete an entity from JobRequisition
 
@@ -152,7 +152,7 @@ Delete an entity from JobRequisition
 | Job Requisition ID | The ID of the job requisition to delete |         |
 | Connection         |                                         |         |
 
-### Delete Onboarding Candidate Info
+### Delete Onboarding Candidate Info {#deleteonboardingcandidateinfo}
 
 Delete an entity from OnboardingCandidateInfo
 
@@ -161,7 +161,7 @@ Delete an entity from OnboardingCandidateInfo
 | Applicant ID | The ID of the applicant to retrieve |         |
 | Connection   |                                     |         |
 
-### Delete Record
+### Delete Record {#deleterecord}
 
 Delete an existing record in component
 
@@ -171,7 +171,7 @@ Delete an existing record in component
 | Record Type ID | The ID of the record to delete |         |
 | Connection     |                                |         |
 
-### Get Candidate
+### Get Candidate {#getcandidate}
 
 Get entity from Candidate by key
 
@@ -181,7 +181,7 @@ Get entity from Candidate by key
 | Select       | Select properties to be returned    |         |
 | Connection   |                                     |         |
 
-### Get Job Application
+### Get Job Application {#getjobapplication}
 
 Get entity from JobApplication by key
 
@@ -191,7 +191,7 @@ Get entity from JobApplication by key
 | Select             | Select properties to be returned          |         |
 | Connection         |                                           |         |
 
-### Get Job Requisition
+### Get Job Requisition {#getjobrequisition}
 
 Get entity from JobRequisition by key
 
@@ -201,7 +201,7 @@ Get entity from JobRequisition by key
 | Select             | Select properties to be returned          |         |
 | Connection         |                                           |         |
 
-### Get Onboarding Candidate Info
+### Get Onboarding Candidate Info {#getonboardingcandidateinfo}
 
 Get entity from OnboardingCandidateInfo by key
 
@@ -211,7 +211,7 @@ Get entity from OnboardingCandidateInfo by key
 | Select       | Select properties to be returned    |         |
 | Connection   |                                     |         |
 
-### Get Record
+### Get Record {#getrecord}
 
 Retrieve a single record from component
 
@@ -222,7 +222,7 @@ Retrieve a single record from component
 | Select         | Select properties to be returned      |         |
 | Connection     |                                       |         |
 
-### List Candidates
+### List Candidates {#listcandidates}
 
 Get entities from Candidate
 
@@ -240,7 +240,7 @@ Get entities from Candidate
 | Custom Query Params | Custom fields filter                                                                     |         |
 | Connection          |                                                                                          |         |
 
-### List Job Applications
+### List Job Applications {#listjobapplications}
 
 Get entities from JobApplication
 
@@ -258,7 +258,7 @@ Get entities from JobApplication
 | Custom Query Params | Custom fields filter                                                                     |         |
 | Connection          |                                                                                          |         |
 
-### List Job Requisitions
+### List Job Requisitions {#listjobrequisitions}
 
 Get entities from JobRequisition
 
@@ -276,7 +276,7 @@ Get entities from JobRequisition
 | Custom Query Params | Custom fields filter                                                                     |         |
 | Connection          |                                                                                          |         |
 
-### List Onboarding Candidate Info
+### List Onboarding Candidate Info {#listonboardingcandidateinfo}
 
 Get entities from OnboardingCandidateInfo
 
@@ -294,7 +294,7 @@ Get entities from OnboardingCandidateInfo
 | Custom Query Params | Custom fields filter                                                                     |         |
 | Connection          |                                                                                          |         |
 
-### List Records
+### List Records {#listrecords}
 
 Retrieve a list of records from component
 
@@ -313,7 +313,7 @@ Retrieve a list of records from component
 | Custom Query Params | Custom fields filter                                                                     |         |
 | Connection          |                                                                                          |         |
 
-### Raw Request
+### Raw Request {#rawrequest}
 
 Send raw HTTP request to the SAP SuccessFactors API
 
@@ -336,7 +336,7 @@ Send raw HTTP request to the SAP SuccessFactors API
 | Max Retry Count         | The maximum number of retries to attempt. Specify 0 for no retries.                                                                                                                                      | 0       |
 | Use Exponential Backoff | Specifies whether to use a pre-defined exponential backoff strategy for retries. When enabled, 'Retry Delay (ms)' is ignored.                                                                            | false   |
 
-### Update Candidate
+### Update Candidate {#updatecandidate}
 
 Update an entity in Candidate
 
@@ -350,7 +350,7 @@ Update an entity in Candidate
 | Additional Inputs | Additional inputs to be passed to the action |         |
 | Connection        |                                              |         |
 
-### Update Job Application
+### Update Job Application {#updatejobapplication}
 
 Update an entity in JobApplication
 
@@ -362,7 +362,7 @@ Update an entity in JobApplication
 | Additional Inputs  | Additional inputs to be passed to the action |         |
 | Connection         |                                              |         |
 
-### Update Job Requisition
+### Update Job Requisition {#updatejobrequisition}
 
 Update an entity in JobRequisition
 
@@ -372,7 +372,7 @@ Update an entity in JobRequisition
 | Additional Inputs  | The template fields to update             |         |
 | Connection         |                                           |         |
 
-### Update Onboarding Candidate Info
+### Update Onboarding Candidate Info {#updateonboardingcandidateinfo}
 
 Update an entity in OnboardingCandidateInfo
 
@@ -381,7 +381,7 @@ Update an entity in OnboardingCandidateInfo
 | Applicant ID | The ID of the applicant to retrieve |         |
 | Connection   |                                     |         |
 
-### Update Record
+### Update Record {#updaterecord}
 
 Update an existing record in component
 

@@ -9,7 +9,7 @@ Transform data using a provided Liquid Template
 
 ## Actions
 
-### Render Template
+### Render Template {#transform}
 
 Receives provided json data and transforms it into a new format using a Liquid Template
 

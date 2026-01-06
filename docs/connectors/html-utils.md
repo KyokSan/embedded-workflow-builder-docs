@@ -9,7 +9,7 @@ Helpful HTML-related functions for building HTML documents and HTML-based emails
 
 ## Actions
 
-### Convert to Inline CSS
+### Convert to Inline CSS {#convertinlinecss}
 
 Convert an HTML document to use inline styles
 
@@ -17,7 +17,7 @@ Convert an HTML document to use inline styles
 | ----- | -------- | ------- |
 | HTML  |          |         |
 
-### Format HTML
+### Format HTML {#formathtml}
 
 Apply prettier to an HTML document
 
@@ -25,7 +25,7 @@ Apply prettier to an HTML document
 | ----- | -------- | ------- |
 | HTML  |          |         |
 
-### Get HTML from URL
+### Get HTML from URL {#gethtmlfromurl}
 
 Fetch HTML content from a URL
 
@@ -33,7 +33,7 @@ Fetch HTML content from a URL
 | ----- | ---------------------------------- | ------- |
 | URL   | The URL to fetch HTML content from |         |
 
-### HTML to Plaintext
+### HTML to Plaintext {#htmltoplaintext}
 
 Convert an HTML document to plaintext
 
@@ -41,7 +41,7 @@ Convert an HTML document to plaintext
 | ----- | -------- | ------- |
 | HTML  |          |         |
 
-### Strip HTML Tags
+### Strip HTML Tags {#striphtmltags}
 
 Remove all HTML tags from a string
 

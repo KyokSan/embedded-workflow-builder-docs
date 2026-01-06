@@ -9,7 +9,7 @@ Interact with an MQTT Queue
 
 ## Connections
 
-### MQTT Connection
+### MQTT Connection {#mqtt}
 
 Authenticate requests to an MQTT server.
 
@@ -23,7 +23,7 @@ Authenticate requests to an MQTT server.
 
 ## Actions
 
-### Publish Message
+### Publish Message {#publish}
 
 Publish a message to a MQTT topic.
 

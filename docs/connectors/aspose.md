@@ -9,7 +9,7 @@ Aspose is a robust file manipulation service that can manage various document an
 
 ## Connections
 
-### Aspose Connection
+### Aspose Connection {#apikey}
 
 Aspose Api Key Flow
 
@@ -26,7 +26,7 @@ and go to the Applications view. Once you create a new application, Aspose will 
 
 ## Actions
 
-### Convert Cloud Storage Document
+### Convert Cloud Storage Document {#convertcloudstoragedocument}
 
 Converts a document in cloud storage to the specified format.
 
@@ -42,7 +42,7 @@ Converts a document in cloud storage to the specified format.
 | Storage       | Original document storage.                                                                             |         |
 | Debug Request | Enabling this flag will log out the current request.                                                   | false   |
 
-### Convert Diagram
+### Convert Diagram {#convertdiagram}
 
 Converts document from the request's content to the specified format.
 
@@ -53,7 +53,7 @@ Converts document from the request's content to the specified format.
 | File Name     | Download Document Name                               |         |
 | Debug Request | Enabling this flag will log out the current request. | false   |
 
-### Convert HTML to PDF
+### Convert HTML to PDF {#converthtmltopdf}
 
 Converts HTML file in storage to PDF format.
 
@@ -75,7 +75,7 @@ Converts HTML file in storage to PDF format.
 | Margin Top         | Page margin top (in px).                                                                                                                                                                                                                |         |
 | Debug Request      | Enabling this flag will log out the current request.                                                                                                                                                                                    | false   |
 
-### Convert Local Document
+### Convert Local Document {#convertlocaldocument}
 
 Converts a document on a local drive to the specified format.
 
@@ -91,7 +91,7 @@ Converts a document on a local drive to the specified format.
 | Document              | The document to convert.                                                                                                                                                           |         |
 | Debug Request         | Enabling this flag will log out the current request.                                                                                                                               | false   |
 
-### Convert PDF to DOC
+### Convert PDF to DOC {#convertpdftodoc}
 
 Converts PDF document to DOC format.
 
@@ -115,7 +115,7 @@ Converts PDF document to DOC format.
 | Connection                      |                                                                                                                                                                                                                                         |         |
 | Debug Request                   | Enabling this flag will log out the current request.                                                                                                                                                                                    | false   |
 
-### Convert PDF to HTML
+### Convert PDF to HTML {#convertpdftohtml}
 
 Converts a PDF to HTML format.
 
@@ -157,7 +157,7 @@ Converts a PDF to HTML format.
 | Minimal Line Width                                | Minimal line width.                                                                                                                                                                                                                                                                                                                                                                                                                                                   |              |
 | Debug Request                                     | Enabling this flag will log out the current request.                                                                                                                                                                                                                                                                                                                                                                                                                  | false        |
 
-### Copy File
+### Copy File {#copyfile}
 
 Copies a file.
 
@@ -171,7 +171,7 @@ Copies a file.
 | File Version ID          | File version ID to download.                                              |         |
 | Debug Request            | Enabling this flag will log out the current request.                      | false   |
 
-### Copy Folder
+### Copy Folder {#copyfolder}
 
 Copies a folder.
 
@@ -184,7 +184,7 @@ Copies a folder.
 | Destination Storage Name | Destination storage name.                            |         |
 | Debug Request            | Enabling this flag will log out the current request. | false   |
 
-### Create Document
+### Create Document {#createdocument}
 
 Creates a new document in cloud storage in the format, determined by the file extension. All save format extensions are supported.
 
@@ -194,7 +194,7 @@ Creates a new document in cloud storage in the format, determined by the file ex
 | File Name     | Name of the file to upload.                          |         |
 | Debug Request | Enabling this flag will log out the current request. | false   |
 
-### Create Folder
+### Create Folder {#createfolder}
 
 Creates a folder.
 
@@ -205,7 +205,7 @@ Creates a folder.
 | Storage Name  | Aspose's storage name to where the folder gets read or created. |         |
 | Debug Request | Enabling this flag will log out the current request.            | false   |
 
-### Delete File
+### Delete File {#deletefile}
 
 Deletes a file.
 
@@ -217,7 +217,7 @@ Deletes a file.
 | Storage Name    | Storage name.                                                                  |         |
 | Debug Request   | Enabling this flag will log out the current request.                           | false   |
 
-### Delete Folder
+### Delete Folder {#deletefolder}
 
 Deletes a folder.
 
@@ -229,7 +229,7 @@ Deletes a folder.
 | Recursive     | Enable to delete folders, subfolders and files recursively.     | false   |
 | Debug Request | Enabling this flag will log out the current request.            | false   |
 
-### Download File
+### Download File {#downloadfile}
 
 Downloads a file.
 
@@ -241,7 +241,7 @@ Downloads a file.
 | Storage Name    | Storage name.                                                                  |         |
 | Debug Request   | Enabling this flag will log out the current request.                           | false   |
 
-### Get Diagram
+### Get Diagram {#getdiagram}
 
 Exports the document into the specified format.
 
@@ -253,7 +253,7 @@ Exports the document into the specified format.
 | Folder Path   | The folder path where original diagram is located.   |         |
 | Debug Request | Enabling this flag will log out the current request. | false   |
 
-### Get Document
+### Get Document {#getdocument}
 
 Reads common information from the document.
 
@@ -265,7 +265,7 @@ Reads common information from the document.
 | Storage Name  | Storage name.                                         |         |
 | Debug Request | Enabling this flag will log out the current request.  | false   |
 
-### Get Files List
+### Get Files List {#getfileslist}
 
 Get all files and folders within a folder.
 
@@ -276,7 +276,7 @@ Get all files and folders within a folder.
 | Storage Name  | Aspose's storage name to where the folder gets read or created. |         |
 | Debug Request | Enabling this flag will log out the current request.            | false   |
 
-### Load Web Document
+### Load Web Document {#loadwebdocument}
 
 Downloads a document from the web using URL and saves it to cloud storage in the specified format.
 
@@ -286,7 +286,7 @@ Downloads a document from the web using URL and saves it to cloud storage in the
 | Debug Request        | Enabling this flag will log out the current request. | false   |
 | Loading Document URL | The web document URL.                                |         |
 
-### Move File
+### Move File {#movefile}
 
 Moves a file.
 
@@ -300,7 +300,7 @@ Moves a file.
 | File Version ID          | File version ID to download.                                              |         |
 | Debug Request            | Enabling this flag will log out the current request.                      | false   |
 
-### Move Folder
+### Move Folder {#movefolder}
 
 Moves a folder.
 
@@ -313,7 +313,7 @@ Moves a folder.
 | Destination Storage Name | Destination storage name.                            |         |
 | Debug Request            | Enabling this flag will log out the current request. | false   |
 
-### Save Diagram As
+### Save Diagram As {#savediagramas}
 
 Converts document to destination format with detailed settings and saves result to storage.
 
@@ -328,7 +328,7 @@ Converts document to destination format with detailed settings and saves result 
 | Default Font            | The default font for the diagram.                                 |         |
 | Debug Request           | Enabling this flag will log out the current request.              | false   |
 
-### Save Document As
+### Save Document As {#savedocumentas}
 
 Converts a document in cloud storage to the specified format.
 
@@ -345,7 +345,7 @@ Converts a document in cloud storage to the specified format.
 | Storage               | Original document storage name.                                                                                                                                                                                                                                                         |         |
 | Debug Request         | Enabling this flag will log out the current request.                                                                                                                                                                                                                                    | false   |
 
-### Split Document
+### Split Document {#splitdocument}
 
 Splits a document into parts and saves them in the specified format.
 
@@ -364,7 +364,7 @@ Splits a document into parts and saves them in the specified format.
 | Folder                | Original document folder                                                                                                                         |         |
 | Debug Request         | Enabling this flag will log out the current request.                                                                                             | false   |
 
-### Upload File
+### Upload File {#uploadfile}
 
 Uploads a file.
 

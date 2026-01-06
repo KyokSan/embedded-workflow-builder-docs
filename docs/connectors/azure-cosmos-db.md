@@ -9,7 +9,7 @@ Manage databases, collections, and documents within Azure Cosmos DB.
 
 ## Connections
 
-### Master Key
+### Master Key {#cosmosmasterkey}
 
 Azure Cosmos DB Master Key
 
@@ -33,7 +33,7 @@ Use these values to configure the component connection.
 
 ## Actions
 
-### Create Collection
+### Create Collection {#createcollection}
 
 Create a new collection in a database
 
@@ -45,7 +45,7 @@ Create a new collection in a database
 | Partition Key Path | The path used as the partition key when creating the collection, e.g., `/category`.                                                                         |         |
 | Throughput (RU/s)  | The provisioned throughput for the collection in Request Units per second. <strong>Note:</strong> Serverless collections do not support setting throughput. |         |
 
-### Create Database
+### Create Database {#createdatabase}
 
 Create a new database in Cosmos DB
 
@@ -54,7 +54,7 @@ Create a new database in Cosmos DB
 | Connection  | Azure Cosmos DB connection configured with endpoint URL and access key. |         |
 | Database ID | The ID of the database.                                                 |         |
 
-### Create Document
+### Create Document {#createdocument}
 
 Create a new document in a collection
 
@@ -66,7 +66,7 @@ Create a new document in a collection
 | Document            | The document as JSON string.                                                            |         |
 | Partition Key Value | The value of the partition key for the document (required for partitioned collections). |         |
 
-### Delete Collection
+### Delete Collection {#deletecollection}
 
 Delete a collection from a database
 
@@ -76,7 +76,7 @@ Delete a collection from a database
 | Database ID   | The ID of the database.                                                 |         |
 | Collection ID | The ID of the collection.                                               |         |
 
-### Delete Database
+### Delete Database {#deletedatabase}
 
 Delete a database from Cosmos DB
 
@@ -85,7 +85,7 @@ Delete a database from Cosmos DB
 | Connection  | Azure Cosmos DB connection configured with endpoint URL and access key. |         |
 | Database ID | The ID of the database.                                                 |         |
 
-### Delete Document
+### Delete Document {#deletedocument}
 
 Delete a document from a collection
 
@@ -98,7 +98,7 @@ Delete a document from a collection
 | Partition Key Value | The value of the partition key for the document (required for partitioned collections). |         |
 | ETag                | The ETag value for optimistic concurrency control.                                      |         |
 
-### Get Collection
+### Get Collection {#getcollection}
 
 Get a specific collection by ID
 
@@ -108,7 +108,7 @@ Get a specific collection by ID
 | Database ID   | The ID of the database.                                                 |         |
 | Collection ID | The ID of the collection.                                               |         |
 
-### Get Database
+### Get Database {#getdatabase}
 
 Get a specific database by ID
 
@@ -117,7 +117,7 @@ Get a specific database by ID
 | Connection  | Azure Cosmos DB connection configured with endpoint URL and access key. |         |
 | Database ID | The ID of the database.                                                 |         |
 
-### Get Document
+### Get Document {#getdocument}
 
 Get a specific document by ID
 
@@ -129,7 +129,7 @@ Get a specific document by ID
 | Document ID         | The ID of the document.                                                                 |         |
 | Partition Key Value | The value of the partition key for the document (required for partitioned collections). |         |
 
-### List Collections
+### List Collections {#listcollections}
 
 List all collections in a database
 
@@ -138,7 +138,7 @@ List all collections in a database
 | Connection  | Azure Cosmos DB connection configured with endpoint URL and access key. |         |
 | Database ID | The ID of the database.                                                 |         |
 
-### List Databases
+### List Databases {#listdatabases}
 
 List all databases in the Cosmos DB account
 
@@ -146,7 +146,7 @@ List all databases in the Cosmos DB account
 | ---------- | ----------------------------------------------------------------------- | ------- |
 | Connection | Azure Cosmos DB connection configured with endpoint URL and access key. |         |
 
-### List Documents
+### List Documents {#listdocuments}
 
 List all documents in a collection
 
@@ -159,7 +159,7 @@ List all documents in a collection
 | Continuation Token | Token for pagination to get the next set of results.                                                                                                       |         |
 | Fetch All          | If enabled, retrieves all documents by automatically fetching every page of results. This overrides 'Max Item Count' and ignores any 'Continuation Token'. | false   |
 
-### Update Document
+### Update Document {#updatedocument}
 
 Update an existing document in a collection
 

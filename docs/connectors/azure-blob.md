@@ -9,7 +9,7 @@ Manage files and folders within Azure Blob Storage
 
 ## Connections
 
-### Connection String
+### Connection String {#connectionstring}
 
 Authenticates requests to Azure Blob Sotrage with a connection string.
 
@@ -21,7 +21,7 @@ Keep in mind this token will eventually expire. Make sure to configure an expira
 | ----------------- | ---------------------------------------------------------------- | ------- |
 | Connection String | Provide the connection string for your active directory account. |         |
 
-### Storage Shared Key
+### Storage Shared Key {#storagesharedkey}
 
 Authenticates requests to Azure Blob Sotrage with a Storage Shared Key of a account name and key.
 
@@ -35,7 +35,7 @@ You can obtain an account name / account key pair through the [Azure Portal](htt
 
 ## Actions
 
-### Append to Append Blob
+### Append to Append Blob {#appendtoappendblob}
 
 Append blocks to an existing append blob
 
@@ -46,7 +46,7 @@ Append blocks to an existing append blob
 | File Contents  | The contents to write to a blob. This can be a string of text, it can be binary data (like an image or PDF) that was generated in a previous step.   |         |
 | Connection     |                                                                                                                                                      |         |
 
-### Create Append Blob
+### Create Append Blob {#createappendblob}
 
 Create an empty append blob object (use "Append to Append Blob" to add blocks)
 
@@ -56,7 +56,7 @@ Create an empty append blob object (use "Append to Append Blob" to add blocks)
 | Blob Name      | A blob is a file that is saved in a 'container'. This represents the blob's key (file path). Include a leading /.                                    |         |
 | Connection     |                                                                                                                                                      |         |
 
-### Create Container
+### Create Container {#createcontainer}
 
 Create a container
 
@@ -65,7 +65,7 @@ Create a container
 | Container Name | Azure blob 'container' stores files. You can create a container within the Azure console. Container names contain only letters, numbers, and dashes. |         |
 | Connection     |                                                                                                                                                      |         |
 
-### Create Page Blob
+### Create Page Blob {#createpageblob}
 
 Create a page blob with a specific size (must be a multiple of 512 bytes)
 
@@ -76,7 +76,7 @@ Create a page blob with a specific size (must be a multiple of 512 bytes)
 | Page Blob Size | Space can be reserved in Azure Blob Store in 512-byte chunks. This must be a multiple of 512 (e.g. 1024, 1536, 2048, etc.).                          |         |
 | Connection     |                                                                                                                                                      |         |
 
-### Delete Blob
+### Delete Blob {#deleteblob}
 
 Delete a blob
 
@@ -86,7 +86,7 @@ Delete a blob
 | Blob Name      | A blob is a file that is saved in a 'container'. This represents the blob's key (file path). Include a leading /.                                    |         |
 | Connection     |                                                                                                                                                      |         |
 
-### Delete Container
+### Delete Container {#deletecontainer}
 
 Delete a container
 
@@ -95,7 +95,7 @@ Delete a container
 | Container Name | Azure blob 'container' stores files. You can create a container within the Azure console. Container names contain only letters, numbers, and dashes. |         |
 | Connection     |                                                                                                                                                      |         |
 
-### Download Blob
+### Download Blob {#downloadblob}
 
 Download a blob
 
@@ -105,7 +105,7 @@ Download a blob
 | Blob Name      | A blob is a file that is saved in a 'container'. This represents the blob's key (file path). Include a leading /.                                    |         |
 | Connection     |                                                                                                                                                      |         |
 
-### Generate Shared Access Signature URL
+### Generate Shared Access Signature URL {#generatesasurl}
 
 Generate a pre-signed URL (Shared Access Signature or SAS) for a blob
 
@@ -118,7 +118,7 @@ Generate a pre-signed URL (Shared Access Signature or SAS) for a blob
 | SAS Permissions | The permissions that are specified for the signedPermissions on the SAS token indicate which operations a client may perform on the resource. You can combine permissions to permit a client to perform multiple operations with the same SAS. Permissions must be provided in the following order: 'racwdxltmeop'. Examples of valid permissions settings for a container include: 'rw', 'rd', 'rl', 'wd', 'wl' and 'rl'. Full list of permissions and their meanings can be found at:https://learn.microsoft.com/en-us/rest/api/storageservices/create-service-sas#permissions-for-a-directory-container-or-blob |         |
 | SAS Expires On  | The time at which the Shared Access Signature becomes invalid. This must be in ISO 8601 format.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |         |
 
-### List Blobs
+### List Blobs {#listblobs}
 
 Get a list of blobs in a container
 
@@ -128,7 +128,7 @@ Get a list of blobs in a container
 | Prefix         | List only blobs prefixed with this string. For example, if you only want blobs in a directory called 'unprocessed', you can enter 'unprocessed/'. If this is left blank, all files in the selected bucket will be listed. |         |
 | Connection     |                                                                                                                                                                                                                           |         |
 
-### List Containers
+### List Containers {#listcontainers}
 
 Get a list of containers available in the account
 
@@ -136,7 +136,7 @@ Get a list of containers available in the account
 | ---------- | -------- | ------- |
 | Connection |          |         |
 
-### Resize Page Blob
+### Resize Page Blob {#resizepageblob}
 
 Resize an existing page blob (must be a multiple of 512 bytes)
 
@@ -147,7 +147,7 @@ Resize an existing page blob (must be a multiple of 512 bytes)
 | Page Blob Size | Space can be reserved in Azure Blob Store in 512-byte chunks. This must be a multiple of 512 (e.g. 1024, 1536, 2048, etc.).                          |         |
 | Connection     |                                                                                                                                                      |         |
 
-### Upload Block Blob
+### Upload Block Blob {#uploadblockblob}
 
 Upload file data to a block blob object
 
@@ -158,7 +158,7 @@ Upload file data to a block blob object
 | File Contents  | The contents to write to a blob. This can be a string of text, it can be binary data (like an image or PDF) that was generated in a previous step.   |         |
 | Connection     |                                                                                                                                                      |         |
 
-### Upload to Page Blob
+### Upload to Page Blob {#uploadtopageblob}
 
 Upload to an existing page blob (both data size and offset must be a multiple of 512)
 

@@ -9,7 +9,7 @@ Manage users, groups, applications, and authentication policies in Okta.
 
 ## Connections
 
-### API Token
+### API Token {#oktaapitokenconnection}
 
 Authenticate using an API token from your Okta Admin Console
 
@@ -18,7 +18,7 @@ Authenticate using an API token from your Okta Admin Console
 | Okta Domain | The base URL for the Okta API. Depending on your cloud environment, you can choose the correct one [here](https://developer.okta.com/docs/reference/api-overview/). |         |
 | API Token   | API Token generated in your Okta Admin Console. [Learn more](https://developer.okta.com/docs/guides/create-an-api-token/main/).                                     |         |
 
-### OAuth 2.0 Authorization Code
+### OAuth 2.0 Authorization Code {#oktaoauth2authorizationcode}
 
 Authenticates actions in all Okta's API services.
 
@@ -32,7 +32,7 @@ Read about how OAuth 2.0 works [here](../oauth2.md).
 | Client ID           | Client Id of your Okta's application. [Learn more](https://developer.okta.com/docs/guides/implement-grant-type/authcode/main/)                                      |         |
 | Client secret value | Client Secret generated in your Okta's application. [Learn more](https://developer.okta.com/docs/guides/implement-grant-type/authcode/main/).                       |         |
 
-### OAuth 2.0 Client Credentials
+### OAuth 2.0 Client Credentials {#oktaclientcredentialsorg}
 
 Use this to access Okta's own APIs (Users, Groups, Applications, etc.) to manage your Okta tenant using private_key_jwt authentication.
 
@@ -45,7 +45,7 @@ Use this to access Okta's own APIs (Users, Groups, Applications, etc.) to manage
 
 ## Triggers
 
-### Event Hook
+### Event Hook {#eventhook}
 
 Receive event hooks from Okta when a specified event occurs.
 
@@ -57,7 +57,7 @@ Receive event hooks from Okta when a specified event occurs.
 | Event Hook Filters       | The optional filter defined on a specific event type.   |         |
 | Connection               |                                                         |         |
 
-### New System Logs
+### New System Logs {#newsystemlogspollingtrigger}
 
 Fetches system logs created on a recurring schedule.
 
@@ -66,7 +66,7 @@ Fetches system logs created on a recurring schedule.
 | Filter     | A filter string to narrow down results. See Okta's documentation for supported filter fields and operators [click here](https://developer.okta.com/docs/api/openapi/okta-management/management/tag/User/#tag/User/operation/listUsers!in=query&path=filter&t=request). |         |
 | Connection |                                                                                                                                                                                                                                                                        |         |
 
-### New Users
+### New Users {#newuserspollingtrigger}
 
 Fetches users created on a recurring schedule.
 
@@ -74,7 +74,7 @@ Fetches users created on a recurring schedule.
 | ---------- | -------- | ------- |
 | Connection |          |         |
 
-### Updated Users
+### Updated Users {#updateduserspollingtrigger}
 
 Fetches users updated on a recurring schedule.
 
@@ -84,7 +84,7 @@ Fetches users updated on a recurring schedule.
 
 ## Actions
 
-### Activate Event Hook
+### Activate Event Hook {#activateeventhook}
 
 Activate a specific event hook.
 
@@ -93,7 +93,7 @@ Activate a specific event hook.
 | Event Hook ID | The ID of the event hook. |         |
 | Connection    |                           |         |
 
-### Activate User
+### Activate User {#activateuser}
 
 Activate a user by ID or login.
 
@@ -103,7 +103,7 @@ Activate a user by ID or login.
 | Send Email | When true, sends a deactivation email to the admin.                                                  | false   |
 | Connection |                                                                                                      |         |
 
-### Add User to Group
+### Add User to Group {#addusertogroup}
 
 Add a user to a group.
 
@@ -113,7 +113,7 @@ Add a user to a group.
 | User ID    | ID of an existing Okta user.         |         |
 | Connection |                                      |         |
 
-### Assign Application to User
+### Assign Application to User {#assignapplicationtouser}
 
 Assigns an application to a user with app-specific profile and credentials.
 
@@ -127,7 +127,7 @@ Assigns an application to a user with app-specific profile and credentials.
 | Profile        | The app-specific profile for the user.                             |         |
 | Connection     |                                                                    |         |
 
-### Clear User Sessions
+### Clear User Sessions {#clearusersessions}
 
 Clears all active sessions for a user, forcing re-authentication on next access.
 
@@ -138,7 +138,7 @@ Clears all active sessions for a user, forcing re-authentication on next access.
 | Forget Devices | Clears the user's remembered factors for all devices.              | false   |
 | Connection     |                                                                    |         |
 
-### Create Event Hook
+### Create Event Hook {#createeventhook}
 
 Create a new event hook.
 
@@ -154,7 +154,7 @@ Create a new event hook.
 | Event Hook Description    | The description of the event hook.                                                           |         |
 | Connection                |                                                                                              |         |
 
-### Create Group
+### Create Group {#creategroup}
 
 Create a group in Okta.
 
@@ -164,7 +164,7 @@ Create a group in Okta.
 | Group Description | A brief description of the group. |         |
 | Connection        |                                   |         |
 
-### Create User
+### Create User {#createuser}
 
 Create a new user.
 
@@ -193,7 +193,7 @@ Create a new user.
 | Profile Extra Attributes | List of additional profile attributes to include in the request. This can be used to include attributes that are not explicitly supported by this component. See [Okta's API documentation](https://developer.okta.com/docs/api/openapi/okta-management/management/tag/User/#tag/User/operation/updateUser!path=profile&t=request) for a list of supported attributes. |         |
 | Connection               |                                                                                                                                                                                                                                                                                                                                                                        |         |
 
-### Deactivate Event Hook
+### Deactivate Event Hook {#deactivateeventhook}
 
 Deactivate a specific event hook.
 
@@ -202,7 +202,7 @@ Deactivate a specific event hook.
 | Event Hook ID | The ID of the event hook. |         |
 | Connection    |                           |         |
 
-### Deactivate User
+### Deactivate User {#deactivateuser}
 
 Deactivate a user by ID or login.
 
@@ -212,7 +212,7 @@ Deactivate a user by ID or login.
 | Send Email | When true, sends a deactivation email to the admin.                                                  | false   |
 | Connection |                                                                                                      |         |
 
-### Delete All Event Hooks
+### Delete All Event Hooks {#deletealleventhooks}
 
 Delete an event hook by ID.
 
@@ -221,7 +221,7 @@ Delete an event hook by ID.
 | Event Hook URL | If provided, only event hooks with this URL will be deleted. If not provided, all event hooks will be deleted. |         |
 | Connection     |                                                                                                                |         |
 
-### Delete Event Hook
+### Delete Event Hook {#deleteeventhook}
 
 Delete an event hook by ID.
 
@@ -230,7 +230,7 @@ Delete an event hook by ID.
 | Event Hook ID | The ID of the event hook. |         |
 | Connection    |                           |         |
 
-### Delete Group
+### Delete Group {#deletegroup}
 
 Delete a group by ID.
 
@@ -239,7 +239,7 @@ Delete a group by ID.
 | Group ID   | The unique identifier for the group. |         |
 | Connection |                                      |         |
 
-### Delete User
+### Delete User {#deleteuser}
 
 Delete a user by ID or login.
 
@@ -249,7 +249,7 @@ Delete a user by ID or login.
 | Send Email | When true, sends a deactivation email to the admin.                                                  | false   |
 | Connection |                                                                                                      |         |
 
-### Get Application
+### Get Application {#getapplication}
 
 Retrieve an application by ID.
 
@@ -259,7 +259,7 @@ Retrieve an application by ID.
 | Expand         | Indicates whether to expand the credentials for the user. By default, credentials are not returned in the response. |         |
 | Connection     |                                                                                                                     |         |
 
-### Get Application User Assignment
+### Get Application User Assignment {#getapplicationuserassignment}
 
 Retrieves a specific user assignment for a specific app.
 
@@ -270,7 +270,7 @@ Retrieves a specific user assignment for a specific app.
 | Expand         | Indicates whether to expand the credentials for the user. By default, credentials are not returned in the response. |         |
 | Connection     |                                                                                                                     |         |
 
-### Get Event Hook
+### Get Event Hook {#geteventhook}
 
 Get an event hook by ID.
 
@@ -279,7 +279,7 @@ Get an event hook by ID.
 | Event Hook ID | The ID of the event hook. |         |
 | Connection    |                           |         |
 
-### Get Group
+### Get Group {#getgroup}
 
 Retrieve a group by ID.
 
@@ -288,7 +288,7 @@ Retrieve a group by ID.
 | Group ID   | The unique identifier for the group. |         |
 | Connection |                                      |         |
 
-### Get System Logs
+### Get System Logs {#getsystemlogs}
 
 Retrieves system log events for security monitoring and compliance auditing. Max 10000 records can be fetched at once.
 
@@ -304,7 +304,7 @@ Retrieves system log events for security monitoring and compliance auditing. Max
 | Sort Order | Specifies the sort order: asc or desc (for search queries only). Sorting is done in ASCII sort order (that is, by ASCII character value), but isn't case sensitive. sortOrder is ignored if sortBy isn't present.                                                      |         |
 | Connection |                                                                                                                                                                                                                                                                        |         |
 
-### Get User
+### Get User {#getuser}
 
 Retrieve a user by ID or login.
 
@@ -314,7 +314,7 @@ Retrieve a user by ID or login.
 | Expand     | Indicates whether to expand the credentials for the user. By default, credentials are not returned in the response. |         |
 | Connection |                                                                                                                     |         |
 
-### List Applications
+### List Applications {#listapplications}
 
 List applications with optional search and filtering.
 
@@ -330,7 +330,7 @@ List applications with optional search and filtering.
 | Include Non-Deleted | When true, both deleted and non-deleted applications are returned.                                                                                                                                                                                                     | false   |
 | Connection          |                                                                                                                                                                                                                                                                        |         |
 
-### List Event Hooks
+### List Event Hooks {#listeventhooks}
 
 List all event hooks.
 
@@ -338,7 +338,7 @@ List all event hooks.
 | ---------- | -------- | ------- |
 | Connection |          |         |
 
-### List Group Members
+### List Group Members {#listgroupmembers}
 
 Retrieves all users who are members of the specified group.
 
@@ -350,7 +350,7 @@ Retrieves all users who are members of the specified group.
 | Limit      | Specifies the number of results returned. Defaults to 200.                                              |         |
 | Connection |                                                                                                         |         |
 
-### List Groups
+### List Groups {#listgroups}
 
 List groups with optional search and filtering.
 
@@ -367,7 +367,7 @@ List groups with optional search and filtering.
 | Extra Parameters | List of additional parameters to include in the request. This can be used to include parameters that are not explicitly supported by this component. See Okta's API documentation for a list of supported parameters.                                                  |         |
 | Connection       |                                                                                                                                                                                                                                                                        |         |
 
-### List Policies
+### List Policies {#listpolicies}
 
 List policies with optional search and filtering.
 
@@ -384,7 +384,7 @@ List policies with optional search and filtering.
 | Resource ID | Reference to the associated authorization server.                                                                                                                                                    |         |
 | Connection  |                                                                                                                                                                                                      |         |
 
-### List Realms
+### List Realms {#listrealms}
 
 Lists all realms in your org.
 
@@ -398,7 +398,7 @@ Lists all realms in your org.
 | Sort Order | Specifies the sort order: asc or desc (for search queries only). Sorting is done in ASCII sort order (that is, by ASCII character value), but isn't case sensitive. sortOrder is ignored if sortBy isn't present.                                                 |         |
 | Connection |                                                                                                                                                                                                                                                                   |         |
 
-### List User Applications
+### List User Applications {#listuserapplications}
 
 List applications for a specific user.
 
@@ -407,7 +407,7 @@ List applications for a specific user.
 | ID         | An ID, login, or login shortname (as long as the shortname is unambiguous) of an existing Okta user. |         |
 | Connection |                                                                                                      |         |
 
-### List User Factors
+### List User Factors {#listuserfactors}
 
 Lists all enrolled factors for the specified user that are included in the highest priority authenticator enrollment policy that applies to the user.
 
@@ -416,7 +416,7 @@ Lists all enrolled factors for the specified user that are included in the highe
 | User ID    | ID of an existing Okta user. |         |
 | Connection |                              |         |
 
-### List User Groups
+### List User Groups {#listusergroups}
 
 List groups for a specific user.
 
@@ -425,7 +425,7 @@ List groups for a specific user.
 | ID         | An ID, login, or login shortname (as long as the shortname is unambiguous) of an existing Okta user. |         |
 | Connection |                                                                                                      |         |
 
-### List Users
+### List Users {#listusers}
 
 List users with optional search and filtering.
 
@@ -442,7 +442,7 @@ List users with optional search and filtering.
 | Extra Parameters | List of additional parameters to include in the request. This can be used to include parameters that are not explicitly supported by this component. See Okta's API documentation for a list of supported parameters.                                                  |         |
 | Connection       |                                                                                                                                                                                                                                                                        |         |
 
-### List User Types
+### List User Types {#listusertypes}
 
 Lists all user types in your org.
 
@@ -450,7 +450,7 @@ Lists all user types in your org.
 | ---------- | -------- | ------- |
 | Connection |          |         |
 
-### Raw Request
+### Raw Request {#rawrequest}
 
 Send raw HTTP request to Okta.
 
@@ -472,7 +472,7 @@ Send raw HTTP request to Okta.
 | Max Retry Count         | The maximum number of retries to attempt. Specify 0 for no retries.                                                                                                                                               | 0       |
 | Use Exponential Backoff | Specifies whether to use a pre-defined exponential backoff strategy for retries. When enabled, 'Retry Delay (ms)' is ignored.                                                                                     | false   |
 
-### Reactivate User
+### Reactivate User {#reactivateuser}
 
 Reactivate a user by ID or login.
 
@@ -482,7 +482,7 @@ Reactivate a user by ID or login.
 | Send Email | When true, sends a deactivation email to the admin.                                                  | false   |
 | Connection |                                                                                                      |         |
 
-### Remove Application User Assignment
+### Remove Application User Assignment {#removeapplicationuserassignment}
 
 Removes an application assignment from a user, revoking access to the application.
 
@@ -493,7 +493,7 @@ Removes an application assignment from a user, revoking access to the applicatio
 | Send Email     | When true, sends a deactivation email to the admin. | false   |
 | Connection     |                                                     |         |
 
-### Remove User from Group
+### Remove User from Group {#removeuserfromgroup}
 
 Remove a user from a group.
 
@@ -503,7 +503,7 @@ Remove a user from a group.
 | User ID    | The unique identifier for the user to be removed from the group. |         |
 | Connection |                                                                  |         |
 
-### Reset User Password
+### Reset User Password {#resetuserpassword}
 
 Reset a user's password by ID or login.
 
@@ -514,7 +514,7 @@ Reset a user's password by ID or login.
 | Revoke Sessions | When true, revokes all of the user's active sessions.                                                | false   |
 | Connection      |                                                                                                      |         |
 
-### Set User Password
+### Set User Password {#setuserpassword}
 
 Set a user's password by ID or login.
 
@@ -528,7 +528,7 @@ Set a user's password by ID or login.
 | Revoke Sessions   | When true, revokes all of the user's active sessions. | false   |
 | Connection        |                                                       |         |
 
-### Suspend User
+### Suspend User {#suspenduser}
 
 Suspend a user by ID or login.
 
@@ -537,7 +537,7 @@ Suspend a user by ID or login.
 | ID         | An ID, login, or login shortname (as long as the shortname is unambiguous) of an existing Okta user. |         |
 | Connection |                                                                                                      |         |
 
-### Unenroll User Factor
+### Unenroll User Factor {#unenrolluserfactor}
 
 Unenrolls a specific factor for the specified user.
 
@@ -548,7 +548,7 @@ Unenrolls a specific factor for the specified user.
 | Remove Recovery Enrollment | When true, removes the phone number as both a recovery method and a factor. This parameter is only used for the sms and call factors. | false   |
 | Connection                 |                                                                                                                                       |         |
 
-### Unlock User
+### Unlock User {#unlockuser}
 
 Unlock a user by ID or login.
 
@@ -558,7 +558,7 @@ Unlock a user by ID or login.
 | Send Email | When true, sends a deactivation email to the admin.                                                  | false   |
 | Connection |                                                                                                      |         |
 
-### Unsuspend User
+### Unsuspend User {#unsuspenduser}
 
 Unsuspend a user by ID or login.
 
@@ -567,7 +567,7 @@ Unsuspend a user by ID or login.
 | ID         | An ID, login, or login shortname (as long as the shortname is unambiguous) of an existing Okta user. |         |
 | Connection |                                                                                                      |         |
 
-### Update Application User Assignment
+### Update Application User Assignment {#updateapplicationuserassignment}
 
 Updates the app-specific profile and credentials for a user's application assignment.
 
@@ -580,7 +580,7 @@ Updates the app-specific profile and credentials for a user's application assign
 | Password       | The user's password.                                                                             |         |
 | Connection     |                                                                                                  |         |
 
-### Update Group
+### Update Group {#updategroup}
 
 Updates profile information for an existing group.
 
@@ -591,7 +591,7 @@ Updates profile information for an existing group.
 | Group Description | A brief description of the group.    |         |
 | Connection        |                                      |         |
 
-### Update User
+### Update User {#updateuser}
 
 Update a user by ID or login.
 
@@ -614,7 +614,7 @@ Update a user by ID or login.
 | Profile Extra Attributes | List of additional profile attributes to include in the request. This can be used to include attributes that are not explicitly supported by this component. See [Okta's API documentation](https://developer.okta.com/docs/api/openapi/okta-management/management/tag/User/#tag/User/operation/updateUser!path=profile&t=request) for a list of supported attributes. |         |
 | Connection               |                                                                                                                                                                                                                                                                                                                                                                        |         |
 
-### Verify Event Hook
+### Verify Event Hook {#verifyeventhook}
 
 Verify a specific event hook.
 

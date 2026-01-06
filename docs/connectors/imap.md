@@ -9,7 +9,7 @@ Interact with your IMAP email account
 
 ## Connections
 
-### IMAP Connection
+### IMAP Connection {#imap}
 
 Provide the details of your IMAP server.
 
@@ -81,7 +81,7 @@ Now, create a connection and provide these values:
 
 ## Actions
 
-### Add Flags
+### Add Flags {#addflags}
 
 Add new flags to an existing message
 
@@ -92,7 +92,7 @@ Add new flags to an existing message
 | Range      | Provide a range of messages. Alternatively you can specify \* to get the latest message |         |
 | Flags      | For each item, provide a string value to be added to an existing message.               |         |
 
-### Append Message
+### Append Message {#appendmessage}
 
 Appends a new message to an existing mailbox
 
@@ -103,7 +103,7 @@ Appends a new message to an existing mailbox
 | Path            | Mailbox path to upload the message to              |         |
 | Message Content | Mailbox path to upload the message to              |         |
 
-### Copy Message
+### Copy Message {#copymessage}
 
 Copies a message from one mailbox to another.
 
@@ -114,7 +114,7 @@ Copies a message from one mailbox to another.
 | Range      | Provide a range of messages. Alternatively you can specify \* to get the latest message |         |
 | New Path   | Mailbox path to upload the message to                                                   |         |
 
-### Create Mailbox
+### Create Mailbox {#createmailbox}
 
 Creates a new mailbox folder and sets up subscription for the created mailbox
 
@@ -123,7 +123,7 @@ Creates a new mailbox folder and sets up subscription for the created mailbox
 | Connection |                                       |         |
 | Path       | Mailbox path to upload the message to |         |
 
-### Delete Message
+### Delete Message {#deletemessage}
 
 Delete an existing message
 
@@ -133,7 +133,7 @@ Delete an existing message
 | Mailbox     | Provide a string value for the name of the mailbox |         |
 | Message UID | The UID of the message.                            |         |
 
-### Download Message
+### Download Message {#downloadmessage}
 
 Download either full RFC-822 formatted message or a specific body structure part
 
@@ -143,7 +143,7 @@ Download either full RFC-822 formatted message or a specific body structure part
 | Mailbox             | Provide a string value for the name of the mailbox                                                                                  |         |
 | Message Index or ID | The index of the message you would like to download (1 for the oldest message, 2 for second oldest, etc), or the ID of the message. |         |
 
-### Get Mailbox Status
+### Get Mailbox Status {#getstatus}
 
 Returns the status of a mailbox's properties
 
@@ -152,7 +152,7 @@ Returns the status of a mailbox's properties
 | Connection |                                                    |         |
 | Mailbox    | Provide a string value for the name of the mailbox |         |
 
-### List Mailboxes
+### List Mailboxes {#listmailboxes}
 
 Returns a list of available mailboxes
 
@@ -160,7 +160,7 @@ Returns a list of available mailboxes
 | ---------- | -------- | ------- |
 | Connection |          |         |
 
-### Remove Flags From Message
+### Remove Flags From Message {#removeflags}
 
 Remove existing flags from an existing message
 
@@ -171,7 +171,7 @@ Remove existing flags from an existing message
 | Range      | Provide a range of messages. Alternatively you can specify \* to get the latest message |         |
 | Flags      | For each item, provide a string value to be added to an existing message.               |         |
 
-### Rename Mailbox
+### Rename Mailbox {#renamemailbox}
 
 Change the name of an existing mailbox
 
@@ -181,7 +181,7 @@ Change the name of an existing mailbox
 | Path       | Mailbox path to upload the message to |         |
 | New Path   | Mailbox path to upload the message to |         |
 
-### Search / List Mailbox Messages
+### Search / List Mailbox Messages {#searchmailbox}
 
 Returns all messages in the given mailbox
 
@@ -194,7 +194,7 @@ Returns all messages in the given mailbox
 | Read / Unread Filter |                                                    | all     |
 | Filter Options       | Extra parameters to filter the search results      |         |
 
-### Set Flags
+### Set Flags {#setflags}
 
 Set a value for an existing message flag
 

@@ -9,7 +9,7 @@ Manage contacts and others connected to your Sage account.
 
 ## Connections
 
-### OAuth 2.0
+### OAuth 2.0 {#oauth}
 
 OAuth 2.0 Connection for Sage
 
@@ -35,7 +35,7 @@ Read about how OAuth 2.0 works [here](../oauth2.md).
 
 ## Actions
 
-### Create Contact
+### Create Contact {#createcontact}
 
 Create a new contact
 
@@ -80,7 +80,7 @@ Create a new contact
 | BIC                              | Provide a valid BIC for the bank account.                                            |         |
 | IBAN                             | Provide a valid IBAN for the bank account.                                           |         |
 
-### Create Ledger Account
+### Create Ledger Account {#createledgeraccount}
 
 Create a new Ledger account
 
@@ -94,7 +94,7 @@ Create a new Ledger account
 | Nominal Code           | Provide an unique integer value for the nominal code of the ledger account.    |         |
 | Tax Rate Id            | Provide the unique identifier of a tax rate id.                                |         |
 
-### Create Purchase Invoice
+### Create Purchase Invoice {#createpurchaseinvoice}
 
 Create a new purchase invoice
 
@@ -107,7 +107,7 @@ Create a new purchase invoice
 | Total Amount  | Provide a total amount for the invoice.                                                       |                                                                                                                                                                                                                   |
 | Due Date      | Provide a valid date value for the due date of the invoice.                                   |                                                                                                                                                                                                                   |
 
-### Create Sales Invoice
+### Create Sales Invoice {#createsalesinvoice}
 
 Create a new sales invoice
 
@@ -119,7 +119,7 @@ Create a new sales invoice
 | Invoice Lines | Provide a list of javascript objects, each containing information of an an invoice line item. | <code>[<br /> {<br /> "description": "string",<br /> "ledger_account_id": "string",<br /> "unit_price": 0,<br /> "product_id": "string",<br /> "service_id": "string",<br /> "quantity": 0,<br /> }<br />]</code> |
 | Total Amount  | Provide a total amount for the invoice.                                                       |                                                                                                                                                                                                                   |
 
-### Delete Contact
+### Delete Contact {#deletecontact}
 
 Delete an existing contact by Id
 
@@ -128,7 +128,7 @@ Delete an existing contact by Id
 | Connection |                                             |         |
 | Contact Id | Provide the unique identifier of a contact. |         |
 
-### Delete Contact Person
+### Delete Contact Person {#deletecontactperson}
 
 Delete an existing contact person by Id
 
@@ -137,7 +137,7 @@ Delete an existing contact person by Id
 | Connection        |                                                    |         |
 | Contact Person Id | Provide the unique identifier of a contact person. |         |
 
-### Delete Purchase Invoice
+### Delete Purchase Invoice {#deletepurchaseinvoice}
 
 Delete the information and metadata of a purchase invoice by Id
 
@@ -146,7 +146,7 @@ Delete the information and metadata of a purchase invoice by Id
 | Connection          |                                                         |         |
 | Purchase Invoice Id | Provide the unique identifier of a purchase invoice id. |         |
 
-### Delete Sales Invoice
+### Delete Sales Invoice {#deletesalesinvoice}
 
 Delete the information and metadata of a sales invoice by Id
 
@@ -155,7 +155,7 @@ Delete the information and metadata of a sales invoice by Id
 | Connection       |                                                      |         |
 | Sales Invoice Id | Provide the unique identifier of a sales invoice id. |         |
 
-### Get Contact
+### Get Contact {#getcontact}
 
 Get the information and metadata of a contact by Id
 
@@ -164,7 +164,7 @@ Get the information and metadata of a contact by Id
 | Connection |                                             |         |
 | Contact Id | Provide the unique identifier of a contact. |         |
 
-### Get Contact Person
+### Get Contact Person {#getcontactperson}
 
 Get the information and metadata of a contact person by Id
 
@@ -173,7 +173,7 @@ Get the information and metadata of a contact person by Id
 | Connection        |                                                    |         |
 | Contact Person Id | Provide the unique identifier of a contact person. |         |
 
-### Get Ledger Account
+### Get Ledger Account {#getledgeraccount}
 
 Get the information and metadata of a Ledger account
 
@@ -182,7 +182,7 @@ Get the information and metadata of a Ledger account
 | Connection        |                                                    |         |
 | Ledger Account Id | Provide the unique identifier of a ledger account. |         |
 
-### Get Purchase Invoice
+### Get Purchase Invoice {#getpurchaseinvoice}
 
 Get the information and metadata of a purchase invoice by Id
 
@@ -191,7 +191,7 @@ Get the information and metadata of a purchase invoice by Id
 | Connection          |                                                         |         |
 | Purchase Invoice Id | Provide the unique identifier of a purchase invoice id. |         |
 
-### Get Sales Invoice
+### Get Sales Invoice {#getsalesinvoice}
 
 Get the information and metadata of a sales invoice by Id
 
@@ -200,7 +200,7 @@ Get the information and metadata of a sales invoice by Id
 | Connection       |                                                      |         |
 | Sales Invoice Id | Provide the unique identifier of a sales invoice id. |         |
 
-### List Address Types
+### List Address Types {#listaddresstypes}
 
 List all address types
 
@@ -210,7 +210,7 @@ List all address types
 | Items Per Page | Provide a value for the amount of items to be returned in the response. |         |
 | Page           | Provide a value for the page of results you would like to be returned.  |         |
 
-### List Contact People
+### List Contact People {#listcontactpeople}
 
 List all contact people
 
@@ -221,7 +221,7 @@ List all contact people
 | Page                    | Provide a value for the page of results you would like to be returned.                       |                                                      |
 | Update or Created Since | Use this to limit the response to Contacts changed since a given date (format: YYYY-MM-DDT(+ | -)hh:mm) or date-time (format: YYYY-MM-DDThh:mm:ss(+ | -)hh:mm). Inclusive of the passed timestamp. |     |
 
-### List Contacts
+### List Contacts {#listcontacts}
 
 List all contacts
 
@@ -232,7 +232,7 @@ List all contacts
 | Page                    | Provide a value for the page of results you would like to be returned.                       |                                                      |
 | Update or Created Since | Use this to limit the response to Contacts changed since a given date (format: YYYY-MM-DDT(+ | -)hh:mm) or date-time (format: YYYY-MM-DDThh:mm:ss(+ | -)hh:mm). Inclusive of the passed timestamp. |     |
 
-### List Contact Types
+### List Contact Types {#listcontacttypes}
 
 List all contact types
 
@@ -242,7 +242,7 @@ List all contact types
 | Items Per Page | Provide a value for the amount of items to be returned in the response. |         |
 | Page           | Provide a value for the page of results you would like to be returned.  |         |
 
-### List Countries
+### List Countries {#listcountries}
 
 List all countries
 
@@ -252,7 +252,7 @@ List all countries
 | Items Per Page | Provide a value for the amount of items to be returned in the response. |         |
 | Page           | Provide a value for the page of results you would like to be returned.  |         |
 
-### List Currencies
+### List Currencies {#listcurrencies}
 
 List all currencies
 
@@ -262,7 +262,7 @@ List all currencies
 | Items Per Page | Provide a value for the amount of items to be returned in the response. |         |
 | Page           | Provide a value for the page of results you would like to be returned.  |         |
 
-### List Ledger Accounts
+### List Ledger Accounts {#listledgeraccounts}
 
 List all Ledger accounts
 
@@ -273,7 +273,7 @@ List all Ledger accounts
 | Page                    | Provide a value for the page of results you would like to be returned.                       |                                                      |
 | Update or Created Since | Use this to limit the response to Contacts changed since a given date (format: YYYY-MM-DDT(+ | -)hh:mm) or date-time (format: YYYY-MM-DDThh:mm:ss(+ | -)hh:mm). Inclusive of the passed timestamp. |     |
 
-### List Ledger Account Types
+### List Ledger Account Types {#listledgeraccounttypes}
 
 List all Ledger account types
 
@@ -283,7 +283,7 @@ List all Ledger account types
 | Items Per Page | Provide a value for the amount of items to be returned in the response. |         |
 | Page           | Provide a value for the page of results you would like to be returned.  |         |
 
-### List Purchase Invoices
+### List Purchase Invoices {#listpurchaseinvoice}
 
 List all purchase invoices
 
@@ -294,7 +294,7 @@ List all purchase invoices
 | Page                    | Provide a value for the page of results you would like to be returned.                       |                                                      |
 | Update or Created Since | Use this to limit the response to Contacts changed since a given date (format: YYYY-MM-DDT(+ | -)hh:mm) or date-time (format: YYYY-MM-DDThh:mm:ss(+ | -)hh:mm). Inclusive of the passed timestamp. |     |
 
-### List Sales Invoices
+### List Sales Invoices {#listsalesinvoices}
 
 List all sales invoices
 
@@ -305,7 +305,7 @@ List all sales invoices
 | Page                    | Provide a value for the page of results you would like to be returned.                       |                                                      |
 | Update or Created Since | Use this to limit the response to Contacts changed since a given date (format: YYYY-MM-DDT(+ | -)hh:mm) or date-time (format: YYYY-MM-DDThh:mm:ss(+ | -)hh:mm). Inclusive of the passed timestamp. |     |
 
-### Raw Request
+### Raw Request {#rawrequest}
 
 Send raw HTTP request to Sage Accounting
 
@@ -328,7 +328,7 @@ Send raw HTTP request to Sage Accounting
 | Max Retry Count         | The maximum number of retries to attempt. Specify 0 for no retries.                                                                                                                                                          | 0       |
 | Use Exponential Backoff | Specifies whether to use a pre-defined exponential backoff strategy for retries. When enabled, 'Retry Delay (ms)' is ignored.                                                                                                | false   |
 
-### Update Contact
+### Update Contact {#updatecontact}
 
 Update the information and metadata of an existing contact by Id
 
@@ -374,7 +374,7 @@ Update the information and metadata of an existing contact by Id
 | BIC                              | Provide a valid BIC for the bank account.                                            |         |
 | IBAN                             | Provide a valid IBAN for the bank account.                                           |         |
 
-### Update Ledger Account
+### Update Ledger Account {#updateledgeraccount}
 
 Update the information and metadata of a Ledger account by Id
 
@@ -390,7 +390,7 @@ Update the information and metadata of a Ledger account by Id
 | Tax Rate Id            | Provide the unique identifier of a tax rate id.                                |         |
 | Gifi Code              | Provide a value for The General Index of Financial Information.                |         |
 
-### Update Purchase Invoice
+### Update Purchase Invoice {#updatepurchaseinvoice}
 
 Update the information and metadata of a purchase invoice by Id
 
@@ -410,7 +410,7 @@ Update the information and metadata of a purchase invoice by Id
 | Total Amount        | Provide a total amount for the invoice.                                                       |                                                                                                                                                                                                                   |
 | Invoice Lines       | Provide a list of javascript objects, each containing information of an an invoice line item. | <code>[<br /> {<br /> "description": "string",<br /> "ledger_account_id": "string",<br /> "unit_price": 0,<br /> "product_id": "string",<br /> "service_id": "string",<br /> "quantity": 0,<br /> }<br />]</code> |
 
-### Update Sales Invoice
+### Update Sales Invoice {#updatesalesinvoice}
 
 Update the information and metadata of a sales invoice by Id
 

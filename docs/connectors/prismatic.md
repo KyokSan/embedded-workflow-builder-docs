@@ -9,7 +9,7 @@ Interact with the Prismatic internal API
 
 ## Connections
 
-### Prismatic Refresh Token
+### Prismatic Refresh Token {#apikey}
 
 Prismatic Refresh Token
 
@@ -24,7 +24,7 @@ Now that you have your token, create a new Prismatic connection and enter the to
 
 ## Actions
 
-### Deploy Instance
+### Deploy Instance {#deployinstance}
 
 Deploy an instance to production
 
@@ -33,7 +33,7 @@ Deploy an instance to production
 | Connection  |                                       |         |
 | Instance Id | Provide the unique ID of an instance. |         |
 
-### Disable Instance
+### Disable Instance {#disableinstnce}
 
 Disable an existing instance
 
@@ -42,7 +42,7 @@ Disable an existing instance
 | Connection  |                                       |         |
 | Instance Id | Provide the unique ID of an instance. |         |
 
-### Get Current User
+### Get Current User {#getcurrentuser}
 
 Get information about the current logged in user
 
@@ -50,7 +50,7 @@ Get information about the current logged in user
 | ---------- | -------- | ------- |
 | Connection |          |         |
 
-### Get Customer
+### Get Customer {#getcustomer}
 
 Get a customer's information and metadata
 
@@ -59,7 +59,7 @@ Get a customer's information and metadata
 | Connection |                                                                         |         |
 | Customer   | Provide the unique identifier of a customer. This value should be an Id |         |
 
-### Get Execution
+### Get Execution {#getexecution}
 
 Get the information and metadata of an execution
 
@@ -68,7 +68,7 @@ Get the information and metadata of an execution
 | Connection   |                                                       |         |
 | Execution Id | Provide the unique identifier of an execution record. |         |
 
-### Get Instance
+### Get Instance {#getinstance}
 
 Get the information and metadata of an existing instance
 
@@ -77,7 +77,7 @@ Get the information and metadata of an existing instance
 | Connection  |                                       |         |
 | Instance Id | Provide the unique ID of an instance. |         |
 
-### Get Integration
+### Get Integration {#getintegration}
 
 Get the information and metadata of an integration
 
@@ -86,7 +86,7 @@ Get the information and metadata of an integration
 | Connection     |                                                                                                  |         |
 | Integration Id | Provide the unique identifier of an integration. This value should be the Id of the integration. |         |
 
-### Import Integration
+### Import Integration {#importintegration}
 
 Import Integration
 
@@ -96,7 +96,7 @@ Import Integration
 | Integration Id  | Provide the unique identifier of an integration. This value should be the Id of the integration. |         |
 | YAML Definition | Provide a string value for the definition of the integration.                                    |         |
 
-### List Components
+### List Components {#listcomponents}
 
 Returns a list of all the components published to your account
 
@@ -104,7 +104,7 @@ Returns a list of all the components published to your account
 | ---------- | -------- | ------- |
 | Connection |          |         |
 
-### List Customers
+### List Customers {#listcustomers}
 
 List all customers in an organization
 
@@ -122,7 +122,7 @@ List all customers in an organization
 | Name Contains        | A non-negative integer that specifies to return at most last edges before the before cursor. |         |
 | Name Starts With     | Provide a value for the start of the customer name                                           |         |
 
-### List Flows
+### List Flows {#listflows}
 
 List all flows on an integration
 
@@ -131,7 +131,7 @@ List all flows on an integration
 | Connection     |                                                                                                  |         |
 | Integration Id | Provide the unique identifier of an integration. This value should be the Id of the integration. |         |
 
-### List Instances
+### List Instances {#listinstances}
 
 List all instances
 
@@ -155,7 +155,7 @@ List all instances
 | Name Contains        | A non-negative integer that specifies to return at most last edges before the before cursor. |         |
 | Needs Deploy         | Filter for objects where needsDeploy matches the specified value.                            | false   |
 
-### List Integrations
+### List Integrations {#listintegrations}
 
 List all available integrations
 
@@ -183,7 +183,7 @@ List all available integrations
 | Version Number          | Provide an integer value to filter by version number.                                        |         |
 | Version Sequence Id     | Return only integrations sharing the provided version sequence id.                           |         |
 
-### Publish Integration Version
+### Publish Integration Version {#publishintegration}
 
 Publish a new version of an existing integration
 
@@ -193,7 +193,7 @@ Publish a new version of an existing integration
 | Integration Id | Provide the unique identifier of an integration. This value should be the Id of the integration. |         |
 | Comments       | Provide a string value for comments.                                                             |         |
 
-### Raw GraphQL Request
+### Raw GraphQL Request {#rawrequest}
 
 Send raw GraphQL request to Prismatic
 
@@ -203,7 +203,7 @@ Send raw GraphQL request to Prismatic
 | Query or Mutation | Provide a query or mutation for the GraphQL request         | query ($myCustomerId: ID!) {<br /> customer(id: $myCustomerId) {<br /> id<br /> name<br /> externalId<br /> }<br />} |
 | GraphQL Variables | These should match the variables of your query or mutation. |                                                                                                                      |
 
-### Test Flow
+### Test Flow {#testflow}
 
 Test an existing integration flow
 
@@ -214,7 +214,7 @@ Test an existing integration flow
 | Payload      | Provide a payload to be passed to the given flow upon execution.      |         |
 | Content Type | Provide a content type to be passed to the given flow upon execution. |         |
 
-### Update Instance
+### Update Instance {#updateinstance}
 
 Update an existing instance
 
@@ -225,7 +225,7 @@ Update an existing instance
 | Name        | Provide a string value for the name of the instance        |         |
 | Description | Provide a string value for the description of the instance |         |
 
-### Update Integration
+### Update Integration {#updateintegration}
 
 Update the information and metadata of an integration
 

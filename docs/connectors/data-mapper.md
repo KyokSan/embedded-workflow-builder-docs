@@ -9,7 +9,7 @@ Map input values to output values using a specified mapping
 
 ## Actions
 
-### Value List Mapper
+### Value List Mapper {#valuelistmapper}
 
 Map list of inputs to list of outputs using a map object
 
@@ -18,7 +18,7 @@ Map list of inputs to list of outputs using a map object
 | Input Value List | This is a list of keys that will be mapped to values using the Value Map.         |         |
 | Value Map        | A key/value map that matches inputs by key and returns their associated value(s). |         |
 
-### Value Mapper
+### Value Mapper {#valuemapper}
 
 Map an input to an output using a map object
 

@@ -9,7 +9,7 @@ Interact with OpenAI&#x27;s models and build AI Agents
 
 ## Connections
 
-### OpenAI API Key
+### OpenAI API Key {#openaiapikey}
 
 Connect to OpenAI using an API key
 
@@ -26,13 +26,13 @@ Otherwise, specify your organization's ID.
 
 ## Triggers
 
-### Tool Flow Trigger
+### Tool Flow Trigger {#toolflowtrigger}
 
 Marks this flow as a tool that can be called by AI agents
 
 ## Actions
 
-### Agent: Add Local MCP Server
+### Agent: Add Local MCP Server {#addlocalmcpserver}
 
 Configure a local MCP server that runs via command line
 
@@ -43,7 +43,7 @@ Configure a local MCP server that runs via command line
 | Arguments    | Arguments to pass to the command                                        |         |
 | Tool Filter  | List of specific tool names to expose. If empty, all tools are exposed. |         |
 
-### Agent: Add Remote MCP Server
+### Agent: Add Remote MCP Server {#addremotemcpserver}
 
 Configure a remote MCP server accessed via HTTP
 
@@ -54,7 +54,7 @@ Configure a remote MCP server accessed via HTTP
 | Headers      | HTTP headers for authentication or other needs. Key = header name, Value = header value |         |
 | Tool Filter  | List of specific tool names to expose. If empty, all tools are exposed.                 |         |
 
-### Agent: Classify and Branch
+### Agent: Classify and Branch {#classifyandbranch}
 
 Use AI to analyze input and route to the appropriate branch
 
@@ -69,7 +69,7 @@ Use AI to analyze input and route to the appropriate branch
 | MCP Servers                 | List of MCP server configurations. Each should be the output from an Add MCP Server action.                           |         |
 | File IDs                    | File IDs from previously uploaded files to OpenAI. Use the Upload File action to get these IDs.                       |         |
 
-### Agent: Create
+### Agent: Create {#createagent}
 
 Create an AI agent with customizable instructions.
 
@@ -85,7 +85,7 @@ Create an AI agent with customizable instructions.
 | Output Schema Name   | Name for the output schema                                                                                            | output  |
 | Output Schema Strict | If true, enforces strict schema validation                                                                            | false   |
 
-### Agent: Create Code Interpreter Tool
+### Agent: Create Code Interpreter Tool {#createcodeinterpretertool}
 
 Create a code interpreter tool that allows agents to execute Python code
 
@@ -96,7 +96,7 @@ Create a code interpreter tool that allows agents to execute Python code
 | Container ID   | Specific container ID (only used if containerType is 'specific') |                  |
 | File IDs       | Comma-separated list of file IDs to include in the container     |                  |
 
-### Agent: Create File Search Tool
+### Agent: Create File Search Tool {#createfilesearchtool}
 
 Create a file search tool that searches through vector stores
 
@@ -109,7 +109,7 @@ Create a file search tool that searches through vector stores
 | Ranking Algorithm      | Algorithm for ranking search results               |             |
 | Score Threshold        | Minimum score threshold for results (0-1)          |             |
 
-### Agent: Create Flow Tool
+### Agent: Create Flow Tool {#createflowtool}
 
 Create a tool configuration that allows an agent to invoke another flow
 
@@ -120,7 +120,7 @@ Create a tool configuration that allows an agent to invoke another flow
 | Strict Mode       | If true, requires exact parameter matching. If false, allows flexibility in agent inputs. | false   |
 | Requires Approval | If true, the tool will require human approval before the agent can execute the flow       | false   |
 
-### Agent: Create Human Approval Tool
+### Agent: Create Human Approval Tool {#createhumanapprovaltool}
 
 Create a tool that requires human approval before the agent can proceed
 
@@ -130,7 +130,7 @@ Create a tool that requires human approval before the agent can proceed
 | Tool Description  | Description that helps the agent understand when to use this tool                                                                                       | Request human approval before proceeding with this action |
 | Parameters Schema | Optional JSON schema for parameters the agent should provide when calling this tool. If not provided, the tool will accept a 'reason' string parameter. |                                                           |
 
-### Agent: Create Image Generation Tool
+### Agent: Create Image Generation Tool {#createimagegenerationtool}
 
 Create an image generation tool that allows agents to generate images
 
@@ -147,7 +147,7 @@ Create an image generation tool that allows agents to generate images
 | Quality            | Quality level for generated images                  | auto             |
 | Size               | Image dimensions                                    | auto             |
 
-### Agent: Create Web Search Tool
+### Agent: Create Web Search Tool {#createwebsearchtool}
 
 Create a web search tool that allows agents to search the web
 
@@ -160,7 +160,7 @@ Create a web search tool that allows agents to search the web
 | User Region         | Region/state for location-aware searches                        |            |
 | User Timezone       | Timezone for time-sensitive searches (e.g., 'America/New_York') |            |
 
-### Agent: Resume Run
+### Agent: Resume Run {#resumerun}
 
 Resume an interrupted agent run with approval decisions
 
@@ -173,7 +173,7 @@ Resume an interrupted agent run with approval decisions
 | Max Turns           | Maximum number of conversation turns the agent can take from this point. Prevents infinite loops.               | 10      |
 | Handoff Agents      | Same handoff agents configuration used in the original run, if any.                                             |         |
 
-### Agent: Run
+### Agent: Run {#runagent}
 
 Run an agent
 
@@ -188,7 +188,7 @@ Run an agent
 | Max Turns            | Maximum number of conversation turns the agent can take. Prevents infinite loops.                                                                     | 10      |
 | Handoff Agents       | List of agent configurations that can be handed off to. Each should be the output from a Create Agent action.                                         |         |
 
-### Create Chat Completion
+### Create Chat Completion {#createchatcompletion}
 
 Create a completion for the chat message
 
@@ -202,7 +202,7 @@ Create a completion for the chat message
 | Number of choices | How many chat completion choices to generate for each input message.                                                                                                                                                                        | 1                                                                                                                                                                                                                                                                                                                                                                                                             |
 | Timeout (ms)      | The maximum amount of time (in MS) to wait for a response.                                                                                                                                                                                  | 10000                                                                                                                                                                                                                                                                                                                                                                                                         |
 
-### Create Image
+### Create Image {#createimage}
 
 Create image(s) given a prompt
 
@@ -214,7 +214,7 @@ Create image(s) given a prompt
 | Image Size       | The size of the generated images. Must be one of 256x256, 512x512, or 1024x1024.   | 1024x1024 |
 | Timeout (ms)     | The maximum amount of time (in MS) to wait for a response.                         | 10000     |
 
-### Create Response
+### Create Response {#createfunctioncallingresponse}
 
 Create a response using the responses endpoint
 
@@ -225,7 +225,7 @@ Create a response using the responses endpoint
 | Input        | The input text to process                                                                                             |         |
 | Timeout (ms) | The maximum amount of time (in MS) to wait for a response.                                                            | 10000   |
 
-### Delete File
+### Delete File {#deletefile}
 
 Delete a previously uploaded file
 
@@ -235,7 +235,7 @@ Delete a previously uploaded file
 | File ID      | The ID of the file to delete                               |         |
 | Timeout (ms) | The maximum amount of time (in MS) to wait for a response. | 10000   |
 
-### Get Model by ID
+### Get Model by ID {#getmodelbyid}
 
 Get model by ID
 
@@ -245,7 +245,7 @@ Get model by ID
 | Model        | Select an OpenAI model to use for the request. The list of available models will be fetched from your OpenAI account. |         |
 | Timeout (ms) | The maximum amount of time (in MS) to wait for a response.                                                            | 10000   |
 
-### List Files
+### List Files {#listfiles}
 
 List previously uploaded files
 
@@ -255,7 +255,7 @@ List previously uploaded files
 | Purpose      | Filter files by purpose                                    |         |
 | Timeout (ms) | The maximum amount of time (in MS) to wait for a response. | 10000   |
 
-### List Models
+### List Models {#listmodels}
 
 List all available models
 
@@ -264,7 +264,7 @@ List all available models
 | Connection   |                                                            |         |
 | Timeout (ms) | The maximum amount of time (in MS) to wait for a response. | 10000   |
 
-### Raw Request
+### Raw Request {#rawrequest}
 
 Send raw HTTP request to OpenAI
 
@@ -287,7 +287,7 @@ Send raw HTTP request to OpenAI
 | Max Retry Count         | The maximum number of retries to attempt. Specify 0 for no retries.                                                                                                                                                                     | 0          |
 | Use Exponential Backoff | Specifies whether to use a pre-defined exponential backoff strategy for retries. When enabled, 'Retry Delay (ms)' is ignored.                                                                                                           | false      |
 
-### Retrieve File
+### Retrieve File {#retrievefile}
 
 Retrieve information about a specific file
 
@@ -297,7 +297,7 @@ Retrieve information about a specific file
 | File ID      | The ID of the file to retrieve                             |         |
 | Timeout (ms) | The maximum amount of time (in MS) to wait for a response. | 10000   |
 
-### Upload File
+### Upload File {#uploadfile}
 
 Upload a file to OpenAI that can be used with various features
 

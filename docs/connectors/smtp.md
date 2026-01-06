@@ -9,7 +9,7 @@ Send emails through an SMTP server
 
 ## Connections
 
-### SMTP Connection
+### SMTP Connection {#smtpconnection}
 
 SMTP server information
 
@@ -24,7 +24,7 @@ SMTP server information
 
 ## Actions
 
-### Send Email
+### Send Email {#sendemail}
 
 Send an email
 

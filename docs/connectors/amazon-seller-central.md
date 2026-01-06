@@ -9,7 +9,7 @@ Amazon Seller Central is the portal for accessing your Amazon seller account. Us
 
 ## Connections
 
-### Amazon Seller Central OAuth 2.0
+### Amazon Seller Central OAuth 2.0 {#oauth2}
 
 Authenticate requests to Amazon Seller Central.
 
@@ -51,7 +51,7 @@ Read about how OAuth 2.0 works [here](../oauth2.md).
 | SP-API Endpoint        | Selling Partner API endpoints are associated with a particular AWS Region. The AWS Region is important because it is part of the credential scope, which is required for calculating a signature when calling the Selling Partner API.                                                                                                                                   | sellingpartnerapi-na.amazon.com                                                               |
 | Is Sandbox Environment | If you are using a sandbox environment, select this checkbox. Otherwise, leave it blank.                                                                                                                                                                                                                                                                                 |                                                                                               |
 
-### Amazon Seller Central OAuth 2.0 Client Credentials
+### Amazon Seller Central OAuth 2.0 Client Credentials {#clientcredentials}
 
 Authenticate requests to Amazon Seller Central using client credentials.
 
@@ -69,7 +69,7 @@ Read about how OAuth 2.0 works [here](../oauth2.md).
 
 ## Actions
 
-### Cancel Feed
+### Cancel Feed {#cancelfeed}
 
 Cancels the feed that you specify.
 
@@ -78,7 +78,7 @@ Cancels the feed that you specify.
 | Connection |                                                                                              |         |
 | Feed Id    | The identifier for the feed. This identifier is unique only in combination with a seller ID. |         |
 
-### Cancel Shipment
+### Cancel Shipment {#cancelshipment}
 
 Cancel the shipment indicated by the specified shipment identifier.
 
@@ -87,7 +87,7 @@ Cancel the shipment indicated by the specified shipment identifier.
 | Connection  |                                                                    |         |
 | Shipment Id | The Amazon-defined shipment identifier for the shipment to cancel. |         |
 
-### Confirm Order Shipment
+### Confirm Order Shipment {#confirmordershipment}
 
 Updates the shipment confirmation status for a specified order.
 
@@ -106,7 +106,7 @@ Updates the shipment confirmation status for a specified order.
 | Ship From Supply Source Id | The unique identifier of the supply source                                                                                                |                                                                                                                                                                     |
 | COD Collection Method      | The cod collection method, support in JP only.                                                                                            |                                                                                                                                                                     |
 
-### Create Destination
+### Create Destination {#createdestination}
 
 Creates a destination resource to receive notifications.
 
@@ -118,7 +118,7 @@ Creates a destination resource to receive notifications.
 | AWS Region | AWS provides services in multiple regions, like us-west-2 or eu-west-1.                                |         |
 | Account Id | The identifier for the AWS account that is responsible for charges related to receiving notifications. |         |
 
-### Create Feed
+### Create Feed {#createfeed}
 
 Creates a feed. Upload the contents of the feed document before calling this operation.
 
@@ -130,7 +130,7 @@ Creates a feed. Upload the contents of the feed document before calling this ope
 | Input Feed Document Id | The document identifier returned by the createFeedDocument operation. Upload the feed document contents before calling the createFeed operation.                                                                     |         |
 | Feed Options           | Additional options to control the feed. These vary by feed type.                                                                                                                                                     |         |
 
-### Create Feed Document
+### Create Feed Document {#createfeeddocument}
 
 Creates a feed document for the feed type that you specify.
 
@@ -139,7 +139,7 @@ Creates a feed document for the feed type that you specify.
 | Connection   |                               |         |
 | Content Type | The content type of the feed. |         |
 
-### Create Listings Item
+### Create Listings Item {#createlistingsitem}
 
 Creates a new or fully-updates an existing listings item for a selling partner.
 
@@ -154,7 +154,7 @@ Creates a new or fully-updates an existing listings item for a selling partner.
 | Attributes               | JSON object containing structured listings item attribute data keyed by attribute name.                                                                                                                                                                      |         |
 | Issue Locale             | A locale for localization of issues. When not provided, the default language code of the first marketplace is used. Examples: 'en_US', 'fr_CA', 'fr_FR'. Localized messages default to 'en_US' when a localization is not available in the specified locale. |         |
 
-### Create Shipment
+### Create Shipment {#createshipment}
 
 Create a shipment with the information provided.
 
@@ -177,7 +177,7 @@ Create a shipment with the information provided.
 | Include Packing Slip With Label   | When true, include a packing slip with the label.                                                                                                                                                                           | false   |
 | Shipment Level Seller Inputs List | Label customization options.                                                                                                                                                                                                |         |
 
-### Create Subscription
+### Create Subscription {#createsubscription}
 
 Creates a subscription for the specified notification type to be delivered to the specified destination.
 
@@ -192,7 +192,7 @@ Creates a subscription for the specified notification type to be delivered to th
 | Order Change Types      | A list of order change types to subscribe to (e.g. BuyerRequestedChange). To receive notifications of all change types, do not provide this list.                                                                                                                                                                                                  |         |
 | Event Filter Type       | An eventFilterType value that is supported by the specific notificationType. This is used by the subscription service to determine the type of event filter. Refer to the section of the Notifications Use Case Guide that describes the specific notificationType to determine if an eventFilterType is supported.                                |         |
 
-### Delete Destination
+### Delete Destination {#deletedestination}
 
 Deletes the destination that you specify.
 
@@ -201,7 +201,7 @@ Deletes the destination that you specify.
 | Connection     |                                                             |         |
 | Destination Id | The identifier for the destination that you want to delete. |         |
 
-### Delete Listings Item
+### Delete Listings Item {#deletelistingsitem}
 
 Delete a listings item for a selling partner.
 
@@ -213,7 +213,7 @@ Delete a listings item for a selling partner.
 | Marketplace Ids          | list of MarketplaceId values. Used to select orders that were placed in the specified marketplaces. See (https://developer-docs.amazon.com/sp-api/docs/marketplace-ids) for a complete list of marketplaceId values.                                         |         |
 | Issue Locale             | A locale for localization of issues. When not provided, the default language code of the first marketplace is used. Examples: 'en_US', 'fr_CA', 'fr_FR'. Localized messages default to 'en_US' when a localization is not available in the specified locale. |         |
 
-### Delete Subscription By ID
+### Delete Subscription By ID {#deletesubscription}
 
 Deletes the subscription indicated by the subscription identifier and notification type that you specify.
 
@@ -223,7 +223,7 @@ Deletes the subscription indicated by the subscription identifier and notificati
 | Subscription Id   | The identifier for the subscription that you want to delete. |         |
 | Notification Type | The type of notification.                                    |         |
 
-### Get Catalog Item
+### Get Catalog Item {#getcatalogitem}
 
 Retrieves details for an item in the Amazon catalog.
 
@@ -235,7 +235,7 @@ Retrieves details for an item in the Amazon catalog.
 | Included Data                                | A comma-delimited list of data sets to include in the response. Default: summaries.                                                                                                                                  |         |
 | Locale                                       | Locale for retrieving localized summaries. Defaults to the primary locale of the marketplace.                                                                                                                        |         |
 
-### Get Destination
+### Get Destination {#getdestination}
 
 Returns information about the destination that you specify.
 
@@ -244,7 +244,7 @@ Returns information about the destination that you specify.
 | Connection     |                                                            |         |
 | Destination Id | The identifier generated when you created the destination. |         |
 
-### Get Feed
+### Get Feed {#getfeed}
 
 Returns feed details (including the resultDocumentId, if available) for the feed that you specify.
 
@@ -253,7 +253,7 @@ Returns feed details (including the resultDocumentId, if available) for the feed
 | Connection |                                                                                              |         |
 | Feed Id    | The identifier for the feed. This identifier is unique only in combination with a seller ID. |         |
 
-### Get Feed Document
+### Get Feed Document {#getfeeddocument}
 
 Returns the information required for retrieving a feed document's contents.
 
@@ -262,7 +262,7 @@ Returns the information required for retrieving a feed document's contents.
 | Connection       |                                      |         |
 | Feed Document Id | The identifier of the feed document. |         |
 
-### Get Listings Item
+### Get Listings Item {#getlistingsitem}
 
 Returns details about a listings item for a selling partner.
 
@@ -275,7 +275,7 @@ Returns details about a listings item for a selling partner.
 | Issue Locale             | A locale for localization of issues. When not provided, the default language code of the first marketplace is used. Examples: 'en_US', 'fr_CA', 'fr_FR'. Localized messages default to 'en_US' when a localization is not available in the specified locale. |         |
 | Included Data            | A comma-delimited list of data sets to include in the response. Default: summaries.                                                                                                                                                                          |         |
 
-### Get Order
+### Get Order {#getorder}
 
 Returns the order that you specify.
 
@@ -284,7 +284,7 @@ Returns the order that you specify.
 | Connection |                                                      |         |
 | Order Id   | An Amazon-defined order identifier, in 3-7-7 format. |         |
 
-### Get Order Address
+### Get Order Address {#getorderaddress}
 
 Returns the shipping address for the order that you specify.
 
@@ -293,7 +293,7 @@ Returns the shipping address for the order that you specify.
 | Connection |                                                      |         |
 | Order Id   | An Amazon-defined order identifier, in 3-7-7 format. |         |
 
-### Get Order Buyer Info
+### Get Order Buyer Info {#getorderbuyerinfo}
 
 Returns buyer information for the order that you specify.
 
@@ -302,7 +302,7 @@ Returns buyer information for the order that you specify.
 | Connection |                                                      |         |
 | Order Id   | An Amazon-defined order identifier, in 3-7-7 format. |         |
 
-### Get Order Items
+### Get Order Items {#getorderitems}
 
 Returns detailed order item information for the order that you specify.
 
@@ -312,7 +312,7 @@ Returns detailed order item information for the order that you specify.
 | Order Id   | An Amazon-defined order identifier, in 3-7-7 format.              |         |
 | Next Token | A string token returned in the response of your previous request. |         |
 
-### Get Order Items Buyer Info
+### Get Order Items Buyer Info {#getorderitemsbuyerinfo}
 
 Returns buyer information for the order items in the order that you specify.
 
@@ -321,7 +321,7 @@ Returns buyer information for the order items in the order that you specify.
 | Connection |                                                      |         |
 | Order Id   | An Amazon-defined order identifier, in 3-7-7 format. |         |
 
-### Get Shipment
+### Get Shipment {#getshipment}
 
 Returns the shipment information for an existing shipment.
 
@@ -330,7 +330,7 @@ Returns the shipment information for an existing shipment.
 | Connection  |                                                          |         |
 | Shipment Id | The Amazon-defined shipment identifier for the shipment. |         |
 
-### Get Subscription By ID
+### Get Subscription By ID {#getsubscriptionbyid}
 
 Returns information about a subscription for the specified notification type. The getSubscriptionById API is grantless. For more information, see Grantless operations in the Selling Partner API Developer Guide.
 
@@ -340,7 +340,7 @@ Returns information about a subscription for the specified notification type. Th
 | Subscription Id   | The identifier for the subscription that you want to get. |         |
 | Notification Type | The type of notification.                                 |         |
 
-### List Destinations
+### List Destinations {#listdestinations}
 
 Returns information about all destinations.
 
@@ -348,7 +348,7 @@ Returns information about all destinations.
 | ---------- | -------- | ------- |
 | Connection |          |         |
 
-### List Feeds
+### List Feeds {#listfeeds}
 
 Returns feed details for the feeds that match the filters that you specify.
 
@@ -363,7 +363,7 @@ Returns feed details for the feeds that match the filters that you specify.
 | Created Until       | The latest feed creation date and time for feeds included in the response, in ISO 8601 format. The default is now.                                                                                                                                | 2025-09-25T22:03:01.384Z |
 | Next Token          | A string token returned in the response of your previous request.                                                                                                                                                                                 |                          |
 
-### List Orders
+### List Orders {#listorders}
 
 Returns orders created or updated during the time frame indicated by the specified parameters.
 
@@ -390,7 +390,7 @@ Returns orders created or updated during the time frame indicated by the specifi
 | Store Chain Store Id                | The store chain store identifier. Linked to a specific store in a store chain.                                                                                                                                                                                                       |         |
 | Debug Request                       | Enabling this flag will log out the current request.                                                                                                                                                                                                                                 | false   |
 
-### List Subscription
+### List Subscription {#listsubscriptions}
 
 Returns information about subscriptions of the specified notification type.
 
@@ -399,7 +399,7 @@ Returns information about subscriptions of the specified notification type.
 | Connection        |                           |         |
 | Notification Type | The type of notification. |         |
 
-### Raw Request
+### Raw Request {#rawrequest}
 
 Send raw HTTP request to Amazon Seller Central
 
@@ -422,7 +422,7 @@ Send raw HTTP request to Amazon Seller Central
 | Max Retry Count         | The maximum number of retries to attempt. Specify 0 for no retries.                                                                                                                                                                                         | 0       |
 | Use Exponential Backoff | Specifies whether to use a pre-defined exponential backoff strategy for retries. When enabled, 'Retry Delay (ms)' is ignored.                                                                                                                               | false   |
 
-### Search Catalog Item
+### Search Catalog Item {#searchcatalogitem}
 
 Search for and return a list of Amazon catalog items and associated information either by identifier or by keywords.
 
@@ -442,7 +442,7 @@ Search for and return a list of Amazon catalog items and associated information 
 | Page Token         | A token to fetch a certain page when there are multiple pages worth of results.                                                                                                                                      |         |
 | Keywords Locale    | The language of the keywords provided for keywords-based queries. Defaults to the primary locale of the marketplace. Note: Cannot be used with identifiers.                                                          |         |
 
-### Update Listings Item
+### Update Listings Item {#updatelistingsitem}
 
 Partially update (patch) a listings item for a selling partner.
 

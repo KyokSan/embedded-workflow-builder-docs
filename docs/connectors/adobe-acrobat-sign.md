@@ -9,7 +9,7 @@ Adobe Acrobat Sign is an e-signature management solution. Use the Adobe Acrobat 
 
 ## Connections
 
-### OAuth 2.0
+### OAuth 2.0 {#oauth}
 
 OAuth 2.0 flow
 
@@ -49,7 +49,7 @@ Read about how OAuth 2.0 works [here](../oauth2.md).
 
 ## Triggers
 
-### Webhook
+### Webhook {#adobesigntrigger}
 
 Receive and validate webhook requests from Adobe Sign for webhooks you configure.
 
@@ -60,7 +60,7 @@ Receive and validate webhook requests from Adobe Sign for webhooks you configure
 
 ## Actions
 
-### Create Account
+### Create Account {#createaccount}
 
 Creates an Acrobat Sign account under the partner channel.
 
@@ -80,7 +80,7 @@ Creates an Acrobat Sign account under the partner channel.
 | Number of Seats     | The number of seats.                                                                                                                                                                                                                                                                   |         |
 | Company             | The company of the user.                                                                                                                                                                                                                                                               |         |
 
-### Create Agreement
+### Create Agreement {#createagreement}
 
 Creates an agreement. Sends it out for signatures and returns the agreementId in the response to the client.
 
@@ -94,7 +94,7 @@ Creates an agreement. Sends it out for signatures and returns the agreementId in
 | Signature Type                | The type of signature you would like to request - written or e-signature. |         |
 | Agreement State               | State of the agreement.                                                   |         |
 
-### Create Group
+### Create Group {#creategroup}
 
 Creates a new group in an account.
 
@@ -105,7 +105,7 @@ Creates a new group in an account.
 | Created          | Date of creation of the group. Format would be yyyy-MM-dd'T'HH:mm:ssZ |         |
 | Is Default Group | true if the group is default group.                                   |         |
 
-### Create Transient Document
+### Create Transient Document {#createtransientdocument}
 
 Uploads a document and obtains the document's ID.
 
@@ -116,7 +116,7 @@ Uploads a document and obtains the document's ID.
 | Mime Type  | The mime type of the document being uploaded. If not specified here then mime type is picked up from the file object. If mime type is not present there either then mime type is inferred from the file extension. |         |
 | File Name  | A name for the document being uploaded. Maximum number of characters in the name is restricted to 255.                                                                                                             |         |
 
-### Create User
+### Create User {#createuser}
 
 Creates a new user in the Acrobat Sign system.
 
@@ -134,7 +134,7 @@ Creates a new user in the Acrobat Sign system.
 | Title         | The job title of the user.                   |         |
 | Account ID    | The account id of the user.                  |         |
 
-### Create Webhook
+### Create Webhook {#createwebhook}
 
 Creates a webhook.
 
@@ -155,7 +155,7 @@ Creates a webhook.
 | Webhook MegaSign Conditional Parameters          | Conditions which webhook creator can specify for the payload while creating or updating a webhook.                                                                                                                                                                                                                                                                                             |         |
 | Webhook Widget Conditional Parameters            | Conditions which webhook creator can specify for the payload while creating or updating a webhook.                                                                                                                                                                                                                                                                                             |         |
 
-### Delete Agreement Documents
+### Delete Agreement Documents {#deleteagreementdocuments}
 
 Deletes all the documents for an agreement.
 
@@ -164,7 +164,7 @@ Deletes all the documents for an agreement.
 | Connection   |                                                                                                                                |         |
 | Agreement ID | The agreement identifier, as returned by the agreement creation API or retrieved from the API to fetch agreements. If provided |         |
 
-### Delete Group
+### Delete Group {#deletegroup}
 
 Delete an existing group.
 
@@ -173,7 +173,7 @@ Delete an existing group.
 | Connection |                                     |         |
 | Group ID   | The unique identifier of the group. |         |
 
-### Delete Webhook
+### Delete Webhook {#deletewebhook}
 
 Deletes a webhook.
 
@@ -182,7 +182,7 @@ Deletes a webhook.
 | Connection |                                                                    |         |
 | Webhook ID | The webhook identifier, as returned by the Adobe Sign Webhook API. |         |
 
-### Download Agreement PDF
+### Download Agreement PDF {#downloadagreementfile}
 
 Downloads the PDF associated with an agreement.
 
@@ -191,7 +191,7 @@ Downloads the PDF associated with an agreement.
 | Connection   |                                                                                                                                |         |
 | Agreement ID | The agreement identifier, as returned by the agreement creation API or retrieved from the API to fetch agreements. If provided |         |
 
-### Get Account
+### Get Account {#getaccount}
 
 Retrieves the information for an account.
 
@@ -200,7 +200,7 @@ Retrieves the information for an account.
 | Connection |                             |         |
 | Account ID | The account id of the user. |         |
 
-### Get Agreement
+### Get Agreement {#getagreement}
 
 Retrieves the current status of an agreement.
 
@@ -209,7 +209,7 @@ Retrieves the current status of an agreement.
 | Connection   |                                                                                                                                |         |
 | Agreement ID | The agreement identifier, as returned by the agreement creation API or retrieved from the API to fetch agreements. If provided |         |
 
-### Get Group
+### Get Group {#getgroup}
 
 Retrieves detailed information about the group.
 
@@ -218,7 +218,7 @@ Retrieves detailed information about the group.
 | Connection |                                     |         |
 | Group ID   | The unique identifier of the group. |         |
 
-### Get User
+### Get User {#getuser}
 
 Retrieves detailed information about the user in the caller account.
 
@@ -227,7 +227,7 @@ Retrieves detailed information about the user in the caller account.
 | Connection |                                                                                                                 |         |
 | User ID    | The user identifier, as returned by the user creation API or retrieved from the API to fetch users. If provided |         |
 
-### Get Webhook
+### Get Webhook {#getwebhook}
 
 Retrieves the details of a webhook.
 
@@ -236,7 +236,7 @@ Retrieves the details of a webhook.
 | Connection |                                                                    |         |
 | Webhook ID | The webhook identifier, as returned by the Adobe Sign Webhook API. |         |
 
-### List Agreements
+### List Agreements {#listagreements}
 
 Retrieves agreements for the user.
 
@@ -249,7 +249,7 @@ Retrieves agreements for the user.
 | Group ID               | The group identifier, as returned by the group creation API or retrieved from the API to fetch groups. If provided                                                                                                                                                                     |         |
 | Show Hidden Agreements | A query parameter to fetch all the hidden agreements along with the visible agreements. Default value is false.                                                                                                                                                                        | false   |
 
-### List Group Events
+### List Group Events {#listgroupevents}
 
 Retrieves all events for group
 
@@ -260,7 +260,7 @@ Retrieves all events for group
 | Cursor     | Used to navigate through pagination. If not provided, it will default to the first page.               |         |
 | Page Size  | The number of results to return per page. If not provided, it is decided by your application settings. |         |
 
-### List Groups
+### List Groups {#listgroups}
 
 Retrieve a list of groups in the Adobe Sign account.
 
@@ -270,7 +270,7 @@ Retrieve a list of groups in the Adobe Sign account.
 | Cursor     | Used to navigate through pagination. If not provided, it will default to the first page.               |         |
 | Page Size  | The number of results to return per page. If not provided, it is decided by your application settings. |         |
 
-### List Group Users
+### List Group Users {#listgroupusers}
 
 Retrieves all the users in a group.
 
@@ -281,7 +281,7 @@ Retrieves all the users in a group.
 | Cursor     | Used to navigate through pagination. If not provided, it will default to the first page.               |         |
 | Page Size  | The number of results to return per page. If not provided, it is decided by your application settings. |         |
 
-### List Users
+### List Users {#listusers}
 
 Retrieves all the users in an account.
 
@@ -291,7 +291,7 @@ Retrieves all the users in an account.
 | Cursor     | Used to navigate through pagination. If not provided, it will default to the first page.               |         |
 | Page Size  | The number of results to return per page. If not provided, it is decided by your application settings. |         |
 
-### List Webhooks
+### List Webhooks {#listwebhooks}
 
 Retrieves webhooks for a user.
 
@@ -304,7 +304,7 @@ Retrieves webhooks for a user.
 | Cursor                 | Used to navigate through pagination. If not provided, it will default to the first page.                    |         |
 | Page Size              | The number of results to return per page. If not provided, it is decided by your application settings.      |         |
 
-### Raw Request
+### Raw Request {#rawrequest}
 
 Send raw HTTP request to Adobe Acrobat Sign
 
@@ -326,7 +326,7 @@ Send raw HTTP request to Adobe Acrobat Sign
 | Max Retry Count         | The maximum number of retries to attempt. Specify 0 for no retries.                                                                                                                              | 0       |
 | Use Exponential Backoff | Specifies whether to use a pre-defined exponential backoff strategy for retries. When enabled, 'Retry Delay (ms)' is ignored.                                                                    | false   |
 
-### Search Resources
+### Search Resources {#searchresources}
 
 Retrieves, searches, filters and sorts agreements for the user
 
@@ -366,7 +366,7 @@ Retrieves, searches, filters and sorts agreements for the user
 | Expiration Min Date          | The maximum allowed date-time that is allowed in the result set. Values for each range field must adhere to the ISO-8601 standard.Range terms can be defined as less-than/greater-than or min/max.If terms are mixed the JSON will be considered malformed.                                                                 |         |
 | Modified Min Date            | The minimum allowed date-time that is allowed in the result set. Values for each range field must adhere to the ISO-8601 standard.                                                                                                                                                                                          |         |
 
-### Update Agreement
+### Update Agreement {#updateagreement}
 
 Updates the agreement in draft state, or update the expiration time on an existing agreement that is already out for signature.
 
@@ -380,7 +380,7 @@ Updates the agreement in draft state, or update the expiration time on an existi
 | Expiration Date           | A range filter against the agreement expiration date.Format would be date-time with an offset from UTC/Greenwich in theISO-8601 format, such as 2007-12-03T10:15:30+01:00.Range terms can be defined as less-than/greater-than or min/max. |         |
 | Agreement ID              | The agreement identifier, as returned by the agreement creation API or retrieved from the API to fetch agreements. If provided                                                                                                             |         |
 
-### Update Group
+### Update Group {#updategroup}
 
 Update an existing group.
 
@@ -392,7 +392,7 @@ Update an existing group.
 | Created          | Date of creation of the group. Format would be yyyy-MM-dd'T'HH:mm:ssZ |         |
 | Is Default Group | true if the group is default group.                                   |         |
 
-### Update User
+### Update User {#updateuser}
 
 Update a user in the Acrobat Sign system.
 
@@ -410,7 +410,7 @@ Update a user in the Acrobat Sign system.
 | User ID    | The user identifier, as returned by the user creation API or retrieved from the API to fetch users. If provided |         |
 | Status     | Status of the user.                                                                                             |         |
 
-### Update Webhook
+### Update Webhook {#updatewebhook}
 
 Updates a webhook
 

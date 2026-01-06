@@ -9,7 +9,7 @@ Expensify provides an industry leading expense management system. Use the Expens
 
 ## Connections
 
-### Basic Connection
+### Basic Connection {#basic}
 
 Basic connection for Expensify
 
@@ -27,7 +27,7 @@ Create a new authentication connection. Refer to the following [guide](https://i
 
 ## Actions
 
-### Create Expense
+### Create Expense {#createexpense}
 
 Allows you to create expenses in a user’s account.
 
@@ -38,7 +38,7 @@ Allows you to create expenses in a user’s account.
 | Employee Email   | The report will be created in that account.          |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 | Transaction List | The transactions to add to the report.               | <code>[<br /> {<br /> "created": "2016-01-01",<br /> "currency": "USD",<br /> "merchant": "Name of merchant 1",<br /> "amount": 1234<br /> },<br /> {<br /> "created": "2016-01-21",<br /> "currency": "EUR",<br /> "merchant": "Name of merchant 2",<br /> "amount": 2211,<br /> "policyID": "E40D9B8DF456E233",<br /> "tax": {<br /> "rateID": "id_TAX_OPTION_16"<br /> }<br /> },<br /> {<br /> "created": "2016-01-31",<br /> "currency": "CAD",<br /> "merchant": "Name of merchant 3",<br /> "amount": 2211,<br /> "reportID": "R006AseGxMka",<br /> "tax": {<br /> "rateID": "id_TAX_OPTION_16",<br /> "amount": 600<br /> }<br /> }<br />]</code> |
 
-### Create Expense Rule
+### Create Expense Rule {#createexpenserule}
 
 Create expense rules for a given employee on a given policy.
 
@@ -50,7 +50,7 @@ Create expense rules for a given employee on a given policy.
 | Policy ID      | The report will be created in that policy.                  |                                                                              |
 | Actions        | The actions to perform on the expense rule.                 | <code>{<br /> "tag": "Tag Name",<br /> "defaultBillable": true<br />}</code> |
 
-### Create Policy
+### Create Policy {#createpolicy}
 
 Creates a policy.
 
@@ -61,7 +61,7 @@ Creates a policy.
 | Policy Name | The name of the policy to create.                                                                       |         |
 | Plan        | Specifies the plan of the policy. If not specified, the new policy will be created under the team plan. |         |
 
-### Create Report
+### Create Report {#createreport}
 
 Creates a report, with transactions, in a user’s account.
 
@@ -74,7 +74,7 @@ Creates a report, with transactions, in a user’s account.
 | Expenses       | The expenses to add to the report.                   | <code>[<br /> {<br /> "date": "yyyy-mm-dd",<br /> "currency": "USD",<br /> "merchant": "Name of merchant",<br /> "amount": 1234<br /> },<br /> {<br /> "date": "yyyy-mm-dd",<br /> "currency": "CAD",<br /> "merchant": "Name of merchant",<br /> "amount": 2211<br /> }<br />]</code> |
 | Policy ID      | The report will be created in that policy.           |                                                                                                                                                                                                                                                                                        |
 
-### Download Report
+### Download Report {#downloadreport}
 
 This job lets you download reports that were generated with the Report Exporter job.
 
@@ -84,7 +84,7 @@ This job lets you download reports that were generated with the Report Exporter 
 | File Name   | The name of a file generated from the exporter job. |                   |
 | File System | The name of a file generated from the exporter job. | integrationServer |
 
-### Export Report
+### Export Report {#exportreport}
 
 Export expense or report data in a configurable format for analysis or insertion into your accounting package.
 
@@ -107,7 +107,7 @@ Export expense or report data in a configurable format for analysis or insertion
 | Test                           | If set to true, actions defined in onFinish will not be executed.                                                                                                                       | false                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 | Template                       | The template parameter is used to format the Expensify data as you wish. It is based on the Freemarker language's syntax.                                                               | <br /> <#if addHeader == true><br /> Merchant,Original Amount,Category,Report number,Expense number<#lt><br /> </#if><br /> <#assign reportNumber = 1><br /> <#assign expenseNumber = 1><br /> <#list reports as report><br /> <#list report.transactionList as expense><br /> ${expense.merchant},<#t><br /> <#-- note: expense.amount prints the original amount only --><br /> ${expense.amount},<#t><br /> ${expense.category},<#t><br /> ${reportNumber},<#t><br /> ${expenseNumber}<#lt><br /> <#assign expenseNumber = expenseNumber + 1><br /> </#list><br /> <#assign reportNumber = reportNumber + 1><br /> </#list> |
 
-### Get Policy
+### Get Policy {#getpolicy}
 
 Gets specific information about listed policies.
 
@@ -119,7 +119,7 @@ Gets specific information about listed policies.
 | Fields         | Specifies the fields of the policy to gather information for.                                                                           |         |
 | User Email     | Specifies the user to gather the policy list for. You must have been granted third-party access by that user/company domain beforehand. |         |
 
-### List Cards
+### List Cards {#listcards}
 
 Gets the list of credit cards that are assigned at the domain level.
 
@@ -129,7 +129,7 @@ Gets the list of credit cards that are assigned at the domain level.
 | Type       | Specifies to the job that it has to list the cards of a domain. | domainCardList |
 | Domain     | The name of the domain to get the cards for.                    |                |
 
-### List Policies
+### List Policies {#listpolicies}
 
 Gets a list of policies with some relevant information about them.
 
@@ -140,7 +140,7 @@ Gets a list of policies with some relevant information about them.
 | Admin Only | Whether or not to only get policies for which the user is an admin for.                                                                 | false      |
 | User Email | Specifies the user to gather the policy list for. You must have been granted third-party access by that user/company domain beforehand. |            |
 
-### Raw Request
+### Raw Request {#rawrequest}
 
 Send a raw HTTP request to the Expensify API
 
@@ -163,7 +163,7 @@ Send a raw HTTP request to the Expensify API
 | Max Retry Count         | The maximum number of retries to attempt. Specify 0 for no retries.                                                                                                                              | 0       |
 | Use Exponential Backoff | Specifies whether to use a pre-defined exponential backoff strategy for retries. When enabled, 'Retry Delay (ms)' is ignored.                                                                    | false   |
 
-### Update Employee
+### Update Employee {#updateemployee}
 
 Add, update or remove policy members
 
@@ -177,7 +177,7 @@ Add, update or remove policy members
 | Set Employee Primary Policy | Specifies the policy to set as the primary policy for the employee. If not specified, the employee will not have a primary policy.                                                  | none                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 | Admin Only                  | Dictates whether Expensify will automatically invite managers (submitsTo), managers’ managers, and so on to policies where they approve reports, if it is not their primary policy. | true                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 
-### Update Expense Rules
+### Update Expense Rules {#updateexpenserule}
 
 Update a preexisting expense rule for a given employee on a given policy.
 
@@ -190,7 +190,7 @@ Update a preexisting expense rule for a given employee on a given policy.
 | Rule ID        | The rule to update.                                         |                                                                              |
 | Actions        | The actions to perform on the expense rule.                 | <code>{<br /> "tag": "Tag Name",<br /> "defaultBillable": true<br />}</code> |
 
-### Update Policy
+### Update Policy {#updatepolicy}
 
 manage categories, tags and report fields on a policy.
 
@@ -204,7 +204,7 @@ manage categories, tags and report fields on a policy.
 | Tags           | Replace the existing tags of the policy with the ones provided.                    | <code>{<br /> "data": [<br /> {<br /> "name": "Tag",<br /> "tags": [<br /> {<br /> "name": "Tag 1",<br /> "glCode": "Tag 1 GL Code"<br /> },<br /> {<br /> "name": "Tag 2",<br /> "enabled": false<br /> }<br /> ]<br /> }<br /> ]<br />}</code>                                                                                                                                           |
 | Report Fields  | Replace or update the existing report fields of the policy with the ones provided. | <code>{<br /> "action": "merge",<br /> "data": [<br /> {<br /> "name": "Report field 1",<br /> "type": "dropdown",<br /> "values": [<br /> "value 1",<br /> "value 2",<br /> "value 3"<br /> ]<br /> }<br /> ]<br />}</code>                                                                                                                                                               |
 
-### Update Report Status
+### Update Report Status {#updatereportstatus}
 
 Update the status of a report.
 

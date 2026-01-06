@@ -9,7 +9,7 @@ Manage Employee Time Tracking within Intuit QuickBooks Time
 
 ## Connections
 
-### OAuth 2.0
+### OAuth 2.0 {#oauth}
 
 OAuth 2.0 flow
 
@@ -23,7 +23,7 @@ Read about how OAuth 2.0 works [here](../oauth2.md).
 
 ## Actions
 
-### Create Timesheet
+### Create Timesheet {#createtimesheet}
 
 Creates a Timesheet
 
@@ -36,7 +36,7 @@ Creates a Timesheet
 | End Date                    | End time of the timesheet, in ISO 8601 format (YYYY-MM-DDThh:mm:ss±hh:mm). Time should reflect the user's local time.                                                                                                             |         |
 | Additional Query Parameters | Additional query parameters to be provided for use in filtering result sets. For example, when filtering users it is possible to provide 'usernames' as the key and a comma separated list of one or more usernames to filter on. |         |
 
-### Create User
+### Create User {#createuser}
 
 Creates a User from the provided data
 
@@ -48,7 +48,7 @@ Creates a User from the provided data
 | Last Name                   | Last name of the user                                                                                                                                                                                                             |         |
 | Additional Query Parameters | Additional query parameters to be provided for use in filtering result sets. For example, when filtering users it is possible to provide 'usernames' as the key and a comma separated list of one or more usernames to filter on. |         |
 
-### Delete Timesheet
+### Delete Timesheet {#deletetimesheet}
 
 Deletes a Timesheet
 
@@ -57,7 +57,7 @@ Deletes a Timesheet
 | Connection   |                                        |         |
 | Job Code IDs | A comma separated list of Job Code Ids |         |
 
-### Get Job Code Assignments
+### Get Job Code Assignments {#getjobcodeassignments}
 
 Gets a list of Job Codes and their associated Users
 
@@ -70,7 +70,7 @@ Gets a list of Job Codes and their associated Users
 | User IDs                    | A comma separated list of User Ids to filter on                                                                                                                                                                                   |         |
 | Additional Query Parameters | Additional query parameters to be provided for use in filtering result sets. For example, when filtering users it is possible to provide 'usernames' as the key and a comma separated list of one or more usernames to filter on. |         |
 
-### Get Job Codes
+### Get Job Codes {#getjobcodes}
 
 Gets a list of Job Codes
 
@@ -82,7 +82,7 @@ Gets a list of Job Codes
 | Page                        | Represents the page of results you'd like to retrieve. Default is 1.                                                                                                                                                              |         |
 | Additional Query Parameters | Additional query parameters to be provided for use in filtering result sets. For example, when filtering users it is possible to provide 'usernames' as the key and a comma separated list of one or more usernames to filter on. |         |
 
-### Get Time Sheets
+### Get Time Sheets {#gettimesheets}
 
 Gets a list of Time Sheets
 
@@ -98,7 +98,7 @@ Gets a list of Time Sheets
 | End Date                    | YYYY-MM-DD formatted date                                                                                                                                                                                                         |         |
 | Additional Query Parameters | Additional query parameters to be provided for use in filtering result sets. For example, when filtering users it is possible to provide 'usernames' as the key and a comma separated list of one or more usernames to filter on. |         |
 
-### Get Users
+### Get Users {#getusers}
 
 Gets a list of Users with optional filters
 
@@ -110,7 +110,7 @@ Gets a list of Users with optional filters
 | Page                        | Represents the page of results you'd like to retrieve. Default is 1.                                                                                                                                                              |         |
 | Additional Query Parameters | Additional query parameters to be provided for use in filtering result sets. For example, when filtering users it is possible to provide 'usernames' as the key and a comma separated list of one or more usernames to filter on. |         |
 
-### Update Timesheet
+### Update Timesheet {#updatetimesheet}
 
 Updates a Timesheet
 
@@ -123,7 +123,7 @@ Updates a Timesheet
 | End Date                    | End time of the timesheet, in ISO 8601 format (YYYY-MM-DDThh:mm:ss±hh:mm). Time should reflect the user's local time.                                                                                                             |         |
 | Additional Query Parameters | Additional query parameters to be provided for use in filtering result sets. For example, when filtering users it is possible to provide 'usernames' as the key and a comma separated list of one or more usernames to filter on. |         |
 
-### Update User
+### Update User {#updateuser}
 
 Updates a specified User
 

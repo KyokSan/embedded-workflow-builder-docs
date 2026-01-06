@@ -9,7 +9,7 @@ Frontify is a comprehensive brand management platform that enables organizations
 
 ## Connections
 
-### OAuth 2.0
+### OAuth 2.0 {#frontifyoauth2}
 
 Connection to Frontify using OAuth 2.0
 
@@ -32,7 +32,7 @@ Read about how OAuth 2.0 works [here](../oauth2.md).
 | Client Secret |                                                                                                                                                                                                                                |         |
 | State         | The state is a parameter controlled by you and used to preserves some state objects set by the client in the Authorization request and makes it available to the client in the response.                                       |         |
 
-### Personal Developer Token
+### Personal Developer Token {#personaldevelopertoken}
 
 Personal Developer Tokens are used for private applications or during development to skip the OAuth2 process.
 
@@ -50,7 +50,7 @@ Personal Developer Tokens are used for private applications or during developmen
 
 ## Actions
 
-### Create Asset
+### Create Asset {#createasset}
 
 Create an Asset.
 
@@ -71,7 +71,7 @@ Create an Asset.
 | Author              | Represents the Author of the Asset.                                                                                                                                                                 |         |
 | Debug Request       | Enabling this flag will log out the current request.                                                                                                                                                | false   |
 
-### Create Attachment
+### Create Attachment {#createattachment}
 
 Create a new Attachment.
 
@@ -84,7 +84,7 @@ Create a new Attachment.
 | External ID         | Attachment external ID.                                          |         |
 | Debug Request       | Enabling this flag will log out the current request.             | false   |
 
-### Create Collection
+### Create Collection {#createcollection}
 
 Create a new Collection. Currently supported for Library type parent entities only.
 
@@ -95,7 +95,7 @@ Create a new Collection. Currently supported for Library type parent entities on
 | Name                | Collection name.                                     |         |
 | Debug Request       | Enabling this flag will log out the current request. | false   |
 
-### Create Folder
+### Create Folder {#createfolder}
 
 Create a new Folder.
 
@@ -107,7 +107,7 @@ Create a new Folder.
 | Description         | Folder description.                                  |         |
 | Debug Request       | Enabling this flag will log out the current request. | false   |
 
-### Delete Asset
+### Delete Asset {#deleteasset}
 
 Delete an Asset.
 
@@ -117,7 +117,7 @@ Delete an Asset.
 | Asset ID            | ID of the Asset to delete.                           |         |
 | Debug Request       | Enabling this flag will log out the current request. | false   |
 
-### Delete Attachment
+### Delete Attachment {#deleteattachment}
 
 Delete an existing Attachment.
 
@@ -127,7 +127,7 @@ Delete an existing Attachment.
 | Attachment ID       | ID of the Attachment to delete.                      |         |
 | Debug Request       | Enabling this flag will log out the current request. | false   |
 
-### Delete Collection
+### Delete Collection {#deletecollection}
 
 Delete an existing Collection.
 
@@ -137,7 +137,7 @@ Delete an existing Collection.
 | Collection ID       | ID of the Collection to delete.                      |         |
 | Debug Request       | Enabling this flag will log out the current request. | false   |
 
-### Delete Folders
+### Delete Folders {#deletefolders}
 
 Delete existing Folders.
 
@@ -147,7 +147,7 @@ Delete existing Folders.
 | Folder IDs          | ID of the Folder to delete.                          |         |
 | Debug Request       | Enabling this flag will log out the current request. | false   |
 
-### Get Account ID
+### Get Account ID {#getaccountid}
 
 Retrieve current Account ID.
 
@@ -156,7 +156,7 @@ Retrieve current Account ID.
 | Frontify Connection |                                                      |         |
 | Debug Request       | Enabling this flag will log out the current request. | false   |
 
-### Get Asset
+### Get Asset {#getasset}
 
 Retrieve an Asset by ID.
 
@@ -166,7 +166,7 @@ Retrieve an Asset by ID.
 | Asset ID            | ID of the Asset to retrieve.                         |         |
 | Debug Request       | Enabling this flag will log out the current request. | false   |
 
-### Get Assets by IDs
+### Get Assets by IDs {#getassetsbyids}
 
 Retrieve a list of Assets by IDs.
 
@@ -176,7 +176,7 @@ Retrieve a list of Assets by IDs.
 | Asset IDs           | List of Asset IDs to retrieve.                       |         |
 | Debug Request       | Enabling this flag will log out the current request. | false   |
 
-### Get Brand
+### Get Brand {#getbrand}
 
 Retrieve a Brand by its ID.
 
@@ -186,7 +186,7 @@ Retrieve a Brand by its ID.
 | Brand ID            | ID of the Brand to retrieve.                         |         |
 | Debug Request       | Enabling this flag will log out the current request. | false   |
 
-### Get Current User
+### Get Current User {#getcurrentuser}
 
 Get the current User.
 
@@ -195,7 +195,7 @@ Get the current User.
 | Frontify Connection |                                                      |         |
 | Debug Request       | Enabling this flag will log out the current request. | false   |
 
-### Get Library
+### Get Library {#getlibrary}
 
 Retrieve a Library by its ID.
 
@@ -205,7 +205,7 @@ Retrieve a Library by its ID.
 | Library ID          | ID of the Library entity.                            |         |
 | Debug Request       | Enabling this flag will log out the current request. | false   |
 
-### Get Workspace Project
+### Get Workspace Project {#getworkspaceproject}
 
 Retrieve a Workspace Project by its ID.
 
@@ -215,7 +215,7 @@ Retrieve a Workspace Project by its ID.
 | Workspace Project ID | ID of the Workspace Project entity.                  |         |
 | Debug Request        | Enabling this flag will log out the current request. | false   |
 
-### Install Webhook
+### Install Webhook {#installwebhook}
 
 Install a Webhook onto a Workspace Project or Library.
 
@@ -227,7 +227,7 @@ Install a Webhook onto a Workspace Project or Library.
 | Notification URL                   | The URL that the Webhook will send notifications to when triggered.  |         |
 | Debug Request                      | Enabling this flag will log out the current request.                 | false   |
 
-### List Asset Comments
+### List Asset Comments {#listassetcomments}
 
 Retrieve a list of Comments relating to a given Asset.
 
@@ -241,7 +241,7 @@ Retrieve a list of Comments relating to a given Asset.
 | Reply Limit         | The limit of how may replies to show per comment.                                 | 50      |
 | Debug Request       | Enabling this flag will log out the current request.                              | false   |
 
-### List Brand Libraries
+### List Brand Libraries {#listbrandlibraries}
 
 Retrieve list of Libraries belonging to a Brand. For full Library details, please use the 'Get Library' action.
 
@@ -254,7 +254,7 @@ Retrieve list of Libraries belonging to a Brand. For full Library details, pleas
 | Brand ID            | ID of the Brand to retrieve Libraries for.                                        |         |
 | Debug Request       | Enabling this flag will log out the current request.                              | false   |
 
-### List Brands
+### List Brands {#listbrands}
 
 Retrieve Brand list for current Account.
 
@@ -263,7 +263,7 @@ Retrieve Brand list for current Account.
 | Frontify Connection |                                                      |         |
 | Debug Request       | Enabling this flag will log out the current request. | false   |
 
-### List Brand Workspace Projects
+### List Brand Workspace Projects {#listbrandworkspaceprojects}
 
 Retrieve list of Workspace Projects belonging to a Brand. For full details, please use the 'Get Workspace Project' action.
 
@@ -276,7 +276,7 @@ Retrieve list of Workspace Projects belonging to a Brand. For full details, plea
 | Brand ID            | ID of the Brand to retrieve Workspace Projects for.                               |         |
 | Debug Request       | Enabling this flag will log out the current request.                              | false   |
 
-### List Library Assets
+### List Library Assets {#listlibraryassets}
 
 Retrieve a list of Assets belonging to a Library.
 
@@ -291,7 +291,7 @@ Retrieve a list of Assets belonging to a Library.
 | External ID         | Limit the result set by the external ID of an Asset.                              |         |
 | Debug Request       | Enabling this flag will log out the current request.                              | false   |
 
-### List Library Collaborators
+### List Library Collaborators {#listlibrarycollaborators}
 
 Retrieve a list of Collaborators belonging to a Library.
 
@@ -304,7 +304,7 @@ Retrieve a list of Collaborators belonging to a Library.
 | Library ID          | ID of the Library entity.                                                         |         |
 | Debug Request       | Enabling this flag will log out the current request.                              | false   |
 
-### List Library Collections
+### List Library Collections {#listlibrarycollections}
 
 Retrieve a list of Collections belonging to a Library.
 
@@ -319,7 +319,7 @@ Retrieve a list of Collections belonging to a Library.
 | Page Size (Assets)  | Assets are paginated within collections. Use this to control the nested Asset pagination.                                                                                        | 50      |
 | Debug Request       | Enabling this flag will log out the current request.                                                                                                                             | false   |
 
-### List Library Folders
+### List Library Folders {#listlibraryfolders}
 
 Retrieve a list of the top-level folders in a Library. To browse further, use the Raw Request action.
 
@@ -332,7 +332,7 @@ Retrieve a list of the top-level folders in a Library. To browse further, use th
 | Library ID          | ID of the Library entity.                                                         |         |
 | Debug Request       | Enabling this flag will log out the current request.                              | false   |
 
-### List Related Assets
+### List Related Assets {#listrelatedassets}
 
 Retrieve a list of assets that relate to a specific Asset.
 
@@ -345,7 +345,7 @@ Retrieve a list of assets that relate to a specific Asset.
 | Asset ID            | ID of the Asset to retrieve related assets for.                                   |         |
 | Debug Request       | Enabling this flag will log out the current request.                              | false   |
 
-### List User Groups
+### List User Groups {#listusergroups}
 
 Retrieve UserGroups list for the current Account.
 
@@ -359,7 +359,7 @@ Retrieve UserGroups list for the current Account.
 | Limit (user pages)  | How many records to show per page of users.                                                                                                                 | 25      |
 | Debug Request       | Enabling this flag will log out the current request.                                                                                                        | false   |
 
-### List Users
+### List Users {#listusers}
 
 Retrieve Users list for the current Account.
 
@@ -371,7 +371,7 @@ Retrieve Users list for the current Account.
 | Page Size           | How many items to show per page.                                                  | 25      |
 | Debug Request       | Enabling this flag will log out the current request.                              | false   |
 
-### List Webhooks
+### List Webhooks {#listwebhooks}
 
 Retrieve WebhookItems related to current Account.
 
@@ -383,7 +383,7 @@ Retrieve WebhookItems related to current Account.
 | Page Size           | How many items to show per page.                                                  | 25      |
 | Debug Request       | Enabling this flag will log out the current request.                              | false   |
 
-### List Workspace Project Assets
+### List Workspace Project Assets {#listworkspaceprojectassets}
 
 Retrieve a list of Assets belonging to a Workspace Project.
 
@@ -398,7 +398,7 @@ Retrieve a list of Assets belonging to a Workspace Project.
 | External ID          | Limit the result set by the external ID of an Asset.                              |         |
 | Debug Request        | Enabling this flag will log out the current request.                              | false   |
 
-### List Workspace Project Folders
+### List Workspace Project Folders {#listworkspaceprojectfolders}
 
 Retrieve a list of the top-level folders in a Workspace Project. To browse further, use the Raw Request action.
 
@@ -411,7 +411,7 @@ Retrieve a list of the top-level folders in a Workspace Project. To browse furth
 | Workspace Project ID | ID of the Workspace Project entity.                                               |         |
 | Debug Request        | Enabling this flag will log out the current request.                              | false   |
 
-### Move Assets
+### Move Assets {#moveassets}
 
 Move existing Asset item(s) to the given Library, Workspace or Folder destination. Only moves within the same Library/Workspace are supported by this operation.
 
@@ -422,7 +422,7 @@ Move existing Asset item(s) to the given Library, Workspace or Folder destinatio
 | Destination ID      | Only allows Library, Workspace, or Folder IDs.       |         |
 | Debug Request       | Enabling this flag will log out the current request. | false   |
 
-### Move Folders
+### Move Folders {#movefolders}
 
 Move existing Folder item(s) to the given Library, Workspace or Folder destination. Only moves within the same Library/Workspace are supported by this operation.
 
@@ -433,7 +433,7 @@ Move existing Folder item(s) to the given Library, Workspace or Folder destinati
 | Destination ID      | Only allows Library, Workspace, or Folder IDs.       |         |
 | Debug Request       | Enabling this flag will log out the current request. | false   |
 
-### Raw GraphQL Request
+### Raw GraphQL Request {#rawrequest}
 
 Send a raw GraphQL request to Frontify.
 
@@ -444,7 +444,7 @@ Send a raw GraphQL request to Frontify.
 | GraphQL Variables   | These should match the variables of your query or mutation. |         |
 | Debug Request       | Enabling this flag will log out the current request.        | false   |
 
-### Uninstall Webhook
+### Uninstall Webhook {#uninstallwebhook}
 
 Uninstall a Webhook.
 
@@ -454,7 +454,7 @@ Uninstall a Webhook.
 | Webhook ID          | The ID of the Webhook to uninstall.                  |         |
 | Debug Request       | Enabling this flag will log out the current request. | false   |
 
-### Update Asset
+### Update Asset {#updateasset}
 
 Update an existing Asset.
 
@@ -471,7 +471,7 @@ Update an existing Asset.
 | Author              | Represents the Author of the Asset.                  |         |
 | Debug Request       | Enabling this flag will log out the current request. | false   |
 
-### Update Collection
+### Update Collection {#updatecollection}
 
 Update an existing Collection.
 
@@ -482,7 +482,7 @@ Update an existing Collection.
 | Name                | Collection name.                                     |         |
 | Debug Request       | Enabling this flag will log out the current request. | false   |
 
-### Update Folder
+### Update Folder {#updatefolder}
 
 Update an existing Folder.
 
@@ -494,7 +494,7 @@ Update an existing Folder.
 | Description         | Folder description.                                  |         |
 | Debug Request       | Enabling this flag will log out the current request. | false   |
 
-### Upload File
+### Upload File {#uploadfile}
 
 Upload a new file.
 

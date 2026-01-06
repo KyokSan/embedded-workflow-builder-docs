@@ -9,7 +9,7 @@ Query and manage data in a Microsoft SQL Server (MSSQL) Database
 
 ## Connections
 
-### MS SQL Server Connection
+### MS SQL Server Connection {#basic}
 
 Authenticate requests to a Microsoft SQL Server.
 
@@ -26,7 +26,7 @@ The MS SQL Server **username** and **password** can be put directly into a conne
 
 ## Actions
 
-### Execute Stored Procedure
+### Execute Stored Procedure {#execute}
 
 Execute a stored procedure on a Microsoft SQL Server Database
 
@@ -36,7 +36,7 @@ Execute a stored procedure on a Microsoft SQL Server Database
 | Timeout          | The number of milliseconds to wait for a response from the server. If the timeout expires before the server responds, an error will be thrown. | 60000   |
 | Connection       |                                                                                                                                                |         |
 
-### Query
+### Query {#query}
 
 Interact with a Microsoft SQL Server Database
 

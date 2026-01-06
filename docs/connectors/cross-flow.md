@@ -9,13 +9,13 @@ The Cross Flow component includes triggers and actions for flow to flow invocati
 
 ## Triggers
 
-### Cross Flow Trigger
+### Cross Flow Trigger {#crossflow}
 
 The cross flow trigger allows you to create flows that are designed to be invoked by other flows.
 
 ## Actions
 
-### Invoke Flow
+### Invoke Flow {#invokeflow}
 
 Invokes another flow and passes data to that flow.
 

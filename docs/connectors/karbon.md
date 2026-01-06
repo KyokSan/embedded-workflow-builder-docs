@@ -9,7 +9,7 @@ Karbon is a collaborative practice management platform for accounting firms.
 
 ## Connections
 
-### Karbon API Key
+### Karbon API Key {#karbonapikey}
 
 Your Karbon API Key
 
@@ -34,7 +34,7 @@ Use these credentials in the connection.
 
 ## Triggers
 
-### Entity Trigger
+### Entity Trigger {#entitytrigger}
 
 Get notified to this flow when a Karbon entity changes
 
@@ -45,7 +45,7 @@ Get notified to this flow when a Karbon entity changes
 
 ## Actions
 
-### Create a Contact
+### Create a Contact {#createcontact}
 
 Create a new contact
 
@@ -56,7 +56,7 @@ Create a new contact
 | Contact's Last Name  | The last name of the Contact.                                                                                                                               |         |
 | Additional Fields    | Additional fields that are not covered by the standard inputs. See https://karbonhq.github.io/karbon-api-reference/#post-/v3/Contacts for more information. |         |
 
-### Create a Work Item
+### Create a Work Item {#createworkitem}
 
 Create a new Work Item
 
@@ -71,7 +71,7 @@ Create a new Work Item
 | Start Date               | The date and time at which the Work Item should start.                                                                                                       |         |
 | Additional Fields        | Additional fields that are not covered by the standard inputs. See https://karbonhq.github.io/karbon-api-reference/#post-/v3/WorkItems for more information. |         |
 
-### Create User
+### Create User {#createuser}
 
 Create a new user
 
@@ -81,7 +81,7 @@ Create a new user
 | User's Name  | The name of the User.  |         |
 | User's Email | The email of the User. |         |
 
-### Delete All Webhook Subscriptions
+### Delete All Webhook Subscriptions {#deleteallwebhooksubscriptions}
 
 Deletes all Webhook Subscriptions associated with Contact, Work, and Note
 
@@ -89,7 +89,7 @@ Deletes all Webhook Subscriptions associated with Contact, Work, and Note
 | ---------- | -------- | ------- |
 | Connection |          |         |
 
-### Get Contact
+### Get Contact {#getcontact}
 
 Get a single Contact by Contact key
 
@@ -99,7 +99,7 @@ Get a single Contact by Contact key
 | Contactkey            | The Contact key. to get the Contact for.                         |         |
 | Expand Business Cards | Whether to return the Business Card associated with the Contact. | false   |
 
-### Get Invoice
+### Get Invoice {#getinvoice}
 
 Get an invoice by key
 
@@ -109,7 +109,7 @@ Get an invoice by key
 | Invoice Key        | The Invoice key to get the Invoice for.          |         |
 | Include Line Items | Include additional lineitems invoice properties. | false   |
 
-### Get User
+### Get User {#getuser}
 
 Gets the details of a single User
 
@@ -118,7 +118,7 @@ Gets the details of a single User
 | Connection |                                   |         |
 | User ID    | The unique ID of the User to get. |         |
 
-### Get Webhook
+### Get Webhook {#getwebhook}
 
 Get a webhook subscription associated with the Karbon entity specified
 
@@ -127,7 +127,7 @@ Get a webhook subscription associated with the Karbon entity specified
 | Connection   |                          |         |
 | Webhook Type | The type of the Webhook. |         |
 
-### Get Work Item
+### Get Work Item {#getworkitem}
 
 Gets a Work Item by Work Item key
 
@@ -136,7 +136,7 @@ Gets a Work Item by Work Item key
 | Connection    |                                             |         |
 | Work Item Key | The Work Item key to get the Work Item for. |         |
 
-### List Contacts
+### List Contacts {#listcontacts}
 
 List all Contacts
 
@@ -149,7 +149,7 @@ List all Contacts
 | Order By     | The property to order the results by.                                                                                                                                                            |         |
 | Get All Data | Turn this on to retrieve all pages of data. $top and $skip will be ignored.                                                                                                                      | false   |
 
-### List Invoices
+### List Invoices {#listinvoices}
 
 List invoices
 
@@ -159,7 +159,7 @@ List invoices
 | Include Line Items | Include additional lineitems invoice properties. | false   |
 | Order By           | The property to order the results by.            |         |
 
-### List Users
+### List Users {#listusers}
 
 Get a list of Users
 
@@ -171,7 +171,7 @@ Get a list of Users
 | Skip         | The number of records to skip when looping over pages of results. If you fetch 100 results, you should skip 0 the first iteration, then 100, 200, 300, etc. until no more records are available. |         |
 | Get All Data | Turn this on to retrieve all pages of data. $top and $skip will be ignored.                                                                                                                      | false   |
 
-### List Work Items
+### List Work Items {#listworkitems}
 
 Receive a list of work items from your tenant
 
@@ -184,7 +184,7 @@ Receive a list of work items from your tenant
 | Order By     | The property to order the results by.                                                                                                                                                            |         |
 | Get All Data | Turn this on to retrieve all pages of data. $top and $skip will be ignored.                                                                                                                      | false   |
 
-### Raw Request
+### Raw Request {#rawrequest}
 
 Send raw HTTP request to Karbon
 
@@ -206,7 +206,7 @@ Send raw HTTP request to Karbon
 | Max Retry Count         | The maximum number of retries to attempt. Specify 0 for no retries.                                                                                                                                                       | 0       |
 | Use Exponential Backoff | Specifies whether to use a pre-defined exponential backoff strategy for retries. When enabled, 'Retry Delay (ms)' is ignored.                                                                                             | false   |
 
-### Update a Contact
+### Update a Contact {#updatecontact}
 
 Partially update a contact by Contact key
 
@@ -221,7 +221,7 @@ Partially update a contact by Contact key
 | Contact's Salutation     | The title to address the Contact.           |         |
 | Contact's Suffix         | The suffix of the Contact.                  |         |
 
-### Update Work Item
+### Update Work Item {#updateworkitem}
 
 Partially update a Work Item by Work Item key
 

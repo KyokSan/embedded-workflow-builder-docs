@@ -9,7 +9,7 @@ Process data sets
 
 ## Actions
 
-### Deduplicate
+### Deduplicate {#deduplicate}
 
 Takes a sorted descending list of objects and a list of field names to use as identifiers and returns the list of objects that have not been previously processed
 

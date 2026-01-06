@@ -9,7 +9,7 @@ Manage calls, users, and workspaces in the Gong revenue intelligence platform.
 
 ## Connections
 
-### API Key
+### API Key {#gongapikey}
 
 Generate by visiting Company Settings > Ecosystem > API.
 
@@ -25,7 +25,7 @@ To generate a Gong API key manually:
 | Access Key        |          |         |
 | Access Key Secret |          |         |
 
-### OAuth 2.0
+### OAuth 2.0 {#oauth2}
 
 Authenticate using oauth flow.
 
@@ -52,7 +52,7 @@ Read about how OAuth 2.0 works [here](../oauth2.md).
 
 ## Triggers
 
-### Process Automation Trigger
+### Process Automation Trigger {#webhook}
 
 Trigger for handling process automations from Gong
 
@@ -62,7 +62,7 @@ Trigger for handling process automations from Gong
 
 ## Actions
 
-### Add Call Media
+### Add Call Media {#addmedia}
 
 Adds a call media, recorded by a telephony system (PBX) or other media recording facility.
 
@@ -73,7 +73,7 @@ Adds a call media, recorded by a telephony system (PBX) or other media recording
 | File       | The media file of the recording. You may attach files up to 1.5GB in size. |         |
 | File Name  | The name of the file                                                       |         |
 
-### Create New Call
+### Create New Call {#createnewcall}
 
 When using this endpoint, either provide a downloadMediaUrl or use the returned callId in a follow-up request to /v2/calls/[id]/media to upload the media file.
 
@@ -100,7 +100,7 @@ When using this endpoint, either provide a downloadMediaUrl or use the returned 
 | Workspace Id       | Optional Workspace identifier, if supplied the API will return only the calls belonging to this workspace.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |         |
 | Language Code      | The language code the call should be transcribed to. This field is optional as Gong automatically detects the language spoken in the call and transcribes it accordingly. Set this field only if you are sure of the language the call is in. Valid values are: af-ZA, am-ET, ar-AE, ar-BH, ar-DZ, ar-EG, ar-IL, ar-IQ, ar-JO, ar-KW, ar-LB, ar-MA, ar-MR, ar-OM, ar-PS, ar-QA, ar-SA, ar-TN, ar-YE, az-AZ, bg-BG, bn-BD, bn-IN, bs-BA, ca-ES, cs-CZ, da-DK, de-AT, de-CH, de-DE, el-GR, en-AB, en-AU, en-CA, en-GB, en-IE, en-IN, en-NZ, en-PH, en-SG, en-US, en-WL, en-ZA, es-AR, es-BO, es-CL, es-CO, es-CR, es-DO, es-EC, es-ES, es-GT, es-HN, es-MX, es-NI, es-PA, es-PE, es-PR, es-PY, es-SV, es-US, es-UY, et-EE, eu-ES, fa-IR, fi-FI, fil-PH, fr-BE, fr-CA, fr-CH, fr-FR, gl-ES, gu-IN, he-IL, hi-IN, hr-HR, hu-HU, hy-AM, id-ID, is-IS, it-CH, it-IT, ja-JP, jv-ID, ka-GE, kk-KZ, km-KH, kn-IN, ko-KR, lo-LA, lt-LT, lv-LV, mk-MK, ml-IN, mn-MN, mr-IN, ms-MY, my-MM, ne-NP, nl-BE, nl-NL, no-NO, pa-Guru-IN, pl-PL, pt-BR, pt-PT, ro-RO, ru-RU, si-LK, sk-SK, sl-SI, sq-AL, sr-RS, su-ID, sv-SE, sw-KE, sw-TZ, ta-IN, ta-LK, ta-MY, ta-SG, te-IN, th-TH, tr-TR, uk-UA, ur-IN, ur-PK, uz-UZ, vi-VN, yue-Hant-HK, zh-CN, zh-TW, zu-ZA |         |
 
-### Create New Gong Meeting
+### Create New Gong Meeting {#createnewgongmeeting}
 
 Creates a new Gong Meeting
 
@@ -114,7 +114,7 @@ Creates a new Gong Meeting
 | External ID     | The ID as it is formed on the external system.                                                                                      |         |
 | Title           | The title of the call. This title is available in the Gong system for indexing and search.                                          |         |
 
-### Custom Action Event
+### Custom Action Event {#customactionevent}
 
 Push engagement events into Gong and display them as events in Gong's activity timeline, when a content is engaged by an external participant (for example, a contract was 'signed' by the prospect)
 
@@ -144,7 +144,7 @@ Push engagement events into Gong and display them as events in Gong's activity t
 | Sharing Message Subject  | The subject of share email / message.                                                                                                                   |         |
 | Sharing Message Body     | The share message body. Can contain HTML and will be cleaned when it is presented.                                                                      |         |
 
-### Custom Shared Event
+### Custom Shared Event {#customsharedevent}
 
 Push engagement events into Gong and display them as events in Gong’s activity timeline, when a Gong user shares content with external participants (for example, a contract was “shared” by the account executive with his prospects)
 
@@ -174,7 +174,7 @@ Push engagement events into Gong and display them as events in Gong’s activity
 | Agent Platform           | Platform on which the interaction was made                                                                                                              |         |
 | User Agent               | 'User-Agent' header value for browser based interaction                                                                                                 |         |
 
-### Custom Viewed Event
+### Custom Viewed Event {#customviewedevent}
 
 Push engagement events into Gong and display them as events in Gong's activity timeline, when a Gong user shares content with external participants (for example, a contract was “shared” by the account executive with his prospects)
 
@@ -205,7 +205,7 @@ Push engagement events into Gong and display them as events in Gong's activity t
 | Sharing Message Subject  | The subject of share email / message.                                                                                                                   |         |
 | Sharing Message Body     | The share message body. Can contain HTML and will be cleaned when it is presented.                                                                      |         |
 
-### Delete Email Address and Associated Elements
+### Delete Email Address and Associated Elements {#deleteemailaddressandassociatedelements}
 
 Given an email address, this endpoint deletes from the Gong system any calls or email messages that reference this address.
 
@@ -214,7 +214,7 @@ Given an email address, this endpoint deletes from the Gong system any calls or 
 | Connection    |                    |         |
 | Email Address | The email address. |         |
 
-### Delete Gong Meeting
+### Delete Gong Meeting {#deletemeeting}
 
 Deletes an existing Gong Meeting
 
@@ -223,7 +223,7 @@ Deletes an existing Gong Meeting
 | Connection |                                                             |         |
 | Meeting ID | Gong's unique identifier for the meeting (up to 20 digits). |         |
 
-### Delete Phone Number and Associated Elements
+### Delete Phone Number and Associated Elements {#deletephonenumberandassociatedelements}
 
 Given a phone number, this endpoint deletes from the Gong system any leads or contacts with a matching phone number or mobile phone number.
 
@@ -232,7 +232,7 @@ Given a phone number, this endpoint deletes from the Gong system any leads or co
 | Connection   |                                                                                                                                                                                                                                                                                                                                  |         |
 | Phone Number | The phone number. This number must start with a + (plus) sign followed by the country code, area code, and local phone number. All other non-digits are ignored. The following are examples of permitted phone numbers: +1 425 555 2671, +1-425-555-2671, +1 425 5552671, +14255552671, +1 425 555 26 71, +1(425) 555-2671, etc. |         |
 
-### Get Call
+### Get Call {#getcallusingget}
 
 Retrieve data for a specific call (/v2/calls/[id])
 
@@ -241,7 +241,7 @@ Retrieve data for a specific call (/v2/calls/[id])
 | Connection |                                                                 |         |
 | Call Id    | Gong's unique numeric identifier for the call (up to 20 digits) |         |
 
-### Get Call Transcript
+### Get Call Transcript {#getcalltranscript}
 
 Returns transcripts for calls that took place during the specified date period.
 
@@ -254,7 +254,7 @@ Returns transcripts for calls that took place during the specified date period.
 | Workspace Id   | Optional Workspace identifier, if supplied the API will return only the calls belonging to this workspace.                                                                                                                                                                                                                                                                                                   |                         |
 | Call Ids       | List of calls Ids to be filtered. If not supplied, returns all calls between fromDateTime and toDateTime.                                                                                                                                                                                                                                                                                                    | <code>["000xxx"]</code> |
 
-### Get Logs Data by Type and Time Range
+### Get Logs Data by Type and Time Range {#getlogsdatabytypeandtimerange}
 
 List log entries that took place during a specified time range.
 
@@ -266,7 +266,7 @@ List log entries that took place during a specified time range.
 | From Date Time | Date and time (in ISO-8601 format: '2018-02-18T02:30:00-07:00' or '2018-02-18T08:00:00Z', where Z stands for UTC) from which to list recorded calls. Returns calls that started on or after the specified date and time. If not provided, list starts with earliest call. For web-conference calls recorded by Gong, the date denotes its scheduled time, otherwise, it denotes its actual start time. |         |
 | To Date Time   | The time until which to retrieve log records, in the ISO-8601 format (e.g., '2018-02-18T02:30:00-07:00' or '2018-02-18T08:00:00Z', where Z stands for UTC); if not specified, the logs end with the latest recorded log.                                                                                                                                                                               |         |
 
-### Get User
+### Get User {#getuser}
 
 Retrieve a specific user.
 
@@ -275,7 +275,7 @@ Retrieve a specific user.
 | Connection |                                                                  |         |
 | User Id    | Gong's unique numeric identifier for the user (up to 20 digits). |         |
 
-### List Calls
+### List Calls {#listcallsusingget}
 
 Retrieve call data by date range (/v2/calls)
 
@@ -287,7 +287,7 @@ Retrieve call data by date range (/v2/calls)
 | To Date Time   | Date and time (in ISO-8601 format: '2018-02-18T02:30:00-07:00' or '2018-02-18T08:00:00Z', where Z stands for UTC) until which to list recorded calls. Returns calls that started up to but excluding specified date and time. If not provided, list ends with most recent call. For web-conference calls recorded by Gong, the date denotes its scheduled time, otherwise, it denotes its actual start time. |         |
 | Workspace Id   | Optional Workspace identifier, if supplied the API will return only the calls belonging to this workspace.                                                                                                                                                                                                                                                                                                   |         |
 
-### List Calls in Folder
+### List Calls in Folder {#listcallsinfolder}
 
 Given a folder id, this endpoint retrieves a list of calls in it.
 
@@ -296,7 +296,7 @@ Given a folder id, this endpoint retrieves a list of calls in it.
 | Connection |                                                                    |         |
 | Folder Id  | Gong's unique numeric identifier for the folder (up to 20 digits). |         |
 
-### List Library Folders
+### List Library Folders {#listlibraryfolders}
 
 Use this endpoint to retrieve a list of public library folders.
 
@@ -305,7 +305,7 @@ Use this endpoint to retrieve a list of public library folders.
 | Connection   |                                                                                                            |         |
 | Workspace Id | Optional Workspace identifier, if supplied the API will return only the calls belonging to this workspace. |         |
 
-### List References to an Email Address
+### List References to an Email Address {#listreferencestoanemailaddress}
 
 Shows the elements in the Gong system that reference the given email address.
 
@@ -314,7 +314,7 @@ Shows the elements in the Gong system that reference the given email address.
 | Connection    |                    |         |
 | Email Address | The email address. |         |
 
-### List References to a Phone Number
+### List References to a Phone Number {#listreferencestoaphonenumber}
 
 Shows the elements in the Gong system that reference the given phone number.
 
@@ -323,7 +323,7 @@ Shows the elements in the Gong system that reference the given phone number.
 | Connection   |                                                                                                                                                                                                                                                                                                                                  |         |
 | Phone Number | The phone number. This number must start with a + (plus) sign followed by the country code, area code, and local phone number. All other non-digits are ignored. The following are examples of permitted phone numbers: +1 425 555 2671, +1-425-555-2671, +1 425 5552671, +14255552671, +1 425 555 26 71, +1(425) 555-2671, etc. |         |
 
-### List Users
+### List Users {#listusers}
 
 List all of the company's users.
 
@@ -333,7 +333,7 @@ List all of the company's users.
 | Cursor          | When paging is needed, provide the value supplied by the previous API call to bring the following page of records.                                                                                                                                                                           |         |
 | Include Avatars | Avatars are synthetic users representing Gong employees (CSMs and support providers) when they access your instance. References to avatars' IDs may be found in the outputs of other API endpoints. This parameter is optional, if not provided avatars will not be included in the results. | false   |
 
-### List Workspaces
+### List Workspaces {#listworkspaces}
 
 Returns a list of all workspaces including their details.
 
@@ -341,7 +341,7 @@ Returns a list of all workspaces including their details.
 | ---------- | -------- | ------- |
 | Connection |          |         |
 
-### Raw Request
+### Raw Request {#rawrequest}
 
 Send raw HTTP request to Gong
 
@@ -363,7 +363,7 @@ Send raw HTTP request to Gong
 | Max Retry Count         | The maximum number of retries to attempt. Specify 0 for no retries.                                                                                                                              | 0       |
 | Use Exponential Backoff | Specifies whether to use a pre-defined exponential backoff strategy for retries. When enabled, 'Retry Delay (ms)' is ignored.                                                                    | false   |
 
-### Update Gong Meeting
+### Update Gong Meeting {#updategongmeeting}
 
 Updates an existing Gong Meeting
 

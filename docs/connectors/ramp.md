@@ -9,7 +9,7 @@ Ramp is a spend management platform focused on automating accounts payable and p
 
 ## Connections
 
-### OAuth 2.0
+### OAuth 2.0 {#ramp-oauth2}
 
 This connection allows you to authenticate with Ramp using OAuth 2.0.
 
@@ -45,7 +45,7 @@ Read about how OAuth 2.0 works [here](../oauth2.md).
 
 ## Actions
 
-### Create Custom Accounting Field
+### Create Custom Accounting Field {#createcustomaccountingfield}
 
 Create a custom accounting field
 
@@ -58,7 +58,7 @@ Create a custom accounting field
 | Debug Request              | Enabling this flag will log out the current request.                          | false   |
 | Connection                 |                                                                               |         |
 
-### Create Department
+### Create Department {#createdepartment}
 
 Create a new department
 
@@ -68,7 +68,7 @@ Create a new department
 | Debug Request | Enabling this flag will log out the current request. | false   |
 | Connection    |                                                      |         |
 
-### Create Location
+### Create Location {#createlocation}
 
 Create a new location
 
@@ -79,7 +79,7 @@ Create a new location
 | Debug Request | Enabling this flag will log out the current request. | false   |
 | Connection    |                                                      |         |
 
-### Delete Custom Accounting Field
+### Delete Custom Accounting Field {#deletecustomaccountingfield}
 
 Delete a custom accounting field
 
@@ -89,7 +89,7 @@ Delete a custom accounting field
 | Debug Request              | Enabling this flag will log out the current request. | false   |
 | Connection                 |                                                      |         |
 
-### Delete Custom Accounting Field Option
+### Delete Custom Accounting Field Option {#deletecustomaccountingfieldoption}
 
 Delete a custom accounting field option
 
@@ -99,7 +99,7 @@ Delete a custom accounting field option
 | Debug Request                     | Enabling this flag will log out the current request.  | false   |
 | Connection                        |                                                       |         |
 
-### Delete General Ledger Account
+### Delete General Ledger Account {#deletegeneralledgeraccount}
 
 Delete a general ledger account
 
@@ -109,7 +109,7 @@ Delete a general ledger account
 | Debug Request             | Enabling this flag will log out the current request. | false   |
 | Connection                |                                                      |         |
 
-### Delete Vendor
+### Delete Vendor {#deletevendor}
 
 Delete a vendor
 
@@ -119,7 +119,7 @@ Delete a vendor
 | Debug Request | Enabling this flag will log out the current request. | false   |
 | Connection    |                                                      |         |
 
-### Get Bill
+### Get Bill {#getbill}
 
 Retrieve a bill by ID
 
@@ -129,7 +129,7 @@ Retrieve a bill by ID
 | Debug Request | Enabling this flag will log out the current request. | false   |
 | Connection    |                                                      |         |
 
-### Get Business Entity
+### Get Business Entity {#getbusinessentity}
 
 Retrieve a business entity by ID
 
@@ -139,7 +139,7 @@ Retrieve a business entity by ID
 | Debug Request      | Enabling this flag will log out the current request. | false   |
 | Connection         |                                                      |         |
 
-### Get Custom Accounting Field
+### Get Custom Accounting Field {#getcustomaccountingfield}
 
 Retrieve a custom accounting field by ID
 
@@ -149,7 +149,7 @@ Retrieve a custom accounting field by ID
 | Debug Request              | Enabling this flag will log out the current request. | false   |
 | Connection                 |                                                      |         |
 
-### Get Custom Accounting Field Option
+### Get Custom Accounting Field Option {#getcustomaccountingfieldoption}
 
 Retrieve a custom accounting field option by ID
 
@@ -159,7 +159,7 @@ Retrieve a custom accounting field option by ID
 | Debug Request                     | Enabling this flag will log out the current request. | false   |
 | Connection                        |                                                      |         |
 
-### Get Department
+### Get Department {#getdepartment}
 
 Retrieve a department by ID
 
@@ -169,7 +169,7 @@ Retrieve a department by ID
 | Debug Request | Enabling this flag will log out the current request. | false   |
 | Connection    |                                                      |         |
 
-### Get General Ledger Account
+### Get General Ledger Account {#getgeneralledgeraccount}
 
 Retrieve a general ledger account by ID
 
@@ -179,7 +179,7 @@ Retrieve a general ledger account by ID
 | Debug Request             | Enabling this flag will log out the current request. | false   |
 | Connection                |                                                      |         |
 
-### Get Location
+### Get Location {#getlocation}
 
 Retrieve a location by ID
 
@@ -189,7 +189,7 @@ Retrieve a location by ID
 | Debug Request | Enabling this flag will log out the current request. | false   |
 | Connection    |                                                      |         |
 
-### Get Reimbursement
+### Get Reimbursement {#getreimbursement}
 
 Retrieve a reimbursement by ID
 
@@ -199,7 +199,7 @@ Retrieve a reimbursement by ID
 | Debug Request    | Enabling this flag will log out the current request. | false   |
 | Connection       |                                                      |         |
 
-### Get Transaction
+### Get Transaction {#gettransaction}
 
 Retrieve a transaction by ID
 
@@ -209,7 +209,7 @@ Retrieve a transaction by ID
 | Debug Request  | Enabling this flag will log out the current request. | false   |
 | Connection     |                                                      |         |
 
-### Get Vendor
+### Get Vendor {#getvendor}
 
 Retrieve a vendor by ID
 
@@ -219,7 +219,7 @@ Retrieve a vendor by ID
 | Debug Request | Enabling this flag will log out the current request. | false   |
 | Connection    |                                                      |         |
 
-### List Bills
+### List Bills {#listbills}
 
 Retrieve a list of all bills
 
@@ -232,7 +232,7 @@ Retrieve a list of all bills
 | Custom Query Params | Custom query parameters to be included in the request                                        |         |
 | Debug Request       | Enabling this flag will log out the current request.                                         | false   |
 
-### List Business Entities
+### List Business Entities {#listbusinessentities}
 
 Retrieve a list of all business entities
 
@@ -245,7 +245,7 @@ Retrieve a list of all business entities
 | Custom Query Params | Custom query parameters to be included in the request                                        |         |
 | Debug Request       | Enabling this flag will log out the current request.                                         | false   |
 
-### List Custom Accounting Field
+### List Custom Accounting Field {#listcustomaccountingfield}
 
 List custom accounting fields
 
@@ -258,7 +258,7 @@ List custom accounting fields
 | Custom Query Params | Custom query parameters to be included in the request                                        |         |
 | Debug Request       | Enabling this flag will log out the current request.                                         | false   |
 
-### List Custom Accounting Field Options
+### List Custom Accounting Field Options {#listcustomaccountingfieldoptions}
 
 List options for a given custom accounting field
 
@@ -272,7 +272,7 @@ List options for a given custom accounting field
 | Custom Query Params        | Custom query parameters to be included in the request                                        |         |
 | Debug Request              | Enabling this flag will log out the current request.                                         | false   |
 
-### List Departments
+### List Departments {#listdepartments}
 
 Retrieve a list of all Departments
 
@@ -285,7 +285,7 @@ Retrieve a list of all Departments
 | Custom Query Params | Custom query parameters to be included in the request                                        |         |
 | Debug Request       | Enabling this flag will log out the current request.                                         | false   |
 
-### List General Ledger Accounts
+### List General Ledger Accounts {#listgeneralledgeraccounts}
 
 Retrieve a list of all general ledger accounts
 
@@ -298,7 +298,7 @@ Retrieve a list of all general ledger accounts
 | Custom Query Params | Custom query parameters to be included in the request                                        |         |
 | Debug Request       | Enabling this flag will log out the current request.                                         | false   |
 
-### List Locations
+### List Locations {#listlocations}
 
 Retrieve a list of all locations
 
@@ -311,7 +311,7 @@ Retrieve a list of all locations
 | Custom Query Params | Custom query parameters to be included in the request                                        |         |
 | Debug Request       | Enabling this flag will log out the current request.                                         | false   |
 
-### List Reimbursements
+### List Reimbursements {#listreimbursements}
 
 Retrieve a list of all reimbursements
 
@@ -324,7 +324,7 @@ Retrieve a list of all reimbursements
 | Custom Query Params | Custom query parameters to be included in the request                                        |         |
 | Debug Request       | Enabling this flag will log out the current request.                                         | false   |
 
-### List Transactions
+### List Transactions {#listtransactions}
 
 Retrieve a list of all transactions
 
@@ -337,7 +337,7 @@ Retrieve a list of all transactions
 | Custom Query Params | Custom query parameters to be included in the request                                        |         |
 | Debug Request       | Enabling this flag will log out the current request.                                         | false   |
 
-### List Vendors
+### List Vendors {#listvendors}
 
 Retrieve a list of all vendors
 
@@ -350,7 +350,7 @@ Retrieve a list of all vendors
 | Custom Query Params | Custom query parameters to be included in the request                                        |         |
 | Debug Request       | Enabling this flag will log out the current request.                                         | false   |
 
-### Post Sync Status
+### Post Sync Status {#postsyncstatus}
 
 This endpoint allows customers to notify Ramp of a list of sync results
 
@@ -363,7 +363,7 @@ This endpoint allows customers to notify Ramp of a list of sync results
 | Debug Request    | Enabling this flag will log out the current request.                                                                                                                                                            | false   |
 | Connection       |                                                                                                                                                                                                                 |         |
 
-### Raw Request
+### Raw Request {#rawrequest}
 
 Send raw HTTP request to Ramp API
 
@@ -386,7 +386,7 @@ Send raw HTTP request to Ramp API
 | Max Retry Count         | The maximum number of retries to attempt. Specify 0 for no retries.                                                                                                                                                                                | 0       |
 | Use Exponential Backoff | Specifies whether to use a pre-defined exponential backoff strategy for retries. When enabled, 'Retry Delay (ms)' is ignored.                                                                                                                      | false   |
 
-### Update Custom Accounting Field
+### Update Custom Accounting Field {#updatecustomaccountingfield}
 
 Update an existing custom accounting field
 
@@ -398,7 +398,7 @@ Update an existing custom accounting field
 | Debug Request              | Enabling this flag will log out the current request.                          | false   |
 | Connection                 |                                                                               |         |
 
-### Update Custom Accounting Field Option
+### Update Custom Accounting Field Option {#updatecustomaccountingfieldoption}
 
 Update an existing custom accounting field option
 
@@ -410,7 +410,7 @@ Update an existing custom accounting field option
 | Debug Request                     | Enabling this flag will log out the current request.   | false   |
 | Connection                        |                                                        |         |
 
-### Update Department
+### Update Department {#updatedepartment}
 
 Update a department by ID
 
@@ -421,7 +421,7 @@ Update a department by ID
 | Debug Request | Enabling this flag will log out the current request. | false   |
 | Connection    |                                                      |         |
 
-### Update General Ledger Account
+### Update General Ledger Account {#updategeneralledgeraccount}
 
 Update an existing general ledger account
 
@@ -435,7 +435,7 @@ Update an existing general ledger account
 | Debug Request             | Enabling this flag will log out the current request.                                                                                                                                                                                 | false   |
 | Connection                |                                                                                                                                                                                                                                      |         |
 
-### Update Location
+### Update Location {#updatelocation}
 
 Update an existing location
 
@@ -447,7 +447,7 @@ Update an existing location
 | Debug Request | Enabling this flag will log out the current request. | false   |
 | Connection    |                                                      |         |
 
-### Update Vendor
+### Update Vendor {#updatevendor}
 
 Update an existing vendor
 
@@ -461,7 +461,7 @@ Update an existing vendor
 | Debug Request | Enabling this flag will log out the current request.                                                                                                                | false   |
 | Connection    |                                                                                                                                                                     |         |
 
-### Upload Custom Accounting Field Option
+### Upload Custom Accounting Field Option {#uploadcustomaccountingfieldoption}
 
 Upload a new custom accounting field option
 

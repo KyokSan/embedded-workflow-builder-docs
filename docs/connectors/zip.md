@@ -9,7 +9,7 @@ Provides utility methods for working with zip files
 
 ## Actions
 
-### Compress Gzip
+### Compress Gzip {#compressgzip}
 
 Compress Gzip file
 
@@ -17,7 +17,7 @@ Compress Gzip file
 | --------- | --------------------- | ------- |
 | File Data | File to Gzip compress |         |
 
-### Decompress Gzip
+### Decompress Gzip {#decompressgzip}
 
 Decompress Gzip file
 
@@ -25,7 +25,7 @@ Decompress Gzip file
 | -------------- | ----------------------- | ------- |
 | Gzip File Data | Gzip data to decompress |         |
 
-### Unzip
+### Unzip {#unzip}
 
 Decompress a Zip file
 
@@ -33,7 +33,7 @@ Decompress a Zip file
 | ------------- | ---------------------- | ------- |
 | Zip File Data | Zip data to decompress |         |
 
-### Zip
+### Zip {#zip}
 
 Compress a Zip file
 

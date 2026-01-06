@@ -9,7 +9,7 @@ Create records and incidents within ServiceNow
 
 ## Connections
 
-### Basic Username/Password
+### Basic Username/Password {#basic}
 
 Basic Username and Password connection
 
@@ -18,7 +18,7 @@ Basic Username and Password connection
 | Username | Username |         |
 | Password | Password |         |
 
-### OAuth 2.0 Authorization Code
+### OAuth 2.0 Authorization Code {#authorizationcode}
 
 OAuth 2.0 Authorization Code flow
 
@@ -35,7 +35,7 @@ Read about how OAuth 2.0 works [here](../oauth2.md).
 
 ## Actions
 
-### Create Configuration Item
+### Create Configuration Item {#createconfigurationitem}
 
 Creates a single configuration item (CI) with the specified outbound and inbound relations within the specified Configuration Management Database (CMDB) table.
 
@@ -50,7 +50,7 @@ Creates a single configuration item (CI) with the specified outbound and inbound
 | Configuration Item Outbound Relations | The outbound relations of the configuration item to create.                                                                                                           |         |
 | Configuration Item Source             | Entity that created/updated the information. This must be one of the choice values specified in the discovery_source field in the Configuration Item [cmdb_ci] table. |         |
 
-### Create Incident
+### Create Incident {#createincident}
 
 Creates an Incident with the specified field names and values
 
@@ -61,7 +61,7 @@ Creates an Incident with the specified field names and values
 | API Version  | The version of the ServiceNow API file_name, to use                    |         |
 | Values       | The names of the fields and their values to use when creating a record |         |
 
-### Create Table Record
+### Create Table Record {#createtablerecord}
 
 Creates a record in the specified table with the specified field names and values
 
@@ -73,7 +73,7 @@ Creates a record in the specified table with the specified field names and value
 | Table        | The name of the ServiceNow table in which to create a record           |         |
 | Values       | The names of the fields and their values to use when creating a record |         |
 
-### Create User
+### Create User {#createuser}
 
 Creates a User with the specified field names and values
 
@@ -88,7 +88,7 @@ Creates a User with the specified field names and values
 | Email        | The Email of the User                                                  |         |
 | User Id      | The Username of the User                                               |         |
 
-### Delete Attachment
+### Delete Attachment {#deleteattachment}
 
 This method deletes the attachment with a specific sys_id value.
 
@@ -99,7 +99,7 @@ This method deletes the attachment with a specific sys_id value.
 | API Version  | The version of the ServiceNow API file_name, to use                 |         |
 | Sys ID       | Sys_id value of the attachment to delete.                           |         |
 
-### Delete Configuration Item
+### Delete Configuration Item {#deleteconfigurationitem}
 
 Deletes the relation for the specified configuration item (CI).
 
@@ -112,7 +112,7 @@ Deletes the relation for the specified configuration item (CI).
 | Sys ID              | The Sys ID of the record being queried                                              |         |
 | Relationship Sys ID | Sys Id of the relation to perform the operation on.                                 |         |
 
-### Delete Incident
+### Delete Incident {#deleteincident}
 
 Delete an Incident
 
@@ -123,7 +123,7 @@ Delete an Incident
 | API Version  | The version of the ServiceNow API file_name, to use                 |         |
 | Sys ID       | The Sys ID of the record being queried                              |         |
 
-### Delete Table Record
+### Delete Table Record {#deletetablerecord}
 
 Delete a record for a given ID in the specified Table
 
@@ -135,7 +135,7 @@ Delete a record for a given ID in the specified Table
 | Table        | The name of the ServiceNow table in which to create a record        |         |
 | Sys ID       | The Sys ID of the record being queried                              |         |
 
-### Delete User
+### Delete User {#deleteuser}
 
 Deletes a User
 
@@ -146,7 +146,7 @@ Deletes a User
 | API Version  | The version of the ServiceNow API file_name, to use                 |         |
 | Sys ID       | The Sys ID of the record being queried                              |         |
 
-### Get Attachment
+### Get Attachment {#getattachment}
 
 Returns the metadata for the attachment file with a specific sys_id value.
 
@@ -157,7 +157,7 @@ Returns the metadata for the attachment file with a specific sys_id value.
 | API Version  | The version of the ServiceNow API file_name, to use                 |         |
 | Sys ID       | The Sys ID of the record being queried                              |         |
 
-### Get Attachment File
+### Get Attachment File {#getattachmentfile}
 
 Returns the binary file attachment with a specific sys_id value.
 
@@ -168,7 +168,7 @@ Returns the binary file attachment with a specific sys_id value.
 | API Version  | The version of the ServiceNow API file_name, to use                 |         |
 | Sys ID       | The Sys ID of the record being queried                              |         |
 
-### Get CMDB Class Metadata
+### Get CMDB Class Metadata {#getcmdbclassmetadata}
 
 Returns the meta data for the specified CMDB class
 
@@ -179,7 +179,7 @@ Returns the meta data for the specified CMDB class
 | API Version  | The version of the ServiceNow API file_name, to use                                 |         |
 | Class Name   | CMDB class name. This is the name of the table that contains the desired CI records |         |
 
-### Get Configuration Item Attributes
+### Get Configuration Item Attributes {#getconfigurationitemattributes}
 
 Returns attributes and relationship information for a specified configuration item (CI) record
 
@@ -191,7 +191,7 @@ Returns attributes and relationship information for a specified configuration it
 | Class Name   | CMDB class name. This is the name of the table that contains the desired CI records |         |
 | Sys ID       | The Sys ID of the record being queried                                              |         |
 
-### Get Incident
+### Get Incident {#getincident}
 
 Gets an Incident by ID
 
@@ -202,7 +202,7 @@ Gets an Incident by ID
 | API Version  | The version of the ServiceNow API file_name, to use                 |         |
 | Sys ID       | The Sys ID of the record being queried                              |         |
 
-### Get Knowledge Article
+### Get Knowledge Article {#getknowledgearticle}
 
 Returns specific knowledge article content and its field values.
 
@@ -218,7 +218,7 @@ Returns specific knowledge article content and its field values.
 | Search Rank  | Optional unless using the 'Search ID' input. Article search rank by click-rate (articles.rank) that you can retrieve using the 'List Knowledge Articles' action.                                     |         |
 | Update View  | Update view count and record an entry for the article in the Knowledge Use [kb_use] table.                                                                                                           | false   |
 
-### Get Knowledge Article Attachment
+### Get Knowledge Article Attachment {#getknowledgearticleattachment}
 
 Returns a knowledge article attachment as a file.
 
@@ -230,7 +230,7 @@ Returns a knowledge article attachment as a file.
 | Article Sys ID    | Sys_id of the knowledge article with the attachment you intend to retrieve. Located in the Knowledge Bases [kb_knowledge] table. |         |
 | Attachment Sys ID | Sys_id of record to which the attachment belongs.                                                                                |         |
 
-### Get Table Record
+### Get Table Record {#gettablerecord}
 
 Get a record for a given ID in the specified Table
 
@@ -242,7 +242,7 @@ Get a record for a given ID in the specified Table
 | Table        | The name of the ServiceNow table in which to create a record        |         |
 | Sys ID       | The Sys ID of the record being queried                              |         |
 
-### Get User by Id
+### Get User by Id {#getuser}
 
 Gets a User by their Id
 
@@ -253,7 +253,7 @@ Gets a User by their Id
 | API Version  | The version of the ServiceNow API file_name, to use                 |         |
 | Sys ID       | The Sys ID of the record being queried                              |         |
 
-### Get User by Username
+### Get User by Username {#getuserbyusername}
 
 Get a record for a given ID in the specified Table
 
@@ -264,7 +264,7 @@ Get a record for a given ID in the specified Table
 | API Version  | The version of the ServiceNow API file_name, to use                 |         |
 | User Id      | The Username of the User                                            |         |
 
-### List Attachments
+### List Attachments {#listattachments}
 
 Returns the metadata for multiple attachments.
 
@@ -277,7 +277,7 @@ Returns the metadata for multiple attachments.
 | Sysparm Offset | Starting record index for which to begin retrieving records. This functionality enables the retrieval of all records, regardless of the number of records, in small manageable chunks. For example, the first time you call this endpoint, sysparm_offset is set to '0'. To simply page through all available records, use sysparm_offset=sysparm_offset+sysparm_limit, until you reach the end of all records. |         |
 | Sysparm Query  | Encoded query used to filter the result set. Syntax: sysparm_query=<col_name><operator><value>.                                                                                                                                                                                                                                                                                                                 |         |
 
-### List Configuration Items
+### List Configuration Items {#listconfigurationitems}
 
 Returns the available configuration items (CI) for a specified Configuration Management Database (CMDB) class (table)
 
@@ -291,7 +291,7 @@ Returns the available configuration items (CI) for a specified Configuration Man
 | Sysparm Offset | Starting record index for which to begin retrieving records. Use this value to paginate record retrieval. This functionality enables the retrieval of all records, regardless of the number of records, in small manageable chunks.For example, the first time you call this endpoint, sysparm_offset is set to '0'. To simply page through all available records, use sysparm_offset=sysparm_offset+sysparm_limit, until you reach the end of all records.Don't pass a negative number in the sysparm_offset parameter. |         |
 | Sysparm Query  | All parameters are case-sensitive. Queries can contain more than one entry, such as sysparm_query=<col_name><operator><value>[<operator><col_name><operator><value>]. Refer to https://www.servicenow.com/docs/bundle/yokohama-api-reference/page/integrate/inbound-rest/concept/cmdb-instance-api.html#title_cmdb-GET-instance-classname for more information.                                                                                                                                                          |         |
 
-### List Featured Knowledge Articles
+### List Featured Knowledge Articles {#listfeaturedknowledgearticles}
 
 Returns a list of the most-viewed knowledge articles and featured knowledge articles.
 
@@ -306,7 +306,7 @@ Returns a list of the most-viewed knowledge articles and featured knowledge arti
 | Limit                   | Maximum number of records to return. Unusually large limit values can impact system performance. For requests that exceed this number of records, use the Offset input to paginate record retrieval.                                                                                                           |         |
 | Offset                  | Starting record index for which to begin retrieving records. Use this value to paginate record retrieval. This functionality enables the retrieval of all records, regardless of the number of records, in small manageable chunks. For example, the first time this endpoint is called, offset is set to '0'. |         |
 
-### List Incidents
+### List Incidents {#listincidents}
 
 Gets a list of all Incidents
 
@@ -319,7 +319,7 @@ Gets a list of all Incidents
 | Sysparm Offset | Starting record index for which to begin retrieving records. This functionality enables the retrieval of all records, regardless of the number of records, in small manageable chunks. For example, the first time you call this endpoint, sysparm_offset is set to '0'. To simply page through all available records, use sysparm_offset=sysparm_offset+sysparm_limit, until you reach the end of all records. |         |
 | Sysparm Query  | Encoded query used to filter the result set. Syntax: sysparm_query=<col_name><operator><value>.                                                                                                                                                                                                                                                                                                                 |         |
 
-### List Knowledge Articles
+### List Knowledge Articles {#listknowledgearticles}
 
 Returns a list of knowledge base (KB) articles which can be searched and filtered using various parameters.
 
@@ -336,7 +336,7 @@ Returns a list of knowledge base (KB) articles which can be searched and filtere
 | Offset                  | Starting record index for which to begin retrieving records. Use this value to paginate record retrieval. This functionality enables the retrieval of all records, regardless of the number of records, in small manageable chunks. For example, the first time this endpoint is called, offset is set to '0'. |         |
 | Query                   | Text to search for, can be empty.                                                                                                                                                                                                                                                                              |         |
 
-### List Most Viewed Knowledge Articles
+### List Most Viewed Knowledge Articles {#listmostviewedknowledgearticles}
 
 Returns a list of knowledge articles prioritized by most-viewed.
 
@@ -351,7 +351,7 @@ Returns a list of knowledge articles prioritized by most-viewed.
 | Limit                   | Maximum number of records to return. Unusually large limit values can impact system performance. For requests that exceed this number of records, use the Offset input to paginate record retrieval.                                                                                                           |         |
 | Offset                  | Starting record index for which to begin retrieving records. Use this value to paginate record retrieval. This functionality enables the retrieval of all records, regardless of the number of records, in small manageable chunks. For example, the first time this endpoint is called, offset is set to '0'. |         |
 
-### List Table Records
+### List Table Records {#listtablerecords}
 
 Lists records in the specified table
 
@@ -365,7 +365,7 @@ Lists records in the specified table
 | Sysparm Offset | Starting record index for which to begin retrieving records. This functionality enables the retrieval of all records, regardless of the number of records, in small manageable chunks. For example, the first time you call this endpoint, sysparm_offset is set to '0'. To simply page through all available records, use sysparm_offset=sysparm_offset+sysparm_limit, until you reach the end of all records. |         |
 | Sysparm Query  | Encoded query used to filter the result set. Syntax: sysparm_query=<col_name><operator><value>.                                                                                                                                                                                                                                                                                                                 |         |
 
-### List Tables
+### List Tables {#listtables}
 
 Retrieve a list of all tables
 
@@ -378,7 +378,7 @@ Retrieve a list of all tables
 | Sysparm Offset | Starting record index for which to begin retrieving records. This functionality enables the retrieval of all records, regardless of the number of records, in small manageable chunks. For example, the first time you call this endpoint, sysparm_offset is set to '0'. To simply page through all available records, use sysparm_offset=sysparm_offset+sysparm_limit, until you reach the end of all records. |         |
 | Sysparm Query  | Encoded query used to filter the result set. Syntax: sysparm_query=<col_name><operator><value>.                                                                                                                                                                                                                                                                                                                 |         |
 
-### List Users
+### List Users {#listusers}
 
 Gets a list of all Users
 
@@ -391,7 +391,7 @@ Gets a list of all Users
 | Sysparm Offset | Starting record index for which to begin retrieving records. This functionality enables the retrieval of all records, regardless of the number of records, in small manageable chunks. For example, the first time you call this endpoint, sysparm_offset is set to '0'. To simply page through all available records, use sysparm_offset=sysparm_offset+sysparm_limit, until you reach the end of all records. |         |
 | Sysparm Query  | Encoded query used to filter the result set. Syntax: sysparm_query=<col_name><operator><value>.                                                                                                                                                                                                                                                                                                                 |         |
 
-### Multipart Upload Attachment
+### Multipart Upload Attachment {#multipartuploadattachment}
 
 Uploads a multipart file attachment.
 
@@ -405,7 +405,7 @@ Uploads a multipart file attachment.
 | Table        | Name of the table to which you want to attach the file.                           |         |
 | Sys ID       | Sys_id of the record on the specified table to which you want to attach the file. |         |
 
-### Raw Request
+### Raw Request {#rawrequest}
 
 Send raw HTTP request to ServiceNow
 
@@ -430,7 +430,7 @@ Send raw HTTP request to ServiceNow
 | Max Retry Count         | The maximum number of retries to attempt. Specify 0 for no retries.                                                                                                                              | 0       |
 | Use Exponential Backoff | Specifies whether to use a pre-defined exponential backoff strategy for retries. When enabled, 'Retry Delay (ms)' is ignored.                                                                    | false   |
 
-### Update Configuration Item
+### Update Configuration Item {#updateconfigurationitem}
 
 Updates a single configuration item (CI) with the specified outbound and inbound relations within the specified Configuration Management Database (CMDB) table.
 
@@ -444,7 +444,7 @@ Updates a single configuration item (CI) with the specified outbound and inbound
 | Configuration Item Source     | Entity that created/updated the information. This must be one of the choice values specified in the discovery_source field in the Configuration Item [cmdb_ci] table. |         |
 | Configuration Item Attributes | The attributes of the configuration item to create.                                                                                                                   |         |
 
-### Update Incident
+### Update Incident {#updateincident}
 
 Updates an Incident with the specified field names and values
 
@@ -456,7 +456,7 @@ Updates an Incident with the specified field names and values
 | Sys ID       | The Sys ID of the record being queried                                 |         |
 | Values       | The names of the fields and their values to use when creating a record |         |
 
-### Update Table Record
+### Update Table Record {#updatetablerecord}
 
 Updates a record in the specified table with the specified field names and values
 
@@ -469,7 +469,7 @@ Updates a record in the specified table with the specified field names and value
 | Sys ID       | The Sys ID of the record being queried                                 |         |
 | Values       | The names of the fields and their values to use when creating a record |         |
 
-### Update User
+### Update User {#updateuser}
 
 Updates a User with the specified field names and values
 
@@ -485,7 +485,7 @@ Updates a User with the specified field names and values
 | First Name   | The User's First Name                                                  |         |
 | Last Name    | The User's Last Name                                                   |         |
 
-### Upload Attachment
+### Upload Attachment {#uploadattachment}
 
 Uploads a specified binary file as an attachment to a specified record.
 

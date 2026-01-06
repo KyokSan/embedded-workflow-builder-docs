@@ -9,7 +9,7 @@ Easily manage metrics, logs, and events
 
 ## Connections
 
-### API Key
+### API Key {#apikey}
 
 Authenticate requests to New Relic using an API key.
 
@@ -22,7 +22,7 @@ The New Relic **API key** can be put directly into a New Relic connection.
 
 ## Actions
 
-### Raw Request
+### Raw Request {#rawrequest}
 
 Send raw HTTP request to New Relic
 
@@ -46,7 +46,7 @@ Send raw HTTP request to New Relic
 | Max Retry Count         | The maximum number of retries to attempt. Specify 0 for no retries.                                                                                                                                                 | 0                           |
 | Use Exponential Backoff | Specifies whether to use a pre-defined exponential backoff strategy for retries. When enabled, 'Retry Delay (ms)' is ignored.                                                                                       | false                       |
 
-### Send Detailed Logs
+### Send Detailed Logs {#senddetailedlogs}
 
 Use the Log API to send a detailed log using a custom request body to New Relic
 
@@ -55,7 +55,7 @@ Use the Log API to send a detailed log using a custom request body to New Relic
 | Message    | Provide a JSON object containing the message of logs you want to send. | <code>{<br /> "timestamp": 1562767499238,<br /> "message": "{"service-name": "my-service", "user": {"id": 123, "name": "alice"}}",<br /> "service-name": "my-service",<br /> "user": {<br /> "id": 123,<br /> "name": "alice"<br /> }<br />}</code> |
 | Connection |                                                                        |                                                                                                                                                                                                                                                     |
 
-### Send Event Data
+### Send Event Data {#sendeventdata}
 
 Use the Event API to send custom event data to New Relic
 
@@ -66,7 +66,7 @@ Use the Event API to send custom event data to New Relic
 | Account Id            | Provide the unique identifier of your New Relic Insights account.        |         |
 | Connection            |                                                                          |         |
 
-### Send Logs
+### Send Logs {#sendlogs}
 
 Use the Log API to send log data to New Relic
 
@@ -76,7 +76,7 @@ Use the Log API to send log data to New Relic
 | Timestamp  | Provide a valid UNIX timestamp to be passed alongside the logs.        |         |
 | Connection |                                                                        |         |
 
-### Send Metric Data
+### Send Metric Data {#sendmetrics}
 
 Use the Metric API to send custom metrics to the New Relic
 

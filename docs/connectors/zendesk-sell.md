@@ -9,7 +9,7 @@ Zendesk Sell is a sales force automation program.
 
 ## Connections
 
-### Zendesk Sell Oauth 2.0 Connection
+### Zendesk Sell Oauth 2.0 Connection {#oauth}
 
 The Zendesk Sell component ensures secure request authentication using OAuth 2.0. To seamlessly configure an application within Zendesk Sell, simply adhere to the instructions outlined in this comprehensive guide.
 
@@ -37,7 +37,7 @@ Read about how OAuth 2.0 works [here](../oauth2.md).
 
 ## Actions
 
-### Create Contact
+### Create Contact {#createcontact}
 
 Create a new contact. A contact may represent a single individual or an organization.
 
@@ -71,7 +71,7 @@ Create a new contact. A contact may represent a single individual or an organiza
 | Tag                    | In order to modify this, you need to supply the entire set.                                                                                                                                                          |         |
 | Custom Field           | Filterable custom field.                                                                                                                                                                                             |         |
 
-### Create Deal
+### Create Deal {#createdeal}
 
 Create a new deal.
 
@@ -95,7 +95,7 @@ Create a new deal.
 | Tag                       |                                                                                       |         |
 | Custom Field              |                                                                                       |         |
 
-### Create Lead
+### Create Lead {#createlead}
 
 Creates a new lead.
 
@@ -125,7 +125,7 @@ Creates a new lead.
 | Tag                   |                                                                  |         |
 | Custom Field          |                                                                  |         |
 
-### Create Note
+### Create Note {#createnote}
 
 Create a new note and associate it with one resource.
 
@@ -139,7 +139,7 @@ Create a new note and associate it with one resource.
 | Tag           |          |         |
 | Type          |          |         |
 
-### Create Order
+### Create Order {#createorder}
 
 Create a new order.
 
@@ -149,7 +149,7 @@ Create a new order.
 | Deal Id    | The unique identifier of the deal.                        |         |
 | Discount   | Overall discount on the order in percents. Defaults to 0. |         |
 
-### Create Task
+### Create Task {#createtask}
 
 Creates a new task.
 
@@ -164,7 +164,7 @@ Creates a new task.
 | Completed     |                                                                     |         |
 | Remind At     |                                                                     |         |
 
-### Delete Contact
+### Delete Contact {#deletecontact}
 
 Delete an existing contact. This operation cannot be undone.
 
@@ -173,7 +173,7 @@ Delete an existing contact. This operation cannot be undone.
 | Connection |                                       |         |
 | Contact ID | The unique identifier of the contact. |         |
 
-### Delete Deal
+### Delete Deal {#deletedeal}
 
 Delete an existing deal and remove all of the associated contacts from the deal in a single call.
 
@@ -182,7 +182,7 @@ Delete an existing deal and remove all of the associated contacts from the deal 
 | Connection |                               |         |
 | Deal ID    | The ID of the deal to delete. |         |
 
-### Delete Lead
+### Delete Lead {#deletelead}
 
 Delete an existing lead.
 
@@ -191,7 +191,7 @@ Delete an existing lead.
 | Connection |                               |         |
 | Lead ID    | The ID of the lead to delete. |         |
 
-### Delete Note
+### Delete Note {#deletenote}
 
 Delete an existing note. This operation cannot be undone.
 
@@ -200,7 +200,7 @@ Delete an existing note. This operation cannot be undone.
 | Connection |                                |         |
 | Note Id    | Unique identifier of the note. |         |
 
-### Delete Order
+### Delete Order {#deleteorder}
 
 Delete an existing order and remove all of the associated line items in a single call. This operation cannot be undone.
 
@@ -209,7 +209,7 @@ Delete an existing order and remove all of the associated line items in a single
 | Connection |                                     |         |
 | Id         | The unique identifier of the order. |         |
 
-### Delete Task
+### Delete Task {#deletetask}
 
 Delete an existing task. This operation cannot be undone.
 
@@ -218,7 +218,7 @@ Delete an existing task. This operation cannot be undone.
 | Connection |                            |         |
 | Task ID    | The unique ID of the task. |         |
 
-### Get Contact
+### Get Contact {#getcontact}
 
 Returns a single contact available to the user, according to the unique contact ID provided.
 
@@ -227,7 +227,7 @@ Returns a single contact available to the user, according to the unique contact 
 | Connection |                                       |         |
 | Contact ID | The unique identifier of the contact. |         |
 
-### Get Contacts Stream
+### Get Contacts Stream {#getcontactsstream}
 
 Read the stream of contact events.
 
@@ -237,7 +237,7 @@ Read the stream of contact events.
 | Position   | Your client position in Firehose stream. Possible values: top/string-from-fh-api/tail |         |
 | Limit      | Limits maximum number of events in single response.                                   |         |
 
-### Get Custom Fields Stream
+### Get Custom Fields Stream {#getcustomfieldsstream}
 
 Read the stream of custom fields events.
 
@@ -247,7 +247,7 @@ Read the stream of custom fields events.
 | Position   | Your client position in Firehose stream. Possible values: top/string-from-fh-api/tail |         |
 | Limit      | Limits maximum number of events in single response.                                   |         |
 
-### Get Deal
+### Get Deal {#getdeal}
 
 Returns a single deal available to the user.
 
@@ -257,7 +257,7 @@ Returns a single deal available to the user.
 | Deal ID    | The ID of the deal to retrieve.                                                                         |         |
 | Includes   | Comma-separated list of one or more resources related to the deal. Possible values: associated_contacts |         |
 
-### Get Deals Stream
+### Get Deals Stream {#getdealsstream}
 
 Read the stream of deal events.
 
@@ -267,7 +267,7 @@ Read the stream of deal events.
 | Position   | Your client position in Firehose stream. Possible values: top/string-from-fh-api/tail |         |
 | Limit      | Limits maximum number of events in single response.                                   |         |
 
-### Get Lead
+### Get Lead {#getlead}
 
 Returns a single lead available to the user.
 
@@ -276,7 +276,7 @@ Returns a single lead available to the user.
 | Connection |                                 |         |
 | Lead ID    | The ID of the lead to retrieve. |         |
 
-### Get Leads Stream
+### Get Leads Stream {#getleadsstream}
 
 Read the stream of lead events.
 
@@ -286,7 +286,7 @@ Read the stream of lead events.
 | Position   | Your client position in Firehose stream. Possible values: top/string-from-fh-api/tail |         |
 | Limit      | Limits maximum number of events in single response.                                   |         |
 
-### Get Note
+### Get Note {#getnote}
 
 Returns a single note available to the user, according to the unique note ID provided.
 
@@ -295,7 +295,7 @@ Returns a single note available to the user, according to the unique note ID pro
 | Connection |                                |         |
 | ID         | Unique identifier of the note. |         |
 
-### Get Notes Stream
+### Get Notes Stream {#getnotesstream}
 
 Read the stream of note events.
 
@@ -305,7 +305,7 @@ Read the stream of note events.
 | Position   | Your client position in Firehose stream. Possible values: top/string-from-fh-api/tail |         |
 | Limit      | Limits maximum number of events in single response.                                   |         |
 
-### Get Order
+### Get Order {#getorder}
 
 Returns a single order available to the user.
 
@@ -314,7 +314,7 @@ Returns a single order available to the user.
 | Connection |                                     |         |
 | Id         | The unique identifier of the order. |         |
 
-### Get Orders Stream
+### Get Orders Stream {#getordersstream}
 
 Read the stream of order events.
 
@@ -324,7 +324,7 @@ Read the stream of order events.
 | Position   | Your client position in Firehose stream. Possible values: top/string-from-fh-api/tail |         |
 | Limit      | Limits maximum number of events in single response.                                   |         |
 
-### Get Products Stream
+### Get Products Stream {#getproductsstream}
 
 Read the stream of product events
 
@@ -334,7 +334,7 @@ Read the stream of product events
 | Position   | Your client position in Firehose stream. Possible values: top/string-from-fh-api/tail |         |
 | Limit      | Limits maximum number of events in single response.                                   |         |
 
-### Get Stages Stream
+### Get Stages Stream {#getstagesstream}
 
 Read the stream of stage events.
 
@@ -344,7 +344,7 @@ Read the stream of stage events.
 | Position   | Your client position in Firehose stream. Possible values: top/string-from-fh-api/tail |         |
 | Limit      | Limits maximum number of events in single response.                                   |         |
 
-### Get Stream
+### Get Stream {#getstream}
 
 Provides a stream of changes to Sell data.
 
@@ -355,7 +355,7 @@ Provides a stream of changes to Sell data.
 | Position   | Your client position in Firehose stream. Possible values: top/string-from-fh-api/tail |         |
 | Limit      | Limits maximum number of events in single response.                                   |         |
 
-### Get Task
+### Get Task {#gettask}
 
 Returns a single task available to the user according to the unique task ID provided.
 
@@ -364,7 +364,7 @@ Returns a single task available to the user according to the unique task ID prov
 | Connection |                            |         |
 | Task ID    | The unique ID of the task. |         |
 
-### Get Tasks Stream
+### Get Tasks Stream {#gettasksstream}
 
 Read the stream of task events.
 
@@ -374,7 +374,7 @@ Read the stream of task events.
 | Position   | Your client position in Firehose stream. Possible values: top/string-from-fh-api/tail |         |
 | Limit      | Limits maximum number of events in single response.                                   |         |
 
-### List Account Details
+### List Account Details {#listaccountdetails}
 
 Retrieve account details
 
@@ -382,7 +382,7 @@ Retrieve account details
 | ---------- | -------- | ------- |
 | Connection |          |         |
 
-### List Contacts
+### List Contacts {#listcontacts}
 
 Returns all contacts available to the user according to the parameters provided.
 
@@ -414,7 +414,7 @@ Returns all contacts available to the user according to the parameters provided.
 | Custom Field          | Filterable custom field.                                                                                                        |         |
 | Inclusive             | Indicates how filters should be combine. true value, the default, uses AND logic. false value uses OR logic to combine filters. |         |
 
-### List Custom Fields
+### List Custom Fields {#listcustomfields}
 
 Returns all custom fields associated with the specified resource type.
 
@@ -423,7 +423,7 @@ Returns all custom fields associated with the specified resource type.
 | Connection    |                                                                |         |
 | Resource Type | Specifies the type for which custom fields should be returned. |         |
 
-### List Deals
+### List Deals {#listdeals}
 
 Returns all deals available to the user.
 
@@ -448,7 +448,7 @@ Returns all deals available to the user.
 | Custom Field         | Filterable custom field.                                                                                                        |         |
 | Inclusive            | Indicates how filters should be combine. true value, the default, uses AND logic. false value uses OR logic to combine filters. |         |
 
-### List Leads
+### List Leads {#listleads}
 
 Returns all leads available to the user.
 
@@ -476,7 +476,7 @@ Returns all leads available to the user.
 | Custom Field         | Filterable custom field.                                                                                                        |         |
 | Inclusive            | Indicates how filters should be combine. true value, the default, uses AND logic. false value uses OR logic to combine filters. |         |
 
-### List Notes
+### List Notes {#listnotes}
 
 Returns all notes available to the user, according to the parameters provided.
 
@@ -493,7 +493,7 @@ Returns all notes available to the user, according to the parameters provided.
 | Resource Type | Name of the type of resource to search for. Possible values: lead, contact, deal                                                                                                                                            |         |
 | Resource Id   | Unique identifier of the resource to search for.                                                                                                                                                                            |         |
 
-### List Orders
+### List Orders {#listorder}
 
 Returns all orders available to the user.
 
@@ -506,7 +506,7 @@ Returns all orders available to the user.
 | Sort By    | A field to sort by. Default ordering is ascending. If you want to change the sort ordering to descending, append :desc to the field. |         |
 | Deal Id    | Id of the deal order is associated to.                                                                                               |         |
 
-### List Pipelines
+### List Pipelines {#listpipelines}
 
 Returns all pipelines available to the user, according to the parameters provided.
 
@@ -520,7 +520,7 @@ Returns all pipelines available to the user, according to the parameters provide
 | Name       | Name of the pipeline to search for. This parameter is used in a strict sense.                                                                                                                                        |         |
 | Disabled   | Parameter that determines whether to return disabled or enabled pipelines.                                                                                                                                           |         |
 
-### List Stages
+### List Stages {#liststages}
 
 Returns all stages available to the user.
 
@@ -535,7 +535,7 @@ Returns all stages available to the user.
 | Name        | Name of the stage you're searching for. This parameter is used in a strict sense.                                                                                                                                                                                                           |         |
 | Active      | Parameter that determines whether to return active or inactive stages.                                                                                                                                                                                                                      |         |
 
-### List Tasks
+### List Tasks {#listtasks}
 
 Returns all tasks available to the user.
 
@@ -556,7 +556,7 @@ Returns all tasks available to the user.
 | Overdue       | Indicates whether the query will return tasks where the due_date parameter has been passed or not.                                   |         |
 | Remind        | Indicates whether the query will return tasks with reminders or without reminders.                                                   |         |
 
-### Raw Request
+### Raw Request {#rawrequest}
 
 Send raw HTTP request To Zendesk Sell
 
@@ -580,7 +580,7 @@ Send raw HTTP request To Zendesk Sell
 | Use Exponential Backoff | Specifies whether to use a pre-defined exponential backoff strategy for retries.                                                    | false   |
 | Api Version             | The version of the API to use.                                                                                                      | v2      |
 
-### Update Contact
+### Update Contact {#updatecontact}
 
 Updates contact information. If the specified contact does not exist, the request will return an error.
 
@@ -614,7 +614,7 @@ Updates contact information. If the specified contact does not exist, the reques
 | Tag                    | In order to modify this, you need to supply the entire set.                                                                                                                                                                                                                    |         |
 | Custom Field           | Filterable custom field.                                                                                                                                                                                                                                                       |         |
 
-### Update Deal
+### Update Deal {#updatedeal}
 
 Updates deal information.
 
@@ -639,7 +639,7 @@ Updates deal information.
 | Tag                       |                                                                                       |         |
 | Custom Field              |                                                                                       |         |
 
-### Update Lead
+### Update Lead {#updatelead}
 
 Updates lead information.
 
@@ -670,7 +670,7 @@ Updates lead information.
 | Tag                   | In order to modify, you need to supply the entire |         |
 | Custom Field          |                                                   |         |
 
-### Update Note
+### Update Note {#updatenote}
 
 Updates note information.
 
@@ -684,7 +684,7 @@ Updates note information.
 | Tag           |          |         |
 | Type          |          |         |
 
-### Update Order
+### Update Order {#updateorder}
 
 Updates order information.
 
@@ -694,7 +694,7 @@ Updates order information.
 | Id         | The unique identifier of the order.        |         |
 | Discount   | Overall discount on the order in percents. |         |
 
-### Update Task
+### Update Task {#updatetask}
 
 Updates task information.
 
@@ -710,7 +710,7 @@ Updates task information.
 | Completed     |                                                                     |         |
 | Remind At     |                                                                     |         |
 
-### Upsert Contact
+### Upsert Contact {#upsertcontact}
 
 Create a new contact or update an existing, based on a value of a filter or a set of filters. At least a single filter - query parameter - is required.
 
@@ -739,7 +739,7 @@ Create a new contact or update an existing, based on a value of a filter or a se
 | Filter                 | Filterable custom field.                                                                                                                                                                                                                                                       |         |
 | Inclusive              | Indicates how filters should be combine. true value, the default, uses AND logic. false value uses OR logic to combine filters.                                                                                                                                                |         |
 
-### Upsert Lead
+### Upsert Lead {#upsertlead}
 
 Create a new lead or update an existing, based on a value of a filter or a set of filters.
 

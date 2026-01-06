@@ -9,7 +9,7 @@ Use the ClickUp component to manage users, projects, and teams in your ClickUp w
 
 ## Connections
 
-### ClickUp OAuth 2.0
+### ClickUp OAuth 2.0 {#clickupoauth2connection}
 
 ClickUp OAuth 2.0
 
@@ -33,7 +33,7 @@ Read about how OAuth 2.0 works [here](../oauth2.md).
 | Client ID     | Follow this step to generate https://clickup.com/api/developer-portal/authentication/#step-1-create-an-oauth-app |         |
 | Client Secret | Follow this step to generate https://clickup.com/api/developer-portal/authentication/#step-1-create-an-oauth-app |         |
 
-### ClickUp Personal Access Token
+### ClickUp Personal Access Token {#apikey}
 
 ClickUp Personal Access Token
 
@@ -52,13 +52,13 @@ To make API requests to ClickUp using a personal API token you may generate one 
 
 ## Triggers
 
-### Webhook
+### Webhook {#webhook}
 
 Receive and validate webhook requests from ClickUp for webhooks you configure.
 
 ## Actions
 
-### Add Guest to Folder
+### Add Guest to Folder {#addguesttofolder}
 
 Share a Folder with a guest.
 
@@ -70,7 +70,7 @@ Share a Folder with a guest.
 | Include Shared   | Exclude details of items shared with the guest by setting this parameter to false | true    |
 | Permission Level | Can be read (view only), comment, edit, or create (full).                         | create  |
 
-### Add Guest to List
+### Add Guest to List {#addguesttolist}
 
 Share a List with a guest.
 
@@ -82,7 +82,7 @@ Share a List with a guest.
 | Include Shared   | Exclude details of items shared with the guest by setting this parameter to false | true    |
 | Permission Level | Can be read (view only), comment, edit, or create (full).                         | create  |
 
-### Add Guest to Task
+### Add Guest to Task {#addguesttotask}
 
 Share a task with a guest.
 
@@ -96,7 +96,7 @@ Share a task with a guest.
 | Team ID          | Only used when the custom_task_ids parameter is set to true                       |         |
 | Permission Level | Can be read (view only), comment, edit, or create (full).                         |         |
 
-### Add Task to List
+### Add Task to List {#addtasktolist}
 
 Add a new task to an additional List.
 
@@ -106,7 +106,7 @@ Add a new task to an additional List.
 | List ID    | List ID  |         |
 | Task ID    | Task ID  |         |
 
-### Create Folder
+### Create Folder {#createfolder}
 
 Add a new Folder to a Space.
 
@@ -116,7 +116,7 @@ Add a new Folder to a Space.
 | Space ID   | Space ID value. |         |
 | Name       | Folder Name     |         |
 
-### Create List
+### Create List {#createlist}
 
 Add a new list to a folder.
 
@@ -133,7 +133,7 @@ Add a new list to a folder.
 | Status        | Status refers to the List color rather than the task Statuses available in the List. |         |
 | Name          | Name of the new list                                                                 |         |
 
-### Create Space
+### Create Space {#createspace}
 
 Add a new Space to a Workspace.
 
@@ -156,7 +156,7 @@ Add a new Space to a Workspace.
 | Enable Dependency Warning | Enable Dependency Warning?               | true    |
 | Enable Portfolios         | Enable Portfolios?                       | true    |
 
-### Create Task
+### Create Task {#createtask}
 
 Create a new Task
 
@@ -184,7 +184,7 @@ Create a new Task
 | Check Required Custom Fields | When creating a task via API any required Custom Fields are ignored by default (false).                                                                                      | false   |
 | Custom Fields                |                                                                                                                                                                              |         |
 
-### Create Task Attachment
+### Create Task Attachment {#createtaskattachment}
 
 Upload a file to a task as an attachment.
 
@@ -197,7 +197,7 @@ Upload a file to a task as an attachment.
 | File           | File to attach.                                                                  |         |
 | File Name      | Name of the file to attach.                                                      |         |
 
-### Create Task Comment
+### Create Task Comment {#createtaskcomment}
 
 Add a new comment to a task.
 
@@ -211,7 +211,7 @@ Add a new comment to a task.
 | Notify All     | If notify_all is true, notifications will be sent to everyone including the creator of the comment. | true    |
 | Assignee       | Assignee by ID                                                                                      |         |
 
-### Create Team
+### Create Team {#createteam}
 
 This endpoint is used to create Teams: user groups which are groups of users you can assign items to in your Workspace.
 
@@ -222,7 +222,7 @@ This endpoint is used to create Teams: user groups which are groups of users you
 | Name       | Desired Team Name         |         |
 | Member     | Add user by ID            |         |
 
-### Create Time Entry
+### Create Time Entry {#createtimeentry}
 
 Create a time entry.
 
@@ -240,7 +240,7 @@ Create a time entry.
 | Task ID          | Associate a time entry with a task by ID                                                                       |         |
 | Tags             | Code should have this format                                                                                   |         |
 
-### Create Webhook
+### Create Webhook {#createwebhook}
 
 Create a new webhook for a specific List.
 
@@ -255,7 +255,7 @@ Create a new webhook for a specific List.
 | List ID    | List ID                            |         |
 | Task ID    | Task ID                            |         |
 
-### Delete Comment
+### Delete Comment {#deletecomment}
 
 Delete a task comment.
 
@@ -264,7 +264,7 @@ Delete a task comment.
 | Connection |            |         |
 | Comment ID | Comment ID |         |
 
-### Delete Folder
+### Delete Folder {#deletefolder}
 
 Delete a Folder from your Workspace.
 
@@ -273,7 +273,7 @@ Delete a Folder from your Workspace.
 | Connection |           |         |
 | Folder ID  | Folder ID |         |
 
-### Delete List
+### Delete List {#deletelist}
 
 Delete a List from your Workspace.
 
@@ -282,7 +282,7 @@ Delete a List from your Workspace.
 | Connection |          |         |
 | List ID    | List ID  |         |
 
-### Delete Space
+### Delete Space {#deletespace}
 
 Delete a Space from your Workspace.
 
@@ -291,7 +291,7 @@ Delete a Space from your Workspace.
 | Connection |                 |         |
 | Space ID   | Space ID value. |         |
 
-### Delete Task
+### Delete Task {#deletetask}
 
 Delete a task from your Workspace.
 
@@ -302,7 +302,7 @@ Delete a task from your Workspace.
 | Custom Task ID | If you want to reference a task by it's custom task id, this value must be true. | false   |
 | Team ID        | Only used when the custom_task_ids parameter is set to true.                     |         |
 
-### Delete Team
+### Delete Team {#deleteteam}
 
 This endpoint is used to remove a Team: user group from your Workspace.
 
@@ -311,7 +311,7 @@ This endpoint is used to remove a Team: user group from your Workspace.
 | Connection |                       |         |
 | Group ID   | Team ID (user group). |         |
 
-### Delete Time Entry
+### Delete Time Entry {#deletetimeentry}
 
 Delete a time entry from a Workspace.
 
@@ -321,7 +321,7 @@ Delete a time entry from a Workspace.
 | Team ID    | Team ID (Workspace) value |         |
 | Timer ID   | The ID of a time entry.   |         |
 
-### Delete Webhook
+### Delete Webhook {#deletewebhook}
 
 Delete a webhook.
 
@@ -330,7 +330,7 @@ Delete a webhook.
 | Connection |            |         |
 | Webhook ID | Webhook ID |         |
 
-### Edit Guest on Workspace
+### Edit Guest on Workspace {#editguestonworkspace}
 
 Rename and configure options for a guest.
 
@@ -346,7 +346,7 @@ Rename and configure options for a guest.
 | Custom Role ID         | Custom Role ID value      |         |
 | Guest ID               | Guest ID                  |         |
 
-### Edit User On Workspace
+### Edit User On Workspace {#edituseronworkspace}
 
 Update a user's name and role.
 
@@ -358,7 +358,7 @@ Update a user's name and role.
 | Custom Role ID | Custom Role ID value      |         |
 | User ID        | User ID value             |         |
 
-### Get Accessible Custom Fields
+### Get Accessible Custom Fields {#getaccessiblecustomfields}
 
 View the Custom Fields available on tasks in a specific List.
 
@@ -367,7 +367,7 @@ View the Custom Fields available on tasks in a specific List.
 | Connection |                                                                     |         |
 | List ID    | Only include time entries associated with tasks in a specific List. |         |
 
-### Get Authorized Teams (Workspaces)
+### Get Authorized Teams (Workspaces) {#getauthorizedteams}
 
 View the Workspaces available to the authenticated user.
 
@@ -375,7 +375,7 @@ View the Workspaces available to the authenticated user.
 | ---------- | -------- | ------- |
 | Connection |          |         |
 
-### Get Folder
+### Get Folder {#getfolder}
 
 View the Lists within a Folder.
 
@@ -384,7 +384,7 @@ View the Lists within a Folder.
 | Connection |           |         |
 | Folder ID  | Folder ID |         |
 
-### Get Guest
+### Get Guest {#getguest}
 
 View information about a guest in a Workspace.
 
@@ -394,7 +394,7 @@ View information about a guest in a Workspace.
 | Team ID    | Team ID (Workspace) value |         |
 | Guest ID   | Guest ID                  |         |
 
-### Get List
+### Get List {#getlist}
 
 View details for a specific List.
 
@@ -403,7 +403,7 @@ View details for a specific List.
 | Connection |          |         |
 | List ID    | List ID  |         |
 
-### Get List Members
+### Get List Members {#getlistmembers}
 
 View the people who have access to a List.
 
@@ -412,7 +412,7 @@ View the people who have access to a List.
 | Connection |          |         |
 | List ID    | List ID  |         |
 
-### Get Singular Time Entry
+### Get Singular Time Entry {#getsingulartimeentry}
 
 View a single time entry.
 
@@ -424,7 +424,7 @@ View a single time entry.
 | Include Task Tags      | Include task tags in the response for time entries associated with tasks.                        | true    |
 | Include Location Names | Include the names of the List, Folder, and Space along with the list_id,folder_id, and space_id. | true    |
 
-### Get Space
+### Get Space {#getspace}
 
 View the Spaces available in a Workspace by ID.
 
@@ -433,7 +433,7 @@ View the Spaces available in a Workspace by ID.
 | Connection |                 |         |
 | Space ID   | Space ID value. |         |
 
-### Get Task
+### Get Task {#gettask}
 
 View information about a task.
 
@@ -445,7 +445,7 @@ View information about a task.
 | Team ID          | Only used when the custom_task_ids parameter is set to true.                     |         |
 | Include Subtasks | Include or exclude subtasks. By default, subtasks are excluded.                  | false   |
 
-### Get Task Comments
+### Get Task Comments {#gettaskcomments}
 
 View task comments.
 
@@ -458,7 +458,7 @@ View task comments.
 | Start ID       | Enter the Comment id of a task comment.                                          |         |
 | Start Date     | Unix time in milliseconds                                                        |         |
 
-### Get Task Members
+### Get Task Members {#gettaskmembers}
 
 View the members assigned to a task.
 
@@ -467,7 +467,7 @@ View the members assigned to a task.
 | Connection |          |         |
 | Task ID    | Task ID  |         |
 
-### Get Team
+### Get Team {#getteam}
 
 This endpoint is used to view Teams: user groups in your Workspace.
 
@@ -477,7 +477,7 @@ This endpoint is used to view Teams: user groups in your Workspace.
 | Team ID    | Team ID (Workspace) value                                                              |         |
 | Group IDs  | Enter one or more Team ids (user groups) to retrieve information about specific Teams. |         |
 
-### Get Time Entries Within a Date Range
+### Get Time Entries Within a Date Range {#gettimeentrieswithindaterange}
 
 View time entries filtered by start and end date. By default, this endpoint returns time entries from the last 30 days created by the authenticated user.
 
@@ -497,7 +497,7 @@ View time entries filtered by start and end date. By default, this endpoint retu
 | Custom Task ID         | If you want to reference a task by it's custom task id, this value must be true.                 | false   |
 | Custom Team ID         | Only used when the custom_task_ids parameter is set to true.                                     |         |
 
-### Get User
+### Get User {#getuser}
 
 View information about a user in a Workspace.
 
@@ -507,7 +507,7 @@ View information about a user in a Workspace.
 | User ID    | User ID value             |         |
 | Connection |                           |         |
 
-### Get Webhooks
+### Get Webhooks {#getwebhooks}
 
 View all webhooks for a list.
 
@@ -516,7 +516,7 @@ View all webhooks for a list.
 | Connection |                           |         |
 | Team ID    | Team ID (Workspace) value |         |
 
-### Get Workspace Plan
+### Get Workspace Plan {#getworkspaceplan}
 
 View the current Plan for the specified Workspace.
 
@@ -525,7 +525,7 @@ View the current Plan for the specified Workspace.
 | Connection |                           |         |
 | Team ID    | Team ID (Workspace) value |         |
 
-### Get Workspace Seats
+### Get Workspace Seats {#getworkspaceseats}
 
 View the used, total, and available member and guest seats for a Workspace.
 
@@ -534,7 +534,7 @@ View the used, total, and available member and guest seats for a Workspace.
 | Connection |                           |         |
 | Team ID    | Team ID (Workspace) value |         |
 
-### Invite Guest to Workspace
+### Invite Guest to Workspace {#inviteguesttoworkspace}
 
 Invite a new guest to a workspace.
 
@@ -549,7 +549,7 @@ Invite a new guest to a workspace.
 | Can Create Views       |                                    | true    |
 | Custom Role ID         | Custom Role ID value               |         |
 
-### Invite User To Workspace
+### Invite User To Workspace {#inviteusertoworkspace}
 
 Invite someone to join your Workspace as a member.
 
@@ -561,7 +561,7 @@ Invite someone to join your Workspace as a member.
 | Admin          | Make an admin?                    | true    |
 | Custom Role ID | Custom Role ID value              |         |
 
-### List Folders
+### List Folders {#listfolders}
 
 View all folders in a space.
 
@@ -571,7 +571,7 @@ View all folders in a space.
 | Space ID   | Space ID value. |         |
 | Archived   | Archived?       | false   |
 
-### List Lists
+### List Lists {#getlists}
 
 View the Lists within a Folder.
 
@@ -581,7 +581,7 @@ View the Lists within a Folder.
 | Folder ID  | Folder ID                  |         |
 | Archived   | Filter for archived Lists? | false   |
 
-### List Spaces
+### List Spaces {#listspaces}
 
 View the Spaces available in a Workspace.
 
@@ -590,7 +590,7 @@ View the Spaces available in a Workspace.
 | Connection |                           |         |
 | Team ID    | Team ID (Workspace) value |         |
 
-### List Tasks
+### List Tasks {#listtasks}
 
 View the tasks in a List.
 
@@ -616,7 +616,7 @@ View the tasks in a List.
 | Date Done Less Than       | Filter by date done less than Unix time in milliseconds.               |         |
 | Custom Fields             | Code should have this format                                           |         |
 
-### Raw Request
+### Raw Request {#rawrequest}
 
 Send raw HTTP request to ClickUp
 
@@ -638,7 +638,7 @@ Send raw HTTP request to ClickUp
 | Max Retry Count         | The maximum number of retries to attempt. Specify 0 for no retries.                                                                                                                                                                                  | 0       |
 | Use Exponential Backoff | Specifies whether to use a pre-defined exponential backoff strategy for retries. When enabled, 'Retry Delay (ms)' is ignored.                                                                                                                        | false   |
 
-### Remove Custom Field Value
+### Remove Custom Field Value {#removecustomfieldvalue}
 
 Remove the data from a Custom Field on a task. This does not delete the option from the Custom Field.
 
@@ -650,7 +650,7 @@ Remove the data from a Custom Field on a task. This does not delete the option f
 | Custom Task ID | If you want to reference a task by its Custom Task ID, this value must be true.   | true    |
 | Team ID        | Only used when the custom_task_ids parameter is set to true                       |         |
 
-### Remove Guest From Folder
+### Remove Guest From Folder {#removeguestfromfolder}
 
 Revoke a guest's access to a Folder.
 
@@ -661,7 +661,7 @@ Revoke a guest's access to a Folder.
 | Guest ID       | Guest ID                                                                          |         |
 | Include Shared | Exclude details of items shared with the guest by setting this parameter to false | true    |
 
-### Remove Guest From List
+### Remove Guest From List {#removeguestfromlist}
 
 Revoke a guest's access to a List.
 
@@ -672,7 +672,7 @@ Revoke a guest's access to a List.
 | Guest ID       | Guest ID                                                                          |         |
 | Include Shared | Exclude details of items shared with the guest by setting this parameter to false | true    |
 
-### Remove Guest From Task
+### Remove Guest From Task {#removeguestfromtask}
 
 Revoke a guest's access to a task.
 
@@ -685,7 +685,7 @@ Revoke a guest's access to a task.
 | Custom Task ID | If you want to reference a task by its Custom Task ID, this value must be true.   | true    |
 | Team ID        | Only used when the custom_task_ids parameter is set to true                       |         |
 
-### Remove Guest From Workspace
+### Remove Guest From Workspace {#removeguestfromworkspace}
 
 Revoke a guest's access to a Workspace.
 
@@ -695,7 +695,7 @@ Revoke a guest's access to a Workspace.
 | Team ID    | Team ID (Workspace) value |         |
 | Guest ID   | Guest ID                  |         |
 
-### Remove Task From List
+### Remove Task From List {#removetaskfromlist}
 
 Remove a task from an additional List. You can't remove a task from its home List.
 
@@ -705,7 +705,7 @@ Remove a task from an additional List. You can't remove a task from its home Lis
 | List ID    | List ID  |         |
 | Task ID    | Task ID  |         |
 
-### Remove User From Workspace
+### Remove User From Workspace {#removeuserfromworkspace}
 
 Deactivate a user from a Workspace.
 
@@ -715,7 +715,7 @@ Deactivate a user from a Workspace.
 | Connection |                           |         |
 | User ID    | User ID value             |         |
 
-### Set Custom Field Value
+### Set Custom Field Value {#setcustomfieldvalue}
 
 Update the value of a Custom Field on a task.
 
@@ -727,7 +727,7 @@ Update the value of a Custom Field on a task.
 | Field Value |                                                                                   |         |
 | Value Type  |                                                                                   |         |
 
-### Start a Time Entry
+### Start a Time Entry {#starttimeentry}
 
 Start a timer for the authenticated user.
 
@@ -742,7 +742,7 @@ Start a timer for the authenticated user.
 | Task ID          | Associate a time entry with a task by ID                                         |         |
 | Tag name         | Add a tag name                                                                   |         |
 
-### Stop a Time Entry
+### Stop a Time Entry {#stoptimeentry}
 
 Stop a timer that's currently running for the authenticated user.
 
@@ -751,7 +751,7 @@ Stop a timer that's currently running for the authenticated user.
 | Connection |                           |         |
 | Team ID    | Team ID (Workspace) value |         |
 
-### Update Comment
+### Update Comment {#updatecomment}
 
 Replace the content of a task comment, assign a comment, and mark a comment as resolved.
 
@@ -763,7 +763,7 @@ Replace the content of a task comment, assign a comment, and mark a comment as r
 | Resolved     | Resolved?      | false   |
 | Assignee     | Assignee by ID |         |
 
-### Update Folder
+### Update Folder {#updatefolder}
 
 Rename a Folder
 
@@ -773,7 +773,7 @@ Rename a Folder
 | Folder ID  | Folder ID   |         |
 | Name       | Folder Name |         |
 
-### Update List
+### Update List {#updatelist}
 
 Rename a List, update the List Info description, set a due date/time, set the List's priority, set an assignee, set or remove the List color.
 
@@ -790,7 +790,7 @@ Rename a List, update the List Info description, set a due date/time, set the Li
 | Status        | Status refers to the List color rather than the task Statuses available in the List. |         |
 | Unset Status  | By default, this is false. To remove the List color use unset_status: true.          | false   |
 
-### Update Space
+### Update Space {#updatespace}
 
 Rename, set the Space color, and enable ClickApps for a Space.
 
@@ -816,7 +816,7 @@ Rename, set the Space color, and enable ClickApps for a Space.
 | Private                   | Private?                                 | true    |
 | Admin Can Manage          | Admin Can Manage?                        | true    |
 
-### Update Task
+### Update Task {#updatetask}
 
 Update a task
 
@@ -841,7 +841,7 @@ Update a task
 | Remove Assignee      | Remove Assignee                                                                           |         |
 | Archived             | Include Archived?                                                                         | false   |
 
-### Update Team
+### Update Team {#updateteam}
 
 This endpoint is used to manage Teams: user groups which are groups of users you can assign items to in your Workspace
 
@@ -854,7 +854,7 @@ This endpoint is used to manage Teams: user groups which are groups of users you
 | Add Member    | Add members by ID. Comma separate each user ID.                                                 |         |
 | Remove Member | Remove members by ID. Comma separate each user ID.                                              |         |
 
-### Update Time Entry
+### Update Time Entry {#updatetimeentry}
 
 Update the details of a time entry.
 
@@ -875,7 +875,7 @@ Update the details of a time entry.
 | End              | End time                                                                                                       |         |
 | Tags             | Code should have this format                                                                                   |         |
 
-### Update Webhook
+### Update Webhook {#updatewebhook}
 
 Update the configuration of a webhook.
 

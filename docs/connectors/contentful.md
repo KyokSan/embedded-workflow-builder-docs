@@ -9,7 +9,7 @@ Use the Contentful component to manage Spaces, Environments, Organizations and m
 
 ## Connections
 
-### OAuth 2.0
+### OAuth 2.0 {#contentfuloauth2connection}
 
 Connection to Contentful API using OAuth 2.0
 
@@ -32,7 +32,7 @@ Read about how OAuth 2.0 works [here](../oauth2.md).
 
 ## Triggers
 
-### Events Based
+### Events Based {#eventstrigger}
 
 Get notified when events occur in your space
 
@@ -42,7 +42,7 @@ Get notified when events occur in your space
 | Space ID   | The ID of the space       |         |
 | Events     | The events of the webhook |         |
 
-### Webhook
+### Webhook {#webhook}
 
 Receive and validate webhook requests from Contentful for webhooks you configure.
 
@@ -52,7 +52,7 @@ Receive and validate webhook requests from Contentful for webhooks you configure
 
 ## Actions
 
-### Create Asset
+### Create Asset {#createasset}
 
 Create a new asset
 
@@ -66,7 +66,7 @@ Create a new asset
 | File           | The file of the asset                                | <code>{<br /> "en-US": {<br /> "contentType": "image/jpeg",<br /> "fileName": "example.jpeg",<br /> "upload": "https://example.com/example.jpg"<br /> }<br />}</code> |
 | Debug Request  | Enabling this flag will log out the current request. | false                                                                                                                                                                 |
 
-### Create Content Type
+### Create Content Type {#createcontenttype}
 
 Create a new content type
 
@@ -81,7 +81,7 @@ Create a new content type
 | Description         | The description of the content type                  |                                                                                                                                                                                                                                                                                          |
 | Debug Request       | Enabling this flag will log out the current request. | false                                                                                                                                                                                                                                                                                    |
 
-### Create Environment
+### Create Environment {#createenvironment}
 
 Create a new environment
 
@@ -93,7 +93,7 @@ Create a new environment
 | Environment Name | The name of the environment                          |         |
 | Debug Request    | Enabling this flag will log out the current request. | false   |
 
-### Create Space
+### Create Space {#createspace}
 
 Create a new space
 
@@ -105,7 +105,7 @@ Create a new space
 | Default Locale  | The default locale                                   |         |
 | Debug Request   | Enabling this flag will log out the current request. | false   |
 
-### Create Webhook
+### Create Webhook {#createwebhook}
 
 Create a new webhook
 
@@ -118,7 +118,7 @@ Create a new webhook
 | Events        | The events of the webhook                            |         |
 | Debug Request | Enabling this flag will log out the current request. | false   |
 
-### Delete Asset
+### Delete Asset {#deleteasset}
 
 Delete an existing asset
 
@@ -130,7 +130,7 @@ Delete an existing asset
 | Asset ID       | The ID of the asset                                  |         |
 | Debug Request  | Enabling this flag will log out the current request. | false   |
 
-### Delete Environment
+### Delete Environment {#deleteenvironment}
 
 Delete existing environment
 
@@ -141,7 +141,7 @@ Delete existing environment
 | Environment ID | The ID of the environment                            |         |
 | Debug Request  | Enabling this flag will log out the current request. | false   |
 
-### Delete Instanced Webhooks
+### Delete Instanced Webhooks {#deleteinstancedwebhooks}
 
 Delete all webhooks that point to a flow in this instance
 
@@ -151,7 +151,7 @@ Delete all webhooks that point to a flow in this instance
 | Space ID      | The ID of the space                                  |         |
 | Debug Request | Enabling this flag will log out the current request. | false   |
 
-### Delete Space
+### Delete Space {#deletespace}
 
 Delete an existing space
 
@@ -161,7 +161,7 @@ Delete an existing space
 | Space ID      | The ID of the space                                  |         |
 | Debug Request | Enabling this flag will log out the current request. | false   |
 
-### Delete Upload
+### Delete Upload {#deleteupload}
 
 Deletes a file from temporary data storage
 
@@ -173,7 +173,7 @@ Deletes a file from temporary data storage
 | Upload ID      | The ID of the upload                                 |         |
 | Debug Request  | Enabling this flag will log out the current request. | false   |
 
-### Delete Webhook
+### Delete Webhook {#deletewebhook}
 
 Delete a webhook
 
@@ -184,7 +184,7 @@ Delete a webhook
 | Webhook ID    | The ID of the webhook                                |         |
 | Debug Request | Enabling this flag will log out the current request. | false   |
 
-### Get Asset
+### Get Asset {#getasset}
 
 Retrieve a single asset
 
@@ -196,7 +196,7 @@ Retrieve a single asset
 | Asset ID       | The ID of the asset                                  |         |
 | Debug Request  | Enabling this flag will log out the current request. | false   |
 
-### Get Bulk Action
+### Get Bulk Action {#getbulkaction}
 
 Retrieve a bulk action
 
@@ -208,7 +208,7 @@ Retrieve a bulk action
 | Bulk Action ID | The ID of the bulk action                            |         |
 | Debug Request  | Enabling this flag will log out the current request. | false   |
 
-### Get Environment
+### Get Environment {#getenvironment}
 
 Retrieve a single environment
 
@@ -219,7 +219,7 @@ Retrieve a single environment
 | Environment ID | The ID of the environment                            |         |
 | Debug Request  | Enabling this flag will log out the current request. | false   |
 
-### Get Organization
+### Get Organization {#getorganization}
 
 Retrieve an organization by ID
 
@@ -229,7 +229,7 @@ Retrieve an organization by ID
 | Organization ID | The ID of the organization                           |         |
 | Debug Request   | Enabling this flag will log out the current request. | false   |
 
-### Get Space
+### Get Space {#getspace}
 
 Retrieve a single space
 
@@ -239,7 +239,7 @@ Retrieve a single space
 | Space ID      | The ID of the space                                  |         |
 | Debug Request | Enabling this flag will log out the current request. | false   |
 
-### Get Upload
+### Get Upload {#getupload}
 
 Retrieves an unmodified image
 
@@ -251,7 +251,7 @@ Retrieves an unmodified image
 | Upload ID      | The ID of the upload                                 |         |
 | Debug Request  | Enabling this flag will log out the current request. | false   |
 
-### Get Webhook
+### Get Webhook {#getwebhook}
 
 Retrieve a single webhook
 
@@ -262,7 +262,7 @@ Retrieve a single webhook
 | Webhook ID    | The ID of the webhook                                |         |
 | Debug Request | Enabling this flag will log out the current request. | false   |
 
-### List Assets
+### List Assets {#listassets}
 
 Retrieve all assets of a space
 
@@ -273,7 +273,7 @@ Retrieve all assets of a space
 | Space ID       | The ID of the space                                  |         |
 | Debug Request  | Enabling this flag will log out the current request. | false   |
 
-### List Content Types
+### List Content Types {#listcontenttypes}
 
 Retrieves all content types of a space
 
@@ -284,7 +284,7 @@ Retrieves all content types of a space
 | Space ID       | The ID of the space                                  |         |
 | Debug Request  | Enabling this flag will log out the current request. | false   |
 
-### List Environments
+### List Environments {#listenvironments}
 
 Retrieve all environments in a space
 
@@ -294,7 +294,7 @@ Retrieve all environments in a space
 | Space ID      | The ID of the space                                  |         |
 | Debug Request | Enabling this flag will log out the current request. | false   |
 
-### List Organizations
+### List Organizations {#listorganizations}
 
 Retrieve all organizations an account has access to
 
@@ -303,7 +303,7 @@ Retrieve all organizations an account has access to
 | Connection    |                                                      |         |
 | Debug Request | Enabling this flag will log out the current request. | false   |
 
-### List Spaces
+### List Spaces {#listspaces}
 
 Retrieve all spaces an account has access to
 
@@ -312,7 +312,7 @@ Retrieve all spaces an account has access to
 | Connection    |                                                      |         |
 | Debug Request | Enabling this flag will log out the current request. | false   |
 
-### List Webhooks
+### List Webhooks {#listwebhooks}
 
 Retrieves all webhooks of a space
 
@@ -322,7 +322,7 @@ Retrieves all webhooks of a space
 | Space ID      | The ID of the space                                  |         |
 | Debug Request | Enabling this flag will log out the current request. | false   |
 
-### Process Asset
+### Process Asset {#processasset}
 
 Process an asset
 
@@ -334,7 +334,7 @@ Process an asset
 | Asset ID       | The ID of the asset                                  |         |
 | Debug Request  | Enabling this flag will log out the current request. | false   |
 
-### Publish an asset
+### Publish an asset {#publishanasset}
 
 Publishes an asset
 
@@ -346,7 +346,7 @@ Publishes an asset
 | Asset ID       | The ID of the asset                                  |         |
 | Debug Request  | Enabling this flag will log out the current request. | false   |
 
-### Publish Bulk Action
+### Publish Bulk Action {#publishbulkaction}
 
 Publish a bulk action
 
@@ -358,7 +358,7 @@ Publish a bulk action
 | Items          | The items of the bulk action                         | <code>[<br /> {<br /> "sys": {<br /> "linkType": "Entry",<br /> "type": "Link",<br /> "id": "<entry_id>",<br /> "version": 2<br /> }<br /> },<br /> {<br /> "sys": {<br /> "linkType": "Asset",<br /> "type": "Link",<br /> "id": "<asset_id>",<br /> "version": 1<br /> }<br /> }<br />]</code> |
 | Debug Request  | Enabling this flag will log out the current request. | false                                                                                                                                                                                                                                                                                            |
 
-### Raw Request
+### Raw Request {#rawrequest}
 
 Send raw HTTP request to Contentful
 
@@ -381,7 +381,7 @@ Send raw HTTP request to Contentful
 | Max Retry Count         | The maximum number of retries to attempt. Specify 0 for no retries.                                                                                                                                | 0       |
 | Use Exponential Backoff | Specifies whether to use a pre-defined exponential backoff strategy for retries. When enabled, 'Retry Delay (ms)' is ignored.                                                                      | false   |
 
-### Unpublish an asset
+### Unpublish an asset {#unpublishanasset}
 
 Unpublishes an asset
 
@@ -393,7 +393,7 @@ Unpublishes an asset
 | Asset ID       | The ID of the asset                                  |         |
 | Debug Request  | Enabling this flag will log out the current request. | false   |
 
-### Unpublish Bulk Action
+### Unpublish Bulk Action {#unpublishbulkaction}
 
 Unpublish a bulk action
 
@@ -405,7 +405,7 @@ Unpublish a bulk action
 | Items          | The items of the bulk action                         | <code>[<br /> {<br /> "sys": {<br /> "linkType": "Entry",<br /> "type": "Link",<br /> "id": "<entry_id>"<br /> }<br /> },<br /> {<br /> "sys": {<br /> "linkType": "Asset",<br /> "type": "Link",<br /> "id": "<asset_id>"<br /> }<br /> }<br />]</code> |
 | Debug Request  | Enabling this flag will log out the current request. | false                                                                                                                                                                                                                                                    |
 
-### Update Asset
+### Update Asset {#updateasset}
 
 Update an existing asset
 
@@ -419,7 +419,7 @@ Update an existing asset
 | New Asset Description | The updated description of the asset. Locale key must match the original locale of the asset to be updated | <code>{<br /> "en-US": "Streamliner description"<br />}</code> |
 | Debug Request         | Enabling this flag will log out the current request.                                                       | false                                                          |
 
-### Update Content Type
+### Update Content Type {#updatecontenttype}
 
 Update an existing content type
 
@@ -435,7 +435,7 @@ Update an existing content type
 | Description         | The updated description for the content type                 |                                                                                                                                                                                                                                                                                          |
 | Debug Request       | Enabling this flag will log out the current request.         | false                                                                                                                                                                                                                                                                                    |
 
-### Update Environment
+### Update Environment {#updateenvironment}
 
 Edit an existing environment
 
@@ -447,7 +447,7 @@ Edit an existing environment
 | Environment Name | The updated name for the environment                 |         |
 | Debug Request    | Enabling this flag will log out the current request. | false   |
 
-### Update Organization
+### Update Organization {#updateorganization}
 
 Update an organization security contact an admin or owner has access to
 
@@ -458,7 +458,7 @@ Update an organization security contact an admin or owner has access to
 | Security ID     | The ID of the security contact                       |         |
 | Debug Request   | Enabling this flag will log out the current request. | false   |
 
-### Update Space
+### Update Space {#updatespace}
 
 Edit an existing Space
 
@@ -469,7 +469,7 @@ Edit an existing Space
 | Space Name    | The updated name for the space                       |         |
 | Debug Request | Enabling this flag will log out the current request. | false   |
 
-### Update Webhook
+### Update Webhook {#updatewebhook}
 
 Update an existing webhook
 
@@ -481,7 +481,7 @@ Update an existing webhook
 | Webhook ID    | The ID of the webhook                                |         |
 | Debug Request | Enabling this flag will log out the current request. | false   |
 
-### Upload File
+### Upload File {#uploadfile}
 
 Upload a file to temporary file storage
 

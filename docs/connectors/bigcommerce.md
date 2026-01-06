@@ -9,7 +9,7 @@ BigCommerce is a SaaS ecommerce platform. Use the Bigcommerce component to manag
 
 ## Connections
 
-### BigCommerce OAuth 2.0
+### BigCommerce OAuth 2.0 {#oauth2bigcommerce}
 
 BigCommerce OAuth 2.0
 
@@ -28,13 +28,13 @@ Read about how OAuth 2.0 works [here](../oauth2.md).
 
 ## Triggers
 
-### Webhook
+### Webhook {#mytrigger}
 
 Receive and validate webhook requests from BigCommerce for webhooks you configure.
 
 ## Actions
 
-### Create a Category Image
+### Create a Category Image {#createcategoryimage}
 
 Upload an image for a specific category.
 
@@ -45,7 +45,7 @@ Upload an image for a specific category.
 | Category ID            | The ID of the category to retrieve.              |         |
 | Image File             | The image file to be uploaded.                   |         |
 
-### Create a Category Tree
+### Create a Category Tree {#createcategorytree}
 
 Creates a new category tree in BigCommerce.
 
@@ -56,7 +56,7 @@ Creates a new category tree in BigCommerce.
 | Parent ID              | Set to 0 for top level category. Otherwise, set to the ID of the parent category. |         |
 | Category Name          | The name displayed for the category.                                              |         |
 
-### Create a Product Modifier
+### Create a Product Modifier {#createproductmodifieraction}
 
 Creates a Product Modifier.
 
@@ -72,7 +72,7 @@ Creates a Product Modifier.
 | Option Values          | The option values for the modifier.                               |         |
 | Display Name           | The name of the option shown on the storefront.                   |         |
 
-### Create a Product Variant
+### Create a Product Variant {#createproductvariantaction}
 
 Creates a new product variant in BigCommerce.
 
@@ -89,7 +89,7 @@ Creates a new product variant in BigCommerce.
 | Variant Height         | Height of the variant.                                           |         |
 | Variant Depth          | Depth of the variant.                                            |         |
 
-### Create a Variant Image
+### Create a Variant Image {#createvariantimageaction}
 
 Creates or updates an image for a specific product variant.
 
@@ -101,7 +101,7 @@ Creates or updates an image for a specific product variant.
 | Variant ID             | ID of the variant on a product, or on an associated Price List Record. |         |
 | Image URL              |                                                                        |         |
 
-### Create a Webhook
+### Create a Webhook {#createwebhookaction}
 
 Creates a new webhook in BigCommerce.
 
@@ -115,7 +115,7 @@ Creates a new webhook in BigCommerce.
 | Events History Enabled (Deprecated) |                                                  | false   |
 | Headers                             |                                                  |         |
 
-### Create Brand
+### Create Brand {#createbrand}
 
 Create a new brand in the store.
 
@@ -130,7 +130,7 @@ Create a new brand in the store.
 | Search Keywords        |                                                  |         |
 | Image URL              |                                                  |         |
 
-### Create Brand Image
+### Create Brand Image {#createbrandimage}
 
 Upload an image for a brand.
 
@@ -141,7 +141,7 @@ Upload an image for a brand.
 | Brand ID               | Filter brands by ID.                             |         |
 | Image File             | The image file to be uploaded.                   |         |
 
-### Create Category
+### Create Category {#createcategory}
 
 Creates a new category in BigCommerce.
 
@@ -164,7 +164,7 @@ Creates a new category in BigCommerce.
 | Image URL              |                                                                 |         |
 | Custom URL             | Custom URL for the category on the storefront.                  |         |
 
-### Create Custom Field
+### Create Custom Field {#createcustomfield}
 
 Creates a custom field for a product.
 
@@ -176,7 +176,7 @@ Creates a custom field for a product.
 | Custom Field Name      | The name of the custom field.                        |         |
 | Custom Field Value     | The value of the custom field.                       |         |
 
-### Create Modifier Image
+### Create Modifier Image {#createmodifierimageaction}
 
 Creates an image for a product modifier value.
 
@@ -189,7 +189,7 @@ Creates an image for a product modifier value.
 | Modifier Value ID      | The ID of the Modifier Value.                              |         |
 | Modifier Image File    | The image file to upload for the modifier.                 |         |
 
-### Create Product
+### Create Product {#createproduct}
 
 Creates a new product in the store.
 
@@ -210,7 +210,7 @@ Creates a new product in the store.
 | Retail Price           | The retail cost of the product. If entered, the retail cost price will be shown on the product page.             |         |
 | Sale Price             | If entered, the sale price will be used instead of value in the price field when calculating the product's cost. |         |
 
-### Create Product Image
+### Create Product Image {#createproductimageaction}
 
 Creates a Product Image.
 
@@ -222,7 +222,7 @@ Creates a Product Image.
 | Image File             | The local path to the original image file uploaded to BigCommerce. A multipart/form-data media type. |         |
 | Image URL              | The fully qualified URL path of the image. Limit of 8MB per file.                                    |         |
 
-### Delete a Category Image
+### Delete a Category Image {#deletecategoryimage}
 
 Deletes an image associated with a given category.
 
@@ -232,7 +232,7 @@ Deletes an image associated with a given category.
 | Store Hash             | The unique identifier for the BigCommerce store. |         |
 | Category ID            | The ID of the category to retrieve.              |         |
 
-### Delete a Custom Field
+### Delete a Custom Field {#deletecustomfield}
 
 Deletes a product custom field.
 
@@ -243,7 +243,7 @@ Deletes a product custom field.
 | Product ID                | The ID of the Product to retrieve custom fields for. |         |
 | Custom Field ID to Delete | The ID of the custom field to delete.                |         |
 
-### Delete a Modifier
+### Delete a Modifier {#deleteproductmodifieraction}
 
 Deletes a Product Modifier.
 
@@ -254,7 +254,7 @@ Deletes a Product Modifier.
 | Product ID             | The ID of the Product to which the modifier will be added. |         |
 | Modifier ID            | The ID of the Modifier.                                    |         |
 
-### Delete a Product
+### Delete a Product {#deleteproduct}
 
 Deletes a Product.
 
@@ -264,7 +264,7 @@ Deletes a Product.
 | Store Hash             | The unique identifier for the BigCommerce store. |         |
 | Product ID to Delete   | The ID of the Product to delete.                 |         |
 
-### Delete a Product Variant
+### Delete a Product Variant {#deleteproductvariantaction}
 
 Deletes a specific product Variant.
 
@@ -275,7 +275,7 @@ Deletes a specific product Variant.
 | Product ID             | The ID of the Product to which the resource belongs.                   |         |
 | Variant ID             | ID of the variant on a product, or on an associated Price List Record. |         |
 
-### Delete a Webhook
+### Delete a Webhook {#deletewebhookaction}
 
 Deletes a specific webhook from BigCommerce.
 
@@ -285,7 +285,7 @@ Deletes a specific webhook from BigCommerce.
 | Store Hash             | The unique identifier for the BigCommerce store. |         |
 | Webhook ID             |                                                  |         |
 
-### Delete Brand
+### Delete Brand {#deletebrand}
 
 Delete a brand by ID.
 
@@ -295,7 +295,7 @@ Delete a brand by ID.
 | Store Hash             | The unique identifier for the BigCommerce store. |         |
 | Brand ID to Delete     | The ID of the brand to delete.                   |         |
 
-### Delete Brand Image
+### Delete Brand Image {#deletebrandimage}
 
 Delete an image for a brand by ID.
 
@@ -305,7 +305,7 @@ Delete an image for a brand by ID.
 | Store Hash             | The unique identifier for the BigCommerce store. |         |
 | Brand ID               | Filter brands by ID.                             |         |
 
-### Delete Categories
+### Delete Categories {#deletecategories}
 
 Deletes categories based on provided filters.
 
@@ -333,7 +333,7 @@ Deletes categories based on provided filters.
 | Parent ID Less Than    | Filter items by Parent ID values less than the specified value.    |         |
 | Page Title Like        | Filter categories by page titles that contain this substring.      |         |
 
-### Delete Category Trees
+### Delete Category Trees {#deletecategorytrees}
 
 Deletes specific Category Trees.
 
@@ -343,7 +343,7 @@ Deletes specific Category Trees.
 | Store Hash             | The unique identifier for the BigCommerce store. |         |
 | ID In                  | Filter by specific IDs.                          |         |
 
-### Delete Instanced Webhooks
+### Delete Instanced Webhooks {#deleteinstancedwebhooksaction}
 
 Deletes all webhooks that point to a flow in this instance.
 
@@ -358,7 +358,7 @@ Deletes all webhooks that point to a flow in this instance.
 | Scope                  |                                                  |         |
 | Destination            |                                                  |         |
 
-### Delete Product Image
+### Delete Product Image {#deleteproductimageaction}
 
 Deletes a Product Image.
 
@@ -369,7 +369,7 @@ Deletes a Product Image.
 | Product ID             | The ID of the Product to which the image is associated. |         |
 | Image ID to Delete     | The ID of the Image that is being operated on.          |         |
 
-### Delete Tree Categories
+### Delete Tree Categories {#deletecategoriestree}
 
 Deletes specified categories in a tree in BigCommerce.
 
@@ -382,7 +382,7 @@ Deletes specified categories in a tree in BigCommerce.
 | Tree ID                | ID of the category tree.                                                                    |         |
 | Parent ID              | Filter items by parent ID.                                                                  |         |
 
-### Get a Category
+### Get a Category {#getcategory}
 
 Returns a single Category.
 
@@ -394,7 +394,7 @@ Returns a single Category.
 | Include Fields         | Fields to include, in a comma-separated list. The ID and the specified fields will be returned. |         |
 | Exclude Fields         | Fields to exclude, in a comma-separated list. The ID cannot be excluded.                        |         |
 
-### Get a Category Tree
+### Get a Category Tree {#getcategorytree}
 
 Returns a Category Tree.
 
@@ -405,7 +405,7 @@ Returns a Category Tree.
 | Tree ID                | ID of the category tree.                         |         |
 | Depth                  | Max depth for a tree of categories.              |         |
 
-### Get All Product Variants
+### Get All Product Variants {#getallproductvariantsaction}
 
 Returns a list of product Variants.
 
@@ -419,7 +419,7 @@ Returns a list of product Variants.
 | Include Fields         | Fields to include, in a comma-separated list.                                    |         |
 | Exclude Fields         | Fields to exclude, in a comma-separated list.                                    |         |
 
-### Get a Modifier
+### Get a Modifier {#getmodifieraction}
 
 Returns a single Product Modifier.
 
@@ -432,7 +432,7 @@ Returns a single Product Modifier.
 | Include Fields         | Fields to include, in a comma-separated list.                            |         |
 | Exclude Fields         | Fields to exclude, in a comma-separated list. The ID cannot be excluded. |         |
 
-### Get a Product Variant
+### Get a Product Variant {#getproductvariantaction}
 
 Returns a specific product Variant.
 
@@ -445,7 +445,7 @@ Returns a specific product Variant.
 | Include Fields         | Fields to include, in a comma-separated list.                          |         |
 | Exclude Fields         | Fields to exclude, in a comma-separated list.                          |         |
 
-### Get Brand
+### Get Brand {#getbrand}
 
 Retrieve details of a specific brand.
 
@@ -455,7 +455,7 @@ Retrieve details of a specific brand.
 | Store Hash             | The unique identifier for the BigCommerce store. |         |
 | Brand ID               | Filter brands by ID.                             |         |
 
-### Get Catalog Summary
+### Get Catalog Summary {#getcatalogsummaryaction}
 
 Returns a lightweight inventory summary from the BigCommerce Catalog.
 
@@ -464,7 +464,7 @@ Returns a lightweight inventory summary from the BigCommerce Catalog.
 | BigCommerce Connection |                                                  |         |
 | Store Hash             | The unique identifier for the BigCommerce store. |         |
 
-### Get Product Custom Fields
+### Get Product Custom Fields {#getproductcustomfields}
 
 Returns a list of product custom fields.
 
@@ -476,7 +476,7 @@ Returns a list of product custom fields.
 | Page                   | Specifies the page number in a limited list of products. |         |
 | Limit                  | Controls the number of items per page.                   |         |
 
-### Get Product Image
+### Get Product Image {#getproductimage}
 
 Returns a single Product Image.
 
@@ -487,7 +487,7 @@ Returns a single Product Image.
 | Product ID for Image   | ID of the product for which to retrieve an image. |         |
 | Image ID               | ID of the image to retrieve.                      |         |
 
-### Get Webhooks
+### Get Webhooks {#getwebhooksaction}
 
 Returns a list of all webhooks on a store.
 
@@ -501,7 +501,7 @@ Returns a list of all webhooks on a store.
 | Scope                  |                                                  |         |
 | Destination            |                                                  |         |
 
-### List Brands
+### List Brands {#listbrands}
 
 List all of the store's brands.
 
@@ -512,7 +512,7 @@ List all of the store's brands.
 | Brand Name             | Filter brands by name.                                                           |         |
 | Limit                  | Controls the number of items per page in a limited (paginated) list of products. |         |
 
-### List Categories
+### List Categories {#getallcategories}
 
 Retrieve a list of categories with optional filters.
 
@@ -544,7 +544,7 @@ Retrieve a list of categories with optional filters.
 | Include Fields         | Fields to include, in a comma-separated list.                      |         |
 | Exclude Fields         | Fields to exclude, in a comma-separated list.                      |         |
 
-### List Categories (Simplified)
+### List Categories (Simplified) {#getallcategoriessimple}
 
 Returns a list of categories.
 
@@ -556,7 +556,7 @@ Returns a list of categories.
 | Limit                  | Controls the number of items per page.                   |         |
 | Page                   | Specifies the page number in a limited list of products. |         |
 
-### List Category Trees
+### List Category Trees {#getallcategorytrees}
 
 Returns a list of Category Trees.
 
@@ -567,7 +567,7 @@ Returns a list of Category Trees.
 | ID In                  | Filter by specific IDs.                          |         |
 | Channel ID In          | Filter by Channel IDs.                           |         |
 
-### List Product Images
+### List Product Images {#getallproductimages}
 
 Returns a list of product images with optional filter parameters.
 
@@ -577,7 +577,7 @@ Returns a list of product images with optional filter parameters.
 | Store Hash             | The unique identifier for the BigCommerce store. |         |
 | Product ID for Images  | ID of the product for which to retrieve images.  |         |
 
-### List Product Modifiers
+### List Product Modifiers {#getallproductmodifiersaction}
 
 Returns a list of all Product Modifiers.
 
@@ -591,7 +591,7 @@ Returns a list of all Product Modifiers.
 | Include Fields         | Fields to include, in a comma-separated list.                                    |         |
 | Exclude Fields         | Fields to exclude, in a comma-separated list. The ID cannot be excluded.         |         |
 
-### List Products
+### List Products {#getallproducts}
 
 Returns a list of products with optional filter parameters.
 
@@ -607,7 +607,7 @@ Returns a list of products with optional filter parameters.
 | Page                   | Specifies the page number in a limited (paginated) list of products.             |         |
 | Limit                  | Controls the number of items per page in a limited (paginated) list of products. |         |
 
-### Raw Request
+### Raw Request {#rawrequest}
 
 Send raw HTTP request to BigCommerce
 
@@ -631,7 +631,7 @@ Send raw HTTP request to BigCommerce
 | BigCommerce Connection  |                                                                                                                                                                                                  |         |
 | Store Hash              | The unique identifier for the BigCommerce store.                                                                                                                                                 |         |
 
-### Update a Modifier
+### Update a Modifier {#updateproductmodifieraction}
 
 Updates a Product Modifier.
 
@@ -648,7 +648,7 @@ Updates a Product Modifier.
 | Option Values          | The option values for the modifier.                               |         |
 | Display Name           | The name of the option shown on the storefront.                   |         |
 
-### Update a Product
+### Update a Product {#updateproduct}
 
 Updates a product in the catalog.
 
@@ -668,7 +668,7 @@ Updates a product in the catalog.
 | Retail Price           | The retail cost of the product. If entered, the retail cost price will be shown on the product page.             |         |
 | Sale Price             | If entered, the sale price will be used instead of value in the price field when calculating the product's cost. |         |
 
-### Update a Product Variant
+### Update a Product Variant {#updateproductvariantaction}
 
 Updates a specific product Variant.
 
@@ -686,7 +686,7 @@ Updates a specific product Variant.
 | Variant Height         | Height of the variant.                                                 |         |
 | Variant Depth          | Depth of the variant.                                                  |         |
 
-### Update a Webhook
+### Update a Webhook {#updatewebhookaction}
 
 Updates an existing webhook in BigCommerce.
 
@@ -700,7 +700,7 @@ Updates an existing webhook in BigCommerce.
 | Is Active              |                                                  | false   |
 | Headers                |                                                  |         |
 
-### Update Brand
+### Update Brand {#updatebrand}
 
 Update a brand's details.
 
@@ -713,7 +713,7 @@ Update a brand's details.
 | New Page Title         | The updated title shown in the browser while viewing the brand. |         |
 | New Image URL          | The updated image URL for the brand.                            |         |
 
-### Update Categories
+### Update Categories {#updatecategories}
 
 Updates existing categories in BigCommerce.
 
@@ -724,7 +724,7 @@ Updates existing categories in BigCommerce.
 | Tree ID                | Unique ID of the tree.                           |         |
 | Category ID            | Unique ID of the category to update.             |         |
 
-### Update Category
+### Update Category {#updatecategory}
 
 Updates an existing category in BigCommerce.
 
@@ -748,7 +748,7 @@ Updates an existing category in BigCommerce.
 | Image URL              |                                                                 |         |
 | Custom URL             | Custom URL for the category on the storefront.                  |         |
 
-### Update Custom Field
+### Update Custom Field {#updatecustomfield}
 
 Updates a custom field for a product.
 
@@ -761,7 +761,7 @@ Updates a custom field for a product.
 | Custom Field Name         | The name of the custom field.                        |         |
 | Custom Field Value        | The value of the custom field.                       |         |
 
-### Update Product Image
+### Update Product Image {#updateproductimageaction}
 
 Updates a Product Image.
 
@@ -781,7 +781,7 @@ Updates a Product Image.
 | Sort Order             | The order in which the image will be displayed on the product page.        |         |
 | Image Description      | The description for the image.                                             |         |
 
-### Update Products (Batch)
+### Update Products (Batch) {#updateproductsbatch}
 
 Updates products in batches.
 
@@ -791,7 +791,7 @@ Updates products in batches.
 | Store Hash             | The unique identifier for the BigCommerce store. |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 | Products (Batch)       | Array of products to update in batches.          | <code>[<br /> {<br /> "id": 0,<br /> "name": "string",<br /> "type": "physical",<br /> "sku": "string",<br /> "description": "string",<br /> "weight": 0,<br /> "width": 0,<br /> "depth": 0,<br /> "height": 0,<br /> "price": 0,<br /> "cost_price": 0,<br /> "retail_price": 0,<br /> "sale_price": 0,<br /> "map_price": 0,<br /> "tax_class_id": 0,<br /> "product_tax_code": "string",<br /> "categories": [],<br /> "brand_id": 0,<br /> "brand_name": "string",<br /> "inventory_level": 0,<br /> "inventory_warning_level": 0<br /> }<br />]</code> |
 
-### Upsert Category Trees
+### Upsert Category Trees {#upsertcategorytrees}
 
 Upserts Category Trees. This single endpoint updates and creates category trees.
 

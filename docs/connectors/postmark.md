@@ -9,7 +9,7 @@ Send transactional emails and manage delivery settings in Postmark.
 
 ## Connections
 
-### Postmark Token Authentication
+### Postmark Token Authentication {#postmark}
 
 Authenticate requests to Postmark using values obtained from the developer console.
 
@@ -48,13 +48,13 @@ The **Server Token** is required for email sending operations and server-level a
 
 ## Triggers
 
-### Webhook
+### Webhook {#postmarkwebhook}
 
 Receive and validate webhook requests from Postmark for webhooks you configure.
 
 ## Actions
 
-### Create Server
+### Create Server {#createserver}
 
 Create a new server
 
@@ -68,7 +68,7 @@ Create a new server
 | Delivery Type      | The type of environment for your server. Options: Live, Sandbox. Defaults to Live. <strong>Important:</strong> This cannot be changed after the server is created.      | Live    |
 | Inbound Hook URL   | The URL to POST to whenever an inbound email event occurs.                                                                                                              |         |
 
-### Create Webhook
+### Create Webhook {#createwebhook}
 
 Create a new webhook
 
@@ -78,7 +78,7 @@ Create a new webhook
 | Webhook URL | The URL where webhook events will be sent.                                                       |                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | Triggers    | A JSON object specifying the triggers for the webhook. Use the default structure as a guideline. | <code>{<br /> "Open": {<br /> "Enabled": true,<br /> "PostFirstOpenOnly": false<br /> },<br /> "Click": {<br /> "Enabled": true<br /> },<br /> "Delivery": {<br /> "Enabled": true<br /> },<br /> "Bounce": {<br /> "Enabled": false,<br /> "IncludeContent": false<br /> },<br /> "SpamComplaint": {<br /> "Enabled": false,<br /> "IncludeContent": false<br /> },<br /> "SubscriptionChange": {<br /> "Enabled": false<br /> }<br />}</code> |
 
-### Delete Instanced Webhooks
+### Delete Instanced Webhooks {#deleteinstancedwebhooks}
 
 Delete all webhooks that point to this instance
 
@@ -86,7 +86,7 @@ Delete all webhooks that point to this instance
 | ---------- | ------------------------------- | ------- |
 | Connection | The Postmark connection to use. |         |
 
-### Delete Server
+### Delete Server {#deleteserver}
 
 Delete an existing server
 
@@ -95,7 +95,7 @@ Delete an existing server
 | Connection | The Postmark connection to use.              |         |
 | Server ID  | The unique numeric identifier of the server. |         |
 
-### Delete Webhook
+### Delete Webhook {#deletewebhook}
 
 Delete a specific webhook
 
@@ -104,7 +104,7 @@ Delete a specific webhook
 | Connection | The Postmark connection to use.               |         |
 | Webhook ID | The unique numeric identifier of the webhook. |         |
 
-### Edit Server
+### Edit Server {#editservers}
 
 Edit an existing server
 
@@ -119,7 +119,7 @@ Edit an existing server
 | Inbound Hook URL            | The URL to POST to whenever an inbound email event occurs.                                                                                                              |         |
 | Enable SMTP API Error Hooks | When true, SMTP API errors will be included with bounce webhooks.                                                                                                       | false   |
 
-### Edit Server Using Server Token Account
+### Edit Server Using Server Token Account {#editserver}
 
 Edit an existing server
 
@@ -129,7 +129,7 @@ Edit an existing server
 | Server Name  | Filter by a specific server name. <strong>Note:</strong> This is a partial match search - 'MyServer' will match 'MyServer', 'MyServer Production', and 'MyServer Test'. |         |
 | Server Color | Color label for the server in the Postmark interface.                                                                                                                   |         |
 
-### Edit Webhook
+### Edit Webhook {#editwebhook}
 
 Edit an existing webhook
 
@@ -140,7 +140,7 @@ Edit an existing webhook
 | Webhook URL | The URL where webhook events will be sent.                                                       |                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | Triggers    | A JSON object specifying the triggers for the webhook. Use the default structure as a guideline. | <code>{<br /> "Open": {<br /> "Enabled": true,<br /> "PostFirstOpenOnly": false<br /> },<br /> "Click": {<br /> "Enabled": true<br /> },<br /> "Delivery": {<br /> "Enabled": true<br /> },<br /> "Bounce": {<br /> "Enabled": false,<br /> "IncludeContent": false<br /> },<br /> "SpamComplaint": {<br /> "Enabled": false,<br /> "IncludeContent": false<br /> },<br /> "SubscriptionChange": {<br /> "Enabled": false<br /> }<br />}</code> |
 
-### Get Server
+### Get Server {#getservers}
 
 Get an existing server by ID
 
@@ -149,7 +149,7 @@ Get an existing server by ID
 | Server ID  | The unique numeric identifier of the server. |         |
 | Connection | The Postmark connection to use.              |         |
 
-### Get Server
+### Get Server {#getserver}
 
 Get server information
 
@@ -157,7 +157,7 @@ Get server information
 | ---------- | ------------------------------- | ------- |
 | Connection | The Postmark connection to use. |         |
 
-### Get Webhook
+### Get Webhook {#getwebhook}
 
 Retrieve a specific webhook
 
@@ -166,7 +166,7 @@ Retrieve a specific webhook
 | Connection | The Postmark connection to use.               |         |
 | Webhook ID | The unique numeric identifier of the webhook. |         |
 
-### List Servers
+### List Servers {#listservers}
 
 Get a list of all servers associated with the account
 
@@ -177,7 +177,7 @@ Get a list of all servers associated with the account
 | Offset      | Number of servers to skip for pagination.                                                                                                                               |         |
 | Server Name | Filter by a specific server name. <strong>Note:</strong> This is a partial match search - 'MyServer' will match 'MyServer', 'MyServer Production', and 'MyServer Test'. |         |
 
-### List Webhooks
+### List Webhooks {#listwebhooks}
 
 List all webhooks for a server
 
@@ -186,7 +186,7 @@ List all webhooks for a server
 | Connection                  | The Postmark connection to use.                            |         |
 | Show Only Instance Webhooks | When true, show only webhooks that point to this instance. | true    |
 
-### Raw Request
+### Raw Request {#rawrequest}
 
 Send raw HTTP request to Postmark
 
@@ -209,7 +209,7 @@ Send raw HTTP request to Postmark
 | Max Retry Count         | The maximum number of retries to attempt. Specify 0 for no retries.                                                                                                                                                             | 0       |
 | Use Exponential Backoff | Specifies whether to use a pre-defined exponential backoff strategy for retries. When enabled, 'Retry Delay (ms)' is ignored.                                                                                                   | false   |
 
-### Send Email
+### Send Email {#sendsingleemail}
 
 Send an email using Postmark
 
@@ -230,7 +230,7 @@ Send an email using Postmark
 | Metadata     | Custom metadata key/value pairs.                                                                                                |         |
 | Attachments  | List of attachments                                                                                                             |         |
 
-### Send Email Batch
+### Send Email Batch {#sendbatchemail}
 
 Send a batch of emails using Postmark
 
@@ -239,7 +239,7 @@ Send a batch of emails using Postmark
 | Connection | The Postmark connection to use.                                                                    |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 | Emails     | Provide a JSON array of email objects. Each object should include the necessary email information. | <code>[<br /> {<br /> "fromAddress": "test@example.com",<br /> "toAddress": "user@example.com",<br /> "ccAddress": "cc@example.com",<br /> "bccAddress": "bcc@example.com",<br /> "subject": "Hello, world!",<br /> "tag": "tag-example",<br /> "htmlBody": "<p>Hello, world!</p>",<br /> "textBody": "Hello, world!",<br /> "replyTo": "reply@example.com",<br /> "headers": [<br /> {<br /> "Name": "CUSTOM-HEADER",<br /> "Value": "value"<br /> }<br /> ],<br /> "metadata": {<br /> "color": "green",<br /> "client-id": "12345"<br /> },<br /> "attachments": [<br /> {<br /> "Name": "readme.txt",<br /> "Content": "dGVzdCBjb250ZW50",<br /> "ContentType": "text/plain"<br /> },<br /> {<br /> "Name": "report.pdf",<br /> "Content": "dGVzdCBjb250ZW50",<br /> "ContentType": "application/octet-stream"<br /> }<br /> ]<br /> },<br /> {}<br />]</code> |
 
-### Send Email Batch With Template
+### Send Email Batch With Template {#sendbatchemailwithtemplate}
 
 Send a batch of emails using a Postmark template
 
@@ -248,7 +248,7 @@ Send a batch of emails using a Postmark template
 | Connection | The Postmark connection to use.                                                            |                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | Messages   | The list of templates to send. Please note that we accept up to 500 messages per API call. | <code>{<br /> "Messages": [<br /> {<br /> "From": "sender@example.com",<br /> "To": "receiver@example.com",<br /> "TemplateId": 31941508,<br /> "TemplateModel": {<br /> "fizz": "buzz"<br /> }<br /> },<br /> {<br /> "From": "sender@example.com",<br /> "To": "receiver@example.com",<br /> "TemplateAlias": "code-your-own",<br /> "TemplateModel": {<br /> "fizz": "buzz"<br /> }<br /> }<br /> ]<br />}</code> |
 
-### Send Email With Template
+### Send Email With Template {#sendemailwithtemplate}
 
 Send an email with a Postmark template
 

@@ -9,7 +9,7 @@ Transform data using the JSONata query and transformation language
 
 ## Actions
 
-### Transform
+### Transform {#transform}
 
 Transform data using JSONata
 

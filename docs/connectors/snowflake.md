@@ -9,7 +9,7 @@ Execute SQL queries and manage statements in Snowflake.
 
 ## Connections
 
-### Snowflake Key Pair Authentication
+### Snowflake Key Pair Authentication {#snowflakekeypairconnection}
 
 Use this connection if you want to connect to Snowflake via their Key Pair Authentication.
 
@@ -73,7 +73,7 @@ It is highly recommended to use private key encryption for live integrations and
 | Account Identifier | Your Snowflake account identifier. Format: [organization]-[account] or [account].[region]. Find this in the organization's account panel. [Learn more](https://docs.snowflake.com/en/user-guide/admin-account-identifier) |         |
 | Passphrase         | The passphrase for the provided private key. Leave blank if your key is not encrypted.                                                                                                                                    |         |
 
-### Snowflake OAuth 2.0
+### Snowflake OAuth 2.0 {#snowflakeoauth2}
 
 Snowflake OAuth 2.0 Authentication.
 
@@ -165,7 +165,7 @@ Read about how OAuth 2.0 works [here](../oauth2.md).
 
 ## Actions
 
-### Execute SQL
+### Execute SQL {#executesql}
 
 Executes one or more SQL statements in your Snowflake DB.
 
@@ -186,7 +186,7 @@ Executes one or more SQL statements in your Snowflake DB.
 | Poll for asynchronous results   | When true, the action will handle polling for results on queries that take longer than 45 seconds to execute. When false, the action returns immediately after executing the query.                                          | false   |
 | Debug Request                   | Enabling this flag will log out the current request.                                                                                                                                                                         | false   |
 
-### Get Statement Handle
+### Get Statement Handle {#getstatementhandle}
 
 Retrieve the current status of a executed statement from Snowflake.
 

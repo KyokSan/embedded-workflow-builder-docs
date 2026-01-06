@@ -1,78 +1,121 @@
 ---
 title: Azure OpenAI Service Connector
 sidebar_label: Azure OpenAI Service
-description: Interact with OpenAI models, including Chat GPT and DALL·E
+description: Generate completions and images using Azure OpenAI Service or OpenAI API.
 ---
 
 ![Azure OpenAI Service](./assets/azure-openai-service.png#connector-icon)
-Interact with OpenAI models, including Chat GPT and DALL·E
+Generate completions and images using Azure OpenAI Service or OpenAI API.
 
 ## Connections
 
-### OpenAI API Key
+### API Key {#apikey}
 
-If you'd like to use an Azure OpenAI resource, you must have an [Azure subscription](https://azure.microsoft.com/free/dotnet/) and [Azure OpenAI access](https://learn.microsoft.com/azure/cognitive-services/openai/overview#how-do-i-get-access-to-azure-openai). This will allow you to create an Azure OpenAI resource and get both a connection URL as well as API keys. For more information, see [Quickstart: Get started generating text using Azure OpenAI Service](https://learn.microsoft.com/azure/cognitive-services/openai/quickstart).
+Connect using an OpenAI or Azure OpenAI API key
 
-Integrations can authenticate with OpenAI using API keys or Microsoft Entra Tokens:
+This connection supports both Azure OpenAI Service and standard OpenAI API authentication using API keys.
 
-To generate an API key from OpenAI:
+#### Prerequisites
 
-1. Navigate to[platform.openai.com/account/api-keys](https://platform.openai.com/account/api-keys) and generate a new key.
-   a. If your user is associate with one organization, you can leave the connection's organization field blank. Otherwise, specify your organization's ID.
+For **Azure OpenAI Service**:
 
-To generate a token using Microsoft Entra authentication refer to the following [authentication with Microsoft Entra ID](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/managed-identity) guide for detailed prerequisites and configuration.
+- An active [Azure subscription](https://azure.microsoft.com/free/dotnet/)
+- [Azure OpenAI access approval](https://learn.microsoft.com/azure/cognitive-services/openai/overview#how-do-i-get-access-to-azure-openai)
+- An Azure OpenAI resource created in the Azure portal
 
-If you'd like to use the Azure OpenAI JS client library to connect to non-Azure OpenAI, you'll need an API key from a developer account at https://platform.openai.com/.
+For **OpenAI API**:
 
-| Input         | Comments                                                                                                       | Default |
-| ------------- | -------------------------------------------------------------------------------------------------------------- | ------- |
-| API Key       | This API KEY Generate an API key at https://platform.openai.com/account/api-keys or your Azure OpenAI API KEY. |         |
-| Organization  | Your Azure OpenAI organization. If using a OpenAI API KEY, this is not required.                               |         |
-| Is OpenAI Key | Set to true if this api key belongs to an OpenAI account.                                                      | false   |
+- An active OpenAI account at [platform.openai.com](https://platform.openai.com/)
+- Access to API key generation
+
+#### Setup For Azure OpenAI Service
+
+To use Azure OpenAI Service, an Azure OpenAI resource and API key are required.
+
+1. Follow the [Azure OpenAI quickstart guide](https://learn.microsoft.com/azure/cognitive-services/openai/quickstart) to create an Azure OpenAI resource
+2. In the Azure portal, navigate to the Azure OpenAI resource
+3. Select **Keys and Endpoint** from the resource menu
+4. Copy one of the displayed API keys
+
+For additional information on Azure OpenAI authentication, refer to [Azure OpenAI Service REST API reference](https://learn.microsoft.com/azure/ai-services/openai/reference).
+
+#### Setup For OpenAI API
+
+To use the standard OpenAI API, an API key from OpenAI is required.
+
+1. Navigate to [API Keys](https://platform.openai.com/account/api-keys) in the OpenAI platform
+2. Click **Create new secret key**
+3. Enter a name for the key (optional) and click **Create secret key**
+4. Copy the generated API key (it begins with `sk-`)
+
+Note: If the user account belongs to multiple OpenAI organizations, the organization ID will also be required. The organization ID can be found in [Organization settings](https://platform.openai.com/account/org-settings).
+
+#### Configure the Connection
+
+When configuring the connection:
+
+- Enter the **API Key** from either Azure OpenAI Service or OpenAI API
+- Set **Is OpenAI Key** to:
+  - `false` for Azure OpenAI Service (default)
+  - `true` for standard OpenAI API
+- For **Organization** (OpenAI only):
+  - Leave blank if the account belongs to a single organization
+  - Enter the organization ID if the account belongs to multiple organizations
+
+The API key format differs between providers:
+
+- **Azure OpenAI**: 32-character hexadecimal string
+- **OpenAI API**: Begins with `sk-` followed by a random string
+
+| Input         | Comments                                                                                | Default |
+| ------------- | --------------------------------------------------------------------------------------- | ------- |
+| API Key       | [OpenAI API key](https://platform.openai.com/account/api-keys) or Azure OpenAI API key. |         |
+| Organization  | Your OpenAI organization ID. Only required if you belong to multiple organizations.     |         |
+| Is OpenAI Key | When true, uses the OpenAI API directly. When false, uses Azure OpenAI Service.         | false   |
 
 ## Actions
 
-### Create Chat Completion
+### Create Chat Completion {#createchatcompletion}
 
 Create a completion for the chat message
 
 | Input                   | Comments                                                                                                                                                                                                                                    | Default                                                                                                                                                                                                                                                                                                                                                                                                       |
 | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Connection              |                                                                                                                                                                                                                                             |                                                                                                                                                                                                                                                                                                                                                                                                               |
-| Model / Deployment Name | Specifies either the model deployment name (when using Azure OpenAI) or model name (when using non-Azure OpenAI) to use for this request.                                                                                                   | gpt-3.5-turbo                                                                                                                                                                                                                                                                                                                                                                                                 |
-| Messages                |                                                                                                                                                                                                                                             | <code>[<br /> {<br /> "role": "system",<br /> "content": "You are a helpful assistant."<br /> },<br /> {<br /> "role": "user",<br /> "content": "Who won the world series in 2020?"<br /> },<br /> {<br /> "role": "assistant",<br /> "content": "The Los Angeles Dodgers won the World Series in 2020."<br /> },<br /> {<br /> "role": "user",<br /> "content": "Where was it played?"<br /> }<br />]</code> |
+| Connection              | The Azure OpenAI Service or OpenAI API connection to use.                                                                                                                                                                                   |                                                                                                                                                                                                                                                                                                                                                                                                               |
+| Model / Deployment Name | Specifies either the model deployment name (when using Azure OpenAI) or model name (when using OpenAI). See available models at https://platform.openai.com/docs/models.                                                                    | gpt-4o-mini                                                                                                                                                                                                                                                                                                                                                                                                   |
+| Messages                | An array of message objects with 'role' (system, user, or assistant) and 'content' properties.                                                                                                                                              | <code>[<br /> {<br /> "role": "system",<br /> "content": "You are a helpful assistant."<br /> },<br /> {<br /> "role": "user",<br /> "content": "Who won the world series in 2020?"<br /> },<br /> {<br /> "role": "assistant",<br /> "content": "The Los Angeles Dodgers won the World Series in 2020."<br /> },<br /> {<br /> "role": "user",<br /> "content": "Where was it played?"<br /> }<br />]</code> |
 | Temperature             | What sampling temperature to use, between 0 and 2. Higher values like 0.8 will make the output more random, while lower values like 0.2 will make it more focused and deterministic.                                                        | 1                                                                                                                                                                                                                                                                                                                                                                                                             |
 | top_p                   | An alternative to sampling with temperature, called nucleus sampling, where the model considers the results of the tokens with top_p probability mass. So 0.1 means only the tokens comprising the top 10% probability mass are considered. | 1                                                                                                                                                                                                                                                                                                                                                                                                             |
 | Number of choices       | How many chat completion choices to generate for each input message.                                                                                                                                                                        | 1                                                                                                                                                                                                                                                                                                                                                                                                             |
 
-### Create Image
+### Create Image {#createimage}
 
 Create image(s) given a prompt
 
 | Input            | Comments                                                                             | Default   |
 | ---------------- | ------------------------------------------------------------------------------------ | --------- |
-| Connection       |                                                                                      |           |
+| Connection       | The Azure OpenAI Service or OpenAI API connection to use.                            |           |
 | Prompt           | A text description of the desired image(s). The maximum length is 1000 characters.   |           |
 | Number of Images | The number of images to generate. Must be between 1 and 10.                          | 1         |
 | Image Size       | The size of the generated images. Must be one of 1792x1024, 1024x1792, or 1024x1024. | 1024x1024 |
 
-### Create Multiple Chat Completion
+### Create Multiple Chat Completion {#createcompletions}
 
 Generate Multiple Completions
 
-| Input                   | Comments                                                                                                                                  | Default                                                                                                                                                                                                                                                                   |
-| ----------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Connection              |                                                                                                                                           |                                                                                                                                                                                                                                                                           |
-| Model / Deployment Name | Specifies either the model deployment name (when using Azure OpenAI) or model name (when using non-Azure OpenAI) to use for this request. | text-davinci-003                                                                                                                                                                                                                                                          |
-| Messages                |                                                                                                                                           | <code>[<br /> "How are you today?",<br /> "What is Azure OpenAI?",<br /> "Why do children love dinosaurs?",<br /> "Generate a proof of Euler's identity",<br /> "Describe in single words only the good things that come into your mind about your mother."<br />]</code> |
+| Input                   | Comments                                                                                                                                                                 | Default                                                                                                                                                                                                                                                                   |
+| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Connection              | The Azure OpenAI Service or OpenAI API connection to use.                                                                                                                |                                                                                                                                                                                                                                                                           |
+| Model / Deployment Name | Specifies either the model deployment name (when using Azure OpenAI) or model name (when using OpenAI). See available models at https://platform.openai.com/docs/models. | gpt-3.5-turbo-instruct                                                                                                                                                                                                                                                    |
+| Messages                | An array of message objects with 'role' (system, user, or assistant) and 'content' properties.                                                                           | <code>[<br /> "How are you today?",<br /> "What is Azure OpenAI?",<br /> "Why do children love dinosaurs?",<br /> "Generate a proof of Euler's identity",<br /> "Describe in single words only the good things that come into your mind about your mother."<br />]</code> |
 
-### Raw Request
+### Raw Request {#rawrequest}
 
 Send raw HTTP request to Azure OpenAI
 
 | Input                   | Comments                                                                                                                                                                                                                                | Default    |
 | ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- |
-| Connection              |                                                                                                                                                                                                                                         |            |
+| Connection              | The Azure OpenAI Service or OpenAI API connection to use.                                                                                                                                                                               |            |
 | URL                     | Input the path only (/v1/images/generations), The base URL is already included (https://api.openai.com). For example, to connect to https://api.openai.com/v1/images/generations, only /v1/images/generations is entered in this field. | /v1/models |
 | Method                  | The HTTP method to use.                                                                                                                                                                                                                 |            |
 | Data                    | The HTTP body payload to send to the URL.                                                                                                                                                                                               |            |
@@ -83,18 +126,17 @@ Send raw HTTP request to Azure OpenAI
 | Header                  | A list of headers to send with the request.                                                                                                                                                                                             |            |
 | Response Type           | The type of data you expect in the response. You can request json, text, or binary data.                                                                                                                                                | json       |
 | Timeout                 | The maximum time that a client will await a response to its request                                                                                                                                                                     |            |
-| Debug Request           | Enabling this flag will log out the current request.                                                                                                                                                                                    | false      |
-| Retry Delay (ms)        | The delay in milliseconds between retries.                                                                                                                                                                                              | 0          |
-| Retry On All Errors     | If true, retries on all erroneous responses regardless of type.                                                                                                                                                                         | false      |
-| Max Retry Count         | The maximum number of retries to attempt.                                                                                                                                                                                               | 0          |
-| Use Exponential Backoff | Specifies whether to use a pre-defined exponential backoff strategy for retries.                                                                                                                                                        | false      |
+| Retry Delay (ms)        | The delay in milliseconds between retries. This is used when 'Use Exponential Backoff' is disabled.                                                                                                                                     | 0          |
+| Retry On All Errors     | If true, retries on all erroneous responses regardless of type. This is helpful when retrying after HTTP 429 or other 3xx or 4xx errors. Otherwise, only retries on HTTP 5xx and network errors.                                        | false      |
+| Max Retry Count         | The maximum number of retries to attempt. Specify 0 for no retries.                                                                                                                                                                     | 0          |
+| Use Exponential Backoff | Specifies whether to use a pre-defined exponential backoff strategy for retries. When enabled, 'Retry Delay (ms)' is ignored.                                                                                                           | false      |
 
-### Summarize Text
+### Summarize Text {#summarizetext}
 
 Summarize a given text
 
-| Input                   | Comments                                                                                                                                  | Default          |
-| ----------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ---------------- |
-| Connection              |                                                                                                                                           |                  |
-| Model / Deployment Name | Specifies either the model deployment name (when using Azure OpenAI) or model name (when using non-Azure OpenAI) to use for this request. | text-davinci-003 |
-| Text to Summarize       |                                                                                                                                           |                  |
+| Input                   | Comments                                                                                                                                                                 | Default                |
+| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------- |
+| Connection              | The Azure OpenAI Service or OpenAI API connection to use.                                                                                                                |                        |
+| Model / Deployment Name | Specifies either the model deployment name (when using Azure OpenAI) or model name (when using OpenAI). See available models at https://platform.openai.com/docs/models. | gpt-3.5-turbo-instruct |
+| Text to Summarize       |                                                                                                                                                                          |                        |

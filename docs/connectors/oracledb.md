@@ -9,7 +9,7 @@ Query and manage data in an OracleDB database
 
 ## Connections
 
-### OracleDB Connection
+### OracleDB Connection {#oracledbconnection}
 
 Authenticate requests to an OracleDB server.
 
@@ -24,7 +24,7 @@ Authenticate requests to an OracleDB server.
 
 ## Actions
 
-### Query
+### Query {#query}
 
 Returns the results of an OracleDB database query
 

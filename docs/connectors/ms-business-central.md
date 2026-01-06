@@ -9,7 +9,7 @@ Microsoft Dynamics 365 Business Central is a comprehensive enterprise resource p
 
 ## Connections
 
-### OAuth 2.0 Auth Code
+### OAuth 2.0 Auth Code {#businesscentraloauth2}
 
 Microsoft Business Central OAuth Connection
 
@@ -50,7 +50,7 @@ Read about how OAuth 2.0 works [here](../oauth2.md).
 | Client ID     |                                                                                     |                                                                  |
 | Client Secret |                                                                                     |                                                                  |
 
-### OAuth 2.0 Client Credentials
+### OAuth 2.0 Client Credentials {#businesscentralclientcredentials}
 
 OAuth 2.0 Client Credentials Connectivity for Microsoft Business Central
 
@@ -123,7 +123,7 @@ Read about how OAuth 2.0 works [here](../oauth2.md).
 
 ## Triggers
 
-### Microsoft Dynamics 365 Business Central Webhook
+### Microsoft Dynamics 365 Business Central Webhook {#webhook}
 
 Receive and validate webhook requests from Microsoft Dynamics 365 Business Central for webhooks you configure.
 
@@ -132,13 +132,13 @@ Receive and validate webhook requests from Microsoft Dynamics 365 Business Centr
 | Connection |                           |         |
 | Resource   | Resource to subscribe to. |         |
 
-### Webhook Receiver
+### Webhook Receiver {#webhookreceiver}
 
 Receive a webhook payload from an external service.
 
 ## Actions
 
-### Create Attachment
+### Create Attachment {#createattachment}
 
 Create a new attachment
 
@@ -151,7 +151,7 @@ Create a new attachment
 | Parent Type   | The type of the parent object                                      |         |
 | Debug Request | Enabling this flag will log out the current request.               | false   |
 
-### Create Customer
+### Create Customer {#createcustomer}
 
 Creates a customer object in Microsoft Business Central.
 
@@ -181,7 +181,7 @@ Creates a customer object in Microsoft Business Central.
 | Actions Blocked         | Specifies which transactions with the customer cannot be posted.It can be empty, 'Ship', 'Invoice' or 'All' |         |
 | Debug Request           | Enabling this flag will log out the current request.                                                        | false   |
 
-### Create Event Subscription
+### Create Event Subscription {#createeventsubscription}
 
 Create an Event subscription for Microsoft Business Central.
 
@@ -193,7 +193,7 @@ Create an Event subscription for Microsoft Business Central.
 | Allow Duplicates | Enable to allow more than one webhook per endpoint.  | false   |
 | Debug Request    | Enabling this flag will log out the current request. | false   |
 
-### Create Item
+### Create Item {#createitem}
 
 Creates a new item object in your Business Central Organization.
 
@@ -205,7 +205,7 @@ Creates a new item object in your Business Central Organization.
 | Display Name  | The display name of the item.                        |         |
 | Debug Request | Enabling this flag will log out the current request. | false   |
 
-### Create Purchase Order
+### Create Purchase Order {#createpurchaseorder}
 
 Creates a purchase order object in your Business Central organization.
 
@@ -225,7 +225,7 @@ Creates a purchase order object in your Business Central organization.
 | Additional Properties  | Additional properties to include in the request body. In case of supplying a property that is already defined as an input, the input value will be used. |         |
 | Debug Request          | Enabling this flag will log out the current request.                                                                                                     | false   |
 
-### Create Purchase Order Line
+### Create Purchase Order Line {#createpurchaseorderline}
 
 Creates a purchase order line object in your Business Central organization.
 
@@ -244,7 +244,7 @@ Creates a purchase order line object in your Business Central organization.
 | Additional Properties | Additional properties to include in the request body. In case of supplying a property that is already defined as an input, the input value will be used. |         |
 | Debug Request         | Enabling this flag will log out the current request.                                                                                                     | false   |
 
-### Create Sales Invoice
+### Create Sales Invoice {#createsalesinvoice}
 
 Creates a sales invoice object in your Business Central organization.
 
@@ -263,7 +263,7 @@ Creates a sales invoice object in your Business Central organization.
 | Additional Properties  | Additional properties to include in the request body. In case of supplying a property that is already defined as an input, the input value will be used. |         |
 | Debug Request          | Enabling this flag will log out the current request.                                                                                                     | false   |
 
-### Create Sales Order
+### Create Sales Order {#createsalesorder}
 
 Creates a sales order object in your Business Central organization.
 
@@ -282,7 +282,7 @@ Creates a sales order object in your Business Central organization.
 | Additional Properties  | Additional properties to include in the request body. In case of supplying a property that is already defined as an input, the input value will be used. |         |
 | Debug Request          | Enabling this flag will log out the current request.                                                                                                     | false   |
 
-### Create Shipment Method
+### Create Shipment Method {#createshipmentmethod}
 
 Create a new shipment method
 
@@ -294,7 +294,7 @@ Create a new shipment method
 | Shipment Code        |                                                      |         |
 | Debug Request        | Enabling this flag will log out the current request. | false   |
 
-### Delete All Instance Subscriptions
+### Delete All Instance Subscriptions {#deleteallinstancesubscriptions}
 
 Delete all subscriptions pointed at this instance.
 
@@ -303,7 +303,7 @@ Delete all subscriptions pointed at this instance.
 | Connection    |                                                      |         |
 | Debug Request | Enabling this flag will log out the current request. | false   |
 
-### Delete Attachment
+### Delete Attachment {#deleteattachment}
 
 Delete an attachment object in Business Central.
 
@@ -314,7 +314,7 @@ Delete an attachment object in Business Central.
 | Attachment ID | The ID of the attachment to update.                  |         |
 | Debug Request | Enabling this flag will log out the current request. | false   |
 
-### Delete Customer
+### Delete Customer {#deletecustomer}
 
 Deletes a customer object in your Business Central organization.
 
@@ -325,7 +325,7 @@ Deletes a customer object in your Business Central organization.
 | Customer ID   | The unique identifier of the customer.               |         |
 | Debug Request | Enabling this flag will log out the current request. | false   |
 
-### Delete Item
+### Delete Item {#deleteitem}
 
 Deletes an item object in your Business Central Organization.
 
@@ -336,7 +336,7 @@ Deletes an item object in your Business Central Organization.
 | Item Id       | The id of the item.                                  |         |
 | Debug Request | Enabling this flag will log out the current request. | false   |
 
-### Delete Purchase Order
+### Delete Purchase Order {#deletepurchaseorder}
 
 Deletes a purchase order object in your Business Central Organization.
 
@@ -347,7 +347,7 @@ Deletes a purchase order object in your Business Central Organization.
 | Purchase Order ID | The unique ID of the purchase order to delete.       |         |
 | Debug Request     | Enabling this flag will log out the current request. | false   |
 
-### Delete Purchase Order Line
+### Delete Purchase Order Line {#deletepurchaseorderline}
 
 Deletes a purchase order line object in your Business Central Organization.
 
@@ -358,7 +358,7 @@ Deletes a purchase order line object in your Business Central Organization.
 | Purchase Order Line ID | The unique ID of the purchase order line to delete.  |         |
 | Debug Request          | Enabling this flag will log out the current request. | false   |
 
-### Delete Sales Invoice
+### Delete Sales Invoice {#deletesalesinvoice}
 
 Deletes a sales invoice object in your Business Central Organization.
 
@@ -369,7 +369,7 @@ Deletes a sales invoice object in your Business Central Organization.
 | Sales Invoice ID | The unique identifier of the sales invoice object.   |         |
 | Debug Request    | Enabling this flag will log out the current request. | false   |
 
-### Delete Sales Order
+### Delete Sales Order {#deletesalesorder}
 
 Deletes a sales order object in your Business Central Organization.
 
@@ -380,7 +380,7 @@ Deletes a sales order object in your Business Central Organization.
 | Sales Order ID | The unique identifier of the sales order.            |         |
 | Debug Request  | Enabling this flag will log out the current request. | false   |
 
-### Delete Shipment Method
+### Delete Shipment Method {#deleteshipmentmethod}
 
 Deletes a shipment method object in your Business Central organization.
 
@@ -391,7 +391,7 @@ Deletes a shipment method object in your Business Central organization.
 | Shipment Method Id | Specifies the shipment method used by the customer.  |         |
 | Debug Request      | Enabling this flag will log out the current request. | false   |
 
-### Delete Subscription
+### Delete Subscription {#deletesubscription}
 
 Delete existing subscription for Microsoft Business Central.
 
@@ -402,7 +402,7 @@ Delete existing subscription for Microsoft Business Central.
 | Etag            | Etag value for the subscription to delete.           |         |
 | Debug Request   | Enabling this flag will log out the current request. | false   |
 
-### Get Account
+### Get Account {#getaccount}
 
 Retrieve the properties and relationships of an account object in Microsoft Business Central.
 
@@ -413,7 +413,7 @@ Retrieve the properties and relationships of an account object in Microsoft Busi
 | Account ID    | The ID of the account you want to retrieve data from. |         |
 | Debug Request | Enabling this flag will log out the current request.  | false   |
 
-### Get Attachment
+### Get Attachment {#getattachment}
 
 Gets an attachment object
 
@@ -425,7 +425,7 @@ Gets an attachment object
 | Parent Type   | The type of the parent object                                      |         |
 | Debug Request | Enabling this flag will log out the current request.               | false   |
 
-### Get Company Information
+### Get Company Information {#getcompanyinformation}
 
 Get information about a company in your Business Central organization.
 
@@ -435,7 +435,7 @@ Get information about a company in your Business Central organization.
 | Company ID    | The ID of the company you want to interact with.     |         |
 | Debug Request | Enabling this flag will log out the current request. | false   |
 
-### Get Customer
+### Get Customer {#getcustomer}
 
 Retrieve the properties and relationships of a customer object in your Business Central organization.
 
@@ -446,7 +446,7 @@ Retrieve the properties and relationships of a customer object in your Business 
 | Customer ID   | The unique identifier of the customer.               |         |
 | Debug Request | Enabling this flag will log out the current request. | false   |
 
-### Get Item
+### Get Item {#getitem}
 
 Retrieves an item object from your Business Central Organization.
 
@@ -457,7 +457,7 @@ Retrieves an item object from your Business Central Organization.
 | Item Id       | The id of the item.                                  |         |
 | Debug Request | Enabling this flag will log out the current request. | false   |
 
-### Get Purchase Order
+### Get Purchase Order {#getpurchaseorder}
 
 Retrieves a purchase order object in your Business Central Organization.
 
@@ -468,7 +468,7 @@ Retrieves a purchase order object in your Business Central Organization.
 | Purchase Order ID | The unique ID of the purchase order to retrieve.     |         |
 | Debug Request     | Enabling this flag will log out the current request. | false   |
 
-### Get Purchase Order Line
+### Get Purchase Order Line {#getpurchaseorderline}
 
 Retrieves a purchase order line object in your Business Central Organization.
 
@@ -479,7 +479,7 @@ Retrieves a purchase order line object in your Business Central Organization.
 | Purchase Order Line ID | The unique ID of the purchase order line to retrieve. |         |
 | Debug Request          | Enabling this flag will log out the current request.  | false   |
 
-### Get Purchase Receipt
+### Get Purchase Receipt {#getpurchasereceipt}
 
 Retrieves a purchase receipt object in your Business Central Organization.
 
@@ -490,7 +490,7 @@ Retrieves a purchase receipt object in your Business Central Organization.
 | Purchase Receipt ID | The unique identifier of the purchase receipt.       |         |
 | Debug Request       | Enabling this flag will log out the current request. | false   |
 
-### Get Purchase Receipt Line
+### Get Purchase Receipt Line {#getpurchasereceiptline}
 
 Retrieves a purchase receipt line object in your Business Central Organization.
 
@@ -501,7 +501,7 @@ Retrieves a purchase receipt line object in your Business Central Organization.
 | Purchase Receipt Line ID | The unique identifier of the purchase receipt line.  |         |
 | Debug Request            | Enabling this flag will log out the current request. | false   |
 
-### Get Sale Shipment
+### Get Sale Shipment {#getsaleshipment}
 
 Retrieves a sale shipment object from your Business Central organization.
 
@@ -512,7 +512,7 @@ Retrieves a sale shipment object from your Business Central organization.
 | Sale Shipment ID | The ID of the sale shipment you want to retrieve.    |         |
 | Debug Request    | Enabling this flag will log out the current request. | false   |
 
-### Get Sales Invoice
+### Get Sales Invoice {#getsalesinvoice}
 
 Retrieves a sales invoice object in your Business Central Organization.
 
@@ -523,7 +523,7 @@ Retrieves a sales invoice object in your Business Central Organization.
 | Sales Invoice ID | The unique identifier of the sales invoice object.   |         |
 | Debug Request    | Enabling this flag will log out the current request. | false   |
 
-### Get Sales Order
+### Get Sales Order {#getsalesorder}
 
 Retrieves a sales order object in your Business Central Organization.
 
@@ -534,7 +534,7 @@ Retrieves a sales order object in your Business Central Organization.
 | Sales Order ID | The unique identifier of the sales order.            |         |
 | Debug Request  | Enabling this flag will log out the current request. | false   |
 
-### Get Sales Shipment Line Item
+### Get Sales Shipment Line Item {#getsalesshipmentlines}
 
 Gets a sales shipment line object
 
@@ -545,7 +545,7 @@ Gets a sales shipment line object
 | Sales Shipment Line ID | The ID of the sales shipment line object.            |         |
 | Debug Request          | Enabling this flag will log out the current request. | false   |
 
-### Get Shipment Method
+### Get Shipment Method {#getshipmentmethod}
 
 Retrieves a shipment method object in your Business Central organization.
 
@@ -556,7 +556,7 @@ Retrieves a shipment method object in your Business Central organization.
 | Shipment Method Id | Specifies the shipment method used by the customer.  |         |
 | Debug Request      | Enabling this flag will log out the current request. | false   |
 
-### List Accounts
+### List Accounts {#listaccounts}
 
 Retrieve the properties and relationships of all account objects in your Business Central organization.
 
@@ -576,7 +576,7 @@ Retrieve the properties and relationships of all account objects in your Busines
 | Skip Token    | Retrieves the next page of results from result sets that span multiple pages.                                                      |         |
 | Debug Request | Enabling this flag will log out the current request.                                                                               | false   |
 
-### List Companies
+### List Companies {#listcompanies}
 
 Retrieve the properties and relationships of companies in your Business Central organization.
 
@@ -595,7 +595,7 @@ Retrieve the properties and relationships of companies in your Business Central 
 | Skip Token    | Retrieves the next page of results from result sets that span multiple pages.                                                      |         |
 | Debug Request | Enabling this flag will log out the current request.                                                                               | false   |
 
-### List Customers
+### List Customers {#listcustomers}
 
 Retrieve the properties and relationships of all customer objects in your Business Central organization.
 
@@ -615,7 +615,7 @@ Retrieve the properties and relationships of all customer objects in your Busine
 | Skip Token    | Retrieves the next page of results from result sets that span multiple pages.                                                      |         |
 | Debug Request | Enabling this flag will log out the current request.                                                                               | false   |
 
-### List Items
+### List Items {#listitems}
 
 List all item objects from your Business Central Organization.
 
@@ -635,7 +635,7 @@ List all item objects from your Business Central Organization.
 | Skip Token    | Retrieves the next page of results from result sets that span multiple pages.                                                      |         |
 | Debug Request | Enabling this flag will log out the current request.                                                                               | false   |
 
-### List Purchase Order Lines
+### List Purchase Order Lines {#listpurchaseorderlines}
 
 List all purchase order line objects in your Business Central Organization.
 
@@ -656,7 +656,7 @@ List all purchase order line objects in your Business Central Organization.
 | Skip Token        | Retrieves the next page of results from result sets that span multiple pages.                                                      |         |
 | Debug Request     | Enabling this flag will log out the current request.                                                                               | false   |
 
-### List Purchase Orders
+### List Purchase Orders {#listpurchaseorders}
 
 List all purchase order objects in your Business Central Organization.
 
@@ -676,7 +676,7 @@ List all purchase order objects in your Business Central Organization.
 | Skip Token    | Retrieves the next page of results from result sets that span multiple pages.                                                      |         |
 | Debug Request | Enabling this flag will log out the current request.                                                                               | false   |
 
-### List Purchase Receipt Lines
+### List Purchase Receipt Lines {#listpurchasereceiptlines}
 
 List all purchase receipt line objects in your Business Central Organization.
 
@@ -696,7 +696,7 @@ List all purchase receipt line objects in your Business Central Organization.
 | Skip Token    | Retrieves the next page of results from result sets that span multiple pages.                                                      |         |
 | Debug Request | Enabling this flag will log out the current request.                                                                               | false   |
 
-### List Purchase Receipts
+### List Purchase Receipts {#listpurchasereceipts}
 
 List all purchase receipt objects in your Business Central Organization.
 
@@ -716,7 +716,7 @@ List all purchase receipt objects in your Business Central Organization.
 | Skip Token    | Retrieves the next page of results from result sets that span multiple pages.                                                      |         |
 | Debug Request | Enabling this flag will log out the current request.                                                                               | false   |
 
-### List Sales Invoices
+### List Sales Invoices {#listsalesinvoices}
 
 List all sales invoices objects in your Business Central Organization.
 
@@ -736,7 +736,7 @@ List all sales invoices objects in your Business Central Organization.
 | Skip Token    | Retrieves the next page of results from result sets that span multiple pages.                                                      |         |
 | Debug Request | Enabling this flag will log out the current request.                                                                               | false   |
 
-### List Sales Orders
+### List Sales Orders {#listsalesorders}
 
 List all sales orders objects in your Business Central Organization.
 
@@ -756,7 +756,7 @@ List all sales orders objects in your Business Central Organization.
 | Skip Token    | Retrieves the next page of results from result sets that span multiple pages.                                                      |         |
 | Debug Request | Enabling this flag will log out the current request.                                                                               | false   |
 
-### List Sales Shipment Line Items
+### List Sales Shipment Line Items {#listsalesshipmentlines}
 
 Lists all sales shipment line objects in your Business Central organization.
 
@@ -776,7 +776,7 @@ Lists all sales shipment line objects in your Business Central organization.
 | Company ID    | The ID of the company you want to interact with.                                                                                   |         |
 | Debug Request | Enabling this flag will log out the current request.                                                                               | false   |
 
-### List Sales Shipments
+### List Sales Shipments {#listsaleshipments}
 
 List all sales shipments objects from your Business Central organization.
 
@@ -796,7 +796,7 @@ List all sales shipments objects from your Business Central organization.
 | Skip Token    | Retrieves the next page of results from result sets that span multiple pages.                                                      |         |
 | Debug Request | Enabling this flag will log out the current request.                                                                               | false   |
 
-### List Subscriptions
+### List Subscriptions {#listsubscriptions}
 
 List all subscriptions for Microsoft Business Central.
 
@@ -806,7 +806,7 @@ List all subscriptions for Microsoft Business Central.
 | Show Instance Webhooks | Show only subscriptions for this Instance's webhooks. | false   |
 | Debug Request          | Enabling this flag will log out the current request.  | false   |
 
-### Raw Request
+### Raw Request {#rawrequest}
 
 Send a raw HTTP request to Microsoft's Business Central API
 
@@ -829,7 +829,7 @@ Send a raw HTTP request to Microsoft's Business Central API
 | Max Retry Count         | The maximum number of retries to attempt. Specify 0 for no retries.                                                                                                                              | 0       |
 | Use Exponential Backoff | Specifies whether to use a pre-defined exponential backoff strategy for retries. When enabled, 'Retry Delay (ms)' is ignored.                                                                    | false   |
 
-### Update Attachment
+### Update Attachment {#updateattachment}
 
 Update the attachment content in Business Central.
 
@@ -841,7 +841,7 @@ Update the attachment content in Business Central.
 | Attachment Content | The content of the attachment.                       |         |
 | Debug Request      | Enabling this flag will log out the current request. | false   |
 
-### Update Company Information
+### Update Company Information {#updatecompanyinformation}
 
 Update the properties of a company information object in your Business Central organization.
 
@@ -867,7 +867,7 @@ Update the properties of a company information object in your Business Central o
 | Industry                       | The industry in which the company operates.                 |         |
 | Debug Request                  | Enabling this flag will log out the current request.        | false   |
 
-### Update Customer
+### Update Customer {#updatecustomer}
 
 Update a customer object in your Business Central organization.
 
@@ -898,7 +898,7 @@ Update a customer object in your Business Central organization.
 | Tax Liable              | specifies if the customer or vendor is liable for sales tax. Set to true if the customer is tax liable.     |         |
 | Debug Request           | Enabling this flag will log out the current request.                                                        | false   |
 
-### Update Event Subscription
+### Update Event Subscription {#updateeventsubscription}
 
 Update existing Event subscription for Microsoft Business Central.
 
@@ -911,7 +911,7 @@ Update existing Event subscription for Microsoft Business Central.
 | Resource         | Resource to subscribe to.                            |         |
 | Debug Request    | Enabling this flag will log out the current request. | false   |
 
-### Update Item
+### Update Item {#updateitem}
 
 Updates an item object from your Business Central Organization.
 
@@ -935,7 +935,7 @@ Updates an item object from your Business Central Organization.
 | Base Unit Of Measure Id   | Specifies the ID of the unit of measure.                                                                           |         |
 | Debug Request             | Enabling this flag will log out the current request.                                                               | false   |
 
-### Update Purchase Order
+### Update Purchase Order {#updatepurchaseorder}
 
 Updates a purchase order object in your Business Central organization.
 
@@ -956,7 +956,7 @@ Updates a purchase order object in your Business Central organization.
 | Additional Properties  | Additional properties to include in the request body. In case of supplying a property that is already defined as an input, the input value will be used. |         |
 | Debug Request          | Enabling this flag will log out the current request.                                                                                                     | false   |
 
-### Update Purchase Order Line
+### Update Purchase Order Line {#updatepurchaseorderline}
 
 Updates a purchase order line object in your Business Central organization.
 
@@ -976,7 +976,7 @@ Updates a purchase order line object in your Business Central organization.
 | Additional Properties  | Additional properties to include in the request body. In case of supplying a property that is already defined as an input, the input value will be used. |         |
 | Debug Request          | Enabling this flag will log out the current request.                                                                                                     | false   |
 
-### Update Sales Invoice
+### Update Sales Invoice {#updatesalesinvoice}
 
 Updates a sales invoice object in your Business Central organization.
 
@@ -996,7 +996,7 @@ Updates a sales invoice object in your Business Central organization.
 | Additional Properties  | Additional properties to include in the request body. In case of supplying a property that is already defined as an input, the input value will be used. |         |
 | Debug Request          | Enabling this flag will log out the current request.                                                                                                     | false   |
 
-### Update Sales Order
+### Update Sales Order {#updatesalesorder}
 
 Updates a sales order object in your Business Central organization.
 
@@ -1016,7 +1016,7 @@ Updates a sales order object in your Business Central organization.
 | Additional Properties  | Additional properties to include in the request body. In case of supplying a property that is already defined as an input, the input value will be used. |         |
 | Debug Request          | Enabling this flag will log out the current request.                                                                                                     | false   |
 
-### Update Shipment Method
+### Update Shipment Method {#updateshipmentmethod}
 
 Update a shipment method object in your Business Central organization.
 

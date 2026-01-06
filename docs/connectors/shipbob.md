@@ -9,7 +9,7 @@ Shipbob offers an end to end fulfillment services for Ecommerce vendors.
 
 ## Connections
 
-### ShipBob Personal Access Token
+### ShipBob Personal Access Token {#apitoken}
 
 If you're building a single-user custom integration, you can use the Personal Access Token (PAT) method. This generates a ready-to-use bearer-type token with full access to the merchant's account.
 
@@ -36,7 +36,7 @@ First you should use your PAT to hit the [GET Channel](https://developer.shipbob
 
 ## Triggers
 
-### Event Topic Subscription
+### Event Topic Subscription {#eventtopicsubscription}
 
 Get notified when a specific event occurs
 
@@ -47,13 +47,13 @@ Get notified when a specific event occurs
 | Topics to Subscribe        | Topics to subscribe to                                                                   |         |
 | Overwrite Webhook Settings | True to delete existing webhook settings pointing to this flow's URL and create new ones | false   |
 
-### Webhook
+### Webhook {#webhook}
 
 Receive and validate webhook requests from ShipBob for webhooks you configure.
 
 ## Actions
 
-### Cancel Order
+### Cancel Order {#cancelorder}
 
 Cancel an existing Order by Order ID
 
@@ -64,7 +64,7 @@ Cancel an existing Order by Order ID
 | Order ID           | The order ID to retrieve              |         |
 | ShipBob Channel ID | Channel Id for Operation              |         |
 
-### Cancel Shipments
+### Cancel Shipments {#cancelshipment}
 
 Cancel multiple Shipments by Shipment ID
 
@@ -75,7 +75,7 @@ Cancel multiple Shipments by Shipment ID
 | ShipBob Channel ID | Channel Id for Operation              |                         |
 | Shipment IDs       | Shipment IDs to cancel                | <code>["000xxx"]</code> |
 
-### Cancel Warehouse Receiving Order
+### Cancel Warehouse Receiving Order {#cancelwarehousereceivingorder}
 
 Cancels a Warehouse Receiving Order by Order ID
 
@@ -85,7 +85,7 @@ Cancels a Warehouse Receiving Order by Order ID
 | Version      | The version of the ShipBob API to use | 2.0     |
 | Receiving ID | Id of the receiving order             |         |
 
-### Create Order
+### Create Order {#createorder}
 
 Create a new Order
 
@@ -108,7 +108,7 @@ Create a new Order
 | Location ID           | Desired Fulfillment Center Location ID. If not specified, ShipBob will determine the location that fulfills this order.                                                                                                                |         |
 | Gift Message          | Gift message associated with the order                                                                                                                                                                                                 |         |
 
-### Create Warehouse Receiving Order
+### Create Warehouse Receiving Order {#createwarehousereceivingorder}
 
 Create a new Warehouse Receiving Order
 
@@ -123,7 +123,7 @@ Create a new Warehouse Receiving Order
 | Expected Arrival Date | Expected arrival date of all the box shipments in this receiving order                                                                                                                                      |         |
 | Purchase Order Number | Purchase order number for this receiving order                                                                                                                                                              |         |
 
-### Create Webhook
+### Create Webhook {#createwebhook}
 
 Creates a new Webhook
 
@@ -135,7 +135,7 @@ Creates a new Webhook
 | Subscription URL   | URL we will call when an event matching the subscription topic is raised. Must have ssl enabled (https) and accept POST requests with content type of application/json |         |
 | ShipBob Channel ID | Channel Id for Operation                                                                                                                                               |         |
 
-### Delete All Instanced Webhooks
+### Delete All Instanced Webhooks {#deleteallwebhooks}
 
 Delete all webhooks that point to a flow in this instance
 
@@ -144,7 +144,7 @@ Delete all webhooks that point to a flow in this instance
 | Connection |                                       |         |
 | Version    | The version of the ShipBob API to use | 1.0     |
 
-### Delete Webhook
+### Delete Webhook {#deletewebhook}
 
 Delete a Webhook by Webhook ID
 
@@ -154,7 +154,7 @@ Delete a Webhook by Webhook ID
 | Version    | The version of the ShipBob API to use | 1.0     |
 | Webhook ID | Id of the webhook                     |         |
 
-### Get a list of Inventory Items by Product ID
+### Get a list of Inventory Items by Product ID {#listbyproductid}
 
 Retrieve a list of Inventory Items by their Product ID
 
@@ -165,7 +165,7 @@ Retrieve a list of Inventory Items by their Product ID
 | ShipBob Channel ID | Channel Id for Operation              |         |
 | Product ID         | The product ID to retrieve            |         |
 
-### Get All Shipments for Order
+### Get All Shipments for Order {#getallshipmentsfororder}
 
 Retrieve all Shipments on an Order by Order ID
 
@@ -176,7 +176,7 @@ Retrieve all Shipments on an Order by Order ID
 | Order ID           | The order ID to retrieve              |         |
 | ShipBob Channel ID | Channel Id for Operation              |         |
 
-### Get Inventory Item
+### Get Inventory Item {#getinventoryitem}
 
 Get single inventory item by Inventory ID
 
@@ -187,7 +187,7 @@ Get single inventory item by Inventory ID
 | Inventory ID       | The inventory ID to retrieve          |         |
 | ShipBob Channel ID | Channel Id for Operation              |         |
 
-### Get Logs for Shipment
+### Get Logs for Shipment {#getlogsshipment}
 
 Retrieve logs for a Shipment by Shipment ID
 
@@ -198,7 +198,7 @@ Retrieve logs for a Shipment by Shipment ID
 | Shipment ID        | The shipment ID to retrieve           |         |
 | ShipBob Channel ID | Channel Id for Operation              |         |
 
-### Get Multiple Products
+### Get Multiple Products {#listproduct}
 
 Retrieve a list of several Products
 
@@ -215,7 +215,7 @@ Retrieve a list of several Products
 | Active Status      |                                                                                                        |         |
 | Bundle Status      |                                                                                                        |         |
 
-### Get Order
+### Get Order {#getorder}
 
 Retrieve an order by Order ID
 
@@ -226,7 +226,7 @@ Retrieve an order by Order ID
 | Order ID           | The order ID to retrieve              |         |
 | ShipBob Channel ID | Channel Id for Operation              |         |
 
-### Get Shipment
+### Get Shipment {#getshipment}
 
 Retrieve a Shipment by Shipment ID
 
@@ -237,7 +237,7 @@ Retrieve a Shipment by Shipment ID
 | Shipment ID        | The shipment ID to retrieve           |         |
 | ShipBob Channel ID | Channel Id for Operation              |         |
 
-### Get Single Product
+### Get Single Product {#getproduct}
 
 Retrieve a single product by Product ID
 
@@ -248,7 +248,7 @@ Retrieve a single product by Product ID
 | Product ID         | The product ID to retrieve            |         |
 | ShipBob Channel ID | Channel Id for Operation              |         |
 
-### Get Warehouse Receiving Order Box Labels
+### Get Warehouse Receiving Order Box Labels {#getwarehousereceivingorderboxlabels}
 
 Retrieves Receiving Order Box Labels by Order ID
 
@@ -258,7 +258,7 @@ Retrieves Receiving Order Box Labels by Order ID
 | Version      | The version of the ShipBob API to use | 2.0     |
 | Receiving ID | Id of the receiving order             |         |
 
-### Get Warehouse Receiving Orders
+### Get Warehouse Receiving Orders {#getwarehousereceivingorders}
 
 Receive a Warehouse Receiving Order by ID
 
@@ -268,7 +268,7 @@ Receive a Warehouse Receiving Order by ID
 | Version      | The version of the ShipBob API to use | 2.0     |
 | Receiving ID | Id of the receiving order             |         |
 
-### List Channels
+### List Channels {#listchannels}
 
 List user-authorized channels info
 
@@ -277,7 +277,7 @@ List user-authorized channels info
 | Connection |                                       |         |
 | Version    | The version of the ShipBob API to use | 1.0     |
 
-### List Fulfillment Centers
+### List Fulfillment Centers {#listfulfillmentcenters}
 
 Retrieves a list of Fulfillment Centers
 
@@ -286,7 +286,7 @@ Retrieves a list of Fulfillment Centers
 | Connection |                                       |         |
 | Version    | The version of the ShipBob API to use | 1.0     |
 
-### List Inventory Items
+### List Inventory Items {#listinventoryitems}
 
 Retrieve a list of Inventory Items
 
@@ -304,7 +304,7 @@ Retrieve a list of Inventory Items
 | Search             | Search is available for 2 fields of the inventory record related to the product: Inventory ID and Name                                                                                         |         |
 | Location Type      | LocationType is valid for hub, spoke, or lts. LocationType will default to all locations.                                                                                                      |         |
 
-### List Locations
+### List Locations {#listlocations}
 
 Receives a list of the physical locations across a fulfillment network
 
@@ -316,7 +316,7 @@ Receives a list of the physical locations across a fulfillment network
 | Receiving Enabled | Return all the receiving enabled locations               | false   |
 | Access Granted    | Return all the access granted locations                  | false   |
 
-### List Orders
+### List Orders {#listorders}
 
 Retrieve all Orders
 
@@ -343,7 +343,7 @@ Retrieve all Orders
 | Fulfillment Start Date          | Start date to filter orders with fulfillment date later than the supplied date. Will only return orders that have tracking information |         |
 | Fulfillment End Date            | End date to filter orders fulfillment date later than the supplied date. Will only return orders that have tracking information        |         |
 
-### List Warehouse Receiving Orders
+### List Warehouse Receiving Orders {#listwarehousereceivingorders}
 
 Retrieve all Warehouse Receiving Orders
 
@@ -360,7 +360,7 @@ Retrieve all Warehouse Receiving Orders
 | Fulfillment Center IDs | Comma separated list of WRO fulfillment center IDs to filter by                                                                                         | <code>["000xxx"]</code> |
 | Purchase Order Numbers | Comma separated list of WRO PO numbers to filter by                                                                                                     | <code>["000xxx"]</code> |
 
-### List Webhooks
+### List Webhooks {#listwebhooks}
 
 Get a list of active Webhooks
 
@@ -372,7 +372,7 @@ Get a list of active Webhooks
 | Page       | Page of Webhooks to get                |         |
 | Limit      | Amount of Webhooks per page to request |         |
 
-### Raw Request
+### Raw Request {#rawrequest}
 
 Send raw HTTP request to ShipBob
 
@@ -396,7 +396,7 @@ Send raw HTTP request to ShipBob
 | Max Retry Count         | The maximum number of retries to attempt. Specify 0 for no retries.                                                                                                                              | 0       |
 | Use Exponential Backoff | Specifies whether to use a pre-defined exponential backoff strategy for retries. When enabled, 'Retry Delay (ms)' is ignored.                                                                    | false   |
 
-### Update Product
+### Update Product {#updateproduct}
 
 Update information on a single Product
 

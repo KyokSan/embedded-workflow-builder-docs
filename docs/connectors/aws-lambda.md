@@ -9,7 +9,7 @@ List and invoke AWS Lambda functions
 
 ## Connections
 
-### AWS Lambda Access Key and Secret
+### AWS Lambda Access Key and Secret {#apikeysecret}
 
 Authenticates requests to AWS Lambda using an API Key and Secret.
 
@@ -22,7 +22,7 @@ Read more about AWS Lambda permissions in the [AWS docs](https://docs.aws.amazon
 | Access Key ID     | An AWS IAM Access Key ID     |         |
 | Secret Access Key | An AWS IAM Secret Access Key |         |
 
-### AWS Role ARN
+### AWS Role ARN {#awsassumerole}
 
 Connect to AWS using an assumed role
 
@@ -76,7 +76,7 @@ To create and assign a user a role:
 
 ## Actions
 
-### Invoke
+### Invoke {#invoke}
 
 Invoke an AWS Lambda function
 
@@ -91,7 +91,7 @@ Invoke an AWS Lambda function
 | Invoke Type               | RequestResponse (default) - Invoke the function synchronously. Event - Invoke the function asynchronously. DryRun - Validate parameter values and verify that the user or role has permission to invoke the function. | RequestResponse |
 | Payload                   | The payload to send the lambda function. This can be a JSON string or object that can be serialized into JSON.                                                                                                        |                 |
 
-### List Function
+### List Function {#listfunctions}
 
 List Information and metadata about all AWS Lambda functions
 

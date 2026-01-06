@@ -9,7 +9,7 @@ BigQuery is Google Cloud&#x27;s fully managed, petabyte-scale, and cost-effectiv
 
 ## Connections
 
-### Google Cloud BigQuery OAuth2
+### Google Cloud BigQuery OAuth2 {#oauth2}
 
 Authenticate requests to Google Cloud BigQuery using OAuth2.
 
@@ -66,7 +66,7 @@ Read about how OAuth 2.0 works [here](../oauth2.md).
 | Client ID     | The Google BigQuery app's Client Identifier.                                                               |                                                                                                                                                                                                                                                                                                                                                                         |
 | Client Secret | The Google BigQuery app's Client Secret.                                                                   |                                                                                                                                                                                                                                                                                                                                                                         |
 
-### Google Cloud BigQuery Private Key
+### Google Cloud BigQuery Private Key {#googleserviceaccount}
 
 Authenticate requests to Google Cloud BigQuery using values obtained from the Google Cloud Platform.
 
@@ -77,13 +77,13 @@ Authenticate requests to Google Cloud BigQuery using values obtained from the Go
 
 ## Triggers
 
-### PubSub Notification
+### PubSub Notification {#mytrigger}
 
 PubSub Notification Trigger Settings
 
 ## Actions
 
-### Cancel Job
+### Cancel Job {#canceljob}
 
 Requests that a job be cancelled.
 
@@ -94,7 +94,7 @@ Requests that a job be cancelled.
 | Job ID     | Job ID of the requested job.                                                                                                           |         |
 | Location   | The geographic location where the dataset should reside. See https://cloud.google.com/bigquery/docs/locations for supported locations. |         |
 
-### Create Dataset
+### Create Dataset {#createdataset}
 
 Creates a new empty dataset.
 
@@ -128,7 +128,7 @@ When creating a partitioned table, if defaultPartitionExpirationMs is set, the d
 | Tags | Output only. Tags for the Dataset. | |
 | Storage Billing Model | Optional. Updates storageBillingModel for the dataset. | |
 
-### Create Job
+### Create Job {#createjob}
 
 Starts a new asynchronous job.
 
@@ -146,7 +146,7 @@ Starts a new asynchronous job.
 | Statistics    | Output only. Information about the job, including starting time and ending time of the job.                                                                                                                                                                             |         |
 | Status        | Output only. The status of this job. Examine this value when polling an asynchronous job to see if the job is complete.                                                                                                                                                 |         |
 
-### Create Routine
+### Create Routine {#createroutine}
 
 Creates a new routine in the dataset.
 
@@ -180,7 +180,7 @@ are replaced with linebreaks. | |
 | Remote Function Options | Optional. Remote function specific options. | |
 | Spark Options | Optional. Spark specific options. | |
 
-### Create Table
+### Create Table {#createtable}
 
 Creates a new, empty table in the dataset.
 
@@ -208,7 +208,7 @@ Creates a new, empty table in the dataset.
 | Dataset ID                  | Dataset ID of the table to update.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |         |
 | Project ID                  | Project ID of the table to update.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |         |
 
-### Delete Dataset
+### Delete Dataset {#deletedataset}
 
 Deletes the dataset specified by the datasetId value. Before you can delete a dataset, you must delete all its tables, either manually or by specifying deleteContents. Immediately after deletion, you can create another dataset with the same name.
 
@@ -218,7 +218,7 @@ Deletes the dataset specified by the datasetId value. Before you can delete a da
 | Project ID | Project ID of the datasets to be listed |         |
 | Dataset ID | Dataset ID of the requested dataset     |         |
 
-### Delete Job
+### Delete Job {#deletejob}
 
 Requests the deletion of the metadata of a job.
 
@@ -229,7 +229,7 @@ Requests the deletion of the metadata of a job.
 | Job ID     | Job ID of the requested job.                                                                                                           |         |
 | Location   | The geographic location where the dataset should reside. See https://cloud.google.com/bigquery/docs/locations for supported locations. |         |
 
-### Delete Model
+### Delete Model {#deletemodel}
 
 Deletes the model specified by model ID from the dataset.
 
@@ -240,7 +240,7 @@ Deletes the model specified by model ID from the dataset.
 | Dataset ID | Dataset ID of the requested dataset     |         |
 | Model ID   | Model ID of the requested model.        |         |
 
-### Delete Routine
+### Delete Routine {#deleteroutine}
 
 Deletes the routine specified by routine ID from the dataset.
 
@@ -251,7 +251,7 @@ Deletes the routine specified by routine ID from the dataset.
 | Project ID | Project ID of the datasets to be listed |         |
 | Routine ID | Routine ID of the requested routine.    |         |
 
-### Delete Table
+### Delete Table {#deletetable}
 
 Deletes the table specified by table ID from the dataset.
 
@@ -262,7 +262,7 @@ Deletes the table specified by table ID from the dataset.
 | Project ID | Project ID of the table to delete. |         |
 | Table ID   | Table ID of the table to delete.   |         |
 
-### Get Dataset
+### Get Dataset {#getdataset}
 
 Returns the dataset specified by datasetID.
 
@@ -272,7 +272,7 @@ Returns the dataset specified by datasetID.
 | Project ID | Project ID of the datasets to be listed |         |
 | Dataset ID | Dataset ID of the requested dataset     |         |
 
-### Get Job
+### Get Job {#getjob}
 
 Returns information about a specific job.
 
@@ -283,7 +283,7 @@ Returns information about a specific job.
 | Job ID     | Job ID of the requested job.                                                                                                           |         |
 | Location   | The geographic location where the dataset should reside. See https://cloud.google.com/bigquery/docs/locations for supported locations. |         |
 
-### Get Model
+### Get Model {#getmodel}
 
 Gets the specified model resource by model ID.
 
@@ -294,7 +294,7 @@ Gets the specified model resource by model ID.
 | Dataset ID | Dataset ID of the requested dataset     |         |
 | Model ID   | Model ID of the requested model.        |         |
 
-### Get Policy
+### Get Policy {#getpolicy}
 
 Gets the access control policy for a resource.
 
@@ -304,7 +304,7 @@ Gets the access control policy for a resource.
 | Table ID   | The resource for which the policy is being requested. See [Resource names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for this field. |         |
 | Options    | OPTIONAL: A GetPolicyOptions object for specifying options to tables.getIamPolicy.                                                                                        |         |
 
-### Get Query Job Results
+### Get Query Job Results {#getqueryjobresult}
 
 Receives the results of a query job.
 
@@ -319,7 +319,7 @@ Receives the results of a query job.
 | Timeout (ms) | Optional. Optional: Specifies the maximum amount of time, in milliseconds, that the client is willing to wait for the query to complete. By default, this limit is 10 seconds (10,000 milliseconds). If the query is complete, the jobComplete field in the response is true. If the query has not yet completed, jobComplete is false. You can request a longer timeout period in the timeoutMs field. However, the call is not guaranteed to wait for the specified timeout; it typically returns after around 200 seconds (200,000 milliseconds), even if the query is not complete. If jobComplete is false, you can continue to wait for the query to complete by calling the getQueryResults method until the jobComplete field in the getQueryResults response is true. |         |
 | Location     | The geographic location where the dataset should reside. See https://cloud.google.com/bigquery/docs/locations for supported locations.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |         |
 
-### Get Routine
+### Get Routine {#getroutine}
 
 Gets the specified routine resource by routine ID.
 
@@ -331,7 +331,7 @@ Gets the specified routine resource by routine ID.
 | Read Mask  | If set, only the Routine fields in the field mask are returned in the response. If unset, all Routine fields are returned. This is a comma-separated list of fully qualified names of fields. Example: 'user.displayName,photo'. |         |
 | Routine ID | Routine ID of the requested routine.                                                                                                                                                                                             |         |
 
-### Get Service Account
+### Get Service Account {#getserviceaccount}
 
 Receives the service account for a project used for interactions with Google Cloud KMS
 
@@ -340,7 +340,7 @@ Receives the service account for a project used for interactions with Google Clo
 | Connection |                                         |         |
 | Project ID | Project ID of the datasets to be listed |         |
 
-### Get Table
+### Get Table {#gettable}
 
 Gets the specified table resource by table ID.
 
@@ -353,7 +353,7 @@ Gets the specified table resource by table ID.
 | Selected Fields | tabledata.list of table schema fields to return (comma-separated). If unspecified, all fields are returned. A fieldMask cannot be used here because the fields will automatically be converted from camelCase to snake_case and the conversion will fail if there are underscores. Since these are fields in BigQuery table schemas, underscores are allowed. |         |
 | View            | Optional. Specifies the view that determines which table information is returned. By default, basic table information and storage statistics (STORAGE_STATS) are returned. One of TABLE_METADATA_VIEW_UNSPECIFIED / BASIC / STORAGE_STATS / FULL                                                                                                              |         |
 
-### List Datasets
+### List Datasets {#listdatasets}
 
 Lists all datasets in the specified project to which the user has been granted the READER dataset role.
 
@@ -366,7 +366,7 @@ Lists all datasets in the specified project to which the user has been granted t
 | Filter      | An expression for filtering the results of the request by label. The syntax is 'labels.<name>[:<value>]'. Multiple filters can be ANDed together by connecting with a space. Example: 'labels.department:receiving labels.active'. See [Filtering datasets](https://cloud.google.com/bigquery/docs/labeling-datasets#filtering_datasets_using_labels) using labels for details. |         |
 | Max Results | The maximum number of results to return in a single response page. Leverage the page tokens to iterate through the entire collection.                                                                                                                                                                                                                                           |         |
 
-### List Jobs
+### List Jobs {#listjobs}
 
 Lists all jobs that you started in the specified project.
 
@@ -383,7 +383,7 @@ Lists all jobs that you started in the specified project.
 | State Filter      | Filter for job state, Valid values of this enum field are: DONE, PENDING, RUNNING                                                          | <code>["000xxx"]</code> |
 | Parent Job ID     | If set, show only child jobs of the specified parent. Otherwise, show all top-level jobs.                                                  |                         |
 
-### List Models
+### List Models {#listmodels}
 
 Lists all models in the specified dataset. Requires the READER dataset role. After retrieving the list of models, you can get information about a particular model by calling the models.get method.
 
@@ -395,7 +395,7 @@ Lists all models in the specified dataset. Requires the READER dataset role. Aft
 | Page Token  | Page token, returned by a previous call, to request the next page of results                                                          |         |
 | Max Results | The maximum number of results to return in a single response page. Leverage the page tokens to iterate through the entire collection. |         |
 
-### List Projects
+### List Projects {#listprojects}
 
 Lists projects to which the user has been granted any project role.
 
@@ -405,7 +405,7 @@ Lists projects to which the user has been granted any project role.
 | Page Token  | Page token, returned by a previous call, to request the next page of results                                                          |         |
 | Max Results | The maximum number of results to return in a single response page. Leverage the page tokens to iterate through the entire collection. |         |
 
-### List Routines
+### List Routines {#listroutines}
 
 Lists all routines in the specified dataset.
 
@@ -419,7 +419,7 @@ Lists all routines in the specified dataset.
 | Max Results | The maximum number of results to return in a single response page. Leverage the page tokens to iterate through the entire collection.                                                                                                                                                                                                                                           |         |
 | Read Mask   | If set, only the Routine fields in the field mask are returned in the response. If unset, all Routine fields are returned. This is a comma-separated list of fully qualified names of fields. Example: 'user.displayName,photo'.                                                                                                                                                |         |
 
-### List Table Data
+### List Table Data {#listtabledata}
 
 Lists the content of a table in rows.
 
@@ -434,7 +434,7 @@ Lists the content of a table in rows.
 | Page Token      | Page token, returned by a previous call, to request the next page of results                                                          |         |
 | Selected Fields | Subset of fields to return, supports select into sub fields. Example: selectedFields = 'a,e.d.f';                                     |         |
 
-### List Tables
+### List Tables {#listtables}
 
 Lists all tables in the specified dataset.
 
@@ -446,7 +446,7 @@ Lists all tables in the specified dataset.
 | Max Results | The maximum number of results to return in a single response page. Leverage the page tokens to iterate through the entire collection. |         |
 | Page Token  | Page token, returned by a previous call, to request the next page of results                                                          |         |
 
-### Patch Table
+### Patch Table {#patchtable}
 
 Patch information in an existing table.
 
@@ -475,7 +475,7 @@ Patch information in an existing table.
 | Default Rounding Mode       | Optional. Defines the default rounding mode specification of new tables created within this dataset. During table creation, if this field is specified, the table within this dataset will inherit the default rounding mode of the dataset. Setting the default rounding mode on a table overrides this option. Existing tables in the dataset are unaffected. If columns are defined during that table creation, they will immediately inherit the table's default rounding mode, unless otherwise specified.                                                         |         |
 | Max Staleness               | Optional. Defines the default collation specification of future tables created in the dataset. If a table is created in this dataset without table-level default collation, then the table inherits the dataset default collation, which is applied to the string fields that do not have explicit collation specified. A change to this field affects only tables created afterwards, and does not alter the existing tables. The following values are supported: 'und:ci': undetermined locale, case insensitive.'' empty string. Default to case-sensitive behavior. |         |
 
-### Query Job
+### Query Job {#queryjob}
 
 Runs a BigQuery SQL query synchronously and returns query results if the query completes within a specified timeout.
 
@@ -500,7 +500,7 @@ Runs a BigQuery SQL query synchronously and returns query results if the query c
 | Request ID            | Optional. A unique user provided identifier to ensure idempotent behavior for queries. Note that this is different from the jobId. It has the following properties: It is case-sensitive, limited to up to 36 ASCII characters. A UUID is recommended. Read only queries can ignore this token since they are nullipotent by definition. For the purposes of idempotency ensured by the requestId, a request is considered duplicate of another only if they have the same requestId and are actually duplicates. When determining whether a request is a duplicate of another request, all parameters in the request that may affect the result are considered. For example, query, connectionProperties, queryParameters, useLegacySql are parameters that affect the result and are considered when determining whether a request is a duplicate, but properties like timeoutMs don't affect the result and are thus not considered. Dry run query requests are never considered duplicate of another request. When a duplicate mutating query request is detected, it returns: a. the results of the mutation if it completes successfully within the timeout. b. the running operation if it is still in progress at the end of the timeout. Its lifetime is limited to 15 minutes. In other words, if two requests are sent with the same requestId, but more than 15 minutes apart, idempotency is not guaranteed. |         |
 | Create Session        | Optional. If true, creates a new session using a randomly generated sessionId. If false, runs query with an existing sessionId passed in ConnectionProperty, otherwise runs query in non-session mode. The session location will be set to QueryRequest.location if it is present, otherwise it's set to the default location based on existing routing logic.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            | false   |
 
-### Raw Request
+### Raw Request {#rawrequest}
 
 Send raw HTTP request to Google Cloud BigQuery
 
@@ -524,7 +524,7 @@ Send raw HTTP request to Google Cloud BigQuery
 | Max Retry Count         | The maximum number of retries to attempt. Specify 0 for no retries.                                                                                                                                                                                                                                  | 0       |
 | Use Exponential Backoff | Specifies whether to use a pre-defined exponential backoff strategy for retries. When enabled, 'Retry Delay (ms)' is ignored.                                                                                                                                                                        | false   |
 
-### Set Policy
+### Set Policy {#setpolicy}
 
 Sets the access control policy on the specified resource.
 
@@ -536,7 +536,7 @@ Sets the access control policy on the specified resource.
 | Update Mask                                                                                           | OPTIONAL: A FieldMask specifying which fields of the policy to modify. Only the fields in the mask will be modified. If no mask is provided, the following default mask is used: paths: 'bindings, etag'           |
 | This is a comma-separated list of fully qualified names of fields. Example: 'user.displayName,photo'. |                                                                                                                                                                                                                    |
 
-### Table Data Insert All
+### Table Data Insert All {#tabledatainsertall}
 
 Streams data into BigQuery one record at a time without needing to run a load job.
 
@@ -553,7 +553,7 @@ Streams data into BigQuery one record at a time without needing to run a load jo
 | See https://cloud.google.com/bigquery/streaming-data-into-bigquery#template-tables for considerations when working with templates tables. |                                                                                                                                                                                                                                                               |
 | Rows                                                                                                                                      | The complete policy to be applied to the resource. The size of the policy is limited to a few 10s of KB. An empty policy is a valid policy but certain Google Cloud services (such as Projects) might reject them.                                            |         |
 
-### Update Dataset
+### Update Dataset {#updatedataset}
 
 Updates information in an existing dataset. The update method replaces the entire dataset resource, whereas the patch method only replaces fields that are provided in the submitted dataset resource.
 
@@ -588,7 +588,7 @@ When creating a partitioned table, if defaultPartitionExpirationMs is set, the d
 | Tags | Output only. Tags for the Dataset. | |
 | Storage Billing Model | Optional. Updates storageBillingModel for the dataset. | |
 
-### Update Model
+### Update Model {#updatemodel}
 
 Patch specific fields in the specified model.
 
@@ -617,7 +617,7 @@ Patch specific fields in the specified model.
 | Hparam Trials            | Output only. Trials of a hyperparameter tuning model sorted by trialId.                                                                                                                                                                                                                                                               |                         |
 | Optimal Trial IDs        | Output only. For single-objective hyperparameter tuning models, it only contains the best trial. For multi-objective hyperparameter tuning models, it contains all Pareto optimal trials sorted by trialId.                                                                                                                           | <code>["000xxx"]</code> |
 
-### Update Routine
+### Update Routine {#updateroutine}
 
 Updates information in an existing routine.
 
@@ -651,7 +651,7 @@ are replaced with linebreaks. | |
 | Remote Function Options | Optional. Remote function specific options. | |
 | Spark Options | Optional. Spark specific options. | |
 
-### Update Table
+### Update Table {#updatetable}
 
 Updates information in an existing table.
 

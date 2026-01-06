@@ -9,7 +9,7 @@ ServiceTitan is a comprehensive field service management solution that helps bus
 
 ## Connections
 
-### OAuth 2.0
+### OAuth 2.0 {#servicetitanconnection}
 
 Connect to Service Titan using OAuth 2.0
 
@@ -56,7 +56,7 @@ Read about how OAuth 2.0 works [here](../oauth2.md).
 
 ## Actions
 
-### Assign Technician to Appointment
+### Assign Technician to Appointment {#assigntechnicians}
 
 Assigns the list of technicians to the appointment
 
@@ -67,7 +67,7 @@ Assigns the list of technicians to the appointment
 | Technician IDs     | Assign these technicians to the appointment.         |         |
 | Debug Request      | Enabling this flag will log out the current request. | false   |
 
-### Cancel Job
+### Cancel Job {#canceljob}
 
 Cancels a Job
 
@@ -79,7 +79,7 @@ Cancels a Job
 | Job Memo      | Memo of job cancel reason                            |         |
 | Debug Request | Enabling this flag will log out the current request. | false   |
 
-### Create Appointment
+### Create Appointment {#createappointment}
 
 Adds a new appointment to an existing job
 
@@ -95,7 +95,7 @@ Adds a new appointment to an existing job
 | Special Instructions | Special instructions associated to the appointment   |         |
 | Debug Request        | Enabling this flag will log out the current request. | false   |
 
-### Create Booking by Provider
+### Create Booking by Provider {#createbookingbyprovider}
 
 Create a booking
 
@@ -120,7 +120,7 @@ Create a booking
 | Send Confirmation Email | True if first time client                            |                                                                                                                                                                           |
 | Debug Request           | Enabling this flag will log out the current request. | false                                                                                                                                                                     |
 
-### Create Customer
+### Create Customer {#createcustomer}
 
 Create a New Customer
 
@@ -139,7 +139,7 @@ Create a New Customer
 | External Data  | External data to attach to the request.              | <code>{<br /> "applicationGuid": "string",<br /> "externalData": [<br /> {<br /> "key": "string",<br /> "value": "string"<br /> }<br /> ]<br />}</code>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | Debug Request  | Enabling this flag will log out the current request. | false                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 
-### Create Customer Contact
+### Create Customer Contact {#createcustomercontact}
 
 Create a contact for a customer
 
@@ -152,7 +152,7 @@ Create a contact for a customer
 | Memo                        | Short description about this contact, for example, “work #” or “Owner’s daughter - Kelly” |         |
 | Debug Request               | Enabling this flag will log out the current request.                                      | false   |
 
-### Create Installed Equipment
+### Create Installed Equipment {#createinstalledequipment}
 
 Create a new Installed equipment
 
@@ -176,7 +176,7 @@ Create a new Installed equipment
 | Tag Type IDs                    | A list of tags ID's                                  |                                                                                                                                    |
 | Debug Request                   | Enabling this flag will log out the current request. | false                                                                                                                              |
 
-### Create Installed Equipment Attachment
+### Create Installed Equipment Attachment {#createinstalledequipmentattachment}
 
 Create a new installed equipment attachment
 
@@ -187,7 +187,7 @@ Create a new installed equipment attachment
 | File Name       | Name of the file                                           |         |
 | Debug Request   | Enabling this flag will log out the current request.       | false   |
 
-### Create Invoices
+### Create Invoices {#createinvoices}
 
 Create adjustment invoice
 
@@ -211,7 +211,7 @@ Create adjustment invoice
 | Items            | The items of the invoice.                            | <code>[<br /> {<br /> "skuId": 0,<br /> "skuName": "string",<br /> "technicianId": 0,<br /> "description": "string",<br /> "quantity": 0,<br /> "unitPrice": 0,<br /> "cost": 0,<br /> "isAddOn": true,<br /> "signature": "string",<br /> "technicianAcknowledgementSignature": "string",<br /> "installedOn": "string",<br /> "inventoryWarehouseName": "string",<br /> "skipUpdatingMembershipPrices": true,<br /> "itemGroupName": "string",<br /> "itemGroupRootId": 0,<br /> "inventoryLocationId": 0,<br /> "durationBillingId": 0,<br /> "id": 0<br /> }<br />]</code> |
 | Debug Request    | Enabling this flag will log out the current request. | false                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 
-### Create Job
+### Create Job {#createjob}
 
 Create a job
 
@@ -235,7 +235,7 @@ Create a job
 | Customer PO                   | Customer PO                                                                                                                               |                                                                                                                                                                                                          |
 | Debug Request                 | Enabling this flag will log out the current request.                                                                                      | false                                                                                                                                                                                                    |
 
-### Create Location
+### Create Location {#createlocation}
 
 Creates a new location
 
@@ -251,7 +251,7 @@ Creates a new location
 | External Data | External data to attach to the request.              | <code>{<br /> "applicationGuid": "string",<br /> "externalData": [<br /> {<br /> "key": "string",<br /> "value": "string"<br /> }<br /> ]<br />}</code>                   |
 | Debug Request | Enabling this flag will log out the current request. | false                                                                                                                                                                     |
 
-### Create Payment
+### Create Payment {#createpayment}
 
 Create a payment in Service Titan
 
@@ -268,7 +268,7 @@ Create a payment in Service Titan
 | Status        | The status of the payment.                           |                                                                               |
 | Debug Request | Enabling this flag will log out the current request. | false                                                                         |
 
-### Create Project
+### Create Project {#createproject}
 
 Create a new project
 
@@ -289,7 +289,7 @@ Create a new project
 | External Data          | Optional model that contains a list of external data items that should be attached to this project. | <code>{<br /> "applicationGuid": "string",<br /> "externalData": [<br /> {<br /> "key": "string",<br /> "value": "string"<br /> }<br /> ]<br />}</code> |
 | Debug Request          | Enabling this flag will log out the current request.                                                | false                                                                                                                                                   |
 
-### Create Technician
+### Create Technician {#createtechnician}
 
 Create new technician
 
@@ -318,7 +318,7 @@ Create new technician
 | Custom Fields                  | Custom fields for the technician                                     | <code>[<br /> {<br /> "typeId": 0,<br /> "value": "string"<br /> }<br />]</code>                                                                                          |
 | Debug Request                  | Enabling this flag will log out the current request.                 | false                                                                                                                                                                     |
 
-### Delete Appointment
+### Delete Appointment {#deleteappointment}
 
 Delete appointment by ID
 
@@ -328,7 +328,7 @@ Delete appointment by ID
 | Appointment ID | The ID of the appointment.                           |         |
 | Debug Request  | Enabling this flag will log out the current request. | false   |
 
-### Delete Customer Contact
+### Delete Customer Contact {#deletcustomerscontact}
 
 Removes a contact from a customer
 
@@ -339,7 +339,7 @@ Removes a contact from a customer
 | Customer Contact ID | The customer contact ID.                             |         |
 | Debug Request       | Enabling this flag will log out the current request. | false   |
 
-### Delete Invoice Item
+### Delete Invoice Item {#deleteinvoiceitem}
 
 Delete an invoice item
 
@@ -350,7 +350,7 @@ Delete an invoice item
 | Item ID       | The ID of the item.                                  |         |
 | Debug Request | Enabling this flag will log out the current request. | false   |
 
-### Get Appointment
+### Get Appointment {#getappointment}
 
 Retrieve an appointment by ID
 
@@ -360,7 +360,7 @@ Retrieve an appointment by ID
 | Appointment ID | The ID of the appointment.                           |         |
 | Debug Request  | Enabling this flag will log out the current request. | false   |
 
-### Get Booking by Provider
+### Get Booking by Provider {#getbookingbyprovider}
 
 Retrieve a booking by ID
 
@@ -371,7 +371,7 @@ Retrieve a booking by ID
 | Booking ID       | The ID of the booking.                               |         |
 | Debug Request    | Enabling this flag will log out the current request. | false   |
 
-### Get Booking by Tenant
+### Get Booking by Tenant {#getbookingbytenant}
 
 Retrieve a booking by ID
 
@@ -381,7 +381,7 @@ Retrieve a booking by ID
 | Booking ID    | The ID of the booking.                               |         |
 | Debug Request | Enabling this flag will log out the current request. | false   |
 
-### Get Customer
+### Get Customer {#getcustomer}
 
 Retrieve a Customer by ID
 
@@ -391,7 +391,7 @@ Retrieve a Customer by ID
 | Customer ID   | The customer ID.                                     |         |
 | Debug Request | Enabling this flag will log out the current request. | false   |
 
-### Get Installed Equipment
+### Get Installed Equipment {#getinstalledequipment}
 
 Retrieve a Installed Equipment by ID
 
@@ -401,7 +401,7 @@ Retrieve a Installed Equipment by ID
 | Installed Equipment ID | ID of the installed equipment                        |         |
 | Debug Request          | Enabling this flag will log out the current request. | false   |
 
-### Get Job
+### Get Job {#getjob}
 
 Retrieve a job by ID
 
@@ -412,7 +412,7 @@ Retrieve a job by ID
 | External Data Application Guid | Format - guid. If this guid is provided, external data corresponding to this application guid will be returned. |         |
 | Debug Request                  | Enabling this flag will log out the current request.                                                            | false   |
 
-### Get Location
+### Get Location {#getlocation}
 
 Retrieve a location by ID
 
@@ -422,7 +422,7 @@ Retrieve a location by ID
 | Location ID   | The ID of the location to retrieve                   |         |
 | Debug Request | Enabling this flag will log out the current request. | false   |
 
-### Get Project
+### Get Project {#getproject}
 
 Retrieve a project by ID
 
@@ -432,7 +432,7 @@ Retrieve a project by ID
 | Project ID    | The ID of the project to retrieve                    |         |
 | Debug Request | Enabling this flag will log out the current request. | false   |
 
-### Get Technician
+### Get Technician {#gettechnician}
 
 Retrieve a Technician by ID
 
@@ -442,7 +442,7 @@ Retrieve a Technician by ID
 | Technician ID | The ID of the Technician to retrieve                 |         |
 | Debug Request | Enabling this flag will log out the current request. | false   |
 
-### List Appointment Assignment
+### List Appointment Assignment {#listappointmentsassignment}
 
 Retrieve a list of appointment assignments
 
@@ -457,7 +457,7 @@ Retrieve a list of appointment assignments
 | Custom Query Params | Custom fields filter                                                                                                   |         |
 | Debug Request       | Enabling this flag will log out the current request.                                                                   | false   |
 
-### List Appointments
+### List Appointments {#listappointments}
 
 Retrieve a list of appointments
 
@@ -472,7 +472,7 @@ Retrieve a list of appointments
 | Custom Query Params | Custom fields filter                                                                                                   |         |
 | Debug Request       | Enabling this flag will log out the current request.                                                                   | false   |
 
-### List Bookings by Provider
+### List Bookings by Provider {#listbookingbyprovider}
 
 Retrieves a list of bookings
 
@@ -488,7 +488,7 @@ Retrieves a list of bookings
 | Custom Query Params | Custom fields filter                                                                                                   |         |
 | Debug Request       | Enabling this flag will log out the current request.                                                                   | false   |
 
-### List Bookings by Tenant
+### List Bookings by Tenant {#listbookingbytenant}
 
 Retrieves a list of bookings
 
@@ -503,7 +503,7 @@ Retrieves a list of bookings
 | Custom Query Params | Custom fields filter                                                                                                   |         |
 | Debug Request       | Enabling this flag will log out the current request.                                                                   | false   |
 
-### List Business Units
+### List Business Units {#listbusinessunits}
 
 Gets a list of business units
 
@@ -518,7 +518,7 @@ Gets a list of business units
 | Custom Query Params | Custom fields filter                                                                                                   |         |
 | Debug Request       | Enabling this flag will log out the current request.                                                                   | false   |
 
-### List Customer Contacts
+### List Customer Contacts {#listcustomerscontact}
 
 Gets a list of contacts for the specified customer
 
@@ -534,7 +534,7 @@ Gets a list of contacts for the specified customer
 | Modified On Or After | Return items modified on or after certain date/time (in UTC)                    |         |
 | Debug Request        | Enabling this flag will log out the current request.                            | false   |
 
-### List Customers
+### List Customers {#listcustomers}
 
 Retrieve a list of Customers
 
@@ -549,7 +549,7 @@ Retrieve a list of Customers
 | Custom Query Params | Custom fields filter                                                                                                   |         |
 | Debug Request       | Enabling this flag will log out the current request.                                                                   | false   |
 
-### List Installed Equipment
+### List Installed Equipment {#listinstalledequipment}
 
 Retrieve a list of installed equipment
 
@@ -564,7 +564,7 @@ Retrieve a list of installed equipment
 | Custom Query Params | Custom fields filter                                                                                                   |         |
 | Debug Request       | Enabling this flag will log out the current request.                                                                   | false   |
 
-### List Installed Equipment Attachments
+### List Installed Equipment Attachments {#listinstalledequipmentattachments}
 
 Retrieve installed Equipment attachments
 
@@ -574,7 +574,7 @@ Retrieve installed Equipment attachments
 | Path          | Installed equipment attachment path                  |         |
 | Debug Request | Enabling this flag will log out the current request. | false   |
 
-### List Invoices
+### List Invoices {#listinvoices}
 
 Retrieves a list of invoices
 
@@ -589,7 +589,7 @@ Retrieves a list of invoices
 | Custom Query Params | Custom fields filter                                                                                                   |         |
 | Debug Request       | Enabling this flag will log out the current request.                                                                   | false   |
 
-### List Job Cancel Reasons
+### List Job Cancel Reasons {#listjobcancelreasons}
 
 Retrieve a list of job cancel reasons
 
@@ -604,7 +604,7 @@ Retrieve a list of job cancel reasons
 | Custom Query Params | Custom fields filter                                                                                                   |         |
 | Debug Request       | Enabling this flag will log out the current request.                                                                   | false   |
 
-### List Jobs
+### List Jobs {#listjobs}
 
 Retrieve a list of jobs
 
@@ -619,7 +619,7 @@ Retrieve a list of jobs
 | Custom Query Params | Custom fields filter                                                                                                   |         |
 | Debug Request       | Enabling this flag will log out the current request.                                                                   | false   |
 
-### List Locations
+### List Locations {#listlocations}
 
 Retrieve a list of Locations
 
@@ -634,7 +634,7 @@ Retrieve a list of Locations
 | Custom Query Params | Custom fields filter                                                                                                   |         |
 | Debug Request       | Enabling this flag will log out the current request.                                                                   | false   |
 
-### List Payments
+### List Payments {#listpayments}
 
 Retrieve a list of payments
 
@@ -649,7 +649,7 @@ Retrieve a list of payments
 | Custom Query Params | Custom fields filter                                                                                                   |         |
 | Debug Request       | Enabling this flag will log out the current request.                                                                   | false   |
 
-### List Projects
+### List Projects {#listprojects}
 
 Retrieve a list of Projects
 
@@ -664,7 +664,7 @@ Retrieve a list of Projects
 | Custom Query Params | Custom fields filter                                                                                                   |         |
 | Debug Request       | Enabling this flag will log out the current request.                                                                   | false   |
 
-### List Technicians
+### List Technicians {#listtechnicians}
 
 Retrieve a list of technicians
 
@@ -679,7 +679,7 @@ Retrieve a list of technicians
 | Custom Query Params | Custom fields filter                                                                                                   |         |
 | Debug Request       | Enabling this flag will log out the current request.                                                                   | false   |
 
-### List User Roles
+### List User Roles {#listuserroles}
 
 Gets a list of user roles
 
@@ -694,7 +694,7 @@ Gets a list of user roles
 | Custom Query Params | Custom fields filter                                                                                                   |         |
 | Debug Request       | Enabling this flag will log out the current request.                                                                   | false   |
 
-### Raw Request
+### Raw Request {#rawrequest}
 
 Send raw HTTP request to ServiceDesk Plus
 
@@ -718,7 +718,7 @@ Send raw HTTP request to ServiceDesk Plus
 | Max Retry Count         | The maximum number of retries to attempt. Specify 0 for no retries.                                                                                                                                                                                  | 0       |
 | Use Exponential Backoff | Specifies whether to use a pre-defined exponential backoff strategy for retries. When enabled, 'Retry Delay (ms)' is ignored.                                                                                                                        | false   |
 
-### Unassign Technician to Appointment
+### Unassign Technician to Appointment {#unassigntechnicians}
 
 Un-assigns the list of technicians from the appointment
 
@@ -729,7 +729,7 @@ Un-assigns the list of technicians from the appointment
 | Technician IDs     | Unassign these technicians to the appointment.       |         |
 | Debug Request      | Enabling this flag will log out the current request. | false   |
 
-### Update Booking
+### Update Booking {#updatebooking}
 
 Update a booking
 
@@ -753,7 +753,7 @@ Update a booking
 | Uploaded Images      | Uploaded images                                      |                                                                                                                                                                           |
 | Debug Request        | Enabling this flag will log out the current request. | false                                                                                                                                                                     |
 
-### Update Customer
+### Update Customer {#updatecustomer}
 
 Update a customer
 
@@ -772,7 +772,7 @@ Update a customer
 | Tag Type IDs   | A list of tags ID's                                  |                                                                                                                                                                           |
 | Debug Request  | Enabling this flag will log out the current request. | false                                                                                                                                                                     |
 
-### Update Customer Contact
+### Update Customer Contact {#updatecustomercontact}
 
 Updates a contact on the customers
 
@@ -786,7 +786,7 @@ Updates a contact on the customers
 | Memo                        | Short description about this contact, for example, “work #” or “Owner’s daughter - Kelly” |         |
 | Debug Request               | Enabling this flag will log out the current request.                                      | false   |
 
-### Update Installed Equipment
+### Update Installed Equipment {#updateinstalledequipment}
 
 Update installed equipment by ID
 
@@ -810,7 +810,7 @@ Update installed equipment by ID
 | Tag Type IDs                    | A list of tags ID's                                  |                                                                                                                                    |
 | Debug Request                   | Enabling this flag will log out the current request. | false                                                                                                                              |
 
-### Update Invoice
+### Update Invoice {#updateinvoice}
 
 Update Invoice
 
@@ -835,7 +835,7 @@ Update Invoice
 | Payments        | The payments of the invoice.                         | <code>[<br /> {<br /> "id": 0,<br /> "settlementStatus": {},<br /> "settlementDate": "string"<br /> }<br />]</code>                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 | Debug Request   | Enabling this flag will log out the current request. | false                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 
-### Update Invoice Custom Fields
+### Update Invoice Custom Fields {#updateinvoicecustomfields}
 
 Update custom fields for specified Invoices
 
@@ -845,7 +845,7 @@ Update custom fields for specified Invoices
 | Debug Request | Enabling this flag will log out the current request. | false                                                                                                                                                      |
 | Operations    | The operations to perform on the invoice.            | <code>[<br /> {<br /> "objectId": 0,<br /> "customFields": [<br /> {<br /> "name": "string",<br /> "value": "string"<br /> }<br /> ]<br /> }<br />]</code> |
 
-### Update Invoice Items
+### Update Invoice Items {#updateinvoiceitems}
 
 Update invoice items
 
@@ -873,7 +873,7 @@ Update invoice items
 | ID                                   | The ID.                                              |         |
 | Debug Request                        | Enabling this flag will log out the current request. | false   |
 
-### Update Job
+### Update Job {#updatejob}
 
 Update a job
 
@@ -896,7 +896,7 @@ Update a job
 | Customer PO                 | Customer PO                                                                                                                  |                                                                                                                                                         |
 | Debug Request               | Enabling this flag will log out the current request.                                                                         | false                                                                                                                                                   |
 
-### Update Location
+### Update Location {#updatelocation}
 
 Update a location
 
@@ -914,7 +914,7 @@ Update a location
 | External Data | External data to attach to the request.              | <code>{<br /> "applicationGuid": "string",<br /> "externalData": [<br /> {<br /> "key": "string",<br /> "value": "string"<br /> }<br /> ]<br />}</code>                   |
 | Debug Request | Enabling this flag will log out the current request. | false                                                                                                                                                                     |
 
-### Update Payment
+### Update Payment {#updatepayment}
 
 Update a specified payment
 
@@ -932,7 +932,7 @@ Update a specified payment
 | Status        | The status of the payment.                           |                                                                               |
 | Debug Request | Enabling this flag will log out the current request. | false                                                                         |
 
-### Update Payment Custom Fields
+### Update Payment Custom Fields {#updatepaymentcustomfields}
 
 Update custom fields for specified payments
 
@@ -942,7 +942,7 @@ Update custom fields for specified payments
 | Debug Request | Enabling this flag will log out the current request. | false                                                                                                                                                      |
 | Operations    | The operations to perform on the payment.            | <code>[<br /> {<br /> "objectId": 0,<br /> "customFields": [<br /> {<br /> "name": "string",<br /> "value": "string"<br /> }<br /> ]<br /> }<br />]</code> |
 
-### Update Project
+### Update Project {#updateproject}
 
 Update a project
 
@@ -963,7 +963,7 @@ Update a project
 | External Data          | Optional model that contains a list of external data items that should be attached to this project. | <code>{<br /> "applicationGuid": "string",<br /> "externalData": [<br /> {<br /> "key": "string",<br /> "value": "string"<br /> }<br /> ]<br />}</code> |
 | Debug Request          | Enabling this flag will log out the current request.                                                | false                                                                                                                                                   |
 
-### Update Technician
+### Update Technician {#updatetechnician}
 
 Update a technician
 

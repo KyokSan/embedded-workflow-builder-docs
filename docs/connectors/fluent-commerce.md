@@ -9,7 +9,7 @@ Manage orders within Fluent Commerce
 
 ## Connections
 
-### Fluent Commerce OAuth 2.0 Password Grant
+### Fluent Commerce OAuth 2.0 Password Grant {#fluent-password-grant}
 
 Authenticate requests to Fluent Commerce using a username and password
 
@@ -26,7 +26,7 @@ To authenticate with Fluent, you will need a **Client ID** and **Client Secret**
 
 ## Actions
 
-### Create Customer
+### Create Customer {#createcustomer}
 
 Create a new customer
 
@@ -43,7 +43,7 @@ Create a new customer
 | Promotion Opt In |                                                           | false   |
 | Attributes       | Custom attributes you would like to apply to the customer |         |
 
-### Create Product
+### Create Product {#createproduct}
 
 Create a new standard product
 
@@ -59,7 +59,7 @@ Create a new standard product
 | Price Currency                  | Type of currency the price is in (USD, YEN, GBP, etc)      |          |
 | Price Value                     | The price of the product (must be a floating-point number) |          |
 
-### Generic GraphQL Request
+### Generic GraphQL Request {#genericrequest}
 
 Issue any GraphQL query or mutation with variables
 
@@ -70,7 +70,7 @@ Issue any GraphQL query or mutation with variables
 | Variables         |                                             |                                                                                     |
 | Variables Object  |                                             |                                                                                     |
 
-### Get Current User
+### Get Current User {#getcurrentuser}
 
 Get information about the currently authenticated user
 
@@ -78,7 +78,7 @@ Get information about the currently authenticated user
 | ---------- | ------------------------------------------- | ------- |
 | Connection | An OAuth 2.0 password grant type connection |         |
 
-### Get Customer by Email
+### Get Customer by Email {#getcustomerbyemailaddress}
 
 Find a customer by their email address
 

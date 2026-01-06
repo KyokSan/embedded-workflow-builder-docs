@@ -9,7 +9,7 @@ Common collection operations
 
 ## Actions
 
-### Add Key/Value to Object
+### Add Key/Value to Object {#addkey}
 
 Add a value to an object with the given key
 
@@ -20,7 +20,7 @@ Add a value to an object with the given key
 | Value       |                                                                           |         |
 | Insert Path | Optionally define a path using dot notation of where to add the key/value |         |
 
-### Add Multiple Key/Value to Object
+### Add Multiple Key/Value to Object {#addmultiplekeys}
 
 Add multiple key/value pairs to an object
 
@@ -31,7 +31,7 @@ Add multiple key/value pairs to an object
 | Dynamic Key/Values | Add an array of key/value pairs to the object. Please take note that the action will favor this input over the 'Key/Values' input. | <code>{<br /> "someProperty": "value"<br />}</code> |
 | Key/Values         | Key and value of the properties to add to the object. If provided, 'Key' and 'Value' inputs are ignored.                           |                                                     |
 
-### Aggregate
+### Aggregate {#aggregate}
 
 Apply aggregate function to list
 
@@ -41,7 +41,7 @@ Apply aggregate function to list
 | Aggregate Function | Aggregate function to apply (choose from AVERAGE, COUNT, MAX, MIN, SUM, PRODUCT, MEDIAN). |                                   |
 | Filter Function    | Filter out any elements that do not return true                                           | (item, index) => { return true; } |
 
-### Append
+### Append {#append}
 
 Append element to the end of the list
 
@@ -50,7 +50,7 @@ Append element to the end of the list
 | List    | Reference to a list of data to operate on |         |
 | Element | The item to append to the end of the list |         |
 
-### Chunks
+### Chunks {#chunks}
 
 Chunk the list into lists of the specified number of elements
 
@@ -59,7 +59,7 @@ Chunk the list into lists of the specified number of elements
 | List               | Reference to a list of data to operate on |         |
 | Number of Elements | Number of elements to take                | 1       |
 
-### Combine Collection (Deprecated)
+### Combine Collection (Deprecated) {#combinecollections}
 
 This version of the action is being deprecated. Please replace action with Create Object.
 
@@ -67,7 +67,7 @@ This version of the action is being deprecated. Please replace action with Creat
 | ----------- | ---------------------------------------------------------------------------------- | ------- |
 | Collections | Returns an object with the specified key and corresponding collection as the value |         |
 
-### Concatenate
+### Concatenate {#concatenate}
 
 Concatenate two lists together into a single list
 
@@ -76,7 +76,7 @@ Concatenate two lists together into a single list
 | List  | Reference to a list of data to operate on |         |
 | List  | Reference to a list of data to operate on |         |
 
-### Count
+### Count {#count}
 
 Count the number of occurrences of element in list
 
@@ -85,7 +85,7 @@ Count the number of occurrences of element in list
 | List    | Reference to a list of data to operate on |         |
 | Element | Reference to an element to look for       |         |
 
-### Create List
+### Create List {#create}
 
 Create a new list with the given inputs
 
@@ -93,7 +93,7 @@ Create a new list with the given inputs
 | ---------- | -------- | ------- |
 | List Items |          |         |
 
-### Create Object
+### Create Object {#createobject}
 
 Creates a new object from provided key/value pairs
 
@@ -101,7 +101,7 @@ Creates a new object from provided key/value pairs
 | ----------------- | ------------------- | ------- |
 | Key & Value Pairs | Key and value pairs |         |
 
-### De-duplicate
+### De-duplicate {#deduplicate}
 
 De-duplicate the elements of the list
 
@@ -109,7 +109,7 @@ De-duplicate the elements of the list
 | ----- | ----------------------------------------- | ------- |
 | List  | Reference to a list of data to operate on |         |
 
-### Field Value Mapping
+### Field Value Mapping {#fieldvaluemapping}
 
 Maps the values from two different collections and returns a key/value list where the 'key' is the value of the Key Mappings input and the 'value' is the value of the Value Mappings input
 
@@ -118,7 +118,7 @@ Maps the values from two different collections and returns a key/value list wher
 | Key Mappings   |          |         |
 | Value Mappings |          |         |
 
-### Filter
+### Filter {#filter}
 
 Filter elements of a list
 
@@ -127,7 +127,7 @@ Filter elements of a list
 | List            | Reference to a list of data to operate on       |                                   |
 | Filter Function | Filter out any elements that do not return true | (item, index) => { return true; } |
 
-### First
+### First {#first}
 
 Get first element from a list
 
@@ -135,7 +135,7 @@ Get first element from a list
 | ----- | ----------------------------------------- | ------- |
 | List  | Reference to a list of data to operate on |         |
 
-### Flatten
+### Flatten {#flatten}
 
 Flatten an array of arrays into a single array
 
@@ -143,7 +143,7 @@ Flatten an array of arrays into a single array
 | ----- | ----------------------------------------- | ------- |
 | List  | Reference to a list of data to operate on |         |
 
-### Key Value Pair List to Object
+### Key Value Pair List to Object {#toobject}
 
 Convert a Key Value list to an Object
 
@@ -151,7 +151,7 @@ Convert a Key Value list to an Object
 | -------------- | -------- | ------- |
 | Key/Value List |          |         |
 
-### Last
+### Last {#last}
 
 Get last element from a list
 
@@ -159,7 +159,7 @@ Get last element from a list
 | ----- | ----------------------------------------- | ------- |
 | List  | Reference to a list of data to operate on |         |
 
-### Length
+### Length {#length}
 
 Count the number of elements in list
 
@@ -167,7 +167,7 @@ Count the number of elements in list
 | ----- | ----------------------------------------- | ------- |
 | List  | Reference to a list of data to operate on |         |
 
-### Map
+### Map {#map}
 
 Transform a list and its elements
 
@@ -178,7 +178,7 @@ Transform a list and its elements
 | Filter Function          | Filter out any elements that do not return true                            | (item, index) => { return true; } |
 | Context Data             | Additional contextual data to supply to the transform and filter functions |                                   |
 
-### Object to Key Value Pair List
+### Object to Key Value Pair List {#fromobject}
 
 Convert an Object to a Key Value List
 
@@ -186,7 +186,7 @@ Convert an Object to a Key Value List
 | ------ | -------- | ------- |
 | Object |          |         |
 
-### Process In Order
+### Process In Order {#processinorder}
 
 Ensures that payloads are processed in order across executions according to an ordering specified by a payload attribute. Returns the largest possible set of ordered payloads on the Process branch, and otherwise follows the Skip branch and returns the current item.
 
@@ -197,7 +197,7 @@ Ensures that payloads are processed in order across executions according to an o
 | Item              | The current item to consider for processing.                                                                                          |         |
 | Item Index        | The integer value to consider as the index for the current item that specifies intended processing order. 0 is the first index value. |         |
 
-### Remove
+### Remove {#remove}
 
 Remove all occurrences of an element from a list
 
@@ -206,7 +206,7 @@ Remove all occurrences of an element from a list
 | List    | Reference to a list of data to operate on |         |
 | Element | Reference to an element to look for       |         |
 
-### Select Item From List by Index
+### Select Item From List by Index {#selectitemfromlist}
 
 Select an item by index from a list of items, supports nested lists
 
@@ -215,7 +215,7 @@ Select an item by index from a list of items, supports nested lists
 | List  | Reference to a list of data to operate on |         |
 | Index |                                           |         |
 
-### Sort
+### Sort {#sort}
 
 Sort elements using a JavaScript comparison function
 
@@ -224,7 +224,7 @@ Sort elements using a JavaScript comparison function
 | List                     | Reference to a list of data to operate on                                                                                                                                           | <code>[<br /> {<br /> "name": "Widget",<br /> "prop": 25<br /> },<br /> {<br /> "name": "Thingy",<br /> "prop": 10<br /> },<br /> {<br /> "name": "Whatsit",<br /> "prop": 19<br /> }<br />]</code> |
 | Sort Comparison Function | Sort elements by the given comparison function. See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort for compare function documentation. | (a, b) => { return a.prop < b.prop ? -1 : 1; }                                                                                                                                                      |
 
-### Take First
+### Take First {#takefirst}
 
 Take first number of elements from a list
 
@@ -233,7 +233,7 @@ Take first number of elements from a list
 | List               | Reference to a list of data to operate on |         |
 | Number of Elements | Number of elements to take                | 1       |
 
-### Take Last
+### Take Last {#takelast}
 
 Take last number of elements from a list
 
@@ -242,7 +242,7 @@ Take last number of elements from a list
 | List               | Reference to a list of data to operate on |         |
 | Number of Elements | Number of elements to take                | 1       |
 
-### Validate JSON Schema
+### Validate JSON Schema {#validatejsonschema}
 
 Validate a JSON input against a given schema, returning errors if not JSON input is not valid.
 
@@ -251,7 +251,7 @@ Validate a JSON input against a given schema, returning errors if not JSON input
 | JSON Object | The JSON object to validate against the schema. | <code>{"someProperty":"value"}</code>                                                                                                                                                |
 | JSON Schema | The JSON schema to validate the input against.  | <code>{<br /> "type": "object",<br /> "properties": {<br /> "someProperty": {<br /> "type": "string"<br /> }<br /> },<br /> "required": [<br /> "someProperty"<br /> ]<br />}</code> |
 
-### Validate XML Schema
+### Validate XML Schema {#validatexmlschema}
 
 Validate an XML input against a given XSD schema, returning errors if XML is not valid.
 

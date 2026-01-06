@@ -9,7 +9,7 @@ Sage 200 is an online business management solution designed to help businesses m
 
 ## Connections
 
-### Sage 200 OAuth 2.0 Connection
+### Sage 200 OAuth 2.0 Connection {#sage200oauth2connection}
 
 Connect to Sage 200 using OAuth 2.0
 
@@ -43,7 +43,7 @@ Read about how OAuth 2.0 works [here](../oauth2.md).
 
 ## Actions
 
-### Create Customer
+### Create Customer {#createcustomer}
 
 Create a new customer
 
@@ -70,7 +70,7 @@ Create a new customer
 | Additional Fields           | Additional fields that are not covered by the standard inputs. See https://developer.columbus.sage.com/docs#/uk/sage200extra/accounts/v1/customers                                                           |         |
 | Debug Request               | Enabling this flag will log out the current request.                                                                                                                                                         | false   |
 
-### Create Customer Delivery Address
+### Create Customer Delivery Address {#createcustomerdeliveryaddress}
 
 Create a new customer delivery address
 
@@ -100,7 +100,7 @@ Create a new customer delivery address
 | Country Code Id         | VAT details Country code Id. See https://developer.columbus.sage.com/docs#/uk/sage200extra/accounts/v1/country_codes |         |
 | Debug Request           | Enabling this flag will log out the current request.                                                                 | false   |
 
-### Create Product
+### Create Product {#createproduct}
 
 Create a new product
 
@@ -135,7 +135,7 @@ Create a new product
 | Additional Fields            | Additional fields that are not covered by the standard inputs. See https://developer.columbus.sage.com/docs#/uk/sage200extra/accounts/v1/products                   |         |
 | Debug Request                | Enabling this flag will log out the current request.                                                                                                                | false   |
 
-### Create Sales Invoice
+### Create Sales Invoice {#createsalesinvoice}
 
 Create a new sales invoice. Note: Posting a sales invoice does not actually create a 'sales invoice' entity, but a Posted Transaction of type 'TradingAccountEntryTypeInvoice', therefore it is not possible to 'get' a sales invoice using the same API endpoint after it has been posted.
 
@@ -162,7 +162,7 @@ Create a new sales invoice. Note: Posting a sales invoice does not actually crea
 | Nominal Analysis Items      | Nominal analysis lines. See https://developer.columbus.sage.com/docs#/uk/sage200extra/accounts/v1/sales_invoices_nominal_analysis_items |         |
 | Debug Request               | Enabling this flag will log out the current request.                                                                                    | false   |
 
-### Create Sales Order
+### Create Sales Order {#createsalesorder}
 
 Create a new sales order
 
@@ -197,7 +197,7 @@ Create a new sales order
 | Additional Fields                         | Additional fields that are not covered by the standard inputs. See https://developer.columbus.sage.com/docs#/uk/sage200extra/accounts/v1/sop_orders                                                                                                                                                                                                      |         |
 | Debug Request                             | Enabling this flag will log out the current request.                                                                                                                                                                                                                                                                                                     | false   |
 
-### Delete Customer
+### Delete Customer {#deletecustomer}
 
 Delete a customer by ID
 
@@ -209,7 +209,7 @@ Delete a customer by ID
 | Customer ID   | The ID of the customer to delete.                                                                        |         |
 | Debug Request | Enabling this flag will log out the current request.                                                     | false   |
 
-### Delete Customer Contact
+### Delete Customer Contact {#deletecustomercontact}
 
 Delete a customer contact
 
@@ -221,7 +221,7 @@ Delete a customer contact
 | Customer Contact ID | The ID of the customer contact to delete                                                                 |         |
 | Debug Request       | Enabling this flag will log out the current request.                                                     | false   |
 
-### Delete Customer Delivery Address
+### Delete Customer Delivery Address {#deletecustomerdeliveryaddress}
 
 Delete a customer delivery address by ID
 
@@ -233,7 +233,7 @@ Delete a customer delivery address by ID
 | Delivery Address ID | The ID of the customer delivery addresses to delete.                                                     |         |
 | Debug Request       | Enabling this flag will log out the current request.                                                     | false   |
 
-### Delete Product
+### Delete Product {#deleteproduct}
 
 Delete a product by ID
 
@@ -245,7 +245,7 @@ Delete a product by ID
 | Product ID    | The ID of the product to delete.                                                                         |         |
 | Debug Request | Enabling this flag will log out the current request.                                                     | false   |
 
-### Delete Sales Order
+### Delete Sales Order {#deletesalesorder}
 
 Delete an existing sales order by ID
 
@@ -257,7 +257,7 @@ Delete an existing sales order by ID
 | Sales Order ID | Sales order ID to delete                                                                                 |         |
 | Debug Request  | Enabling this flag will log out the current request.                                                     | false   |
 
-### Get Customer
+### Get Customer {#getcustomer}
 
 Retrieve a customer by ID
 
@@ -269,7 +269,7 @@ Retrieve a customer by ID
 | Customer ID   | The ID of the customer to retrieve.                                                                      |         |
 | Debug Request | Enabling this flag will log out the current request.                                                     | false   |
 
-### Get Customer Contact
+### Get Customer Contact {#getcustomercontact}
 
 Retrieve a customer contact by ID
 
@@ -281,7 +281,7 @@ Retrieve a customer contact by ID
 | Customer Contact ID | The ID of the customer contact to retrieve                                                               |         |
 | Debug Request       | Enabling this flag will log out the current request.                                                     | false   |
 
-### Get Customer Delivery Address
+### Get Customer Delivery Address {#getcustomerdeliveryaddress}
 
 Retrieve customer delivery address by ID
 
@@ -293,7 +293,7 @@ Retrieve customer delivery address by ID
 | Delivery Address ID | The ID of the customer delivery addresses to retrieve.                                                   |         |
 | Debug Request       | Enabling this flag will log out the current request.                                                     | false   |
 
-### Get Customer Price Band
+### Get Customer Price Band {#getcustomerpriceband}
 
 Retrieve a customer price band by ID
 
@@ -305,7 +305,7 @@ Retrieve a customer price band by ID
 | Customer Price Band ID | The ID of the customer price band to retrieve                                                            |         |
 | Debug Request          | Enabling this flag will log out the current request.                                                     | false   |
 
-### Get Items on a Sales Order
+### Get Items on a Sales Order {#getitemsonsalesorder}
 
 Retrieve a list of items attached to a sales order
 
@@ -317,7 +317,7 @@ Retrieve a list of items attached to a sales order
 | Order Line ID | The Sales Order Line ID. This can be found in the Sales Order Line 'lines' array attribute.              |         |
 | Debug Request | Enabling this flag will log out the current request.                                                     | false   |
 
-### Get Price Band
+### Get Price Band {#getpriceband}
 
 Retrieve a price band by ID
 
@@ -329,7 +329,7 @@ Retrieve a price band by ID
 | Price Band ID | The ID of the price band to retrieve                                                                     |         |
 | Debug Request | Enabling this flag will log out the current request.                                                     | false   |
 
-### Get Product
+### Get Product {#getproduct}
 
 Retrieve a product by ID
 
@@ -341,7 +341,7 @@ Retrieve a product by ID
 | Product ID    | The ID of the product to retrieve.                                                                       |         |
 | Debug Request | Enabling this flag will log out the current request.                                                     | false   |
 
-### Get Product Group
+### Get Product Group {#getproductgroup}
 
 Retrieve a product group by ID
 
@@ -353,7 +353,7 @@ Retrieve a product group by ID
 | Product Group ID | The ID of the product group to retrieve.                                                                 |         |
 | Debug Request    | Enabling this flag will log out the current request.                                                     | false   |
 
-### Get Product Price Views
+### Get Product Price Views {#getproductpriceviews}
 
 Returns the selling prices of your products. A price is returned for each price band associated with a product.
 
@@ -364,7 +364,7 @@ Returns the selling prices of your products. A price is returned for each price 
 | Company       | The company ID. You can get and reference this value from the 'Get Site and Company Information' action. |         |
 | Debug Request | Enabling this flag will log out the current request.                                                     | false   |
 
-### Get Sales Invoice, Return, and Credit Views
+### Get Sales Invoice, Return, and Credit Views {#getsalesinvoicereturncreditviews}
 
 Retrieve a view of sales orders and returns and invoices and credit notes.
 
@@ -375,7 +375,7 @@ Retrieve a view of sales orders and returns and invoices and credit notes.
 | Company       | The company ID. You can get and reference this value from the 'Get Site and Company Information' action. |         |
 | Debug Request | Enabling this flag will log out the current request.                                                     | false   |
 
-### Get Sales Order
+### Get Sales Order {#getsalesorder}
 
 Retrieve an existing sales order by ID
 
@@ -387,7 +387,7 @@ Retrieve an existing sales order by ID
 | Sales Order ID | Sales order ID to retrieve                                                                               |         |
 | Debug Request  | Enabling this flag will log out the current request.                                                     | false   |
 
-### Get Site and Company Information
+### Get Site and Company Information {#getsiteandcompanyinformation}
 
 Get Site and Company ID's information for all sites the authenticated user has access to.
 
@@ -396,7 +396,7 @@ Get Site and Company ID's information for all sites the authenticated user has a
 | Connection    |                                                      |         |
 | Debug Request | Enabling this flag will log out the current request. | false   |
 
-### Get Tax Code
+### Get Tax Code {#gettaxcode}
 
 Retrieve a tax code by ID
 
@@ -408,7 +408,7 @@ Retrieve a tax code by ID
 | Tax Code ID   | The ID of the tax code to retrieve                                                                       |         |
 | Debug Request | Enabling this flag will log out the current request.                                                     | false   |
 
-### List Customer Contacts
+### List Customer Contacts {#listcustomercontacts}
 
 Retrieve a list of customer contacts
 
@@ -420,7 +420,7 @@ Retrieve a list of customer contacts
 | Filter Data After Date | Filter data to only include items that have been updated after this date.                                |         |
 | Debug Request          | Enabling this flag will log out the current request.                                                     | false   |
 
-### List Customer Delivery Addresses
+### List Customer Delivery Addresses {#listcustomerdeliveryaddresses}
 
 Retrieve a list of customer delivery addresses
 
@@ -432,7 +432,7 @@ Retrieve a list of customer delivery addresses
 | Filter Data After Date | Filter data to only include items that have been updated after this date.                                |         |
 | Debug Request          | Enabling this flag will log out the current request.                                                     | false   |
 
-### List Customer Price Bands
+### List Customer Price Bands {#listcustomerpricebands}
 
 Retrieve a list of customer price bands
 
@@ -444,7 +444,7 @@ Retrieve a list of customer price bands
 | Filter Data After Date | Filter data to only include items that have been updated after this date.                                |         |
 | Debug Request          | Enabling this flag will log out the current request.                                                     | false   |
 
-### List Customers
+### List Customers {#listcustomers}
 
 Retrieve a list of all customers
 
@@ -456,7 +456,7 @@ Retrieve a list of all customers
 | Filter Data After Date | Filter data to only include items that have been updated after this date.                                |         |
 | Debug Request          | Enabling this flag will log out the current request.                                                     | false   |
 
-### List Price Bands
+### List Price Bands {#listpricebands}
 
 Retrieve a list of price bands
 
@@ -468,7 +468,7 @@ Retrieve a list of price bands
 | Filter Data After Date | Filter data to only include items that have been updated after this date.                                |         |
 | Debug Request          | Enabling this flag will log out the current request.                                                     | false   |
 
-### List Pricing Source Types
+### List Pricing Source Types {#listpricingsourcetypes}
 
 Retrieve a list of pricing source types
 
@@ -479,7 +479,7 @@ Retrieve a list of pricing source types
 | Company       | The company ID. You can get and reference this value from the 'Get Site and Company Information' action. |         |
 | Debug Request | Enabling this flag will log out the current request.                                                     | false   |
 
-### List Pricing Types
+### List Pricing Types {#listpricingtypes}
 
 Retrieve a list of pricing types
 
@@ -490,7 +490,7 @@ Retrieve a list of pricing types
 | Company       | The company ID. You can get and reference this value from the 'Get Site and Company Information' action. |         |
 | Debug Request | Enabling this flag will log out the current request.                                                     | false   |
 
-### List Product Groups
+### List Product Groups {#listproductgroups}
 
 Retrieve a list of product groups
 
@@ -502,7 +502,7 @@ Retrieve a list of product groups
 | Filter Data After Date | Filter data to only include items that have been updated after this date.                                |         |
 | Debug Request          | Enabling this flag will log out the current request.                                                     | false   |
 
-### List Products
+### List Products {#listproducts}
 
 Retrieve a list of products
 
@@ -514,7 +514,7 @@ Retrieve a list of products
 | Filter Data After Date | Filter data to only include items that have been updated after this date.                                |         |
 | Debug Request          | Enabling this flag will log out the current request.                                                     | false   |
 
-### List Sales Order
+### List Sales Order {#listsalesorder}
 
 Retrieve a list of sales orders
 
@@ -526,7 +526,7 @@ Retrieve a list of sales orders
 | Filter Data After Date | Filter data to only include items that have been updated after this date.                                |         |
 | Debug Request          | Enabling this flag will log out the current request.                                                     | false   |
 
-### List Tax Codes
+### List Tax Codes {#listtaxcodes}
 
 Retrieve a list of tax codes
 
@@ -538,7 +538,7 @@ Retrieve a list of tax codes
 | Filter Data After Date | Filter data to only include items that have been updated after this date.                                |         |
 | Debug Request          | Enabling this flag will log out the current request.                                                     | false   |
 
-### Raw Request
+### Raw Request {#rawrequest}
 
 Send raw HTTP request to Sage 200
 
@@ -561,7 +561,7 @@ Send raw HTTP request to Sage 200
 | Max Retry Count         | The maximum number of retries to attempt. Specify 0 for no retries.                                                                                                                                                                                           | 0       |
 | Use Exponential Backoff | Specifies whether to use a pre-defined exponential backoff strategy for retries. When enabled, 'Retry Delay (ms)' is ignored.                                                                                                                                 | false   |
 
-### Search Customers
+### Search Customers {#searchcustomers}
 
 Search customer list
 
@@ -572,7 +572,7 @@ Search customer list
 | Company       | The company ID. You can get and reference this value from the 'Get Site and Company Information' action. |         |
 | Debug Request | Enabling this flag will log out the current request.                                                     | false   |
 
-### Search Product Groups
+### Search Product Groups {#searchproductgroups}
 
 Search the list of product groups
 
@@ -583,7 +583,7 @@ Search the list of product groups
 | Company       | The company ID. You can get and reference this value from the 'Get Site and Company Information' action. |         |
 | Debug Request | Enabling this flag will log out the current request.                                                     | false   |
 
-### Search Products
+### Search Products {#searchproducts}
 
 Search the list of products
 
@@ -594,7 +594,7 @@ Search the list of products
 | Company       | The company ID. You can get and reference this value from the 'Get Site and Company Information' action. |         |
 | Debug Request | Enabling this flag will log out the current request.                                                     | false   |
 
-### Update Customer
+### Update Customer {#updatecustomer}
 
 Edit an existing customer
 
@@ -620,7 +620,7 @@ Edit an existing customer
 | Additional Fields           | Additional fields that are not covered by the standard inputs. See https://developer.columbus.sage.com/docs#/uk/sage200extra/accounts/v1/customers                                                           |           |
 | Debug Request               | Enabling this flag will log out the current request.                                                                                                                                                         | false     |
 
-### Update Customer Contact
+### Update Customer Contact {#updatecustomercontact}
 
 Edit an existing customer contact by ID
 
@@ -643,7 +643,7 @@ Edit an existing customer contact by ID
 | Roles         | An array of customer contact roles. See https://developer.columbus.sage.com/docs#/uk/sage200extra/accounts/v1/customer_contact_roles |           |
 | Debug Request | Enabling this flag will log out the current request.                                                                                 | false     |
 
-### Update Customer Delivery Address
+### Update Customer Delivery Address {#updatecustomerdeliveryaddress}
 
 Edit an existing customer delivery address by ID
 
@@ -671,7 +671,7 @@ Edit an existing customer delivery address by ID
 | Country Code Id         | VAT details Country code Id. See https://developer.columbus.sage.com/docs#/uk/sage200extra/accounts/v1/country_codes |           |
 | Debug Request           | Enabling this flag will log out the current request.                                                                 | false     |
 
-### Update Product
+### Update Product {#updateproduct}
 
 Edit an existing product by ID
 
@@ -704,7 +704,7 @@ Edit an existing product by ID
 | Additional Fields            | Additional fields that are not covered by the standard inputs. See https://developer.columbus.sage.com/docs#/uk/sage200extra/accounts/v1/products                   |           |
 | Debug Request                | Enabling this flag will log out the current request.                                                                                                                | false     |
 
-### Update Sales Order
+### Update Sales Order {#updatesalesorder}
 
 Edit an existing sales Order by ID
 

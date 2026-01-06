@@ -9,7 +9,7 @@ Klaviyo is a cloud based email marketing solution that enables e-commerce busine
 
 ## Connections
 
-### API Key
+### API Key {#klaviyoapikeyconnection}
 
 Connection to Klaviyo using an API Key.
 
@@ -29,7 +29,7 @@ To Generate a Private Key:
 | ------- | ------------------------ | ------- |
 | API Key | Your API Key for Klaviyo |         |
 
-### OAuth 2.0
+### OAuth 2.0 {#klaviyooauth2connection}
 
 Connection to Klaviyo using OAuth 2.0.
 
@@ -55,7 +55,7 @@ Read about how OAuth 2.0 works [here](../oauth2.md).
 
 ## Actions
 
-### Bulk Create Events
+### Bulk Create Events {#bulkcreateevents}
 
 Create a batch of events for one or more profiles.
 
@@ -64,7 +64,7 @@ Create a batch of events for one or more profiles.
 | Connection   |                               |         |
 | Events Array | An array of events to create. |         |
 
-### Create Campaign
+### Create Campaign {#createcampaign}
 
 Creates a campaign given a set of parameters, then returns it.
 
@@ -79,7 +79,7 @@ Creates a campaign given a set of parameters, then returns it.
 | Send Options       | The send options for the campaign.      |         |
 | Send Strategy      | The send strategy for the campaign.     |         |
 
-### Create Event
+### Create Event {#createevent}
 
 Create a new event to track a profiles activity.
 
@@ -94,7 +94,7 @@ Create a new event to track a profiles activity.
 | Event Value Currency | The ISO 4217 currency code of the value associated with the event.                    |         |
 | Event Unique ID      | A unique identifier for this event.                                                   |         |
 
-### Create List
+### Create List {#createlist}
 
 Create a new list.
 
@@ -103,7 +103,7 @@ Create a new list.
 | Connection |                                   |            |
 | List Name  | A helpful name to label the list. | Newsletter |
 
-### Create Profile
+### Create Profile {#createprofile}
 
 Create a new profile.
 
@@ -121,7 +121,7 @@ Create a new profile.
 | Location     | Location information for the profile.                                                                                                                                                |         |
 | Properties   | An object containing key/value pairs for any custom properties assigned to this profile.                                                                                             |         |
 
-### Create Segment
+### Create Segment {#createsegment}
 
 Create a segment.
 
@@ -132,7 +132,7 @@ Create a segment.
 | Segment Condition Groups | The condition groups that define the segment. |         |
 | Is Starred Segment       | Whether the segment is starred.               | false   |
 
-### Create Template
+### Create Template {#createtemplate}
 
 Create a new custom HTML template.
 
@@ -144,7 +144,7 @@ Create a new custom HTML template.
 | Template HTML | The HTML content of the template. |         |
 | Template Text | The text content of the template. |         |
 
-### Delete Campaign
+### Delete Campaign {#deletecampaign}
 
 Delete a campaign with the given campaign ID.
 
@@ -153,7 +153,7 @@ Delete a campaign with the given campaign ID.
 | Connection  |                         |         |
 | Campaign ID | The ID of the campaign. |         |
 
-### Delete List
+### Delete List {#deletelist}
 
 Delete a list with the given list ID.
 
@@ -162,7 +162,7 @@ Delete a list with the given list ID.
 | Connection |                                    |         |
 | List ID    | The unique identifier of the list. |         |
 
-### Delete Segment
+### Delete Segment {#deletesegment}
 
 Delete a segment with the given segment ID.
 
@@ -171,7 +171,7 @@ Delete a segment with the given segment ID.
 | Connection |                        |         |
 | Segment ID | The ID of the segment. |         |
 
-### Delete Template
+### Delete Template {#deletetemplate}
 
 Delete a template with the given template ID.
 
@@ -180,7 +180,7 @@ Delete a template with the given template ID.
 | Connection  |                         |         |
 | Template ID | The ID of the template. |         |
 
-### Get Account
+### Get Account {#getaccount}
 
 Retrieve a single account object by its account ID.
 
@@ -190,7 +190,7 @@ Retrieve a single account object by its account ID.
 | Account ID | The ID of the account to retrieve.     |         |
 | Fields     | The fields to include in the response. |         |
 
-### Get Campaign
+### Get Campaign {#getcampaign}
 
 Returns a specific campaign based on a required id.
 
@@ -200,7 +200,7 @@ Returns a specific campaign based on a required id.
 | Campaign ID | The ID of the campaign.                |         |
 | Fields      | The fields to include in the response. |         |
 
-### Get Event
+### Get Event {#getevent}
 
 Get an event with the given event ID.
 
@@ -212,7 +212,7 @@ Get an event with the given event ID.
 | Metric Fields  | Metric fields to include in the response.  |         |
 | Profile Fields | Profile fields to include in the response. |         |
 
-### Get Image
+### Get Image {#getimage}
 
 Get the image with the given image ID.
 
@@ -222,7 +222,7 @@ Get the image with the given image ID.
 | Image ID   | The ID of the image.                   |         |
 | Fields     | The fields to include in the response. |         |
 
-### Get List
+### Get List {#getlist}
 
 Get a list with the given list ID.
 
@@ -232,7 +232,7 @@ Get a list with the given list ID.
 | List ID    | The unique identifier of the list.     |         |
 | Fields     | The fields to include in the response. |         |
 
-### Get Profile
+### Get Profile {#getprofile}
 
 Get the profile with the given profile ID.
 
@@ -243,7 +243,7 @@ Get the profile with the given profile ID.
 | Fields                    | The fields to include in the response.                             |         |
 | Additional Profile Fields | Request additional fields not included by default in the response. |         |
 
-### Get Segment
+### Get Segment {#getsegment}
 
 Get a segment with the given segment ID.
 
@@ -253,7 +253,7 @@ Get a segment with the given segment ID.
 | Segment ID | The ID of the segment.                 |         |
 | Fields     | The fields to include in the response. |         |
 
-### Get Template
+### Get Template {#gettemplate}
 
 Get a template with the given template ID.
 
@@ -263,7 +263,7 @@ Get a template with the given template ID.
 | Template ID | The ID of the template.                |         |
 | Fields      | The fields to include in the response. |         |
 
-### List Accounts
+### List Accounts {#listaccounts}
 
 Retrieve the account(s) associated with a given private API key.
 
@@ -272,7 +272,7 @@ Retrieve the account(s) associated with a given private API key.
 | Connection |                                        |         |
 | Fields     | The fields to include in the response. |         |
 
-### List Campaigns
+### List Campaigns {#listcampaigns}
 
 Returns some or all campaigns based on filters.
 
@@ -282,7 +282,7 @@ Returns some or all campaigns based on filters.
 | Filter Campaigns | A filter to apply to the campaigns.    | equals(messages.channel,'sms') |
 | Fields           | The fields to include in the response. |                                |
 
-### List Events
+### List Events {#listevents}
 
 Get all events in an account.
 
@@ -293,7 +293,7 @@ Get all events in an account.
 | Metric Fields  | Metric fields to include in the response.  |         |
 | Profile Fields | Profile fields to include in the response. |         |
 
-### List Images
+### List Images {#listimages}
 
 Get all images in an account.
 
@@ -302,7 +302,7 @@ Get all images in an account.
 | Connection |                                        |         |
 | Fields     | The fields to include in the response. |         |
 
-### List List Profiles
+### List List Profiles {#listlistprofiles}
 
 Get all profiles within a list with the given list ID.
 
@@ -313,7 +313,7 @@ Get all profiles within a list with the given list ID.
 | Additional Profile Fields | Request additional fields not included by default in the response. |         |
 | Fields                    | The fields to include in the response.                             |         |
 
-### List Lists
+### List Lists {#listlists}
 
 Get all lists in an account.
 
@@ -322,7 +322,7 @@ Get all lists in an account.
 | Connection |                                        |         |
 | Fields     | The fields to include in the response. |         |
 
-### List Profile
+### List Profile {#listprofile}
 
 Get all profiles in an account.
 
@@ -332,7 +332,7 @@ Get all profiles in an account.
 | Fields                    | The fields to include in the response.                             |         |
 | Additional Profile Fields | Request additional fields not included by default in the response. |         |
 
-### List Segments
+### List Segments {#listsegments}
 
 Get all segments in an account.
 
@@ -341,7 +341,7 @@ Get all segments in an account.
 | Connection |                                        |         |
 | Fields     | The fields to include in the response. |         |
 
-### List Templates
+### List Templates {#listtemplates}
 
 Get all templates in an account.
 
@@ -350,7 +350,7 @@ Get all templates in an account.
 | Connection |                                        |         |
 | Fields     | The fields to include in the response. |         |
 
-### Raw Request
+### Raw Request {#rawrequest}
 
 Send raw HTTP request to Klaviyo.
 
@@ -373,7 +373,7 @@ Send raw HTTP request to Klaviyo.
 | Max Retry Count         | The maximum number of retries to attempt. Specify 0 for no retries.                                                                                                                                        | 0       |
 | Use Exponential Backoff | Specifies whether to use a pre-defined exponential backoff strategy for retries. When enabled, 'Retry Delay (ms)' is ignored.                                                                              | false   |
 
-### Subscribe Profiles
+### Subscribe Profiles {#subscribeprofiles}
 
 Subscribe one or more profiles to email marketing, SMS marketing, or both.
 
@@ -382,7 +382,7 @@ Subscribe one or more profiles to email marketing, SMS marketing, or both.
 | Connection |                                 |         |
 | Profiles   | Array of profiles to subscribe. |         |
 
-### Unsubscribe Profiles
+### Unsubscribe Profiles {#unsubscribeprofiles}
 
 Unsubscribe one or more profiles to email marketing, SMS marketing, or both.
 
@@ -391,7 +391,7 @@ Unsubscribe one or more profiles to email marketing, SMS marketing, or both.
 | Connection |                                   |         |
 | Profiles   | Array of profiles to unsubscribe. |         |
 
-### Update Campaign
+### Update Campaign {#updatecampaign}
 
 Update a campaign with the given campaign ID.
 
@@ -406,7 +406,7 @@ Update a campaign with the given campaign ID.
 | Send Options       | The send options for the campaign.     |         |
 | Send Strategy      | The send strategy for the campaign.    |         |
 
-### Update Image
+### Update Image {#updateimage}
 
 Update the image with the given image ID.
 
@@ -417,7 +417,7 @@ Update the image with the given image ID.
 | Image Name   | A name for the image. Defaults to the filename if not provided. If the name matches an existing image, a suffix will be added. |         |
 | Image Hidden |                                                                                                                                |         |
 
-### Update List
+### Update List {#updatelist}
 
 Update the name of a list with the given list ID.
 
@@ -427,7 +427,7 @@ Update the name of a list with the given list ID.
 | List ID    | The unique identifier of the list. |            |
 | List Name  | A helpful name to label the list.  | Newsletter |
 
-### Update Profile
+### Update Profile {#updateprofile}
 
 Update the profile with the given profile ID.
 
@@ -446,7 +446,7 @@ Update the profile with the given profile ID.
 | Location     | Location information for the profile.                                                                                                                                                |         |
 | Properties   | An object containing key/value pairs for any custom properties assigned to this profile.                                                                                             |         |
 
-### Update Segment
+### Update Segment {#updatesegment}
 
 Update a segment with the given segment ID.
 
@@ -458,7 +458,7 @@ Update a segment with the given segment ID.
 | Segment Condition Groups | The condition groups that define the segment. |         |
 | Is Starred Segment       | Whether the segment is starred.               |         |
 
-### Update Template
+### Update Template {#updatetemplate}
 
 Update a template with the given template ID.
 
@@ -470,7 +470,7 @@ Update a template with the given template ID.
 | Template HTML | The HTML content of the template. |         |
 | Template Text | The text content of the template. |         |
 
-### Upload Image
+### Upload Image {#uploadimage}
 
 Import an image from a url or file.
 

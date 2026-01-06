@@ -9,7 +9,7 @@ Send SMS messages through Twilio
 
 ## Connections
 
-### Twilio API Key Connection
+### Twilio API Key Connection {#apikeysecret}
 
 Authenticate requests to Twilio using an API key
 
@@ -32,7 +32,7 @@ Go back to your Twilio console to find your **Account SID** (starts with "AC..."
 | API Key SID    | An API Key SID (starts with SK)                               |         |
 | API Key Secret | The API secret that was generated when an API key was created |         |
 
-### Twilio Auth Token Connection
+### Twilio Auth Token Connection {#basic}
 
 Authenticate requests using account SID and auth token
 
@@ -40,7 +40,7 @@ When you create a Twilio account, an **Account String Identifier** (Account SID)
 You can use the account SID and auth token to authenticate with Twilio and to send SMS messages.
 
 :::caution Consider API Keys instead
-For security reasons, we recommend using an [API Key Connection](#twilio-api-key-connection) instead.
+For security reasons, we recommend using an [API Key Connection](#apikeysecret) instead.
 API keys can be revoked and auth tokens generated using API keys are short-lived.
 :::
 
@@ -51,13 +51,13 @@ API keys can be revoked and auth tokens generated using API keys are short-lived
 
 ## Triggers
 
-### Webhook
+### Webhook {#webhook}
 
 Receive and validate webhook requests from Twilio for webhooks you configure.
 
 ## Actions
 
-### Get SMS
+### Get SMS {#getsms}
 
 Get an SMS message
 
@@ -66,7 +66,7 @@ Get an SMS message
 | Message SID |          |         |
 | Connection  |          |         |
 
-### List SMS messages
+### List SMS messages {#listmessages}
 
 Lists SMS messages
 
@@ -74,7 +74,7 @@ Lists SMS messages
 | ---------- | -------- | ------- |
 | Connection |          |         |
 
-### Raw Request
+### Raw Request {#rawrequest}
 
 Send raw HTTP request to Twilio
 
@@ -96,7 +96,7 @@ Send raw HTTP request to Twilio
 | Max Retry Count         | The maximum number of retries to attempt. Specify 0 for no retries.                                                                                                                                                                                                                                                          | 0       |
 | Use Exponential Backoff | Specifies whether to use a pre-defined exponential backoff strategy for retries. When enabled, 'Retry Delay (ms)' is ignored.                                                                                                                                                                                                | false   |
 
-### Send SMS
+### Send SMS {#sendsms}
 
 Send an SMS message
 

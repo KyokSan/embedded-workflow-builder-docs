@@ -9,7 +9,7 @@ WhatsApp is a messaging app that allows users to send texts, make voice and vide
 
 ## Connections
 
-### WhatsApp Access Token
+### WhatsApp Access Token {#whatsapp-access-token}
 
 Your WhatsApp Access Token
 
@@ -28,7 +28,7 @@ To get started with WhatsApp, you first need to [create a Meta developer account
 
 ## Triggers
 
-### Webhook
+### Webhook {#webhook}
 
 Receive and validate webhook requests from WhatsApp Business for webhooks you configure.
 
@@ -39,7 +39,7 @@ Receive and validate webhook requests from WhatsApp Business for webhooks you co
 
 ## Actions
 
-### Delete Media
+### Delete Media {#deletemedia}
 
 Delete a media file from a phone number.
 
@@ -48,7 +48,7 @@ Delete a media file from a phone number.
 | Connection |                                     |         |
 | Media ID   | The ID of the media file to delete. |         |
 
-### Get Media
+### Get Media {#getmedia}
 
 Get media from WhatsApp.
 
@@ -58,7 +58,7 @@ Get media from WhatsApp.
 | Media ID        | The ID of the media to retrieve.                                                                         |         |
 | Phone Number ID | Business phone number ID. The operation will proceed only if it matches the ID used to upload the media. |         |
 
-### Get Media from URL
+### Get Media from URL {#getmediafromurl}
 
 Download media from a URL.
 
@@ -67,7 +67,7 @@ Download media from a URL.
 | Connection |                                                                |         |
 | URL        | A URL returned by the Get Media action to download media from. |         |
 
-### Raw Request
+### Raw Request {#rawrequest}
 
 Send raw HTTP request to WhatsApp Business API.
 
@@ -90,7 +90,7 @@ Send raw HTTP request to WhatsApp Business API.
 | Max Retry Count         | The maximum number of retries to attempt. Specify 0 for no retries.                                                                                                                                                                                                  | 0       |
 | Use Exponential Backoff | Specifies whether to use a pre-defined exponential backoff strategy for retries. When enabled, 'Retry Delay (ms)' is ignored.                                                                                                                                        | false   |
 
-### Register Phone Number
+### Register Phone Number {#registerphonenumber}
 
 Register a phone number for use with WhatsApp.
 
@@ -101,7 +101,7 @@ Register a phone number for use with WhatsApp.
 | PIN                      | Set this to your 6-digit two-step verification PIN if enabled. If not, set a new 6-digit PIN.      |         |
 | Data Localization Region | Enables local storage for the business phone number. Specify the country for data-at-rest storage. |         |
 
-### Request Verification Code
+### Request Verification Code {#requestverificationcode}
 
 Send a verification code to verify a phone number.
 
@@ -112,7 +112,7 @@ Send a verification code to verify a phone number.
 | Code Method               | The method to use to send the verification code. |         |
 | Language                  | The language's two-character language code code. | en      |
 
-### Send Message
+### Send Message {#sendmessage}
 
 Send a message to a user.
 
@@ -137,7 +137,7 @@ Send a message to a user.
 | Context                  | An object containing the ID of a previous message you are replying to. Required if replying to any message in the conversation. |         |
 | Status                   | A message's status. You can use this field to mark a message as read.                                                           |         |
 
-### Upload Media
+### Upload Media {#uploadmedia}
 
 Upload media to WhatsApp.
 

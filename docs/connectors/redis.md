@@ -9,7 +9,7 @@ Manage items in a Redis database
 
 ## Connections
 
-### Redis Connection
+### Redis Connection {#redis}
 
 Authenticate requests to a Redis server.
 
@@ -27,7 +27,7 @@ Authenticate requests to a Redis server.
 
 ## Actions
 
-### Delete Key
+### Delete Key {#deletekey}
 
 Delete the value of a key
 
@@ -36,7 +36,7 @@ Delete the value of a key
 | Key        | Provide a string value for key of the item. |         |
 | Connection |                                             |         |
 
-### Flush All
+### Flush All {#flushall}
 
 Delete all the keys of all the existing databases, not just the currently selected one
 
@@ -44,7 +44,7 @@ Delete all the keys of all the existing databases, not just the currently select
 | ---------- | -------- | ------- |
 | Connection |          |         |
 
-### Get
+### Get {#get}
 
 Get the value of a key
 
@@ -53,7 +53,7 @@ Get the value of a key
 | Connection |                                             |         |
 | Key        | Provide a string value for key of the item. |         |
 
-### Get Time
+### Get Time {#gettime}
 
 Get the local time of the redis server
 
@@ -61,7 +61,7 @@ Get the local time of the redis server
 | ---------- | -------- | ------- |
 | Connection |          |         |
 
-### Keys
+### Keys {#keys}
 
 Returns all keys matching a specified pattern
 
@@ -70,7 +70,7 @@ Returns all keys matching a specified pattern
 | Key        | Provide a string value for key of the item. |         |
 | Connection |                                             |         |
 
-### Ping
+### Ping {#ping}
 
 Send a ping to the redis server
 
@@ -78,7 +78,7 @@ Send a ping to the redis server
 | ---------- | -------- | ------- |
 | Connection |          |         |
 
-### Set
+### Set {#set}
 
 Set the value of a key
 

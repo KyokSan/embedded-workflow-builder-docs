@@ -9,7 +9,7 @@ Query and manage data in a MySQL Database
 
 ## Connections
 
-### MySQL Connection
+### MySQL Connection {#mysql}
 
 Authenticate requests to a MySQL server
 
@@ -26,7 +26,7 @@ The **username** and **password** are optional inputs that can be put directly i
 
 ## Actions
 
-### Query
+### Query {#query}
 
 Returns the results of a MySQL database query
 

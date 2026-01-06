@@ -9,29 +9,59 @@ Manage records, tables and bases in Airtable
 
 ## Connections
 
-### API Key and Base ID (Deprecated)
+### API Key and Base ID (Deprecated) {#apikey}
 
 Airtable API Key and Base ID. Will be deprecated on Feb 1, 2024
 
-Airtable API keys will be [deprecated on Feb 1, 2024](https://support.airtable.com/docs/airtable-api-key-deprecation-notice).
-Please elect to use OAuth 2.0 or personal access tokens instead.
+#### Deprecation Notice
+
+Airtable API keys have been [deprecated as of February 1, 2024](https://support.airtable.com/docs/airtable-api-key-deprecation-notice).
+
+Use OAuth 2.0 or personal access tokens instead for all new integrations.
 
 | Input            | Comments                                                                                                        | Default |
 | ---------------- | --------------------------------------------------------------------------------------------------------------- | ------- |
 | Airtable Base ID | Visit https://airtable.com/api and select your workspace. The ID of your base will be printed for you in green. |         |
 | API Key          | You can generate an API key from https://airtable.com/account.                                                  |         |
 
-### OAuth 2.0
+### OAuth 2.0 {#oauth}
 
 Connect your Airtable account using OAuth 2.0
 
-To create an OAuth 2.0 app in Airtable, first log in to Airtable and then visit [airtable.com/create/oauth](https://airtable.com/create/oauth).
+To create an Airtable OAuth 2.0 connection, an OAuth integration must be registered in Airtable.
 
-Register a new OAuth integration, and enter `https://oauth2.%WHITE_LABEL_BASE_URL%/callback` as the OAuth redirect URL.
+#### Prerequisites
 
-Under **Scopes**, select all scopes that you'll need.
-Note which scopes you selected, along with the **Client ID** and **Client secret** that Airtable provides you.
-Enter scopes, client ID and client secret into the config wizard designer.
+- An Airtable account with permissions to create OAuth integrations
+
+#### Setup Steps
+
+1. Log in to Airtable and navigate to [airtable.com/create/oauth](https://airtable.com/create/oauth).
+2. Click **Register new OAuth integration**.
+3. Fill in the required fields:
+   - **App name**: A descriptive name for the integration
+   - **App description**: Brief description of the integration's purpose
+   - **Redirect URLs**: Enter `https://oauth2.%WHITE_LABEL_BASE_URL%/callback` as the OAuth redirect URL
+4. Under **Scopes**, select the scopes required for the integration. Refer to [Airtable's OAuth scopes documentation](https://airtable.com/developers/web/api/scopes) for details on available scopes.
+   - Common scopes include:
+     - `data.records:read` - Read records from bases
+     - `data.records:write` - Create, edit, and delete records
+     - `schema.bases:read` - Read base schema information
+     - `schema.bases:write` - Create and modify base schema
+     - `webhook:manage` - Create and manage webhooks
+5. Click **Save** to create the integration.
+6. Copy the **Client ID** and **Client secret** values displayed on the integration details page.
+
+#### Configure the Connection
+
+- Enter the **Client ID** and **Client Secret** from the OAuth integration.
+- For **Scopes**, enter the selected scopes as a space-separated list. For example:
+  ```
+  data.records:read data.records:write schema.bases:read webhook:manage
+  ```
+- The default scopes include common permissions for reading, writing, and managing webhooks. Adjust the scopes based on the specific requirements of the integration.
+
+The connection is now ready to authenticate with Airtable.
 
 This connection uses OAuth 2.0, a common authentication mechanism for integrations.
 Read about how OAuth 2.0 works [here](../oauth2.md).
@@ -42,12 +72,46 @@ Read about how OAuth 2.0 works [here](../oauth2.md).
 | Client ID     | Provide the Client ID you received from https://airtable.com/create/oauth.          |                                                                                                                                             |
 | Client Secret | Provide the Client Secret you received from https://airtable.com/create/oauth.      |                                                                                                                                             |
 
-### Personal Access Token
+### Personal Access Token {#personalaccesstoken}
 
 Connect your Airtable account using a personal access token
 
-A **personal access token** can be used for testing an Airtable integration.
-You can create a personal access token at [airtable.com/create/tokens](https://airtable.com/create/tokens).
+A personal access token provides user-specific access to Airtable bases and can be used for testing integrations or for user-scoped operations.
+
+:::info Personal Access Tokens vs OAuth 2.0
+Personal access tokens are user-scoped and suitable for testing or personal automations. For production integrations where users need to authenticate with their own credentials, OAuth 2.0 is recommended.
+:::
+
+#### Prerequisites
+
+- An Airtable account with access to the bases that will be accessed
+
+#### Setup Steps
+
+To generate a personal access token:
+
+1. Log in to Airtable and navigate to [airtable.com/create/tokens](https://airtable.com/create/tokens).
+2. Click **Create new token**.
+3. Enter a descriptive **Token name** to identify the token's purpose.
+4. Under **Scopes**, select the permissions required for the integration. Refer to [Airtable's scopes documentation](https://airtable.com/developers/web/api/scopes) for details on available scopes.
+   - Common scopes include:
+     - `data.records:read` - Read records from bases
+     - `data.records:write` - Create, edit, and delete records
+     - `schema.bases:read` - Read base schema information
+     - `schema.bases:write` - Create and modify base schema
+5. Under **Access**, select the specific bases the token should have access to, or select **All current and future bases in all current and future workspaces** for broader access.
+6. Click **Create token**.
+7. Copy the token value immediately. The token will not be shown again after leaving the page.
+
+The token format will look similar to: `patAbCdEfGh1234567.1234567890abcdefghijklmnopqr`
+
+#### Configure the Connection
+
+- Enter the personal access token into the **API Key** field of the connection configuration.
+
+:::note Token Security
+Store the token securely. Personal access tokens do not expire but can be revoked at any time from the [token management page](https://airtable.com/create/tokens).
+:::
 
 | Input   | Comments                                                            | Default |
 | ------- | ------------------------------------------------------------------- | ------- |
@@ -55,13 +119,24 @@ You can create a personal access token at [airtable.com/create/tokens](https://a
 
 ## Triggers
 
-### Webhook
+### Base Change Notifications {#basechanges}
 
-Receive and validate webhook requests from Airtable for webhooks you configure.
+Receive base change notifications from Airtable. Automatically creates and manages a webhook subscription when the instance is deployed, and removes the subscription when the instance is deleted.
+
+| Input               | Comments                                                                                                         | Default                    |
+| ------------------- | ---------------------------------------------------------------------------------------------------------------- | -------------------------- |
+| Connection          | The Airtable connection to use.                                                                                  |                            |
+| Base ID             | The ID of the base to interact with.                                                                             |                            |
+| Data Types          | Types of changes to monitor.                                                                                     | <code>["tableData"]</code> |
+| Record Change Scope | Optional table ID or view ID to limit webhook to specific table/view. Leave empty to monitor all tables in base. |                            |
+
+### Webhook {#webhook}
+
+Receive and validate webhook requests from Airtable for manually configured webhook subscriptions.
 
 ## Actions
 
-### Create Record
+### Create Record {#createrecord}
 
 Create a new record in the given table
 
@@ -71,20 +146,20 @@ Create a new record in the given table
 | Table Name     | Provide the name of the table you would like to access.                                                                                                                                                      |         |
 | Record Fields  | A record is the base equivalent of a row in a spreadsheet.                                                                                                                                                   |         |
 | Dynamic Fields | A field for dynamic inputs that can be configured at deploy time with the use of a key value config variable. Please note that if this input is used, then the default 'Record Fields' inputwill be ignored. |         |
-| Connection     |                                                                                                                                                                                                              |         |
+| Connection     | The Airtable connection to use.                                                                                                                                                                              |         |
 
-### Create Webhook
+### Create Webhook {#createwebhook}
 
 Create a new webhook for a base
 
 | Input            | Comments                                                                                                                                            | Default |
 | ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
 | Base ID          | The ID of the base to interact with. Required if you use an OAuth connection, and optional if you specify base ID with a legacy API Key connection. |         |
-| Connection       |                                                                                                                                                     |         |
+| Connection       | The Airtable connection to use.                                                                                                                     |         |
 | Notification URL | An optional URL that can receive notification pings.                                                                                                |         |
 | Specification    | A JSON object that describe the types of changes the webhook is interested in.                                                                      |         |
 
-### Delete Record
+### Delete Record {#deleterecord}
 
 Delete a record inside of the given table
 
@@ -93,9 +168,9 @@ Delete a record inside of the given table
 | Base ID    | The ID of the base to interact with. Required if you use an OAuth connection, and optional if you specify base ID with a legacy API Key connection.                                    |         |
 | Table Name | Provide the name of the table you would like to access.                                                                                                                                |         |
 | Record ID  | Within Airtable, each record has a unique identifier known as a Record ID. If you are familiar with Entity-Relationship Diagrams or ERDs, then the record id would be the primary key. |         |
-| Connection |                                                                                                                                                                                        |         |
+| Connection | The Airtable connection to use.                                                                                                                                                        |         |
 
-### Delete Webhook
+### Delete Webhook {#deletewebhook}
 
 Delete a webhook
 
@@ -103,26 +178,26 @@ Delete a webhook
 | ---------- | --------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
 | Base ID    | The ID of the base to interact with. Required if you use an OAuth connection, and optional if you specify base ID with a legacy API Key connection. |         |
 | Webhook ID | The ID of the webhook to be deleted.                                                                                                                |         |
-| Connection |                                                                                                                                                     |         |
+| Connection | The Airtable connection to use.                                                                                                                     |         |
 
-### Get Base Schema
+### Get Base Schema {#getbaseschema}
 
 Get all tables schema within a base
 
 | Input      | Comments                                                                                                                                            | Default |
 | ---------- | --------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
-| Connection |                                                                                                                                                     |         |
+| Connection | The Airtable connection to use.                                                                                                                     |         |
 | Base ID    | The ID of the base to interact with. Required if you use an OAuth connection, and optional if you specify base ID with a legacy API Key connection. |         |
 
-### Get Current User
+### Get Current User {#getcurrentuser}
 
 Get user ID and OAuth scopes for the current user
 
-| Input      | Comments | Default |
-| ---------- | -------- | ------- |
-| Connection |          |         |
+| Input      | Comments                        | Default |
+| ---------- | ------------------------------- | ------- |
+| Connection | The Airtable connection to use. |         |
 
-### Get Record
+### Get Record {#getrecord}
 
 Retrieve a record by ID from the given table
 
@@ -131,17 +206,17 @@ Retrieve a record by ID from the given table
 | Base ID    | The ID of the base to interact with. Required if you use an OAuth connection, and optional if you specify base ID with a legacy API Key connection.                                    |         |
 | Table Name | Provide the name of the table you would like to access.                                                                                                                                |         |
 | Record ID  | Within Airtable, each record has a unique identifier known as a Record ID. If you are familiar with Entity-Relationship Diagrams or ERDs, then the record id would be the primary key. |         |
-| Connection |                                                                                                                                                                                        |         |
+| Connection | The Airtable connection to use.                                                                                                                                                        |         |
 
-### List Bases
+### List Bases {#listbases}
 
 List all bases within the Airtable account
 
-| Input      | Comments | Default |
-| ---------- | -------- | ------- |
-| Connection |          |         |
+| Input      | Comments                        | Default |
+| ---------- | ------------------------------- | ------- |
+| Connection | The Airtable connection to use. |         |
 
-### List Records
+### List Records {#listrecords}
 
 List all records inside of the given table
 
@@ -149,27 +224,27 @@ List all records inside of the given table
 | ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
 | Base ID           | The ID of the base to interact with. Required if you use an OAuth connection, and optional if you specify base ID with a legacy API Key connection. |         |
 | Table Name        | Provide the name of the table you would like to access.                                                                                             |         |
-| Connection        |                                                                                                                                                     |         |
+| Connection        | The Airtable connection to use.                                                                                                                     |         |
 | View              | The name or ID of a view in your table. If set, only records in that view will be returned, sorted in the way that the view is sorted.              |         |
 | Fields            | Enter the names (or IDs) of the fields you would like returned. If you omit this list, all fields will be returned.                                 |         |
 | Filter By Formula | Filter results to only records that meet some particular criteria.                                                                                  |         |
 
-### List Webhooks
+### List Webhooks {#listwebhooks}
 
 List all webhooks registered for a base
 
 | Input      | Comments                                                                                                                                            | Default |
 | ---------- | --------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
 | Base ID    | The ID of the base to interact with. Required if you use an OAuth connection, and optional if you specify base ID with a legacy API Key connection. |         |
-| Connection |                                                                                                                                                     |         |
+| Connection | The Airtable connection to use.                                                                                                                     |         |
 
-### Raw Request
+### Raw Request {#rawrequest}
 
 Send raw HTTP request to Airtable
 
 | Input                   | Comments                                                                                                                                                                                                                                                               | Default |
 | ----------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
-| Connection              |                                                                                                                                                                                                                                                                        |         |
+| Connection              | The Airtable connection to use.                                                                                                                                                                                                                                        |         |
 | URL                     | Input the path only (/v0/meta/bases/{BASE_ID}/tables), The base URL is already included (https://api.airtable.com). For example, to connect to https://api.airtable.com/v0/meta/bases/{BASE_ID}/tables, only /v0/meta/bases/{BASE_ID}/tables is entered in this field. |         |
 | Method                  | The HTTP method to use.                                                                                                                                                                                                                                                |         |
 | Data                    | The HTTP body payload to send to the URL.                                                                                                                                                                                                                              |         |
@@ -185,7 +260,7 @@ Send raw HTTP request to Airtable
 | Max Retry Count         | The maximum number of retries to attempt. Specify 0 for no retries.                                                                                                                                                                                                    | 0       |
 | Use Exponential Backoff | Specifies whether to use a pre-defined exponential backoff strategy for retries. When enabled, 'Retry Delay (ms)' is ignored.                                                                                                                                          | false   |
 
-### Refresh Webhook
+### Refresh Webhook {#refreshwebhook}
 
 Extend the life of a webhook
 
@@ -193,9 +268,9 @@ Extend the life of a webhook
 | ---------- | --------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
 | Base ID    | The ID of the base to interact with. Required if you use an OAuth connection, and optional if you specify base ID with a legacy API Key connection. |         |
 | Webhook ID | The ID of the webhook to be deleted.                                                                                                                |         |
-| Connection |                                                                                                                                                     |         |
+| Connection | The Airtable connection to use.                                                                                                                     |         |
 
-### Update Record
+### Update Record {#updaterecord}
 
 Update a record's content inside a given table
 
@@ -206,4 +281,4 @@ Update a record's content inside a given table
 | Record ID      | Within Airtable, each record has a unique identifier known as a Record ID. If you are familiar with Entity-Relationship Diagrams or ERDs, then the record id would be the primary key.                       |         |
 | Record Fields  | A record is the base equivalent of a row in a spreadsheet.                                                                                                                                                   |         |
 | Dynamic Fields | A field for dynamic inputs that can be configured at deploy time with the use of a key value config variable. Please note that if this input is used, then the default 'Record Fields' inputwill be ignored. |         |
-| Connection     |                                                                                                                                                                                                              |         |
+| Connection     | The Airtable connection to use.                                                                                                                                                                              |         |

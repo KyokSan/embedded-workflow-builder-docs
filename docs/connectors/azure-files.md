@@ -9,7 +9,7 @@ Manage files and folders within Azure Files
 
 ## Connections
 
-### Connection String
+### Connection String {#connectionstring}
 
 Connection String
 
@@ -21,7 +21,7 @@ Keep in mind this token will eventually expire. Make sure to configure an expira
 | ----------------- | ---------------------------------------------------------------- | ------- |
 | Connection String | Provide the connection string for your active directory account. |         |
 
-### Storage Shared Key
+### Storage Shared Key {#storagesharedkey}
 
 Storage Shared Key
 
@@ -35,7 +35,7 @@ You can obtain an account name / account key pair through the [Azure Portal](htt
 
 ## Actions
 
-### Copy File
+### Copy File {#copyfile}
 
 Copy a file
 
@@ -46,7 +46,7 @@ Copy a file
 | To Path    | An object in Azure Files is a file that is saved in a 'share'. This represents the destination object's file path. Do not include a leading /                              |         |
 | Connection |                                                                                                                                                                            |         |
 
-### Create Folder
+### Create Folder {#createfolder}
 
 Create a folder under an existing path
 
@@ -56,7 +56,7 @@ Create a folder under an existing path
 | Path       | An object in Azure Files is a file that is saved in a 'share'. This represents the object's file path. Do not include a leading /                                          |         |
 | Connection |                                                                                                                                                                            |         |
 
-### Create Share
+### Create Share {#createshare}
 
 Create a file share
 
@@ -65,7 +65,7 @@ Create a file share
 | Share Name | An Azure Files 'share' is a container where files are stored. You can create a share from within the Azure console. Share names contain only letters, numbers, and dashes. |         |
 | Connection |                                                                                                                                                                            |         |
 
-### Delete File
+### Delete File {#deletefile}
 
 Delete a file
 
@@ -75,7 +75,7 @@ Delete a file
 | Path       | An object in Azure Files is a file that is saved in a 'share'. This represents the object's file path. Do not include a leading /                                          |         |
 | Connection |                                                                                                                                                                            |         |
 
-### Delete Folder
+### Delete Folder {#deletefolder}
 
 Delete an empty folder under an existing path
 
@@ -85,7 +85,7 @@ Delete an empty folder under an existing path
 | Path       | An object in Azure Files is a file that is saved in a 'share'. This represents the object's file path. Do not include a leading /                                          |         |
 | Connection |                                                                                                                                                                            |         |
 
-### Delete Share
+### Delete Share {#deleteshare}
 
 Delete a file share
 
@@ -94,7 +94,7 @@ Delete a file share
 | Share Name | An Azure Files 'share' is a container where files are stored. You can create a share from within the Azure console. Share names contain only letters, numbers, and dashes. |         |
 | Connection |                                                                                                                                                                            |         |
 
-### Download File
+### Download File {#downloadfile}
 
 Download a file
 
@@ -104,7 +104,7 @@ Download a file
 | Path       | An object in Azure Files is a file that is saved in a 'share'. This represents the object's file path. Do not include a leading /                                          |         |
 | Connection |                                                                                                                                                                            |         |
 
-### List Folder
+### List Folder {#listfolder}
 
 List files and folders in a folder
 
@@ -114,7 +114,7 @@ List files and folders in a folder
 | Path       | An object in Azure Files is a file that is saved in a 'share'. This represents the object's file path. Do not include a leading /                                          |         |
 | Connection |                                                                                                                                                                            |         |
 
-### List Shares
+### List Shares {#listshares}
 
 Get a list of file shares available in the account
 
@@ -122,7 +122,7 @@ Get a list of file shares available in the account
 | ---------- | -------- | ------- |
 | Connection |          |         |
 
-### Save From URL
+### Save From URL {#savefromurl}
 
 Save a file from a URL to Azure Files
 
@@ -133,7 +133,7 @@ Save a file from a URL to Azure Files
 | Path       | An object in Azure Files is a file that is saved in a 'share'. This represents the object's file path. Do not include a leading /                                                |         |
 | Source URL | The URL where the source file currently resides. This endpoint must be accessible via an unauthenticated HTTP GET request, and the response must return a content-length header. |         |
 
-### Upload File
+### Upload File {#uploadfile}
 
 Upload a file under an existing path
 

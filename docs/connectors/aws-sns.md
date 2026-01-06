@@ -9,7 +9,7 @@ Manage topics, subscriptions, and messages in Amazon SNS.
 
 ## Connections
 
-### AWS Role ARN
+### AWS Role ARN {#awsassumerole}
 
 Connect to AWS using an assumed role
 
@@ -102,7 +102,7 @@ Refer to the [Amazon SNS IAM policy documentation](https://docs.aws.amazon.com/s
 | Secret Access Key | An AWS IAM Secret Access Key                                                                                                                                                                                                                                  |         |
 | External ID       | Provides enhanced security measures to the connection. Optional, but recommended. Please check [AWS docs](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_common-scenarios_third-party.html#id_roles_third-party_external-id) for more information. |         |
 
-### AWS SNS Access Key and Secret
+### AWS SNS Access Key and Secret {#apikeysecret}
 
 Authenticates requests to Amazon SNS using an API Key and API Secret
 
@@ -162,7 +162,7 @@ Refer to the [Amazon SNS IAM policy documentation](https://docs.aws.amazon.com/s
 
 ## Triggers
 
-### Manual Subscription
+### Manual Subscription {#subscriptiontrigger}
 
 Receive and validate webhook requests from SNS for manually configured webhook subscriptions.
 
@@ -170,7 +170,7 @@ Receive and validate webhook requests from SNS for manually configured webhook s
 | ------------- | --------------------------------------------------------------------------------------------------------------------- | ------- |
 | Parse Message | When enabled, the message from SNS will be parsed as JSON and returned. When disabled, it will be passed as received. | false   |
 
-### Topic Webhook
+### Topic Webhook {#webhooklifecycletrigger}
 
 Receive notifications from an SNS topic. Automatically creates and manages a topic subscription when the instance is deployed, and removes the subscription when the instance is deleted.
 
@@ -183,7 +183,7 @@ Receive notifications from an SNS topic. Automatically creates and manages a top
 
 ## Actions
 
-### Create Topic
+### Create Topic {#createtopic}
 
 Create an Amazon SNS Topic
 
@@ -193,7 +193,7 @@ Create an Amazon SNS Topic
 | Name       | The name of the SNS topic to create.                                    |         |
 | Connection | The Amazon SNS connection to use.                                       |         |
 
-### Delete Topic
+### Delete Topic {#deletetopic}
 
 Delete an Amazon SNS Topic
 
@@ -203,7 +203,7 @@ Delete an Amazon SNS Topic
 | Topic ARN  | The Amazon Resource Name (ARN) of the SNS topic. [Learn more](https://docs.aws.amazon.com/sns/latest/api/API_CreateTopic.html) |         |
 | Connection | The Amazon SNS connection to use.                                                                                              |         |
 
-### Get Topic Attributes
+### Get Topic Attributes {#gettopicattributes}
 
 Retrieves the attributes of an Amazon SNS Topic.
 
@@ -213,7 +213,7 @@ Retrieves the attributes of an Amazon SNS Topic.
 | Topic ARN  | The Amazon Resource Name (ARN) of the SNS topic. [Learn more](https://docs.aws.amazon.com/sns/latest/api/API_CreateTopic.html) |         |
 | Connection | The Amazon SNS connection to use.                                                                                              |         |
 
-### List Opt Out Numbers
+### List Opt Out Numbers {#listoptoutnumbers}
 
 List all opt out numbers
 
@@ -223,7 +223,7 @@ List all opt out numbers
 | Next Token | The pagination token returned by a previous request to retrieve the next page of results. |         |
 | Connection | The Amazon SNS connection to use.                                                         |         |
 
-### List Subscriptions
+### List Subscriptions {#listsubscriptions}
 
 Retrieve the subscriptions of an Amazon SNS Topic
 
@@ -235,7 +235,7 @@ Retrieve the subscriptions of an Amazon SNS Topic
 | Fetch All  | When set to true, fetches all paginated subscriptions. When false, only 100 subscriptions will be returned.                    | false   |
 | Next Token | The pagination token returned by a previous request to retrieve the next page of results.                                      |         |
 
-### List Topics
+### List Topics {#listtopics}
 
 List available Amazon SNS Topics
 
@@ -246,7 +246,7 @@ List available Amazon SNS Topics
 | Fetch All  | When set to true, fetches all paginated topics. When false, only 100 topics will be returned. | false   |
 | Next Token | The pagination token returned by a previous request to retrieve the next page of results.     |         |
 
-### Publish Batch Messages
+### Publish Batch Messages {#publishbatchmessages}
 
 Publishes up to ten messages to the specified Amazon SNS Topic
 
@@ -257,7 +257,7 @@ Publishes up to ten messages to the specified Amazon SNS Topic
 | Message Entries | An array of message entries to publish in batch. Each entry must include an Id and Message. For binary messages, add a Template Field containing a Buffer to the BinaryValue attribute. [Learn more](https://docs.aws.amazon.com/sns/latest/dg/sns-message-attributes.html) | <code>[<br /> {<br /> "Id": "AN_ID",<br /> "Message": "A_MESSAGE",<br /> "Subject": "A_SUBJECT",<br /> "MessageStructure": "A_MESSAGE_STRUCTURE",<br /> "MessageAttributes": {<br /> "<keys>": {<br /> "DataType": "Number",<br /> "StringValue": "123"<br /> }<br /> },<br /> "MessageDeduplicationId": "A_MESSAGE_DEDUPLICATION_ID",<br /> "MessageGroupId": "A_MESSAGE_GROUP_ID"<br /> },<br /> {<br /> "Id": "AN_ID",<br /> "Message": "A_MESSAGE",<br /> "Subject": "A_SUBJECT",<br /> "MessageStructure": "A_MESSAGE_STRUCTURE",<br /> "MessageAttributes": {<br /> "<keys>": {<br /> "DataType": "String.Array",<br /> "StringValue": "[\"test\", true, 123]"<br /> }<br /> },<br /> "MessageDeduplicationId": "A_MESSAGE_DEDUPLICATION_ID",<br /> "MessageGroupId": "A_MESSAGE_GROUP_ID"<br /> },<br /> {<br /> "Id": "AN_ID",<br /> "Message": "A_MESSAGE",<br /> "Subject": "A_SUBJECT",<br /> "MessageStructure": "A_MESSAGE_STRUCTURE",<br /> "MessageAttributes": {<br /> "<keys>": {<br /> "DataType": "String",<br /> "StringValue": "test"<br /> }<br /> },<br /> "MessageDeduplicationId": "A_MESSAGE_DEDUPLICATION_ID",<br /> "MessageGroupId": "A_MESSAGE_GROUP_ID"<br /> },<br /> {<br /> "Id": "AN_ID",<br /> "Message": "A_MESSAGE",<br /> "Subject": "A_SUBJECT",<br /> "MessageStructure": "A_MESSAGE_STRUCTURE",<br /> "MessageAttributes": {<br /> "<keys>": {<br /> "DataType": "Binary",<br /> "BinaryValue": "ADD A BUFFER HERE WITH A TEMPLATE FIELD"<br /> }<br /> },<br /> "MessageDeduplicationId": "A_MESSAGE_DEDUPLICATION_ID",<br /> "MessageGroupId": "A_MESSAGE_GROUP_ID"<br /> }<br />]</code> |
 | Connection      | The Amazon SNS connection to use.                                                                                                                                                                                                                                           |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 
-### Publish Message
+### Publish Message {#publishmessage}
 
 Publish a message to an Amazon SNS Topic
 
@@ -269,7 +269,7 @@ Publish a message to an Amazon SNS Topic
 | Message Attributes | Optional message attributes as key-value pairs. The value will be automatically typed (String, Number, String.Array, or Binary for Buffer). For binary data, provide a Buffer from a previous step. [Learn more](https://docs.aws.amazon.com/sns/latest/api/API_MessageAttributeValue.html) |         |
 | Connection         | The Amazon SNS connection to use.                                                                                                                                                                                                                                                           |         |
 
-### Publish SMS
+### Publish SMS {#publishsms}
 
 Publish an SMS message to an Amazon SNS Topic
 
@@ -280,7 +280,7 @@ Publish an SMS message to an Amazon SNS Topic
 | Phone Number | The phone number in E.164 format (e.g., +12065551234) to receive SMS messages. [Learn more](https://docs.aws.amazon.com/sns/latest/dg/sms_publish-to-phone.html) |         |
 | Connection   | The Amazon SNS connection to use.                                                                                                                                |         |
 
-### Subscribe to Topic
+### Subscribe to Topic {#subscribe}
 
 Subscribe to an Amazon SNS Topic
 
@@ -292,7 +292,7 @@ Subscribe to an Amazon SNS Topic
 | Endpoint   | The endpoint to receive notifications. Format depends on protocol: email address (email@example.com), URL (https://example.com), phone number (+12065551234), or ARN (arn:aws:sqs:us-east-1:123456789012:MyQueue). [Learn more](https://docs.aws.amazon.com/sns/latest/api/API_Subscribe.html) |         |
 | Connection | The Amazon SNS connection to use.                                                                                                                                                                                                                                                              |         |
 
-### Unsubscribe from a Topic
+### Unsubscribe from a Topic {#unsubscribe}
 
 Unsubscribe from an Amazon SNS Topic
 

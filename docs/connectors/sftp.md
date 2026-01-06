@@ -9,7 +9,7 @@ Read, write, move and delete files on an SFTP server
 
 ## Connections
 
-### Basic Username/Password
+### Basic Username/Password {#basic}
 
 Basic Username and Password connection
 
@@ -28,7 +28,7 @@ Consult your SFTP server administrator to determine which login method the serve
 | Custom Server Host Key Algorithms          | A comma-separated list of custom server host key algorithms. Overrides the default server host key algorithms. Algorithm order matters. Advanced setting. |         |
 | Custom Ciphers                             | A comma-separated list of custom ciphers. Overrides the default ciphers. Cipher order matters. Advanced setting.                                          |         |
 
-### Private Key
+### Private Key {#privatekey}
 
 Private Key connection
 
@@ -52,7 +52,7 @@ Then, you can authenticate with the SFTP server using a username and correspondi
 
 ## Actions
 
-### Append File
+### Append File {#appendfile}
 
 Append data to an existing file on a SFTP server.
 
@@ -62,7 +62,7 @@ Append data to an existing file on a SFTP server.
 | Path       | Path on SFTP server to append file. |         |
 | Data       | Text to append to the file.         |         |
 
-### Create Directory
+### Create Directory {#createdirectory}
 
 Create a new directory. If the recursive flag is set to true, the method will create any directories in the path which do not already exist.
 
@@ -72,7 +72,7 @@ Create a new directory. If the recursive flag is set to true, the method will cr
 | Path       | Path of directory on an SFTP server to list files of        |         |
 | Recursive  | If true, create any missing directories in the path as well | true    |
 
-### Delete File
+### Delete File {#deletefile}
 
 Delete a file from a SFTP server
 
@@ -81,7 +81,7 @@ Delete a file from a SFTP server
 | Connection |                        |         |
 | Path       | Path of file to delete |         |
 
-### Fast Get
+### Fast Get {#fastget}
 
 Read a file from SFTP
 
@@ -91,7 +91,7 @@ Read a file from SFTP
 | Path                 | Path of file on SFTP server to read data from                                                                                                                                                                           |         |
 | Always Return Buffer | Always treat the file as a binary file with content type 'application/octet-stream', even if it is a text file. This is helpful if you are processing non-UTF-8 text files, as the runner assumes text files are UTF-8. | false   |
 
-### List Directory
+### List Directory {#listdirectory}
 
 List files and directories in a directory on an SFTP server. Optionally list files in subdirectories.
 
@@ -103,7 +103,7 @@ List files and directories in a directory on an SFTP server. Optionally list fil
 | Include Subdirectories | If true, will list files in all subdirectories. If false, only lists files in the specified directory. | false   |
 | Include Directories    | If true, will list directories in addition to files. If false, only lists files.                       | false   |
 
-### Move File
+### Move File {#movefile}
 
 Move a file on an SFTP server
 
@@ -113,7 +113,7 @@ Move a file on an SFTP server
 | Source Path      | Path of file to move |         |
 | Destination Path | Path of file to move |         |
 
-### Read File
+### Read File {#readfile}
 
 Read a file from SFTP
 
@@ -123,7 +123,7 @@ Read a file from SFTP
 | Path                 | Path of file on SFTP server to read data from                                                                                                                                                                           |         |
 | Always Return Buffer | Always treat the file as a binary file with content type 'application/octet-stream', even if it is a text file. This is helpful if you are processing non-UTF-8 text files, as the runner assumes text files are UTF-8. | false   |
 
-### Stat File
+### Stat File {#statfile}
 
 Pull statistics about a file
 
@@ -132,7 +132,7 @@ Pull statistics about a file
 | Connection |                                               |         |
 | Path       | Path of file on SFTP server to read data from |         |
 
-### Write File
+### Write File {#writefile}
 
 Write a file to SFTP
 

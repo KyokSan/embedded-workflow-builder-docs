@@ -9,7 +9,7 @@ Manage records in an Odoo database
 
 ## Connections
 
-### Odoo Connection
+### Odoo Connection {#odoobasicauth}
 
 Connect to your Odoo instance
 
@@ -35,7 +35,7 @@ Either way, Odoo uses basic auth to connect to an Odoo database.
 
 ## Actions
 
-### Create Record
+### Create Record {#createrecord}
 
 Create a new record of a given type
 
@@ -46,7 +46,7 @@ Create a new record of a given type
 | Parameters  | A JSON object of field names and values to set on the record.                                                |         |
 | External ID | A unique identifier mapping this record to an ID in an external system.                                      |         |
 
-### Delete Record By ID
+### Delete Record By ID {#deleterecordbyid}
 
 Delete a record by its numerical ID
 
@@ -56,7 +56,7 @@ Delete a record by its numerical ID
 | Model      | The type of record you would like to query for. Use the 'List Models' action for a list of available models. |         |
 | Record ID  | The ID of the record you want. Odoo uses numbers for record IDs.                                             |         |
 
-### Get Record by External ID
+### Get Record by External ID {#getrecordbyexternalid}
 
 Get a record by its external ID
 
@@ -65,7 +65,7 @@ Get a record by its external ID
 | Connection  |                                                                         |         |
 | External ID | A unique identifier mapping this record to an ID in an external system. |         |
 
-### Get Record By ID
+### Get Record By ID {#getrecordbyid}
 
 Fetch a Record by its numerical ID
 
@@ -75,7 +75,7 @@ Fetch a Record by its numerical ID
 | Model      | The type of record you would like to query for. Use the 'List Models' action for a list of available models. |         |
 | Record ID  | The ID of the record you want. Odoo uses numbers for record IDs.                                             |         |
 
-### List Model Fields
+### List Model Fields {#listmodelfields}
 
 List all fields for a given model
 
@@ -84,7 +84,7 @@ List all fields for a given model
 | Connection |                                                                                                              |         |
 | Model      | The type of record you would like to query for. Use the 'List Models' action for a list of available models. |         |
 
-### List Models
+### List Models {#listmodels}
 
 Fetch a list of models installed in the customer's Odoo database
 
@@ -97,7 +97,7 @@ Fetch a list of models installed in the customer's Odoo database
 | Pagination Offset | Fetch records offset by this value. See [Pagination](https://www.odoo.com/documentation/15.0/developer/api/external_api.html#pagination).     |         |
 | Connection        |                                                                                                                                               |         |
 
-### List Records
+### List Records {#listrecords}
 
 Fetch a list of records of a given type
 
@@ -109,7 +109,7 @@ Fetch a list of records of a given type
 | Pagination Offset | Fetch records offset by this value. See [Pagination](https://www.odoo.com/documentation/15.0/developer/api/external_api.html#pagination).     |         |
 | Connection        |                                                                                                                                               |         |
 
-### Raw Request
+### Raw Request {#rawrequest}
 
 Issue any execute_kw action
 
@@ -120,7 +120,7 @@ Issue any execute_kw action
 | Method     | The action to execute in Odoo.                                                                               |                         |
 | Parameters | A JSON object of field names and values to set on the record.                                                | <code>[["read"]]</code> |
 
-### Set External ID
+### Set External ID {#setexternalid}
 
 Add an external ID to a record that does not have one
 
@@ -131,7 +131,7 @@ Add an external ID to a record that does not have one
 | Record ID   | The ID of the record you want. Odoo uses numbers for record IDs.                                             |         |
 | External ID | A unique identifier mapping this record to an ID in an external system.                                      |         |
 
-### Update Record
+### Update Record {#updaterecord}
 
 Update an existing record of a given type
 

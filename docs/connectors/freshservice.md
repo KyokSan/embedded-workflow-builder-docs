@@ -9,7 +9,7 @@ Use the Freshservice component to manage tickets, problems, agents, and more.
 
 ## Connections
 
-### API Key
+### API Key {#freshservice-api-key-connection}
 
 Connect to Freshservice using an API key.
 
@@ -25,7 +25,7 @@ Connect to Freshservice using an API key.
 
 ## Actions
 
-### Create Agent
+### Create Agent {#createagent}
 
 Create a new agent.
 
@@ -46,7 +46,7 @@ Create a new agent.
 | Additional Fields                               | Additional fields that might not be covered by the standard inputs. This is a JSON object. See https://api.freshservice.com/#agent_attributes for more information. |         |
 | Debug Request                                   | Enabling this flag will log out the current request.                                                                                                                | false   |
 
-### Create Asset
+### Create Asset {#createasset}
 
 Create a new asset.
 
@@ -67,7 +67,7 @@ Create a new asset.
 | Additional Fields | Additional fields that might not be covered by the standard inputs. This is a JSON object. See https://api.freshservice.com/#asset_attributes for more information.          |         |
 | Debug Request     | Enabling this flag will log out the current request.                                                                                                                         | false   |
 
-### Create Problem
+### Create Problem {#createproblem}
 
 Create a new problem.
 
@@ -87,7 +87,7 @@ Create a new problem.
 | Additional Fields | Additional fields that might not be covered by the standard inputs. This is a JSON object. See https://api.freshservice.com/#problem_attributes for more information. |         |
 | Debug Request     | Enabling this flag will log out the current request.                                                                                                                  | false   |
 
-### Create Requester
+### Create Requester {#createrequester}
 
 Create a new requester.
 
@@ -107,7 +107,7 @@ Create a new requester.
 | Additional Fields    | Additional fields that might not be covered by the standard inputs. This is a JSON object. See https://api.freshservice.com/#requester_attributes for more information. |         |
 | Debug Request        | Enabling this flag will log out the current request.                                                                                                                    | false   |
 
-### Create Service Request
+### Create Service Request {#createservicerequest}
 
 Create a new service request.
 
@@ -121,7 +121,7 @@ Create a new service request.
 | Additional Fields | Additional fields that might not be covered by the standard inputs. This is a JSON object. See https://api.freshservice.com/#service_request for more information. |         |
 | Debug Request     | Enabling this flag will log out the current request.                                                                                                               | false   |
 
-### Create Software
+### Create Software {#createsoftware}
 
 Create a new software application.
 
@@ -140,7 +140,7 @@ Create a new software application.
 | Additional Fields | Additional fields that might not be covered by the standard inputs. This is a JSON object. See https://api.freshservice.com/#software_attributes for more information.          |         |
 | Debug Request     | Enabling this flag will log out the current request.                                                                                                                            | false   |
 
-### Create Ticket
+### Create Ticket {#createticket}
 
 Create a new ticket.
 
@@ -157,7 +157,7 @@ Create a new ticket.
 | Additional Fields | Additional fields that might not be covered by the standard inputs. This is a JSON object. See https://api.freshservice.com/#ticket_attributes for more information. |         |
 | Debug Request     | Enabling this flag will log out the current request.                                                                                                                 | false   |
 
-### Deactivate Agent
+### Deactivate Agent {#deactivateagent}
 
 Deactivate an agent.
 
@@ -167,7 +167,7 @@ Deactivate an agent.
 | Agent ID      | Unique ID of the agent to deactivate.                |         |
 | Debug Request | Enabling this flag will log out the current request. | false   |
 
-### Deactivate Requester
+### Deactivate Requester {#deactivaterequester}
 
 Deactivate a requester.
 
@@ -177,7 +177,7 @@ Deactivate a requester.
 | Requester ID  | Unique ID of the requester to deactivate.            |         |
 | Debug Request | Enabling this flag will log out the current request. | false   |
 
-### Delete Asset
+### Delete Asset {#deleteasset}
 
 Delete an asset.
 
@@ -187,7 +187,7 @@ Delete an asset.
 | Asset Display ID | Display ID of the asset to delete.                   |         |
 | Debug Request    | Enabling this flag will log out the current request. | false   |
 
-### Delete Problem
+### Delete Problem {#deleteproblem}
 
 Delete a Problem.
 
@@ -197,7 +197,7 @@ Delete a Problem.
 | Problem ID    | ID of the Problem to delete.                         |         |
 | Debug Request | Enabling this flag will log out the current request. | false   |
 
-### Delete Software
+### Delete Software {#deletesoftware}
 
 Delete a software application.
 
@@ -207,7 +207,7 @@ Delete a software application.
 | Application ID | Unique ID of the software to delete.                 |         |
 | Debug Request  | Enabling this flag will log out the current request. | false   |
 
-### Delete Ticket
+### Delete Ticket {#deleteticket}
 
 Delete a Ticket.
 
@@ -217,7 +217,7 @@ Delete a Ticket.
 | Ticket ID     | ID of the ticket to delete.                          |         |
 | Debug Request | Enabling this flag will log out the current request. | false   |
 
-### Forget Agent
+### Forget Agent {#forgetagent}
 
 Forget an agent.
 
@@ -227,7 +227,7 @@ Forget an agent.
 | Agent ID      | Unique ID of the agent to forget.                    |         |
 | Debug Request | Enabling this flag will log out the current request. | false   |
 
-### Get Agent
+### Get Agent {#getagent}
 
 View an agent.
 
@@ -237,7 +237,7 @@ View an agent.
 | Agent ID      | Unique ID of the agent to retrieve.                  |         |
 | Debug Request | Enabling this flag will log out the current request. | false   |
 
-### Get Asset
+### Get Asset {#getasset}
 
 View an Asset.
 
@@ -247,7 +247,7 @@ View an Asset.
 | Asset Display ID | Display ID of the asset to retrieve.                 |         |
 | Debug Request    | Enabling this flag will log out the current request. | false   |
 
-### Get Problem
+### Get Problem {#getproblem}
 
 View a Problem.
 
@@ -257,7 +257,7 @@ View a Problem.
 | Problem ID    | ID of the Problem.                                   |         |
 | Debug Request | Enabling this flag will log out the current request. | false   |
 
-### Get Requester
+### Get Requester {#getrequester}
 
 View information about a requester.
 
@@ -267,7 +267,7 @@ View information about a requester.
 | Requester ID  | Unique ID of the requester to retrieve.              |         |
 | Debug Request | Enabling this flag will log out the current request. | false   |
 
-### Get Software
+### Get Software {#getsoftware}
 
 View a software application.
 
@@ -277,7 +277,7 @@ View a software application.
 | Application ID | Unique ID of the software to retrieve.               |         |
 | Debug Request  | Enabling this flag will log out the current request. | false   |
 
-### Get Ticket
+### Get Ticket {#getticket}
 
 View a Ticket.
 
@@ -288,7 +288,7 @@ View a Ticket.
 | Additional Query Parameters | Additional query parameters that might not be covered by the standard inputs like filters. |         |
 | Debug Request               | Enabling this flag will log out the current request.                                       | false   |
 
-### Get Workspace
+### Get Workspace {#getworkspace}
 
 View a Workspace.
 
@@ -299,7 +299,7 @@ View a Workspace.
 | Additional Query Parameters | Additional query parameters that might not be covered by the standard inputs like filters. |         |
 | Debug Request               | Enabling this flag will log out the current request.                                       | false   |
 
-### List Agents
+### List Agents {#listagents}
 
 View List of Agents.
 
@@ -312,7 +312,7 @@ View List of Agents.
 | Additional Query Parameters | Additional query parameters that might not be covered by the standard inputs like filters. |         |
 | Debug Request               | Enabling this flag will log out the current request.                                       | false   |
 
-### List Assets
+### List Assets {#listassets}
 
 View List of Assets.
 
@@ -325,7 +325,7 @@ View List of Assets.
 | Additional Query Parameters | Additional query parameters that might not be covered by the standard inputs like filters. |         |
 | Debug Request               | Enabling this flag will log out the current request.                                       | false   |
 
-### List Problems
+### List Problems {#listproblems}
 
 View List of Problems.
 
@@ -338,7 +338,7 @@ View List of Problems.
 | Additional Query Parameters | Additional query parameters that might not be covered by the standard inputs like filters. |         |
 | Debug Request               | Enabling this flag will log out the current request.                                       | false   |
 
-### List Requesters
+### List Requesters {#listrequesters}
 
 View List of Requesters.
 
@@ -351,7 +351,7 @@ View List of Requesters.
 | Additional Query Parameters | Additional query parameters that might not be covered by the standard inputs like filters. |         |
 | Debug Request               | Enabling this flag will log out the current request.                                       | false   |
 
-### List Software
+### List Software {#listsoftware}
 
 List all software applications.
 
@@ -360,7 +360,7 @@ List all software applications.
 | Connection    |                                                      |         |
 | Debug Request | Enabling this flag will log out the current request. | false   |
 
-### List Tickets
+### List Tickets {#listtickets}
 
 View List of Tickets.
 
@@ -374,7 +374,7 @@ View List of Tickets.
 | Additional Query Parameters | Additional query parameters that might not be covered by the standard inputs like filters. |         |
 | Debug Request               | Enabling this flag will log out the current request.                                       | false   |
 
-### List Workspaces
+### List Workspaces {#listworkspaces}
 
 View List of Workspaces.
 
@@ -387,7 +387,7 @@ View List of Workspaces.
 | Additional Query Parameters | Additional query parameters that might not be covered by the standard inputs like filters. |         |
 | Debug Request               | Enabling this flag will log out the current request.                                       | false   |
 
-### Move Asset
+### Move Asset {#moveasset}
 
 Move an asset to a different workspace.
 
@@ -400,7 +400,7 @@ Move an asset to a different workspace.
 | Agent ID         | ID of the new asset agent.                           |         |
 | Debug Request    | Enabling this flag will log out the current request. | false   |
 
-### Move Problem
+### Move Problem {#moveproblem}
 
 Move a Problem to a different workspace.
 
@@ -413,7 +413,7 @@ Move a Problem to a different workspace.
 | Owner ID      | New assigned owner ID for the Problem.               |         |
 | Debug Request | Enabling this flag will log out the current request. | false   |
 
-### Move Software
+### Move Software {#movesoftware}
 
 Move a software application to a different workspace.
 
@@ -424,7 +424,7 @@ Move a software application to a different workspace.
 | Workspace ID   | ID of the workspace to move the software to.         |         |
 | Debug Request  | Enabling this flag will log out the current request. | false   |
 
-### Move Ticket
+### Move Ticket {#moveticket}
 
 Move a Ticket to a different workspace.
 
@@ -437,7 +437,7 @@ Move a Ticket to a different workspace.
 | Responder ID  | New responder ID to assign the ticket to.            |         |
 | Debug Request | Enabling this flag will log out the current request. | false   |
 
-### Raw Request
+### Raw Request {#rawrequest}
 
 Send raw HTTP request to Freshservice.
 
@@ -460,7 +460,7 @@ Send raw HTTP request to Freshservice.
 | Max Retry Count         | The maximum number of retries to attempt. Specify 0 for no retries.                                                                                                                                                                      | 0       |
 | Use Exponential Backoff | Specifies whether to use a pre-defined exponential backoff strategy for retries. When enabled, 'Retry Delay (ms)' is ignored.                                                                                                            | false   |
 
-### Search Asset
+### Search Asset {#searchasset}
 
 Search for assets.
 
@@ -471,7 +471,7 @@ Search for assets.
 | Additional Query Parameters | Additional query parameters that might not be covered by the standard inputs like filters. |         |
 | Debug Request               | Enabling this flag will log out the current request.                                       | false   |
 
-### Update Agent
+### Update Agent {#updateagent}
 
 Update an existing agent.
 
@@ -490,7 +490,7 @@ Update an existing agent.
 | Additional Fields                               | Additional fields that might not be covered by the standard inputs. This is a JSON object. See https://api.freshservice.com/#agent_attributes for more information. |         |
 | Debug Request                                   | Enabling this flag will log out the current request.                                                                                                                | false   |
 
-### Update Asset
+### Update Asset {#updateasset}
 
 Update an asset.
 
@@ -511,7 +511,7 @@ Update an asset.
 | Additional Fields | Additional fields that might not be covered by the standard inputs. This is a JSON object. See https://api.freshservice.com/#asset_attributes for more information. |         |
 | Debug Request     | Enabling this flag will log out the current request.                                                                                                                | false   |
 
-### Update Problem
+### Update Problem {#updateproblem}
 
 Update a Problem.
 
@@ -532,7 +532,7 @@ Update a Problem.
 | Additional Fields | Additional fields that might not be covered by the standard inputs. This is a JSON object. See https://api.freshservice.com/#problem_attributes for more information. |         |
 | Debug Request     | Enabling this flag will log out the current request.                                                                                                                  | false   |
 
-### Update Requester
+### Update Requester {#updaterequester}
 
 Update a requester.
 
@@ -553,7 +553,7 @@ Update a requester.
 | Additional Fields    | Additional fields that might not be covered by the standard inputs. This is a JSON object. See https://api.freshservice.com/#requester_attributes for more information. |         |
 | Debug Request        | Enabling this flag will log out the current request.                                                                                                                    | false   |
 
-### Update Software
+### Update Software {#updatesoftware}
 
 Update an existing software application.
 
@@ -572,7 +572,7 @@ Update an existing software application.
 | Additional Fields | Additional fields that might not be covered by the standard inputs. This is a JSON object. See https://api.freshservice.com/#software_attributes for more information. |         |
 | Debug Request     | Enabling this flag will log out the current request.                                                                                                                   | false   |
 
-### Update Ticket
+### Update Ticket {#updateticket}
 
 Update a Ticket.
 

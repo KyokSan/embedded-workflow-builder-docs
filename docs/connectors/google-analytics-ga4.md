@@ -9,7 +9,7 @@ Manage Google Analytics GA4 accounts and data
 
 ## Connections
 
-### Google Analytics OAuth 2.0
+### Google Analytics OAuth 2.0 {#oauth2}
 
 Authenticate requests to Google Analytics using values obtained from the Google Cloud Platform.
 
@@ -33,7 +33,7 @@ Read about how OAuth 2.0 works [here](../oauth2.md).
 
 ## Actions
 
-### Get Property
+### Get Property {#getproperty}
 
 Get property by ID
 
@@ -43,7 +43,7 @@ Get property by ID
 | Property ID | The Google Analytics GA4 Property ID. |         |
 | Connection  |                                       |         |
 
-### List Accounts
+### List Accounts {#listaccounts}
 
 Return a list of accounts accessible by the caller
 
@@ -54,7 +54,7 @@ Return a list of accounts accessible by the caller
 | Page Token | If a previous response was truncated, the response includes a `nextPageToken`. To retrieve the next page of results, set this parameter to the value of `nextPageToken` from the previous response.                        |         |
 | Connection |                                                                                                                                                                                                                            |         |
 
-### List Properties
+### List Properties {#listproperties}
 
 List Google Analytics GA4 properties for an account
 
@@ -66,7 +66,7 @@ List Google Analytics GA4 properties for an account
 | Account ID | The Google Analytics Account ID.                                                                                                                                                                                           |         |
 | Connection |                                                                                                                                                                                                                            |         |
 
-### Raw Request
+### Raw Request {#rawrequest}
 
 Send raw HTTP request to Google Analytics GA4
 
@@ -89,7 +89,7 @@ Send raw HTTP request to Google Analytics GA4
 | Max Retry Count         | The maximum number of retries to attempt. Specify 0 for no retries.                                                                                                                              | 0       |
 | Use Exponential Backoff | Specifies whether to use a pre-defined exponential backoff strategy for retries. When enabled, 'Retry Delay (ms)' is ignored.                                                                    | false   |
 
-### Run Report
+### Run Report {#runreport}
 
 Run a customized report on your Google Analytics event data
 
@@ -99,7 +99,7 @@ Run a customized report on your Google Analytics event data
 | Property ID  | The Google Analytics GA4 Property ID.                                                                                                                                    |                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 | Request Body | See https://developers.google.com/analytics/devguides/reporting/data/v1/rest/v1beta/properties/runReport for details on what dimensions, metrics, etc., you can specify. | <code>{<br /> "dimensions": [<br /> {<br /> "name": "pageTitle"<br /> }<br /> ],<br /> "metrics": [<br /> {<br /> "name": "sessions"<br /> }<br /> ],<br /> "dateRanges": [<br /> {<br /> "startDate": "7daysAgo",<br /> "endDate": "yesterday"<br /> }<br /> ],<br /> "dimensionFilter": {<br /> "notExpression": {<br /> "filter": {<br /> "fieldName": "pageTitle",<br /> "stringFilter": {<br /> "value": "My Homepage"<br /> }<br /> }<br /> }<br /> }<br />}</code> |
 
-### Send Measurement Protocol Events
+### Send Measurement Protocol Events {#sendmeasurementprotocolevents}
 
 Sends Measurement Protocol Events to your Google Analytics G4 Account
 

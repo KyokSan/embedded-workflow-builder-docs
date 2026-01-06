@@ -9,7 +9,7 @@ Sage HR is all inclusive Human Resource management solution. Use the Sage HR com
 
 ## Connections
 
-### API Key
+### API Key {#apikey}
 
 Sage HR uses an activated API key for Authentication.
 
@@ -27,7 +27,7 @@ To activate API:
 
 ## Actions
 
-### Close Project
+### Close Project {#closeproject}
 
 Close a project.
 
@@ -36,7 +36,7 @@ Close a project.
 | Connection |                            |         |
 | Project ID | ID of project to be closed |         |
 
-### Create Document
+### Create Document {#createdocument}
 
 Creates a document only visible to the employee themselves.
 
@@ -59,7 +59,7 @@ Creates a document only visible to the employee themselves.
 | Expires                       | if 'true' expiration_date is also required                                               | false                   |
 | Expiration Date               | Expiration date of the document, format: YYYY-MM-DD                                      |                         |
 
-### Create Employee
+### Create Employee {#createemployee}
 
 Create new employee
 
@@ -88,7 +88,7 @@ Create new employee
 | Personal Identification Number | Personal identification number                                                                         |         |
 | Tax Number                     | Tax Number                                                                                             |         |
 
-### Create Project
+### Create Project {#createproject}
 
 Create a new project.
 
@@ -102,7 +102,7 @@ Create a new project.
 | Limit Total Hours     | Activate the limit of hours          | false   |
 | Max Limit Total Hours | The limit number of hours            |         |
 
-### Create Projects
+### Create Projects {#createprojects}
 
 Create a batch of projects.
 
@@ -111,7 +111,7 @@ Create a batch of projects.
 | Connection |                       |         |
 | Projects   | An array of projects. |         |
 
-### Create Time Off Requests
+### Create Time Off Requests {#createtimeoffrequests}
 
 Create new time off request
 
@@ -131,7 +131,7 @@ Create new time off request
 | Last Working Day   | format: H:M; required if part_of_day is specific_timespan                           |         |
 | Details            | required based on policy settings                                                   |         |
 
-### Delete Document
+### Delete Document {#deletedocument}
 
 Allows admin to delete document.
 
@@ -140,7 +140,7 @@ Allows admin to delete document.
 | Connection  |                              |         |
 | Document ID | ID of document to be deleted |         |
 
-### Get Document
+### Get Document {#getdocument}
 
 View Document Details.
 
@@ -149,7 +149,7 @@ View Document Details.
 | Connection  |             |         |
 | Document ID | Document ID |         |
 
-### Get Employee
+### Get Employee {#getemployee}
 
 Retrieve single active employee in company.
 
@@ -161,7 +161,7 @@ Retrieve single active employee in company.
 | Employment Status History | Whether to return the employment status history | false   |
 | Position History          | Whether to return the position history          | false   |
 
-### Get Employee Compensations
+### Get Employee Compensations {#getemployeecompensations}
 
 Retrieve single employee's compensation details
 
@@ -170,7 +170,7 @@ Retrieve single employee's compensation details
 | Connection  |                        |         |
 | Employee ID | The ID of the employee |         |
 
-### Get Employee Custom Fields
+### Get Employee Custom Fields {#getemployeecustomfields}
 
 Get employee custom fields
 
@@ -179,7 +179,7 @@ Get employee custom fields
 | Connection  |                        |         |
 | Employee ID | The ID of the employee |         |
 
-### Get Terminated Employee
+### Get Terminated Employee {#getterminatedemployee}
 
 Retrieve single terminated employee
 
@@ -188,7 +188,7 @@ Retrieve single terminated employee
 | Connection  |                        |         |
 | Employee ID | The ID of the employee |         |
 
-### List Documents
+### List Documents {#listdocuments}
 
 View all documents for company
 
@@ -198,7 +198,7 @@ View all documents for company
 | Category ID | Optional ID of the document category to filter by. |         |
 | Employee ID | Optional id of employee to filter documents.       |         |
 
-### List Employees
+### List Employees {#listemployees}
 
 List active employees in company.
 
@@ -210,7 +210,7 @@ List active employees in company.
 | Employment Status History | Whether to return the employment status history | false   |
 | Position History          | Whether to return the position history          | false   |
 
-### List Positions
+### List Positions {#listpositions}
 
 List positions in company
 
@@ -219,7 +219,7 @@ List positions in company
 | Connection |                           |         |
 | Page       | The page number to return |         |
 
-### List Projects
+### List Projects {#listprojects}
 
 List projects
 
@@ -227,7 +227,7 @@ List projects
 | ---------- | -------- | ------- |
 | Connection |          |         |
 
-### List Teams
+### List Teams {#listteams}
 
 List teams in company
 
@@ -236,7 +236,7 @@ List teams in company
 | Connection |                           |         |
 | Page       | The page number to return |         |
 
-### List Terminated Employees
+### List Terminated Employees {#listterminatedemployees}
 
 Retrieve a list of terminated employees
 
@@ -248,7 +248,7 @@ Retrieve a list of terminated employees
 | Employment Status History | Whether to return the employment status history | false   |
 | Position History          | Whether to return the position history          | false   |
 
-### List Time Off Balances
+### List Time Off Balances {#listtimeoffbalances}
 
 Lists employee time off balances
 
@@ -257,7 +257,7 @@ Lists employee time off balances
 | Connection  |                        |         |
 | Employee ID | The ID of the employee |         |
 
-### List Time Off Requests
+### List Time Off Requests {#listtimeoffrequests}
 
 Lists employee time off Requests
 
@@ -268,7 +268,7 @@ Lists employee time off Requests
 | From Date  | If not specified defaults to beginning of current month. Format: YYYY-MM-DD                                                                                                                       |         |
 | To Date    | If not specified defaults to end of current month. Days between from date and to date must be less than 65. If you need info for larger period of time make multiple requests. Format: YYYY-MM-DD |         |
 
-### Raw Request
+### Raw Request {#rawrequest}
 
 Send raw HTTP request to Sage HR
 
@@ -291,7 +291,7 @@ Send raw HTTP request to Sage HR
 | Max Retry Count         | The maximum number of retries to attempt.                                                                                                                                                                          | 0       |
 | Use Exponential Backoff | Specifies whether to use a pre-defined exponential backoff strategy for retries.                                                                                                                                   | false   |
 
-### Rehire Employee
+### Rehire Employee {#rehireemployee}
 
 Rehire Employee.
 
@@ -303,7 +303,7 @@ Rehire Employee.
 | Comments              | Comments                                                                                            |         |
 | Start Fresh           | This parameter is used to start the employee record clean, resetting the employee's leave balances. | false   |
 
-### Terminate Employee
+### Terminate Employee {#terminateemployee}
 
 Terminate Employee.
 
@@ -315,7 +315,7 @@ Terminate Employee.
 | Termination Reason ID | Termination reason ID                |         |
 | Comments              | Comments                             |         |
 
-### Time Clocking In and Out
+### Time Clocking In and Out {#timeclockinginandout}
 
 Clock in and out employees on specific days
 
@@ -325,7 +325,7 @@ Clock in and out employees on specific days
 | Override     | 'true' if override provided days clocked entries                                                | false   |
 | Clocked Time | Clocked time entries for the day. If override is true, this will override the existing entries. |         |
 
-### Update Document
+### Update Document {#updatedocument}
 
 Document will only be visible to employee themselves.
 
@@ -349,7 +349,7 @@ Document will only be visible to employee themselves.
 | Expires                       | if 'true' expiration_date is also required                                               | false                   |
 | Expiration Date               | Expiration date of the document, format: YYYY-MM-DD                                      |                         |
 
-### Update Employee
+### Update Employee {#updateemployee}
 
 Update employee
 
@@ -383,7 +383,7 @@ Update employee
 | Approver IDs                   | List of approver IDs.                                                                                  | <code>["000xxx"]</code> |
 | Selected Leave Types           | Selected leave types.                                                                                  | <code>["000xxx"]</code> |
 
-### Update Employee Custom Field
+### Update Employee Custom Field {#updateemployeecustomfield}
 
 Update employee custom field
 
@@ -394,7 +394,7 @@ Update employee custom field
 | Custom Field ID    | Custom field ID        |         |
 | Custom Field Value | Custom field Value     |         |
 
-### Update Project
+### Update Project {#updateproject}
 
 Update a project.
 
@@ -409,7 +409,7 @@ Update a project.
 | Limit Total Hours     | Activate the limit of hours          | false   |
 | Max Limit Total Hours | The limit number of hours            |         |
 
-### Update Projects
+### Update Projects {#updateprojects}
 
 Update a batch of projects.
 

@@ -9,7 +9,7 @@ Manage repositories, issues, pull requests, and workflows in GitHub.
 
 ## Connections
 
-### OAuth 2.0
+### OAuth 2.0 {#oauth2}
 
 Authenticates with your Github account using OAuth 2.0
 
@@ -46,7 +46,7 @@ Read about how OAuth 2.0 works [here](../oauth2.md).
 
 ## Triggers
 
-### Webhook
+### Webhook {#webhook}
 
 Receive and validate webhook requests from Github for webhooks you configure.
 
@@ -56,7 +56,7 @@ Receive and validate webhook requests from Github for webhooks you configure.
 
 ## Actions
 
-### Actions Create Workflow Dispatch
+### Actions Create Workflow Dispatch {#actionscreateworkflowdispatch}
 
 Create a workflow dispatch event
 
@@ -69,7 +69,7 @@ Create a workflow dispatch event
 | Ref             | The git reference for the workflow                                                                                                                  |                                                              |
 | Inputs          | Input keys and values configured in the workflow file. This can be a JSON input mapping, or a reference to a previous step that returned an object. | <code>{"input1":"My Value","input2":"My Other Value"}</code> |
 
-### Git Create Blob
+### Git Create Blob {#gitcreateblob}
 
 Create a blob
 
@@ -81,7 +81,7 @@ Create a blob
 | Content         | The new blob"s content                                                                                                    |         |
 | Encoding        | The encoding used for "content"                                                                                           | utf-8   |
 
-### Git Create Ref
+### Git Create Ref {#gitcreateref}
 
 Create a reference
 
@@ -94,7 +94,7 @@ Create a reference
 | Sha             | The SHA1 value for this reference                                                                                         |         |
 | Key             |                                                                                                                           |         |
 
-### Git Create Tree
+### Git Create Tree {#gitcreatetree}
 
 Create a tree
 
@@ -106,7 +106,7 @@ Create a tree
 | Tree            | Objects (of "path", "mode", "type", and "content" or "sha") specifying a tree structure. See https://docs.github.com/en/rest/git/trees#create-a-tree | <code>[<br /> {<br /> "path": "test.txt",<br /> "mode": "100644",<br /> "content": "This is a test"<br /> }<br />]</code> |
 | Base Tree       | The SHA1 of an existing Git tree object which will be used as the base for the new tree                                                              |                                                                                                                           |
 
-### Git Get Ref
+### Git Get Ref {#gitgetref}
 
 Get a reference
 
@@ -117,7 +117,7 @@ Get a reference
 | Repository Name | The name of the repository. For example, in https://github.com/octocat/Hello-World, the repository name is 'Hello-World'. |         |
 | Ref             | ref parameter                                                                                                             |         |
 
-### Issues Create Comment
+### Issues Create Comment {#issuescreatecomment}
 
 Create an issue comment
 
@@ -129,7 +129,7 @@ Create an issue comment
 | Issue Number    | The number that identifies the issue                                                                                      |         |
 | Body            | The contents of the comment                                                                                               |         |
 
-### Issues List Comments
+### Issues List Comments {#issueslistcomments}
 
 List issue comments
 
@@ -143,7 +143,7 @@ List issue comments
 | Per Page        | The number of results per page (max 100)                                                                                  | 30      |
 | Page            | Page number of the results to fetch                                                                                       | 1       |
 
-### Issues List For Repo
+### Issues List For Repo {#issueslistforrepo}
 
 List repository issues
 
@@ -165,7 +165,7 @@ List repository issues
 | Per Page        | The number of results per page (max 100)                                                                                  | 30      |
 | Page            | Page number of the results to fetch                                                                                       | 1       |
 
-### Orgs List For Authenticated User
+### Orgs List For Authenticated User {#orgslistforauthenticateduser}
 
 List organizations for the authenticated user
 
@@ -175,7 +175,7 @@ List organizations for the authenticated user
 | Per Page   | The number of results per page (max 100) | 30      |
 | Page       | Page number of the results to fetch      | 1       |
 
-### Pulls Create
+### Pulls Create {#pullscreate}
 
 Create a pull request
 
@@ -192,7 +192,7 @@ Create a pull request
 | Draft                 | When true, creates the pull request as a draft. Draft pull requests cannot be merged until marked as ready for review.                                                                                                                                    | false   |
 | Issue Number          | The number that identifies the issue                                                                                                                                                                                                                      |         |
 
-### Pulls List
+### Pulls List {#pullslist}
 
 List pull requests
 
@@ -209,7 +209,7 @@ List pull requests
 | Per Page        | The number of results per page (max 100).                                                                                   | 30      |
 | Page            | The page number of the results to fetch.                                                                                    | 1       |
 
-### Raw Request
+### Raw Request {#rawrequest}
 
 Send raw HTTP request to Github
 
@@ -232,7 +232,7 @@ Send raw HTTP request to Github
 | Max Retry Count         | The maximum number of retries to attempt. Specify 0 for no retries.                                                                                                                              | 0       |
 | Use Exponential Backoff | Specifies whether to use a pre-defined exponential backoff strategy for retries. When enabled, 'Retry Delay (ms)' is ignored.                                                                    | false   |
 
-### Repos Create Webhook
+### Repos Create Webhook {#reposcreatewebhook}
 
 Create a repository webhook
 
@@ -245,7 +245,7 @@ Create a repository webhook
 | Events          | The list of event types that will trigger the webhook.                                                                                                                                       |         |
 | Webhook Secret  | An optional secret used to verify webhook authenticity. See [GitHub's documentation](https://docs.github.com/en/developers/webhooks-and-events/webhooks/securing-your-webhooks) for details. |         |
 
-### Repos Delete Instance Webhooks
+### Repos Delete Instance Webhooks {#reposdeleteinstancewebhooks}
 
 Delete all webhooks pointed at this instance
 
@@ -255,7 +255,7 @@ Delete all webhooks pointed at this instance
 | Owner           | The account owner of the repository. For example, in https://github.com/octocat/Hello-World, the owner is 'octocat'.      |         |
 | Repository Name | The name of the repository. For example, in https://github.com/octocat/Hello-World, the repository name is 'Hello-World'. |         |
 
-### Repos Delete Webhook
+### Repos Delete Webhook {#reposdeletewebhook}
 
 Delete a repository webhook by ID
 
@@ -266,7 +266,7 @@ Delete a repository webhook by ID
 | Repository Name | The name of the repository. For example, in https://github.com/octocat/Hello-World, the repository name is 'Hello-World'. |         |
 | Hook ID         | The unique identifier of the webhook.                                                                                     |         |
 
-### Repos List For Org
+### Repos List For Org {#reposlistfororg}
 
 List organization repositories
 
@@ -280,7 +280,7 @@ List organization repositories
 | Per Page   | The number of results per page (max 100)              | 30      |
 | Page       | Page number of the results to fetch                   | 1       |
 
-### Repos List Webhooks
+### Repos List Webhooks {#reposlistwebhooks}
 
 List webhooks of a repository
 
@@ -291,7 +291,7 @@ List webhooks of a repository
 | Repository Name             | The name of the repository. For example, in https://github.com/octocat/Hello-World, the repository name is 'Hello-World'. |         |
 | Show only instance webhooks | When true, shows only webhooks that point to this instance.                                                               | true    |
 
-### Users Get Authenticated
+### Users Get Authenticated {#usersgetauthenticated}
 
 Get the authenticated user
 
@@ -299,7 +299,7 @@ Get the authenticated user
 | ---------- | -------- | ------- |
 | Connection |          |         |
 
-### Users Get By Username
+### Users Get By Username {#usersgetbyusername}
 
 Get a user
 

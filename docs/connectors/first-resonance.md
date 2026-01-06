@@ -9,7 +9,7 @@ Interact with ION&#x27;s data and services through ION&#x27;s GraphQL API.
 
 ## Connections
 
-### OAuth Client Credentials
+### OAuth Client Credentials {#firstresonanceoauthclientcredentials}
 
 Get an access token for the ION API
 
@@ -26,13 +26,13 @@ Read about how OAuth 2.0 works [here](../oauth2.md).
 
 ## Triggers
 
-### Trigger
+### Trigger {#firstresonancetrigger}
 
 Receive a webhook from ION
 
 ## Actions
 
-### Run GraphQL Query
+### Run GraphQL Query {#rawrequest}
 
 Performs a generic GraphQL query against the API
 

@@ -9,7 +9,7 @@ Generate a step output
 
 ## Actions
 
-### Mock Result
+### Mock Result {#actions}
 
 Generate a step result of your choosing.
 

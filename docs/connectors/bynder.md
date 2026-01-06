@@ -9,7 +9,7 @@ Bynder is a leading digital asset management software that allows users to easil
 
 ## Connections
 
-### Client Credentials OAuth 2.0
+### Client Credentials OAuth 2.0 {#bynder-client-credentials-oauth}
 
 Client Credentials OAuth 2.0
 
@@ -34,7 +34,7 @@ Read about how OAuth 2.0 works [here](../oauth2.md).
 | Client ID     | The client ID for the OAuth connection                         |                                                                                                                                                                                                                                                                                                                                                           |
 | Client Secret | The client secret for the OAuth connection                     |                                                                                                                                                                                                                                                                                                                                                           |
 
-### OAuth 2.0
+### OAuth 2.0 {#bynder-oauth}
 
 OAuth 2.0
 
@@ -64,7 +64,7 @@ Read about how OAuth 2.0 works [here](../oauth2.md).
 
 ## Actions
 
-### Add Asset Metaproperty Options
+### Add Asset Metaproperty Options {#addassetmetapropertyoptions}
 
 Add metaproperty options to an asset
 
@@ -76,7 +76,7 @@ Add metaproperty options to an asset
 | Debug Request            | Enabling this flag will log out the current request.          | false   |
 | Connection               |                                                               |         |
 
-### Close Campaign
+### Close Campaign {#closecampaign}
 
 Delete an existing campaign
 
@@ -86,7 +86,7 @@ Delete an existing campaign
 | Debug Request | Enabling this flag will log out the current request. | false   |
 | Connection    |                                                      |         |
 
-### Create Campaign
+### Create Campaign {#createcampaign}
 
 Create a new campaign
 
@@ -100,7 +100,7 @@ Create a new campaign
 | Debug Request  | Enabling this flag will log out the current request. | false   |
 | Connection     |                                                      |         |
 
-### Create Collection
+### Create Collection {#createcollection}
 
 Create a new collection
 
@@ -111,7 +111,7 @@ Create a new collection
 | Debug Request          | Enabling this flag will log out the current request. | false   |
 | Connection             |                                                      |         |
 
-### Create Job
+### Create Job {#createjob}
 
 Create a new job
 
@@ -126,7 +126,7 @@ Create a new job
 | Debug Request  | Enabling this flag will log out the current request. | false   |
 | Connection     |                                                      |         |
 
-### Create User
+### Create User {#createuser}
 
 Create a new user
 
@@ -142,7 +142,7 @@ Create a new user
 | Debug Request | Enabling this flag will log out the current request.                                                                  | false   |
 | Connection    |                                                                                                                       |         |
 
-### Delete Asset
+### Delete Asset {#deleteasset}
 
 Delete an existing asset
 
@@ -152,7 +152,7 @@ Delete an existing asset
 | Debug Request | Enabling this flag will log out the current request. | false   |
 | Connection    |                                                      |         |
 
-### Delete Asset Metaproperty Options
+### Delete Asset Metaproperty Options {#deleteassetmetapropertyoptions}
 
 Remove metaproperty options from an asset
 
@@ -164,7 +164,7 @@ Remove metaproperty options from an asset
 | Debug Request            | Enabling this flag will log out the current request.          | false   |
 | Connection               |                                                               |         |
 
-### Delete Campaign
+### Delete Campaign {#deletecampaign}
 
 Delete an existing campaign
 
@@ -174,7 +174,7 @@ Delete an existing campaign
 | Debug Request | Enabling this flag will log out the current request. | false   |
 | Connection    |                                                      |         |
 
-### Delete Collection
+### Delete Collection {#deletecollection}
 
 Delete an existing collection
 
@@ -184,7 +184,7 @@ Delete an existing collection
 | Debug Request | Enabling this flag will log out the current request. | false   |
 | Connection    |                                                      |         |
 
-### Delete Job
+### Delete Job {#deletejob}
 
 Delete an existing job
 
@@ -194,7 +194,7 @@ Delete an existing job
 | Debug Request | Enabling this flag will log out the current request. | false   |
 | Connection    |                                                      |         |
 
-### Delete User
+### Delete User {#deleteuser}
 
 Remove an existing user
 
@@ -204,7 +204,7 @@ Remove an existing user
 | Debug Request | Enabling this flag will log out the current request. | false   |
 | Connection    |                                                      |         |
 
-### Download Specific Asset Item
+### Download Specific Asset Item {#downloadspecificassetitem}
 
 Download an specific asset item
 
@@ -216,7 +216,7 @@ Download an specific asset item
 | Debug Request | Enabling this flag will log out the current request.             | false   |
 | Connection    |                                                                  |         |
 
-### Finalize Complete Upload
+### Finalize Complete Upload {#finalisecompleteupload}
 
 Finalize a completely uploaded file.
 
@@ -230,7 +230,7 @@ Finalize a completely uploaded file.
 | Debug Request     | Enabling this flag will log out the current request.             | false   |
 | Connection        |                                                                  |         |
 
-### Finalize Complete Upload And Save As New Asset Additional
+### Finalize Complete Upload And Save As New Asset Additional {#finalisecompleteuploadandsaveasnewasset}
 
 Finalize a completely uploaded file and save as a new asset additional.
 
@@ -244,7 +244,7 @@ Finalize a completely uploaded file and save as a new asset additional.
 | Debug Request | Enabling this flag will log out the current request.                                     | false   |
 | Connection    |                                                                                          |         |
 
-### Generate Dynamic Asset Transformation
+### Generate Dynamic Asset Transformation {#generatedynamictransformation}
 
 Generate a derivative on the fly with a transformation (such as cropping, scaling, filling) applied to it
 
@@ -259,7 +259,7 @@ Generate a derivative on the fly with a transformation (such as cropping, scalin
 | Debug Request | Enabling this flag will log out the current request.                                                                                                                | false   |
 | Connection    |                                                                                                                                                                     |         |
 
-### Get Account Information
+### Get Account Information {#getaccountinformation}
 
 Retrieve information on current account
 
@@ -268,7 +268,7 @@ Retrieve information on current account
 | Debug Request | Enabling this flag will log out the current request. | false   |
 | Connection    |                                                      |         |
 
-### Get Asset
+### Get Asset {#getasset}
 
 Retrieve a specific asset
 
@@ -280,7 +280,7 @@ Retrieve a specific asset
 | Debug Request | Enabling this flag will log out the current request.                          | false   |
 | Connection    |                                                                               |         |
 
-### Get Campaign
+### Get Campaign {#getcampaign}
 
 Retrieve a specific campaign
 
@@ -290,7 +290,7 @@ Retrieve a specific campaign
 | Debug Request | Enabling this flag will log out the current request. | false   |
 | Connection    |                                                      |         |
 
-### Get Closest S3 Upload Endpoint
+### Get Closest S3 Upload Endpoint {#getclosests3endpoint}
 
 Retrieve the closest S3 upload endpoint
 
@@ -299,7 +299,7 @@ Retrieve the closest S3 upload endpoint
 | Debug Request | Enabling this flag will log out the current request. | false   |
 | Connection    |                                                      |         |
 
-### Get Collection
+### Get Collection {#getcollection}
 
 Retrieve a specific collection
 
@@ -309,7 +309,7 @@ Retrieve a specific collection
 | Debug Request | Enabling this flag will log out the current request. | false   |
 | Connection    |                                                      |         |
 
-### Get Current User
+### Get Current User {#getcurrentuser}
 
 Retrieve the current user
 
@@ -318,7 +318,7 @@ Retrieve the current user
 | Debug Request | Enabling this flag will log out the current request. | false   |
 | Connection    |                                                      |         |
 
-### Get Job
+### Get Job {#getjob}
 
 Retrieve a job by ID
 
@@ -328,7 +328,7 @@ Retrieve a job by ID
 | Debug Request | Enabling this flag will log out the current request. | false   |
 | Connection    |                                                      |         |
 
-### Get Job Preset
+### Get Job Preset {#getjobpreset}
 
 Retrieve a job preset by ID
 
@@ -338,7 +338,7 @@ Retrieve a job preset by ID
 | Debug Request | Enabling this flag will log out the current request. | false   |
 | Connection    |                                                      |         |
 
-### Get Media of Job
+### Get Media of Job {#getmediaofjob}
 
 Retrieve media attached to an existing job
 
@@ -348,7 +348,7 @@ Retrieve media attached to an existing job
 | Debug Request | Enabling this flag will log out the current request. | false   |
 | Connection    |                                                      |         |
 
-### Get Order
+### Get Order {#getorder}
 
 Retrieve an existing order
 
@@ -359,7 +359,7 @@ Retrieve an existing order
 | Debug Request | Enabling this flag will log out the current request.                            | false   |
 | Connection    |                                                                                 |         |
 
-### Get Order Info
+### Get Order Info {#getorderinfo}
 
 Retrieve information on an order
 
@@ -369,7 +369,7 @@ Retrieve information on an order
 | Debug Request | Enabling this flag will log out the current request. | false   |
 | Connection    |                                                      |         |
 
-### Get Security Profile
+### Get Security Profile {#getsecurityprofile}
 
 Retrieve a specified security profile
 
@@ -379,7 +379,7 @@ Retrieve a specified security profile
 | Debug Request | Enabling this flag will log out the current request. | false   |
 | Connection    |                                                      |         |
 
-### Get User
+### Get User {#getuser}
 
 Retrieve a specified user
 
@@ -389,7 +389,7 @@ Retrieve a specified user
 | Debug Request | Enabling this flag will log out the current request. | false   |
 | Connection    |                                                      |         |
 
-### Initialize Upload
+### Initialize Upload {#initialiseupload}
 
 Initialize a new file upload.
 
@@ -399,7 +399,7 @@ Initialize a new file upload.
 | Debug Request | Enabling this flag will log out the current request. | false   |
 | Connection    |                                                      |         |
 
-### List Assets
+### List Assets {#listassets}
 
 Retrieve all assets
 
@@ -414,7 +414,7 @@ Retrieve all assets
 | Debug Request    | Enabling this flag will log out the current request.                                                                                   | false   |
 | Connection       |                                                                                                                                        |         |
 
-### List Brands
+### List Brands {#listbrands}
 
 Retrieve all brands
 
@@ -423,7 +423,7 @@ Retrieve all brands
 | Debug Request | Enabling this flag will log out the current request. | false   |
 | Connection    |                                                      |         |
 
-### List Campaigns
+### List Campaigns {#listcampaigns}
 
 Retrieve all campaigns
 
@@ -432,7 +432,7 @@ Retrieve all campaigns
 | Debug Request | Enabling this flag will log out the current request. | false   |
 | Connection    |                                                      |         |
 
-### List Collections
+### List Collections {#listcollections}
 
 Retrieve all collections
 
@@ -446,7 +446,7 @@ Retrieve all collections
 | Debug Request    | Enabling this flag will log out the current request.                                                                                   | false   |
 | Connection       |                                                                                                                                        |         |
 
-### List Jobs
+### List Jobs {#listjobs}
 
 Retrieve all jobs
 
@@ -458,7 +458,7 @@ Retrieve all jobs
 | Debug Request    | Enabling this flag will log out the current request.                           | false   |
 | Connection       |                                                                                |         |
 
-### List Jobs By Campaign
+### List Jobs By Campaign {#listjobsbycampaign}
 
 Retrieve jobs tied to a campaign
 
@@ -471,7 +471,7 @@ Retrieve jobs tied to a campaign
 | Debug Request    | Enabling this flag will log out the current request.                           | false   |
 | Connection       |                                                                                |         |
 
-### List Metaproperties
+### List Metaproperties {#listmetaproperties}
 
 Retrieve all metaproperties.
 
@@ -484,7 +484,7 @@ Retrieve all metaproperties.
 | Debug Request | Enabling this flag will log out the current request.                                                                                    | false   |
 | Connection    |                                                                                                                                         |         |
 
-### List Orders
+### List Orders {#listorders}
 
 Retrieve all orders.
 
@@ -494,7 +494,7 @@ Retrieve all orders.
 | Debug Request | Enabling this flag will log out the current request.                                               | false   |
 | Connection    |                                                                                                    |         |
 
-### List Security Profiles
+### List Security Profiles {#listsecurityprofiles}
 
 Retrieve all security profiles
 
@@ -503,7 +503,7 @@ Retrieve all security profiles
 | Debug Request | Enabling this flag will log out the current request. | false   |
 | Connection    |                                                      |         |
 
-### List Users
+### List Users {#listusers}
 
 Retrieve all users
 
@@ -515,7 +515,7 @@ Retrieve all users
 | Debug Request    | Enabling this flag will log out the current request.                           | false   |
 | Connection       |                                                                                |         |
 
-### Raw Request
+### Raw Request {#rawrequest}
 
 Send raw HTTP request to Bynder
 
@@ -538,7 +538,7 @@ Send raw HTTP request to Bynder
 | Max Retry Count         | The maximum number of retries to attempt. Specify 0 for no retries.                                                                                                                              | 0       |
 | Use Exponential Backoff | Specifies whether to use a pre-defined exponential backoff strategy for retries. When enabled, 'Retry Delay (ms)' is ignored.                                                                    | false   |
 
-### Register Uploaded Chunk
+### Register Uploaded Chunk {#registeruploadedchunk}
 
 Register an uploaded chunk.
 
@@ -551,7 +551,7 @@ Register an uploaded chunk.
 | Debug Request | Enabling this flag will log out the current request.   | false   |
 | Connection    |                                                        |         |
 
-### Retrieve Poll State
+### Retrieve Poll State {#retrievepollstate}
 
 Poll processing state of finalized files
 
@@ -561,7 +561,7 @@ Poll processing state of finalized files
 | Debug Request | Enabling this flag will log out the current request.                               | false   |
 | Connection    |                                                                                    |         |
 
-### Save a New Asset
+### Save a New Asset {#saveasnewasset}
 
 Save a completed upload as a new asset.
 
@@ -576,7 +576,7 @@ Save a completed upload as a new asset.
 | Debug Request | Enabling this flag will log out the current request.       | false   |
 | Connection    |                                                            |         |
 
-### Save as a New Asset Version
+### Save as a New Asset Version {#saveasnewassetversion}
 
 Save a completed upload as a new asset version.
 
@@ -587,7 +587,7 @@ Save a completed upload as a new asset version.
 | Debug Request | Enabling this flag will log out the current request.       | false   |
 | Connection    |                                                            |         |
 
-### Share Collection
+### Share Collection {#sharecollection}
 
 Share a collection
 
@@ -602,7 +602,7 @@ Share a collection
 | Debug Request      | Enabling this flag will log out the current request.                                      | false   |
 | Connection         |                                                                                           |         |
 
-### Update Asset
+### Update Asset {#updateasset}
 
 Edit an existing asset
 
@@ -616,7 +616,7 @@ Edit an existing asset
 | Debug Request | Enabling this flag will log out the current request.                      | false   |
 | Connection    |                                                                           |         |
 
-### Update Campaign
+### Update Campaign {#updatecampaign}
 
 Edit an existing campaign
 
@@ -631,7 +631,7 @@ Edit an existing campaign
 | Debug Request  | Enabling this flag will log out the current request. | false   |
 | Connection     |                                                      |         |
 
-### Update Collection
+### Update Collection {#updatecollection}
 
 Edit an existing collection
 
@@ -644,7 +644,7 @@ Edit an existing collection
 | Debug Request          | Enabling this flag will log out the current request.             | false   |
 | Connection             |                                                                  |         |
 
-### Update Job
+### Update Job {#updatejob}
 
 Edit an existing job
 
@@ -659,7 +659,7 @@ Edit an existing job
 | Debug Request  | Enabling this flag will log out the current request. | false   |
 | Connection     |                                                      |         |
 
-### Update Order
+### Update Order {#updateorder}
 
 Update an existing order
 
@@ -672,7 +672,7 @@ Update an existing order
 | Debug Request   | Enabling this flag will log out the current request. | false   |
 | Connection      |                                                      |         |
 
-### Update User
+### Update User {#updateuser}
 
 Edit an existing user
 
@@ -689,7 +689,7 @@ Edit an existing user
 | Debug Request | Enabling this flag will log out the current request.                                                                  | false   |
 | Connection    |                                                                                                                       |         |
 
-### Upload Chunk
+### Upload Chunk {#uploadchunk}
 
 Upload a chunk of a file.
 

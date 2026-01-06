@@ -9,7 +9,7 @@ Send Emails through Amazon (AWS) SES
 
 ## Connections
 
-### AWS Role ARN
+### AWS Role ARN {#awsassumerole}
 
 Connect to AWS using an assumed role
 
@@ -62,7 +62,7 @@ To create and assign a user a role:
 | Secret Access Key | An AWS IAM Secret Access Key                                                                                                                                                                                                                                  |         |
 | External ID       | Provides enhanced security measures to the connection. Optional, but recommended. Please check [AWS docs](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_common-scenarios_third-party.html#id_roles_third-party_external-id) for more information. |         |
 
-### AWS SES Access Key and Secret
+### AWS SES Access Key and Secret {#apikeysecret}
 
 Authenticates requests to Amazon SES using an API Key and API Secret
 
@@ -77,7 +77,7 @@ Read about Amazon SES IAM policies in the [AWS docs](https://docs.aws.amazon.com
 
 ## Actions
 
-### List Identities
+### List Identities {#listidentities}
 
 List Identities available in Amazon SES
 
@@ -88,7 +88,7 @@ List Identities available in Amazon SES
 | Next Token    | Specify the pagination token that's returned by a previous request to retrieve the next page of results |              |
 | Connection    |                                                                                                         |              |
 
-### Send Email
+### Send Email {#sendemail}
 
 Send an email through Amazon SES
 

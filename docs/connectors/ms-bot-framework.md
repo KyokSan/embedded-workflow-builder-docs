@@ -9,7 +9,7 @@ Manage conversations, messages, and activities in Microsoft Bot Framework.
 
 ## Connections
 
-### Direct Line
+### Direct Line {#directline}
 
 Direct Line connection for Microsoft Bot Framework
 
@@ -42,7 +42,7 @@ Direct Line is a channel that allows integrating a bot directly into a client ap
 | ------------------ | ------------------------------------------ | ------- |
 | Direct Line Secret | The Direct Line secret value for your bot. |         |
 
-### OAuth 2.0 Client Credentials
+### OAuth 2.0 Client Credentials {#clientcredentials}
 
 OAuth 2.0 Client Credentials Connectivity for Microsoft Bot Framework
 
@@ -89,7 +89,7 @@ Read about how OAuth 2.0 works [here](../oauth2.md).
 
 ## Triggers
 
-### Bot Framework Trigger
+### Bot Framework Trigger {#bottrigger}
 
 Trigger that validates incoming requests as coming from Bot Framework
 
@@ -99,7 +99,7 @@ Trigger that validates incoming requests as coming from Bot Framework
 
 ## Actions
 
-### Create Conversation
+### Create Conversation {#createconversation}
 
 Create a new Conversation
 
@@ -112,7 +112,7 @@ Create a new Conversation
 | Channel Account ID | The unique identifier of the channel account (refers to conversation members such as bots and users).                                                                                          |         |
 | Tenant ID          | The tenant ID associated with the channel account.                                                                                                                                             |         |
 
-### Get Conversation Members
+### Get Conversation Members {#getconversationmembers}
 
 Get list of members of the conversation
 
@@ -123,7 +123,7 @@ Get list of members of the conversation
 | API Version     | The version of the Bot Framework API to call.                                                                                                                                                  | 3       |
 | Conversation ID | The unique identifier of the conversation (refers to a channel, team, or direct message).                                                                                                      |         |
 
-### Raw Request
+### Raw Request {#rawrequest}
 
 Issue a raw HTTP request
 
@@ -146,7 +146,7 @@ Issue a raw HTTP request
 | Max Retry Count         | The maximum number of retries to attempt. Specify 0 for no retries.                                                                                                                              | 0       |
 | Use Exponential Backoff | Specifies whether to use a pre-defined exponential backoff strategy for retries. When enabled, 'Retry Delay (ms)' is ignored.                                                                    | false   |
 
-### Send Adaptive Card Message
+### Send Adaptive Card Message {#sendadaptivecardmessage}
 
 Send an adaptive card message
 
@@ -160,7 +160,7 @@ Send an adaptive card message
 | From Name       | The name of the user sending the message.                                                                                                                                                      |         |
 | Card Payload    | Adaptive Card payload to send                                                                                                                                                                  |         |
 
-### Send Message
+### Send Message {#sendmessage}
 
 Create a message to a Conversation
 

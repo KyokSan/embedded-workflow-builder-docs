@@ -9,7 +9,7 @@ HiBob is an HR platform for people management, performance, and engagement.
 
 ## Connections
 
-### Basic Authentication
+### Basic Authentication {#hibob-connection}
 
 HiBob Basic Authentication Connection
 
@@ -49,7 +49,7 @@ For basic functionality, ensure your service user has the following permissions:
 
 ## Triggers
 
-### Webhook
+### Webhook {#webhook}
 
 Receive and validate webhook requests from HiBob for webhooks you configure.
 
@@ -59,7 +59,7 @@ Receive and validate webhook requests from HiBob for webhooks you configure.
 
 ## Actions
 
-### Add List Item
+### Add List Item {#addlistitem}
 
 Add a new item to an existing list.
 
@@ -70,7 +70,7 @@ Add a new item to an existing list.
 | Item Name  | The name of the new list item.           |         |
 | Parent ID  | ID of the new hierarchy parent node.     |         |
 
-### Complete Task
+### Complete Task {#completetask}
 
 Mark a task as completed.
 
@@ -79,7 +79,7 @@ Mark a task as completed.
 | Connection |                                 |         |
 | Task ID    | The ID of the task to complete. |         |
 
-### Create Custom Table Entry
+### Create Custom Table Entry {#createcustomtableentry}
 
 Create a new entry in a custom table for an employee.
 
@@ -90,7 +90,7 @@ Create a new entry in a custom table for an employee.
 | Custom Table ID | The ID of the custom table to create an entry in.            |         |
 | Entry Data      | The data for the custom table entry in JSON format.          |         |
 
-### Create Employee
+### Create Employee {#createemployee}
 
 Create a new employee with the specified fields.
 
@@ -103,7 +103,7 @@ Create a new employee with the specified fields.
 | Site       | The employee's site.                  |         |
 | Start Date | The employee's employment start date. |         |
 
-### Create New Field
+### Create New Field {#createnewfield}
 
 Create a new custom field in HiBob.
 
@@ -116,7 +116,7 @@ Create a new custom field in HiBob.
 | Description | A description of the field's purpose.                                                                  |         |
 | Historical  | When true, this field keeps the history of its values, each being active starting from a certain date. | false   |
 
-### Delete Custom Table Entry
+### Delete Custom Table Entry {#deletecustomtableentry}
 
 Delete an existing entry from a custom table for an employee.
 
@@ -127,7 +127,7 @@ Delete an existing entry from a custom table for an employee.
 | Custom Table ID | The ID of the custom table containing the entry to delete.       |         |
 | Entry ID        | The ID of the custom table entry to delete.                      |         |
 
-### Delete Field
+### Delete Field {#deletefield}
 
 Delete an existing custom field from HiBob.
 
@@ -136,7 +136,7 @@ Delete an existing custom field from HiBob.
 | Connection |                                |         |
 | Field ID   | The ID of the field to delete. |         |
 
-### Delete File From Folder
+### Delete File From Folder {#deletefilefromfolder}
 
 Delete a file from an employee's document folder.
 
@@ -148,7 +148,7 @@ Delete a file from an employee's document folder.
 | Folder Type | The type of folder containing the file to delete.                                     |         |
 | Folder ID   | Required if folder type is 'Custom'. The ID of the custom folder containing the file. |         |
 
-### Delete List Item
+### Delete List Item {#deletelistitem}
 
 Delete an existing item from a company list.
 
@@ -158,7 +158,7 @@ Delete an existing item from a company list.
 | List Name  | The name of the list containing the item to delete. |         |
 | Item ID    | The ID of the list item to delete.                  |         |
 
-### Download Employee Documents
+### Download Employee Documents {#downloademployeedocuments}
 
 Download list of documents of an employee.
 
@@ -167,7 +167,7 @@ Download list of documents of an employee.
 | Connection  |                                                     |         |
 | Employee ID | The ID of the employee whose documents to download. |         |
 
-### Get Company List
+### Get Company List {#getcompanylist}
 
 Retrieve a specific named list from the company.
 
@@ -177,7 +177,7 @@ Retrieve a specific named list from the company.
 | List Name        | The name of the list to retrieve.                  |         |
 | Include Archived | Whether to include archived items in the response. | false   |
 
-### Get Custom Table Metadata
+### Get Custom Table Metadata {#getcustomtablemetadata}
 
 Retrieve metadata for a specific custom table.
 
@@ -186,7 +186,7 @@ Retrieve metadata for a specific custom table.
 | Connection      |                                                      |         |
 | Custom Table ID | The ID of the custom table to retrieve metadata for. |         |
 
-### Get Employee Tasks
+### Get Employee Tasks {#getemployeetasks}
 
 Retrieve all tasks assigned to a specific employee.
 
@@ -196,7 +196,7 @@ Retrieve all tasks assigned to a specific employee.
 | Employee ID | The Employee ID as pulled from the database, or from the URL In Bob when viewing the employee. |         |
 | Task Status | Filter tasks by open / closed status. Not sending any value will return all tasks.             |         |
 
-### List Company Lists
+### List Company Lists {#listcompanylists}
 
 Retrieve all named lists in the company.
 
@@ -205,7 +205,7 @@ Retrieve all named lists in the company.
 | Connection       |                                                    |         |
 | Include Archived | Whether to include archived items in the response. | false   |
 
-### List Employee Fields
+### List Employee Fields {#listemployeefields}
 
 Retrieve a list of all employee fields in the company.
 
@@ -213,7 +213,7 @@ Retrieve a list of all employee fields in the company.
 | ---------- | -------- | ------- |
 | Connection |          |         |
 
-### List Folders
+### List Folders {#listfolders}
 
 Retrieve a list of all document folders in the system.
 
@@ -221,7 +221,7 @@ Retrieve a list of all document folders in the system.
 | ---------- | -------- | ------- |
 | Connection |          |         |
 
-### List Open Tasks
+### List Open Tasks {#listopentasks}
 
 Retrieve a list of all open tasks in the system.
 
@@ -229,7 +229,7 @@ Retrieve a list of all open tasks in the system.
 | ---------- | -------- | ------- |
 | Connection |          |         |
 
-### Raw Request
+### Raw Request {#rawrequest}
 
 Send raw HTTP request to HiBob.
 
@@ -251,7 +251,7 @@ Send raw HTTP request to HiBob.
 | Max Retry Count         | The maximum number of retries to attempt. Specify 0 for no retries.                                                                                                                                                                         | 0       |
 | Use Exponential Backoff | Specifies whether to use a pre-defined exponential backoff strategy for retries. When enabled, 'Retry Delay (ms)' is ignored.                                                                                                               | false   |
 
-### Read Employee Fields
+### Read Employee Fields {#reademployeefields}
 
 Retrieve employee data for a specific employee by ID or email.
 
@@ -262,7 +262,7 @@ Retrieve employee data for a specific employee by ID or email.
 | Fields              | An optional list of fields to be returned in the response. When not specified, a default set of fields and categories are returned.                                                           |         |
 | Human Readable      | A flag that determines the data format to be returned in the response payload. Use this flag to convert "machine format" numeric IDs, such as "1644513820829" to the "human readable" values. |         |
 
-### Revoke Employee Access
+### Revoke Employee Access {#revokeemployeeaccess}
 
 Revoke access to Bob for a specific employee.
 
@@ -271,7 +271,7 @@ Revoke access to Bob for a specific employee.
 | Connection          |                                                          |         |
 | Employee Identifier | The employee's ID or email address to revoke access for. |         |
 
-### Search Employee
+### Search Employee {#searchemployee}
 
 Retrieve employee data based on specified criteria.
 
@@ -283,7 +283,7 @@ Retrieve employee data based on specified criteria.
 | Show Inactive  | Defines whether response should include inactive employees.                                                                                                                                   | false   |
 | Human Readable | A flag that determines the data format to be returned in the response payload. Use this flag to convert "machine format" numeric IDs, such as "1644513820829" to the "human readable" values. |         |
 
-### Terminate Employee
+### Terminate Employee {#terminateemployee}
 
 Terminate a specific employee with a given termination date and reason.
 
@@ -297,7 +297,7 @@ Terminate a specific employee with a given termination date and reason.
 | Notice Period       | Notice period length.                                                            |         |
 | Last Day of Work    | The last day of work for the employee.                                           |         |
 
-### Update Custom Table Entry
+### Update Custom Table Entry {#updatecustomtableentry}
 
 Update an existing entry in a custom table for an employee.
 
@@ -309,7 +309,7 @@ Update an existing entry in a custom table for an employee.
 | Entry ID        | The ID of the custom table entry to update.                      |         |
 | Entry Data      | The updated data for the custom table entry in JSON format.      |         |
 
-### Update Employee
+### Update Employee {#updateemployee}
 
 Update employee data for a specific employee by ID or email.
 
@@ -319,7 +319,7 @@ Update employee data for a specific employee by ID or email.
 | Employee Identifier | The employee's ID to update.                                                                                         |         |
 | Fields              | The fields to update for the employee. This should be a JSON object containing the field paths and their new values. |         |
 
-### Update Employee Email
+### Update Employee Email {#updateemployeeemail}
 
 Update the email address for a specific employee.
 
@@ -329,7 +329,7 @@ Update the email address for a specific employee.
 | Employee Identifier | The employee's ID to update the email address for. |         |
 | New Email Address   | The new email address for the employee.            |         |
 
-### Update Field
+### Update Field {#updatefield}
 
 Update an existing custom field in HiBob.
 
@@ -340,7 +340,7 @@ Update an existing custom field in HiBob.
 | Field Name  | The new name for the field.      |         |
 | Description | A new description for the field. |         |
 
-### Update List Item
+### Update List Item {#updatelistitem}
 
 Update an existing item in a company list.
 
@@ -352,7 +352,7 @@ Update an existing item in a company list.
 | Item Name  | The new name for the list item.                     |         |
 | Parent ID  | The ID of the new hierarchy parent node.            |         |
 
-### Upload File From URL
+### Upload File From URL {#uploadfilefromurl}
 
 Upload a file from a URL to an employee's document folder.
 
@@ -366,7 +366,7 @@ Upload a file from a URL to an employee's document folder.
 | Folder ID     | Required if folder type is 'Custom'. The ID of the custom folder to upload to. |         |
 | Tags          | A array of tags that you want to attach to the document in Bob.                |         |
 
-### Upload File To Folder
+### Upload File To Folder {#uploadfiletofolder}
 
 Upload a file directly to an employee's document folder.
 

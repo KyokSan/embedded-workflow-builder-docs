@@ -9,7 +9,7 @@ ServiceDesk Plus is a comprehensive service desk software that offers a suite of
 
 ## Connections
 
-### ServiceDesk Plus OAuth 2.0
+### ServiceDesk Plus OAuth 2.0 {#sdp-oauth2}
 
 This connection allows you to authenticate with ServiceDesk Plus using OAuth 2.0.
 
@@ -41,6 +41,7 @@ Read about how OAuth 2.0 works [here](../oauth2.md).
 | Input         | Comments                                                                                                                                                                                           | Default                                                           |
 | ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------- |
 | Authorize URL | The OAuth 2.0 Authorization URL for ServiceDesk Plus                                                                                                                                               | https://accounts.zoho.com/oauth/v2/auth?access_type=offline       |
+| Token URL     | The OAuth 2.0 Token URL for ServiceDesk Plus                                                                                                                                                       | https://accounts.zoho.com/oauth/v2/token                          |
 | Scopes        | A comma-delimited set of one or more scopes to get the user's permission to access. Refer to https://www.manageengine.com/products/service-desk/sdpod-v3-api/getting-started/oauth-2.0.html#scopes | SDPOnDemand.assets.ALL SDPOnDemand.cmdb.ALL SDPOnDemand.setup.ALL |
 | Client ID     |                                                                                                                                                                                                    |                                                                   |
 | Client Secret |                                                                                                                                                                                                    |                                                                   |
@@ -48,7 +49,7 @@ Read about how OAuth 2.0 works [here](../oauth2.md).
 
 ## Actions
 
-### Create Asset
+### Create Asset {#createasset}
 
 Create a new asset
 
@@ -65,7 +66,7 @@ Create a new asset
 | Connection             |                                                                           |                                                                                   |
 | Debug Request          | Enabling this flag will log out the current request.                      | false                                                                             |
 
-### Create Configuration Item
+### Create Configuration Item {#createconfigurationitem}
 
 Create a new configuration item on the CMDB
 
@@ -78,7 +79,7 @@ Create a new configuration item on the CMDB
 | Connection       |                                                        |                                                           |
 | Debug Request    | Enabling this flag will log out the current request.   | false                                                     |
 
-### Create Problem
+### Create Problem {#createproblem}
 
 Create a new problem
 
@@ -93,7 +94,7 @@ Create a new problem
 | Additional Fields     | Additional fields that might not be covered by the standard inputs. See https://www.manageengine.com/products/service-desk/sdpod-v3-api/problems/problem.html for details. |         |
 | Debug Request         | Enabling this flag will log out the current request.                                                                                                                       | false   |
 
-### Create Problem Note
+### Create Problem Note {#createproblemnote}
 
 Create a new problem note
 
@@ -106,7 +107,7 @@ Create a new problem note
 | Additional Fields | Additional fields that might not be covered by the standard inputs. See https://www.manageengine.com/products/service-desk/sdpod-v3-api/problems/problem_note.html for details.               |         |
 | Debug Request     | Enabling this flag will log out the current request.                                                                                                                                          | false   |
 
-### Create Problem Task
+### Create Problem Task {#createproblemtask}
 
 Create a problem task
 
@@ -126,7 +127,7 @@ Create a problem task
 | Additional Fields        | Additional fields that might not be covered by the standard inputs. See https://www.manageengine.com/products/service-desk/sdpod-v3-api/problems/problem_task.html for details. |         |
 | Debug Request            | Enabling this flag will log out the current request.                                                                                                                            | false   |
 
-### Create Product
+### Create Product {#createproduct}
 
 Create a new product
 
@@ -142,7 +143,7 @@ Create a new product
 | Connection    |                                                                      |                                                                                        |
 | Debug Request | Enabling this flag will log out the current request.                 | false                                                                                  |
 
-### Create Product Type
+### Create Product Type {#createproducttype}
 
 Create a new product type
 
@@ -156,7 +157,7 @@ Create a new product type
 | Connection    |                                                                       |                                                                             |
 | Debug Request | Enabling this flag will log out the current request.                  | false                                                                       |
 
-### Create Request
+### Create Request {#createrequest}
 
 Create a new request
 
@@ -171,7 +172,7 @@ Create a new request
 | Additional Fields         | Additional fields that might not be covered by the standard inputs. See https://www.manageengine.com/products/service-desk/sdpod-v3-api/requests/request.html for details. |         |
 | Debug Request             | Enabling this flag will log out the current request.                                                                                                                       | false   |
 
-### Create Request Task
+### Create Request Task {#createrequesttask}
 
 Create a new request task
 
@@ -190,7 +191,7 @@ Create a new request task
 | Additional Fields                   | Additional fields that might not be covered by the standard inputs. See https://www.manageengine.com/products/service-desk/sdpod-v3-api/requests/request_task.html for details. |         |
 | Debug Request                       | Enabling this flag will log out the current request.                                                                                                                            | false   |
 
-### Delete Asset
+### Delete Asset {#deleteasset}
 
 Delete an existing asset
 
@@ -200,7 +201,7 @@ Delete an existing asset
 | Connection    |                                                      |         |
 | Debug Request | Enabling this flag will log out the current request. | false   |
 
-### Delete Configuration Item
+### Delete Configuration Item {#deleteconfigurationitem}
 
 Delete an existing configuration item on the CMDB
 
@@ -211,7 +212,7 @@ Delete an existing configuration item on the CMDB
 | Connection       |                                                        |         |
 | Debug Request    | Enabling this flag will log out the current request.   | false   |
 
-### Delete Problem
+### Delete Problem {#deleteproblem}
 
 Delete a problem by ID
 
@@ -221,7 +222,7 @@ Delete a problem by ID
 | To Delete Problem ID | ID of the problem to be deleted.                     |         |
 | Debug Request        | Enabling this flag will log out the current request. | false   |
 
-### Delete Problem Note
+### Delete Problem Note {#deleteproblemnote}
 
 Delete a problem note
 
@@ -232,7 +233,7 @@ Delete a problem note
 | To Delete Note ID | ID of the note to be deleted.                        |         |
 | Debug Request     | Enabling this flag will log out the current request. | false   |
 
-### Delete Problem Task
+### Delete Problem Task {#deleteproblemtask}
 
 Delete a problem task
 
@@ -243,7 +244,7 @@ Delete a problem task
 | To Delete Task ID | ID of the task to be deleted.                        |         |
 | Debug Request     | Enabling this flag will log out the current request. | false   |
 
-### Delete Product
+### Delete Product {#deleteproduct}
 
 Delete a single product
 
@@ -253,7 +254,7 @@ Delete a single product
 | Connection    |                                                      |         |
 | Debug Request | Enabling this flag will log out the current request. | false   |
 
-### Delete Product Type
+### Delete Product Type {#deleteproducttype}
 
 Delete a single product type
 
@@ -263,7 +264,7 @@ Delete a single product type
 | Connection    |                                                      |         |
 | Debug Request | Enabling this flag will log out the current request. | false   |
 
-### Delete Request
+### Delete Request {#deleterequest}
 
 Delete a request by ID
 
@@ -273,7 +274,7 @@ Delete a request by ID
 | To Delete Request ID | ID of the request to be deleted.                     |         |
 | Debug Request        | Enabling this flag will log out the current request. | false   |
 
-### Delete Request Task
+### Delete Request Task {#deleterequesttask}
 
 Delete a request task by ID
 
@@ -284,7 +285,7 @@ Delete a request task by ID
 | To Delete Request Task ID | ID of the task to be deleted.                        |         |
 | Debug Request             | Enabling this flag will log out the current request. | false   |
 
-### Get Asset
+### Get Asset {#getasset}
 
 Retrieve a single asset
 
@@ -294,7 +295,7 @@ Retrieve a single asset
 | Connection    |                                                      |         |
 | Debug Request | Enabling this flag will log out the current request. | false   |
 
-### Get Configuration Item
+### Get Configuration Item {#getconfigurationitem}
 
 Retrieve a single configuration item on the CMDB
 
@@ -305,7 +306,7 @@ Retrieve a single configuration item on the CMDB
 | Connection       |                                                        |         |
 | Debug Request    | Enabling this flag will log out the current request.   | false   |
 
-### Get Problem
+### Get Problem {#getproblem}
 
 Get a problem by ID
 
@@ -315,7 +316,7 @@ Get a problem by ID
 | To Get Problem ID | ID of the problem to be retrieved.                   |         |
 | Debug Request     | Enabling this flag will log out the current request. | false   |
 
-### Get Problem Note
+### Get Problem Note {#getproblemnote}
 
 Get a problem note
 
@@ -326,7 +327,7 @@ Get a problem note
 | To Get Note ID | ID of the note to be retrieved.                      |         |
 | Debug Request  | Enabling this flag will log out the current request. | false   |
 
-### Get Problem Task
+### Get Problem Task {#getproblemtask}
 
 Get a problem task
 
@@ -337,7 +338,7 @@ Get a problem task
 | To Get Task ID | ID of the task to be retrieved.                      |         |
 | Debug Request  | Enabling this flag will log out the current request. | false   |
 
-### Get Product
+### Get Product {#getproduct}
 
 Retrieve a single product
 
@@ -347,7 +348,7 @@ Retrieve a single product
 | Connection    |                                                      |         |
 | Debug Request | Enabling this flag will log out the current request. | false   |
 
-### Get Product Type
+### Get Product Type {#getproducttype}
 
 Retrieve a single product type
 
@@ -357,7 +358,7 @@ Retrieve a single product type
 | Connection    |                                                      |         |
 | Debug Request | Enabling this flag will log out the current request. | false   |
 
-### Get Request
+### Get Request {#getrequest}
 
 Get a request by ID
 
@@ -367,7 +368,7 @@ Get a request by ID
 | To Get Request ID | ID of the request to be retrieved.                   |         |
 | Debug Request     | Enabling this flag will log out the current request. | false   |
 
-### Get Request Task
+### Get Request Task {#getrequesttask}
 
 Get a request task by ID
 
@@ -378,7 +379,7 @@ Get a request task by ID
 | To Get Request Task ID | ID of the task to be retrieved.                      |         |
 | Debug Request          | Enabling this flag will log out the current request. | false   |
 
-### List Assets
+### List Assets {#listassets}
 
 Retrieve a list of assets
 
@@ -392,7 +393,7 @@ Retrieve a list of assets
 | Debug Request             | Enabling this flag will log out the current request.                                                     | false   |
 | Connection                |                                                                                                          |         |
 
-### List Configuration Items
+### List Configuration Items {#listconfigurationitems}
 
 Retrieve a list of all configuration items on the CMDB
 
@@ -407,7 +408,7 @@ Retrieve a list of all configuration items on the CMDB
 | Debug Request             | Enabling this flag will log out the current request.                                                     | false   |
 | Connection                |                                                                                                          |         |
 
-### List Problem Notes
+### List Problem Notes {#listproblemnotes}
 
 Retrieve a list of problem notes
 
@@ -422,7 +423,7 @@ Retrieve a list of problem notes
 | Conditions Criteria Value | The value of the field to be compared.                                                                   |         |
 | Debug Request             | Enabling this flag will log out the current request.                                                     | false   |
 
-### List Problems
+### List Problems {#listproblems}
 
 Retrieve a list of problems
 
@@ -436,7 +437,7 @@ Retrieve a list of problems
 | Conditions Criteria Value | The value of the field to be compared.                                                                   |         |
 | Debug Request             | Enabling this flag will log out the current request.                                                     | false   |
 
-### List Problem Tasks
+### List Problem Tasks {#listproblemtasks}
 
 Retrieve a list of problem tasks
 
@@ -451,7 +452,7 @@ Retrieve a list of problem tasks
 | Conditions Criteria Value | The value of the field to be compared.                                                                   |         |
 | Debug Request             | Enabling this flag will log out the current request.                                                     | false   |
 
-### List Products
+### List Products {#listproducts}
 
 Retrieve a list of products
 
@@ -465,7 +466,7 @@ Retrieve a list of products
 | Debug Request             | Enabling this flag will log out the current request.                                                     | false   |
 | Connection                |                                                                                                          |         |
 
-### List Product Types
+### List Product Types {#listproducttypes}
 
 Retrieve a list of product types
 
@@ -479,7 +480,7 @@ Retrieve a list of product types
 | Debug Request             | Enabling this flag will log out the current request.                                                     | false   |
 | Connection                |                                                                                                          |         |
 
-### List Requests
+### List Requests {#listrequests}
 
 Retrieve a list of requests
 
@@ -493,7 +494,7 @@ Retrieve a list of requests
 | Conditions Criteria Value | The value of the field to be compared.                                                                   |         |
 | Debug Request             | Enabling this flag will log out the current request.                                                     | false   |
 
-### List Request Tasks
+### List Request Tasks {#listrequesttasks}
 
 Retrieve a list of request tasks
 
@@ -508,7 +509,7 @@ Retrieve a list of request tasks
 | Conditions Criteria Value | The value of the field to be compared.                                                                   |         |
 | Debug Request             | Enabling this flag will log out the current request.                                                     | false   |
 
-### Raw Request
+### Raw Request {#rawrequest}
 
 Send raw HTTP request to ServiceDesk Plus
 
@@ -531,7 +532,7 @@ Send raw HTTP request to ServiceDesk Plus
 | Max Retry Count         | The maximum number of retries to attempt. Specify 0 for no retries.                                                                                                                              | 0       |
 | Use Exponential Backoff | Specifies whether to use a pre-defined exponential backoff strategy for retries. When enabled, 'Retry Delay (ms)' is ignored.                                                                    | false   |
 
-### Update Asset
+### Update Asset {#updateasset}
 
 Edit an existing asset
 
@@ -548,7 +549,7 @@ Edit an existing asset
 | Connection             |                                                                           |                                                                                   |
 | Debug Request          | Enabling this flag will log out the current request.                      | false                                                                             |
 
-### Update Configuration Item
+### Update Configuration Item {#updateconfigurationitem}
 
 Edit an existing configuration item on the CMDB
 
@@ -561,7 +562,7 @@ Edit an existing configuration item on the CMDB
 | Connection       |                                                        |                                                           |
 | Debug Request    | Enabling this flag will log out the current request.   | false                                                     |
 
-### Update Problem
+### Update Problem {#updateproblem}
 
 Update an existing problem
 
@@ -577,7 +578,7 @@ Update an existing problem
 | Additional Fields     | Additional fields that might not be covered by the standard inputs. See https://www.manageengine.com/products/service-desk/sdpod-v3-api/problems/problem.html for details. |         |
 | Debug Request         | Enabling this flag will log out the current request.                                                                                                                       | false   |
 
-### Update Problem Note
+### Update Problem Note {#updateproblemnote}
 
 Update a problem note
 
@@ -591,7 +592,7 @@ Update a problem note
 | Additional Fields | Additional fields that might not be covered by the standard inputs. See https://www.manageengine.com/products/service-desk/sdpod-v3-api/problems/problem_note.html for details.               |         |
 | Debug Request     | Enabling this flag will log out the current request.                                                                                                                                          | false   |
 
-### Update Problem Task
+### Update Problem Task {#updateproblemtask}
 
 Update a problem task
 
@@ -612,7 +613,7 @@ Update a problem task
 | Additional Fields        | Additional fields that might not be covered by the standard inputs. See https://www.manageengine.com/products/service-desk/sdpod-v3-api/problems/problem_task.html for details. |         |
 | Debug Request            | Enabling this flag will log out the current request.                                                                                                                            | false   |
 
-### Update Product
+### Update Product {#updateproduct}
 
 Updates an existing product
 
@@ -628,7 +629,7 @@ Updates an existing product
 | Connection    |                                                                      |                                                                                        |
 | Debug Request | Enabling this flag will log out the current request.                 | false                                                                                  |
 
-### Update Product Type
+### Update Product Type {#updateproducttype}
 
 Updates an existing product type
 
@@ -642,7 +643,7 @@ Updates an existing product type
 | Connection    |                                                                       |                                                                             |
 | Debug Request | Enabling this flag will log out the current request.                  | false                                                                       |
 
-### Update Request
+### Update Request {#updaterequest}
 
 Update a request
 
@@ -658,7 +659,7 @@ Update a request
 | Additional Fields         | Additional fields that might not be covered by the standard inputs. See https://www.manageengine.com/products/service-desk/sdpod-v3-api/requests/request.html for details. |         |
 | Debug Request             | Enabling this flag will log out the current request.                                                                                                                       | false   |
 
-### Update Request Task
+### Update Request Task {#updaterequesttask}
 
 Update a request task
 

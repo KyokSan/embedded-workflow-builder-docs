@@ -9,7 +9,7 @@ The Domo platform includes a world class data warehouse, robust data pipeline fu
 
 ## Connections
 
-### Domo OAuth Connection
+### Domo OAuth Connection {#oauth}
 
 OAuth Connectivity for Domo
 
@@ -46,7 +46,7 @@ Now you have successfully generated a client ID and client secret for your Domo 
 
 ## Actions
 
-### Abort Stream Execution
+### Abort Stream Execution {#abortstreamexecution}
 
 If needed during an execution, aborts an entire Stream execution.
 
@@ -56,7 +56,7 @@ If needed during an execution, aborts an entire Stream execution.
 | Stream ID    | The ID of the Stream of data being imported into a DataSet.                                                                            |         |
 | Execution ID | The ID of the Stream execution within the Stream, if no Stream execution ID is provided, the current Stream execution will be aborted. |         |
 
-### Add Attachment
+### Add Attachment {#addattachment}
 
 Add a multipart form file to a task item as an attachment.
 
@@ -67,7 +67,7 @@ Add a multipart form file to a task item as an attachment.
 | List ID    | The ID of the list.    |         |
 | Task ID    | The ID of the task.    |         |
 
-### Add User To Group
+### Add User To Group {#addusertogroup}
 
 Add user to a group in your Domo instance.
 
@@ -77,7 +77,7 @@ Add user to a group in your Domo instance.
 | Group ID   | The ID of the group. |         |
 | User ID    | The ID of the user.  |         |
 
-### Commit Stream Execution
+### Commit Stream Execution {#commitstreamexecution}
 
 Commits stream execution to import combined set of data parts that have been successfully uploaded.
 
@@ -87,7 +87,7 @@ Commits stream execution to import combined set of data parts that have been suc
 | Stream ID    | The ID of the Stream of data being imported into a DataSet. |         |
 | Execution ID | The ID of the Stream execution within the Stream            |         |
 
-### Create Account
+### Create Account {#createaccount}
 
 When creating an Account, you must specify the Account Type properties. The Account Type properties are different, depending on the type of Account you are trying to create.
 
@@ -101,7 +101,7 @@ When creating an Account, you must specify the Account Type properties. The Acco
 | URL             |          |         |
 | Username        |          |         |
 
-### Create Data Set
+### Create Data Set {#createdataset}
 
 Creates a new DataSet in your Domo instance. Once the DataSet has been created, data can then be imported into the DataSet.
 
@@ -113,7 +113,7 @@ Creates a new DataSet in your Domo instance. Once the DataSet has been created, 
 | Rows        |                                      |         |
 | Columns     | Array of columns in the DataSet      |         |
 
-### Create Group
+### Create Group {#creategroup}
 
 Creates a new group in your Domo instance.
 
@@ -122,7 +122,7 @@ Creates a new group in your Domo instance.
 | Connection |                        |         |
 | Name       | The name of the group. |         |
 
-### Create List
+### Create List {#createlist}
 
 Creates a new list within the given project id.
 
@@ -134,7 +134,7 @@ Creates a new list within the given project id.
 | Index      | The ordered index of the list within the project. Setting this property will re-order other lists in the project to maintain sequential order. Leaving this property blank will default the index to 1 and shift the index of all other lists. |         |
 | Project ID | The ID of the project.                                                                                                                                                                                                                         |         |
 
-### Create Page
+### Create Page {#createpage}
 
 Creates a new page in your Domo instance.
 
@@ -148,7 +148,7 @@ Creates a new page in your Domo instance.
 | User ID    | The ID of the user that will be given access to view the page                                           |         |
 | Group ID   | The ID of the group that will be given access to view the page                                          |         |
 
-### Create Project
+### Create Project {#createproject}
 
 Create a new project in your Domo instance
 
@@ -164,7 +164,7 @@ Create a new project in your Domo instance
 | Public Body |                                                                             |         |
 | Name        | Body name                                                                   |         |
 
-### Create Stream
+### Create Stream {#createstream}
 
 When creating a Stream, specify the DataSet properties (name and description) and as a convenience, the create Stream API will create a DataSet for you.
 
@@ -178,7 +178,7 @@ When creating a Stream, specify the DataSet properties (name and description) an
 | Columns        |                                                 |         |
 | Update Method  | Update method for body.                         |         |
 
-### Create Stream Execution
+### Create Stream Execution {#createstreamexecution}
 
 When you’re ready to upload data to your DataSet via a Stream, you first tell Domo that you’re ready to start sending data by creating an Execution.
 
@@ -187,7 +187,7 @@ When you’re ready to upload data to your DataSet via a Stream, you first tell 
 | Connection |                       |         |
 | Stream ID  | The ID of the Stream. |         |
 
-### Create Task
+### Create Task {#createtask}
 
 Add a task to a project list.
 
@@ -205,7 +205,7 @@ Add a task to a project list.
 | Tags         | An array of tags that have been assigned to the task.                                                                                                                                                                                            |         |
 | Task Object  | The request body accepts a task object.                                                                                                                                                                                                          |         |
 
-### Create User
+### Create User {#createuser}
 
 Creates a new user in your Domo instance.
 
@@ -225,7 +225,7 @@ Creates a new user in your Domo instance.
 | Title           | User's job title.                                                               |         |
 | User Body       |                                                                                 |         |
 
-### Delete Account
+### Delete Account {#deleteaccount}
 
 Deletes an Account from your Domo instance.
 
@@ -234,7 +234,7 @@ Deletes an Account from your Domo instance.
 | Connection |                                  |         |
 | Account ID | The ID of the account to delete. |         |
 
-### Delete Attachment
+### Delete Attachment {#deleteattachment}
 
 Permanently deletes an attachment from your task.
 
@@ -245,7 +245,7 @@ Permanently deletes an attachment from your task.
 | Task ID       | The ID of the task that the attachment belongs to.    |         |
 | Attachment ID | The ID of the attachment.                             |         |
 
-### Delete Data Set
+### Delete Data Set {#deletedataset}
 
 Permanently deletes a DataSet from your Domo instance. This can be done for all DataSets, not just those created through the API.
 
@@ -254,7 +254,7 @@ Permanently deletes a DataSet from your Domo instance. This can be done for all 
 | Connection |                        |         |
 | DataSet ID | The ID of the DataSet. |         |
 
-### Delete Group
+### Delete Group {#deletegroup}
 
 Permanently deletes a group from your Domo instance.
 
@@ -263,7 +263,7 @@ Permanently deletes a group from your Domo instance.
 | Connection |                                |         |
 | Group ID   | The ID of the group to delete. |         |
 
-### Delete List
+### Delete List {#deletelist}
 
 Permanently deletes a list from your Domo instance.
 
@@ -273,7 +273,7 @@ Permanently deletes a list from your Domo instance.
 | Project ID | The ID of the project. |         |
 | List ID    | The ID of the list.    |         |
 
-### Delete Page
+### Delete Page {#deletepage}
 
 Permanently deletes a page from your Domo instance.
 
@@ -282,7 +282,7 @@ Permanently deletes a page from your Domo instance.
 | Connection |                     |         |
 | Page ID    | The ID of the page. |         |
 
-### Delete Project
+### Delete Project {#deleteproject}
 
 Permanently deletes a project from your Domo instance.
 
@@ -291,7 +291,7 @@ Permanently deletes a project from your Domo instance.
 | Connection |                        |         |
 | Project ID | The ID of the project. |         |
 
-### Delete Stream
+### Delete Stream {#deletestream}
 
 Deletes a Stream from your Domo instance. This does not a delete the associated DataSet.
 
@@ -300,7 +300,7 @@ Deletes a Stream from your Domo instance. This does not a delete the associated 
 | Connection |                                 |         |
 | Stream ID  | The ID of the Stream to delete. |         |
 
-### Delete User
+### Delete User {#deleteuser}
 
 Permanently deletes a user from your Domo instance.
 
@@ -309,7 +309,7 @@ Permanently deletes a user from your Domo instance.
 | Connection |                     |         |
 | User ID    | The ID of the user. |         |
 
-### Download Attachment
+### Download Attachment {#downloadattachment}
 
 Downloads an individual attachment given an attachment id.
 
@@ -321,7 +321,7 @@ Downloads an individual attachment given an attachment id.
 | Task ID       | The ID of the task.       |         |
 | Attachment ID | The ID of the attachment. |         |
 
-### Export Data From DataSet
+### Export Data From DataSet {#exportdatafromdataset}
 
 Export data from a DataSet in your Domo instance.
 
@@ -331,7 +331,7 @@ Export data from a DataSet in your Domo instance.
 | File Name      | The filename of the exported csv. |         |
 | Include Header | Include table header.             |         |
 
-### Get Accounts
+### Get Accounts {#getaccounts}
 
 Retrieve the details of an account type. This includes information on the properties required to create an Account of this type.
 
@@ -340,7 +340,7 @@ Retrieve the details of an account type. This includes information on the proper
 | Connection      |                             |         |
 | Account Type ID | The ID of the account type. |         |
 
-### Get Activity Log Entries
+### Get Activity Log Entries {#getactivitylogentries}
 
 Retrieves activity log entries
 
@@ -353,7 +353,7 @@ Retrieves activity log entries
 | Offset     | The offset location of events you retrieve(default is 0).                          |         |
 | User       | The Id of the user.                                                                |         |
 
-### Get Data Set
+### Get Data Set {#getdataset}
 
 Retrieves the details of an existing DataSet.
 
@@ -362,7 +362,7 @@ Retrieves the details of an existing DataSet.
 | Connection |                        |         |
 | DataSet ID | The ID of the DataSet. |         |
 
-### Get Group
+### Get Group {#getgroup}
 
 Retrieves the details of an existing group.
 
@@ -371,7 +371,7 @@ Retrieves the details of an existing group.
 | Connection |                      |         |
 | Group ID   | The ID of the group. |         |
 
-### Get List
+### Get List {#getlist}
 
 Retrieves the details of an individual list given a project id and a list id.
 
@@ -381,7 +381,7 @@ Retrieves the details of an individual list given a project id and a list id.
 | Project ID | The ID of the project. |         |
 | List ID    | The ID of the list.    |         |
 
-### Get List Of Attachments
+### Get List Of Attachments {#getlistofattachments}
 
 Retrieve details about all of the attachments belonging to a particular task.
 
@@ -392,7 +392,7 @@ Retrieve details about all of the attachments belonging to a particular task.
 | List ID    | The ID of the list.    |         |
 | Task ID    | The ID of the task.    |         |
 
-### Get Page
+### Get Page {#getpage}
 
 Retrieves the details of an existing page.
 
@@ -401,7 +401,7 @@ Retrieves the details of an existing page.
 | Connection |                     |         |
 | Page ID    | The ID of the page. |         |
 
-### Get Project
+### Get Project {#getproject}
 
 Retrieves the details of an individual existing project given a project id. Use the special project ID me to return your personal project.
 
@@ -410,7 +410,7 @@ Retrieves the details of an individual existing project given a project id. Use 
 | Connection |                        |         |
 | Project ID | The ID of the project. |         |
 
-### Get Project Members
+### Get Project Members {#getprojectmembers}
 
 Retrieves a list of ids of the users that are members of the given project id.
 
@@ -419,7 +419,7 @@ Retrieves a list of ids of the users that are members of the given project id.
 | Connection |                        |         |
 | Project ID | The ID of the project. |         |
 
-### Get Stream
+### Get Stream {#getstream}
 
 Retrieves the details of an existing stream.
 
@@ -429,7 +429,7 @@ Retrieves the details of an existing stream.
 | Stream ID  | The id of the stream.                                                                 |         |
 | Fields     | Return desired fields: {all} or {id, dataset, updateMethod, createdAt, or modifiedAt} |         |
 
-### Get Stream Execution
+### Get Stream Execution {#getstreamexecution}
 
 Import data into a DataSet in your Domo instance. This request will replace the data currently in the DataSet.
 
@@ -439,7 +439,7 @@ Import data into a DataSet in your Domo instance. This request will replace the 
 | Stream ID    | The ID of the Stream of data being imported into a DataSet. |         |
 | Execution ID | The ID of the Stream execution within the Stream.           |         |
 
-### Get Task
+### Get Task {#gettask}
 
 Retrieves an individual task from a given project id and list id.
 
@@ -450,7 +450,7 @@ Retrieves an individual task from a given project id and list id.
 | Project ID | The ID of the project. |         |
 | Task ID    | The ID of the task.    |         |
 
-### Get User
+### Get User {#getuser}
 
 Retrieves the details of an existing user.
 
@@ -459,7 +459,7 @@ Retrieves the details of an existing user.
 | Connection |                     |         |
 | User ID    | The ID of the user. |         |
 
-### Import Data Into DataSet
+### Import Data Into DataSet {#importdataintodataset}
 
 Import data into a DataSet in your Domo instance. This request will replace the data currently in the DataSet.
 
@@ -469,7 +469,7 @@ Import data into a DataSet in your Domo instance. This request will replace the 
 | DataSet ID | The ID of the DataSet. |         |
 | CSV Body   |                        |         |
 
-### List Accounts
+### List Accounts {#listaccounts}
 
 Get a list of all Accounts for which the user has permissions.
 
@@ -479,7 +479,7 @@ Get a list of all Accounts for which the user has permissions.
 | Limit      | The number of Accounts to return in the list. The default is 50 and the maximum is 500. |         |
 | Offset     | The offset of Accounts to begin the list of Accounts within the response.               |         |
 
-### List DataSets
+### List DataSets {#listdatasets}
 
 Get a list of all DataSets in your Domo instance.
 
@@ -491,7 +491,7 @@ Get a list of all DataSets in your Domo instance.
 | Offset     | The offset of the DataSet ID to begin list of users within the response.                                                                             |         |
 | Sort       | The DataSet field to sort by. Fields prefixed with a negative sign reverses the sort (i.e. '-name' does a reverse sort by the name of the DataSets). |         |
 
-### List Groups
+### List Groups {#listgroups}
 
 Get a list of all groups in your Domo instance.
 
@@ -501,7 +501,7 @@ Get a list of all groups in your Domo instance.
 | Limit      | The amount of groups to return in the list. The default is 50 and the maximum is 500. |         |
 | Offset     | The offset of the group ID to begin list of groups within the response.               |         |
 
-### List Pages
+### List Pages {#listpages}
 
 Get a list of all pages in your Domo instance.
 
@@ -511,7 +511,7 @@ Get a list of all pages in your Domo instance.
 | Limit      | The amount of pages to return in the list. The default is 50 and the maximum is 500. |         |
 | Offset     | The offset of the page ID to begin list of pages within the response.                |         |
 
-### List Project Lists
+### List Project Lists {#listprojectlists}
 
 Retrieves all lists available within a given project id.
 
@@ -520,7 +520,7 @@ Retrieves all lists available within a given project id.
 | Connection |                        |         |
 | Project ID | The ID of the project. |         |
 
-### List Project List Tasks
+### List Project List Tasks {#listprojectlisttasks}
 
 Retrieves all tasks from a given project id and list id.
 
@@ -532,7 +532,7 @@ Retrieves all tasks from a given project id and list id.
 | Limit      | The number of records to offset from the beginning of the result list (defaults to 0) |         |
 | Offset     | The maximum amount of results to return (defaults to 10 with a maximum of 50)         |         |
 
-### List Projects
+### List Projects {#listprojects}
 
 Retrieves a list of all projects that the client scope has access to.
 
@@ -540,7 +540,7 @@ Retrieves a list of all projects that the client scope has access to.
 | ---------- | -------- | ------- |
 | Connection |          |         |
 
-### List Stream Execution
+### List Stream Execution {#liststreamexecution}
 
 Returns all Stream Execution objects that meet argument criteria from original request.
 
@@ -551,7 +551,7 @@ Returns all Stream Execution objects that meet argument criteria from original r
 | Limit      | The amount of Stream to return in the list. The default is 50 and the maximum is 500. |         |
 | Offset     | The offset of the Stream ID to begin list of users within the response.               |         |
 
-### List Streams
+### List Streams {#liststreams}
 
 Get a list of all Streams for which the user has view permissions.
 
@@ -561,7 +561,7 @@ Get a list of all Streams for which the user has view permissions.
 | Limit      | The amount of Stream to return in the list. The default is 50 and the maximum is 500. |         |
 | Offset     | The offset of the Stream ID to begin list of users within the response.               |         |
 
-### List Users
+### List Users {#listusers}
 
 Get a list of all users in your Domo instance.
 
@@ -571,7 +571,7 @@ Get a list of all users in your Domo instance.
 | Limit      | The amount of users to return in the list. The default is 50 and the maximum is 500. |         |
 | Offset     | The offset of the user ID to begin list of users within the response.                |         |
 
-### List Users In Group
+### List Users In Group {#listusersingroup}
 
 List the users in a group in your Domo instance.
 
@@ -582,7 +582,7 @@ List the users in a group in your Domo instance.
 | Limit      | The amount of groups to return in the list. The default is 50 and the maximum is 500. |         |
 | Offset     | The offset of the group ID to begin list of groups within the response.               |         |
 
-### Query Data Set
+### Query Data Set {#querydataset}
 
 Queries the data in an existing Domo DataSet
 
@@ -592,7 +592,7 @@ Queries the data in an existing Domo DataSet
 | DataSet ID | The ID of the DataSet.    |         |
 | SQL        | The SQL query to execute. |         |
 
-### Raw Request
+### Raw Request {#rawrequest}
 
 Send raw HTTP request to Domo.
 
@@ -615,7 +615,7 @@ Send raw HTTP request to Domo.
 | Max Retry Count         | The maximum number of retries to attempt.                                                                                           | 0       |
 | Use Exponential Backoff | Specifies whether to use a pre-defined exponential backoff strategy for retries.                                                    | false   |
 
-### Remove User From Group
+### Remove User From Group {#removeuserfromgroup}
 
 Remove a user from a group in your Domo instance.
 
@@ -625,7 +625,7 @@ Remove a user from a group in your Domo instance.
 | Group ID   | The ID of the group. |         |
 | User ID    | The ID of the user.  |         |
 
-### Search Stream
+### Search Stream {#searchstream}
 
 Returns all Stream objects that meet argument criteria from original request.
 
@@ -635,7 +635,7 @@ Returns all Stream objects that meet argument criteria from original request.
 | Qualifiers | The search qualifiers to search by available qualifiers: dataSource.id or dataSource.owner.id |         |
 | Fields     | Return desired fields: {all} or {id, dataset, updateMethod, createdAt, or modifiedAt}         |         |
 
-### Share Account
+### Share Account {#shareaccount}
 
 Share an Account with a User.
 
@@ -645,7 +645,7 @@ Share an Account with a User.
 | User       | The User to share the Account with. |         |
 | Account ID | The ID of the Account.              |         |
 
-### Update Account
+### Update Account {#updateaccount}
 
 Updates the specified Account’s metadata as well as the Account’s Type properties.
 
@@ -655,7 +655,7 @@ Updates the specified Account’s metadata as well as the Account’s Type prope
 | Account ID          | The ID of the account to update. |         |
 | Update Account Body |                                  |         |
 
-### Update Data Set
+### Update Data Set {#updatedataset}
 
 Updates the specified DataSet’s metadata by providing values to parameters passed.
 
@@ -665,7 +665,7 @@ Updates the specified DataSet’s metadata by providing values to parameters pas
 | DataSet ID          | The ID of the DataSet. |         |
 | Update DataSet Body |                        |         |
 
-### Update Group
+### Update Group {#updategroup}
 
 Updates the specified group by providing values to parameters passed. Any parameter left out of the request will cause the specific group’s attribute to remain unchanged.
 
@@ -675,7 +675,7 @@ Updates the specified group by providing values to parameters passed. Any parame
 | Group ID          | The ID of the group. |         |
 | Update Group Body |                      |         |
 
-### Update List
+### Update List {#updatelist}
 
 Update the details of a list given an existing project id and list id.
 
@@ -689,7 +689,7 @@ Update the details of a list given an existing project id and list id.
 | Type             | The type of the list.                                                                                                                                            |         |
 | Update List Body |                                                                                                                                                                  |         |
 
-### Update Page
+### Update Page {#updatepage}
 
 Updates the specified page by providing values to parameters passed. Any parameter left out of the request will cause the specific page’s attribute to remain unchanged.
 
@@ -699,7 +699,7 @@ Updates the specified page by providing values to parameters passed. Any paramet
 | Page ID          | The ID of the page. |         |
 | Update Page Body |                     |         |
 
-### Update Project
+### Update Project {#updateproject}
 
 Updates attributes of an existing project in your Domo instance. The following properties are read-only and cannot be updated with this request:id members createdBy createdDate
 
@@ -713,7 +713,7 @@ Updates attributes of an existing project in your Domo instance. The following p
 | Name                | Updates the name of the project.                                        |         |
 | Public              | Updates whether or not the project is publicly available to Domo users. |         |
 
-### Update Project Members
+### Update Project Members {#updateprojectmembers}
 
 Update the members of a given project id.
 
@@ -723,7 +723,7 @@ Update the members of a given project id.
 | Project ID                  | The ID of the project. |         |
 | Update Project Members Body |                        |         |
 
-### Update Stream
+### Update Stream {#updatestream}
 
 Updates the specified Stream’s metadata by providing values to parameters passed.
 
@@ -734,7 +734,7 @@ Updates the specified Stream’s metadata by providing values to parameters pass
 | Update Method      | The data import behavior.       |         |
 | Update Method Body |                                 |         |
 
-### Update Task
+### Update Task {#updatetask}
 
 Update the details of a task given an existing project id, list id, and task id.
 
@@ -753,7 +753,7 @@ Update the details of a task given an existing project id, list id, and task id.
 | Task Name        | The name of the task.                                                                                                                                                                                                                            |         |
 | Update Task Body |                                                                                                                                                                                                                                                  |         |
 
-### Update User
+### Update User {#updateuser}
 
 Updates the specified user by providing values to parameters passed. Any parameter left out of the request will cause the specific user’s attribute to remain unchanged.
 
@@ -774,7 +774,7 @@ Updates the specified user by providing values to parameters passed. Any paramet
 | Title            | User's job title.                                                               |         |
 | Update User Body |                                                                                 |         |
 
-### Upload Data Part
+### Upload Data Part {#uploaddatapart}
 
 Creates a data part within the Stream execution to upload chunks of rows to the DataSet. The calling client should keep track of parts and order them accordingly in an increasing sequence. If a part upload fails, retry the upload as all parts must be present before committing the stream execution.
 

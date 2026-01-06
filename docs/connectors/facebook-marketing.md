@@ -9,7 +9,7 @@ Interact with ads and adsets in your Meta Ads account.
 
 ## Connections
 
-### Conversions API Access Token
+### Conversions API Access Token {#facebookmarketingconversionstoken}
 
 Use this connection to connect to a sandbox ad account.
 
@@ -17,7 +17,7 @@ Use this connection to connect to a sandbox ad account.
 | ------------ | ------------------------------------- | ------- |
 | Access Token | A valid access token for Meta Ads API |         |
 
-### Meta Ads Client Credentials
+### Meta Ads Client Credentials {#meta-client-credentials}
 
 Client Credentials connectivity for Meta Ads. This connection is required to get an APP Token, which is required to use some of the Meta APIs.
 
@@ -32,7 +32,7 @@ Read about how OAuth 2.0 works [here](../oauth2.md).
 | App Secret    | Provide the App Secret that was generated from your Meta Ads App.                                                                                                |                                                                                                                                      |
 | Scopes        | Provide a valid list of scopes. A list per use case is provided on the Meta Ads docs: https://developers.facebook.com/docs/marketing-api/overview/authorization/ | ads_read ads_management pages_show_list groups_access_member_info leads_retrieval page_events pages_read_user_content public_profile |
 
-### Meta Ads Oauth 2.0
+### Meta Ads Oauth 2.0 {#oauth}
 
 Oauth 2.0 connectivity for Meta Ads.
 
@@ -61,7 +61,7 @@ Read about how OAuth 2.0 works [here](../oauth2.md).
 | App Secret    | Provide the App Secret that was generated from your Meta Ads App.                                                                                                |                                                                                                                                      |
 | Scopes        | Provide a valid list of scopes. A list per use case is provided on the Meta Ads docs: https://developers.facebook.com/docs/marketing-api/overview/authorization/ | ads_read ads_management pages_show_list groups_access_member_info leads_retrieval page_events pages_read_user_content public_profile |
 
-### Sandbox Ad Account Token
+### Sandbox Ad Account Token {#sandboxtoken}
 
 Use this connection to connect to a sandbox ad account.
 
@@ -83,7 +83,7 @@ For any additional setup information, refer to the [Meta Ads Docs](https://devel
 
 ## Triggers
 
-### Ad Account Trigger
+### Ad Account Trigger {#metaadsadaccounttrigger}
 
 Receive data from the Ad Account in real time with webhook subscriptions.
 
@@ -95,7 +95,7 @@ Receive data from the Ad Account in real time with webhook subscriptions.
 | Dynamic Ad Account Fields | The fields to be subscribed to.                                                                   |         |
 | Connection                | This connection must be a Meta Ads Client Credentials connection to be able to use webhooks APIs. |         |
 
-### Page Trigger
+### Page Trigger {#metaadspagetrigger}
 
 Receive data from the Page in real time with webhook subscriptions.
 
@@ -109,7 +109,7 @@ Receive data from the Page in real time with webhook subscriptions.
 
 ## Actions
 
-### Add URL Tags To Ad Creative
+### Add URL Tags To Ad Creative {#addurltagstocreative}
 
 Update an existing Ad Creative to include a new set of URL Tags.
 
@@ -126,7 +126,7 @@ Update an existing Ad Creative to include a new set of URL Tags.
 | Optional Values | Provide optional values to mutate the given object.                  |                                                              |
 | Graph Version   | Provide the version of the Graph API to use. Defaults to 22.         | 22                                                           |
 
-### Create Ad
+### Create Ad {#createad}
 
 Creates a new ad.
 
@@ -152,7 +152,7 @@ Creates a new ad.
 | Source Ad Id            | ID of the source Ad, if applicable.                                                                                                                                                                             |         |
 | Graph Version           | Provide the version of the Graph API to use. Defaults to 22.                                                                                                                                                    | 22      |
 
-### Create Ad Account Webhook
+### Create Ad Account Webhook {#createadaccountwebhook}
 
 Create a new ad account webhook for the current application.
 
@@ -165,7 +165,7 @@ Create a new ad account webhook for the current application.
 | Dynamic Ad Account Fields | The fields to be subscribed to.                                                                   |         |
 | Connection                | This connection must be a Meta Ads Client Credentials connection to be able to use webhooks APIs. |         |
 
-### Create Campaign
+### Create Campaign {#createcampaign}
 
 Creates a new campaign.
 
@@ -195,7 +195,7 @@ Creates a new campaign.
 | Topline Id                   | Topline Id.                                                                                                                                                                                                                                                                                                                             |         |
 | Graph Version                | Provide the version of the Graph API to use. Defaults to 22.                                                                                                                                                                                                                                                                            | 22      |
 
-### Create Conversion
+### Create Conversion {#createconversion}
 
 Create a single conversion event for a pixel. Requires the Conversions API Access Token connection.
 
@@ -212,7 +212,7 @@ Create a single conversion event for a pixel. Requires the Conversions API Acces
 | More Data        | Additional data to include with the event. See https://developers.facebook.com/docs/marketing-api/conversions-api/parameters/server-event.                                                                                    |         |
 | Graph Version    | Provide the version of the Graph API to use. Defaults to 22.                                                                                                                                                                  | 22      |
 
-### Create Multiple Conversions
+### Create Multiple Conversions {#createmultipleconversions}
 
 Create multiple conversion events for a pixel. Requires the Conversions API Access Token connection.
 
@@ -223,7 +223,7 @@ Create multiple conversion events for a pixel. Requires the Conversions API Acce
 | Events        | An array of server event objects. See https://developers.facebook.com/docs/marketing-api/conversions-api/parameters/server-event for more information. |         |
 | Graph Version | Provide the version of the Graph API to use. Defaults to 22.                                                                                           | 22      |
 
-### Create Page Webhook
+### Create Page Webhook {#createpagewebhook}
 
 Create a new page webhook for the current application.
 
@@ -236,7 +236,7 @@ Create a new page webhook for the current application.
 | Dynamic Page Fields | The fields to be subscribed to.                                                                   |         |
 | Connection          | This connection must be a Meta Ads Client Credentials connection to be able to use webhooks APIs. |         |
 
-### Delete Ad
+### Delete Ad {#deletead}
 
 Delete the information and metadata of a given ad.
 
@@ -246,7 +246,7 @@ Delete the information and metadata of a given ad.
 | Ad Id         | Ad ID to delete.                                             |         |
 | Graph Version | Provide the version of the Graph API to use. Defaults to 22. | 22      |
 
-### Delete Webhook
+### Delete Webhook {#deletewebhook}
 
 Delete a webhook for the current application.
 
@@ -256,7 +256,7 @@ Delete a webhook for the current application.
 | Object        | The webhook associated with the object will be deleted.                                           |         |
 | Connection    | This connection must be a Meta Ads Client Credentials connection to be able to use webhooks APIs. |         |
 
-### Get Ad
+### Get Ad {#getad}
 
 Get the information and metadata of a given ad.
 
@@ -267,7 +267,7 @@ Get the information and metadata of a given ad.
 | Fields        | Provide a comma separated list of fields to be returned.     | name,adset,account_id,ad_review_feedback,adlabels,adset_id,bid_amount,campaign,campaign_id,configured_status,conversion_domain,created_time,creative,effective_status,issues_info,last_updated_by_app_id,preview_shareable_link,recommendations,status,tracking_specs |
 | Graph Version | Provide the version of the Graph API to use. Defaults to 22. | 22                                                                                                                                                                                                                                                                    |
 
-### Get Ad Account
+### Get Ad Account {#getadaccount}
 
 Get the information and metadata of the given ad account.
 
@@ -278,7 +278,7 @@ Get the information and metadata of the given ad account.
 | Fields        | Provide a comma separated list of fields to be returned.             | name,age,balance,is_personal,account_status,line_numbers,adcreatives |
 | Graph Version | Provide the version of the Graph API to use. Defaults to 22.         | 22                                                                   |
 
-### Get Ad Creative
+### Get Ad Creative {#getadcreative}
 
 Get the information and metadata of the given ad creative.
 
@@ -289,7 +289,7 @@ Get the information and metadata of the given ad creative.
 | Fields        | Provide a comma separated list of fields to be returned.                    | name, object_story_spec, adlabels, body, object_id, url_tags |
 | Graph Version | Provide the version of the Graph API to use. Defaults to 22.                | 22                                                           |
 
-### Get Ad Set
+### Get Ad Set {#getadset}
 
 Get the information and metadata of a given Ad Set.
 
@@ -300,7 +300,7 @@ Get the information and metadata of a given Ad Set.
 | Fields        | Provide a comma separated list of fields to be returned.     | name,account_id,adlabels,adset_schedule,asset_feed_id,attribution_spec,bid_adjustments,bid_amount,bid_constraints,bid_info,billing_event,budget_remaining,campaign,configured_status,created_time,creative_sequence,daily_budget,daily_min_spend_target,daily_spend_cap,destination_type,effective_status,end_time,optimization_goal,optimization_sub_event,pacing_type,promoted_object,recommendations,status,targeting,start_time,targeting_optimization_types,updated_time |
 | Graph Version | Provide the version of the Graph API to use. Defaults to 22. | 22                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 
-### Get Business By Name
+### Get Business By Name {#businessbyname}
 
 Fetch an business with the provided name.
 
@@ -310,7 +310,7 @@ Fetch an business with the provided name.
 | Business Name |                                                              |         |
 | Graph Version | Provide the version of the Graph API to use. Defaults to 22. | 22      |
 
-### Get Current User
+### Get Current User {#getcurrentuser}
 
 Get the information and metadata of the current user.
 
@@ -319,7 +319,7 @@ Get the information and metadata of the current user.
 | Connection    |                                                              |         |
 | Graph Version | Provide the version of the Graph API to use. Defaults to 22. | 22      |
 
-### Get User By Id
+### Get User By Id {#getuserbyid}
 
 Get the information and metadata of a given user.
 
@@ -329,7 +329,7 @@ Get the information and metadata of a given user.
 | User Id       | Provide the Id of a user.                                    |         |
 | Graph Version | Provide the version of the Graph API to use. Defaults to 22. | 22      |
 
-### List Ad Accounts
+### List Ad Accounts {#listaddaccounts}
 
 Get the ad accounts for the current user.
 
@@ -343,7 +343,7 @@ Get the ad accounts for the current user.
 | Fields        | Provide a comma separated list of fields to be returned.                                | name,age,balance,is_personal,account_status,line_numbers,adcreatives |
 | Graph Version | Provide the version of the Graph API to use. Defaults to 22.                            | 22                                                                   |
 
-### List Ad Creatives
+### List Ad Creatives {#listadcreatives}
 
 List all ad creatives in a given ad account.
 
@@ -358,7 +358,7 @@ List all ad creatives in a given ad account.
 | Fields        | Provide a comma separated list of fields to be returned.                                | name, object_story_spec, adlabels, body, object_id, url_tags |
 | Graph Version | Provide the version of the Graph API to use. Defaults to 22.                            | 22                                                           |
 
-### List Ad Leads
+### List Ad Leads {#listadleads}
 
 List all ad leads for the given ad.
 
@@ -372,7 +372,7 @@ List all ad leads for the given ad.
 | Fields        | Provide a comma separated list of fields to be returned.     | name    |
 | Graph Version | Provide the version of the Graph API to use. Defaults to 22. | 22      |
 
-### List Ad Previews
+### List Ad Previews {#getadpreview}
 
 Get a list of all previews of the given ad.
 
@@ -383,7 +383,7 @@ Get a list of all previews of the given ad.
 | Ad Format     | Provide a type of ad format to preview.                      |         |
 | Graph Version | Provide the version of the Graph API to use. Defaults to 22. | 22      |
 
-### List Ad Sets In Account
+### List Ad Sets In Account {#listadsetsinaccount}
 
 List all ad sets in an ad account.
 
@@ -398,7 +398,7 @@ List all ad sets in an ad account.
 | Fields        | Provide a comma separated list of fields to be returned.                                | name,account_id,adlabels,adset_schedule,asset_feed_id,attribution_spec,bid_adjustments,bid_amount,bid_constraints,bid_info,billing_event,budget_remaining,campaign,configured_status,created_time,creative_sequence,daily_budget,daily_min_spend_target,daily_spend_cap,destination_type,effective_status,end_time,optimization_goal,optimization_sub_event,pacing_type,promoted_object,recommendations,status,targeting,start_time,targeting_optimization_types,updated_time |
 | Graph Version | Provide the version of the Graph API to use. Defaults to 22.                            | 22                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 
-### List Ads In Account
+### List Ads In Account {#listadsinaccount}
 
 List all ads in an ad account.
 
@@ -413,7 +413,7 @@ List all ads in an ad account.
 | Fields        | Provide a comma separated list of fields to be returned.                                | name,adset,account_id,ad_review_feedback,adlabels,adset_id,bid_amount,campaign,campaign_id,configured_status,conversion_domain,created_time,creative,effective_status,issues_info,last_updated_by_app_id,preview_shareable_link,recommendations,status,tracking_specs |
 | Graph Version | Provide the version of the Graph API to use. Defaults to 22.                            | 22                                                                                                                                                                                                                                                                    |
 
-### List Ads In Adset
+### List Ads In Adset {#listadsinadset}
 
 List all ads in a given adset.
 
@@ -424,7 +424,7 @@ List all ads in a given adset.
 | Fields        | Provide a comma separated list of fields to be returned.     | name,adset,account_id,ad_review_feedback,adlabels,adset_id,bid_amount,campaign,campaign_id,configured_status,conversion_domain,created_time,creative,effective_status,issues_info,last_updated_by_app_id,preview_shareable_link,recommendations,status,tracking_specs |
 | Graph Version | Provide the version of the Graph API to use. Defaults to 22. | 22                                                                                                                                                                                                                                                                    |
 
-### List Campaigns In Account
+### List Campaigns In Account {#listcampaignsinaccount}
 
 List all campaigns in an ad account.
 
@@ -437,7 +437,7 @@ List all campaigns in an ad account.
 | After         | Provide the token for the item after the current one.                |         |
 | Graph Version | Provide the version of the Graph API to use. Defaults to 22.         | 22      |
 
-### List Webhooks
+### List Webhooks {#listwebhooks}
 
 List all webhooks for the current application.
 
@@ -446,7 +446,7 @@ List all webhooks for the current application.
 | Graph Version | Provide the version of the Graph API to use. Defaults to 22.                                      | 22      |
 | Connection    | This connection must be a Meta Ads Client Credentials connection to be able to use webhooks APIs. |         |
 
-### Raw Request
+### Raw Request {#rawrequest}
 
 Send raw HTTP request to Meta Ads.
 
@@ -469,7 +469,7 @@ Send raw HTTP request to Meta Ads.
 | Max Retry Count         | The maximum number of retries to attempt. Specify 0 for no retries.                                                                                                                                                                                           | 0       |
 | Use Exponential Backoff | Specifies whether to use a pre-defined exponential backoff strategy for retries. When enabled, 'Retry Delay (ms)' is ignored.                                                                                                                                 | false   |
 
-### Update Ad
+### Update Ad {#updatead}
 
 Update the information and metadata of a given ad or adset.
 
@@ -485,7 +485,7 @@ Update the information and metadata of a given ad or adset.
 | Fields          | Provide a comma separated list of fields to be returned.                                                                                                                                               | name,adset,account_id,ad_review_feedback,adlabels,adset_id,bid_amount,campaign,campaign_id,configured_status,conversion_domain,created_time,creative,effective_status,issues_info,last_updated_by_app_id,preview_shareable_link,recommendations,status,tracking_specs |
 | Graph Version   | Provide the version of the Graph API to use. Defaults to 22.                                                                                                                                           | 22                                                                                                                                                                                                                                                                    |
 
-### Update Ad Creative
+### Update Ad Creative {#updateadcreative}
 
 Update the information and metadata of the given ad creative.
 
@@ -504,7 +504,7 @@ Update the information and metadata of the given ad creative.
 | Optional Values | Provide optional values to mutate the given object.          |                                                              |
 | Graph Version   | Provide the version of the Graph API to use. Defaults to 22. | 22                                                           |
 
-### Update Ad Set
+### Update Ad Set {#updateadset}
 
 Update the information and metadata of a given Ad Set.
 

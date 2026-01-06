@@ -9,7 +9,7 @@ If you want to send data to an application that doesn't have a built-in connecto
 > **Tip: Use raw request actions for built-in connectors**
 >
 > If you are integrating with an application that has a built-in connector, but you need to access an endpoint that does not have a dedicated action, you can generally use the connector's "Raw Request" action to send an authenticated request to that application.
-> Most built-in connectors contain a "Raw Request" action, like [Slack](./connectors/slack.md#raw-request), [Hubspot](./connectors/hubspot.md#raw-request), etc.
+> Most built-in connectors contain a "Raw Request" action, like [Slack](./connectors/slack.md#rawrequest), [Hubspot](./connectors/hubspot.md#rawrequest), etc.
 
 ## HTTP verbs
 
@@ -49,7 +49,7 @@ If you are adept at coding, you can use the [Code](./custom-code.md) connector t
 
 > **Tip: Create objects using the Collection Tools connector**
 >
-> The [Create Object](./connectors/collection-tools.md#create-object) action is a great way to create a JSON object from scratch.
+> The [Create Object](./connectors/collection-tools.md#createobject) action is a great way to create a JSON object from scratch.
 
 Feed the results of your previous step into the **Body** input of your HTTP request step.
 
@@ -70,7 +70,7 @@ Form data is often used when submitting HTML forms or when an API expects data i
 It's especially helpful when sending multiple fields or files in a single request.
 For example, you can post a form with text fields and file uploads in a single request using the `multipart/form-data` content type.
 
-To send form data in an HTTP request, select the [POST/PUT Form Data Request](./connectors/http.md#postput-form-data-request) action.
+To send form data in an HTTP request, select the [POST/PUT Form Data Request](./connectors/http.md#httppostformdata) action.
 If you are sending multiple text fields, you can send them using the **Form Data** input.
 If you are sending one or more files within the request, you can use the **File Data** input to specify the content of the files you want to upload, and the **File Data File Names** input to specify the names of the files being uploaded.
 
@@ -130,7 +130,7 @@ The HTTP step will automatically parse the JSON response and make it available i
 
 ### Other text responses
 
-If you expect a different text-based response type (like XML or CSV), select **Text** as the **Response Type** and then feed the result of the step into an action like [Deserialize XML](./connectors/change-data-format.md#deserialize-xml) or [Deserialize CSV](./connectors/change-data-format.md#deserialize-csv) to parse the response.
+If you expect a different text-based response type (like XML or CSV), select **Text** as the **Response Type** and then feed the result of the step into an action like [Deserialize XML](./connectors/change-data-format.md#deserializefromxml) or [Deserialize CSV](./connectors/change-data-format.md#deserializefromcsv) to parse the response.
 
 ### Binary file responses
 
@@ -144,4 +144,4 @@ Behind the scenes, the HTTP connector will download the file and return the file
 }
 ```
 
-You can pass the results of the HTTP request step into any other input that expects a file, like an SFTP [Write File](./connectors/sftp.md#write-file) or Salesforce [Add Attachment](./connectors/salesforce.md#add-attachment) step.
+You can pass the results of the HTTP request step into any other input that expects a file, like an SFTP [Write File](./connectors/sftp.md#writefile) or Salesforce [Add Attachment](./connectors/salesforce.md#addattachment) step.

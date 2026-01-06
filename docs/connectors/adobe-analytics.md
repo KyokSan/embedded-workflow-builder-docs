@@ -9,7 +9,7 @@ Manage companies, report suites, metrics, dimensions and more within Adobe Analy
 
 ## Connections
 
-### Adobe Analytics OAuth 2.0 Connection
+### Adobe Analytics OAuth 2.0 Connection {#adobeanalyticsoauth}
 
 Connect to Adobe Analytics via OAuth 2.0
 
@@ -37,7 +37,7 @@ Read about how OAuth 2.0 works [here](../oauth2.md).
 
 ## Actions
 
-### Get Current User
+### Get Current User {#getcurrentuser}
 
 Get authenticated user and associated organizations and companies
 
@@ -45,7 +45,7 @@ Get authenticated user and associated organizations and companies
 | ---------- | -------- | ------- |
 | Connection |          |         |
 
-### Get Report Suite
+### Get Report Suite {#getreportsuite}
 
 Get a report suite by ID
 
@@ -55,7 +55,7 @@ Get a report suite by ID
 | Global Company ID |          |         |
 | Report Suite ID   |          |         |
 
-### List Companies
+### List Companies {#listcompanies}
 
 List all companies the authenticate user can access
 
@@ -63,7 +63,7 @@ List all companies the authenticate user can access
 | ---------- | -------- | ------- |
 | Connection |          |         |
 
-### List Dimensions for Report Suite
+### List Dimensions for Report Suite {#listreportsuitedimensions}
 
 Get a list of dimensions for a given report suite
 
@@ -73,7 +73,7 @@ Get a list of dimensions for a given report suite
 | Global Company ID |          |         |
 | Report Suite ID   |          |         |
 
-### List Metrics for Report Suite
+### List Metrics for Report Suite {#listreportsuitemetrics}
 
 Get a list of metrics for a given report suite
 
@@ -83,7 +83,7 @@ Get a list of metrics for a given report suite
 | Global Company ID |          |         |
 | Report Suite ID   |          |         |
 
-### List Report Suites
+### List Report Suites {#listreportsuites}
 
 Retrieve a list of report suites
 
@@ -92,7 +92,7 @@ Retrieve a list of report suites
 | Connection        |          |         |
 | Global Company ID |          |         |
 
-### List Virtual Report Suites
+### List Virtual Report Suites {#listvirtualreportsuites}
 
 Retrieve a list of virtual report suites
 
@@ -101,7 +101,7 @@ Retrieve a list of virtual report suites
 | Connection        |          |         |
 | Global Company ID |          |         |
 
-### Raw Request
+### Raw Request {#rawrequest}
 
 Send raw HTTP request to Adobe Analytics
 
@@ -124,7 +124,7 @@ Send raw HTTP request to Adobe Analytics
 | Max Retry Count         | The maximum number of retries to attempt.                                                                                                                                                                            | 0       |
 | Use Exponential Backoff | Specifies whether to use a pre-defined exponential backoff strategy for retries.                                                                                                                                     | false   |
 
-### Run Report
+### Run Report {#runreport}
 
 Run a report
 

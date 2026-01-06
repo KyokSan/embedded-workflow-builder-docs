@@ -9,7 +9,7 @@ Manage payments, customers, orders, invoices, and team members in Square.
 
 ## Connections
 
-### Square OAuth 2.0
+### Square OAuth 2.0 {#oauth2}
 
 Authenticate requests to Square using values obtained from the Developer Console.
 
@@ -53,13 +53,13 @@ Read about how OAuth 2.0 works [here](../oauth2.md).
 
 ## Triggers
 
-### Webhook
+### Webhook {#squarewebhooktrigger}
 
 Receive and validate webhook requests from Square for webhooks you configure.
 
 ## Actions
 
-### Batch Change Inventory
+### Batch Change Inventory {#batchchangeinventory}
 
 Applies adjustments and counts to the provided item quantities.
 
@@ -70,7 +70,7 @@ Applies adjustments and counts to the provided item quantities.
 | Inventory Changes       | The set of physical counts and inventory adjustments to be made. Changes are applied based on the client-supplied timestamp and may be sent out of order. | <code>[<br /> {<br /> "type": "PHYSICAL_COUNT",<br /> "physical_count": {<br /> "catalog_object_id": "object_id",<br /> "state": "IN_STOCK",<br /> "quantity": "10",<br /> "location_id": "location_id",<br /> "occurred_at": "2023-07-01T00:00:00Z",<br /> "created_at": "2023-07-01T00:00:00Z"<br /> }<br /> },<br /> {<br /> "type": "ADJUSTMENT",<br /> "adjustment": {<br /> "catalog_object_id": "object_id",<br /> "from_state": "IN_STOCK",<br /> "to_state": "SOLD",<br /> "quantity": "-1",<br /> "location_id": "location_id",<br /> "occurred_at": "2023-07-01T00:00:00Z",<br /> "created_at": "2023-07-01T00:00:00Z",<br /> "source": {<br /> "product": "REGISTER",<br /> "application_id": "app_id",<br /> "name": "Register",<br /> "type": "APP"<br /> }<br /> }<br /> }<br />]</code> |
 | Ignore Unchanged Counts | When true, unchanged inventory counts will be ignored.                                                                                                    | false                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 
-### Batch Delete Catalog Objects
+### Batch Delete Catalog Objects {#batchdeletecatalogobjects}
 
 Deletes a set of CatalogItems based on the provided list of target IDs and returns a set of successfully deleted IDs in the response.
 
@@ -79,7 +79,7 @@ Deletes a set of CatalogItems based on the provided list of target IDs and retur
 | Connection | The Square connection to use.                  |                                                                |
 | Object IDs | The IDs of the CatalogObjects to be retrieved. | <code>[<br /> "obj1",<br /> "obj2",<br /> "obj3"<br />]</code> |
 
-### Batch Retrieve Catalog Objects
+### Batch Retrieve Catalog Objects {#batchretrievecatalogobjects}
 
 Returns a set of objects based on the provided ID.
 
@@ -91,7 +91,7 @@ Returns a set of objects based on the provided ID.
 | Catalog Version         | The specific version of the catalog objects to be included in the response. This allows you to retrieve historical versions of objects. The specified version value is matched against the CatalogObjects' version attribute. |                                                                |
 | Include Deleted Objects | When true, deleted objects will be included in the results.                                                                                                                                                                   | false                                                          |
 
-### Batch Retrieve Inventory Counts
+### Batch Retrieve Inventory Counts {#batchretrieveinventorycounts}
 
 Returns current counts for the provided CatalogObjects at the requested Locations.
 
@@ -105,7 +105,7 @@ Returns current counts for the provided CatalogObjects at the requested Location
 | States             | The filter to return results by InventoryState.                                                                         | <code>[<br /> "IN_STOCK",<br /> "SOLD"<br />]</code>               |
 | Limit              | The maximum number of results to be returned in a single page.                                                          |                                                                    |
 
-### Batch Retrieve Orders
+### Batch Retrieve Orders {#batchretrieveorders}
 
 Retrieves a set of orders by their IDs.
 
@@ -115,7 +115,7 @@ Retrieves a set of orders by their IDs.
 | Location ID | The ID of the location to retrieve details for.                                          |                                                          |
 | Order IDs   | The IDs of the orders to retrieve. A maximum of 100 orders can be retrieved per request. | <code>[<br /> "OrderID1",<br /> "OrderID2"<br />]</code> |
 
-### Batch Upsert Catalog Objects
+### Batch Upsert Catalog Objects {#batchupsertcatalogobjects}
 
 Creates or updates up to 10,000 target objects based on the provided list of objects.
 
@@ -125,7 +125,7 @@ Creates or updates up to 10,000 target objects based on the provided list of obj
 | Idempotency Key | A unique string that identifies this request to ensure idempotent operations.                                                                                                                                                                                                                                              |                                                                                                                                        |
 | Batches         | A list of batches of CatalogObjects to be inserted/updated atomically. Each batch may contain up to 1,000 objects. The total number of objects across all batches for a single request may not exceed 10,000. If either of these limits is violated, an error will be returned and no objects will be inserted or updated. | <code>[<br /> {<br /> "objects": [<br /> {<br /> "type": "exampleType",<br /> "id": "#exampleId"<br /> }<br /> ]<br /> }<br />]</code> |
 
-### Cancel Invoice
+### Cancel Invoice {#cancelinvoice}
 
 Cancel an invoice.
 
@@ -134,7 +134,7 @@ Cancel an invoice.
 | Connection | The Square connection to use.      |         |
 | Invoice ID | The ID of the invoice to retrieve. |         |
 
-### Cancel Payment
+### Cancel Payment {#cancelpayment}
 
 Cancels (voids) a payment.
 
@@ -143,7 +143,7 @@ Cancels (voids) a payment.
 | Connection | The Square connection to use.        |         |
 | Payment ID | A unique ID for the desired payment. |         |
 
-### Clone Order
+### Clone Order {#cloneorder}
 
 Creates a new order, in the DRAFT state, by duplicating an existing order.
 
@@ -153,7 +153,7 @@ Creates a new order, in the DRAFT state, by duplicating an existing order.
 | Order ID        | The ID of the order to retrieve.                                              |         |
 | Idempotency Key | A unique string that identifies this request to ensure idempotent operations. |         |
 
-### Complete Payment
+### Complete Payment {#completepayment}
 
 Completes (captures) a payment.
 
@@ -163,7 +163,7 @@ Completes (captures) a payment.
 | Payment ID    | A unique ID for the desired payment.                                                |         |
 | Version Token | Used for optimistic concurrency. This token identifies the current Payment version. |         |
 
-### Create Customer
+### Create Customer {#createcustomer}
 
 Create a new customer profile.
 
@@ -183,7 +183,7 @@ Create a new customer profile.
 | Idempotency Key | A unique string that identifies this request to ensure idempotent operations. |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 | Connection      | The Square connection to use.                                                 |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 
-### Create Job
+### Create Job {#createjob}
 
 Create a job in a seller account with a title and tip eligibility.
 
@@ -194,7 +194,7 @@ Create a job in a seller account with a title and tip eligibility.
 | Idempotency Key | A unique string that identifies this CreateJob request.                     |         |
 | Is Tip Eligible | When true, the job is eligible for tips. Defaults to true if not specified. | true    |
 
-### Create Order
+### Create Order {#createorder}
 
 Create a new order.
 
@@ -204,7 +204,7 @@ Create a new order.
 | Order Object | The complete order object. Please refer to the Square API documentation for the structure of this object. | <code>{<br /> "idempotency_key": "example_idempotency_key",<br /> "order": {<br /> "location_id": "example_location_id",<br /> "line_items": [<br /> {<br /> "name": "Example item",<br /> "quantity": "1",<br /> "base_price_money": {<br /> "amount": 100,<br /> "currency": "USD"<br /> }<br /> }<br /> ]<br /> }<br />}</code> |
 | Connection   | The Square connection to use.                                                                             |                                                                                                                                                                                                                                                                                                                                    |
 
-### Create Payment
+### Create Payment {#createpayment}
 
 Creates a payment using the provided source.
 
@@ -213,7 +213,7 @@ Creates a payment using the provided source.
 | Connection   | The Square connection to use.                                                          |                                                                                                                                                                                |
 | Payment Data | The payment data object containing all necessary information for creating the payment. | <code>{<br /> "source_id": "SOURCE_ID",<br /> "idempotency_key": "IDEMPOTENCY_KEY",<br /> "amount_money": {<br /> "amount": 100,<br /> "currency": "USD"<br /> }<br />}</code> |
 
-### Create Team Member
+### Create Team Member {#createteammember}
 
 Create a new team member.
 
@@ -223,7 +223,7 @@ Create a new team member.
 | Idempotency Key | A unique string that identifies this request to ensure idempotent operations. |         |
 | Connection      | The Square connection to use.                                                 |         |
 
-### Create Webhook Subscription
+### Create Webhook Subscription {#createwebhooksubscription}
 
 Creates a webhook subscription.
 
@@ -233,7 +233,7 @@ Creates a webhook subscription.
 | Idempotency Key      | A unique string that identifies this request to ensure idempotent operations. |         |
 | Webhook Subscription | The Subscription to create.                                                   |         |
 
-### Delete Catalog Object
+### Delete Catalog Object {#deletecatalogobject}
 
 Deletes a single CatalogObject based on the provided ID and returns the set of successfully deleted IDs in the response.
 
@@ -242,7 +242,7 @@ Deletes a single CatalogObject based on the provided ID and returns the set of s
 | Connection | The Square connection to use.                                 |         |
 | Object ID  | The object ID of any type of catalog objects to be retrieved. |         |
 
-### Delete Customer
+### Delete Customer {#deletecustomer}
 
 Delete a customer profile from a business.
 
@@ -251,7 +251,7 @@ Delete a customer profile from a business.
 | Customer ID | The ID of the customer to retrieve details for. |         |
 | Connection  | The Square connection to use.                   |         |
 
-### Delete Instance Webhooks
+### Delete Instance Webhooks {#deleteinstancewebhooks}
 
 Delete all webhooks that point to a flow in this instance
 
@@ -259,7 +259,7 @@ Delete all webhooks that point to a flow in this instance
 | ---------- | ----------------------------- | ------- |
 | Connection | The Square connection to use. |         |
 
-### Delete Invoice
+### Delete Invoice {#deleteinvoice}
 
 Delete an invoice.
 
@@ -268,7 +268,7 @@ Delete an invoice.
 | Connection | The Square connection to use.      |         |
 | Invoice ID | The ID of the invoice to retrieve. |         |
 
-### Delete Webhook Subscription
+### Delete Webhook Subscription {#deletewebhooksubscription}
 
 Deletes a webhook subscription.
 
@@ -277,7 +277,7 @@ Deletes a webhook subscription.
 | Connection      | The Square connection to use.         |         |
 | Subscription ID | The ID of the Subscription to delete. |         |
 
-### Get Invoice
+### Get Invoice {#getinvoice}
 
 Retrieve an invoice by its ID.
 
@@ -286,7 +286,7 @@ Retrieve an invoice by its ID.
 | Connection | The Square connection to use.      |         |
 | Invoice ID | The ID of the invoice to retrieve. |         |
 
-### Get Payment
+### Get Payment {#getpayment}
 
 Retrieves details for a specific payment.
 
@@ -295,7 +295,7 @@ Retrieves details for a specific payment.
 | Connection | The Square connection to use.        |         |
 | Payment ID | A unique ID for the desired payment. |         |
 
-### Get Payment Refund
+### Get Payment Refund {#getpaymentrefund}
 
 Retrieves a specific refund using the refund_id.
 
@@ -304,7 +304,7 @@ Retrieves a specific refund using the refund_id.
 | Connection | The Square connection to use.                |         |
 | Refund ID  | The unique ID for the desired PaymentRefund. |         |
 
-### List Catalog
+### List Catalog {#listcatalog}
 
 Returns a list of all CatalogObjects of the specified types in the catalog.
 
@@ -315,7 +315,7 @@ Returns a list of all CatalogObjects of the specified types in the catalog.
 | Types           | An optional case-insensitive, comma-separated list of object types to retrieve. The valid values are defined in the CatalogObjectType enum, for example, ITEM, ITEM_VARIATION, CATEGORY, DISCOUNT, TAX, MODIFIER, MODIFIER_LIST, IMAGE, etc. | ITEM, ITEM_VARIATION, CATEGORY, DISCOUNT, TAX, MODIFIER, MODIFIER_LIST, IMAGE |
 | Catalog Version | The specific version of the catalog objects to be included in the response. This allows you to retrieve historical versions of objects. The specified version value is matched against the CatalogObjects' version attribute.                |                                                                               |
 
-### List Customers
+### List Customers {#listcustomers}
 
 List customer profiles associated with a Square account.
 
@@ -327,7 +327,7 @@ List customer profiles associated with a Square account.
 | Sort Order | Order to sort the customers.                                      |         |
 | Connection | The Square connection to use.                                     |         |
 
-### List Invoices
+### List Invoices {#listinvoices}
 
 Returns a list of invoices for a given location.
 
@@ -338,7 +338,7 @@ Returns a list of invoices for a given location.
 | Cursor      | A pagination cursor returned by a previous call to this endpoint. |         |
 | Limit       | The maximum number of results to be returned in a single page.    |         |
 
-### List Jobs
+### List Jobs {#listjobs}
 
 List jobs in a seller account, sorted by title in ascending order.
 
@@ -348,7 +348,7 @@ List jobs in a seller account, sorted by title in ascending order.
 | Fetch All  | When true, fetches all pages of results using pagination.         | false   |
 | Cursor     | A pagination cursor returned by a previous call to this endpoint. |         |
 
-### List Locations
+### List Locations {#listlocations}
 
 List all of the seller's locations, including those with an inactive status.
 
@@ -356,7 +356,7 @@ List all of the seller's locations, including those with an inactive status.
 | ---------- | ----------------------------- | ------- |
 | Connection | The Square connection to use. |         |
 
-### List Payment Refunds
+### List Payment Refunds {#listpaymentrefunds}
 
 Retrieves a list of refunds for the account making the request.
 
@@ -372,7 +372,7 @@ Retrieves a list of refunds for the account making the request.
 | Source Type | If provided, only returns refunds whose payments have the indicated source type.                                                                       |         |
 | Limit       | The maximum number of results to be returned in a single page.                                                                                         |         |
 
-### List Payments
+### List Payments {#listpayments}
 
 Retrieves a list of payments taken by the account making the request.
 
@@ -389,7 +389,7 @@ Retrieves a list of payments taken by the account making the request.
 | Card Brand            | The brand of the payment card (for example, VISA, MASTERCARD, AMEX).                                                                                   |         |
 | Limit                 | The maximum number of results to be returned in a single page.                                                                                         |         |
 
-### List Webhook Subscriptions
+### List Webhook Subscriptions {#listwebhooksubscriptions}
 
 Lists all webhook subscriptions owned by your application.
 
@@ -401,7 +401,7 @@ Lists all webhook subscriptions owned by your application.
 | Sort Order       | Sorts the returned list by when the Subscription was created with the specified order. Options: ASC, DESC |         |
 | Limit            | The maximum number of results to be returned in a single page.                                            |         |
 
-### Publish Invoice
+### Publish Invoice {#publishinvoice}
 
 Publish an invoice.
 
@@ -411,7 +411,7 @@ Publish an invoice.
 | Invoice ID      | The ID of the invoice to retrieve.                                            |         |
 | Idempotency Key | A unique string that identifies this request to ensure idempotent operations. |         |
 
-### Raw Request
+### Raw Request {#rawrequest}
 
 Send raw HTTP request to Square
 
@@ -433,7 +433,7 @@ Send raw HTTP request to Square
 | Use Exponential Backoff | Specifies whether to use a pre-defined exponential backoff strategy for retries. When enabled, 'Retry Delay (ms)' is ignored.                                                                    | false   |
 | Connection              | The Square connection to use.                                                                                                                                                                    |         |
 
-### Refund Payment
+### Refund Payment {#refundpayment}
 
 Refunds a payment. You can refund the entire payment amount or a portion of it.
 
@@ -445,7 +445,7 @@ Refunds a payment. You can refund the entire payment amount or a portion of it.
 | Refund Amount   | The amount of money to refund. This amount cannot be more than the total_money value of the payment minus the total amount of all previously completed refunds for this payment. |         |
 | Reason          | A description of the reason for the refund.                                                                                                                                      |         |
 
-### Retrieve Catalog Object
+### Retrieve Catalog Object {#retrievecatalogobject}
 
 Returns a single CatalogObject based on the provided ID.
 
@@ -456,7 +456,7 @@ Returns a single CatalogObject based on the provided ID.
 | Include Related Objects | When true, the response will include additional objects that are related to the requested objects.                                                                                                                            | false   |
 | Catalog Version         | The specific version of the catalog objects to be included in the response. This allows you to retrieve historical versions of objects. The specified version value is matched against the CatalogObjects' version attribute. |         |
 
-### Retrieve Customer
+### Retrieve Customer {#retrievecustomer}
 
 Retrieve details for a single customer.
 
@@ -465,7 +465,7 @@ Retrieve details for a single customer.
 | Customer ID | The ID of the customer to retrieve details for. |         |
 | Connection  | The Square connection to use.                   |         |
 
-### Retrieve Job
+### Retrieve Job {#retrievejob}
 
 Retrieve a specified job by ID.
 
@@ -474,7 +474,7 @@ Retrieve a specified job by ID.
 | Connection | The Square connection to use.     |         |
 | Job ID     | The unique identifier of the job. |         |
 
-### Retrieve Location
+### Retrieve Location {#retrievelocation}
 
 Retrieves details of a specific location.
 
@@ -483,7 +483,7 @@ Retrieves details of a specific location.
 | Location ID | The ID of the location to retrieve details for. |         |
 | Connection  | The Square connection to use.                   |         |
 
-### Retrieve Order
+### Retrieve Order {#retrieveorder}
 
 Retrieves an Order by its ID.
 
@@ -492,7 +492,7 @@ Retrieves an Order by its ID.
 | Connection | The Square connection to use.    |         |
 | Order ID   | The ID of the order to retrieve. |         |
 
-### Retrieve Team Member
+### Retrieve Team Member {#retrieveteammember}
 
 Retrieve a team member based on the provided ID.
 
@@ -501,7 +501,7 @@ Retrieve a team member based on the provided ID.
 | Team Member ID | The ID of the TeamMember to be retrieved. |         |
 | Connection     | The Square connection to use.             |         |
 
-### Retrieve Webhook Subscription
+### Retrieve Webhook Subscription {#retrievewebhooksubscription}
 
 Retrieves a webhook subscription identified by its ID.
 
@@ -510,7 +510,7 @@ Retrieves a webhook subscription identified by its ID.
 | Connection      | The Square connection to use.           |         |
 | Subscription ID | The ID of the Subscription to retrieve. |         |
 
-### Search Catalog Items
+### Search Catalog Items {#searchcatalogitems}
 
 Searches for catalog items or item variations by matching supported search attribute values, including custom attribute values, against one or more of the specified query filters.
 
@@ -527,7 +527,7 @@ Searches for catalog items or item variations by matching supported search attri
 | Product Types            | The product types query expression to return items or item variations having the specified product types.             | <code>[<br /> "REGULAR",<br /> "APPOINTMENTS_SERVICE"<br />]</code>                                                                                                                       |
 | Custom Attribute Filters | The customer-attribute filter to return items or item variations matching the specified custom attribute expressions. | <code>[<br /> {<br /> "custom_attribute_definition_id": "attributeId",<br /> "key": "exampleKey",<br /> "string_filter": "exampleString",<br /> "bool_filter": true<br /> }<br />]</code> |
 
-### Search Catalog Objects
+### Search Catalog Objects {#searchcatalogobjects}
 
 Searches for CatalogObject of any type by matching supported search attribute values, excluding custom attribute values on items or item variations, against one or more of the specified query filters.
 
@@ -542,7 +542,7 @@ Searches for CatalogObject of any type by matching supported search attribute va
 | Catalog Query           | A query to be used to filter or sort the results. If no query is specified, the entire catalog will be returned. | <code>{<br /> "sorted_attribute_query": {<br /> "attribute_name": "exampleAttributeName",<br /> "initial_attribute_value": "exampleInitialValue",<br /> "sort_order": "ASC"<br /> },<br /> "exact_query": {<br /> "attribute_name": "exampleAttributeName",<br /> "attribute_value": "exampleAttributeValue"<br /> }<br />}</code> |
 | Limit                   | The maximum number of results to be returned in a single page.                                                   |                                                                                                                                                                                                                                                                                                                                    |
 
-### Search Customers
+### Search Customers {#searchcustomers}
 
 Search customer profiles.
 
@@ -553,7 +553,7 @@ Search customer profiles.
 | Cursor     | A pagination cursor returned by a previous call to this endpoint.                                                            |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 | Connection | The Square connection to use.                                                                                                |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 
-### Search Invoices
+### Search Invoices {#searchinvoices}
 
 Searches for invoices from a location specified in the filter.
 
@@ -564,7 +564,7 @@ Searches for invoices from a location specified in the filter.
 | Cursor     | A pagination cursor returned by a previous call to this endpoint.                                                           |                                                                                                                                                                                                                                                              |
 | Connection | The Square connection to use.                                                                                               |                                                                                                                                                                                                                                                              |
 
-### Search Orders
+### Search Orders {#searchorders}
 
 Search all orders for one or more locations.
 
@@ -577,7 +577,7 @@ Search all orders for one or more locations.
 | Return Entries | When true, the entries associated with the orders will be returned.                                                       | true                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | Cursor         | A pagination cursor returned by a previous call to this endpoint.                                                         |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 
-### Search Team Members
+### Search Team Members {#searchteammembers}
 
 Search for team members based on given filters.
 
@@ -588,7 +588,7 @@ Search for team members based on given filters.
 | Limit        | The maximum number of results to be returned in a single page.    |                                                                                                                                                         |
 | Cursor       | A pagination cursor returned by a previous call to this endpoint. |                                                                                                                                                         |
 
-### Update Customer
+### Update Customer {#updatecustomer}
 
 Update a customer profile.
 
@@ -608,7 +608,7 @@ Update a customer profile.
 | Reference Id  | An optional reference ID to associate with the customer.          |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 | Tax IDs       | Tax IDs in JSON format                                            | <code>{<br /> "eu_vat": "IE3426675K"<br />}</code>                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 
-### Update Invoice
+### Update Invoice {#updateinvoice}
 
 Update an invoice.
 
@@ -618,7 +618,7 @@ Update an invoice.
 | Invoice ID     | The ID of the invoice to retrieve.                                                                                        |                                                                                                                                                                                                                                                                                                                                                                                        |
 | Update Invoice | The data to update an invoice. Please refer to the Square API documentation for the structure and options of this update. | <code>{<br /> "invoice": {<br /> "version": 1,<br /> "paymentRequests": [<br /> {<br /> "uid": "2da7964f-f3d2-4f43-81e8-5aa220bf3355",<br /> "tippingEnabled": false<br /> }<br /> ]<br /> },<br /> "idempotencyKey": "4ee82288-0910-499e-ab4c-5d0071dad1be",<br /> "fieldsToClear": [<br /> "payments_requests[2da7964f-f3d2-4f43-81e8-5aa220bf3355].reminders"<br /> ]<br />}</code> |
 
-### Update Job
+### Update Job {#updatejob}
 
 Update the title or tip eligibility of a job. Changes propagate to all job assignments, shifts, and wage settings.
 
@@ -630,7 +630,7 @@ Update the title or tip eligibility of a job. Changes propagate to all job assig
 | Is Tip Eligible | Updated tip eligibility. Only include if changing tip eligibility.    | true    |
 | Version         | The current version of the object for optimistic concurrency control. |         |
 
-### Update Location
+### Update Location {#updatelocation}
 
 Updates a location associated with a Square account.
 
@@ -640,7 +640,7 @@ Updates a location associated with a Square account.
 | Location Update | The data which will be used to update the Location object. | <code>{<br /> "id": "L2D9N2BTY6CDC",<br /> "name": "Acme",<br /> "address": {<br /> "address_line_1": "1234 Peachtree St. NE",<br /> "locality": "Atlanta",<br /> "administrative_district_level_1": "GA",<br /> "postal_code": "30309"<br /> },<br /> "timezone": "America/New_York",<br /> "status": "ACTIVE",<br /> "country": "US",<br /> "language_code": "en-US",<br /> "currency": "USD",<br /> "type": "PHYSICAL",<br /> "comments": "Midtown Atlanta store - Open weekends",<br /> "coordinates": {<br /> "latitude": 33.7889,<br /> "longitude": -84.3841<br /> },<br /> "business_hours": {<br /> "periods": [<br /> {<br /> "day_of_week": "FRI",<br /> "start_local_time": "07:00",<br /> "end_local_time": "18:00"<br /> },<br /> {<br /> "day_of_week": "SAT",<br /> "start_local_time": "07:00",<br /> "end_local_time": "18:00"<br /> },<br /> {<br /> "day_of_week": "SUN",<br /> "start_local_time": "09:00",<br /> "end_local_time": "15:00"<br /> }<br /> ]<br /> },<br /> "business_name": "Jet Fuel Coffee",<br /> "mcc": "7299"<br />}</code> |
 | Connection      | The Square connection to use.                              |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 
-### Update Order
+### Update Order {#updateorder}
 
 Updates an open order by adding, replacing, or deleting fields.
 
@@ -652,7 +652,7 @@ Updates an open order by adding, replacing, or deleting fields.
 | Idempotency Key | A unique string that identifies this request to ensure idempotent operations.                             |                                                                                                                                                                                                                                                                                                                                    |
 | Connection      | The Square connection to use.                                                                             |                                                                                                                                                                                                                                                                                                                                    |
 
-### Update Payment
+### Update Payment {#updatepayment}
 
 Updates a payment with the APPROVED status.
 
@@ -662,7 +662,7 @@ Updates a payment with the APPROVED status.
 | Payment ID | A unique ID for the desired payment.                                                                                                                                                                                 |                                                                                                                                                                                |
 | Payment    | The payment object containing the amount_money and tip_money to be updated. The amount is specified in the smallest denomination of the applicable currency (for example, US dollar amounts are specified in cents). | <code>{<br /> "amount_money": {<br /> "amount": 1000,<br /> "currency": "USD"<br /> },<br /> "tip_money": {<br /> "amount": 200,<br /> "currency": "USD"<br /> }<br />}</code> |
 
-### Update Team Member
+### Update Team Member {#updateteammember}
 
 Update a team member.
 
@@ -672,7 +672,7 @@ Update a team member.
 | Team Member    | The data which will be used to create the TeamMember object. |         |
 | Connection     | The Square connection to use.                                |         |
 
-### Update Webhook Subscription
+### Update Webhook Subscription {#updatewebhooksubscription}
 
 Updates a webhook subscription.
 
@@ -682,7 +682,7 @@ Updates a webhook subscription.
 | Subscription ID      | The ID of the Subscription to retrieve.                                                        |                                                                                                                                                                                                                                  |
 | Webhook Subscription | The updated webhook subscription object. It should include properties that you want to update. | <code>{<br /> "name": "Updated Subscription Name",<br /> "enabled": true,<br /> "event_types": [<br /> "event_type1",<br /> "event_type2"<br /> ],<br /> "notification_url": "http://example.com/notification-url"<br />}</code> |
 
-### Upsert Catalog Object
+### Upsert Catalog Object {#upsertcatalogobject}
 
 Creates a new or updates the specified CatalogObject.
 

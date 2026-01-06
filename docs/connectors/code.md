@@ -9,7 +9,7 @@ Author and run your own code
 
 ## Connections
 
-### API Key
+### API Key {#apikey}
 
 API Key connection
 
@@ -17,7 +17,7 @@ API Key connection
 | ------- | -------- | ------- |
 | API Key | API Key  |         |
 
-### API Key Secret
+### API Key Secret {#apikeysecret}
 
 API Key Secret connection
 
@@ -26,7 +26,7 @@ API Key Secret connection
 | API Key    | API Key    |         |
 | API Secret | API Secret |         |
 
-### Basic Username/Password
+### Basic Username/Password {#basic}
 
 Basic Username and Password connection
 
@@ -35,7 +35,7 @@ Basic Username and Password connection
 | Username | Username |         |
 | Password | Password |         |
 
-### OAuth 2.0 Authorization Code
+### OAuth 2.0 Authorization Code {#authorizationcode}
 
 OAuth 2.0 Authorization Code flow
 
@@ -51,7 +51,7 @@ Read about how OAuth 2.0 works [here](../oauth2.md).
 | Client Secret | Client Secret of your app for the API                   |         |
 | Headers       | Additional header to supply to authorization requests   |         |
 
-### OAuth 2.0 Client Credentials
+### OAuth 2.0 Client Credentials {#clientcredentials}
 
 OAuth 2.0 Client Credentials flow
 
@@ -66,7 +66,7 @@ Read about how OAuth 2.0 works [here](../oauth2.md).
 | Client Secret | Client Secret of your app for the API                   |         |
 | Headers       | Additional header to supply to token requests           |         |
 
-### Private Key
+### Private Key {#privatekey}
 
 Private key connection
 
@@ -77,7 +77,7 @@ Private key connection
 
 ## Triggers
 
-### Code Block Trigger
+### Code Block Trigger {#runcodetrigger}
 
 Author and run your own code as a trigger
 
@@ -87,7 +87,7 @@ Author and run your own code as a trigger
 
 ## Actions
 
-### Code Block
+### Code Block {#runcode}
 
 Author and run your own code
 

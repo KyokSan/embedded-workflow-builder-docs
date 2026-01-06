@@ -9,7 +9,7 @@ Manage Microsoft Bing Ad Customer Services
 
 ## Connections
 
-### OAuth 2.0 Authorization Code
+### OAuth 2.0 Authorization Code {#oauth}
 
 OAuth 2.0 Authorization Code Connectivity for Microsoft Bing Ads
 
@@ -59,7 +59,7 @@ Read about how OAuth 2.0 works [here](../oauth2.md).
 
 ## Actions
 
-### Add Client Link
+### Add Client Link {#addclientlinks}
 
 Initiates the client link process to manage the accounts of another customer. Sends a link request from one customer to another customer or account.
 
@@ -78,7 +78,7 @@ Initiates the client link process to manage the accounts of another customer. Se
 | Suppress Notification    | Determines whether or not to send email notification of the client link invitation to the primary user of the client advertiser account. If set to true the client will not receive an email and otherwise, since the default value is false, the client will receive an email notification.                      | false       |
 | Type                     | Determines whether the link is to a client advertiser account or a client customer.                                                                                                                                                                                                                               | AccountLink |
 
-### Add Offline Conversions Goal
+### Add Offline Conversions Goal {#addofflineconversionsgoal}
 
 Create a new offline conversions goal.
 
@@ -97,7 +97,7 @@ Create a new offline conversions goal.
 | Customer ID                     | The identifier of the manager account (customer) the user is accessing or operating from. A user can have access to multiple manager accounts.                                                                                                                                                                                                                                                                                                                                                                       |         |
 | Connection                      |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |         |
 
-### Apply Offline Conversions
+### Apply Offline Conversions {#applyofflineconversions}
 
 Apply offline conversions to a Bing Ads account.
 
@@ -108,7 +108,7 @@ Apply offline conversions to a Bing Ads account.
 | Customer ID              | The identifier of the manager account (customer) the user is accessing or operating from. A user can have access to multiple manager accounts.                                                  |         |
 | Connection               |                                                                                                                                                                                                 |         |
 
-### Get Account Info
+### Get Account Info {#getaccountsinfo}
 
 Gets the identifiers, names, and numbers of accounts that are accessible from the specified customer.
 
@@ -117,7 +117,7 @@ Gets the identifiers, names, and numbers of accounts that are accessible from th
 | Connection  |                                                                                                                                                                              |         |
 | Customer ID | The identifier of the customer used to get the account information. This request element is optional. If not set, the user's credentials are used to determine the customer. |         |
 
-### Get Customer
+### Get Customer {#getcustomer}
 
 Gets the details of a customer.
 
@@ -126,7 +126,7 @@ Gets the details of a customer.
 | Connection  |                                                                   |         |
 | Customer ID | The identifier of the customer whose information you want to get. |         |
 
-### Get Customers Info
+### Get Customers Info {#getcustomersinfo}
 
 Gets the identifiers and names of customers that are accessible to the current authenticated user. The results are filtered by customer name.
 
@@ -136,7 +136,7 @@ Gets the identifiers and names of customers that are accessible to the current a
 | Customer Name Filter | A partial or full name of the customers that you want to get. The operation includes the customer in the result if the customer's name begins with the specified filter name. This request element is optional. If you do not want to filter by customer name, set this element to an empty string. |         |
 | Top Number           | A nonzero positive integer that specifies the number of customers to return in the result.                                                                                                                                                                                                          | 5       |
 
-### Get Linked Accounts And Customers Info
+### Get Linked Accounts And Customers Info {#getlinkedaccountsandcustomersinfo}
 
 Gets the customer and account hierarchy under the specified customer.
 
@@ -146,7 +146,7 @@ Gets the customer and account hierarchy under the specified customer.
 | Customer ID          | The identifier of the customer whose hierarchy you want to get.                                                                                                                                                                                                                                                                                                                    |         |
 | Only Parent Accounts | Determines whether to return only the advertiser accounts that belong to the customer or to also return linked customers and linked advertiser accounts under other customers. To limit the results to advertiser accounts directly under the specified customer, set this element to true, and otherwise leave it empty or set the property to false. The default value is false. | false   |
 
-### Raw Request
+### Raw Request {#rawrequest}
 
 Send raw HTTP request to Bing Ads
 
@@ -159,7 +159,7 @@ Send raw HTTP request to Bing Ads
 | Soap Body Request | The required SOAP Body element contains the actual SOAP message intended for the ultimate endpoint of the message. Immediate child elements of the SOAP Body element may be namespace-qualified. |                         |
 | Web Service API   | Bing Ads API Version 13 includes the following web service addresses.                                                                                                                            | CUSTOMER_MANAGEMENT_API |
 
-### Search Accounts
+### Search Accounts {#searchaccounts}
 
 Searches for accounts that match the request criteria.
 
@@ -174,7 +174,7 @@ Searches for accounts that match the request criteria.
 | Customer ID               | Use this field to search the Id element of the Customer.                              |         |
 | User ID                   | Use this field to search the UserId element of the User.                              |         |
 
-### Search Client Links
+### Search Client Links {#searchclientlinks}
 
 Searches for the client links for the customer of the current authenticated user, filtered by the search criteria. The operation returns the most recent link for each unique combination of agency customer and client account.
 
@@ -187,7 +187,7 @@ Searches for the client links for the customer of the current authenticated user
 | Managing Customer ID        | Search for advertiser account ClientLink objects by the agency's managing customer identifier. If other customers also link to the client advertiser account, the results will include those client links. This predicate value is deprecated in favor of the DirectManagingCustomerId predicate. |         |
 | Ordering                    | Determines the order of results by the specified property of an account.                                                                                                                                                                                                                          |         |
 
-### Send User Invitation
+### Send User Invitation {#senduserinvitation}
 
 Sends an email invitation for a user to sign up for Microsoft Advertising. The invitation limits account access and permissions.
 

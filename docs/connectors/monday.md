@@ -9,7 +9,7 @@ Manage boards, tasks and workflows within Monday.
 
 ## Connections
 
-### API Key
+### API Key {#apikey}
 
 API Key connection
 
@@ -22,7 +22,7 @@ We recommend using OAuth when you deploy your integration to customers.
 | ------- | -------- | ------- |
 | API Key | API Key  |         |
 
-### OAuth 2.0
+### OAuth 2.0 {#oauth}
 
 OAuth 2.0 connection
 
@@ -45,7 +45,7 @@ Read about how OAuth 2.0 works [here](../oauth2.md).
 
 ## Actions
 
-### Archive Board
+### Archive Board {#archiveboard}
 
 Delete the information and metadata of a board by Id
 
@@ -54,7 +54,7 @@ Delete the information and metadata of a board by Id
 | Connection |                                            |         |
 | Board ID   | Provide the unique identifier of the board |         |
 
-### Create Board
+### Create Board {#createboard}
 
 Create a new board inside your Monday account
 
@@ -67,7 +67,7 @@ Create a new board inside your Monday account
 | Workspace ID | Provide the unique identifier of the workspace.                        |         |
 | Template ID  | Provide the unique identifier of the template that your board extends. |         |
 
-### Generic GraphQL Request
+### Generic GraphQL Request {#genericrequest}
 
 Issue any GraphQL query or mutation with variables
 
@@ -79,7 +79,7 @@ Issue any GraphQL query or mutation with variables
 | Variables Object  |                                                                                                             |                                                           |
 | API Version       | Provide the version of the API you want to use. If none provided, the default 2025-07 version will be used. |                                                           |
 
-### Get Board
+### Get Board {#getboard}
 
 Get the information and metadata of a board by ID
 
@@ -88,7 +88,7 @@ Get the information and metadata of a board by ID
 | Connection |                                            |         |
 | Board ID   | Provide the unique identifier of the board |         |
 
-### Get Items By Column Value
+### Get Items By Column Value {#getitemsbycolumnvaluenew}
 
 Fetch items that have a certain column value.
 
@@ -100,7 +100,7 @@ Fetch items that have a certain column value.
 | Column Value  | The column's value to search items by                                                                                                                |         |
 | Get All Items | If turned off, a maximum of 500 items will be returned.                                                                                              | false   |
 
-### Get Items By Column Value (Deprecated)
+### Get Items By Column Value (Deprecated) {#getitemsbycolumnvalue}
 
 Fetch items that have a certain column value. This version of the action is being deprecated. Please replace action with Get Items By Column Value.
 
@@ -111,7 +111,7 @@ Fetch items that have a certain column value. This version of the action is bein
 | Column ID    | Provide the ID of the column. For possible values see https://developer.monday.com/api-reference/reference/column-types-reference#supported-columns. |         |
 | Column Value | The column's value to search items by                                                                                                                |         |
 
-### List Boards
+### List Boards {#listboards}
 
 List all available boards in your Monday account
 

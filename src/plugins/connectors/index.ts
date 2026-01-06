@@ -17,6 +17,8 @@ handlebars.registerHelper("cleanDefaultForTable", (value: string) => {
 
 handlebars.registerHelper("lowerCase", (value: string) => value.toLowerCase());
 
+handlebars.registerHelper("anchor", (context) => `{#${context.toLowerCase()}}`);
+
 handlebars.registerPartial(
   "inputsTable",
   fs.readFileSync(path.join(__dirname, "templates", "inputsTable.md.hbs"), {
@@ -84,7 +86,8 @@ async function generateConnectorDocs({
             .replaceAll(
               /<OauthCallbackUrl \/>/g,
               "`https://oauth2.%WHITE_LABEL_BASE_URL%/callback`",
-            );
+            )
+            .replaceAll(/!\[.*\]\(.*\)/g, ""); // Remove images
         }
       }
 

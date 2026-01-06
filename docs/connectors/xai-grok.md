@@ -9,7 +9,7 @@ xAI Grok is an AI-powered component that provides advanced chat and image genera
 
 ## Connections
 
-### xAI Grok Connection
+### xAI Grok Connection {#xaigrokconnection}
 
 Connection to xAI Grok API using API key authentication
 
@@ -22,7 +22,7 @@ Enter the key value into the connection configuration of the integration.
 
 ## Actions
 
-### Create Chat Completion
+### Create Chat Completion {#createchatcompletion}
 
 Create a chat completion using xAI Grok
 
@@ -36,7 +36,7 @@ Create a chat completion using xAI Grok
 | Stream            | If set, partial message deltas will be sent.                                                                                                                                                                                        | false   |
 | Additional Fields | Additional fields that are not supported by the action inputs. See [xAI API docs](https://docs.x.ai/docs/api-reference#chat-completions) for possible values.                                                                       |         |
 
-### Create Message
+### Create Message {#createmessage}
 
 Create a message using the Anthropic-compatible messages API endpoint
 
@@ -48,7 +48,7 @@ Create a message using the Anthropic-compatible messages API endpoint
 | Max Tokens        | The maximum number of tokens to generate before stopping. The model may stop before the max_tokens when it reaches the stop sequence.                                      | 100                |
 | Additional Fields | Additional fields that are not supported by the action inputs. See [xAI API docs](https://docs.x.ai/docs/api-reference#messages-anthropic-compatible) for possible values. |                    |
 
-### Generate Image
+### Generate Image {#generateimage}
 
 Generate an image using xAI's image generation API
 
@@ -60,7 +60,7 @@ Generate an image using xAI's image generation API
 | Number of Images  | Number of images to generate.                                                                                                                                  |         |
 | Additional Fields | Additional fields that are not supported by the action inputs. See [xAI API docs](https://docs.x.ai/docs/api-reference#image-generations) for possible values. |         |
 
-### Get Model
+### Get Model {#getmodel}
 
 Get details about a specific model
 
@@ -69,7 +69,7 @@ Get details about a specific model
 | Connection |                                  |         |
 | Model ID   | The ID of the model to retrieve. |         |
 
-### List Models
+### List Models {#listmodels}
 
 List all available models from xAI
 
@@ -77,7 +77,7 @@ List all available models from xAI
 | ---------- | -------- | ------- |
 | Connection |          |         |
 
-### Raw Request
+### Raw Request {#rawrequest}
 
 Send raw HTTP request to xAI
 

@@ -9,7 +9,7 @@ Create, read, update, and delete documents in a Firebase Cloud Firestore databas
 
 ## Connections
 
-### Firebase Private Key Connection
+### Firebase Private Key Connection {#firebaseconnection}
 
 Authenticate requests to firebase using values obtained from the Google Cloud Platform.
 
@@ -27,7 +27,7 @@ In the new connection, enter the value of the client email, private key, and you
 
 ## Actions
 
-### Bulk Create Documents
+### Bulk Create Documents {#bulkcreatedocuments}
 
 Create multiple documents in a Cloud Firestore collection in a single operation
 
@@ -37,7 +37,7 @@ Create multiple documents in a Cloud Firestore collection in a single operation
 | Collection | Provide a string value for the collection name.        |                                                                                                                                                              |
 | Documents  | An array of documents to be created in the collection. | <code>[<br /> {<br /> "field1": "value1",<br /> "field2": "value2"<br /> },<br /> {<br /> "field1": "value3",<br /> "field2": "value4"<br /> }<br />]</code> |
 
-### Create Document
+### Create Document {#createdocument}
 
 Create a document in a Cloud Firestore collection
 
@@ -47,7 +47,7 @@ Create a document in a Cloud Firestore collection
 | Data       | Provide a key value pair that represents your data. |         |
 | Connection |                                                     |         |
 
-### Delete Document
+### Delete Document {#deletedocument}
 
 Remove a document from a Cloud Firestore collection
 
@@ -57,7 +57,7 @@ Remove a document from a Cloud Firestore collection
 | Document   | Provide a string value for the unique identifier of the document. |         |
 | Connection |                                                                   |         |
 
-### Get Document
+### Get Document {#getdocument}
 
 Get the contents of a document in a Cloud Firestore collection
 
@@ -67,7 +67,7 @@ Get the contents of a document in a Cloud Firestore collection
 | Document   | Provide a string value for the unique identifier of the document. |         |
 | Connection |                                                                   |         |
 
-### List Collections
+### List Collections {#listcollections}
 
 List all collections in a Cloud Firestore database
 
@@ -75,7 +75,7 @@ List all collections in a Cloud Firestore database
 | ---------- | -------- | ------- |
 | Connection |          |         |
 
-### List Documents
+### List Documents {#listdocuments}
 
 List all documents in a Cloud Firestore collection
 
@@ -86,7 +86,7 @@ List all documents in a Cloud Firestore collection
 | Order By        | Provide a string value for the field to order by. |         |
 | Query Operators |                                                   |         |
 
-### Remove Field
+### Remove Field {#removefield}
 
 Completely removes a field from a given document (may not work on a field with a null value)
 
@@ -97,7 +97,7 @@ Completely removes a field from a given document (may not work on a field with a
 | Field To Remove | Provide a string value for the name of the field you would like to remove from the document. |         |
 | Connection      |                                                                                              |         |
 
-### Update Document
+### Update Document {#updatedocument}
 
 Updates a document in a Cloud Firestore collection
 

@@ -9,7 +9,7 @@ Publish messages to an Apache Kafka event stream
 
 ## Connections
 
-### Basic Username/Password
+### Basic Username/Password {#basic}
 
 Basic Username and Password connection
 
@@ -21,7 +21,7 @@ Basic Username and Password connection
 
 ## Actions
 
-### Publish Messages
+### Publish Messages {#publishmessages}
 
 Publish a message to an Apache Kafka topic.
 

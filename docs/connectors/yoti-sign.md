@@ -9,7 +9,7 @@ Yoti Sign is a digital identity and e-signature solution that allows users to ve
 
 ## Connections
 
-### API Key Connection
+### API Key Connection {#apikey}
 
 The connection to the Yoti API
 
@@ -30,7 +30,7 @@ If you believe your API key has been compromised, please contact Yoti Client Sup
 
 ## Actions
 
-### Archive Envelope
+### Archive Envelope {#archiveenvelope}
 
 Archiving an envelope stops all other signers from signing and leaves the envelope in the state it was archived in.
 
@@ -40,7 +40,7 @@ Archiving an envelope stops all other signers from signing and leaves the envelo
 | Envelope ID   | The ID of the envelope                               |         |
 | Debug Request | Enabling this flag will log out the current request. | false   |
 
-### Create Embedded Envelope
+### Create Embedded Envelope {#createembeddedenvelope}
 
 Create an envelope for Yoti Sign
 
@@ -59,7 +59,7 @@ Create an envelope for Yoti Sign
 | Autotagging                 | Auto-tagging is an optional property and is used to automatically place fields in documents which have been set up for Auto-tagging. This is an extension of templates. |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 | Debug Request               | Enabling this flag will log out the current request.                                                                                                                    | false                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 
-### Create Envelope
+### Create Envelope {#createenvelope}
 
 Create an envelope for Yoti Sign
 
@@ -79,7 +79,7 @@ Create an envelope for Yoti Sign
 | Autotagging                 | Auto-tagging is an optional property and is used to automatically place fields in documents which have been set up for Auto-tagging. This is an extension of templates. |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 | Debug Request               | Enabling this flag will log out the current request.                                                                                                                    | false                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 
-### Edit Recipient
+### Edit Recipient {#editrecipient}
 
 Change the recipient of your envelope.
 
@@ -91,7 +91,7 @@ Change the recipient of your envelope.
 | Recipient Info | The recipient info to be modified                    | <code>{<br /> "name": "foobar",<br /> "email": "test@example.com",<br /> "iso_country_code": "US",<br /> "mobile_number": "2136210002"<br />}</code> |
 | Debug Request  | Enabling this flag will log out the current request. | false                                                                                                                                                |
 
-### Envelope Status
+### Envelope Status {#getenvelopestatus}
 
 Get the status of a single envelope
 
@@ -101,7 +101,7 @@ Get the status of a single envelope
 | Envelope ID   | The ID of the envelope                               |         |
 | Debug Request | Enabling this flag will log out the current request. | false   |
 
-### Find Envelopes
+### Find Envelopes {#findenvelopes}
 
 This allows you to find the envelope details for specified envelopes.
 
@@ -111,7 +111,7 @@ This allows you to find the envelope details for specified envelopes.
 | Envelope IDs  | The IDs of the envelopes                             |         |
 | Debug Request | Enabling this flag will log out the current request. | false   |
 
-### Get Documents
+### Get Documents {#getdocuments}
 
 Get Documents from a specific envelope based on Envelope ID
 
@@ -121,7 +121,7 @@ Get Documents from a specific envelope based on Envelope ID
 | Envelope ID   | The ID of the envelope                               |         |
 | Debug Request | Enabling this flag will log out the current request. | false   |
 
-### Get Envelope
+### Get Envelope {#getenvelope}
 
 Get Envelope details based on Envelope ID
 
@@ -131,7 +131,7 @@ Get Envelope details based on Envelope ID
 | Envelope ID   | The ID of the envelope                               |         |
 | Debug Request | Enabling this flag will log out the current request. | false   |
 
-### Get IDV session media
+### Get IDV session media {#getidvsessionmedia}
 
 This action will allow you to obtain the individual media generated in the identity verification session submitted in signing e.g the image of a document.
 
@@ -142,7 +142,7 @@ This action will allow you to obtain the individual media generated in the ident
 | Media ID      | The ID of the media                                  |         |
 | Debug Request | Enabling this flag will log out the current request. | false   |
 
-### Get IDV Session Result
+### Get IDV Session Result {#getidvsessionresult}
 
 This will return the result of the Identity verification session in JSON format
 
@@ -152,7 +152,7 @@ This will return the result of the Identity verification session in JSON format
 | Recipient ID  | The ID of the recipient                              |         |
 | Debug Request | Enabling this flag will log out the current request. | false   |
 
-### List Envelopes
+### List Envelopes {#listenvelopes}
 
 List Envelopes based on the search criteria. If no search criteria is provided, it will return all envelopes.
 
@@ -165,7 +165,7 @@ List Envelopes based on the search criteria. If no search criteria is provided, 
 | Key Value Params | Key value pairs to be used as query parameters        |         |
 | Debug Request    | Enabling this flag will log out the current request.  | false   |
 
-### Send Reminder
+### Send Reminder {#sendenvelopereminder}
 
 Send a reminder to a recipient to sign the envelope.
 

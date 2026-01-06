@@ -9,7 +9,7 @@ Manage the teams, groups, channels, and messages associated with your Microsoft 
 
 ## Connections
 
-### Incoming Webhook
+### Incoming Webhook {#webhook}
 
 Use Incoming Webhooks to send messages to Microsoft Teams.
 
@@ -19,7 +19,7 @@ Use Incoming Webhooks to send messages to Microsoft Teams.
 | ----------- | --------------------------------------------- | ------- |
 | Webhook URL | The Incoming Webhook URL for a Teams channel. |         |
 
-### OAuth 2.0 Admin Consent Client Credentials
+### OAuth 2.0 Admin Consent Client Credentials {#adminconsent}
 
 OAuth 2.0 Client Credentials Connectivity with admin consent screen for Microsoft Teams
 
@@ -89,7 +89,7 @@ Read about how OAuth 2.0 works [here](../oauth2.md).
 | Client ID           |                                                                                                                                                                  |                                                                                            |
 | Client secret value |                                                                                                                                                                  |                                                                                            |
 
-### OAuth 2.0 Authorization Code
+### OAuth 2.0 Authorization Code {#oauth}
 
 OAuth 2.0 Authorization Code Connectivity for Microsoft Teams
 
@@ -124,7 +124,7 @@ Read about how OAuth 2.0 works [here](../oauth2.md).
 | Client ID           |                                                                    |                                                                                                                                                                                                                                                                                                                   |
 | Client secret value |                                                                    |                                                                                                                                                                                                                                                                                                                   |
 
-### OAuth 2.0 Client Credentials
+### OAuth 2.0 Client Credentials {#clientcredentials}
 
 OAuth 2.0 Client Credentials Connectivity for Microsoft Teams
 
@@ -147,7 +147,7 @@ Read about how OAuth 2.0 works [here](../oauth2.md).
 
 ## Triggers
 
-### Webhook
+### Webhook {#webhook}
 
 Receive and validate webhook requests from Microsoft Teams for webhooks you configure.
 
@@ -160,7 +160,7 @@ Receive and validate webhook requests from Microsoft Teams for webhooks you conf
 
 ## Actions
 
-### Add Team Member
+### Add Team Member {#addmember}
 
 Add a new member to the team
 
@@ -172,7 +172,7 @@ Add a new member to the team
 | User Id    | Provide a string value for the Id of the user.                                             |         |
 | Timeout    | The maximum time a client will await a response in milliseconds (defaults to 30000ms)      |         |
 
-### Archive Team
+### Archive Team {#archiveteam}
 
 Archive the specified team
 
@@ -182,7 +182,7 @@ Archive the specified team
 | Team       | Provide an identifier of the given team. This value should be an Id.                  |         |
 | Timeout    | The maximum time a client will await a response in milliseconds (defaults to 30000ms) |         |
 
-### Cancel Webinar
+### Cancel Webinar {#cancelwebinar}
 
 Cancel a webinar
 
@@ -191,7 +191,7 @@ Cancel a webinar
 | Connection |          |         |
 | Webinar ID |          |         |
 
-### Cancel Webinar Registration
+### Cancel Webinar Registration {#cancelwebinarregistration}
 
 Cancel a Registration for a given Webinar
 
@@ -201,7 +201,7 @@ Cancel a Registration for a given Webinar
 | Webinar ID      |          |         |
 | Registration ID |          |         |
 
-### Create Channel
+### Create Channel {#createchannel}
 
 Create a channel inside a team
 
@@ -215,7 +215,7 @@ Create a channel inside a team
 | Visibility          | The visibility of the group and team. Defaults to Public.                                                                                                                                                                                                      | public  |
 | Timeout             | The maximum time a client will await a response in milliseconds (defaults to 30000ms)                                                                                                                                                                          |         |
 
-### Create Team
+### Create Team {#createteam}
 
 Create a new team
 
@@ -234,7 +234,7 @@ Create a new team
 | Giphy Content Rating                  |                                                                                       |         |
 | Timeout                               | The maximum time a client will await a response in milliseconds (defaults to 30000ms) |         |
 
-### Create Webinar
+### Create Webinar {#createwebinar}
 
 Create a new Microsoft Teams Webinar.
 
@@ -251,7 +251,7 @@ Create a new Microsoft Teams Webinar.
 | Co-Organizers                       |                                                                 |         |
 | Attendee Email Notification Enabled | Enable or disable attendee email notifications for the webinar. | false   |
 
-### Create Webinar Registration
+### Create Webinar Registration {#createwebinarregistration}
 
 Create a new Registration for a given Webinar
 
@@ -267,7 +267,7 @@ Create a new Registration for a given Webinar
 | Preferred Language                |          | en-us   |
 | Preferred Timezone                |          |         |
 
-### Delete Channel
+### Delete Channel {#deletechannel}
 
 Delete the information and metadata of a given channel
 
@@ -278,7 +278,7 @@ Delete the information and metadata of a given channel
 | Channel Id | Provide a string value for the channel Id                                             |         |
 | Timeout    | The maximum time a client will await a response in milliseconds (defaults to 30000ms) |         |
 
-### Delete User
+### Delete User {#deleteuser}
 
 Delete the information and metadata of an existing user
 
@@ -288,7 +288,7 @@ Delete the information and metadata of an existing user
 | User Id    | Provide a string value for the Id of the user.                                        |         |
 | Timeout    | The maximum time a client will await a response in milliseconds (defaults to 30000ms) |         |
 
-### Get Channel
+### Get Channel {#getchannel}
 
 Retrieve the information and metadata of a given channel
 
@@ -299,7 +299,7 @@ Retrieve the information and metadata of a given channel
 | Channel Id | Provide a string value for the channel Id                                             |         |
 | Timeout    | The maximum time a client will await a response in milliseconds (defaults to 30000ms) |         |
 
-### Get Current Or Existing User
+### Get Current Or Existing User {#getcurrentuser}
 
 Get the information and metadata of the current user or an existing user
 
@@ -309,7 +309,7 @@ Get the information and metadata of the current user or an existing user
 | User Principal Name | Provide the principal name or ID of the user. Required for non-delegated App connections. |         |
 | Timeout             | The maximum time a client will await a response in milliseconds (defaults to 30000ms)     |         |
 
-### Get Member
+### Get Member {#getmember}
 
 Get information or metadata about a team member
 
@@ -320,7 +320,7 @@ Get information or metadata about a team member
 | Member     | Provide the identifier of a given member. This value should be a memberId.            |         |
 | Timeout    | The maximum time a client will await a response in milliseconds (defaults to 30000ms) |         |
 
-### Get Team
+### Get Team {#getteam}
 
 Get information or metadata of a team
 
@@ -330,7 +330,7 @@ Get information or metadata of a team
 | Team       | Provide an identifier of the given team. This value should be an Id.                  |         |
 | Timeout    | The maximum time a client will await a response in milliseconds (defaults to 30000ms) |         |
 
-### Get User
+### Get User {#getuser}
 
 Get the information and metadata of an existing user
 
@@ -340,7 +340,7 @@ Get the information and metadata of an existing user
 | User Id    | Provide a string value for the Id of the user.                                        |         |
 | Timeout    | The maximum time a client will await a response in milliseconds (defaults to 30000ms) |         |
 
-### Get Webinar
+### Get Webinar {#getwebinar}
 
 Get a webinar
 
@@ -349,7 +349,7 @@ Get a webinar
 | Connection |          |         |
 | Webinar ID |          |         |
 
-### Get Webinar Registration
+### Get Webinar Registration {#getwebinarregistration}
 
 Get a Registration for a given Webinar
 
@@ -359,7 +359,7 @@ Get a Registration for a given Webinar
 | Webinar ID      |          |         |
 | Registration ID |          |         |
 
-### Get Webinar Session
+### Get Webinar Session {#getwebinarsession}
 
 Get a webinar
 
@@ -369,7 +369,7 @@ Get a webinar
 | Webinar ID |          |         |
 | Session ID |          |         |
 
-### Get Webinar Session Attendance Report
+### Get Webinar Session Attendance Report {#getsessionattendancereport}
 
 Get a Session Attendance Report for a given Webinar
 
@@ -388,7 +388,7 @@ Get a Session Attendance Report for a given Webinar
 | Select      | Filters properties (columns), uses the OData V4 query language.                                                  |         |
 | Expand      | Expand returned entities, uses the OData V4 query language.                                                      |         |
 
-### Install App
+### Install App {#addinstalledapp}
 
 Add an Installed App to given team
 
@@ -399,7 +399,7 @@ Add an Installed App to given team
 | App ID     | Provide the ID of the app to install.                                                 |         |
 | Timeout    | The maximum time a client will await a response in milliseconds (defaults to 30000ms) |         |
 
-### List Attendance Records
+### List Attendance Records {#listattendancerecords}
 
 List all Attendance Records for a given Attendance Report
 
@@ -419,7 +419,7 @@ List all Attendance Records for a given Attendance Report
 | Select      | Filters properties (columns), uses the OData V4 query language.                                                  |         |
 | Expand      | Expand returned entities, uses the OData V4 query language.                                                      |         |
 
-### List Catalog Apps
+### List Catalog Apps {#listcatalogapps}
 
 Retrieve the list of apps in the catalog
 
@@ -432,7 +432,7 @@ Retrieve the list of apps in the catalog
 | Expand     | Expand returned entities, uses the OData V4 query language.                           |         |
 | Timeout    | The maximum time a client will await a response in milliseconds (defaults to 30000ms) |         |
 
-### List Channel Messages
+### List Channel Messages {#listchannelmessages}
 
 List all of the messages in a given channel
 
@@ -449,7 +449,7 @@ List all of the messages in a given channel
 | Search      | Returns results based on search criteria.                                                                        |         |
 | Select      | Filters properties (columns), uses the OData V4 query language.                                                  |         |
 
-### List Channels
+### List Channels {#listchannels}
 
 Retrieve the list of channels in a given team
 
@@ -462,7 +462,7 @@ Retrieve the list of channels in a given team
 | Filter     | Filters results (rows), uses the OData V4 query language.                             |         |
 | Select     | Filters properties (columns), uses the OData V4 query language.                       |         |
 
-### List Installed Apps
+### List Installed Apps {#listinstalledapps}
 
 Retrieve the list of installed apps in a given team
 
@@ -475,7 +475,7 @@ Retrieve the list of installed apps in a given team
 | Expand     | Expand returned entities, uses the OData V4 query language.                           |         |
 | Timeout    | The maximum time a client will await a response in milliseconds (defaults to 30000ms) |         |
 
-### List Joined Teams
+### List Joined Teams {#listjoinedteams}
 
 List the teams you have joined
 
@@ -490,7 +490,7 @@ List the teams you have joined
 | Page Offset         | Provide an integer value for the page offset for the given object's results.                                     |         |
 | Select              | Filters properties (columns), uses the OData V4 query language.                                                  |         |
 
-### List Team Members
+### List Team Members {#listmembers}
 
 List all the members in a team
 
@@ -505,7 +505,7 @@ List all the members in a team
 | Page Offset | Provide an integer value for the page offset for the given object's results.                                     |         |
 | Select      | Filters properties (columns), uses the OData V4 query language.                                                  |         |
 
-### List Teams
+### List Teams {#listteams}
 
 List all teams
 
@@ -520,7 +520,7 @@ List all teams
 | Order By    | Order results (rows), uses the OData V4 query language.                                                          |         |
 | Select      | Filters properties (columns), uses the OData V4 query language.                                                  |         |
 
-### List Teams Apps
+### List Teams Apps {#listteamsapps}
 
 List apps from the Microsoft Teams app catalog
 
@@ -534,7 +534,7 @@ List apps from the Microsoft Teams app catalog
 | Order By    | Order results (rows), uses the OData V4 query language.                                                          |         |
 | Select      | Filters properties (columns), uses the OData V4 query language.                                                  |         |
 
-### List Users
+### List Users {#listusers}
 
 List all users
 
@@ -550,7 +550,7 @@ List all users
 | Search      | Returns results based on search criteria.                                                                        |         |
 | Select      | Filters properties (columns), uses the OData V4 query language.                                                  |         |
 
-### List User's Teams
+### List User's Teams {#listusersteams}
 
 List all teams containing the provided user
 
@@ -567,7 +567,7 @@ List all teams containing the provided user
 | Search      | Returns results based on search criteria.                                                                        |         |
 | Select      | Filters properties (columns), uses the OData V4 query language.                                                  |         |
 
-### List Webinar Registrations
+### List Webinar Registrations {#listwebinarregistrations}
 
 List all Registrations for a given Webinar
 
@@ -576,7 +576,7 @@ List all Registrations for a given Webinar
 | Connection |          |         |
 | Webinar ID |          |         |
 
-### List Webinars
+### List Webinars {#listwebinars}
 
 List all webinars
 
@@ -593,7 +593,7 @@ List all webinars
 | Select      | Filters properties (columns), uses the OData V4 query language.                                                  |         |
 | Expand      | Expand returned entities, uses the OData V4 query language.                                                      |         |
 
-### List Webinar Session Attendance Reports
+### List Webinar Session Attendance Reports {#listsessionattendancereports}
 
 List all Session Attendance Reports for a given Webinar
 
@@ -611,7 +611,7 @@ List all Session Attendance Reports for a given Webinar
 | Search      | Returns results based on search criteria.                                                                        |         |
 | Select      | Filters properties (columns), uses the OData V4 query language.                                                  |         |
 
-### List Webinar Sessions
+### List Webinar Sessions {#listwebinarsessions}
 
 List all Sessions for a given Webinar
 
@@ -628,7 +628,7 @@ List all Sessions for a given Webinar
 | Select      | Filters properties (columns), uses the OData V4 query language.                                                  |         |
 | Expand      | Expand returned entities, uses the OData V4 query language.                                                      |         |
 
-### Publish Webinar
+### Publish Webinar {#publishwebinar}
 
 Publish a webinar
 
@@ -637,7 +637,7 @@ Publish a webinar
 | Connection |          |         |
 | Webinar ID |          |         |
 
-### Raw Request
+### Raw Request {#rawrequest}
 
 Send raw HTTP request to Microsoft Teams
 
@@ -659,7 +659,7 @@ Send raw HTTP request to Microsoft Teams
 | Max Retry Count         | The maximum number of retries to attempt. Specify 0 for no retries.                                                                                                                                         | 0       |
 | Use Exponential Backoff | Specifies whether to use a pre-defined exponential backoff strategy for retries. When enabled, 'Retry Delay (ms)' is ignored.                                                                               | false   |
 
-### Remove Installed App
+### Remove Installed App {#removeinstalledapp}
 
 Remove an Installed App from the given team
 
@@ -670,7 +670,7 @@ Remove an Installed App from the given team
 | App Installation ID | Provide the Installation ID of the app to remove.                                     |         |
 | Timeout             | The maximum time a client will await a response in milliseconds (defaults to 30000ms) |         |
 
-### Remove Team Member
+### Remove Team Member {#removemember}
 
 Remove a user from a provided team
 
@@ -681,7 +681,7 @@ Remove a user from a provided team
 | Member     | Provide the identifier of a given member. This value should be a memberId.            |         |
 | Timeout    | The maximum time a client will await a response in milliseconds (defaults to 30000ms) |         |
 
-### Send Adaptive Card To Channel
+### Send Adaptive Card To Channel {#sendchanneladaptivecard}
 
 Send an adaptive card message to a given channel
 
@@ -694,7 +694,7 @@ Send an adaptive card message to a given channel
 | Importance   |                                                                                       | normal  |
 | Timeout      | The maximum time a client will await a response in milliseconds (defaults to 30000ms) |         |
 
-### Send Incoming Webhook Adaptive Card
+### Send Incoming Webhook Adaptive Card {#sendincomingwebhookadaptivecard}
 
 Send an adaptive card message to an Incoming Webhook
 
@@ -703,7 +703,7 @@ Send an adaptive card message to an Incoming Webhook
 | Connection   |                               |         |
 | Card Payload | Adaptive Card payload to send |         |
 
-### Send Incoming Webhook Message
+### Send Incoming Webhook Message {#sendincomingwebhookmessage}
 
 Send a text message to an Incoming Webhook
 
@@ -712,7 +712,7 @@ Send a text message to an Incoming Webhook
 | Connection |                                         |         |
 | Message    | Message to send to the Incoming Webhook |         |
 
-### Send Message To Channel
+### Send Message To Channel {#sendchannelmessage}
 
 Send a message to a given channel
 
@@ -726,7 +726,7 @@ Send a message to a given channel
 | Timeout      | The maximum time a client will await a response in milliseconds (defaults to 30000ms) |         |
 | Importance   |                                                                                       | normal  |
 
-### Update Channel
+### Update Channel {#updatechannel}
 
 Update an existing channel inside a team
 
@@ -740,7 +740,7 @@ Update an existing channel inside a team
 | Visibility          | The visibility of the group and team. Defaults to Public.                             | public  |
 | Timeout             | The maximum time a client will await a response in milliseconds (defaults to 30000ms) |         |
 
-### Update Team
+### Update Team {#updateteam}
 
 Update an existing team
 
@@ -758,7 +758,7 @@ Update an existing team
 | Giphy Content Rating                  |                                                                                       |         |
 | Timeout                               | The maximum time a client will await a response in milliseconds (defaults to 30000ms) |         |
 
-### Upgrade Installed App
+### Upgrade Installed App {#upgradeinstalledapp}
 
 Upgrade an Installed App to the latest version for given team
 

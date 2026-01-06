@@ -9,7 +9,7 @@ Build and parse CSV files to and from JavaScript arrays
 
 ## Actions
 
-### Generate CSV From Array
+### Generate CSV From Array {#generatefromobject}
 
 Generates CSV data from an array of objects
 
@@ -19,7 +19,7 @@ Generates CSV data from an array of objects
 | Delimiter       | Provide a string value containing the character the file is delimited on. | ,                                                                                                                                                        |
 | Include Header? |                                                                           | true                                                                                                                                                     |
 
-### Generate (Deprecated)
+### Generate (Deprecated) {#generate}
 
 Generates a CSV file from an array of objects
 
@@ -28,7 +28,7 @@ Generates a CSV file from an array of objects
 | Data      | For each list item, provide a list of strings that represent a row in the file. |         |
 | Delimiter | Provide a string value containing the character the file is delimited on.       | ,       |
 
-### Parse
+### Parse {#parse}
 
 Parse CSV data into an array of rows
 

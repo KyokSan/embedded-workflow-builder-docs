@@ -9,7 +9,7 @@ Manage compute, workflow jobs, ML models, SQL queries and more within a Databric
 
 ## Connections
 
-### Databricks Personal Access Token
+### Databricks Personal Access Token {#personalaccesstoken}
 
 While service principal authentication is the recommended method for authenticating with the Databricks REST API, you can also use personal access tokens (which are tied to specific users).
 To generate a personal access token:
@@ -30,7 +30,7 @@ See https://docs.databricks.com/en/dev-tools/auth/pat.html for more information 
 | Host                  | The hostname of your Databricks instance. Include the entire domain name. For example, dbc-1234567890123456.cloud.databricks.com |         |
 | Personal Access Token | From DataBricks, go to User Settings > Developer > Access Tokens > Manage > Generate New Token                                   |         |
 
-### Databricks Workspace Service Principal
+### Databricks Workspace Service Principal {#workspaceserviceprincipal}
 
 With service principal authentication, you create a service user within your account, grant the user permissions to a workspace, and then generate a client ID and secret pair for that service user.
 This component uses that key pair to authenticate with workspaces that the service account has been granted permissions to.
@@ -68,7 +68,7 @@ Read about how OAuth 2.0 works [here](../oauth2.md).
 
 ## Actions
 
-### Create Execution Context
+### Create Execution Context {#createexecutioncontext}
 
 Create a Databricks execution context
 
@@ -79,7 +79,7 @@ Create a Databricks execution context
 | Language      |                                                      | python  |
 | Debug Request | Enabling this flag will log out the current request. | false   |
 
-### Get Cluster
+### Get Cluster {#getcluster}
 
 Get a Databricks cluster by ID
 
@@ -89,7 +89,7 @@ Get a Databricks cluster by ID
 | Cluster ID    | The unique identifier for the cluster                |         |
 | Debug Request | Enabling this flag will log out the current request. | false   |
 
-### Get Command Status
+### Get Command Status {#getcommandstatus}
 
 Gets the status of and, if available, the results from a currently executing command.
 
@@ -101,7 +101,7 @@ Gets the status of and, if available, the results from a currently executing com
 | Command ID           | The ID of the command to get the status of                                              |         |
 | Debug Request        | Enabling this flag will log out the current request.                                    | false   |
 
-### Get Current User
+### Get Current User {#getcurrentuser}
 
 Get the currently authenticated Databricks user or service principal.
 
@@ -110,7 +110,7 @@ Get the currently authenticated Databricks user or service principal.
 | Connection    |                                                      |         |
 | Debug Request | Enabling this flag will log out the current request. | false   |
 
-### Get SQL Warehouse
+### Get SQL Warehouse {#getwarehouse}
 
 Get an SQL Warehouse
 
@@ -120,7 +120,7 @@ Get an SQL Warehouse
 | Warehouse ID  | The ID of an SQL warehouse                           |         |
 | Debug Request | Enabling this flag will log out the current request. | false   |
 
-### List Clusters
+### List Clusters {#listclusters}
 
 Return information about all pinned clusters, active clusters, up to 200 of the most recently terminated all-purpose clusters in the past 30 days, and up to 30 of the most recently terminated job clusters in the past 30 days.
 
@@ -129,7 +129,7 @@ Return information about all pinned clusters, active clusters, up to 200 of the 
 | Connection    |                                                      |         |
 | Debug Request | Enabling this flag will log out the current request. | false   |
 
-### List Node Types
+### List Node Types {#listnodetypes}
 
 Returns a list of supported Spark node types. These node types can be used to launch a cluster.
 
@@ -138,7 +138,7 @@ Returns a list of supported Spark node types. These node types can be used to la
 | Connection    |                                                      |         |
 | Debug Request | Enabling this flag will log out the current request. | false   |
 
-### List SQL Warehouses
+### List SQL Warehouses {#listwarehouses}
 
 List all SQL Warehouses in the Databricks workspace
 
@@ -147,7 +147,7 @@ List all SQL Warehouses in the Databricks workspace
 | Connection    |                                                      |         |
 | Debug Request | Enabling this flag will log out the current request. | false   |
 
-### Raw Request
+### Raw Request {#rawrequest}
 
 Send raw HTTP request to the Databricks API.
 
@@ -170,7 +170,7 @@ Send raw HTTP request to the Databricks API.
 | Max Retry Count         | The maximum number of retries to attempt. Specify 0 for no retries.                                                                                                                                                                                                                                                                                                         | 0       |
 | Use Exponential Backoff | Specifies whether to use a pre-defined exponential backoff strategy for retries. When enabled, 'Retry Delay (ms)' is ignored.                                                                                                                                                                                                                                               | false   |
 
-### Restart Cluster
+### Restart Cluster {#restartcluster}
 
 Restart a Databricks cluster by ID
 
@@ -180,7 +180,7 @@ Restart a Databricks cluster by ID
 | Cluster ID    | The unique identifier for the cluster                |         |
 | Debug Request | Enabling this flag will log out the current request. | false   |
 
-### Run Command
+### Run Command {#runcommand}
 
 Run a command in a Databricks execution context
 
@@ -193,7 +193,7 @@ Run a command in a Databricks execution context
 | Command              | The executable code to run in the execution context                                     |         |
 | Debug Request        | Enabling this flag will log out the current request.                                    | false   |
 
-### SQL: Execute an SQL Statement
+### SQL: Execute an SQL Statement {#runsql}
 
 Run a SQL query in the Databricks workspace. You can choose to wait for the result or asynchronously issue the request and return the statement ID.
 
@@ -205,7 +205,7 @@ Run a SQL query in the Databricks workspace. You can choose to wait for the resu
 | SQL Parameters | The parameters to use in the SQL statement. This should represent an array of objects, and each object should have a name and value. For example, [{ "name": "my_name", "value": "the name" } |         |
 | Debug Request  | Enabling this flag will log out the current request.                                                                                                                                          | false   |
 
-### Start SQL Warehouse
+### Start SQL Warehouse {#startwarehouse}
 
 Start an SQL Warehouse
 
@@ -215,7 +215,7 @@ Start an SQL Warehouse
 | Warehouse ID  | The ID of an SQL warehouse                           |         |
 | Debug Request | Enabling this flag will log out the current request. | false   |
 
-### Start Terminated Cluster
+### Start Terminated Cluster {#startterminatedcluster}
 
 Start a terminated Databricks cluster by ID
 
@@ -225,7 +225,7 @@ Start a terminated Databricks cluster by ID
 | Cluster ID    | The unique identifier for the cluster                |         |
 | Debug Request | Enabling this flag will log out the current request. | false   |
 
-### Stop SQL Warehouse
+### Stop SQL Warehouse {#stopwarehouse}
 
 Stop an SQL Warehouse
 
@@ -235,7 +235,7 @@ Stop an SQL Warehouse
 | Warehouse ID  | The ID of an SQL warehouse                           |         |
 | Debug Request | Enabling this flag will log out the current request. | false   |
 
-### Terminate Cluster
+### Terminate Cluster {#terminatecluster}
 
 Terminate a Databricks cluster by ID
 

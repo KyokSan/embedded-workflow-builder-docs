@@ -9,7 +9,7 @@ Google Gemini is an offering of advanced AI models developed by Google&#x27;s De
 
 ## Connections
 
-### Google Gemini API
+### Google Gemini API {#apikeyconnection}
 
 Connect to Google Generative AI (Gemini) using an API key.
 
@@ -20,7 +20,7 @@ Enter the key value into the connection configuration of the integration.
 | ------- | -------------------------------------------------------------------------------------------------- | ------- |
 | API Key | Your Google AI Studio API key. Generate API keys [here](https://makersuite.google.com/app/apikey). |         |
 
-### Vertex AI API
+### Vertex AI API {#vertexaiconnection}
 
 Connect to Google Generative AI (Gemini) using Vertex AI.
 
@@ -48,7 +48,7 @@ In order to Authenticate using **Vertex**:
 
 ## Actions
 
-### Conversation
+### Conversation {#sendmessage}
 
 Sends a message to the chat. Optionally, historical messages can be provided to continue the chat.
 
@@ -65,7 +65,7 @@ Sends a message to the chat. Optionally, historical messages can be provided to 
 | Extra Parameters  | Extra parameters to pass to the API.                                                                                                                   |         |
 | Connection        | Select a Google Gemini connection.                                                                                                                     |         |
 
-### Delete File
+### Delete File {#deletefile}
 
 Deletes a file from the service.
 
@@ -74,7 +74,7 @@ Deletes a file from the service.
 | File Name  | The name of the file to delete.    |         |
 | Connection | Select a Google Gemini connection. |         |
 
-### Generate Image
+### Generate Image {#generateimage}
 
 Generates an image using the Google Generative AI (Gemini) model.
 
@@ -88,7 +88,7 @@ Generates an image using the Google Generative AI (Gemini) model.
 | Extra Parameters | Extra parameters to pass to the API.                                                      |         |
 | Connection       | Select a Google Gemini connection.                                                        |         |
 
-### Generate Video
+### Generate Video {#generatevideo}
 
 Generates a video using the Google Generative AI (Gemini) model.
 
@@ -105,7 +105,7 @@ Generates a video using the Google Generative AI (Gemini) model.
 | Extra Parameters  | Extra parameters to pass to the API.                                                      |         |
 | Connection        | Select a Google Gemini connection.                                                        |         |
 
-### Get File
+### Get File {#getfile}
 
 Retrieves the file information from the service.
 
@@ -114,7 +114,7 @@ Retrieves the file information from the service.
 | File Name  | The name of the file to get.       |         |
 | Connection | Select a Google Gemini connection. |         |
 
-### Get Model Info
+### Get Model Info {#getmodelinfo}
 
 Retrieves detailed information about a specific model from the Google Generative AI API.
 
@@ -123,7 +123,7 @@ Retrieves detailed information about a specific model from the Google Generative
 | Connection | Select a Google Gemini connection.                                                        |         |
 | Model Name | The name of the model to get information about (e.g., 'gemini-pro', 'gemini-pro-vision'). |         |
 
-### List Files
+### List Files {#listfiles}
 
 Lists all current project files from the service.
 
@@ -134,7 +134,7 @@ Lists all current project files from the service.
 | Page Token | The page token to return.               |         |
 | Connection | Select a Google Gemini connection.      |         |
 
-### List Models
+### List Models {#listmodels}
 
 Retrieves a list of available models from the Google Generative AI API.
 
@@ -147,7 +147,7 @@ Retrieves a list of available models from the Google Generative AI API.
 | Extra Parameters | Extra parameters to pass to the API.    |         |
 | Connection       | Select a Google Gemini connection.      |         |
 
-### Send Prompt
+### Send Prompt {#generatetext}
 
 Send a prompt to the chat and provides a response.
 
@@ -163,7 +163,7 @@ Send a prompt to the chat and provides a response.
 | Extra Parameters  | Extra parameters to pass to the API.                                                                                                                   |         |
 | Connection        | Select a Google Gemini connection.                                                                                                                     |         |
 
-### Upload File
+### Upload File {#uploadfile}
 
 Uploads a file asynchronously to the Gemini API.
 

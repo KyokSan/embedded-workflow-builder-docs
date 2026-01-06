@@ -9,7 +9,7 @@ Manage files in Google Drive
 
 ## Connections
 
-### OAuth2
+### OAuth2 {#oauth2}
 
 OAuth2 Connection
 
@@ -70,7 +70,7 @@ Read about how OAuth 2.0 works [here](../oauth2.md).
 
 ## Triggers
 
-### Drive Activity
+### Drive Activity {#driveactivitypollingtrigger}
 
 Checks for Google Drive activity on a configured schedule. By default yields activity on personal 'My Drive'. For activity on a shared drive, specify a shared drive's folder's 'Folder ID'.
 
@@ -82,7 +82,7 @@ Checks for Google Drive activity on a configured schedule. By default yields act
 | Consolidation Strategy | Details on how to consolidate related actions that make up the activity. If not set, then related actions aren't consolidated. |         |
 | Connection             | The Connection to use for Google Drive authorization.                                                                          |         |
 
-### New and Updated Files
+### New and Updated Files {#pollchangestrigger}
 
 Checks for new and updated files in a specified drive (or all drives, if omitted) on a configured schedule.
 
@@ -91,13 +91,13 @@ Checks for new and updated files in a specified drive (or all drives, if omitted
 | Connection | The Connection to use for Google Drive authorization.                                                                                                            |         |
 | Drive ID   | The ID of a shared drive to search for the file in. If not provided, the search will be performed across all drives. Enter 'my-drive' to search only "My Drive". |         |
 
-### Push Notification Webhook
+### Push Notification Webhook {#pushnotificationwebhook}
 
 Receive and validate webhook requests from Google Drive for webhooks you configure.
 
 ## Actions
 
-### Copy File
+### Copy File {#copyfile}
 
 Copy a file by file id
 
@@ -108,7 +108,7 @@ Copy a file by file id
 | File Name  | The name of the file.                                                                                                 |         |
 | Folder ID  | A unique opaque ID for each folder.                                                                                   |         |
 
-### Create File
+### Create File {#createfile}
 
 Create a new file with content and metadata
 
@@ -120,7 +120,7 @@ Create a new file with content and metadata
 | File Name        | The name of the file.                                                                                                       |         |
 | Fields           | A comma separated list of fields to return in the response.                                                                 | \*      |
 
-### Create Folder
+### Create Folder {#createfolder}
 
 Create a directory file
 
@@ -130,7 +130,7 @@ Create a directory file
 | Folder Name      | The name of the folder.                               |         |
 | Parent Folder Id | A unique opaque ID for each folder.                   |         |
 
-### Create Webhook for Drive
+### Create Webhook for Drive {#createdrivewebhook}
 
 Create a webhook to receive notifications of changes with a Google Drive
 
@@ -141,7 +141,7 @@ Create a webhook to receive notifications of changes with a Google Drive
 | Endpoint        | The URL where webhook notifications will be sent.                                                                                                                |         |
 | Expiration Time | The time at which the webhook will expire as a UNIX timestamp in milliseconds. Defaults to 1 hour from now, and can be set to a maximum of 1 day from now.       |         |
 
-### Create Webhook for File or Folder
+### Create Webhook for File or Folder {#createfilewebhook}
 
 Create a webhook to receive notifications of changes for a file or folder
 
@@ -152,7 +152,7 @@ Create a webhook to receive notifications of changes for a file or folder
 | Endpoint          | The URL where webhook notifications will be sent.                                                                                                          |         |
 | Expiration Time   | The time at which the webhook will expire as a UNIX timestamp in milliseconds. Defaults to 1 hour from now, and can be set to a maximum of 1 day from now. |         |
 
-### Delete File
+### Delete File {#deletefile}
 
 Delete a file by file id
 
@@ -162,7 +162,7 @@ Delete a file by file id
 | File ID    | A unique opaque ID for each file. File IDs are stable throughout the life of the file, even if the file name changes. |         |
 | Fields     | A comma separated list of fields to return in the response.                                                           | \*      |
 
-### Delete Webhook
+### Delete Webhook {#deletewebhook}
 
 Stop a webhook channel from sending notifications
 
@@ -172,7 +172,7 @@ Stop a webhook channel from sending notifications
 | Webhook ID  | Returned when you create a webhook                    |         |
 | Resource ID | Returned when you create a webhook                    |         |
 
-### Empty Trash
+### Empty Trash {#emptytrash}
 
 Empty the trash of deleted files
 
@@ -180,7 +180,7 @@ Empty the trash of deleted files
 | ---------- | ----------------------------------------------------- | ------- |
 | Connection | The Connection to use for Google Drive authorization. |         |
 
-### Get About
+### Get About {#getabout}
 
 Gets information about the user's Drive, and system capabilities
 
@@ -189,7 +189,7 @@ Gets information about the user's Drive, and system capabilities
 | Connection | The Connection to use for Google Drive authorization.       |         |
 | Fields     | A comma separated list of fields to return in the response. | \*      |
 
-### Get Current User
+### Get Current User {#getcurrentuser}
 
 Get the information and metadata of the user that is currently logged in
 
@@ -197,7 +197,7 @@ Get the information and metadata of the user that is currently logged in
 | ---------- | ----------------------------------------------------- | ------- |
 | Connection | The Connection to use for Google Drive authorization. |         |
 
-### Get File
+### Get File {#getfile}
 
 Gets a file's metadata and content by ID.
 
@@ -207,7 +207,7 @@ Gets a file's metadata and content by ID.
 | File ID               | A unique opaque ID for each file. File IDs are stable throughout the life of the file, even if the file name changes.                     |         |
 | Preferred Export Type | The MIME type to export the file as. If not compatible, the first available export type will be used. Only required for non-binary files. |         |
 
-### Get File Metadata
+### Get File Metadata {#getfilemetadata}
 
 Gets a file's metadata and content by ID.
 
@@ -217,7 +217,7 @@ Gets a file's metadata and content by ID.
 | File ID    | A unique opaque ID for each file. File IDs are stable throughout the life of the file, even if the file name changes. |         |
 | Fields     | A comma separated list of fields to return in the response.                                                           |         |
 
-### List Changes
+### List Changes {#listchanges}
 
 List changes made to files in your Google Drive since the last time this step ran (up to 1000)
 
@@ -226,7 +226,7 @@ List changes made to files in your Google Drive since the last time this step ra
 | Connection | The Connection to use for Google Drive authorization.                                                                                                            |         |
 | Drive ID   | The ID of a shared drive to search for the file in. If not provided, the search will be performed across all drives. Enter 'my-drive' to search only "My Drive". |         |
 
-### List Drives
+### List Drives {#listdrives}
 
 List all drives
 
@@ -234,7 +234,7 @@ List all drives
 | ---------- | ----------------------------------------------------- | ------- |
 | Connection | The Connection to use for Google Drive authorization. |         |
 
-### List Files
+### List Files {#listfiles}
 
 Lists all available files and directories
 
@@ -248,7 +248,7 @@ Lists all available files and directories
 | Query      | A query string to filter results. See [Google's documentation](https://developers.google.com/drive/api/v3/search-files) for query syntax.                        |         |
 | Fetch All  | When true, fetches all pages of results using pagination.                                                                                                        | false   |
 
-### List File's Export Types
+### List File's Export Types {#listexporttypes}
 
 List the available export types of a file by ID.
 
@@ -257,7 +257,7 @@ List the available export types of a file by ID.
 | Connection | The Connection to use for Google Drive authorization.                                                                 |         |
 | File ID    | A unique opaque ID for each file. File IDs are stable throughout the life of the file, even if the file name changes. |         |
 
-### List Folders
+### List Folders {#listfolders}
 
 Lists all available directories
 
@@ -271,7 +271,7 @@ Lists all available directories
 | Folder ID  | A unique opaque ID for each folder.                                                                                                                              |         |
 | Fetch All  | When true, fetches all pages of results using pagination.                                                                                                        | false   |
 
-### Move File
+### Move File {#movefile}
 
 Move a file by file ID
 
@@ -281,7 +281,7 @@ Move a file by file ID
 | File ID    | A unique opaque ID for each file. File IDs are stable throughout the life of the file, even if the file name changes. |         |
 | Folder ID  | A unique opaque ID for each folder.                                                                                   |         |
 
-### Query Drive Activity
+### Query Drive Activity {#querydriveactivity}
 
 Query past activity in Google Drive.
 
@@ -295,7 +295,7 @@ Query past activity in Google Drive.
 | Consolidation Strategy | Details on how to consolidate related actions that make up the activity. If not set, then related actions aren't consolidated. |         |
 | Fetch All              | When true, fetches all pages of results using pagination.                                                                      | false   |
 
-### Raw Request
+### Raw Request {#rawrequest}
 
 Send raw HTTP request to Google Drive
 
@@ -317,7 +317,7 @@ Send raw HTTP request to Google Drive
 | Max Retry Count         | The maximum number of retries to attempt. Specify 0 for no retries.                                                                                                                                               | 0       |
 | Use Exponential Backoff | Specifies whether to use a pre-defined exponential backoff strategy for retries. When enabled, 'Retry Delay (ms)' is ignored.                                                                                     | false   |
 
-### Search Files
+### Search Files {#searchfiles}
 
 Search for an existing file by Name
 
@@ -334,7 +334,7 @@ Search for an existing file by Name
 | Page Token                    | Specify the pagination token that's returned by a previous request to retrieve the next page of results                                                          |         |
 | Fetch All                     | When true, fetches all pages of results using pagination.                                                                                                        | false   |
 
-### Search Folders
+### Search Folders {#searchfolders}
 
 Search for an existing directory by Name
 
@@ -349,7 +349,7 @@ Search for an existing directory by Name
 | Page Token       | Specify the pagination token that's returned by a previous request to retrieve the next page of results                                                          |         |
 | Fetch All        | When true, fetches all pages of results using pagination.                                                                                                        | false   |
 
-### Update File
+### Update File {#updatefile}
 
 Updates a file's content by file id
 

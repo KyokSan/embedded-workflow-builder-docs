@@ -9,7 +9,7 @@ The Universal Webhook trigger allows you to invoke a flow by making an HTTP requ
 
 ## Triggers
 
-### Universal Webhook
+### Universal Webhook {#webhook}
 
 Invoke a flow by making an HTTP request to the trigger's URL.
 

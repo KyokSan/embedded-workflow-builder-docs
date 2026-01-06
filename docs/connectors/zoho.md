@@ -9,7 +9,7 @@ Manage records, contacts, and transactions in Zoho CRM and Books
 
 ## Connections
 
-### OAuth 2.0
+### OAuth 2.0 {#zohotemplatedconnection}
 
 OAuth 2.0 Connection
 
@@ -67,10 +67,7 @@ For integrations that will be deployed to users in multiple Zoho regions, config
 
 To make the Region URL field visible to deployers, enable the field visibility in the connection configuration:
 
-<Screenshot
-  filename="components/zoho/visible.png"
-  maxWidth="500px"
-/>
+./assets
 
 This connection uses OAuth 2.0, a common authentication mechanism for integrations.
 Read about how OAuth 2.0 works [here](../oauth2.md).
@@ -82,7 +79,7 @@ Read about how OAuth 2.0 works [here](../oauth2.md).
 | Client ID     | Client Identifier of your app for the Zoho API. Generate this in the [Zoho API Console](https://api-console.zoho.com/).                                                                                                      |                                                                                                                                                                  |
 | Client Secret | Client Secret of your app for the Zoho API. Generate this in the [Zoho API Console](https://api-console.zoho.com/).                                                                                                          |                                                                                                                                                                  |
 
-### Zoho OAuth 2.0 (Deprecated)
+### Zoho OAuth 2.0 (Deprecated) {#oauth2}
 
 Zoho OAuth 2.0 Connection (Deprecated)
 
@@ -100,7 +97,7 @@ Read about how OAuth 2.0 works [here](../oauth2.md).
 
 ## Triggers
 
-### CRM Notifications
+### CRM Notifications {#notificationstrigger}
 
 Receive CRM event notifications from Zoho CRM. Automatically creates and manages a notification channel subscription for selected event types when the instance is deployed, and removes the subscription when the instance is deleted.
 
@@ -115,7 +112,7 @@ Receive CRM event notifications from Zoho CRM. Automatically creates and manages
 | Notify On Related Action     | When true, triggers notifications when associated record actions occur.                            | true    |
 | Notification Condition       | Filter notifications by specific field changes. Provide field API names to watch.                  |         |
 
-### New and Updated Books Contacts
+### New and Updated Books Contacts {#bookcontactspollingtrigger}
 
 Checks for new and updated contacts in Zoho Books on a configured schedule.
 
@@ -123,7 +120,7 @@ Checks for new and updated contacts in Zoho Books on a configured schedule.
 | ---------- | --------------------------- | ------- |
 | Connection | The Zoho connection to use. |         |
 
-### New and Updated CRM Contacts
+### New and Updated CRM Contacts {#contactspollingtrigger}
 
 Checks for new and updated contacts in Zoho CRM on a configured schedule.
 
@@ -131,7 +128,7 @@ Checks for new and updated contacts in Zoho CRM on a configured schedule.
 | ---------- | --------------------------- | ------- |
 | Connection | The Zoho connection to use. |         |
 
-### New and Updated CRM Leads
+### New and Updated CRM Leads {#leadspollingtrigger}
 
 Checks for new and updated leads in Zoho CRM on a configured schedule.
 
@@ -141,7 +138,7 @@ Checks for new and updated leads in Zoho CRM on a configured schedule.
 
 ## Actions
 
-### Books - Create Record
+### Books - Create Record {#bookscreaterecord}
 
 Create a Zoho Books Record
 
@@ -154,7 +151,7 @@ Create a Zoho Books Record
 | Dynamic Fields     | Dynamic input fields that can be configured at deploy time using key-value config variables.                  |         |
 | Values             | Key-value pairs representing field names and their values for creating or updating records.                   |         |
 
-### Books - Get Record
+### Books - Get Record {#booksgetrecord}
 
 Get a single Zoho Books Record
 
@@ -166,7 +163,7 @@ Get a single Zoho Books Record
 | Parent Record Type | The type of Books record to operate on. See [Zoho Books API](https://www.zoho.com/books/api/v3/) for details. |         |
 | Parent Record ID   | The unique identifier of the parent record under which other records are grouped.                             |         |
 
-### Books - Get Records
+### Books - Get Records {#booksgetrecords}
 
 Get a collection of Zoho Books Records
 
@@ -181,7 +178,7 @@ Get a collection of Zoho Books Records
 | Per Page           | The number of records to fetch per page. Maximum is 200.                                                      | 200     |
 | Fetch All          | When true, automatically fetches all pages of results using pagination.                                       | false   |
 
-### Books - Raw Request
+### Books - Raw Request {#booksrawrequest}
 
 Send raw HTTP request to Zoho Books
 
@@ -203,7 +200,7 @@ Send raw HTTP request to Zoho Books
 | Max Retry Count         | The maximum number of retries to attempt. Specify 0 for no retries.                                                                                                                                                                                     | 0       |
 | Use Exponential Backoff | Specifies whether to use a pre-defined exponential backoff strategy for retries. When enabled, 'Retry Delay (ms)' is ignored.                                                                                                                           | false   |
 
-### Books - Remove Record
+### Books - Remove Record {#booksremoverecord}
 
 Remove a Zoho Books Record
 
@@ -215,7 +212,7 @@ Remove a Zoho Books Record
 | Parent Record Type | The type of Books record to operate on. See [Zoho Books API](https://www.zoho.com/books/api/v3/) for details. |         |
 | Parent Record ID   | The unique identifier of the parent record under which other records are grouped.                             |         |
 
-### Books - Update Record
+### Books - Update Record {#booksupdaterecord}
 
 Update a Zoho Books Record
 
@@ -229,7 +226,7 @@ Update a Zoho Books Record
 | Dynamic Fields     | Dynamic input fields that can be configured at deploy time using key-value config variables.                  |         |
 | Values             | Key-value pairs representing field names and their values for creating or updating records.                   |         |
 
-### CRM - Add attachment
+### CRM - Add attachment {#crmaddattachment}
 
 Add an attachment to a Zoho CRM record (Lead, etc).
 
@@ -241,7 +238,7 @@ Add an attachment to a Zoho CRM record (Lead, etc).
 | File        | The file to upload - either string contents or a binary file |         |
 | File Name   | The name of the file to upload, including extension.         |         |
 
-### CRM - COQL Query
+### CRM - COQL Query {#crmrunquery}
 
 Run a COQL Query for Zoho CRM
 
@@ -250,7 +247,7 @@ Run a COQL Query for Zoho CRM
 | Connection | The Zoho connection to use.                                                                                                |         |
 | Query      | COQL query to execute. See [Zoho COQL documentation](https://www.zoho.com/crm/developer/docs/api/v8/COQL.html) for syntax. |         |
 
-### CRM - Create Record
+### CRM - Create Record {#crmcreaterecord}
 
 Create a Zoho CRM Record
 
@@ -261,7 +258,7 @@ Create a Zoho CRM Record
 | Dynamic Fields | Dynamic input fields that can be configured at deploy time using key-value config variables.                                               |         |
 | Values         | Key-value pairs representing field names and their values for creating or updating records.                                                |         |
 
-### CRM - Disable Notification
+### CRM - Disable Notification {#crmdisablenotification}
 
 Stop all instant notifications enabled for the specified channels.
 
@@ -270,7 +267,7 @@ Stop all instant notifications enabled for the specified channels.
 | Connection  | The Zoho connection to use.                                                                                     |         |
 | Channel IDs | Comma-separated channel IDs to disable. These are the IDs you provided when enabling the notification channels. |         |
 
-### CRM - Disable Specific Notification
+### CRM - Disable Specific Notification {#crmdisablespecificnotification}
 
 Disable notifications for specific events in a channel without disabling the entire channel.
 
@@ -281,7 +278,7 @@ Disable notifications for specific events in a channel without disabling the ent
 | Events                   | Subscribed operations in format "{module}.{operation}". Operations: create, edit, delete, all.                                                                                                      |         |
 | Notify On Related Action | When true, triggers notifications when associated record actions occur.                                                                                                                             | true    |
 
-### CRM - Enable Notification
+### CRM - Enable Notification {#crmenablenotification}
 
 Enable instant notifications for actions on a Zoho CRM module.
 
@@ -297,7 +294,7 @@ Enable instant notifications for actions on a Zoho CRM module.
 | Notify On Related Action     | When true, triggers notifications when associated record actions occur.                                                                                                                             | true    |
 | Notification Condition       | Filter notifications by specific field changes. Provide field API names to watch.                                                                                                                   |         |
 
-### CRM - Get Notification Details
+### CRM - Get Notification Details {#crmgetnotificationdetails}
 
 Retrieve the details of notifications enabled for a specific channel.
 
@@ -310,7 +307,7 @@ Retrieve the details of notifications enabled for a specific channel.
 | Per Page   | The number of records to fetch per page. Maximum is 200.                                                                                                                                            | 200     |
 | Connection | The Zoho connection to use.                                                                                                                                                                         |         |
 
-### CRM - Get Record
+### CRM - Get Record {#crmgetrecord}
 
 Get a single Zoho CRM Record
 
@@ -321,7 +318,7 @@ Get a single Zoho CRM Record
 | Record ID   | The unique identifier of the record in Zoho.                                                                                               |         |
 | Fields      | The field names to retrieve. Leave empty to retrieve all fields.                                                                           |         |
 
-### CRM - Get Records
+### CRM - Get Records {#crmgetrecords}
 
 Get a collection of Zoho CRM Records
 
@@ -337,7 +334,7 @@ Get a collection of Zoho CRM Records
 | Sort By     | The field to sort results by.                                                                                                              |         |
 | Fetch All   | When true, automatically fetches all pages of results using pagination.                                                                    | false   |
 
-### CRM - Raw Request
+### CRM - Raw Request {#crmrawrequest}
 
 Send raw HTTP request to Zoho CRM
 
@@ -359,7 +356,7 @@ Send raw HTTP request to Zoho CRM
 | Max Retry Count         | The maximum number of retries to attempt. Specify 0 for no retries.                                                                                                                                                                                                                                          | 0       |
 | Use Exponential Backoff | Specifies whether to use a pre-defined exponential backoff strategy for retries. When enabled, 'Retry Delay (ms)' is ignored.                                                                                                                                                                                | false   |
 
-### CRM - Remove Record
+### CRM - Remove Record {#crmremoverecord}
 
 Remove a Zoho CRM Record
 
@@ -369,7 +366,7 @@ Remove a Zoho CRM Record
 | Record Type | The type of CRM record to operate on. See [Zoho CRM Modules](https://www.zoho.com/crm/developer/docs/api/v8/modules-api.html) for details. |         |
 | Record ID   | The unique identifier of the record in Zoho.                                                                                               |         |
 
-### CRM - Update Notification
+### CRM - Update Notification {#crmupdatenotification}
 
 Update specific information of a notification enabled for a channel.
 
@@ -383,7 +380,7 @@ Update specific information of a notification enabled for a channel.
 | Channel Expiry         | ISO datetime for expiry. Maximum 1 week from now. Default is 1 hour.                                                                                                                                |         |
 | Notification Condition | Filter notifications by specific field changes. Provide field API names to watch.                                                                                                                   |         |
 
-### CRM - Update Record
+### CRM - Update Record {#crmupdaterecord}
 
 Update a Zoho CRM Record
 

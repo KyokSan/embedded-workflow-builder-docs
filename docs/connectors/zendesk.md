@@ -9,7 +9,7 @@ Manage Tickets and users in Zendesk
 
 ## Connections
 
-### API Token
+### API Token {#apitoken}
 
 Authenticates requests to Zendesk using a generated API token.
 
@@ -26,7 +26,7 @@ In order to use the API Token connection for Zendesk, you'll need to provide the
 | Username           | Your Zendesk username. (Email address used to login to Zendesk).                                                       |         |
 | API Token          | Your generated API token from Zendesk.                                                                                 |         |
 
-### OAuth 2.0
+### OAuth 2.0 {#oauth2dynamicinputs}
 
 Authenticates requests to Zendesk using an OAuth 2.0 connection.
 
@@ -50,7 +50,7 @@ Read about how OAuth 2.0 works [here](../oauth2.md).
 | Client ID          |                                                                                                                        |            |
 | Client Secret      |                                                                                                                        |            |
 
-### OAuth2 (Deprecated)
+### OAuth2 (Deprecated) {#oauth2}
 
 Authenticates requests to Zendesk using an OAuth 2.0 connection.
 
@@ -77,7 +77,7 @@ Read about how OAuth 2.0 works [here](../oauth2.md).
 
 ## Triggers
 
-### Webhook
+### Webhook {#webhook}
 
 Receive and validate webhook requests from Zendesk for webhooks you configure.
 
@@ -87,7 +87,7 @@ Receive and validate webhook requests from Zendesk for webhooks you configure.
 
 ## Actions
 
-### Associate Attachments in Bulk to Article
+### Associate Attachments in Bulk to Article {#associateattachmentsinbulktoarticle}
 
 Associate attachments in bulk to one article at a time, with a maximum of 20 attachments per request.
 
@@ -98,7 +98,7 @@ Associate attachments in bulk to one article at a time, with a maximum of 20 att
 | Locale         | The desired locale.                          | en-us   |
 | Attachment Ids | Attachment IDs to be attached to the Object. |         |
 
-### Create Article
+### Create Article {#createarticle}
 
 Create a new Article in the Help Center.
 
@@ -114,7 +114,7 @@ Create a new Article in the Help Center.
 | Draft               | Whether the article is a draft or not.                                                                                                                                                                         | false   |
 | Notify Subscribers  | Supplying a notify_subscribers with a value of false will prevent subscribers to the article from receiving an article creation email notification. This can be helpful when creating many articles at a time. | false   |
 
-### Create Article Attachment
+### Create Article Attachment {#createarticleattachment}
 
 Creates an attachment for the specified article in the Help Center.
 
@@ -126,7 +126,7 @@ Creates an attachment for the specified article in the Help Center.
 | Inline     | Whether to inline the attachment or not. | false   |
 | Article Id | The unique identifier of the article.    |         |
 
-### Create Article Subscription
+### Create Article Subscription {#createarticlesubscription}
 
 Create a subscription to an article in the Help Center.
 
@@ -137,7 +137,7 @@ Create a subscription to an article in the Help Center.
 | UserId     | The ID of the user to subscribe to the section. If none provided, the API assumes the current user. |         |
 | Locale     | The locale of the article. If not provided, the default locale is used.                             |         |
 
-### Create Category
+### Create Category {#createcategory}
 
 Create a category in the Help Center.
 
@@ -149,7 +149,7 @@ Create a category in the Help Center.
 | Locale               | The desired locale.                         | en-us   |
 | Position             | The position of the category to be created. |         |
 
-### Create Post
+### Create Post {#createpost}
 
 Create a new post in the Help Center.
 
@@ -165,7 +165,7 @@ Create a new post in the Help Center.
 | Notify Subscribers | Supplying a notify_subscribers with a value of false will prevent subscribers to the article from receiving an article creation email notification. This can be helpful when creating many articles at a time. | false   |
 | Content Tag Ids    | Content Tag IDs to be attached to the Object.                                                                                                                                                                  |         |
 
-### Create Post Subscription
+### Create Post Subscription {#createpostsubscription}
 
 Create a Post subscription in the Help Center.
 
@@ -175,7 +175,7 @@ Create a Post subscription in the Help Center.
 | Post Id    | The unique identifier of the post.                                                               |         |
 | UserId     | The ID of the user to subscribe to the post. If none provided, the API assumes the current user. |         |
 
-### Create Section
+### Create Section {#createsection}
 
 Create a category in the Help Center.
 
@@ -188,7 +188,7 @@ Create a category in the Help Center.
 | Section Description | The description of the section.        |         |
 | Position            | The position of the section.           |         |
 
-### Create Section Subscription
+### Create Section Subscription {#createsectionsubscription}
 
 Create a Section subscription in the Help Center.
 
@@ -200,7 +200,7 @@ Create a Section subscription in the Help Center.
 | Locale           | The locale of the section. If not provided, the default locale is used.                             |         |
 | Include Comments | Whether to be subscribed to comments or not.                                                        | false   |
 
-### Create Ticket
+### Create Ticket {#createticket}
 
 Create a new ticket.
 
@@ -222,7 +222,7 @@ Create a new ticket.
 | Connection                |                                                                                                                                                       |         |
 | External ID               | The ID of this issue from an external system                                                                                                          |         |
 
-### Create Topic
+### Create Topic {#createtopic}
 
 Create a new topic in the Help Center.
 
@@ -232,7 +232,7 @@ Create a new topic in the Help Center.
 | Topic Name        | The name of the topic.        |         |
 | Topic Description | The description of the topic. |         |
 
-### Create Topic Subscription
+### Create Topic Subscription {#createtopicsubscription}
 
 Create a new Topic subscription In The Help Center.
 
@@ -243,7 +243,7 @@ Create a new Topic subscription In The Help Center.
 | UserId           | The ID of the user to subscribe to the topic. If none provided, the API assumes the current user. |         |
 | Include Comments | Whether to be subscribed to comments or not.                                                      | false   |
 
-### Create User
+### Create User {#createuser}
 
 Create a new user.
 
@@ -262,7 +262,7 @@ Create a new user.
 | Organization Id | Provide the unique identifier of the organization.                                                                               |         |
 | Connection      |                                                                                                                                  |         |
 
-### Create Webhook
+### Create Webhook {#createwebhook}
 
 Create a webhook in Zendesk to notify you of changes to your users, organization, or tickets
 
@@ -274,7 +274,7 @@ Create a webhook in Zendesk to notify you of changes to your users, organization
 | Events            | Determines what events trigger a webhook to fire |         |
 | Allow Duplicates? |                                                  | false   |
 
-### Create Webhook Trigger
+### Create Webhook Trigger {#createwebhooktrigger}
 
 Create a trigger to cause a webhook to fire
 
@@ -287,7 +287,7 @@ Create a trigger to cause a webhook to fire
 | Trigger Conditions   | The conditions under which this trigger will fire. Leave the default to fire under any change.                                          | <code>{<br /> "all": [],<br /> "any": [<br /> {<br /> "field": "status",<br /> "operator": "changed"<br /> },<br /> {<br /> "field": "status",<br /> "operator": "not_changed"<br /> }<br /> ]<br />}</code>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 | Allow Duplicates?    | Allow a duplicate trigger with the same title to be created?                                                                            | false                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 
-### Delete Article Attachment
+### Delete Article Attachment {#deletearticleattachment}
 
 Deletes an existing article attachment.
 
@@ -296,7 +296,7 @@ Deletes an existing article attachment.
 | Connection            |                                                  |         |
 | Article Attachment Id | The unique identifier of the article attachment. |         |
 
-### Delete Article Subscription
+### Delete Article Subscription {#deletearticlesubscription}
 
 Delete a subscription to an article in the Help Center.
 
@@ -307,7 +307,7 @@ Delete a subscription to an article in the Help Center.
 | Article Id      | The unique identifier of the article.                                   |         |
 | Locale          | The locale of the article. If not provided, the default locale is used. |         |
 
-### Delete Category
+### Delete Category {#deletecategory}
 
 Delete a category in the Help Center.
 
@@ -316,7 +316,7 @@ Delete a category in the Help Center.
 | Connection  |                                        |         |
 | Category Id | The unique identifier of the category. |         |
 
-### Delete Instance Webhooks
+### Delete Instance Webhooks {#deleteinstancewebhooks}
 
 Delete all webhooks pointed at this instance
 
@@ -324,7 +324,7 @@ Delete all webhooks pointed at this instance
 | ---------- | -------- | ------- |
 | Connection |          |         |
 
-### Delete Post
+### Delete Post {#deletepost}
 
 Delete a post in the Help Center.
 
@@ -333,7 +333,7 @@ Delete a post in the Help Center.
 | Connection |                                    |         |
 | Post Id    | The unique identifier of the post. |         |
 
-### Delete Post Subscription
+### Delete Post Subscription {#deletepostsubscription}
 
 Delete a Post subscription in the Help Center.
 
@@ -343,7 +343,7 @@ Delete a Post subscription in the Help Center.
 | Post Id         | The unique identifier of the post.         |         |
 | Subscription Id | The unique identifier of the subscription. |         |
 
-### Delete Section
+### Delete Section {#deletesection}
 
 Delete a section in the Help Center. (warning: deleting a section also deletes all its articles).
 
@@ -353,7 +353,7 @@ Delete a section in the Help Center. (warning: deleting a section also deletes a
 | Locale     | The desired locale.                   | en-us   |
 | Section Id | The unique identifier of the section. |         |
 
-### Delete Section Subscription
+### Delete Section Subscription {#deletesectionsubscription}
 
 Delete a Section subscription in the Help Center.
 
@@ -363,7 +363,7 @@ Delete a Section subscription in the Help Center.
 | Section Id      | The unique identifier of the section.      |         |
 | Subscription Id | The unique identifier of the subscription. |         |
 
-### Delete Ticket
+### Delete Ticket {#deleteticket}
 
 Delete the information and metadata of a ticket by Id.
 
@@ -372,7 +372,7 @@ Delete the information and metadata of a ticket by Id.
 | Ticket Id  | Provide the unique identifier for the ticket you would like to show. |         |
 | Connection |                                                                      |         |
 
-### Delete Topic
+### Delete Topic {#deletetopic}
 
 Delete a topic from the Help Center.
 
@@ -381,7 +381,7 @@ Delete a topic from the Help Center.
 | Connection |                                     |         |
 | Topic Id   | The unique identifier of the topic. |         |
 
-### Delete Topic Subscription
+### Delete Topic Subscription {#deletetopicsubscription}
 
 Delete a Topic subscription in the Help Center.
 
@@ -391,7 +391,7 @@ Delete a Topic subscription in the Help Center.
 | Topic Id        | The unique identifier of the topic.        |         |
 | Subscription Id | The unique identifier of the subscription. |         |
 
-### Delete User
+### Delete User {#deleteuser}
 
 Delete the information and metadata of a user by Id.
 
@@ -400,7 +400,7 @@ Delete the information and metadata of a user by Id.
 | UserId     | Provide an integer value for the unique identifier of the user. |         |
 | Connection |                                                                 |         |
 
-### Delete Webhook
+### Delete Webhook {#deletewebhook}
 
 Delete a webhook by ID
 
@@ -409,7 +409,7 @@ Delete a webhook by ID
 | Connection |          |         |
 | Webhook ID |          |         |
 
-### Get Article
+### Get Article {#showarticle}
 
 Shows the properties of the specified article in the Help Center.
 
@@ -419,7 +419,7 @@ Shows the properties of the specified article in the Help Center.
 | Locale     | The locale of the articles to retrieve. Defaults to 'en-us'. | en-us   |
 | Article Id | The unique identifier of the article.                        |         |
 
-### Get Article Attachment
+### Get Article Attachment {#getarticleattachment}
 
 Shows the properties of the specified attachment on an Article located in the Help Center.
 
@@ -429,7 +429,7 @@ Shows the properties of the specified attachment on an Article located in the He
 | Article Id            | The unique identifier of the article.            |         |
 | Article Attachment Id | The unique identifier of the article attachment. |         |
 
-### Get Article Subscription
+### Get Article Subscription {#getarticlesubscription}
 
 Get an Article Subscription in the Help Center.
 
@@ -440,7 +440,7 @@ Get an Article Subscription in the Help Center.
 | Article Id      | The unique identifier of the article.                                   |         |
 | Locale          | The locale of the article. If not provided, the default locale is used. |         |
 
-### Get Category
+### Get Category {#getcategory}
 
 Get a category in the Help Center.
 
@@ -450,7 +450,7 @@ Get a category in the Help Center.
 | Locale      | The desired locale.                    | en-us   |
 | Category Id | The unique identifier of the category. |         |
 
-### Get Post
+### Get Post {#getpost}
 
 Retrieve a post from the Help Center.
 
@@ -459,7 +459,7 @@ Retrieve a post from the Help Center.
 | Connection |                                    |         |
 | Post Id    | The unique identifier of the post. |         |
 
-### Get Post Subscription
+### Get Post Subscription {#getpostsubscription}
 
 Get a Post subscription in the Help Center.
 
@@ -469,7 +469,7 @@ Get a Post subscription in the Help Center.
 | Subscription Id | The unique identifier of the subscription. |         |
 | Connection      |                                            |         |
 
-### Get Section
+### Get Section {#getsection}
 
 Retrieve a section in the Help Center.
 
@@ -479,7 +479,7 @@ Retrieve a section in the Help Center.
 | Locale     | The desired locale.                   | en-us   |
 | Section Id | The unique identifier of the section. |         |
 
-### Get Section Subscription
+### Get Section Subscription {#getsectionsubscription}
 
 Get a Section subscription in the Help Center.
 
@@ -489,7 +489,7 @@ Get a Section subscription in the Help Center.
 | Subscription Id | The unique identifier of the subscription. |         |
 | Section Id      | The unique identifier of the section.      |         |
 
-### Get Ticket By External ID
+### Get Ticket By External ID {#getbyexternalid}
 
 Get a ticket by external ID.
 
@@ -498,7 +498,7 @@ Get a ticket by external ID.
 | Connection  |                                              |         |
 | External ID | The ID of this issue from an external system |         |
 
-### Get Topic
+### Get Topic {#gettopic}
 
 Retrieve a topic from the Help Center.
 
@@ -507,7 +507,7 @@ Retrieve a topic from the Help Center.
 | Connection |                                     |         |
 | Topic Id   | The unique identifier of the topic. |         |
 
-### Get Topic Subscription
+### Get Topic Subscription {#gettopicsubscription}
 
 Get a Topic subscription in the Help Center.
 
@@ -517,7 +517,7 @@ Get a Topic subscription in the Help Center.
 | Subscription Id | The unique identifier of the subscription. |         |
 | Topic Id        | The unique identifier of the topic.        |         |
 
-### List Article Attachments
+### List Article Attachments {#listarticleattachments}
 
 Lists all the article's attachments in the Help Center.
 
@@ -528,7 +528,7 @@ Lists all the article's attachments in the Help Center.
 | Page Limit | The number of results to return per page, maximum is 100. If a greater value than 100 is provided, it will default to 100. |         |
 | Fetch All  | Whether to make the actions handle pagination and fetch all the records at once or not.                                    | false   |
 
-### List Articles
+### List Articles {#listarticles}
 
 Retrieve a list of all articles in the Help Center.
 
@@ -544,7 +544,7 @@ Retrieve a list of all articles in the Help Center.
 | Start Time        | The start time to filter articles by.                                                                                                                                                                                          |         |
 | Fetch All         | Whether to make the actions handle pagination and fetch all the records at once or not.                                                                                                                                        | false   |
 
-### List Article Subscriptions
+### List Article Subscriptions {#listarticlesubscriptions}
 
 List all subscriptions for an article in the Help Center.
 
@@ -555,7 +555,7 @@ List all subscriptions for an article in the Help Center.
 | Pagination Cursor | The cursor to use for pagination. If not provided, the first page will be returned.                                        |         |
 | Article Id        | The unique identifier of the article.                                                                                      |         |
 
-### List Categories
+### List Categories {#listcategories}
 
 List all categories in the Help Center.
 
@@ -568,7 +568,7 @@ List all categories in the Help Center.
 | Page Limit | The number of results to return per page, maximum is 100. If a greater value than 100 is provided, it will default to 100. |         |
 | Fetch All  | Whether to make the actions handle pagination and fetch all the records at once or not.                                    | false   |
 
-### List Posts
+### List Posts {#listposts}
 
 List all posts in the Help Center.
 
@@ -582,7 +582,7 @@ List all posts in the Help Center.
 | Sort By           | The field to sort the results by.                                                                                          |         |
 | Fetch All         | Whether to make the actions handle pagination and fetch all the records at once or not.                                    | false   |
 
-### List Post Subscriptions
+### List Post Subscriptions {#listpostsubscriptions}
 
 List all Post subscriptions in the Help Center.
 
@@ -593,7 +593,7 @@ List all Post subscriptions in the Help Center.
 | Pagination Cursor | The cursor to use for pagination. If not provided, the first page will be returned.                                        |         |
 | Page Limit        | The number of results to return per page, maximum is 100. If a greater value than 100 is provided, it will default to 100. |         |
 
-### List Sections
+### List Sections {#listsections}
 
 Lists all the sections in the Help Center or in a specific category.
 
@@ -607,7 +607,7 @@ Lists all the sections in the Help Center or in a specific category.
 | Page Limit  | The number of results to return per page, maximum is 100. If a greater value than 100 is provided, it will default to 100. |         |
 | Fetch All   | Whether to make the actions handle pagination and fetch all the records at once or not.                                    | false   |
 
-### List Section Subscriptions
+### List Section Subscriptions {#listsectionsubscriptions}
 
 List all Section subscriptions in the Help Center.
 
@@ -618,7 +618,7 @@ List all Section subscriptions in the Help Center.
 | Page Limit        | The number of results to return per page, maximum is 100. If a greater value than 100 is provided, it will default to 100. |         |
 | Section Id        | The unique identifier of the section.                                                                                      |         |
 
-### List Tickets
+### List Tickets {#listtickets}
 
 List all Tickets.
 
@@ -626,7 +626,7 @@ List all Tickets.
 | ---------- | -------- | ------- |
 | Connection |          |         |
 
-### List Tickets Assigned To User
+### List Tickets Assigned To User {#listticketstouser}
 
 List all of the tickets that have been assigned to a particular user.
 
@@ -635,7 +635,7 @@ List all of the tickets that have been assigned to a particular user.
 | UserId     | Provide an integer value for the unique identifier of the user. |         |
 | Connection |                                                                 |         |
 
-### List Tickets Requested By User
+### List Tickets Requested By User {#listticketsbyuser}
 
 List all of the tickets that a particular user has requested.
 
@@ -644,7 +644,7 @@ List all of the tickets that a particular user has requested.
 | UserId     | Provide an integer value for the unique identifier of the user. |         |
 | Connection |                                                                 |         |
 
-### List Topics
+### List Topics {#listtopics}
 
 Retrieve a list of topics from the Help Center.
 
@@ -655,7 +655,7 @@ Retrieve a list of topics from the Help Center.
 | Page Limit        | The number of results to return per page, maximum is 100. If a greater value than 100 is provided, it will default to 100. |         |
 | Fetch All         | Whether to make the actions handle pagination and fetch all the records at once or not.                                    | false   |
 
-### List Topic Subscriptions
+### List Topic Subscriptions {#listtopicsubscriptions}
 
 List all Topic subscriptions in the Help Center.
 
@@ -666,7 +666,7 @@ List all Topic subscriptions in the Help Center.
 | Topic Id          | The unique identifier of the topic.                                                                                        |         |
 | Page Limit        | The number of results to return per page, maximum is 100. If a greater value than 100 is provided, it will default to 100. |         |
 
-### List Triggers
+### List Triggers {#listtriggers}
 
 List workflow triggers
 
@@ -674,7 +674,7 @@ List workflow triggers
 | ---------- | -------- | ------- |
 | Connection |          |         |
 
-### List Users
+### List Users {#listusers}
 
 List all Users.
 
@@ -682,7 +682,7 @@ List all Users.
 | ---------- | -------- | ------- |
 | Connection |          |         |
 
-### List Webhooks
+### List Webhooks {#listwebhooks}
 
 List webhooks configured in Zendesk
 
@@ -691,7 +691,7 @@ List webhooks configured in Zendesk
 | Connection                  |                                                |         |
 | Show only instance webhooks | Show only webhooks that point to this instance | true    |
 
-### Raw Request
+### Raw Request {#rawrequest}
 
 Send raw HTTP request to Zendesk
 
@@ -714,7 +714,7 @@ Send raw HTTP request to Zendesk
 | Max Retry Count         | The maximum number of retries to attempt. Specify 0 for no retries.                                                                                                                                                                                                     | 0       |
 | Use Exponential Backoff | Specifies whether to use a pre-defined exponential backoff strategy for retries. When enabled, 'Retry Delay (ms)' is ignored.                                                                                                                                           | false   |
 
-### Search Articles
+### Search Articles {#searcharticles}
 
 Search for articles in the Help Center.
 
@@ -737,7 +737,7 @@ Search for articles in the Help Center.
 | Sort Order     | The order to sort the results by.                               |         |
 | Sort By        | The field to sort the results by.                               |         |
 
-### Search Posts
+### Search Posts {#searchposts}
 
 Search posts in the Help Center.
 
@@ -755,7 +755,7 @@ Search posts in the Help Center.
 | Updated Before | The time to filter the results by. (Format: YYYY-MM-DD) |         |
 | Sort Order     | The order to sort the results by.                       |         |
 
-### Search Users
+### Search Users {#searchusers}
 
 Returns an array of users who meet the search criteria.
 
@@ -765,7 +765,7 @@ Returns an array of users who meet the search criteria.
 | Query       | The query parameter supports the Zendesk search syntax for more advanced user searches. It can specify a partial or full value of any user property, including name, email address, notes, or phone. Example: query="jdoe". |         |
 | Connection  |                                                                                                                                                                                                                             |         |
 
-### Show Ticket
+### Show Ticket {#showticket}
 
 Get the information and metadata of a ticket by Id.
 
@@ -774,7 +774,7 @@ Get the information and metadata of a ticket by Id.
 | Ticket Id  | Provide the unique identifier for the ticket you would like to show. |         |
 | Connection |                                                                      |         |
 
-### Show User
+### Show User {#showuser}
 
 Get the information and metadata of a user by Id.
 
@@ -783,7 +783,7 @@ Get the information and metadata of a user by Id.
 | UserId     | Provide an integer value for the unique identifier of the user. |         |
 | Connection |                                                                 |         |
 
-### Unified Search
+### Unified Search {#unifiedsearch}
 
 Search for knowledge base articles, community posts, and external records in the Help Center.
 
@@ -801,7 +801,7 @@ Search for knowledge base articles, community posts, and external records in the
 | Pagination Cursor   | The cursor to use for pagination. If not provided, the first page will be returned.                                        |         |
 | Page Limit          | The number of results to return per page, maximum is 100. If a greater value than 100 is provided, it will default to 100. |         |
 
-### Update Article
+### Update Article {#updatearticle}
 
 Update an existing Article's Metadata in the Help Center.
 
@@ -822,7 +822,7 @@ Update an existing Article's Metadata in the Help Center.
 | Content Tag Ids     | Content Tag IDs to be attached to the Object.  |         |
 | Label Names         | Label Names to be attached to the Object.      |         |
 
-### Update Category
+### Update Category {#updatecategory}
 
 Update a category in the Help Center.
 
@@ -835,7 +835,7 @@ Update a category in the Help Center.
 | Category Description | The description of the category to be updated. |         |
 | Position             | The position of the category to be updated.    |         |
 
-### Update Post
+### Update Post {#updatepost}
 
 Update a post in the Help Center.
 
@@ -852,7 +852,7 @@ Update a post in the Help Center.
 | Closed          | Whether the post is closed or not.            |         |
 | Content Tag Ids | Content Tag IDs to be attached to the Object. |         |
 
-### Update Section
+### Update Section {#updatesection}
 
 Update section in the Help Center.
 
@@ -867,7 +867,7 @@ Update section in the Help Center.
 | Category Id         | Category ID of the Section to update.       |         |
 | Parent Section Id   | Parent Section ID of the Section to update. |         |
 
-### Update Ticket
+### Update Ticket {#updateticket}
 
 Update the information and metadata of a ticket by Id.
 
@@ -888,7 +888,7 @@ Update the information and metadata of a ticket by Id.
 | Requester Organization Id | Provide an integer value to specify the Organization of the requester.                                                                                |         |
 | Connection                |                                                                                                                                                       |         |
 
-### Update Topic
+### Update Topic {#updatetopic}
 
 Update a topic in the Help Center.
 
@@ -902,7 +902,7 @@ Update a topic in the Help Center.
 | Topic Description | The description of the topic.                    |         |
 | Manageable By     | The user segments that can manage the topic.     |         |
 
-### Update User
+### Update User {#updateuser}
 
 Update the information and metadata of a user by Id.
 

@@ -9,7 +9,7 @@ Typeform is an online form builder that enables users to create interactive and 
 
 ## Connections
 
-### OAuth 2.0
+### OAuth 2.0 {#typeform-oauth2}
 
 This connection allows you to authenticate with Typeform using OAuth 2.0.
 
@@ -37,7 +37,7 @@ Read about how OAuth 2.0 works [here](../oauth2.md).
 | Client ID     |                                                                                                                                                      |                                                                                                                                                                                                          |
 | Client Secret |                                                                                                                                                      |                                                                                                                                                                                                          |
 
-### Personal Token
+### Personal Token {#typeform-personal-token}
 
 Personal Token for Typeform
 
@@ -58,7 +58,7 @@ To Generate a Personal Access Token:
 
 ## Triggers
 
-### Typeform Webhook Trigger
+### Typeform Webhook Trigger {#formtrigger}
 
 Get notified when a project is created, updated, or deleted in a workspace.
 
@@ -72,7 +72,7 @@ Get notified when a project is created, updated, or deleted in a workspace.
 
 ## Actions
 
-### Create Account Workspace
+### Create Account Workspace {#createaccountworkspace}
 
 Create a workspace in a specific account.
 
@@ -82,7 +82,7 @@ Create a workspace in a specific account.
 | Workspace Name | The name of the workspace account to create.   |         |
 | Connection     |                                                |         |
 
-### Create Form
+### Create Form {#createform}
 
 Create a form
 
@@ -102,7 +102,7 @@ Create a form
 | Welcome Screens   | The welcome screens for the form.                                                                                                             |         |
 | Connection        |                                                                                                                                               |         |
 
-### Create or Update Webhook
+### Create or Update Webhook {#createwebhook}
 
 Create or Update a Webhook
 
@@ -117,7 +117,7 @@ Create or Update a Webhook
 | Form Response Partial | True if you want to send partial responses to the webhook. Otherwise, false.                                  |         |
 | Connection            |                                                                                                               |         |
 
-### Create Workspace
+### Create Workspace {#createworkspace}
 
 Create a workspace.
 
@@ -126,7 +126,7 @@ Create a workspace.
 | Workspace Name | The name of the workspace. |         |
 | Connection     |                            |         |
 
-### Delete Form
+### Delete Form {#deleteform}
 
 Delete a form.
 
@@ -135,7 +135,7 @@ Delete a form.
 | Form Id    | Unique ID for the form. |         |
 | Connection |                         |         |
 
-### Delete Instance Webhooks
+### Delete Instance Webhooks {#deleteallinstancewebhooks}
 
 Delete all webhooks from a form for the instance url provided.
 
@@ -145,7 +145,7 @@ Delete all webhooks from a form for the instance url provided.
 | Instance URL | The instance URL to delete all webhooks from, if not provided, all webhooks from the current flow will be deleted. |         |
 | Connection   |                                                                                                                    |         |
 
-### Delete Response
+### Delete Response {#deleteresponses}
 
 Delete responses to a form.
 
@@ -155,7 +155,7 @@ Delete responses to a form.
 | Included Response Ids | Comma-separated list of response_id values of the responses to delete. You can list up to 1000 tokens and choose to do so either in the request URL, or in its body. |         |
 | Connection            |                                                                                                                                                                      |         |
 
-### Delete Webhook
+### Delete Webhook {#deletewebhook}
 
 Delete a webhook.
 
@@ -165,7 +165,7 @@ Delete a webhook.
 | Tag        | Unique name you want to use for the webhook. |         |
 | Connection |                                              |         |
 
-### Delete Workspace
+### Delete Workspace {#deleteworkspace}
 
 Delete a workspace.
 
@@ -174,7 +174,7 @@ Delete a workspace.
 | Workspace Id | The workspace Id to delete. |         |
 | Connection   |                             |         |
 
-### Get All Response Files
+### Get All Response Files {#getallresponsefiles}
 
 Download a zip archive containing all files uploaded by respondents for the specified form ID.
 
@@ -183,7 +183,7 @@ Download a zip archive containing all files uploaded by respondents for the spec
 | Form Id    | Unique ID for the form. |         |
 | Connection |                         |         |
 
-### Get File from Response
+### Get File from Response {#getfilefromresponse}
 
 Download an uploaded file knowing its form, response, field and name.
 
@@ -195,7 +195,7 @@ Download an uploaded file knowing its form, response, field and name.
 | Filename    | Filename for the uploaded file      |         |
 | Connection  |                                     |         |
 
-### Get Form
+### Get Form {#getform}
 
 Retrieve a form.
 
@@ -204,7 +204,7 @@ Retrieve a form.
 | Form Id    | Unique ID for the form. |         |
 | Connection |                         |         |
 
-### Get Webhook
+### Get Webhook {#getwebhook}
 
 Retrieve a single webhook.
 
@@ -214,7 +214,7 @@ Retrieve a single webhook.
 | Tag        | Unique name you want to use for the webhook. |         |
 | Connection |                                              |         |
 
-### Get Workspace
+### Get Workspace {#getworkspace}
 
 Retrieve a workspace.
 
@@ -223,7 +223,7 @@ Retrieve a workspace.
 | Workspace Id | The workspace Id to retrieve. |         |
 | Connection   |                               |         |
 
-### List Account Workspaces
+### List Account Workspaces {#listaccountworkspaces}
 
 Retrieve all workspaces you have access to within the specific account.
 
@@ -236,7 +236,7 @@ Retrieve all workspaces you have access to within the specific account.
 | Page Size  | Number of results to retrieve per page. Default is 10. Maximum is 200.      |         |
 | Search     | Returns items that contain the specified string.                            |         |
 
-### List Forms
+### List Forms {#listforms}
 
 Retrieves a list of JSON descriptions for all forms in your Typeform account (public and private).
 
@@ -251,7 +251,7 @@ Retrieves a list of JSON descriptions for all forms in your Typeform account (pu
 | Sort By      | Field to sort the results by.                                               |         |
 | Order By     | Order type.                                                                 |         |
 
-### List Responses
+### List Responses {#listresponses}
 
 Returns form responses and date and time of form landing and submission.
 
@@ -265,7 +265,7 @@ Returns form responses and date and time of form landing and submission.
 | Custom Query Params | Custom fields filter                                                        |         |
 | Connection          |                                                                             |         |
 
-### List Webhooks
+### List Webhooks {#listwebhooks}
 
 Retrieve all webhooks for the specified Typeform.
 
@@ -274,7 +274,7 @@ Retrieve all webhooks for the specified Typeform.
 | Form Id    | Unique ID for the form. |         |
 | Connection |                         |         |
 
-### List Workspaces
+### List Workspaces {#listworkspaces}
 
 Retrieve all workspaces the user has access to.
 
@@ -286,7 +286,7 @@ Retrieve all workspaces the user has access to.
 | Page Size  | Number of results to retrieve per page. Default is 10. Maximum is 200.      |         |
 | Search     | Returns items that contain the specified string.                            |         |
 
-### Raw Request
+### Raw Request {#rawrequest}
 
 Send raw HTTP request to Typeform API
 
@@ -308,7 +308,7 @@ Send raw HTTP request to Typeform API
 | Max Retry Count         | The maximum number of retries to attempt. Specify 0 for no retries.                                                                                                                                            | 0       |
 | Use Exponential Backoff | Specifies whether to use a pre-defined exponential backoff strategy for retries. When enabled, 'Retry Delay (ms)' is ignored.                                                                                  | false   |
 
-### Update Form
+### Update Form {#updateform}
 
 Update a form.
 
@@ -318,7 +318,7 @@ Update a form.
 | Operations | Operations to perform on the data. |         |
 | Connection |                                    |         |
 
-### Update Workspace
+### Update Workspace {#updateworkspace}
 
 Update a workspace.
 

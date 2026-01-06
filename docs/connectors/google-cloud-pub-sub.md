@@ -9,7 +9,7 @@ Manage topics, subscriptions, and messages in Google Cloud Pub/Sub.
 
 ## Connections
 
-### Google Pub/Sub Private Key
+### Google Pub/Sub Private Key {#privatekey}
 
 Authenticate requests to Google Cloud Storage using values obtained from the Google Cloud Platform.
 
@@ -20,7 +20,7 @@ Authenticate requests to Google Cloud Storage using values obtained from the Goo
 | Project ID   | The Google Cloud project ID that contains the Pub/Sub resources.                                                                                                              |                                                                                       |
 | Scopes       | Space-delimited list of OAuth 2.0 scopes. See [OAuth 2.0 Scopes for Google APIs](https://developers.google.com/identity/protocols/oauth2/scopes#pubsub) for more information. | https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/pubsub |
 
-### OAuth2
+### OAuth2 {#oauth2}
 
 OAuth2 Connection
 
@@ -77,13 +77,13 @@ Read about how OAuth 2.0 works [here](../oauth2.md).
 
 ## Triggers
 
-### PubSub Notification
+### PubSub Notification {#mytrigger}
 
 PubSub Notification Trigger Settings
 
 ## Actions
 
-### Create Subscription
+### Create Subscription {#createsubscription}
 
 Creates a subscription to a given topic.
 
@@ -110,7 +110,7 @@ Creates a subscription to a given topic.
 | Topic Message Retention Duration | Output-only field indicating the minimum duration messages are retained in the topic. Format: duration in seconds ending with 's' (e.g., '86400s').                                                                              |         |
 | State                            | Output-only field indicating whether the subscription can receive messages.                                                                                                                                                      |         |
 
-### Create Topic
+### Create Topic {#createtopic}
 
 Creates the given topic with the given name.
 
@@ -126,7 +126,7 @@ Creates the given topic with the given name.
 | Satisfies PZS              | When true, indicates the topic satisfies physical zone separation. This is an output-only field reserved for future use.                                                                                                         | false   |
 | Message Retention Duration | The minimum duration to retain a message after publication. Must be between 10 minutes (600s) and 31 days (2678400s). Format: duration in seconds with up to nine fractional digits, ending with 's' (e.g., '3600s' for 1 hour). |         |
 
-### Create Webhook Subscription
+### Create Webhook Subscription {#createwebhooksubscription}
 
 Creates a webhook subscription to a given topic.
 
@@ -139,7 +139,7 @@ Creates a webhook subscription to a given topic.
 | Topic Name or Full Format | Select whether the topic input is a full resource path (e.g., 'projects/my-project/topics/my-topic') or just the topic name (e.g., 'my-topic'). |         |
 | Webhook URL               | The URL endpoint to which messages are sent. This is typically the webhook URL of a sibling flow.                                               |         |
 
-### Delete Subscription
+### Delete Subscription {#deletesubscription}
 
 Deletes an existing subscription.
 
@@ -150,7 +150,7 @@ Deletes an existing subscription.
 | Subscription                     | The name of the subscription. Can be either the subscription name (e.g., 'my-subscription') or the full resource path (e.g., 'projects/my-project/subscriptions/my-subscription'). |         |
 | Subscription Name or Full Format | Select whether the subscription input is a full resource path (e.g., 'projects/my-project/subscriptions/my-subscription') or just the subscription name (e.g., 'my-subscription'). |         |
 
-### Delete Topic
+### Delete Topic {#deletetopic}
 
 Deletes the topic with the given name.
 
@@ -161,7 +161,7 @@ Deletes the topic with the given name.
 | Topic                     | The name of the topic. Can be either the topic name (e.g., 'my-topic') or the full resource path (e.g., 'projects/my-project/topics/my-topic'). |         |
 | Topic Name or Full Format | Select whether the topic input is a full resource path (e.g., 'projects/my-project/topics/my-topic') or just the topic name (e.g., 'my-topic'). |         |
 
-### Get Policy
+### Get Policy {#getpolicy}
 
 Gets the access control policy for a resource.
 
@@ -171,7 +171,7 @@ Gets the access control policy for a resource.
 | Resource                 | The resource name for which the policy is being requested. See [Resource Names](https://cloud.google.com/apis/design/resource_names) for more information. |         |
 | Requested Policy Version | The maximum policy version to use for formatting the policy. Valid values are 0, 1, and 3. Policies with conditional bindings must use version 3.          |         |
 
-### Get Subscription
+### Get Subscription {#getsubscription}
 
 Gets the configuration details of a subscription.
 
@@ -182,7 +182,7 @@ Gets the configuration details of a subscription.
 | Subscription                     | The name of the subscription. Can be either the subscription name (e.g., 'my-subscription') or the full resource path (e.g., 'projects/my-project/subscriptions/my-subscription'). |         |
 | Subscription Name or Full Format | Select whether the subscription input is a full resource path (e.g., 'projects/my-project/subscriptions/my-subscription') or just the subscription name (e.g., 'my-subscription'). |         |
 
-### Get Topic
+### Get Topic {#gettopic}
 
 Gets the configuration of a topic.
 
@@ -193,7 +193,7 @@ Gets the configuration of a topic.
 | Topic                     | The name of the topic. Can be either the topic name (e.g., 'my-topic') or the full resource path (e.g., 'projects/my-project/topics/my-topic'). |         |
 | Topic Name or Full Format | Select whether the topic input is a full resource path (e.g., 'projects/my-project/topics/my-topic') or just the topic name (e.g., 'my-topic'). |         |
 
-### List Subscriptions
+### List Subscriptions {#listsubscriptions}
 
 Lists matching Subscriptions.
 
@@ -205,7 +205,7 @@ Lists matching Subscriptions.
 | Page Token | The value returned by the last ListSubscriptionsResponse; indicates that this is a continuation of a prior subscriptions.list call, and that the system should return the next page of data. |         |
 | Page Size  | Maximum number of subscriptions to return.                                                                                                                                                   |         |
 
-### List Topics
+### List Topics {#listtopics}
 
 Lists matching topics.
 
@@ -217,7 +217,7 @@ Lists matching topics.
 | Page Token | The page token returned by a previous list call to request the next page of results. |         |
 | Page Size  | The maximum number of results to return per page.                                    |         |
 
-### Pull Messages
+### Pull Messages {#pullmessages}
 
 Pulls messages from the server.
 
@@ -230,7 +230,7 @@ Pulls messages from the server.
 | Max Messages                     | The maximum number of messages to return. Must be a positive integer. Pub/Sub may return fewer messages than specified.                                                            |         |
 | Return Immediately               | When true, the system responds immediately even if no messages are available. <strong>Warning:</strong> Setting this to true adversely impacts performance and is discouraged.     | false   |
 
-### Raw Request
+### Raw Request {#rawrequest}
 
 Send raw HTTP request to Google Cloud Pub/Sub
 
@@ -254,7 +254,7 @@ Send raw HTTP request to Google Cloud Pub/Sub
 | Max Retry Count         | The maximum number of retries to attempt. Specify 0 for no retries.                                                                                                                                                                                                                  | 0       |
 | Use Exponential Backoff | Specifies whether to use a pre-defined exponential backoff strategy for retries. When enabled, 'Retry Delay (ms)' is ignored.                                                                                                                                                        | false   |
 
-### Set Gmail IAM Policy for Topic
+### Set Gmail IAM Policy for Topic {#settopiciampolicy}
 
 Configure a topic to allow publish notifications from Gmail.
 
@@ -263,7 +263,7 @@ Configure a topic to allow publish notifications from Gmail.
 | Connection | The connection to use for authenticating requests to Google Cloud Pub/Sub. |         |
 | Topic      | The full name of the topic to set the IAM policy for                       |         |
 
-### Set Policy
+### Set Policy {#setpolicy}
 
 Sets the access control policy on the specified resource.
 
@@ -273,7 +273,7 @@ Sets the access control policy on the specified resource.
 | Resource   | The resource name for which the policy is being requested. See [Resource Names](https://cloud.google.com/apis/design/resource_names) for more information. |         |
 | Policy     | The complete IAM policy to apply to the resource. See [Policy](https://cloud.google.com/pubsub/docs/reference/rest/v1/Policy) for more information.        |         |
 
-### Update Push Config
+### Update Push Config {#updatepushconfig}
 
 This may be used to change a push subscription to a pull one (signified by an empty PushConfig) or vice versa, or change the endpoint URL and other attributes of a push subscription.
 
@@ -287,7 +287,7 @@ This may be used to change a push subscription to a pull one (signified by an em
 | Attributes                       | Endpoint configuration attributes for message delivery. The x-goog-version attribute controls the push message format. See [Push Delivery](https://cloud.google.com/pubsub/docs/push) for more information.           |         |
 | OIDC Token                       | Configuration for generating an OIDC JWT token as an Authorization header for push requests. See [Authentication](https://cloud.google.com/pubsub/docs/push#setting_up_for_push_authentication) for more information. |         |
 
-### Update Subscription
+### Update Subscription {#updatesubscription}
 
 Updates an existing subscription.
 
@@ -315,7 +315,7 @@ Updates an existing subscription.
 | Topic Message Retention Duration | Output-only field indicating the minimum duration messages are retained in the topic. Format: duration in seconds ending with 's' (e.g., '86400s').                                                                              |         |
 | State                            | Output-only field indicating whether the subscription can receive messages.                                                                                                                                                      |         |
 
-### Update Topic
+### Update Topic {#updatetopic}
 
 Updates an existing topic.
 

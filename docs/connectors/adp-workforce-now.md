@@ -9,7 +9,7 @@ ADP Workforce Now is a comprehensive solution for managing HR, payroll, and labo
 
 ## Connections
 
-### ADP Workforce Now OAuth 2.0
+### ADP Workforce Now OAuth 2.0 {#adpoauth2}
 
 This connection allows you to authenticate with ADP Workforce Now using OAuth 2.0.
 
@@ -34,7 +34,7 @@ This will also require access to the [Developer Self Service Portal](https://adp
 
 ## Actions
 
-### Add Personal Contact
+### Add Personal Contact {#addpersonalcontact}
 
 Adds a worker’s personal contact
 
@@ -45,7 +45,7 @@ Adds a worker’s personal contact
 | Connection       |                                                                                                                                                                                                                      |         |
 | Debug Request    | Enabling this flag will log out the current request.                                                                                                                                                                 | false   |
 
-### Create Scan/Punch
+### Create Scan/Punch {#createscanpunch}
 
 Performs a scan punch operation where the first scan represents an “IN” punch and the next scan represents an “OUT” punch.
 
@@ -56,7 +56,7 @@ Performs a scan punch operation where the first scan represents an “IN” punc
 | Connection    |                                                                                                                                             |         |
 | Debug Request | Enabling this flag will log out the current request.                                                                                        | false   |
 
-### Delete Personal Contact
+### Delete Personal Contact {#deletepersonalcontact}
 
 Removes a worker’s personal contact.
 
@@ -67,7 +67,7 @@ Removes a worker’s personal contact.
 | Connection          |                                                      |         |
 | Debug Request       | Enabling this flag will log out the current request. | false   |
 
-### Get Applicant Onboard Metadata
+### Get Applicant Onboard Metadata {#getapplicantonboardmetadata}
 
 Retrieve a single asset
 
@@ -78,7 +78,7 @@ Retrieve a single asset
 | Connection        |                                                                                                                                                                                                                                          |         |
 | Debug Request     | Enabling this flag will log out the current request.                                                                                                                                                                                     | false   |
 
-### Get Clocking Transaction
+### Get Clocking Transaction {#getclockingtransaction}
 
 Returns the status of a previously submitted clocking transaction such as “Clock-In”, “Clock-Out,” “Scan”, etc.
 
@@ -88,7 +88,7 @@ Returns the status of a previously submitted clocking transaction such as “Clo
 | Connection    |                                                      |         |
 | Debug Request | Enabling this flag will log out the current request. | false   |
 
-### Get Personal Contact
+### Get Personal Contact {#getpersonalcontact}
 
 Returns a personal contact
 
@@ -100,7 +100,7 @@ Returns a personal contact
 | Connection          |                                                                                                                                              |         |
 | Debug Request       | Enabling this flag will log out the current request.                                                                                         | false   |
 
-### Get Personal Contact Meta
+### Get Personal Contact Meta {#getpersonalcontactmeta}
 
 Returns a personal contact metadata
 
@@ -111,7 +111,7 @@ Returns a personal contact metadata
 | Connection    |                                                                                                                                              |         |
 | Debug Request | Enabling this flag will log out the current request.                                                                                         | false   |
 
-### Get Time Cards
+### Get Time Cards {#gettimecards}
 
 Get a worker's team's timecards. That is all the time cards for the worker's team members. The worker is identified by workers/[aoid]
 
@@ -125,7 +125,7 @@ Get a worker's team's timecards. That is all the time cards for the worker's tea
 | Connection    |                                                                                                                                                                                                                                          |         |
 | Debug Request | Enabling this flag will log out the current request.                                                                                                                                                                                     | false   |
 
-### Get Worker
+### Get Worker {#getworker}
 
 Retrieve a worker by their Associate OID
 
@@ -136,7 +136,7 @@ Retrieve a worker by their Associate OID
 | Connection    |                                                                                                                                              |         |
 | Debug Request | Enabling this flag will log out the current request.                                                                                         | false   |
 
-### Get Worker Demographics
+### Get Worker Demographics {#getworkerdemographics}
 
 Returns a worker demographic by Associate OID
 
@@ -147,7 +147,7 @@ Returns a worker demographic by Associate OID
 | Connection    |                                                                                                                                              |         |
 | Debug Request | Enabling this flag will log out the current request.                                                                                         | false   |
 
-### Get Worker Metadata
+### Get Worker Metadata {#getworkersmetadata}
 
 Retrieves a meta on workers
 
@@ -157,7 +157,7 @@ Retrieves a meta on workers
 | Connection    |                                                                                                                                                                                                                                          |         |
 | Debug Request | Enabling this flag will log out the current request.                                                                                                                                                                                     | false   |
 
-### Get Worker Payment Distributions
+### Get Worker Payment Distributions {#getpaymentdistributions}
 
 Returns a worker's pay distribution records
 
@@ -169,7 +169,7 @@ Returns a worker's pay distribution records
 | Connection    |                                                                                                                                                                                                                                          |         |
 | Debug Request | Enabling this flag will log out the current request.                                                                                                                                                                                     | false   |
 
-### Get Worker Payment Distributions Meta
+### Get Worker Payment Distributions Meta {#getworkerpaymentdistributionsmeta}
 
 Returns a worker's pay distribution records metadata
 
@@ -179,7 +179,7 @@ Returns a worker's pay distribution records metadata
 | Connection    |                                                                                                                                              |         |
 | Debug Request | Enabling this flag will log out the current request.                                                                                         | false   |
 
-### List Company Codes
+### List Company Codes {#listcompanycodes}
 
 Returns a list of company codes
 
@@ -189,7 +189,7 @@ Returns a list of company codes
 | Connection    |                                                                                                                                                                                                                                          |         |
 | Debug Request | Enabling this flag will log out the current request.                                                                                                                                                                                     | false   |
 
-### List Personal Contacts
+### List Personal Contacts {#listpersonalcontacts}
 
 Returns a list of a worker’s personal contacts.
 
@@ -200,7 +200,7 @@ Returns a list of a worker’s personal contacts.
 | Connection    |                                                                                                                                              |         |
 | Debug Request | Enabling this flag will log out the current request.                                                                                         | false   |
 
-### List Worker Demographics
+### List Worker Demographics {#listworkersdemographics}
 
 Request the list of all available worker demographics that the requester is authorized to view.
 
@@ -215,7 +215,7 @@ Request the list of all available worker demographics that the requester is auth
 | Connection       |                                                                                                                                                                                                                                          |         |
 | Debug Request    | Enabling this flag will log out the current request.                                                                                                                                                                                     | false   |
 
-### List Workers
+### List Workers {#listworkers}
 
 Retrieves all available workers that the requester is authorized to view.
 
@@ -231,7 +231,7 @@ Retrieves all available workers that the requester is authorized to view.
 | Connection       |                                                                                                                                                                                                                                          |         |
 | Debug Request    | Enabling this flag will log out the current request.                                                                                                                                                                                     | false   |
 
-### Modify Time Entries
+### Modify Time Entries {#modifytimeentries}
 
 Modify time entries event instance
 
@@ -241,7 +241,7 @@ Modify time entries event instance
 | Connection    |                                                                                                                                                                                                                                                                                                       |         |
 | Debug Request | Enabling this flag will log out the current request.                                                                                                                                                                                                                                                  | false   |
 
-### Post Applicant Onboard Process
+### Post Applicant Onboard Process {#postapplicantonboardprocess}
 
 Manage data related to the applicant onboarding request.
 
@@ -251,7 +251,7 @@ Manage data related to the applicant onboarding request.
 | Connection           |                                                                                                                                                                                                                                    |         |
 | Debug Request        | Enabling this flag will log out the current request.                                                                                                                                                                               | false   |
 
-### Raw Request
+### Raw Request {#rawrequest}
 
 Send raw HTTP request to the ADP Workforce Now API
 
@@ -274,7 +274,7 @@ Send raw HTTP request to the ADP Workforce Now API
 | Use Exponential Backoff | Specifies whether to use a pre-defined exponential backoff strategy for retries. When enabled, 'Retry Delay (ms)' is ignored.                                                                    | false   |
 | Connection              |                                                                                                                                                                                                  |         |
 
-### Update Personal Contact
+### Update Personal Contact {#updatepersonacontact}
 
 Updates an existing worker’s personal contact
 
@@ -286,7 +286,7 @@ Updates an existing worker’s personal contact
 | Connection          |                                                                                                                                                                                                                      |         |
 | Debug Request       | Enabling this flag will log out the current request.                                                                                                                                                                 | false   |
 
-### Update Worker Pay Distribution
+### Update Worker Pay Distribution {#updateworkerpaydistribution}
 
 Replaces an employee's existing Direct Deposit records with an updated collection
 

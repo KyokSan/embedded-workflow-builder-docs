@@ -9,7 +9,7 @@ Parse and build .xlsx files (spreadsheets)
 
 ## Connections
 
-### Microsoft Excel OAuth 2.0
+### Microsoft Excel OAuth 2.0 {#ms-excel-oauth}
 
 Connect to Microsoft Excel using OAuth 2.0
 
@@ -47,7 +47,7 @@ Read about how OAuth 2.0 works [here](../oauth2.md).
 
 ## Actions
 
-### Build Spreadsheet
+### Build Spreadsheet {#build}
 
 Creates a buffer containing a spreadsheet made from a 2D JavaScript array,
 
@@ -57,7 +57,7 @@ Creates a buffer containing a spreadsheet made from a 2D JavaScript array,
 | File Name        | Provide a string value for the name of the file.                                                                                                                                                                                                                |                                                                                                                                                                                                                                                  |
 | Create Options   | Here you can provide several configuration options for turning the array into a spreadsheet. For more information on possible configurations, see the documentation for the node library this component was built with. https://www.npmjs.com/package/node-xlsx | <code>{<br /> "!cols": [<br /> {<br /> "wch": 6<br /> },<br /> {<br /> "wch": 7<br /> },<br /> {<br /> "wch": 10<br /> },<br /> {<br /> "wch": 20<br /> }<br /> ]<br />}</code>                                                                  |
 
-### Build Spreadsheet with Multiple Sheets
+### Build Spreadsheet with Multiple Sheets {#buildmultiple}
 
 Creates a buffer containing multiple spreadsheets made from a 3D JavaScript array.
 
@@ -68,7 +68,7 @@ Creates a buffer containing multiple spreadsheets made from a 3D JavaScript arra
 | Structured Sheet Names | Use this input if you want to provide a JSON Array of sheetNames instead of using the default sheetNames input. Please note that this input takes priority over the sheetNames input.                                                                           |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 | Create Options         | Here you can provide several configuration options for turning the array into a spreadsheet. For more information on possible configurations, see the documentation for the node library this component was built with. https://www.npmjs.com/package/node-xlsx | <code>{<br /> "!cols": [<br /> {<br /> "wch": 6<br /> },<br /> {<br /> "wch": 7<br /> },<br /> {<br /> "wch": 10<br /> },<br /> {<br /> "wch": 20<br /> }<br /> ]<br />}</code>                                                                                                                                                                                                                                                                                                                |
 
-### Clear Cell Range
+### Clear Cell Range {#clearcellrange}
 
 Clear range values such as format, fill, and border.
 
@@ -81,7 +81,7 @@ Clear range values such as format, fill, and border.
 | Address          | The address of the range to update.                                     |         |
 | Apply To         | Determines the type of clear action.                                    |         |
 
-### Create Column
+### Create Column {#createcolumn}
 
 Creates a Column object inside a worksheet table.
 
@@ -95,7 +95,7 @@ Creates a Column object inside a worksheet table.
 | Values           | A two-dimensional array of unformatted values of the table column.                                                                                                                                                                                                            |         |
 | Column Id        | Specifies the relative position of the new column. The previous column at this position is shifted to the right. The index value should be equal to or less than the last column's index value, so it can't be used to append a column at the end of the table. Zero-indexed. |         |
 
-### Create Multiple Rows
+### Create Multiple Rows {#createmultiplerows}
 
 Adds rows to the end of a table.
 
@@ -109,7 +109,7 @@ Adds rows to the end of a table.
 | Values           | The values to update in the row.                                                                                                                               |         |
 | Row Index        | Specifies the relative position of the new row. If null, the addition happens at the end. Any rows below the inserted row are shifted downwards. Zero-indexed. |         |
 
-### Create Row
+### Create Row {#createrow}
 
 Creates a row object inside a worksheet table.
 
@@ -123,7 +123,7 @@ Creates a row object inside a worksheet table.
 | Values           | The values to update in the row.                                                                                                                               |         |
 | Row Index        | Specifies the relative position of the new row. If null, the addition happens at the end. Any rows below the inserted row are shifted downwards. Zero-indexed. |         |
 
-### Create Table
+### Create Table {#createtable}
 
 Creates a table object inside a worksheet.
 
@@ -136,7 +136,7 @@ Creates a table object inside a worksheet.
 | Address          | Address or name of the range object representing the data source. If the address doesn't contain a sheet name, the currently active sheet is used.                                                                 |         |
 | Has Headers      | Boolean value that indicates whether the data being imported has column labels. If the source doesn't contain headers (when this property set to false), Excel generates header shifting the data down by one row. | false   |
 
-### Create Worksheet
+### Create Worksheet {#createworksheet}
 
 Creates a worksheet object inside a workbook.
 
@@ -147,7 +147,7 @@ Creates a worksheet object inside a workbook.
 | Workbook ID      | The ID of the workbook that contains the worksheet to update.     |         |
 | Worksheet Name   | The display name of the worksheet.                                |         |
 
-### Delete Cell Range
+### Delete Cell Range {#deletecellrange}
 
 Deletes the cells associated with the range.
 
@@ -160,7 +160,7 @@ Deletes the cells associated with the range.
 | Address          | The address of the range to update.                                      |         |
 | Shift            | Specifies which way to shift the cells.                                  |         |
 
-### Delete Column
+### Delete Column {#deletecolumn}
 
 Deletes a column object from a worksheet table.
 
@@ -173,7 +173,7 @@ Deletes a column object from a worksheet table.
 | Table ID         | The ID or name of the table to delete the column from.                        |         |
 | Column Id        | The id or name of the column to delete.                                       |         |
 
-### Delete Table
+### Delete Table {#deletetable}
 
 Deletes a table object from a worksheet.
 
@@ -185,7 +185,7 @@ Deletes a table object from a worksheet.
 | Worksheet ID     | The ID or name of the worksheet to delete the table from.                    |         |
 | Table ID         | The ID or name of the table to delete.                                       |         |
 
-### Delete Worksheet
+### Delete Worksheet {#deleteworksheet}
 
 Deletes a worksheet from a workbook.
 
@@ -196,7 +196,7 @@ Deletes a worksheet from a workbook.
 | Workbook ID      | The ID of the workbook that contains the worksheet to delete.     |         |
 | Worksheet ID     | The ID of the worksheet to delete.                                |         |
 
-### Get Cell
+### Get Cell {#getcell}
 
 Retrieves a cell from a worksheet.
 
@@ -209,7 +209,7 @@ Retrieves a cell from a worksheet.
 | Row Index        | The number of the row to retrieve.                                     |         |
 | Column Index     | The number of the column to retrieve.                                  |         |
 
-### Get Cell Range
+### Get Cell Range {#getcellrange}
 
 Retrieve the properties and relationships of range object.
 
@@ -220,7 +220,7 @@ Retrieve the properties and relationships of range object.
 | Workbook ID      | The ID of the workbook that contains the worksheet to list cells from. |         |
 | Worksheet ID     | The ID or name of the worksheet to list cells from.                    |         |
 
-### Get Column
+### Get Column {#getcolumn}
 
 Retrieves a column object from a worksheet table.
 
@@ -233,7 +233,7 @@ Retrieves a column object from a worksheet table.
 | Table ID         | The ID or name of the table to list column from.                        |         |
 | Column Id        | The id or name of the column to retrieve.                               |         |
 
-### Get Table
+### Get Table {#gettable}
 
 Retrieves a table object from a worksheet.
 
@@ -245,7 +245,7 @@ Retrieves a table object from a worksheet.
 | Worksheet ID     | The ID or name of the worksheet to get the table from.                    |         |
 | Table ID         | The ID or name of the table to retrieve                                   |         |
 
-### Get Worksheet
+### Get Worksheet {#getworksheet}
 
 Retrieves a worksheet object from a workbook.
 
@@ -256,7 +256,7 @@ Retrieves a worksheet object from a workbook.
 | Workbook ID      | The ID of the workbook to retrieve.                               |         |
 | Worksheet ID     | The ID or name of the worksheet to retrieve.                      |         |
 
-### List Columns
+### List Columns {#listcolumns}
 
 Retrieve a list of columns from a worksheet table.
 
@@ -278,7 +278,7 @@ Retrieve a list of columns from a worksheet table.
 | Skip Token       | Retrieves the next page of results from result sets that span multiple pages.                                                      |         |
 | Top              | Sets the page size of results.                                                                                                     |         |
 
-### List Rows
+### List Rows {#listrows}
 
 Retrieve a list of rows from a worksheet table.
 
@@ -300,7 +300,7 @@ Retrieve a list of rows from a worksheet table.
 | Skip Token       | Retrieves the next page of results from result sets that span multiple pages.                                                      |         |
 | Top              | Sets the page size of results.                                                                                                     |         |
 
-### List Tables
+### List Tables {#listtables}
 
 Retrieve a list of tables from a worksheet.
 
@@ -321,7 +321,7 @@ Retrieve a list of tables from a worksheet.
 | Skip Token       | Retrieves the next page of results from result sets that span multiple pages.                                                      |         |
 | Top              | Sets the page size of results.                                                                                                     |         |
 
-### List Workbooks
+### List Workbooks {#listworkbooks}
 
 Return a collection of Workbooks from either a OneDrive or SharePoint site.
 
@@ -338,7 +338,7 @@ Return a collection of Workbooks from either a OneDrive or SharePoint site.
 | Top              | Sets the page size of results.                                                      |         |
 | Order By         | Orders results.                                                                     |         |
 
-### List Worksheets
+### List Worksheets {#listworksheets}
 
 Retrieve a list of worksheet objects.
 
@@ -358,7 +358,7 @@ Retrieve a list of worksheet objects.
 | Skip Token       | Retrieves the next page of results from result sets that span multiple pages.                                                      |         |
 | Top              | Sets the page size of results.                                                                                                     |         |
 
-### Raw Request
+### Raw Request {#rawrequest}
 
 Send raw HTTP request to Microsoft Excel API.
 
@@ -380,7 +380,7 @@ Send raw HTTP request to Microsoft Excel API.
 | Max Retry Count         | The maximum number of retries to attempt. Specify 0 for no retries.                                                                                                                                                  | 0       |
 | Use Exponential Backoff | Specifies whether to use a pre-defined exponential backoff strategy for retries. When enabled, 'Retry Delay (ms)' is ignored.                                                                                        | false   |
 
-### Read From Buffer
+### Read From Buffer {#parsebuffer}
 
 Parse an xlsx file from a Buffer, outputs an array of worksheets
 
@@ -388,7 +388,7 @@ Parse an xlsx file from a Buffer, outputs an array of worksheets
 | ----- | ------------------------------------------------------------------- | ------- |
 | File  | Provide a Spreadsheet (file/buffer) to be parsed into array values. |         |
 
-### Read From URL
+### Read From URL {#parse}
 
 Parse an xlsx file from a URL endpoint, outputs an array of worksheets
 
@@ -396,7 +396,7 @@ Parse an xlsx file from a URL endpoint, outputs an array of worksheets
 | -------- | -------------------------------- | ------- |
 | File URL | The URL of the file to be parsed |         |
 
-### Update Cell Range
+### Update Cell Range {#updatecellrange}
 
 Update the properties of range object.
 
@@ -415,7 +415,7 @@ Update the properties of range object.
 | Number Format    | Represents Excel's number format code for the given cell.                                                                                                                                    |         |
 | Values           | Represents the raw values of the specified range. The data returned could be of type string, number, or a Boolean. Cell that contains an error returns the error string.                     |         |
 
-### Update Column
+### Update Column {#updatecolumn}
 
 Updates a column object from a worksheet table.
 
@@ -429,7 +429,7 @@ Updates a column object from a worksheet table.
 | Column Id        | The id or name of the column to update.                                       |         |
 | Values           | Represents the raw values of the specified range.                             |         |
 
-### Update Table
+### Update Table {#updatetable}
 
 Updates a table object from a worksheet.
 
@@ -445,7 +445,7 @@ Updates a table object from a worksheet.
 | Show Totals      | Whether to show the totals of the table.                                     | false   |
 | Style            | The style of the table.                                                      |         |
 
-### Update Worksheet
+### Update Worksheet {#updateworksheet}
 
 Updates a worksheet object from a workbook.
 

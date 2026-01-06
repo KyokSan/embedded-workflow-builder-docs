@@ -9,7 +9,7 @@ Query and manage data in a PostgreSQL database
 
 ## Connections
 
-### PostgreSQL Connection
+### PostgreSQL Connection {#postgres}
 
 Authenticate requests to a PostgreSQL server.
 
@@ -28,7 +28,7 @@ The **username** and **password** are optional inputs that can be put directly i
 
 ## Triggers
 
-### New and Updated Records to Table
+### New and Updated Records to Table {#polltable}
 
 Checks for new and updated records to a table
 
@@ -41,7 +41,7 @@ Checks for new and updated records to a table
 
 ## Actions
 
-### Query
+### Query {#query}
 
 Performs a query on a PostgreSQL database.
 

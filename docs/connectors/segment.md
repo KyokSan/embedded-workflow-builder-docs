@@ -9,7 +9,7 @@ Segment is a customer data platform (CDP) service that simplifies collecting and
 
 ## Connections
 
-### API Key
+### API Key {#apikey}
 
 1. Log in to the Segment App, and choose the Workspace you want to generate a token for. Each Segment Workspace requires a separate token.
 2. Click **Settings** in the left menu to access Workspace Settings. Navigate to the **Access Management** tab, and click **Tokens**. This tab lists any existing tokens created for the Workspace.
@@ -23,7 +23,7 @@ Segment is a customer data platform (CDP) service that simplifies collecting and
 
 ## Actions
 
-### Add Connection From Source to Warehouse
+### Add Connection From Source to Warehouse {#addconnectionfromsourcetowarehouse}
 
 Connects a Source to a Warehouse.
 
@@ -34,7 +34,7 @@ Connects a Source to a Warehouse.
 | Warehouse ID | The id of the warehouse to retrieve.  |         |
 | Source ID    | The Source ID to use.                 |         |
 
-### Create Destination
+### Create Destination {#createdestination}
 
 Creates a new Destination.
 
@@ -48,7 +48,7 @@ Creates a new Destination.
 | Enabled     | Whether this Destination should receive data.                                                                                                      |         |
 | Settings    | An optional object that contains settings for the Destination based on the 'required' and 'advanced' settings present in the Destination metadata. |         |
 
-### Create Destination Subscription
+### Create Destination Subscription {#createdestinationsubscription}
 
 Creates a new Destination subscription.
 
@@ -64,7 +64,7 @@ Creates a new Destination subscription.
 | Settings       | A key-value object that contains instance-specific settings for a Warehouse. You can find the full list of Warehouse metadata and related settings information in the /catalog/warehouses endpoint. |         |
 | Trigger        | When creating a Reverse ETL connection, indicates the Model being used to extract data.                                                                                                             |         |
 
-### Create Function
+### Create Function {#createfunction}
 
 Creates a Function.
 
@@ -79,7 +79,7 @@ Creates a Function.
 | Logo URL          | A logo for this Function.               |                                                                                                                                                                                                                                                                                                                                                                                          |
 | Description       | A description for this Function.        |                                                                                                                                                                                                                                                                                                                                                                                          |
 
-### Create Source
+### Create Source {#createsource}
 
 Creates a new Source.
 
@@ -92,7 +92,7 @@ Creates a new Source.
 | Metadata ID | The Warehouse metadata to use.                                                                                                                                                                      |         |
 | Settings    | A key-value object that contains instance-specific settings for a Warehouse. You can find the full list of Warehouse metadata and related settings information in the /catalog/warehouses endpoint. |         |
 
-### Create Transformation
+### Create Transformation {#createtransformation}
 
 Creates a new Transformation.
 
@@ -110,7 +110,7 @@ Creates a new Transformation.
 | Property Value Transformations | Optional array for renaming properties collected by your events.                    | <code>[<br /> {<br /> "propertyPaths": [<br /> "properties.another-property"<br /> ],<br /> "propertyValue": "another property value"<br /> }<br />]</code> |
 | FQL Defined Properties         | Optional array for defining new properties in FQL. Currently limited to 1 property. |                                                                                                                                                             |
 
-### Create User Invite
+### Create User Invite {#createuserinvites}
 
 Invites a list of users to join a Workspace.
 
@@ -120,7 +120,7 @@ Invites a list of users to join a Workspace.
 | Region     | The region of the Segment API to use. | api                                                                                                                                                                                                                                                                                |
 | Invites    | The list of invites.                  | <code>[<br /> {<br /> "email": "foo@example.com",<br /> "permissions": [<br /> {<br /> "roleId": "1WDUuRLxv84rrfCNUwvkrRtkxnS",<br /> "resources": [<br /> {<br /> "id": "9aQ1Lj62S4bomZKLF4DPqW",<br /> "type": "WORKSPACE"<br /> }<br /> ]<br /> }<br /> ]<br /> }<br />]</code> |
 
-### Delete Destination
+### Delete Destination {#deletedestination}
 
 Deletes an existing Destination.
 
@@ -130,7 +130,7 @@ Deletes an existing Destination.
 | Region         | The region of the Segment API to use. | api     |
 | Destination ID | The Destination ID to use.            |         |
 
-### Delete Destination Subscription
+### Delete Destination Subscription {#deletedestinationsubscription}
 
 Deletes an existing Destination subscription.
 
@@ -141,7 +141,7 @@ Deletes an existing Destination subscription.
 | Destination ID  | The Destination ID to use.            |         |
 | Subscription ID | The Subscription ID to use.           |         |
 
-### Delete Function
+### Delete Function {#deletefunction}
 
 Deletes a Function.
 
@@ -151,7 +151,7 @@ Deletes a Function.
 | Region      | The region of the Segment API to use. | api     |
 | Function ID | The function ID to use.               |         |
 
-### Delete Source
+### Delete Source {#deletesource}
 
 Deletes an existing Source.
 
@@ -161,7 +161,7 @@ Deletes an existing Source.
 | Region     | The region of the Segment API to use. | api     |
 | Source ID  | The Source ID to use.                 |         |
 
-### Delete Transformation
+### Delete Transformation {#deletetransformation}
 
 Deletes a Transformation.
 
@@ -171,7 +171,7 @@ Deletes a Transformation.
 | Region            | The region of the Segment API to use.     | api     |
 | Transformation ID | The id of the transformation to retrieve. |         |
 
-### Delete Users
+### Delete Users {#deleteuser}
 
 Removes one or multiple users.
 
@@ -181,7 +181,7 @@ Removes one or multiple users.
 | Region     | The region of the Segment API to use. | api                     |
 | User IDs   | The ids of the users to remove.       | <code>["000xxx"]</code> |
 
-### Delete Warehouse
+### Delete Warehouse {#deletewarehouse}
 
 Deletes an existing Warehouse.
 
@@ -191,7 +191,7 @@ Deletes an existing Warehouse.
 | Region       | The region of the Segment API to use. | api     |
 | Warehouse ID | The id of the warehouse to retrieve.  |         |
 
-### Get Destination
+### Get Destination {#getdestination}
 
 Returns a Destination by its id.
 
@@ -201,7 +201,7 @@ Returns a Destination by its id.
 | Region         | The region of the Segment API to use. | api     |
 | Destination ID | The Destination ID to use.            |         |
 
-### Get Destination Catalog
+### Get Destination Catalog {#listdestinationcatalog}
 
 Returns a list of all available Destinations in the Segment catalog.
 
@@ -212,7 +212,7 @@ Returns a list of all available Destinations in the Segment catalog.
 | Count      | The number of results to return.      | 50      |
 | Cursor     | The page to request.                  |         |
 
-### Get Destination Metadata
+### Get Destination Metadata {#getdestinationmetadata}
 
 Returns a Destination catalog item by its id.
 
@@ -222,7 +222,7 @@ Returns a Destination catalog item by its id.
 | Region                  | The region of the Segment API to use. | api     |
 | Destination Metadata ID | The Destination metadata ID to use.   |         |
 
-### Get Destination Subscription
+### Get Destination Subscription {#getdestinationsubscription}
 
 Gets a Destination subscription by id.
 
@@ -233,7 +233,7 @@ Gets a Destination subscription by id.
 | Destination ID  | The Destination ID to use.            |         |
 | Subscription ID | The Subscription ID to use.           |         |
 
-### Get Events Volume From Workspace
+### Get Events Volume From Workspace {#geteventsvolumefromworkspace}
 
 Enumerates the Workspace event volumes over time in minute increments.
 
@@ -252,7 +252,7 @@ Enumerates the Workspace event volumes over time in minute increments.
 | Count       | The number of results to return.                                                                                                                                                                                               | 50                      |
 | Cursor      | The page to request.                                                                                                                                                                                                           |                         |
 
-### Get Function
+### Get Function {#getfunction}
 
 Gets a Function.
 
@@ -262,7 +262,7 @@ Gets a Function.
 | Region      | The region of the Segment API to use. | api     |
 | Function ID | The function ID to use.               |         |
 
-### Get Source
+### Get Source {#getsource}
 
 Returns a Source by its id.
 
@@ -272,7 +272,7 @@ Returns a Source by its id.
 | Region     | The region of the Segment API to use. | api     |
 | Source ID  | The Source ID to use.                 |         |
 
-### Get Source Metadata
+### Get Source Metadata {#getsourcemetadata}
 
 Returns a Source catalog item by its id.
 
@@ -282,7 +282,7 @@ Returns a Source catalog item by its id.
 | Region             | The region of the Segment API to use. | api     |
 | Source Metadata ID | The Source metadata ID to use.        |         |
 
-### Get Sources Catalog
+### Get Sources Catalog {#listsourcescatalog}
 
 Returns a list of all available Sources in the Segment catalog.
 
@@ -293,7 +293,7 @@ Returns a list of all available Sources in the Segment catalog.
 | Count      | The number of results to return.      | 50      |
 | Cursor     | The page to request.                  |         |
 
-### Get Transformation
+### Get Transformation {#gettransformation}
 
 Gets a Transformation.
 
@@ -303,7 +303,7 @@ Gets a Transformation.
 | Region            | The region of the Segment API to use.     | api     |
 | Transformation ID | The id of the transformation to retrieve. |         |
 
-### Get User
+### Get User {#getuser}
 
 Returns a user given their id.
 
@@ -313,7 +313,7 @@ Returns a user given their id.
 | Region     | The region of the Segment API to use. | api     |
 | User ID    | The id of the user to retrieve.       |         |
 
-### Get Warehouse
+### Get Warehouse {#getwarehouse}
 
 Returns a Warehouse by its id.
 
@@ -323,7 +323,7 @@ Returns a Warehouse by its id.
 | Region       | The region of the Segment API to use. | api     |
 | Warehouse ID | The id of the warehouse to retrieve.  |         |
 
-### Get Warehouse Metadata
+### Get Warehouse Metadata {#getwarehousemetadata}
 
 Returns a Warehouse catalog item by its id.
 
@@ -333,7 +333,7 @@ Returns a Warehouse catalog item by its id.
 | Region                | The region of the Segment API to use. | api     |
 | Warehouse Metadata ID | The Warehouse metadata ID to use.     |         |
 
-### Get Warehouses Catalog
+### Get Warehouses Catalog {#listwarehousescatalog}
 
 Returns a list of all available Warehouses in the Segment catalog.
 
@@ -344,7 +344,7 @@ Returns a list of all available Warehouses in the Segment catalog.
 | Count      | The number of results to return.      | 50      |
 | Cursor     | The page to request.                  |         |
 
-### List Connected Sources from Warehouse
+### List Connected Sources from Warehouse {#listconnectedsourcesfromwarehouse}
 
 Returns the list of Sources that are connected to a Warehouse.
 
@@ -354,7 +354,7 @@ Returns the list of Sources that are connected to a Warehouse.
 | Region       | The region of the Segment API to use. | api     |
 | Warehouse ID | The id of the warehouse to retrieve.  |         |
 
-### List Destinations
+### List Destinations {#listdestinations}
 
 Returns a list of Destinations.
 
@@ -365,7 +365,7 @@ Returns a list of Destinations.
 | Count      | The number of results to return.      | 50      |
 | Cursor     | The page to request.                  |         |
 
-### List Destination Subscriptions
+### List Destination Subscriptions {#listdestinationsubscriptions}
 
 Lists subscriptions for a Destination.
 
@@ -377,7 +377,7 @@ Lists subscriptions for a Destination.
 | Count          | The number of results to return.      | 50      |
 | Cursor         | The page to request.                  |         |
 
-### List Functions
+### List Functions {#listfunctions}
 
 Lists all Functions in a Workspace.
 
@@ -389,7 +389,7 @@ Lists all Functions in a Workspace.
 | Count         | The number of results to return.      | 50      |
 | Cursor        | The page to request.                  |         |
 
-### List Sources
+### List Sources {#listsources}
 
 Returns a list of Sources.
 
@@ -400,7 +400,7 @@ Returns a list of Sources.
 | Count      | The number of results to return.      | 50      |
 | Cursor     | The page to request.                  |         |
 
-### List Transformations
+### List Transformations {#listtransformations}
 
 Returns a list of Transformations.
 
@@ -411,7 +411,7 @@ Returns a list of Transformations.
 | Count      | The number of results to return.      | 50      |
 | Cursor     | The page to request.                  |         |
 
-### List Users
+### List Users {#listusers}
 
 Returns a list of users with access to the Workspace.
 
@@ -422,7 +422,7 @@ Returns a list of users with access to the Workspace.
 | Count      | The number of results to return.      | 50      |
 | Cursor     | The page to request.                  |         |
 
-### List Warehouses
+### List Warehouses {#listwarehouses}
 
 Returns a list of Warehouses.
 
@@ -433,7 +433,7 @@ Returns a list of Warehouses.
 | Count      | The number of results to return.      | 50      |
 | Cursor     | The page to request.                  |         |
 
-### Raw Request
+### Raw Request {#rawrequest}
 
 Send raw HTTP request to Segment
 
@@ -457,7 +457,7 @@ Send raw HTTP request to Segment
 | Max Retry Count         | The maximum number of retries to attempt.                                                                                                                                                                      | 0       |
 | Use Exponential Backoff | Specifies whether to use a pre-defined exponential backoff strategy for retries.                                                                                                                               | false   |
 
-### Remove Source Connection from Warehouse
+### Remove Source Connection from Warehouse {#removesourceconnectionfromwarehouse}
 
 Disconnects a Source from a Warehouse.
 
@@ -468,7 +468,7 @@ Disconnects a Source from a Warehouse.
 | Warehouse ID | The id of the warehouse to retrieve.  |         |
 | Source ID    | The Source ID to use.                 |         |
 
-### Update Destination
+### Update Destination {#updatedestination}
 
 Updates an existing Destination.
 
@@ -481,7 +481,7 @@ Updates an existing Destination.
 | Enabled        | Whether this Destination should receive data.                                                                                                      |         |
 | Settings       | An optional object that contains settings for the Destination based on the 'required' and 'advanced' settings present in the Destination metadata. |         |
 
-### Update Destination Subscription
+### Update Destination Subscription {#updatedestinationsubscription}
 
 Updates an existing Destination subscription.
 
@@ -496,7 +496,7 @@ Updates an existing Destination subscription.
 | Enabled         | Is the subscription enabled.                                                                                                                                                                        |         |
 | Settings        | A key-value object that contains instance-specific settings for a Warehouse. You can find the full list of Warehouse metadata and related settings information in the /catalog/warehouses endpoint. |         |
 
-### Update Function
+### Update Function {#updatefunction}
 
 Updates a Function.
 
@@ -511,7 +511,7 @@ Updates a Function.
 | Logo URL          | A logo for this Function.               |                                                                                                                                                                                                                                                                                                                                                                                          |
 | Description       | A description for this Function.        |                                                                                                                                                                                                                                                                                                                                                                                          |
 
-### Update Source
+### Update Source {#updatesource}
 
 Updates an existing Source.
 
@@ -525,7 +525,7 @@ Updates an existing Source.
 | Name       | An optional human-readable name to associate with this Source.                                                                                                                                      |         |
 | Settings   | A key-value object that contains instance-specific settings for a Warehouse. You can find the full list of Warehouse metadata and related settings information in the /catalog/warehouses endpoint. |         |
 
-### Update Transformation
+### Update Transformation {#updatetransformation}
 
 Updates an existing Transformation.
 
@@ -544,7 +544,7 @@ Updates an existing Transformation.
 | Property Value Transformations | Optional array for renaming properties collected by your events.                    | <code>[<br /> {<br /> "propertyPaths": [<br /> "properties.another-property"<br /> ],<br /> "propertyValue": "another property value"<br /> }<br />]</code> |
 | FQL Defined Properties         | Optional array for defining new properties in FQL. Currently limited to 1 property. |                                                                                                                                                             |
 
-### Update Warehouse
+### Update Warehouse {#updatewarehouse}
 
 Updates an existing Warehouse.
 

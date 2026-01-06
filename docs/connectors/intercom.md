@@ -9,7 +9,7 @@ Manage companies, contacts and tags on the Intercom platform
 
 ## Connections
 
-### Intercom
+### Intercom {#intercom}
 
 Connection to Intercom
 
@@ -39,7 +39,7 @@ Read about how OAuth 2.0 works [here](../oauth2.md).
 | Client ID     | Client ID of your Intercom app     |         |
 | Client Secret | Client Secret of your Intercom app |         |
 
-### Intercom Access Token
+### Intercom Access Token {#intercomaccessstoken}
 
 Connection to Intercom using an Access Token
 
@@ -66,7 +66,7 @@ Your Access Token can give access to your private Intercom data and should be tr
 
 ## Actions
 
-### Archive Contact
+### Archive Contact {#archivecontact}
 
 Archive an existing Contact
 
@@ -75,7 +75,7 @@ Archive an existing Contact
 | Connection |                                                    |         |
 | Contact ID | Unique identifier for the entity given by Intercom |         |
 
-### Attach Company to Contact
+### Attach Company to Contact {#attachcompany}
 
 Attach Company to Contact
 
@@ -85,7 +85,7 @@ Attach Company to Contact
 | Contact ID | Unique identifier for the entity given by Intercom |         |
 | Company ID | Identifier of Company                              |         |
 
-### Attach Tag to Contact
+### Attach Tag to Contact {#attachtag}
 
 Attach a Tag to a Contact
 
@@ -95,7 +95,7 @@ Attach a Tag to a Contact
 | Contact ID | Unique identifier for the entity given by Intercom |         |
 | Tag ID     | Identifier of Tag                                  |         |
 
-### Create Company
+### Create Company {#createcompany}
 
 Create a new Company
 
@@ -111,7 +111,7 @@ Create a new Company
 | Website           | The URL for this company's website                       |         |
 | Industry          | The industry this company operates in                    |         |
 
-### Create Contact
+### Create Contact {#createcontact}
 
 Create a new Contact
 
@@ -128,7 +128,7 @@ Create a new Contact
 | Last Seen At             | The time when the contact was last seen                |         |
 | Unsubscribed From Emails | Whether the contact is unsubscribed from emails        | false   |
 
-### Create Tag
+### Create Tag {#createtag}
 
 Create a new Tag
 
@@ -137,7 +137,7 @@ Create a new Tag
 | Connection |                 |         |
 | Name       | Name of the tag |         |
 
-### Create Ticket
+### Create Ticket {#createticket}
 
 Create a new Ticket
 
@@ -149,7 +149,7 @@ Create a new Ticket
 | Ticket Attributes | The attributes set on the ticket. When setting the default title and description attributes, the attribute keys that should be used are _default_title_ and _default_description_ |         |
 | Connection        |                                                                                                                                                                                   |         |
 
-### Delete Company
+### Delete Company {#deletecompany}
 
 Delete an existing Company
 
@@ -158,7 +158,7 @@ Delete an existing Company
 | Connection |                       |         |
 | Company ID | Identifier of Company |         |
 
-### Delete Contact
+### Delete Contact {#deletecontact}
 
 Delete an existing Contact
 
@@ -167,7 +167,7 @@ Delete an existing Contact
 | Connection |                                                    |         |
 | Contact ID | Unique identifier for the entity given by Intercom |         |
 
-### Delete Tag
+### Delete Tag {#deletetag}
 
 Delete an existing Tag
 
@@ -176,7 +176,7 @@ Delete an existing Tag
 | Connection |               |         |
 | Tag ID     | ID of the tag |         |
 
-### Detach Company from Contact
+### Detach Company from Contact {#detachcompany}
 
 Detach Company from Contact
 
@@ -186,7 +186,7 @@ Detach Company from Contact
 | Contact ID | Unique identifier for the entity given by Intercom |         |
 | Company ID | Identifier of Company                              |         |
 
-### Detach Tag from Contact
+### Detach Tag from Contact {#detachtag}
 
 Detach a Tag from a Contact
 
@@ -196,7 +196,7 @@ Detach a Tag from a Contact
 | Contact ID | Unique identifier for the entity given by Intercom |         |
 | Tag ID     | Identifier of Tag                                  |         |
 
-### Get Company
+### Get Company {#getcompany}
 
 Retrieves an existing Company
 
@@ -205,7 +205,7 @@ Retrieves an existing Company
 | Connection |                       |         |
 | Company ID | Identifier of Company |         |
 
-### Get Contact
+### Get Contact {#getcontact}
 
 Retrieves an existing Contact
 
@@ -214,7 +214,7 @@ Retrieves an existing Contact
 | Connection |                                                    |         |
 | Contact ID | Unique identifier for the entity given by Intercom |         |
 
-### List Companies
+### List Companies {#listcompanies}
 
 Page through all Companies
 
@@ -231,7 +231,7 @@ Page through all Companies
 | Starting After Cursor | If you want to get the next page of data in the batch, you must make a new request with the starting_after parameter equal to the cursor pointer string. Use the starting_after parameter of the previous response. |         |
 | Connection            |                                                                                                                                                                                                                     |         |
 
-### List Contacts
+### List Contacts {#listcontacts}
 
 Page through all Contacts
 
@@ -244,7 +244,7 @@ Page through all Contacts
 | Starting After Cursor | If you want to get the next page of data in the batch, you must make a new request with the starting_after parameter equal to the cursor pointer string. Use the starting_after parameter of the previous response. |         |
 | Connection            |                                                                                                                                                                                                                     |         |
 
-### List Tags
+### List Tags {#listtags}
 
 List all Tags
 
@@ -252,7 +252,7 @@ List all Tags
 | ---------- | -------- | ------- |
 | Connection |          |         |
 
-### List Ticket Types
+### List Ticket Types {#listtickettypes}
 
 Get a list of all ticket types for a workspace.
 
@@ -260,7 +260,7 @@ Get a list of all ticket types for a workspace.
 | ---------- | -------- | ------- |
 | Connection |          |         |
 
-### Raw Request
+### Raw Request {#rawrequest}
 
 Send a raw request to Intercom
 
@@ -282,7 +282,7 @@ Send a raw request to Intercom
 | Max Retry Count         | The maximum number of retries to attempt. Specify 0 for no retries.                                                                                                                              | 0       |
 | Use Exponential Backoff | Specifies whether to use a pre-defined exponential backoff strategy for retries. When enabled, 'Retry Delay (ms)' is ignored.                                                                    | false   |
 
-### Retrieve a ticket
+### Retrieve a ticket {#getticket}
 
 Retrieve a ticket by ID
 
@@ -291,7 +291,7 @@ Retrieve a ticket by ID
 | Ticket ID  | ID of the ticket to retrieve. |         |
 | Connection |                               |         |
 
-### Search Contacts
+### Search Contacts {#searchcontacts}
 
 Search through all Contacts
 
@@ -304,7 +304,7 @@ Search through all Contacts
 | JSON Query            | If you wanted to provide a custom query instead of the one constructed by the action, you can use this input to bypass it.                                                                                          |         |
 | Starting After Cursor | If you want to get the next page of data in the batch, you must make a new request with the starting_after parameter equal to the cursor pointer string. Use the starting_after parameter of the previous response. |         |
 
-### Unarchive Contact
+### Unarchive Contact {#unarchivecontact}
 
 Unarchive an archived Contact
 
@@ -313,7 +313,7 @@ Unarchive an archived Contact
 | Connection |                                                    |         |
 | Contact ID | Unique identifier for the entity given by Intercom |         |
 
-### Update Company
+### Update Company {#updatecompany}
 
 Update an existing Company
 
@@ -329,7 +329,7 @@ Update an existing Company
 | Website           | The URL for this company's website                       |         |
 | Industry          | The industry this company operates in                    |         |
 
-### Update Contact
+### Update Contact {#updatecontact}
 
 Update an existing Contact
 
@@ -347,7 +347,7 @@ Update an existing Contact
 | Last Seen At             | The time when the contact was last seen                |         |
 | Unsubscribed From Emails | Whether the contact is unsubscribed from emails        | false   |
 
-### Update Tag
+### Update Tag {#updatetag}
 
 Update an existing Tag
 

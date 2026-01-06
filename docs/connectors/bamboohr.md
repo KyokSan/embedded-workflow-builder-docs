@@ -9,7 +9,7 @@ Manage employees and HR data in the BambooHR platform
 
 ## Connections
 
-### API Key
+### API Key {#apikey}
 
 Authenticate with BambooHR using an API key
 
@@ -25,13 +25,13 @@ Click **Add New Key**, and take note of the API key that is generated - it will 
 
 ## Triggers
 
-### Webhook
+### Webhook {#bamboohrtrigger}
 
 Receive and validate webhook requests from BambooHR for webhooks you configure.
 
 ## Actions
 
-### Add Employee
+### Add Employee {#addemployee}
 
 Add a new employee
 
@@ -42,7 +42,7 @@ Add a new employee
 | Last Name       |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |         |
 | Employee Fields | The names of the fields and their values to use when creating/updating a record. Possible fields are: address1, address2, age, bestEmail, birthday, city, country, dateOfBirth, department, division, employeeNumber, employmentHistoryStatus, ethnicity, exempt, firstName, fullName1, fullName2, fullName3, fullName4, fullName5, displayName, gender, hireDate, originalHireDate, id, jobTitle, lastChanged, lastName, location, maritalStatus, middleName, mobilePhone, nationality, payGroup, payRate, payRateEffectiveDate, payType, paidPer, paySchedule, payFrequency, includeInPayroll, timeTrackingEnabled, ssn, sin, standardHoursPerWeek, state, stateCode, status, supervisor, supervisorEmail, terminationDate, workEmail, workPhone, zipcode |         |
 
-### Add Table Row
+### Add Table Row {#addemployeetablerow}
 
 Adds a row to the specified table for an employee
 
@@ -53,7 +53,7 @@ Adds a row to the specified table for an employee
 | Table Name (Alias) |                                                                                                                                                                                  |         |
 | Table Fields       | The names of the fields and their values to use when creating/updating a row in a table. Use the "List Tabular Fields (Tables)" action to list possible field names for a table. |         |
 
-### Create Company File Category
+### Create Company File Category {#addcompanyfilecategory}
 
 Create a new company file category (folder)
 
@@ -62,7 +62,7 @@ Create a new company file category (folder)
 | Connection    |          |         |
 | Category Name |          |         |
 
-### Create Employee File Category
+### Create Employee File Category {#addemployeefilecategory}
 
 Create a new employee file category (folder)
 
@@ -71,7 +71,7 @@ Create a new employee file category (folder)
 | Connection    |          |         |
 | Category Name |          |         |
 
-### Create Webhook
+### Create Webhook {#createwebhook}
 
 Create a new webhook
 
@@ -84,7 +84,7 @@ Create a new webhook
 | Fields to send to Webhook | A list of fields to post to the webhook url. This can be any of the following: firstName, lastName, hireDate, department, middleName, dateOfBirth, ssn, address1, address2, city, state, zipcode, mobilePhone, homePhone, workEmail, jobTitle, location, gender, maritalStatus, payType, eeo, status, workPhone, workPhoneExtension, employeeNumber, ethnicity, division, homeEmail, preferredName, employeeStatusDate, country, payChangeReason, payRateEffectiveDate, exempt, twitterFeed, facebook, linkedIn, pinterest, acaStatus, payPer, originalHireDate, paySchedule, instagram, allergies, dietaryRestrictions, hoursPerPayCycle          |         |
 | Allow Duplicates?         | By default this action checks if a webhook with this callback and sheet ID already exists. If it does, this action does not configure a new webhook. Toggle this to true to allow the creation of duplicate webhooks.                                                                                                                                                                                                                                                                                                                                                                                                                              | false   |
 
-### Delete Company File
+### Delete Company File {#deletecompanyfile}
 
 Delete an company file
 
@@ -93,7 +93,7 @@ Delete an company file
 | Connection |          |         |
 | File ID    |          |         |
 
-### Delete Employee File
+### Delete Employee File {#deleteemployeefile}
 
 Delete an employee file
 
@@ -103,7 +103,7 @@ Delete an employee file
 | Employee ID |          |         |
 | File ID     |          |         |
 
-### Delete Instance Webhooks
+### Delete Instance Webhooks {#deleteinstancewebhooks}
 
 Delete all BambooHR webhooks that point to a flow in this instance
 
@@ -111,7 +111,7 @@ Delete all BambooHR webhooks that point to a flow in this instance
 | ---------- | -------- | ------- |
 | Connection |          |         |
 
-### Delete Webhook
+### Delete Webhook {#deletewebhookbyid}
 
 Delete a webhook by ID
 
@@ -120,7 +120,7 @@ Delete a webhook by ID
 | Connection |          |         |
 | Webhook ID |          |         |
 
-### Get an Employee's Table
+### Get an Employee's Table {#getemployeetable}
 
 Get a specific table associated with an employee
 
@@ -130,7 +130,7 @@ Get a specific table associated with an employee
 | Employee ID        |          |         |
 | Table Name (Alias) |          |         |
 
-### Get Company File
+### Get Company File {#getcompanyfile}
 
 Get an company file
 
@@ -139,7 +139,7 @@ Get an company file
 | Connection |          |         |
 | File ID    |          |         |
 
-### Get Employee
+### Get Employee {#getemployee}
 
 Get an Employee
 
@@ -148,7 +148,7 @@ Get an Employee
 | Connection  |          |         |
 | Employee ID |          |         |
 
-### Get Employee File
+### Get Employee File {#getemployeefile}
 
 Get an employee file
 
@@ -158,7 +158,7 @@ Get an employee file
 | Employee ID |          |         |
 | File ID     |          |         |
 
-### Get Time Off Requests
+### Get Time Off Requests {#gettimeoffrequests}
 
 Gets Employee Time Off Requests for a given date range.
 
@@ -171,7 +171,7 @@ Gets Employee Time Off Requests for a given date range.
 | End Date           |          |         |
 | Status             |          |         |
 
-### List Company Files
+### List Company Files {#listcompanyfiles}
 
 List all company categories and files
 
@@ -179,7 +179,7 @@ List all company categories and files
 | ---------- | -------- | ------- |
 | Connection |          |         |
 
-### List Employee Files
+### List Employee Files {#listemployeefiles}
 
 List all employee categories and files
 
@@ -188,7 +188,7 @@ List all employee categories and files
 | Connection  |          |         |
 | Employee ID |          |         |
 
-### List Employees
+### List Employees {#getemployeedirectory}
 
 Get the employee directory
 
@@ -196,7 +196,7 @@ Get the employee directory
 | ---------- | -------- | ------- |
 | Connection |          |         |
 
-### List Tabular Fields (Tables)
+### List Tabular Fields (Tables) {#gettabularfields}
 
 List all tables and their fields in the account
 
@@ -204,7 +204,7 @@ List all tables and their fields in the account
 | ---------- | -------- | ------- |
 | Connection |          |         |
 
-### List Webhooks
+### List Webhooks {#listwebhooks}
 
 Get a list of existing webhooks
 
@@ -213,7 +213,7 @@ Get a list of existing webhooks
 | Connection                  |                                                |         |
 | Show only instance webhooks | Show only webhooks that point to this instance | true    |
 
-### List Who's Out
+### List Who's Out {#whosout}
 
 Get a list of all employees currently taking time off
 
@@ -223,7 +223,7 @@ Get a list of all employees currently taking time off
 | Start Date | Defaults to today's date if omitted            |         |
 | End Date   | Defaults to 14 days from start date if omitted |         |
 
-### Raw Request
+### Raw Request {#rawrequest}
 
 Send raw HTTP request to BambooHR
 
@@ -246,7 +246,7 @@ Send raw HTTP request to BambooHR
 | Max Retry Count         | The maximum number of retries to attempt. Specify 0 for no retries.                                                                                                                                                                                                                                          | 0       |
 | Use Exponential Backoff | Specifies whether to use a pre-defined exponential backoff strategy for retries. When enabled, 'Retry Delay (ms)' is ignored.                                                                                                                                                                                | false   |
 
-### Update Employee
+### Update Employee {#updateemployee}
 
 Update an existing employee
 
@@ -256,7 +256,7 @@ Update an existing employee
 | Employee ID     |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |         |
 | Employee Fields | The names of the fields and their values to use when creating/updating a record. Possible fields are: address1, address2, age, bestEmail, birthday, city, country, dateOfBirth, department, division, employeeNumber, employmentHistoryStatus, ethnicity, exempt, firstName, fullName1, fullName2, fullName3, fullName4, fullName5, displayName, gender, hireDate, originalHireDate, id, jobTitle, lastChanged, lastName, location, maritalStatus, middleName, mobilePhone, nationality, payGroup, payRate, payRateEffectiveDate, payType, paidPer, paySchedule, payFrequency, includeInPayroll, timeTrackingEnabled, ssn, sin, standardHoursPerWeek, state, stateCode, status, supervisor, supervisorEmail, terminationDate, workEmail, workPhone, zipcode |         |
 
-### Update Employee Table Row
+### Update Employee Table Row {#updateemployeetablerow}
 
 Updates a specific row in an Employee Table
 
@@ -268,7 +268,7 @@ Updates a specific row in an Employee Table
 | Row ID             |                                                                                                                                                                                  |         |
 | Table Fields       | The names of the fields and their values to use when creating/updating a row in a table. Use the "List Tabular Fields (Tables)" action to list possible field names for a table. |         |
 
-### Upload Company File
+### Upload Company File {#uploadcompanyfile}
 
 Upload a new company file
 
@@ -280,7 +280,7 @@ Upload a new company file
 | Share?        |          | false   |
 | File contents |          |         |
 
-### Upload Employee File
+### Upload Employee File {#uploademployeefile}
 
 Upload a new employee file
 

@@ -9,7 +9,7 @@ Manage messages, labels, and drafts in Gmail.
 
 ## Connections
 
-### OAuth2
+### OAuth2 {#oauth2}
 
 OAuth2 Connection
 
@@ -88,7 +88,7 @@ Read about how OAuth 2.0 works [here](../oauth2.md).
 | Client ID     | The Client ID from the Google Cloud Console. Navigate to APIs & Services > Credentials to find this value.                                                                  |                                                                 |
 | Client Secret | The Client Secret from the Google Cloud Console. Navigate to APIs & Services > Credentials to find this value.                                                              |                                                                 |
 
-### Service Account
+### Service Account {#gmailserviceaccount}
 
 Service Account Connection
 
@@ -162,7 +162,7 @@ For more information on Gmail API scopes, refer to the [Gmail API documentation]
 
 ## Triggers
 
-### New and Updated Emails
+### New and Updated Emails {#pollchangestrigger}
 
 Checks for new and updated email messages on a configured schedule.
 
@@ -173,13 +173,13 @@ Checks for new and updated email messages on a configured schedule.
 | Label ID                 | The label ID to filter history messages by.                                                       |         |
 | Get Message Details      | When true, includes the message details in the response. <b>This will increase response time.</b> | false   |
 
-### Push Notifications
+### Push Notifications {#pushnotificationwebhook}
 
 Receive and validate webhook requests from Gmail for manually configured Push Notification subscriptions.
 
 ## Actions
 
-### Create Push Notification (Watch Request)
+### Create Push Notification (Watch Request) {#createpushnotification}
 
 Enables the ability to send update notifications like new messages received.
 
@@ -190,7 +190,7 @@ Enables the ability to send update notifications like new messages received.
 | Topic Name               | The full Pub/Sub topic name in the format: projects/{project-id}/topics/{topic-id}                                                        |         |
 | Label ID                 | Gmail labels to filter notifications. System labels (INBOX, SENT, DRAFT, etc.) correspond to pre-defined elements in the Gmail interface. |         |
 
-### Delete Push Notification (Stop Mailbox Updates)
+### Delete Push Notification (Stop Mailbox Updates) {#deletepushnotification}
 
 Calls a stop notification.
 
@@ -199,7 +199,7 @@ Calls a stop notification.
 | Connection               | The Connection to use for Gmail Authorization.                                                  |         |
 | Gmail User ID (optional) | The user ID or email address to query. Use 'me' for the currently authenticated user (default). |         |
 
-### Get Current User
+### Get Current User {#getcurrentuser}
 
 Get metadata about the authenticated user
 
@@ -207,7 +207,7 @@ Get metadata about the authenticated user
 | ---------- | ---------------------------------------------- | ------- |
 | Connection | The Connection to use for Gmail Authorization. |         |
 
-### Get Event History
+### Get Event History {#geteventhistory}
 
 Fetch events that have occurred in the mailbox since the specified startHistoryId.
 
@@ -220,7 +220,7 @@ Fetch events that have occurred in the mailbox since the specified startHistoryI
 | Fetch All                | When true, fetches all pages of results using pagination.                                       | false   |
 | Max Results              | The maximum number of results to return per page.                                               |         |
 
-### Get Label by Name
+### Get Label by Name {#getlabelbyname}
 
 Get a label (including ID) by its name
 
@@ -230,7 +230,7 @@ Get a label (including ID) by its name
 | Label Name               |                                                                                                 |         |
 | Gmail User ID (optional) | The user ID or email address to query. Use 'me' for the currently authenticated user (default). |         |
 
-### Get Message
+### Get Message {#getmessagebyid}
 
 Get a message by ID
 
@@ -240,7 +240,7 @@ Get a message by ID
 | Message ID               | The unique identifier of the Gmail message.                                                     |         |
 | Gmail User ID (optional) | The user ID or email address to query. Use 'me' for the currently authenticated user (default). |         |
 
-### List Labels
+### List Labels {#listlabels}
 
 List all labels within this account
 
@@ -249,7 +249,7 @@ List all labels within this account
 | Connection               | The Connection to use for Gmail Authorization.                                                  |         |
 | Gmail User ID (optional) | The user ID or email address to query. Use 'me' for the currently authenticated user (default). |         |
 
-### List Messages
+### List Messages {#listmessages}
 
 Get a list of messages
 
@@ -264,7 +264,7 @@ Get a list of messages
 | Labels                   | Filter messages by Gmail label IDs.                                                                |         |
 | Add Metadata             | When true, includes additional metadata for each message. This will increase response time.        | false   |
 
-### Raw Request
+### Raw Request {#rawrequest}
 
 Send raw HTTP request to Google Gmail
 
@@ -286,7 +286,7 @@ Send raw HTTP request to Google Gmail
 | Max Retry Count         | The maximum number of retries to attempt. Specify 0 for no retries.                                                                                                                                                                                                            | 0       |
 | Use Exponential Backoff | Specifies whether to use a pre-defined exponential backoff strategy for retries. When enabled, 'Retry Delay (ms)' is ignored.                                                                                                                                                  | false   |
 
-### Send Message
+### Send Message {#sendmessage}
 
 Send a new message
 
@@ -304,7 +304,7 @@ Send a new message
 | Dynamic Attachments      | An array of objects with 'key' and 'value' properties, where 'key' is the file name and 'value' is the binary file data. Typically used as a reference from a previous step. Ex. [{key: "my-attachment.pdf", value: <BINARY FILE DATA TO ATTACH>},{key: "another-attachment.xlsx", value: <BINARY EXCEL FILE DATA>}] |         |
 | Gmail User ID (optional) | The user ID or email address to query. Use 'me' for the currently authenticated user (default).                                                                                                                                                                                                                      |         |
 
-### Trash Message
+### Trash Message {#trashmessagebyid}
 
 Send a message to the trash
 
@@ -314,7 +314,7 @@ Send a message to the trash
 | Message ID               | The unique identifier of the Gmail message.                                                     |         |
 | Gmail User ID (optional) | The user ID or email address to query. Use 'me' for the currently authenticated user (default). |         |
 
-### Untrash Message
+### Untrash Message {#untrashmessagebyid}
 
 Remove a message from the trash
 
@@ -324,7 +324,7 @@ Remove a message from the trash
 | Message ID               | The unique identifier of the Gmail message.                                                     |         |
 | Gmail User ID (optional) | The user ID or email address to query. Use 'me' for the currently authenticated user (default). |         |
 
-### Update Message Labels
+### Update Message Labels {#updatelabels}
 
 Add or remove labels from a message
 

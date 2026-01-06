@@ -9,7 +9,7 @@ Manage emails, calendar events, and subscriptions in Microsoft Outlook.
 
 ## Connections
 
-### OAuth 2.0 Authorization Code
+### OAuth 2.0 Authorization Code {#templatedoauth}
 
 Authenticates actions in all Microsoft's Graph API services.
 
@@ -48,6 +48,11 @@ To connect to Microsoft Outlook using OAuth 2.0, create an App Registration in M
   - `offline_access` - Maintain OAuth connection and receive refresh tokens
   - Refer to [Microsoft Graph permissions reference](https://learn.microsoft.com/en-us/graph/permissions-reference) for additional scope information
 
+- **Additional Authorization Parameters** (optional) - Query string parameters appended to the OAuth authorization URL:
+  - Use `prompt=consent` to force Microsoft to display the consent screen, which is useful when you've changed the requested scopes and need users to re-authorize
+  - Use `login_hint=user@example.com` to pre-fill the user's email address on the sign-in page
+  - Multiple parameters can be combined with `&` (e.g., `prompt=consent&login_hint=user@example.com`)
+
 :::note Single-Tenant Applications
 For single-tenant applications (not Multitenant), tenant-specific URLs are required. The connection will automatically handle tenant-specific configuration when a Tenant ID is provided.
 :::
@@ -59,15 +64,16 @@ The connection supports different Microsoft cloud environments (Commercial, Gove
 This connection uses OAuth 2.0, a common authentication mechanism for integrations.
 Read about how OAuth 2.0 works [here](../oauth2.md).
 
-| Input               | Comments                                                                                                                                                                                                                                                                                 | Default                                                                                                                                                                               |
-| ------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Base URL            | The base URL for the Microsoft Graph API. Depending on your cloud environment, you can choose the correct one [here](https://learn.microsoft.com/en-us/graph/deployments#microsoft-graph-and-graph-explorer-service-root-endpoints).                                                     | https://graph.microsoft.com                                                                                                                                                           |
-| Tenant URL          | The tenant URL for the Microsoft Graph API. This is the URL of the tenant that you are connecting to. You can find this in the Azure portal or [here](https://learn.microsoft.com/en-us/entra/identity-platform/authentication-national-cloud#microsoft-entra-authentication-endpoints). | login.microsoftonline.com/common                                                                                                                                                      |
-| Scopes              | Microsoft Graph API permission scopes are set on the OAuth application.                                                                                                                                                                                                                  | https://graph.microsoft.com/User.Read https://graph.microsoft.com/Calendars.ReadWrite https://graph.microsoft.com/Mail.ReadWrite https://graph.microsoft.com/Mail.Send offline_access |
-| Client ID           | Client Id of your Azure application.                                                                                                                                                                                                                                                     |                                                                                                                                                                                       |
-| Client secret value | Client Secret generated under 'Certificates & Secrets' in your Azure application.                                                                                                                                                                                                        |                                                                                                                                                                                       |
+| Input                               | Comments                                                                                                                                                                                                                                                                                 | Default                                                                                                                                                                               |
+| ----------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Base URL                            | The base URL for the Microsoft Graph API. Depending on your cloud environment, you can choose the correct one [here](https://learn.microsoft.com/en-us/graph/deployments#microsoft-graph-and-graph-explorer-service-root-endpoints).                                                     | https://graph.microsoft.com                                                                                                                                                           |
+| Tenant URL                          | The tenant URL for the Microsoft Graph API. This is the URL of the tenant that you are connecting to. You can find this in the Azure portal or [here](https://learn.microsoft.com/en-us/entra/identity-platform/authentication-national-cloud#microsoft-entra-authentication-endpoints). | login.microsoftonline.com/common                                                                                                                                                      |
+| Scopes                              | Microsoft Graph API permission scopes are set on the OAuth application.                                                                                                                                                                                                                  | https://graph.microsoft.com/User.Read https://graph.microsoft.com/Calendars.ReadWrite https://graph.microsoft.com/Mail.ReadWrite https://graph.microsoft.com/Mail.Send offline_access |
+| Client ID                           | Client Id of your Azure application.                                                                                                                                                                                                                                                     |                                                                                                                                                                                       |
+| Client secret value                 | Client Secret generated under 'Certificates & Secrets' in your Azure application.                                                                                                                                                                                                        |                                                                                                                                                                                       |
+| Additional Authorization Parameters | Query string parameters to append to the OAuth authorization URL. Common parameters include `prompt=consent` to force the consent screen or `login_hint=user@example.com` to pre-fill the login email.                                                                                   |                                                                                                                                                                                       |
 
-### OAuth 2.0 Authorization Code (Deprecated)
+### OAuth 2.0 Authorization Code (Deprecated) {#oauth}
 
 OAuth 2.0 Authorization Code Connectivity for Microsoft Outlook
 
@@ -107,7 +113,7 @@ Read about how OAuth 2.0 works [here](../oauth2.md).
 | Client ID           | Application (client) ID from the Microsoft Entra App Registration.                                                                                                                                                                                                         |                                                                                                                                                                                       |
 | Client secret value | Client secret value from the Microsoft Entra App Registration. This value is only shown once when created.                                                                                                                                                                 |                                                                                                                                                                                       |
 
-### OAuth 2.0 Client Credentials
+### OAuth 2.0 Client Credentials {#oauthclientcredentials}
 
 Authenticates actions in all Microsoft's Graph API services.
 
@@ -167,23 +173,35 @@ Read about how OAuth 2.0 works [here](../oauth2.md).
 
 ## Triggers
 
-### Calendar Event Webhook
+### Calendar Event Webhook {#webhooklifecycle}
 
-Receive calendar event notifications from Outlook. Automatically creates and manages a webhook subscription for calendar events when the instance is deployed, and removes the subscription when the instance is deleted.
+Receive calendar event notifications from Outlook. Automatically creates and manages a webhook subscription for calendar events when the instance is deployed, and removes the subscription when the instance is deleted. Supports scheduled renewal to keep the subscription active.
 
-| Input                | Comments                                                                                                                                                                                          | Default |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
-| Connection           | The Outlook connection to use.                                                                                                                                                                    |         |
-| Expiration Date/Time | Expiration date and time for the webhook subscription in ISO 8601 format. If unspecified, defaults to the current date/time plus 10070 minutes (close to the maximum permitted by the Graph API). |         |
-| Allow Duplicates     | When true, allows more than one webhook subscription per endpoint.                                                                                                                                | false   |
+| Input                | Comments                                                                                                                                                                             | Default |
+| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------- |
+| Connection           | The Outlook connection to use.                                                                                                                                                       |         |
+| Expiration Date/Time | Expiration date and time for the webhook subscription in ISO 8601 format. If unspecified, defaults to the current date/time plus 10070 minutes (maximum permitted by the Graph API). |         |
+| Allow Duplicates     | When true, allows more than one webhook subscription per endpoint.                                                                                                                   | false   |
 
-### Webhook
+### Mail Message Webhook {#mailfolderwebhook}
+
+Receive mail message notifications from Outlook. Automatically creates and manages a webhook subscription for mail messages when the instance is deployed, and removes the subscription when the instance is deleted. Supports scheduled renewal to keep the subscription active.
+
+| Input                | Comments                                                                                                                                                                             | Default |
+| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------- |
+| Connection           | The Outlook connection to use.                                                                                                                                                       |         |
+| Mail Change Types    | Types of changes to listen for on mail messages.                                                                                                                                     |         |
+| Folder ID            | The mail folder to monitor for changes. Leave empty to monitor the entire mailbox.                                                                                                   |         |
+| Expiration Date/Time | Expiration date and time for the webhook subscription in ISO 8601 format. If unspecified, defaults to the current date/time plus 10070 minutes (maximum permitted by the Graph API). |         |
+| Allow Duplicates     | When true, allows more than one webhook subscription per endpoint.                                                                                                                   | false   |
+
+### Webhook {#webhook}
 
 Receive and validate webhook requests from Outlook for manually configured webhook subscriptions.
 
 ## Actions
 
-### Cancel Event
+### Cancel Event {#cancelevent}
 
 Cancel an Event
 
@@ -193,7 +211,7 @@ Cancel an Event
 | Event ID   | Unique identifier of the calendar event.             |         |
 | Comment    | Comment about the cancellation sent to all attendees |         |
 
-### Create Calendar
+### Create Calendar {#createcalendar}
 
 Create a new Calendar
 
@@ -203,7 +221,7 @@ Create a new Calendar
 | Name       | The name of the calendar.                                                                                                                                                                              |         |
 | Color      | Color of the calendar; see 'color' in the [Microsoft Graph calendar resource documentation](https://learn.microsoft.com/en-us/graph/api/resources/calendar?view=graph-rest-1.0#properties) for details | auto    |
 
-### Create Event
+### Create Event {#createevent}
 
 Create an Event on a Calendar
 
@@ -221,18 +239,18 @@ Create an Event on a Calendar
 | End At                    | ISO 8601 formatted timestamp without timezone information.                                                                                     |         |
 | End Timezone              | Timezone for the end time of the event. Use the List Supported Timezones action for details on valid aliases/values for this user.             | UTC     |
 
-### Create Event Subscription
+### Create Event Subscription {#createeventsubscription}
 
 Create an Event subscription for Microsoft Outlook
 
-| Input                | Comments                                                                                                                                                                                          | Default |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
-| Connection           | The Outlook connection to use.                                                                                                                                                                    |         |
-| Notification URL     | URL where notification events will be sent.                                                                                                                                                       |         |
-| Expiration Date/Time | Expiration date and time for the webhook subscription in ISO 8601 format. If unspecified, defaults to the current date/time plus 10070 minutes (close to the maximum permitted by the Graph API). |         |
-| Allow Duplicates     | When true, allows more than one webhook subscription per endpoint.                                                                                                                                | false   |
+| Input                | Comments                                                                                                                                                                             | Default |
+| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------- |
+| Connection           | The Outlook connection to use.                                                                                                                                                       |         |
+| Notification URL     | URL where notification events will be sent.                                                                                                                                          |         |
+| Expiration Date/Time | Expiration date and time for the webhook subscription in ISO 8601 format. If unspecified, defaults to the current date/time plus 10070 minutes (maximum permitted by the Graph API). |         |
+| Allow Duplicates     | When true, allows more than one webhook subscription per endpoint.                                                                                                                   | false   |
 
-### Create Mail Folder
+### Create Mail Folder {#createmailfolder}
 
 Create a new mail folder
 
@@ -242,18 +260,18 @@ Create a new mail folder
 | Parent Folder ID | Create a folder under this parent folder. Omit to create a root-level folder. |         |
 | Display name     | The display name of the folder.                                               |         |
 
-### Create Mail Folder Subscription
+### Create Mail Folder Subscription {#createmailfoldersubscription}
 
 Create a Mail Folder subscription for Microsoft Outlook
 
-| Input                | Comments                                                                                                                                                                                          | Default |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
-| Connection           | The Outlook connection to use.                                                                                                                                                                    |         |
-| Mail Change Types    | Types of changes to listen for on mail messages.                                                                                                                                                  |         |
-| Notification URL     | URL where notification events will be sent.                                                                                                                                                       |         |
-| Expiration Date/Time | Expiration date and time for the webhook subscription in ISO 8601 format. If unspecified, defaults to the current date/time plus 10070 minutes (close to the maximum permitted by the Graph API). |         |
+| Input                | Comments                                                                                                                                                                             | Default |
+| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------- |
+| Connection           | The Outlook connection to use.                                                                                                                                                       |         |
+| Mail Change Types    | Types of changes to listen for on mail messages.                                                                                                                                     |         |
+| Notification URL     | URL where notification events will be sent.                                                                                                                                          |         |
+| Expiration Date/Time | Expiration date and time for the webhook subscription in ISO 8601 format. If unspecified, defaults to the current date/time plus 10070 minutes (maximum permitted by the Graph API). |         |
 
-### Delete All Instance Subscriptions
+### Delete All Instance Subscriptions {#deleteallinstancesubscriptions}
 
 Delete all subscriptions pointed at this instance
 
@@ -261,7 +279,7 @@ Delete all subscriptions pointed at this instance
 | ---------- | ------------------------------ | ------- |
 | Connection | The Outlook connection to use. |         |
 
-### Delete Calendar
+### Delete Calendar {#deletecalendar}
 
 Delete an existing Calendar
 
@@ -270,7 +288,7 @@ Delete an existing Calendar
 | Connection  | The Outlook connection to use.                   |         |
 | Calendar ID | The unique identifier of the calendar to modify. |         |
 
-### Delete Event
+### Delete Event {#deleteevent}
 
 Delete an Event
 
@@ -279,7 +297,7 @@ Delete an Event
 | Connection | The Outlook connection to use.           |         |
 | Event ID   | Unique identifier of the calendar event. |         |
 
-### Delete Mail Folder
+### Delete Mail Folder {#deletemailfolder}
 
 Delete the specified mail folder
 
@@ -288,7 +306,7 @@ Delete the specified mail folder
 | Connection | The Outlook connection to use.       |         |
 | Folder ID  | The unique identifier of the folder. |         |
 
-### Delete Message
+### Delete Message {#deletemessage}
 
 Delete message by ID
 
@@ -297,7 +315,7 @@ Delete message by ID
 | Connection | The Outlook connection to use.    |         |
 | Message ID | Unique identifier of the message. |         |
 
-### Delete Subscription
+### Delete Subscription {#deletesubscription}
 
 Delete existing subscription for Microsoft Outlook
 
@@ -306,7 +324,7 @@ Delete existing subscription for Microsoft Outlook
 | Connection      | The Outlook connection to use.                 |         |
 | Subscription ID | Unique identifier of the webhook subscription. |         |
 
-### Get Calendar Event
+### Get Calendar Event {#getcalendarevent}
 
 Gets information about a specific calendar event
 
@@ -315,7 +333,7 @@ Gets information about a specific calendar event
 | Connection | The Outlook connection to use.           |         |
 | Event ID   | Unique identifier of the calendar event. |         |
 
-### Get Current User
+### Get Current User {#getcurrentuser}
 
 Get the information and metadata of the user that is currently logged in
 
@@ -323,7 +341,7 @@ Get the information and metadata of the user that is currently logged in
 | ---------- | ------------------------------ | ------- |
 | Connection | The Outlook connection to use. |         |
 
-### Get Mail Message
+### Get Mail Message {#getmessagebyid}
 
 Fetch and parse a raw message by ID
 
@@ -332,7 +350,7 @@ Fetch and parse a raw message by ID
 | Connection | The Outlook connection to use.    |         |
 | Message ID | Unique identifier of the message. |         |
 
-### Get Schedule Availability
+### Get Schedule Availability {#getschedule}
 
 Get the free/busy availability information for a collection of users
 
@@ -346,7 +364,7 @@ Get the free/busy availability information for a collection of users
 | End At                     | ISO 8601 formatted timestamp without timezone information.                                                                           |         |
 | End Timezone               | Timezone for the end time of the event. Use the List Supported Timezones action for details on valid aliases/values for this user.   | UTC     |
 
-### List Calendars
+### List Calendars {#listcalendars}
 
 List all Calendars for the user
 
@@ -357,7 +375,7 @@ List all Calendars for the user
 | Page Skip  | Number of records to skip before returning results.       |         |
 | Fetch All  | When true, fetches all pages of results using pagination. | false   |
 
-### List Events
+### List Events {#listevents}
 
 List all Events for the user
 
@@ -369,7 +387,7 @@ List all Events for the user
 | Page Skip   | Number of records to skip before returning results.                                                          |         |
 | Fetch All   | When true, fetches all pages of results using pagination.                                                    | false   |
 
-### List Mail Folders
+### List Mail Folders {#listmailfolders}
 
 Get the mail folder collection directly under the root folder of the signed-in user, or under the specified parent folder.
 
@@ -381,7 +399,7 @@ Get the mail folder collection directly under the root folder of the signed-in u
 | Page Skip        | Number of records to skip before returning results.                             |         |
 | Fetch All        | When true, fetches all pages of results using pagination.                       | false   |
 
-### List Mail Messages
+### List Mail Messages {#listmessages}
 
 List mail messages in a user's mailbox
 
@@ -395,7 +413,7 @@ List mail messages in a user's mailbox
 | Page Skip  | Number of records to skip before returning results.                                                                                                                                                                        |         |
 | Fetch All  | When true, fetches all pages of results using pagination.                                                                                                                                                                  | false   |
 
-### List Subscriptions
+### List Subscriptions {#listsubscriptions}
 
 List all subscriptions for Microsoft Outlook
 
@@ -405,7 +423,7 @@ List all subscriptions for Microsoft Outlook
 | Show Instance Webhooks | Show only subscriptions for this instance's webhooks. | true    |
 | Fetch All              | Turn on to fetch all pages of results.                | true    |
 
-### List Supported Languages
+### List Supported Languages {#listsupportedlanguages}
 
 List supported languages for current user
 
@@ -413,7 +431,7 @@ List supported languages for current user
 | ---------- | ------------------------------ | ------- |
 | Connection | The Outlook connection to use. |         |
 
-### List Supported Timezones
+### List Supported Timezones {#listsupportedtimezones}
 
 List supported timezones for current user
 
@@ -421,7 +439,7 @@ List supported timezones for current user
 | ---------- | ------------------------------ | ------- |
 | Connection | The Outlook connection to use. |         |
 
-### Raw Request
+### Raw Request {#rawrequest}
 
 Send raw HTTP request to Microsoft Outlook
 
@@ -443,7 +461,7 @@ Send raw HTTP request to Microsoft Outlook
 | Max Retry Count         | The maximum number of retries to attempt. Specify 0 for no retries.                                                                                                                                                              | 0       |
 | Use Exponential Backoff | Specifies whether to use a pre-defined exponential backoff strategy for retries. When enabled, 'Retry Delay (ms)' is ignored.                                                                                                    | false   |
 
-### Send Message
+### Send Message {#sendmessage}
 
 Send a new message
 
@@ -459,7 +477,7 @@ Send a new message
 | Attachments         | File attachments as key-value pairs. Specify the file name as the key (e.g., my-file.pdf) and the file data as the value.                                                 |         |
 | Dynamic Attachments | Array of objects with "key" and "value" properties, where "key" is the file name and "value" is the binary file data. Typically used as a reference from a previous step. |         |
 
-### Update Calendar
+### Update Calendar {#updatecalendar}
 
 Update an existing Calendar
 
@@ -470,7 +488,7 @@ Update an existing Calendar
 | Name        | The name of the calendar.                                                                                                                                                                              |         |
 | Color       | Color of the calendar; see 'color' in the [Microsoft Graph calendar resource documentation](https://learn.microsoft.com/en-us/graph/api/resources/calendar?view=graph-rest-1.0#properties) for details | auto    |
 
-### Update Event
+### Update Event {#updateevent}
 
 Update an existing Event
 
@@ -488,12 +506,12 @@ Update an existing Event
 | End At                    | ISO 8601 formatted timestamp without timezone information.                                                                                     |         |
 | End Timezone              | Timezone for the end time of the event. Use the List Supported Timezones action for details on valid aliases/values for this user.             | UTC     |
 
-### Update Event Subscription Expiration
+### Update Event Subscription Expiration {#updateeventsubscription}
 
 Update existing Event subscription expiration for Microsoft Outlook
 
-| Input                | Comments                                                                                                                                                                                          | Default |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
-| Connection           | The Outlook connection to use.                                                                                                                                                                    |         |
-| Subscription ID      | Unique identifier of the webhook subscription.                                                                                                                                                    |         |
-| Expiration Date/Time | Expiration date and time for the webhook subscription in ISO 8601 format. If unspecified, defaults to the current date/time plus 10070 minutes (close to the maximum permitted by the Graph API). |         |
+| Input                | Comments                                                                                                                                                                             | Default |
+| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------- |
+| Connection           | The Outlook connection to use.                                                                                                                                                       |         |
+| Subscription ID      | Unique identifier of the webhook subscription.                                                                                                                                       |         |
+| Expiration Date/Time | Expiration date and time for the webhook subscription in ISO 8601 format. If unspecified, defaults to the current date/time plus 10070 minutes (maximum permitted by the Graph API). |         |

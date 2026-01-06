@@ -9,7 +9,7 @@ Create, read, and modify Google Spreadsheets
 
 ## Connections
 
-### Google Sheets OAuth 2.0
+### Google Sheets OAuth 2.0 {#oauth2}
 
 Authenticate requests to Google Sheets using values obtained from the Google Cloud Platform.
 
@@ -32,7 +32,7 @@ Read about how OAuth 2.0 works [here](../oauth2.md).
 
 ## Actions
 
-### Add Worksheet
+### Add Worksheet {#addsheet}
 
 Add a new Worksheet to a Google Sheet Document
 
@@ -43,7 +43,7 @@ Add a new Worksheet to a Google Sheet Document
 | Column Headings | An array of strings that are the column headings.                                                                                                                                                              |         |
 | Connection      |                                                                                                                                                                                                                |         |
 
-### Append Rows
+### Append Rows {#appendrows}
 
 Append new rows to a Worksheet
 
@@ -55,7 +55,7 @@ Append new rows to a Worksheet
 | Store Raw Values | Specifies whether values should be converted as if they were typed into the spreadsheet or whether to store the raw values as provided.                                                                                                                                    | false   |
 | Connection       |                                                                                                                                                                                                                                                                            |         |
 
-### Clear Worksheet
+### Clear Worksheet {#clearsheet}
 
 Clear all data in the a Worksheet
 
@@ -65,7 +65,7 @@ Clear all data in the a Worksheet
 | Worksheet Title | Specifies the title of the sheet.                                                                                                                                                                              |         |
 | Connection      |                                                                                                                                                                                                                |         |
 
-### Create Spreadsheet
+### Create Spreadsheet {#createdocument}
 
 Create a new Google Sheet Document
 
@@ -74,7 +74,7 @@ Create a new Google Sheet Document
 | Document Title | Specifies the title of the document. |         |
 | Connection     |                                      |         |
 
-### List Columns
+### List Columns {#listcolumns}
 
 Get the headers of a Worksheet
 
@@ -84,7 +84,7 @@ Get the headers of a Worksheet
 | Worksheet Title | Specifies the title of the sheet.                                                                                                                                                                              |         |
 | Connection      |                                                                                                                                                                                                                |         |
 
-### List Rows
+### List Rows {#getrows}
 
 List the cell values of rows in a Worksheet
 
@@ -96,7 +96,7 @@ List the cell values of rows in a Worksheet
 | Offset          | The number of rows to skip from the top.                                                                                                                                                                       | 0       |
 | Connection      |                                                                                                                                                                                                                |         |
 
-### List Worksheets
+### List Worksheets {#listsheets}
 
 List information about all Worksheets in a Google Sheet Document
 
@@ -105,7 +105,7 @@ List information about all Worksheets in a Google Sheet Document
 | Spreadsheet ID | Every spreadsheet is represented by a Spreadsheet resource and has a unique spreadsheetId value, containing letters, numbers, hyphens, or underscores. You can find the spreadsheet ID in a Google Sheets URL. |         |
 | Connection     |                                                                                                                                                                                                                |         |
 
-### Raw Request
+### Raw Request {#rawrequest}
 
 Send raw HTTP request to Google Sheets
 
@@ -128,7 +128,7 @@ Send raw HTTP request to Google Sheets
 | Max Retry Count         | The maximum number of retries to attempt. Specify 0 for no retries.                                                                                                                                                                                                                 | 0       |
 | Use Exponential Backoff | Specifies whether to use a pre-defined exponential backoff strategy for retries. When enabled, 'Retry Delay (ms)' is ignored.                                                                                                                                                       | false   |
 
-### Remove Worksheet
+### Remove Worksheet {#removesheet}
 
 Remove a Worksheet from a Google Sheet Document
 
@@ -138,7 +138,7 @@ Remove a Worksheet from a Google Sheet Document
 | Worksheet Title | Specifies the title of the sheet.                                                                                                                                                                              |         |
 | Connection      |                                                                                                                                                                                                                |         |
 
-### Set Header Row
+### Set Header Row {#setheaderrow}
 
 Set the column headings in a Worksheet
 
@@ -149,7 +149,7 @@ Set the column headings in a Worksheet
 | Column Headings | An array of strings that are the column headings.                                                                                                                                                              |         |
 | Connection      |                                                                                                                                                                                                                |         |
 
-### Update Rows
+### Update Rows {#updaterows}
 
 Update call values of rows in a Worksheet
 

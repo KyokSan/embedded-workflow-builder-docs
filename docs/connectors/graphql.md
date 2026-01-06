@@ -9,7 +9,7 @@ Make GraphQL requests (queries and mutations) to a GraphQL-based API
 
 ## Connections
 
-### API Key
+### API Key {#apikey}
 
 API Key connection
 
@@ -20,7 +20,7 @@ If an API Key connection is supplied, an `Authorization: Basic ${APIKEY}` header
 | API Key               | API Key                          |         |
 | Authentication Scheme | The authentication scheme to use | Basic   |
 
-### Basic Username/Password
+### Basic Username/Password {#basic}
 
 Basic Username and Password connection
 
@@ -31,7 +31,7 @@ If a Basic Auth connection is supplied, an `Authorization: Basic ${base64(USERNA
 | Username | Username |         |
 | Password | Password |         |
 
-### OAuth 2.0 Authorization Code
+### OAuth 2.0 Authorization Code {#authorizationcode}
 
 OAuth 2.0 Authorization Code flow
 
@@ -49,7 +49,7 @@ Read about how OAuth 2.0 works [here](../oauth2.md).
 | Client Secret | Client Secret of your app for the API                   |         |
 | Headers       | Additional header to supply to authorization requests   |         |
 
-### OAuth 2.0 Client Credentials
+### OAuth 2.0 Client Credentials {#clientcredentials}
 
 OAuth 2.0 Client Credentials flow
 
@@ -66,7 +66,7 @@ Read about how OAuth 2.0 works [here](../oauth2.md).
 
 ## Actions
 
-### GraphQL Request
+### GraphQL Request {#graphqlrequest}
 
 Issue a generic GraphQL request
 

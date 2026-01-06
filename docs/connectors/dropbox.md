@@ -9,7 +9,7 @@ Manage files stored in Dropbox
 
 ## Connections
 
-### OAuth 2.0
+### OAuth 2.0 {#oauth}
 
 OAuth 2.0 Connectivity for Dropbox
 
@@ -39,7 +39,7 @@ Read about how OAuth 2.0 works [here](../oauth2.md).
 
 ## Triggers
 
-### New and Updated Files
+### New and Updated Files {#pollchangestrigger}
 
 Checks for new and updated files on a configured schedule.
 
@@ -53,7 +53,7 @@ Checks for new and updated files on a configured schedule.
 | Team Member ID   | The ID of the team member. Required if Team User Type is set                                         |         |
 | Debug            | Whether to log the payload to the debug log. This is useful for troubleshooting.                     | false   |
 
-### Webhook
+### Webhook {#dropboxwebhook}
 
 Receive and validate webhook requests from Dropbox for webhooks you configure.
 
@@ -63,7 +63,7 @@ Receive and validate webhook requests from Dropbox for webhooks you configure.
 
 ## Actions
 
-### Copy Object
+### Copy Object {#copyobject}
 
 Copy a Folder or File from one path to another
 
@@ -74,7 +74,7 @@ Copy a Folder or File from one path to another
 | To Path    | The location of a destination file within a Dropbox share. Include a leading /.  |         |
 | Debug      | Whether to log the payload to the debug log. This is useful for troubleshooting. | false   |
 
-### Create Folder
+### Create Folder {#createfolder}
 
 Create a Folder at the specified path
 
@@ -84,7 +84,7 @@ Create a Folder at the specified path
 | Path       | The location of a file within a Dropbox share. Include a leading /.              |         |
 | Debug      | Whether to log the payload to the debug log. This is useful for troubleshooting. | false   |
 
-### Create Shared Link
+### Create Shared Link {#createsharedlink}
 
 Create a shared link with custom settings. If no settings are given then the default visibility is RequestedVisibility.public (The resolved visibility, though, may depend on other aspects such as team and shared folder settings).
 
@@ -102,7 +102,7 @@ Create a shared link with custom settings. If no settings are given then the def
 | Team Member ID   | The ID of the team member. Required if Team User Type is set                                                                             |         |
 | Debug            | Whether to log the payload to the debug log. This is useful for troubleshooting.                                                         | false   |
 
-### Delete Object
+### Delete Object {#deleteobject}
 
 Delete a Folder or File at the specified path
 
@@ -112,7 +112,7 @@ Delete a Folder or File at the specified path
 | Path       | The location of a file within a Dropbox share. Include a leading /.              |         |
 | Debug      | Whether to log the payload to the debug log. This is useful for troubleshooting. | false   |
 
-### Download File
+### Download File {#downloadfile}
 
 Download the file (< 150MB) at the specified path
 
@@ -123,7 +123,7 @@ Download the file (< 150MB) at the specified path
 | Download as Zip | Download a folder from the user's Dropbox, as a zip file. The folder must be less than 20 GB in size and any single file within must be less than 4 GB in size. | false   |
 | Debug           | Whether to log the payload to the debug log. This is useful for troubleshooting.                                                                                | false   |
 
-### Export File
+### Export File {#exportfile}
 
 Export the file at the specified path
 
@@ -135,7 +135,7 @@ Export the file at the specified path
 | Team Member ID | The ID of the team member. Required if Team User Type is set                     |         |
 | Debug          | Whether to log the payload to the debug log. This is useful for troubleshooting. | false   |
 
-### Get Current Account
+### Get Current Account {#getcurrentaccount}
 
 Get information about the currently authenticated user
 
@@ -143,7 +143,7 @@ Get information about the currently authenticated user
 | ---------- | -------- | ------- |
 | Connection |          |         |
 
-### Get Download Status
+### Get Download Status {#getdownloadstatus}
 
 Get the status of a file download from a URL to Dropbox
 
@@ -153,7 +153,7 @@ Get the status of a file download from a URL to Dropbox
 | Async Job ID | The ID of the asynchronous job. From the response of the Save From URL action would be a good place to get this value. |         |
 | Debug        | Whether to log the payload to the debug log. This is useful for troubleshooting.                                       | false   |
 
-### Get File Lock
+### Get File Lock {#getfilelock}
 
 Return the lock metadata for the given list of paths
 
@@ -165,7 +165,7 @@ Return the lock metadata for the given list of paths
 | Dynamic Paths  | An optional list of paths (Use this, File Paths or both)                                       |         |
 | Debug          | Whether to log the payload to the debug log. This is useful for troubleshooting.               | false   |
 
-### Get Metadata for File or Folder
+### Get Metadata for File or Folder {#getmetadata}
 
 Returns the metadata for a file or folder.
 
@@ -180,7 +180,7 @@ Returns the metadata for a file or folder.
 | Team Member ID                      | The ID of the team member. Required if Team User Type is set                                                         |         |
 | Debug                               | Whether to log the payload to the debug log. This is useful for troubleshooting.                                     | false   |
 
-### Get Shared Link File
+### Get Shared Link File {#getsharedlinkfile}
 
 Download the shared link's file from a user's Dropbox.
 
@@ -194,7 +194,7 @@ Download the shared link's file from a user's Dropbox.
 | Team Member ID  | The ID of the team member. Required if Team User Type is set                                                                                                             |         |
 | Debug           | Whether to log the payload to the debug log. This is useful for troubleshooting.                                                                                         | false   |
 
-### Get Shared Metadata for File
+### Get Shared Metadata for File {#getsharedmetadataforfile}
 
 Returns shared file metadata.
 
@@ -206,7 +206,7 @@ Returns shared file metadata.
 | Team Member ID | The ID of the team member. Required if Team User Type is set                     |         |
 | Debug          | Whether to log the payload to the debug log. This is useful for troubleshooting. | false   |
 
-### Get Shared Metadata for Folder
+### Get Shared Metadata for Folder {#getsharedmetadataforfolder}
 
 Returns shared folder metadata.
 
@@ -218,7 +218,7 @@ Returns shared folder metadata.
 | Team Member ID   | The ID of the team member. Required if Team User Type is set                     |         |
 | Debug            | Whether to log the payload to the debug log. This is useful for troubleshooting. | false   |
 
-### Get Team Members
+### Get Team Members {#getteammembers}
 
 Get Team Members by Member ID, External ID, or Email
 
@@ -229,7 +229,7 @@ Get Team Members by Member ID, External ID, or Email
 | Value      |                                                                                  |         |
 | Debug      | Whether to log the payload to the debug log. This is useful for troubleshooting. | false   |
 
-### Get Temporary Link
+### Get Temporary Link {#gettemporarylink}
 
 Get a temporary link to stream content of a file.
 
@@ -240,7 +240,7 @@ Get a temporary link to stream content of a file.
 | Team Member ID | Used to specify the user to act on behalf of.                                    |         |
 | Debug          | Whether to log the payload to the debug log. This is useful for troubleshooting. | false   |
 
-### Get Temporary Upload Link
+### Get Temporary Upload Link {#gettemporaryuploadlink}
 
 Get a temporary presigned link to upload a file
 
@@ -251,7 +251,7 @@ Get a temporary presigned link to upload a file
 | Duration   | How long the link will be valid, in seconds. Defaults to 1 hour.                 | 3600    |
 | Debug      | Whether to log the payload to the debug log. This is useful for troubleshooting. | false   |
 
-### List Changes
+### List Changes {#listchanges}
 
 List changes that have been made to files in this folder since the last time this action was run.
 
@@ -265,7 +265,7 @@ List changes that have been made to files in this folder since the last time thi
 | Team Member ID   | The ID of the team member. Required if Team User Type is set                                         |         |
 | Debug            | Whether to log the payload to the debug log. This is useful for troubleshooting.                     | false   |
 
-### List Folder
+### List Folder {#listfolder}
 
 List Folder contents at the specified path
 
@@ -280,7 +280,7 @@ List Folder contents at the specified path
 | Team Member ID | The ID of the team member. Required if Team User Type is set                                                                                            |         |
 | Debug          | Whether to log the payload to the debug log. This is useful for troubleshooting.                                                                        | false   |
 
-### List Shared Folders
+### List Shared Folders {#listsharingfolder}
 
 List Shared Folders contents
 
@@ -293,7 +293,7 @@ List Shared Folders contents
 | Folder Actions | A list of `FolderAction`s corresponding to `FolderPermission`s that should appear in the response's SharedFolderMetadata.permissions field describing the actions the authenticated user can perform on the folder. This field is optional. |         |
 | Debug          | Whether to log the payload to the debug log. This is useful for troubleshooting.                                                                                                                                                            | false   |
 
-### List Shared Links
+### List Shared Links {#listsharedlinks}
 
 List Folder contents at the specified path
 
@@ -307,7 +307,7 @@ List Folder contents at the specified path
 | Team Member ID | The ID of the team member. Required if Team User Type is set                          |         |
 | Debug          | Whether to log the payload to the debug log. This is useful for troubleshooting.      | false   |
 
-### List Team's Folders
+### List Team's Folders {#listteamfolder}
 
 List Team's Folder contents
 
@@ -319,7 +319,7 @@ List Team's Folder contents
 | Limit          | The maximum number of results to return per request. Note: This is an approximate number and there can be slightly more entries returned in some cases. |         |
 | Debug          | Whether to log the payload to the debug log. This is useful for troubleshooting.                                                                        | false   |
 
-### Lock File
+### Lock File {#lockfile}
 
 Lock the files at the given paths
 
@@ -331,7 +331,7 @@ Lock the files at the given paths
 | Dynamic Paths  | An optional list of paths (Use this, File Paths or both)                                       |         |
 | Debug          | Whether to log the payload to the debug log. This is useful for troubleshooting.               | false   |
 
-### Move Object
+### Move Object {#moveobject}
 
 Move a Folder or File from one path to another
 
@@ -342,7 +342,7 @@ Move a Folder or File from one path to another
 | To Path    | The location of a destination file within a Dropbox share. Include a leading /.  |         |
 | Debug      | Whether to log the payload to the debug log. This is useful for troubleshooting. | false   |
 
-### Raw Request
+### Raw Request {#rawrequest}
 
 Send raw HTTP request to Dropbox
 
@@ -368,7 +368,7 @@ Send raw HTTP request to Dropbox
 | Use Exponential Backoff | Specifies whether to use a pre-defined exponential backoff strategy for retries. When enabled, 'Retry Delay (ms)' is ignored.                                                                                                                    | false   |
 | Debug                   | Whether to log the payload to the debug log. This is useful for troubleshooting.                                                                                                                                                                 | false   |
 
-### Save From URL
+### Save From URL {#savefromurl}
 
 Save a file from a URL to Dropbox
 
@@ -380,7 +380,7 @@ Save a file from a URL to Dropbox
 | Wait Until Complete | Whether to wait for the operation to complete.                                    | false   |
 | Debug               | Whether to log the payload to the debug log. This is useful for troubleshooting.  | false   |
 
-### Search Files
+### Search Files {#searchfiles}
 
 Search for files at the specified path
 
@@ -395,7 +395,7 @@ Search for files at the specified path
 | Team Member ID | The ID of the team member. Required if Team User Type is set                                                                                            |         |
 | Debug          | Whether to log the payload to the debug log. This is useful for troubleshooting.                                                                        | false   |
 
-### Search Folders
+### Search Folders {#searchfolders}
 
 Search for folders at the specified path
 
@@ -410,7 +410,7 @@ Search for folders at the specified path
 | Team Member ID | The ID of the team member. Required if Team User Type is set                                                                                            |         |
 | Debug          | Whether to log the payload to the debug log. This is useful for troubleshooting.                                                                        | false   |
 
-### Share Folder
+### Share Folder {#sharefolder}
 
 Share a folder with collaborators. Most sharing will be completed synchronously. Large folders will be completed asynchronously.
 
@@ -429,7 +429,7 @@ Share a folder with collaborators. Most sharing will be completed synchronously.
 | Team Member ID     | The ID of the team member. Required if Team User Type is set                                                                                                                                                        |                 |
 | Debug              | Whether to log the payload to the debug log. This is useful for troubleshooting.                                                                                                                                    | false           |
 
-### Unlock File
+### Unlock File {#unlockfile}
 
 Unlock the files at the given paths
 
@@ -442,7 +442,7 @@ Unlock the files at the given paths
 | Dynamic Paths  | An optional list of paths (Use this, File Paths or both)                                       |         |
 | Debug          | Whether to log the payload to the debug log. This is useful for troubleshooting.               | false   |
 
-### Unshare File
+### Unshare File {#unsharefile}
 
 Remove all members from this file. Does not remove inherited members.
 
@@ -454,7 +454,7 @@ Remove all members from this file. Does not remove inherited members.
 | Team Member ID | The ID of the team member. Required if Team User Type is set                     |         |
 | Debug          | Whether to log the payload to the debug log. This is useful for troubleshooting. | false   |
 
-### Unshare Folder
+### Unshare Folder {#unsharefolder}
 
 Allows a shared folder owner to unshare the folder. Unshare will not work in following cases: The shared folder contains shared folders OR the shared folder is inside another shared folder.
 
@@ -467,7 +467,7 @@ Allows a shared folder owner to unshare the folder. Unshare will not work in fol
 | Team Member ID   | The ID of the team member. Required if Team User Type is set                                                                                                                                                   |         |
 | Debug            | Whether to log the payload to the debug log. This is useful for troubleshooting.                                                                                                                               | false   |
 
-### Upload File
+### Upload File {#uploadfile}
 
 Upload a file to the specified path
 

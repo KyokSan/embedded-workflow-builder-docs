@@ -9,7 +9,7 @@ Query, create, update or delete Microsoft Dynamics 365 API records
 
 ## Connections
 
-### MS Dynamics OAuth 2.0 Auth Code
+### MS Dynamics OAuth 2.0 Auth Code {#oauth2}
 
 Microsoft Dynamics 365 OAuth Connection
 
@@ -48,7 +48,7 @@ Read about how OAuth 2.0 works [here](../oauth2.md).
 | Client ID     |                                                                                     |         |
 | Client Secret |                                                                                     |         |
 
-### MS Dynamics OAuth 2.0 Client Credentials
+### MS Dynamics OAuth 2.0 Client Credentials {#clientcredentials}
 
 OAuth 2.0 Client Credentials Connectivity for Microsoft Dynamics
 
@@ -114,13 +114,13 @@ Read about how OAuth 2.0 works [here](../oauth2.md).
 
 ## Triggers
 
-### Webhook
+### Webhook {#dynamicswebhooktrigger}
 
 Receive and validate webhook requests from Microsoft Dynamics for webhooks you configure.
 
 ## Actions
 
-### [CRM] Batch Entity Actions
+### [CRM] Batch Entity Actions {#batchentityactions}
 
 Perform multiple create/update/delete actions on Microsoft Dynamics 365 CRM entity records.
 
@@ -129,7 +129,7 @@ Perform multiple create/update/delete actions on Microsoft Dynamics 365 CRM enti
 | Connection    |                                                                                                                                                                                                                                                                                                                                                                                                  |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 | Batch Actions | A list of up to 1000 create, update or delete actions to perform. Each action must have a 'collection' and an 'action' (create, update or delete). Create or update actions must also have 'data' and can include a boolean 'returnRepresentation' which determines if the full record should be returned after being created or updated. Update or delete actions must also have an entity key. | <code>[<br /> {<br /> "collection": "msevtmgt_events",<br /> "action": "create",<br /> "returnRepresentation": true,<br /> "data": {<br /> "msevtmgt_name": "Test Event 1",<br /> "msevtmgt_eventtype": "100000002"<br /> }<br /> },<br /> {<br /> "collection": "msevtmgt_events",<br /> "action": "update",<br /> "key": "00000000-0000-0000-0000-000000000002",<br /> "returnRepresentation": true,<br /> "data": {<br /> "msevtmgt_name": "Test Event 2",<br /> "msevtmgt_eventtype": "100000002"<br /> }<br /> },<br /> {<br /> "collection": "msevtmgt_events",<br /> "action": "delete",<br /> "key": "00000000-0000-0000-0000-000000000002"<br /> }<br />]</code> |
 
-### [CRM] Create Attribute
+### [CRM] Create Attribute {#createattribute}
 
 Create a CRM Attribute on an Entity
 
@@ -139,7 +139,7 @@ Create a CRM Attribute on an Entity
 | Entity ID      | The ID of a specific Entity record |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 | Attribute Body | Attribute body payload to send     | <code>{<br /> "AttributeType": "Money",<br /> "AttributeTypeName": {<br /> "Value": "MoneyType"<br /> },<br /> "Description": {<br /> "@odata.type": "Microsoft.Dynamics.CRM.Label",<br /> "LocalizedLabels": [<br /> {<br /> "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",<br /> "Label": "Enter the balance amount",<br /> "LanguageCode": 1033<br /> }<br /> ]<br /> },<br /> "DisplayName": {<br /> "@odata.type": "Microsoft.Dynamics.CRM.Label",<br /> "LocalizedLabels": [<br /> {<br /> "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",<br /> "Label": "Balance",<br /> "LanguageCode": 1033<br /> }<br /> ]<br /> },<br /> "RequiredLevel": {<br /> "Value": "None",<br /> "CanBeChanged": true,<br /> "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings"<br /> },<br /> "SchemaName": "new_Balance",<br /> "@odata.type": "Microsoft.Dynamics.CRM.MoneyAttributeMetadata",<br /> "PrecisionSource": 2<br />}</code> |
 
-### [CRM] Create Entity
+### [CRM] Create Entity {#createentity}
 
 Create a new Microsoft Dynamics 365 CRM entity record.
 
@@ -150,7 +150,7 @@ Create a new Microsoft Dynamics 365 CRM entity record.
 | Field Value    | The names of the fields and their values to use when creating/updating a record |         |
 | Connection     |                                                                                 |         |
 
-### [CRM] Delete Entity
+### [CRM] Delete Entity {#deleteentity}
 
 Delete the specified Microsoft Dynamics 365 CRM entity record.
 
@@ -160,7 +160,7 @@ Delete the specified Microsoft Dynamics 365 CRM entity record.
 | Entity ID   | The ID of a specific Entity record                     |         |
 | Connection  |                                                        |         |
 
-### [CRM] Get Attribute
+### [CRM] Get Attribute {#getattribute}
 
 Retrieve a single CRM Attribute
 
@@ -172,7 +172,7 @@ Retrieve a single CRM Attribute
 | Field Name           | The names of the fields to retrieve                                       |         |
 | Expand Property Name | The names of entity properties to linked entities that should be included |         |
 
-### [CRM] Get Current User
+### [CRM] Get Current User {#getcurrentuser}
 
 Get information about the currently logged in CRM user
 
@@ -180,7 +180,7 @@ Get information about the currently logged in CRM user
 | ---------- | -------- | ------- |
 | Connection |          |         |
 
-### [CRM] Get Entities Metadata
+### [CRM] Get Entities Metadata {#getentitiesmetadata}
 
 A subset of Dynamics CRM Entity Types.
 
@@ -192,7 +192,7 @@ A subset of Dynamics CRM Entity Types.
 | Include All Custom Entity Types     | When true, will include all Custom Entity Types, even those not included in Record Type Name Filter.                            | true    |
 | Include Only Top Level Record Types | When true, will include only Entity Types that are top-level, meaning not subtypes of other Types, regardless of other filters. | false   |
 
-### [CRM] Get Entity
+### [CRM] Get Entity {#getentity}
 
 Retrieve a single Microsoft Dynamics 365 CRM entity record.
 
@@ -204,7 +204,7 @@ Retrieve a single Microsoft Dynamics 365 CRM entity record.
 | Expand Property Name | The names of entity properties to linked entities that should be included |         |
 | Connection           |                                                                           |         |
 
-### [CRM] Get Entity Metadata
+### [CRM] Get Entity Metadata {#getentitymetadata}
 
 Get definition of Microsoft Dynamics 365 CRM entity.
 
@@ -214,7 +214,7 @@ Get definition of Microsoft Dynamics 365 CRM entity.
 | Entity Type                 | The type of Entity to query, usually a pluralized name |         |
 | Use Logical Name for Lookup |                                                        | true    |
 
-### [CRM] List Attributes
+### [CRM] List Attributes {#listattributesaction}
 
 Get a list of all attributes for a specific entity in your Dynamics 365 CRM instance
 
@@ -225,7 +225,7 @@ Get a list of all attributes for a specific entity in your Dynamics 365 CRM inst
 | Attribute Type Filter     | Filter by attribute type (e.g., 'String', 'Integer', 'Boolean', 'DateTime', 'Decimal') |         |
 | Include Attribute Details | Include additional attribute metadata like schema name, security settings, etc.        | false   |
 
-### [CRM] List Entities
+### [CRM] List Entities {#listentitiesaction}
 
 Get a list of all available entities in your Dynamics 365 CRM instance with detailed metadata
 
@@ -236,7 +236,7 @@ Get a list of all available entities in your Dynamics 365 CRM instance with deta
 | Top Level Only          | Include only top-level entities (exclude child entities).                 | false   |
 | Include Entity Details  | Include additional entity metadata like description, ownership type, etc. | false   |
 
-### [CRM] Query Attributes
+### [CRM] Query Attributes {#queryattributes}
 
 Query for CRM Attributes that satisfy the filter expression
 
@@ -249,7 +249,7 @@ Query for CRM Attributes that satisfy the filter expression
 | Filter Expression    | The filter expression that used for querying entity collections           |         |
 | Expand Property Name | The names of entity properties to linked entities that should be included |         |
 
-### [CRM] Query Entities
+### [CRM] Query Entities {#queryentities}
 
 Query for Microsoft Dynamics 365 CRM entity records that satisfy the filter expression.
 
@@ -264,7 +264,7 @@ Query for Microsoft Dynamics 365 CRM entity records that satisfy the filter expr
 | Next Page Id         | The id or cookie to use for retrieving the next page of results when paginating through a large result set |         |
 | Connection           |                                                                                                            |         |
 
-### [CRM] Raw Request
+### [CRM] Raw Request {#rawrequest}
 
 Send raw HTTP request to Microsoft Dynamics 365 CRM
 
@@ -287,7 +287,7 @@ Send raw HTTP request to Microsoft Dynamics 365 CRM
 | Max Retry Count         | The maximum number of retries to attempt. Specify 0 for no retries.                                                                                                                                                                                                                                         | 0       |
 | Use Exponential Backoff | Specifies whether to use a pre-defined exponential backoff strategy for retries. When enabled, 'Retry Delay (ms)' is ignored.                                                                                                                                                                               | false   |
 
-### [CRM] Run Fetch XML Query
+### [CRM] Run Fetch XML Query {#fetchxml}
 
 Execute a fetch XML query against your Microsoft Dynamics 365 CRM instance.
 
@@ -301,7 +301,7 @@ Execute a fetch XML query against your Microsoft Dynamics 365 CRM instance.
 | Impersonate User Id | Specifies the GUID of a user to impersonate when executing the query                                       |         |
 | Connection          |                                                                                                            |         |
 
-### [CRM] Update Attribute
+### [CRM] Update Attribute {#updateattribute}
 
 Update an existing CRM Attribute on an Entity
 
@@ -311,7 +311,7 @@ Update an existing CRM Attribute on an Entity
 | Entity ID      | The ID of a specific Entity record |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 | Attribute Body | Attribute body payload to send     | <code>{<br /> "AttributeType": "Money",<br /> "AttributeTypeName": {<br /> "Value": "MoneyType"<br /> },<br /> "Description": {<br /> "@odata.type": "Microsoft.Dynamics.CRM.Label",<br /> "LocalizedLabels": [<br /> {<br /> "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",<br /> "Label": "Enter the balance amount",<br /> "LanguageCode": 1033<br /> }<br /> ]<br /> },<br /> "DisplayName": {<br /> "@odata.type": "Microsoft.Dynamics.CRM.Label",<br /> "LocalizedLabels": [<br /> {<br /> "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",<br /> "Label": "Balance",<br /> "LanguageCode": 1033<br /> }<br /> ]<br /> },<br /> "RequiredLevel": {<br /> "Value": "None",<br /> "CanBeChanged": true,<br /> "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings"<br /> },<br /> "SchemaName": "new_Balance",<br /> "@odata.type": "Microsoft.Dynamics.CRM.MoneyAttributeMetadata",<br /> "PrecisionSource": 2<br />}</code> |
 
-### [CRM] Update Entity
+### [CRM] Update Entity {#updateentity}
 
 Update a Microsoft Dynamics 365 CRM entity record.
 
@@ -323,7 +323,7 @@ Update a Microsoft Dynamics 365 CRM entity record.
 | Dynamic Values |                                                                                 |         |
 | Connection     |                                                                                 |         |
 
-### [CRM] Upsert Entity
+### [CRM] Upsert Entity {#upsertentity}
 
 Upsert a Microsoft Dynamics 365 CRM entity record.
 
@@ -335,7 +335,7 @@ Upsert a Microsoft Dynamics 365 CRM entity record.
 | Dynamic Values |                                                                                 |         |
 | Connection     |                                                                                 |         |
 
-### List Entity Types
+### List Entity Types {#listentities}
 
 Retrieve a list of entity types available in your Microsoft Dynamics 365 environment with pagination support
 
@@ -345,7 +345,7 @@ Retrieve a list of entity types available in your Microsoft Dynamics 365 environ
 | Max Page Size | Maximum number of entities to return per page (1-5000). Defaults to 5000 if not specified. | 5000    |
 | Next Link     | The @odata.nextLink URL from a previous response to get the next page of results           |         |
 
-### Raw Request
+### Raw Request {#rawrequestv2}
 
 Send raw HTTP request to Microsoft Dynamics 365
 

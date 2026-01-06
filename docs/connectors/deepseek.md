@@ -9,7 +9,7 @@ DeepSeek is an AI developer of large language models (LLM) focused on providing 
 
 ## Connections
 
-### API Key
+### API Key {#api-key}
 
 The DeepSeek API Key to use in order to authenticate with the DeepSeek API.
 
@@ -22,7 +22,7 @@ The DeepSeek API Key to use in order to authenticate with the DeepSeek API.
 
 ## Actions
 
-### Create Chat Completion
+### Create Chat Completion {#createchatcompletion}
 
 Creates a model response for the given chat conversation.
 
@@ -45,7 +45,7 @@ Creates a model response for the given chat conversation.
 | Should return Log Probabilities | Whether to return log probabilities of the output tokens or not. If true, returns the log probabilities of each output token returned in the content of message.                                                                                                                                                                                                                                                                                                                                                          | false   |
 | Top Log Probabilities           | An integer between 0 and 20 specifying the number of most likely tokens to return at each token position, each with an associated log probability. logprobs must be set to true if this parameter is used.                                                                                                                                                                                                                                                                                                                |         |
 
-### List Models
+### List Models {#listmodels}
 
 Retrieves the currently available models, and provides basic information about each one such as the owner and availability.
 
@@ -53,7 +53,7 @@ Retrieves the currently available models, and provides basic information about e
 | ---------- | -------- | ------- |
 | Connection |          |         |
 
-### Raw Request
+### Raw Request {#rawrequest}
 
 Send a Raw Request to the DeepSeek API.
 

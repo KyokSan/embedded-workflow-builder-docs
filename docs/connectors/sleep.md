@@ -9,7 +9,7 @@ Pause execution for a specific amount of time
 
 ## Actions
 
-### Sleep
+### Sleep {#sleep}
 
 Sleep for a number of milliseconds before continuing the integration.
 
