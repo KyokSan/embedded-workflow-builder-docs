@@ -24,12 +24,12 @@ We'll use the JSONPlaceholder API `https://jsonplaceholder.typicode.com/users`, 
 We'll start by creating a new %WORKFLOW%.
 Log in to [%COMPANY_CORE_PRODUCT%](%APP_LOGIN_URL%), then %NAVIGATING_TO_BUILDER%.
 
-Create a new %WORKFLOW% by clicking **+ %WORKFLOW%**.
+Create a new %WORKFLOW% by clicking **+ Add %WORKFLOW%**.
 
 ### Configure the %WORKFLOW% trigger
 
 This %WORKFLOW% will run on a schedule.
-When prompted, select **Schedule** under **select your trigger** and then configure your %WORKFLOW% to run on a daily basis at a time of your choosing.
+When prompted, select **Schedule** under **Select your trigger** and then configure your %WORKFLOW% to run on a daily basis at a time of your choosing.
 
 ![Configuring a schedule trigger](./assets/get-started/schedule-trigger.png)
 

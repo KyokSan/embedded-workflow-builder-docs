@@ -14,7 +14,7 @@ To create a new %WORKFLOW%, first log in to [%COMPANY_CORE_PRODUCT%](%APP_LOGIN_
 Next, %NAVIGATING_TO_BUILDER%.
 Here, you will see all of the %WORKFLOW_PLURAL% that you've built.
 
-To create a new %WORKFLOW%, click **+ %WORKFLOW%**.
+To create a new %WORKFLOW%, click **+ Add %WORKFLOW%**.
 
 ## Steps
 
