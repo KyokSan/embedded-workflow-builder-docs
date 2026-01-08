@@ -4,7 +4,7 @@ description: Build new %WORKFLOW_PLURAL% using %COMPANY_POSSESSIVE% %EMBEDDED_WO
 slug: /
 ---
 
-**%COMPANY_POSSESSIVE% %EMBEDDED_WORKFLOW_BUILDER%** is a low-code %WORKFLOW% tool your team can use to build %WORKFLOW_PLURAL% that sync data between %COMPANY_CORE_PRODUCT% and other applications and services you use.
+**%COMPANY_POSSESSIVE%** **%EMBEDDED_WORKFLOW_BUILDER%** is a low-code %WORKFLOW% tool your team can use to build %WORKFLOW_PLURAL% that sync data between %COMPANY_CORE_PRODUCT% and other applications and services you use.
 
 Your %WORKFLOW_PLURAL% use built-in connectors to connect to third-party applications.
 Using these connectors, you can query data in a third-party application to import into %COMPANY_CORE_PRODUCT%, or you can export data from %COMPANY_CORE_PRODUCT% to another service.
