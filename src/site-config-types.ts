@@ -41,11 +41,6 @@ interface Phrases {
    */
   "%WORKFLOW_PLURAL%": string;
   /**
-   * Where your users should be directed to log in to your app
-   * @example https://app.acme.com/login
-   */
-  "%APP_LOGIN_URL%": string;
-  /**
    * White-label base URL that will be used to derive OAuth 2.0 callback and webhook URLs
    * @example integrations.acme.com
    */

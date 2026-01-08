@@ -10,7 +10,7 @@ If you have not done so yet, please first review the [Getting Started](./get-sta
 
 ## Creating a new %WORKFLOW%
 
-To create a new %WORKFLOW%, first log in to [%COMPANY_CORE_PRODUCT%](%APP_LOGIN_URL%).
+To create a new %WORKFLOW%, first log in to %COMPANY_CORE_PRODUCT%.
 Next, %NAVIGATING_TO_BUILDER%.
 Here, you will see all of the %WORKFLOW_PLURAL% that you've built.
 
@@ -44,7 +44,7 @@ By default, steps are uniquely named after the action they invoke (so, they're n
 To override that default name, select the step in the %WORKFLOW% and then click the step's name in the configuration drawer.
 
 Like using descriptive variable names in a computer program, renaming steps allows you to give your steps descriptive names.
-Rather than `HTTP - PUT`, you could give your step a name like **Update Record in Acme**.
+Rather than `HTTP - PUT`, you could give your step a name like **Update Record in OrbusInfinity**.
 We recommend giving your steps descriptive names and descriptions so your team members can read through your %WORKFLOW_PLURAL% and understand their purpose more readily.
 
 ![Rename a step](./assets/building/rename-step.png)
