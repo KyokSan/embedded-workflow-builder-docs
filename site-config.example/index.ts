@@ -7,7 +7,6 @@ const siteConfig: SiteConfig = {
     favicon: "img/example-logo.svg",
   },
   phrases: {
-    "%APP_LOGIN_URL%": "https://acme.com/login",
     "%COMPANY%": "Acme Inc",
     "%COMPANY_POSSESSIVE%": "Acme Inc's",
     "%COMPANY_CORE_PRODUCT%": "Widget ERP",
